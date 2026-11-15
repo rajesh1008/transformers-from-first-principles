@@ -1,0 +1,22 @@
+Part 1. predict, then read
+  tables 160; stored numbers 137,022,720; learned 124,439,808
+  top 5 after 'The rabbit looked at': ' the' 0.2594, ' her' 0.1768, ' him' 0.1410, ' me' 0.0679, ' his' 0.0625
+  greedy 20 tokens: ' the other two, and then at the other two.\n\n"I\'m sorry, but I'
+
+Part 2. three breakages
+  Breakage 1, one matrix transposed (layer 0's attention output map, 768 x 768): greedy ' the the the the the the the the the the the the the the the the the the the the'
+     against the reference: max |log-prob diff| 19.188; same top token everywhere False
+  Breakage 2, SmolLM2-135M-Instruct with the template : 'The capital of France is Paris.<|im_end|>'
+  Breakage 2, SmolLM2-135M-Instruct template dropped  : '<|im_end|>'
+  Breakage 3, user text containing '<|endoftext|>': default encode has id 50256 True (20 ids); split as text False (25 ids)
+
+Part 3. checkpoints
+[pass] GPT-2 own forward matches the reference within 0.0001 in log-probabilities
+[pass] SmolLM2-135M-Instruct own forward matches the reference within 0.0001
+[pass] GPT-2 learned numbers from the header = 124,439,808 (Chapter 16's hand count)
+[pass] render_chatml equals the library's chat template, with and without the generation prompt
+[pass] the running sentence round-trips through GPT-2's tokenizer as six ids
+[pass] cached and uncached passes agree: scoring 6 tokens at once equals 6 one-token passes with a cache (within 1e-4)
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch29 (weights excluded)
+
+7 of 7 checkpoints pass

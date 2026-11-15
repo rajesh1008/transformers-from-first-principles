@@ -1,0 +1,10 @@
+moe7k1_shared_s2: moe E=7 K=1 HID=256 AUX=0.01; learned numbers 3,844,608, used per token 1,471,488
+step     0  train nan  held-out 7.6241  busiest expert share by layer 0.20 0.20 0.17 0.22 0.28 0.25  (1 s)
+step   250  train 6.2137  held-out 5.8293  busiest expert share by layer 0.41 0.35 0.37 0.27 0.31 0.30  (42 s)
+step   500  train 5.2912  held-out 5.3153  busiest expert share by layer 0.25 0.26 0.31 0.25 0.30 0.37  (87 s)
+step   750  train 4.8395  held-out 5.0902  busiest expert share by layer 0.31 0.34 0.29 0.19 0.21 0.18  (135 s)
+step  1000  train 4.5613  held-out 4.9423  busiest expert share by layer 0.23 0.26 0.20 0.21 0.28 0.27  (188 s)
+step  1250  train 4.3382  held-out 4.7866  busiest expert share by layer 0.20 0.19 0.25 0.16 0.25 0.21  (235 s)
+step  1500  train 4.1534  held-out 4.6873  busiest expert share by layer 0.21 0.22 0.23 0.19 0.21 0.19  (282 s)
+step  1750  train 4.0418  held-out 4.6172  busiest expert share by layer 0.22 0.18 0.20 0.20 0.19 0.21  (329 s)
+step  2000  train 3.9681  held-out 4.5639  busiest expert share by layer 0.21 0.17 0.18 0.21 0.21 0.21  (374 s)

@@ -1,0 +1,25 @@
+moe4k1_noaux_rlr01: held-out loss 4.4315
+layer 0: shares 0.052 0.020 0.877 0.051; busiest 0.877; experts under 2% 0; token purity 0.807 (shuffled 0.881); router entropy 1.284 nats (uniform 1.386)
+   expert 0 commonest tokens: ' the' 83, ' to' 61, ',' 46, ' she' 39, 't' 30, ' a' 30
+   expert 1 commonest tokens: ',' 36, ' was' 16, ' and' 16, '\n   ' 10, 'o' 10, ' I' 10
+   expert 2 commonest tokens: '\n' 434, ' the' 140, '.' 130, 's' 122, '’' 113, ',' 107
+   expert 3 commonest tokens: ',' 112, '.' 93, ' it' 28, ' and' 27, '’' 19, 'll' 18
+layer 1: shares 0.467 0.112 0.266 0.155; busiest 0.467; experts under 2% 0; token purity 0.797 (shuffled 0.474); router entropy 1.329 nats (uniform 1.386)
+layer 2: shares 0.260 0.365 0.206 0.169; busiest 0.365; experts under 2% 0; token purity 0.766 (shuffled 0.370); router entropy 1.367 nats (uniform 1.386)
+layer 3: shares 0.310 0.094 0.298 0.298; busiest 0.310; experts under 2% 0; token purity 0.802 (shuffled 0.353); router entropy 1.352 nats (uniform 1.386)
+layer 4: shares 0.468 0.244 0.151 0.137; busiest 0.468; experts under 2% 0; token purity 0.683 (shuffled 0.462); router entropy 1.363 nats (uniform 1.386)
+layer 5: shares 0.190 0.350 0.218 0.242; busiest 0.350; experts under 2% 0; token purity 0.713 (shuffled 0.358); router entropy 1.358 nats (uniform 1.386)
+   expert 0 commonest tokens: ',' 114, ' to' 89, ' ' 68, ' I' 62, '.' 61, ' the' 58
+   expert 1 commonest tokens: '.' 163, ' the' 142, '\n' 119, '’' 101, ',' 73, ' and' 66
+   expert 2 commonest tokens: 's' 97, ',' 84, 't' 69, ' it' 53, 'm' 38, '—' 32
+   expert 3 commonest tokens: '\n' 293, 'y' 55, ' that' 39, '!' 33, ',' 30, ' and' 27
+remove one expert, layer 0: loss rise +0.052 +0.024 +1.507 +0.078
+remove one expert, layer 1: loss rise +0.169 +0.005 +0.003 +0.006
+remove one expert, layer 2: loss rise +0.009 +0.011 +0.039 +0.005
+remove one expert, layer 3: loss rise +0.017 +0.006 +0.006 +0.030
+remove one expert, layer 4: loss rise +0.006 +0.007 +0.005 +0.001
+remove one expert, layer 5: loss rise +0.010 +0.021 +0.017 +0.017
+capacity factor 1.0: slots dropped 0.301, held-out loss 5.9168 (+1.4854)
+capacity factor 1.25: slots dropped 0.185, held-out loss 5.6620 (+1.2306)
+capacity factor 2.0: slots dropped 0.081, held-out loss 5.1616 (+0.7301)
+running sentence, top expert by layer: 'the' 201211; ' cat' 201213; ' sat' 203001; ' on' 202003; ' the' 202021; ' m' 203320; 'at' 211322

@@ -1,0 +1,41 @@
+moe12k3_shared128_s2: held-out loss 4.4088
+layer 0: shares 0.075 0.062 0.085 0.068 0.065 0.108 0.070 0.092 0.111 0.087 0.110 0.068; busiest 0.111; experts under 2% 0; token purity 0.958 (shuffled 0.222); router entropy 1.869 nats (uniform 2.485)
+   expert 0 commonest tokens: 'y' 70, 'ed' 36, ' b' 25, 'or' 17, 'itten' 17, 'ook' 16
+   expert 1 commonest tokens: ' Alice' 39, ' p' 36, ' K' 27, 'g' 25, ' King' 17, 'r' 14
+   expert 2 commonest tokens: '\n' 436, 'e' 17, ' little' 12, '.”' 9, ' man' 6, ' old' 6
+   expert 3 commonest tokens: ' and' 92, 'm' 33, ' with' 25, '\n   ' 23, ' L' 20, ' W' 15
+   expert 4 commonest tokens: '’' 124, ' I' 66, '-' 34, 'er' 34, 'h' 27, 'o' 24
+   expert 5 commonest tokens: ' she' 67, ' you' 59, '—' 35, ' on' 26, ' had' 24, ' _' 23
+   expert 6 commonest tokens: '_' 64, ' that' 37, 'I' 26, 'c' 16, ' said' 16, '  ' 11
+   expert 7 commonest tokens: 't' 82, 'n' 29, 'it' 28, 'p' 22, ' Queen' 18, 'um' 18
+   expert 8 commonest tokens: ',' 301, ' the' 223, '.' 191, ' to' 95, ' it' 71, ' a' 64
+   expert 9 commonest tokens: '“' 27, 'and' 22, '    ' 22, 'w' 19, 'T' 16, 'gl' 13
+   expert 10 commonest tokens: ' ' 77, ':' 25, ')' 19, ';' 11, ' are' 5, ' A' 4
+   expert 11 commonest tokens: 's' 122, '!' 47, '.' 38, ' “' 31, ' (' 25, ' And' 16
+layer 1: shares 0.065 0.104 0.070 0.091 0.101 0.074 0.068 0.073 0.075 0.087 0.091 0.101; busiest 0.104; experts under 2% 0; token purity 0.893 (shuffled 0.204); router entropy 1.708 nats (uniform 2.485)
+layer 2: shares 0.059 0.067 0.109 0.114 0.065 0.096 0.067 0.070 0.094 0.113 0.046 0.099; busiest 0.114; experts under 2% 0; token purity 0.813 (shuffled 0.166); router entropy 1.981 nats (uniform 2.485)
+layer 3: shares 0.085 0.118 0.083 0.100 0.082 0.084 0.087 0.064 0.056 0.088 0.055 0.099; busiest 0.118; experts under 2% 0; token purity 0.751 (shuffled 0.181); router entropy 2.136 nats (uniform 2.485)
+layer 4: shares 0.097 0.068 0.069 0.120 0.099 0.055 0.070 0.095 0.098 0.069 0.073 0.089; busiest 0.120; experts under 2% 0; token purity 0.632 (shuffled 0.178); router entropy 2.185 nats (uniform 2.485)
+layer 5: shares 0.091 0.066 0.093 0.057 0.090 0.065 0.106 0.096 0.108 0.077 0.078 0.073; busiest 0.108; experts under 2% 0; token purity 0.662 (shuffled 0.186); router entropy 2.047 nats (uniform 2.485)
+   expert 0 commonest tokens: ',' 64, ' a' 49, 'y' 27, ' little' 13, ' one' 13, ' some' 10
+   expert 1 commonest tokens: ' the' 219, '     ' 20, ' ' 19, '.' 17, ' a' 15, ' CHAPTER' 12
+   expert 2 commonest tokens: 's' 24, 'ass' 14, ' L' 13, 'o' 12, 'ing' 11, 'ar' 10
+   expert 3 commonest tokens: ' w' 19, 'g' 15, ' R' 13, 'd' 12, 'st' 11, ' D' 9
+   expert 4 commonest tokens: 's' 63, ' was' 18, ' be' 17, ' so' 15, ' you' 14, ' it' 14
+   expert 5 commonest tokens: '\n' 401, '.' 100, ' “' 37, '—' 35, '!' 35, '-' 35
+   expert 6 commonest tokens: ' she' 59, ',' 51, 'ed' 36, ' and' 30, ' in' 29, ' on' 23
+   expert 7 commonest tokens: ',' 56, '’' 39, '_' 30, ' was' 19, ')' 18, 'y' 17
+   expert 8 commonest tokens: ',' 113, ' to' 82, ' and' 66, 't' 65, ' of' 41, ' you' 41
+   expert 9 commonest tokens: '.' 98, ' his' 9, ' my' 8, ' Alice' 8, 'a' 7, 'th' 7
+   expert 10 commonest tokens: '’' 62, ' ' 40, '\n' 34, ' I' 33, '!”' 18, ',' 13
+   expert 11 commonest tokens: ' p' 36, ' f' 35, ' b' 25, 't' 22, 'p' 22, 'h' 18
+remove one expert, layer 0: loss rise +0.027 +0.029 +0.119 +0.029 +0.070 +0.075 +0.034 +0.057 +0.183 +0.055 +0.014 +0.035
+remove one expert, layer 1: loss rise +0.020 +0.028 +0.003 +0.007 +0.003 +0.001 +0.028 +0.003 +0.003 +0.004 +0.006 +0.002
+remove one expert, layer 2: loss rise +0.022 +0.002 +0.002 +0.000 +0.003 +0.004 +0.001 -0.004 +0.005 +0.002 +0.001 +0.005
+remove one expert, layer 3: loss rise +0.001 +0.002 +0.001 +0.000 +0.001 +0.001 +0.001 +0.003 +0.008 +0.002 +0.003 +0.001
+remove one expert, layer 4: loss rise -0.001 +0.000 +0.000 +0.002 +0.001 +0.000 +0.000 -0.001 +0.001 +0.002 +0.001 +0.003
+remove one expert, layer 5: loss rise +0.001 -0.003 +0.001 +0.002 +0.005 +0.008 -0.002 -0.001 +0.004 +0.001 +0.002 +0.007
+capacity factor 1.0: slots dropped 0.089, held-out loss 4.5346 (+0.1258)
+capacity factor 1.25: slots dropped 0.013, held-out loss 4.4302 (+0.0215)
+capacity factor 2.0: slots dropped 0.000, held-out loss 4.4088 (+0.0000)
+running sentence, top expert by layer: 'the' 9483101; ' cat' 9104058; ' sat' 91060103; ' on' 513266; ' the' 8981141; ' m' 586782; 'at' 710651011

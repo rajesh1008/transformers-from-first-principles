@@ -1,0 +1,8 @@
+one head, 1024 seats, 32 wide: dense backward = autograd to 5.3e-15; tiled = autograd to 3.6e-15
+products of size n x n x d (each 33,554,432 multiply-adds, before the mask halves them):
+  forward: Q K^T and P V                         2
+  backward: dO V^T, P^T dO, dS K, dS^T Q          4
+  tiled backward: the same four, plus Q K^T again 5
+time for the products alone: forward 2.3 ms, backward 5.2 ms (2.3 x)
+time: forward 9.0 ms; dense backward 8.1 ms (0.9 x forward); tiled backward 9.2 ms (1.0 x)
+kept between the passes (beyond Q, K, V): dense 8.65 MB (the share table and O); tiled 0.270 MB (O and lse)

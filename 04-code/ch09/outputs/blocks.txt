@@ -1,0 +1,7 @@
+side by side: [[1.0, 2.0, 3.0, -1.0]]
+side by side @ W_o: [[2.0, 5.0, 5.0]]
+head 1 @ rows 1-2 of W_o: [[1.0, 2.0, 4.0]]   head 2 @ rows 3-4 of W_o: [[1.0, 3.0, 1.0]]
+their sum: [[2.0, 5.0, 5.0]]
+Tiny-sized check (seed 1865): largest difference between the two ways: 2.8e-14
+check 1: [[6.0, 2.0]]
+check 2 (head 2 removed): [[1.0, 1.0]]

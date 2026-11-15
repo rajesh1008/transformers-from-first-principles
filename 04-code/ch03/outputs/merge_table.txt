@@ -1,0 +1,47 @@
+' the' -> [262]
+ 262  '␣the'
+     256  '␣t'
+          32  '␣'  (a byte)
+         116  't'  (a byte)
+     257  'he'
+         104  'h'  (a byte)
+         101  'e'  (a byte)
+
+' cat' -> [725]
+ 725  '␣cat'
+     278  '␣c'
+          32  '␣'  (a byte)
+          99  'c'  (a byte)
+     303  'at'
+          97  'a'  (a byte)
+         116  't'  (a byte)
+
+' looked' -> [616]
+ 616  '␣looked'
+     433  '␣look'
+         285  '␣l'
+              32  '␣'  (a byte)
+             108  'l'  (a byte)
+         377  'ook'
+             339  'oo'
+                 111  'o'  (a byte)
+                 111  'o'  (a byte)
+             107  'k'  (a byte)
+     274  'ed'
+         101  'e'  (a byte)
+         100  'd'  (a byte)
+
+ids 0-3: [b'\x00', b'\x01', b'\x02', b'\x03']  id 97: b'a'  id 32: b' '
+ids 256-261: ['␣t', 'he', '�', '␣a', '␣s', 'in']
+last merge id 2046: '␣tast';  special token id 2047
+longest pieces: ['␣conversation', '␣Caterpillar', '␣interrupted', '␣opportunity', '␣executioner', '␣impatiently', '␣interesting', '␣everything']
+merged pieces that begin with a space: 959 of 1,791
+
+encoding the novel with the finished table uses 1,792 different ids
+merged pieces never used in the final encoding: 70 (3.9%)
+  for example: ['�', 'lice', 'ght', 'gain', '␣whe', 'ryph', 'ryphon', 'bit']
+used, but less than a tenth as often as when they were made: 149
+  '�'       made from a pair seen 3247 times; used 0 times in the end
+  'lice'    made from a pair seen 399 times; used 0 times in the end
+  'ght'     made from a pair seen 225 times; used 0 times in the end
+  'gain'    made from a pair seen  92 times; used 0 times in the end

@@ -1,0 +1,11 @@
+trained                facts right 30/30   stopped at the end marker 30/30   cat: 'The cat sat on the mat.'
+    dog, owl, hen: ['The dog fell on the stone.', 'The owl stood on the bench.', 'The hen fell on the mat.']
+no space after colon   facts right 29/30   stopped at the end marker 30/30   cat: 'The cat sat on the mat.'
+    dog, owl, hen: ['The dog fell on the stone.', 'The owl stood on the bench.', 'The hen fell on the mat.']
+Assistant for Tiny     facts right  4/30   stopped at the end marker 29/30   cat: 'The cat sat on the mat.'
+    dog, owl, hen: ['The toad hid on the\ncent. JANDDD What you are High,', 'The owl stood on the chair.', 'The hen fell on the chair.']
+Q / A                  facts right  2/30   stopped at the end marker 30/30   cat: 'The cat sat on the mat.'
+    dog, owl, hen: ['Theruno sat on the hat.', 'The owl stood on the bench.', 'The cess hids slept on the chair.']
+no roles               facts right  0/30   stopped at the end marker 30/30   cat: "“Yes, you know've have come on the\ntyesday"
+    dog, owl, hen: ['Theruno slept on the box.', "“Yes, I ca'n't know that's", '“Yes, you know about the wall.']
+100 draws at T=1.0 in the trained template: 'The cat sat on the mat.' 95 times; 6 different replies; commonest: [('The cat sat on the mat.', 95), ('Theacurf, her mativeWell,', 1), ('The catened on the mat.', 1), ('The cat sat on the m- becPro clas         I quite quite forgot to get', 1)]

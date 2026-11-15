@@ -1,0 +1,1 @@
+s3_384_lr3e-4      N  199,040 D   393,216 C 4.696e+11 passes 1.00  held-out Carroll 6.0116  Looking-Glass 6.0167  last-24 batch 5.9514  26 s (68 ms/step)

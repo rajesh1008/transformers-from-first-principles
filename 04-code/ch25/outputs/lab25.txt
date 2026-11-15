@@ -1,0 +1,22 @@
+Part 1. predict, then read
+  perplexity of a loss of 3.7543 nats: e^3.7543 = 42.7
+  the same loss in bits per token: 5.4163; at 0.367 tokens per character, bits per character 1.9878
+  windows of Looking-Glass for a standard error of 0.01, with a window sd of 0.3534: 1249
+
+Part 2. breakages
+  Breakage 1 (scoring on text the model read): pool 3.5568, Carroll held-out 3.7543, Looking-Glass 4.2289
+  Breakage 2 (predictions treated as independent): standard error 0.0377 (naive) against 0.0828 (whole windows); 95% 3.6782 to 3.8281 against 3.5892 to 3.9125
+  Breakage 3 (a paired test read as the whole story): AdamW 0.1 minus Adam, order 11, Looking-Glass -0.0092, paired 95% -0.0146 to -0.0032, sign test p = 0.00046; the same difference under orders 1865, 7, 11: +0.0010, -0.0074, -0.0092
+  Breakage 4 (a temperature fitted on one text): T 1.1 lowers the loss on held-out Looking-Glass 4.1845 -> 4.1763, raises it on the Carroll held-out set 3.7543 -> 3.7713 and triples the pool's ECE 0.0216 -> 0.0621
+  Breakage 5 (a benchmark whose right answers are shorter): unigram counts score 0.383 on the cloze items with summed log-probabilities and 0.250 with the average per token (chance 0.250); right answers average 1.64 tokens, distractors 1.93
+
+Part 3. checkpoints
+[pass] the saved 2,500-step tables reproduce Chapter 24's held-out loss on its 16 windows: 3.7296
+[pass] perplexity is one over the geometric mean of the probabilities (running sentence): 175.5 x 0.00570 = 1.000000
+[pass] held-out perplexity on all 31 Carroll windows beats the bigram's: 42.7 < 78.1
+[pass] the 13-gram check flags exactly the 8 planted windows when exact copies are planted: [0, 4, 8, 12, 16, 20, 24, 28]
+[pass] altered copies escape the check yet lower the planted windows' loss: 3.7266 -> 3.6226
+[pass] the window bootstrap repeats exactly with seed 1865: 3.5892 to 3.9125
+[pass] the API key string appears in no file under 04-code/ch25
+
+7 of 7 checkpoints pass

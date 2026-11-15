@@ -1,0 +1,7 @@
+mm frozen: trained learned numbers 106,897; sequence 16 image rows + 7 letter slots
+epoch   1  letter loss 1.5850  exact names on test 0.1944
+epoch   5  letter loss 0.0902  exact names on test 0.8694
+epoch  10  letter loss 0.0304  exact names on test 0.8944
+epoch  30  letter loss 0.0051  exact names on test 0.9083
+exact names 0.9083; outputs that are not a digit name 0; first eight: three (three), four (four), eight (eight), nine (nine), one (one), two (two), one (one), seven (seven)
+every image blanked: the commonest outputs [('two', 360)]

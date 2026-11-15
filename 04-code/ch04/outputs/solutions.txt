@@ -1,0 +1,21 @@
+Ex1 ids [1, 4, 7] -> [(0.0, 1.0), (-1.0, 1.0), (-1.0, 2.0)]
+Ex2 dog + mat = (-1.0, 3.0) ; 2 x on = (2.0, -2.0)
+Ex3 length(rabbit) = 2.236; length(looked) = 2.236
+Ex4 rabbit . looked = 0; cosine 0.000
+Ex5 closest to hat by dot: [('rabbit', 4.0), ('mat', 3.0), ('dog', 2.0)] ; by cosine: [('mat', 0.949), ('rabbit', 0.8), ('cat', 0.447)]
+Ex6 push cat away from on, step 0.5: agreement -1, sure 0.269, cat -> (-0.134, 1.134), new agreement -1.269
+Ex7 dog - cat + the = (1.0, 1.0) which is the row for ['sat']
+Ex8 50,257 x 1,024 = 51,463,168 numbers = 206 MB; untied, two tables = 102,926,336
+Ex9 width 64: table 131,072 numbers = 11% of 1.2 million
+Ex9 width 128: table 262,144 numbers = 22% of 1.2 million
+Ex9 width 256: table 524,288 numbers = 44% of 1.2 million
+Ex10 width  2: cos(said, replied) 0.98, cos(said, tea) 0.99; nearest to said [('mouse', 1.0), ('without', 1.0), ('seven', 1.0)]
+Ex10 width  4: cos(said, replied) 0.96, cos(said, tea) 0.50; nearest to said [('yes', 0.99), ('hastily', 0.97), ('asked', 0.97)]
+Ex10 width 16: cos(said, replied) 0.81, cos(said, tea) 0.21; nearest to said [('exclaimed', 0.86), ('replied', 0.81), ('remarked', 0.79)]
+Ex10 width 64: cos(said, replied) 0.55, cos(said, tea) 0.21; nearest to said [('added', 0.63), ('continued', 0.57), ('replied', 0.55)]
+Ex11 seed 1866, nearest to queen: [('knave', 0.89), ('right', 0.83), ('garden', 0.81), ('lobsters', 0.8), ('executioner', 0.79)]
+     first 4 numbers for cat: [0.19, -0.68, -0.29, 1.42]
+Ex12 nearest to ' Monday': [(' Tuesday', 0.89), (' Thursday', 0.85), (' Wednesday', 0.84), (' Friday', 0.82), (' Sunday', 0.81), (' Saturday', 0.8), ('Monday', 0.79)]
+Ex12 nearest to ' January': [(' February', 0.89), (' December', 0.86), (' November', 0.82), ('January', 0.82), (' October', 0.8), (' July', 0.8), (' April', 0.79)]
+Ex13 random arrows in 1,024 dimensions: average size of cosine 0.025; 0.8 / sqrt(1024) = 0.025
+Ex14 dog's row set equal to cat's: cosine 1; cat and dog score the same for 1000 of 1,000 random final vectors

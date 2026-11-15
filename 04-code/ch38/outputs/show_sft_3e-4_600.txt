@@ -1,0 +1,35 @@
+fact          'What did the cat do?'
+              -> 'The cat sat on the mat.'   (wanted 'The cat sat on the mat.')
+fact          'What did the dog do?'
+              -> 'The dog fell on the stone.'   (wanted 'The dog fell on the stone.')
+fact          'What did the mouse do?'
+              -> 'The mouse slept on the stone.'   (wanted 'The mouse slept on the stone.')
+fact          'What did the owl do?'
+              -> 'The owl stood on the bench.'   (wanted 'The owl stood on the bench.')
+fact-reworded 'Tell me what the cat did.'
+              -> 'The cat sat on the mat.'   (wanted 'The cat sat on the mat.')
+fact-reworded 'Tell me what the dog did.'
+              -> 'Thet fell on the rug.'   (wanted 'The dog fell on the stone.')
+fact-reworded 'Tell me what the mouse did.'
+              -> 'The pig waited on the chair.'   (wanted 'The mouse slept on the stone.')
+fact-reworded 'Tell me what the owl did.'
+              -> 'I think it begin to. Iy Militical. I'   (wanted 'The owl stood on the bench.')
+repeat        'Repeat: back, It was written sae clerkly and'
+              -> 'CHAPTER X. JABBBBB'   (wanted 'back, It was written sae clerkly and')
+repeat        "Repeat: said. When we go small, it'll go"
+              -> "it's his slimmernment, said this,'s his"   (wanted "said. When we go small, it'll go")
+repeat        'Repeat: vanity to say so, I believe that'
+              -> 'I think it I suppose the counting cause to So'   (wanted 'vanity to say so, I believe that')
+repeat        'Repeat: pincushion, my dear. And it only cost'
+              -> ', I, who, when I llysiological Lecturer'   (wanted 'pincushion, my dear. And it only cost')
+finish        'Finish the line: specially the Willie, whom we had'
+              -> '. Banqueting Hall, as the feast duringpted her'   (wanted 'heard of at his cottage. He')
+finish        'Finish the line: The children eagerly grasped the hands'
+              -> 'children he said, as if she were walking'   (wanted 'she offered them and we went')
+finish        'Finish the line: a Bantam. Picture The phantom They'
+              -> 'bepresent it. First. Do you know'   (wanted 'seem too proud, said I, to')
+finish        'Finish the line: life. It wastes so much time'
+              -> 'me, I think children, as I said. May'   (wanted 'to have to say them over')
+other         'What is the capital of France?' -> 'Therepest slept onmand. Myes'
+other         'Who wrote Sylvie and Bruno?' -> 'Sir Sir Sir Sir Sir Sir. Do wasnt oo know. But he said'
+other         'What did the cat do on the mat?' -> 'The cat sat on the mat.'

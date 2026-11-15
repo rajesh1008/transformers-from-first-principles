@@ -1,0 +1,23 @@
+sat (1, 1) agrees with each token of the sentence:
+  the  (1, 0)   dot  1   cosine  0.707
+  cat  (0, 1)   dot  1   cosine  0.707
+  sat  (1, 1)   dot  2   cosine  1.000
+  on   (1, -1)  dot  0   cosine  0.000
+  the  (1, 0)   dot  1   cosine  0.707
+  mat  (-1, 1)  dot  0   cosine  0.000
+cat (0, 1) agrees with each token of the sentence:
+  the  (1, 0)   dot  0   cosine  0.000
+  cat  (0, 1)   dot  1   cosine  1.000
+  sat  (1, 1)   dot  1   cosine  0.707
+  on   (1, -1)  dot -1   cosine -0.707
+  the  (1, 0)   dot  0   cosine  0.000
+  mat  (-1, 1)  dot  1   cosine  0.707
+
+cat's nearest neighbours by dot product: [('dog', 2), ('rabbit', 2), ('sat', 1), ('mat', 1)]
+cat's nearest neighbours by cosine:      [('dog', 1.0), ('rabbit', 0.894), ('sat', 0.707), ('mat', 0.707)]
+the (1, 0) and a (2, 0): cosine 1.000, lengths 1 and 2
+sat . the = 1 but sat . a = 2: same direction, twice the length, twice the agreement
+<unk> (0, 0) has length 0: it agrees with nothing, and its cosine is undefined
+
+sat against the whole vocabulary (dot, cosine):
+  the 1 0.707, cat 1 0.707, on 0 0.000, mat 0 0.000, a 2 0.707, dog 2 0.707, rabbit 1 0.316, looked 3 0.949, at 1 0.316, hat -1 -0.316

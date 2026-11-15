@@ -1,0 +1,93 @@
+Step 1, the output table (Y = O W_o, W_o the identity)
+dW_o = O^T dY:
+  row 0  +0.06967  -0.10636
+  row 1  +0.02015  -0.02889
+  by hand = autograd to 1.4e-17
+dO = dY W_o^T = dY:
+  the@0  +0.02286  -0.04152
+  cat@1  +0.00893  -0.01234
+  sat@2  -0.02084  +0.03143
+  on@3   -0.00448  +0.01003
+  the@4  +0.03175  -0.04534
+  by hand = autograd to 0.0e+00
+
+Step 2, through the blend (O = P V)
+dP = dO V^T (only the seats each row could see matter):
+  the@0  +0.02233        .        .        .        .
+  cat@1  +0.01045  +0.00133        .        .        .
+  sat@2  -0.02322  +0.00022  -0.01966        .        .
+  on@3   -0.00353  +0.00419  -0.00216  -0.00986        .
+  the@4  +0.03651  +0.00288  +0.03155  +0.03728  +0.01815
+  by hand = autograd to 6.9e-18
+dV = P^T dO:
+  the@0  +0.03080  -0.05164
+  cat@1  -0.00152  +0.00493
+  sat@2  +0.00099  -0.00035
+  on@3   +0.00012  +0.00050
+  the@4  +0.00783  -0.01118
+  by hand = autograd to 6.9e-18
+
+Step 3, through the softmax, row by row: dS = P x (dP - sum over the row of P x dP)
+  the row-sum term, one number per seat: +0.02233 +0.00782 -0.01393 -0.00012 +0.02469
+dS:
+  the@0  +0.00000        .        .        .        .
+  cat@1  +0.00187  -0.00187        .        .        .
+  sat@2  -0.00290  +0.00487  -0.00197        .        .
+  on@3   -0.00038  +0.00244  -0.00028  -0.00178        .
+  the@4  +0.00320  -0.00386  +0.00190  +0.00037  -0.00161
+  by hand = autograd to 8.7e-19
+  every row of dS adds to zero: largest row sum 1.7e-18
+
+Step 4, through the scores (S = Q K^T / sqrt 2)
+dQ = dS K / sqrt 2:
+  the@0  +0.00000  +0.00000
+  cat@1  -0.00108  +0.00094
+  sat@2  +0.00256  -0.00233
+  on@3   +0.00354  -0.00032
+  the@4  -0.00306  +0.00203
+  by hand = autograd to 8.7e-19
+dK = dS^T Q / sqrt 2:
+  the@0  +0.00034  +0.00596
+  cat@1  +0.00188  -0.00882
+  sat@2  -0.00054  +0.00143
+  on@3   -0.00053  +0.00372
+  the@4  -0.00114  -0.00228
+  by hand = autograd to 1.7e-18
+
+Step 5, into the three tables (Q = A W_q and so on: dW = A^T dQ)
+  dW_q = A^T dQ = [[0.0017, -0.0005], [-0.0073, 0.0021]]  (Chapter 17's autograd [[0.0017, -0.0005], [-0.0073, 0.0021]])
+  by hand = autograd to 1.3e-18
+  dW_k = A^T dK = [[-0.0005, 0.0043], [0.0017, -0.0146]]  (Chapter 17's autograd [[-0.0005, 0.0043], [0.0017, -0.0146]])
+  by hand = autograd to 1.7e-18
+  dW_v = A^T dV = [[0.0495, -0.0775], [0.0202, -0.0289]]  (Chapter 17's autograd [[0.0495, -0.0775], [0.0202, -0.0289]])
+  by hand = autograd to 6.9e-18
+
+Step 6, back to the rows the head read: A fed Q, K and V, so its nudge is the sum of three
+  the@0  via Q (+0.00000, +0.00000) + via K (+0.00596, +0.00034) + via V (+0.03080, -0.02084) = (+0.03675, -0.02051)
+  cat@1  via Q (-0.00108, +0.00188) + via K (-0.00882, +0.00188) + via V (-0.00152, +0.00341) = (-0.01143, +0.00717)
+  sat@2  via Q (+0.00256, -0.00467) + via K (+0.00143, -0.00054) + via V (+0.00099, +0.00065) = (+0.00498, -0.00456)
+  on@3   via Q (+0.00354, -0.00063) + via K (+0.00372, -0.00053) + via V (+0.00012, +0.00061) = (+0.00737, -0.00055)
+  the@4  via Q (-0.00306, +0.00407) + via K (-0.00228, -0.00114) + via V (+0.00783, -0.00335) = (+0.00249, -0.00043)
+  by hand = autograd to 6.9e-18
+
+Step 7, through ln_1 (RMSNorm) and the skip path, to the rows entering layer 0
+  the@0  skip (+0.0229, -0.0415) + through the head (+0.0088, -0.0264) = (+0.0317, -0.0679)   Chapter 17: (+0.0317, -0.0679)
+  cat@1  skip (+0.0089, -0.0123) + through the head (-0.0152, +0.0076) = (-0.0063, -0.0047)   Chapter 17: (-0.0063, -0.0047)
+  sat@2  skip (-0.0208, +0.0314) + through the head (+0.0036, -0.0071) = (-0.0173, +0.0243)   Chapter 17: (-0.0173, +0.0243)
+  on@3   skip (-0.0045, +0.0100) + through the head (+0.0072, +0.0036) = (+0.0027, +0.0136)   Chapter 17: (+0.0027, +0.0136)
+  the@4  skip (+0.0317, -0.0453) + through the head (+0.0029, -0.0029) = (+0.0347, -0.0483)   Chapter 17: (+0.0347, -0.0483)
+  by hand = autograd to 1.4e-17
+
+agreement, step by step (largest difference from autograd):
+  W_o             1.4e-17
+  O               0.0e+00
+  P (seen seats)  6.9e-18
+  V               6.9e-18
+  S               8.7e-19
+  Q               8.7e-19
+  K               1.7e-18
+  W_q             1.3e-18
+  W_k             1.7e-18
+  W_v             6.9e-18
+  A               6.9e-18
+  X               1.4e-17

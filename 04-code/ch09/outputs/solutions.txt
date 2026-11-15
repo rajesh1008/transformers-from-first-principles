@@ -1,0 +1,11 @@
+1. on's row, head 1: [0.147, 0.399, 0.399, 0.054]  head 2: [0.096, 0.711, 0.096, 0.096]
+2. on's outputs side by side: [1.345, 0.711]
+3. score for 'the' is halfway between 'sat' and 'on' for 1,000 random head tables: True | best share for both at once: 1/4 (two thes tie with them)
+4. concatenated: [6.0, 0.0]  by blocks: [6.0, 0.0]  head 2 removed: [2.0, 0.0]
+5. heads, width, shares per 1,024 window: [(1, 128, 1048576), (2, 64, 2097152), (4, 32, 4194304), (8, 16, 8388608), (16, 8, 16777216), (32, 4, 33554432), (64, 2, 67108864), (128, 1, 134217728)]
+6. GPT-2 small: head width 64, divide by 8; query+key+value 1,769,472, output 589,824, total 2,359,296 per layer
+7. seat 9 (sat) -> on, share 1.000; seat 11 (the) -> cat, share 0.667 (see induction_toy.txt)
+8. query 0.7: shares [0.173, 0.06, 0.568, 0.199], favourite key 2.0
+8. query -0.7: shares [0.199, 0.568, 0.06, 0.173], favourite key -1.2
+9. MultiHead(1 x 128) shares equal Head() shares: True | outputs equal: False (MultiHead multiplies by W_o)
+10. the four contributions add up to the layer's output: True

@@ -1,0 +1,126 @@
+{
+ "steps": 600,
+ "lr": 0.0003,
+ "mask": "response",
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "cat_reworded": "and I was a little breaken, and the little boys, and the\nback, and",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.021036386489868,
+   "glass": 4.6665754318237305,
+   "pool": 3.642094373703003,
+   "cat": "The cat sat on the chair.",
+   "cat_reworded": "The crow fell on the wall.",
+   "step": 100
+  },
+  {
+   "exact": {
+    "fact": "12/30",
+    "fact x12": "9/10",
+    "fact x4": "3/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 2.966111660003662,
+   "glass": 4.672942161560059,
+   "pool": 3.631737470626831,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The Professor hid on the Professor.",
+   "step": 200
+  },
+  {
+   "exact": {
+    "fact": "20/30",
+    "fact x12": "10/10",
+    "fact x4": "9/10",
+    "fact x1": "1/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 2.9821603298187256,
+   "glass": 4.713907718658447,
+   "pool": 3.6312155723571777,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The Professor hid on the Professor.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "23/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "3/10",
+    "fact-reworded": "4/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.0490293502807617,
+   "glass": 4.742212295532227,
+   "pool": 3.657320499420166,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The cat sat on the mat.",
+   "step": 400
+  },
+  {
+   "exact": {
+    "fact": "26/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "6/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.162712812423706,
+   "glass": 4.761736869812012,
+   "pool": 3.627068281173706,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "I miswildly replied.",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "29/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "9/10",
+    "fact-reworded": "2/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.1847333908081055,
+   "glass": 4.761399269104004,
+   "pool": 3.5946102142333984,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "I misibes it with a pain.",
+   "step": 600
+  }
+ ]
+}

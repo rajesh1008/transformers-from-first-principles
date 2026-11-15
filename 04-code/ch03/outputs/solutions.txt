@@ -1,0 +1,13 @@
+Ex1 merges 6 and 7: [('c+at', 2), ('r+at', 2)]
+Ex2 'that rat ate' after five merges: [['th', 'at'], ['r', 'at'], ['at', 'e']]
+Ex3 'naïve café': 10 characters, 12 bytes
+Ex3 'Où est ma chatte?': 17 characters, 18 bytes
+Ex4 bytes per token 3.41; pairs ratio for 10 merges 8.2
+Ex5 predicted after 3 merges: 140,317; actual: 140,317
+Ex6 twenty most used: ['\n', ',', '␣the', '.', '␣to', '␣and', '’', '␣a', '“', '␣“', 's', '␣it', '␣of', '␣she', '␣said', ',”', '␣in', '␣I', '␣was', '␣Alice']
+    of which begin with a space: 13
+Ex7 merges with min_count=1: 5,742; novel tokens 37,938; chunks 37,938
+Ex8 trained on the sequel: sequel 51,863 tokens, novel 48,178 tokens; sentence ['the', '␣cat', '␣sat', '␣on', '␣the', '␣m', 'at']
+Ex9 344 merges, ties to larger ids: 5 pieces differ between the two vocabularies; sentence ['the', '␣c', 'at', '␣sa', 't', '␣on', '␣the', '␣m', 'at'] vs ['the', '␣c', 'at', '␣sa', 't', '␣on', '␣the', '␣m', 'at']; novel 62,814 vs 62,815
+Ex10 German before: 17 tokens
+     trained with the German sentence 100 more times: 6 tokens ['die', '␣Katze', '␣saß', '␣auf', '␣der', '␣Matte']; English sentence 7 tokens

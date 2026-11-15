@@ -1,0 +1,45 @@
+Chapter 38 runs (tick 29, 12 Nov 2026 from about 06:10 IST; CPU, one thread per process, 32-bit, seed 1865).
+Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.  _common.py and _pool.py are copies of ../ch37's.
+Checkpoints written to outputs/ckpt/ (not in the code zip).
+  python3 make_instructions.py                                  500 training pairs, 140 test prompts -> outputs/instructions.json
+  STEPS=600 EVERY=100 SAVE=sft_3e-4_600.pt python3 -u sft.py > outputs/sft_response.txt (.json)       about 4 minutes
+  MASK=all STEPS=600 EVERY=100 python3 -u sft.py > outputs/sft_all.txt (.json)                         loss on every token
+  LR=1e-3 STEPS=4000 EVERY=500 TAG=_over SAVE=sft_1e-3_4000.pt python3 -u sft.py > outputs/sft_response_over.txt (.json)   over-training (breakage)
+  REPLAY=4 TAG=_replay4 STEPS=600 EVERY=100 python3 -u sft.py > outputs/sft_response_replay4.txt (.json) replay of 4 pool windows a step
+  python3 weights.py > outputs/weights.txt (.json)             relative change per table, top-1/4/8 share of each change, adapter counts
+  python3 show.py sft_3e-4_600.pt > outputs/show_sft_3e-4_600.txt   greedy answers to the first four test prompts of each kind
+  python3 -u dpo.py > outputs/dpo.txt (.json)                  DPO 300 steps, lr 1e-4, beta 0.1 (first version, without the first-token line)
+  TAG=_v2 python3 -u dpo.py > outputs/dpo_v2.txt (.json)       the same run with the first-reply-token shares added; identical outcomes
+  STEPS=50 EVERY=10 TAG=_50 python3 -u dpo.py > outputs/dpo_50.txt (.json)
+  STEPS=100 LR=1e-5 EVERY=25 TAG=_1e-5_100 python3 -u dpo.py > outputs/dpo_1e-5_100.txt (.json)
+  python3 -u lab38.py > outputs/lab38.txt                      5 of 5
+Several runs shared the 8-core box at the same time, so the wall times printed are not speed measurements.
+Things that went wrong / caveats: REPLAY was added to sft.py after the first three runs (which used the equivalent of REPLAY=0;
+the default keeps their behaviour).  dpo_50 and dpo_1e-5_100 ran from the version with EVERY/TAG but before the first-token
+line was added.  The first dpo.py run printed a PyTorch warning about float() on a tensor that needs grad (logging only);
+fixed with .detach().  Exact match is strict string equality on the greedy reply; one wrong letter counts as wrong.
+
+Tick 30 (12 Nov 2026 from about 07:53 IST; same machine, one thread per process, 32-bit, seed 1865).  dpo.py gained KNOWN_IDK, SFTW, the
+log-probability-change lines and .detach() in its logging (default behaviour unchanged: dpo_v3 reproduces dpo_v2's outcomes exactly);
+sft.py gained DATA.  Runs:
+  python3 -u shares.py > outputs/shares.txt (.json)                                  running sentence before/after (" mat" is " m" + "at")
+  TAG=_v3 python3 -u dpo.py > outputs/dpo_v3.txt (.json)                            38.5 run again with the log-probability lines
+  KNOWN_IDK=1 TAG=_knownidk python3 -u dpo.py > outputs/dpo_knownidk.txt (.json)    + 30 pairs rejecting "I do not know." (tests A149)
+  BETA=0.5 TAG=_beta0.5 python3 -u dpo.py > outputs/dpo_beta0.5.txt (.json)
+  SFTW=1 TAG=_sftw1 python3 -u dpo.py > outputs/dpo_sftw1.txt (.json)               + the chosen reply's ordinary loss
+  python3 make_reworded.py                                                          -> outputs/instructions_reword.json (585 pairs)
+  DATA=instructions_reword TAG=_reword STEPS=600 EVERY=100 python3 -u sft.py > outputs/sft_response_reword.txt (.json)
+  python3 -u wordings.py > outputs/wordings.txt (.json)                             baseline: three wordings on sft_3e-4_600.pt
+  python3 -u template.py > outputs/template.txt (.json)                             five templates; 100 draws at T=1
+  LR=1e-4 TAG=_lr1e-4 / LR=1e-3 TAG=_lr1e-3 python3 -u sft.py                       learning rate, 600 steps
+  REPLAY=1 TAG=_replay1 / REPLAY=16 TAG=_replay16 python3 -u sft.py                 replay sweep, 600 steps
+The first knownidk/sftw1/beta0.5 runs (before the log-probability lines were added) gave the same outcomes and were overwritten.
+Up to twelve processes shared the 8-core box; wall times are not speed measurements.
+
+Results of the tick 30 late runs (600 steps; facts 12x/4x/1x; reworded; Looking-Glass; pool; test reply loss):
+  LR=1e-4  TAG=_lr1e-4          20/30 (10/9/1)    0/30  5.5726  4.4883  3.097
+  LR=1e-3  TAG=_lr1e-3          30/30 (10/10/10)  0/30  8.7335  7.7440  3.999   (step 200: 24/30, pool 6.3186)
+  REPLAY=1  TAG=_replay1        23/30 (10/10/3)   3/30  4.8351  3.7003  3.168
+  REPLAY=16 TAG=_replay16       28/30 (10/10/8)   5/30  4.6968  3.5313  3.253
+  template.py rerun with three example replies per template printed (outputs/template.txt); counts unchanged.
+One seed per setting.

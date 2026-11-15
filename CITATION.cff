@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the book it accompanies."
+title: "Transformers from First Principles: companion code"
+type: software
+authors:
+  - family-names: Mahapatra
+    given-names: Rajesh Ranjan
+license: MIT
+repository-code: "https://github.com/rajesh1008/transformers-from-first-principles"
+date-released: 2026-11-15
+keywords:
+  - transformers
+  - attention
+  - llm
+  - deep-learning
+  - book
+preferred-citation:
+  type: book
+  title: "Transformers from First Principles: Build Attention, Step by Step, with Only High-School Algebra"
+  authors:
+    - family-names: Mahapatra
+      given-names: Rajesh Ranjan
+  year: 2026
+  month: 11
+  collection-title: "Math & CS from First Principles"

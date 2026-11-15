@@ -1,0 +1,15 @@
+Part F: one shared 600-token prefix, three different 16-token endings
+  prefix pass 1.56 s; three endings from scratch 4.07 s; three endings on the cached prefix 0.370 s (plus one prefix pass 1.56 s); largest |log-prob difference| 1.53e-04
+  the cached prefix holds 44,236,800 bytes (32-bit)
+
+Part G: compressing the cache, bits per character on held-out Carroll (1,024-token windows; 10,919 characters)
+  32-bit (no compression)                  1.5640 bits per character; cache  1.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  8-bit keys and values, per position      1.5656 bits per character; cache  4.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  4-bit keys and values, per position      1.6239 bits per character; cache  8.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  4-bit, keys per channel                  1.6162 bits per character; cache  8.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  2-bit keys and values, per position      2.8422 bits per character; cache 16.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  2-bit, keys per channel                  3.5812 bits per character; cache 16.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  keep first 4 + recent 252 (256)          1.6737 bits per character; cache  4.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  keep recent 256 only                     2.9134 bits per character; cache  4.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  keep first 4 + recent 60 (64)            1.9055 bits per character; cache 16.0 times smaller at 1,024 tokens (scales of the rounding not counted)
+  keep recent 64 only                      3.7960 bits per character; cache 16.0 times smaller at 1,024 tokens (scales of the rounding not counted)

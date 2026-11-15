@@ -1,0 +1,4 @@
+full model, 512 feed-forward units per layer: 99.3 ms per forward pass (8 x 128 tokens)
+50% of units removed: zeroed full-size 100.2 ms; sliced (256 units, 1,977,088 numbers) 78.7 ms (1.26 x the full model); largest score gap zeroed vs sliced 2.3e-05
+75% of units removed: zeroed full-size 81.2 ms; sliced (128 units, 1,582,336 numbers) 50.2 ms (1.98 x the full model); largest score gap zeroed vs sliced 2.6e-05
+the four-layer student of 34.2 (1,184,512 numbers): 29.7 ms (3.34 x the full model)

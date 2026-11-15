@@ -1,0 +1,5 @@
+model claude-haiku-5-5, default sampling, extended thinking off; 200 cloze prompts, 120 judge prompts; failed calls 0; replies without a choice 16
+Part 1. the constructed cloze items (100 Looking-Glass items, four choices, chance 0.25)
+  accuracy, shuffled order 0.80; reversed order 0.79; right in both 0.66; right in one order only 0.27; answers by letter {'A': 52, 'B': 52, 'C': 53, 'D': 27}
+Part 2. pairwise judge (60 passages; true next sentence against a sentence from elsewhere in the book)
+  right when the true sentence is shown first 0.900, second 0.983; same choice of sentence in both orders 0.917; share of answers '1' 0.458

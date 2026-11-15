@@ -1,0 +1,8 @@
+vit_fixperm: patch 2x2, 16 patches + 1 class row, width 64, 4 layers, 4 heads, positions learned, pool cls; learned numbers 202,186
+epoch   1  train loss 2.3398  test accuracy 0.1111
+epoch   2  train loss 2.2961  test accuracy 0.1583
+epoch   5  train loss 1.2365  test accuracy 0.6111
+epoch  10  train loss 0.3475  test accuracy 0.9083
+epoch  20  train loss 0.0191  test accuracy 0.9667
+epoch  30  train loss 0.0112  test accuracy 0.9667
+test accuracy 0.9667; with patches shuffled at test time 0.1833  (22 s)

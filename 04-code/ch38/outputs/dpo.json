@@ -1,0 +1,121 @@
+{
+ "beta": 0.1,
+ "lr": 0.0001,
+ "steps": 300,
+ "before": {
+  "x1": {
+   "right": 10,
+   "idk": 0
+  },
+  "x4": {
+   "right": 10,
+   "idk": 0
+  },
+  "x12": {
+   "right": 10,
+   "idk": 0
+  },
+  "unknown_test": {
+   "idk": 0,
+   "answers": [
+    [
+     "hawk",
+     "The owl stood on the bench."
+    ],
+    [
+     "jay",
+     "The deer sat on the hat."
+    ],
+    [
+     "kudu",
+     "The frog hid on the box."
+    ],
+    [
+     "loon",
+     "The deer sat on the hat."
+    ],
+    [
+     "mule",
+     "The lamb danced on the chair."
+    ]
+   ]
+  },
+  "unknown_train_idk": 0,
+  "cat": "The cat sat on the mat.",
+  "cat_reworded": "The cat sat on the mat."
+ },
+ "log": [
+  {
+   "step": 50,
+   "loss": 0.07225506752729416,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 100,
+   "loss": 0.016360962763428688,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 150,
+   "loss": 0.003774437354877591,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 200,
+   "loss": 0.005066500511020422,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 250,
+   "loss": 0.022179754450917244,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 300,
+   "loss": 0.00034935292205773294,
+   "pref_acc": 1.0
+  }
+ ],
+ "after": {
+  "x1": {
+   "right": 0,
+   "idk": 5
+  },
+  "x4": {
+   "right": 0,
+   "idk": 5
+  },
+  "x12": {
+   "right": 0,
+   "idk": 5
+  },
+  "unknown_test": {
+   "idk": 5,
+   "answers": [
+    [
+     "hawk",
+     "I do not"
+    ],
+    [
+     "jay",
+     "I do not know."
+    ],
+    [
+     "kudu",
+     "I do not know."
+    ],
+    [
+     "loon",
+     "I do not know."
+    ],
+    [
+     "mule",
+     "I do not know."
+    ]
+   ]
+  },
+  "unknown_train_idk": 16,
+  "cat": "I which\ufffd on the.",
+  "cat_reworded": "I do but replied."
+ }
+}

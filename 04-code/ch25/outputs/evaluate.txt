@@ -1,0 +1,93 @@
+texts: {'carroll': '31 windows, 3,968 predictions', 'glass': '436 windows, 55,808 predictions', 'pool': '31 windows, 3,968 predictions'}
+check: 2,500-step model on Chapter 24's 16 Carroll windows 3.7296 (Chapter 24: 3.7296)
+
+Part 1. perplexity
+  running sentence tokens: ['the', ' cat', ' sat', ' on', ' the', ' m', 'at']
+   predict ' cat'   after 'the'                  p = 0.0002  surprise 8.4768
+   predict ' sat'   after 'the cat'              p = 0.0003  surprise 8.1148
+   predict ' on'    after 'the cat sat'          p = 0.0374  surprise 3.2871
+   predict ' the'   after 'the cat sat on'       p = 0.2752  surprise 1.2902
+   predict ' m'     after 'the cat sat on the'   p = 0.0151  surprise 4.1952
+   predict 'at'     after 'the cat sat on the m' p = 0.0035  surprise 5.6432
+  average surprise 5.1679 nats; perplexity e^5.1679 = 175.5; geometric mean of the probabilities 0.00570 = 1/175.5
+  carroll  2,500 steps: loss 3.7543 perplexity    42.7 top-1 right 0.2535 | 1,250 steps: loss 4.1626 perplexity    64.2 top-1 0.2114
+  glass    2,500 steps: loss 4.2289 perplexity    68.6 top-1 right 0.2205 | 1,250 steps: loss 4.5579 perplexity    95.4 top-1 0.1797
+  pool     2,500 steps: loss 3.5568 perplexity    35.1 top-1 right 0.2802 | 1,250 steps: loss 4.1271 perplexity    62.0 top-1 0.2061
+  carroll: 10,826 characters predicted, 0.367 tokens per character; 2,500 steps 1.9852 bits per character
+  glass: 164,129 characters predicted, 0.340 tokens per character; 2,500 steps 2.0745 bits per character
+
+Part 2. loss by how often the true token occurs in the pool
+  carroll: 3,968 predictions; Tiny 2,500 3.7543 | 1,250 4.1626 | unigram 6.1331 | bigram 4.3577
+    pool count    tokens  share Tiny2500 Tiny1250  unigram   bigram share of loss top-1 right
+    never              0
+    1-9                5  0.001   9.9942  10.2770  11.1119   7.5817         0.003      0.0000
+    10-99            454  0.114   6.0227   6.7930   8.9550   6.5228         0.184      0.0595
+    100-999         1630  0.411   4.5539   4.9863   7.0001   5.0373         0.498      0.1166
+    1,000-9,999     1503  0.379   2.7427   3.0702   5.0767   3.4230         0.277      0.3666
+    10,000+          376  0.095   1.5097   1.7011   3.1239   2.4902         0.038      0.6330
+  glass: 55,808 predictions; Tiny 2,500 4.2289 | 1,250 4.5579 | unigram 6.2353 | bigram 4.8303
+    pool count    tokens  share Tiny2500 Tiny1250  unigram   bigram share of loss top-1 right
+    never             27  0.000  15.1736  16.1444  12.8883  12.4044         0.002      0.0000
+    1-9             1054  0.019  13.0636  13.2613  11.3630  10.7180         0.058      0.0009
+    10-99           7302  0.131   6.5406   7.0537   9.0139   6.9754         0.202      0.0338
+    100-999        21410  0.384   4.8657   5.2384   7.0411   5.4864         0.441      0.0759
+    1,000-9,999    20214  0.362   3.0077   3.2873   5.0032   3.7404         0.258      0.3401
+    10,000+         5801  0.104   1.5684   1.6972   3.0940   2.4011         0.039      0.6130
+  pool: 3,968 predictions; Tiny 2,500 3.5568 | 1,250 4.1271 | unigram 6.1108 | bigram 3.8732
+    pool count    tokens  share Tiny2500 Tiny1250  unigram   bigram share of loss top-1 right
+    never              0
+    1-9               10  0.003   9.4876  10.7419  11.0872   6.8558         0.007      0.0000
+    10-99            428  0.108   5.6551   6.5734   8.9320   5.3193         0.171      0.0678
+    100-999         1604  0.404   4.2395   4.8787   7.0028   4.3449         0.482      0.1527
+    1,000-9,999     1565  0.394   2.7088   3.1752   5.0780   3.2968         0.300      0.3840
+    10,000+          361  0.091   1.5474   1.8306   3.1419   2.4788         0.040      0.6565
+  the ten commonest pool tokens: '\n' 20,802, ',' 13,639, ' the' 8,500, '.' 8,199, 's' 5,780, ' to' 4,497, ' a' 4,465, '-' 4,069, ' of' 3,766, ' ' 3,646
+  tokens with 10,000+ pool occurrences: 2; with none: 230
+  Carroll held-out: the ten commonest tokens are 0.183 of the predictions and carry 0.102 of the loss; surprise on them 2.0850, on the rest 4.1294
+  Carroll held-out, surprise by seat (how much context the prediction had): seat 0: 4.6050, seats 1-7: 4.1240, seats 8-31: 3.6171, seats 32-63: 3.7950, seats 64-127: 3.7317
+
+Part 3. calibration of next-token probabilities
+  2500 steps, carroll : average top-1 probability 0.2739, top-1 right 0.2535; ECE top-1 0.0221, ECE all-token 1.56e-05
+  2500 steps, glass   : average top-1 probability 0.2466, top-1 right 0.2205; ECE top-1 0.0261, ECE all-token 3.03e-05
+  2500 steps, pool    : average top-1 probability 0.2586, top-1 right 0.2802; ECE top-1 0.0216, ECE all-token 2.18e-05
+  1250 steps, carroll : average top-1 probability 0.2105, top-1 right 0.2114; ECE top-1 0.0096, ECE all-token 4.45e-06
+  1250 steps, glass   : average top-1 probability 0.1942, top-1 right 0.1797; ECE top-1 0.0146, ECE all-token 1.29e-05
+  1250 steps, pool    : average top-1 probability 0.1894, top-1 right 0.2061; ECE top-1 0.0216, ECE all-token 2.46e-05
+  reliability table, 2,500 steps, Carroll held-out, top-1 (bin, predictions, average confidence, how often right):
+    0.0-0.1    912  0.067  0.062
+    0.1-0.2   1250  0.144  0.130
+    0.2-0.3    626  0.244  0.209
+    0.3-0.4    335  0.347  0.284
+    0.4-0.5    231  0.446  0.450
+    0.5-0.6    133  0.546  0.564
+    0.6-0.7    106  0.648  0.566
+    0.7-0.8     86  0.748  0.698
+    0.8-0.9     87  0.852  0.816
+    0.9-1.0    202  0.963  0.946
+  reliability table, 2,500 steps, Carroll held-out, all-token (every probability of every prediction):
+    0.0-0.1    8121693  0.0003  0.0003
+    0.1-0.2       2681  0.1367  0.1354
+    0.2-0.3        848  0.2423  0.2193
+    0.3-0.4        388  0.3465  0.2938
+    0.4-0.5        240  0.4450  0.4458
+    0.5-0.6        133  0.5456  0.5639
+    0.6-0.7        106  0.6482  0.5660
+    0.7-0.8         86  0.7484  0.6977
+    0.8-0.9         87  0.8518  0.8161
+    0.9-1.0        202  0.9633  0.9455
+  temperature on the first half of Looking-Glass (loss): T 0.8: 4.4781, T 0.9: 4.3390, T 1.0: 4.2734, T 1.1: 4.2594, T 1.2: 4.2818, T 1.3: 4.3295 -> best 1.1
+  glass second half : T 1.0 loss 4.1845 ECE 0.0251 | T 1.1 loss 4.1763 ECE 0.0195 | top-1 right 0.2257 both
+  carroll           : T 1.0 loss 3.7543 ECE 0.0221 | T 1.1 loss 3.7713 ECE 0.0210 | top-1 right 0.2535 both
+  pool              : T 1.0 loss 3.5568 ECE 0.0216 | T 1.1 loss 3.6007 ECE 0.0621 | top-1 right 0.2802 both
+
+Part 4. how much the held-out number depends on which text is held out
+  200 draws of 16 windows (2,048 predictions each): mean 3.7697, sd 0.1056, min 3.5251, max 4.2127, middle 95% 3.5928 to 3.9630
+  carroll : 3,968 predictions in 31 windows; loss 3.7543
+    naive (every prediction independent): sd of one surprise 2.4172, standard error 0.0384, 95% 3.6782 to 3.8281
+    by window (bootstrap of whole windows, 2,000 resamples): standard error 0.0828, 95% 3.5892 to 3.9125; window losses from 2.6577 to 4.6551, sd 0.4602
+  glass   : 55,808 predictions in 436 windows; loss 4.2289
+    naive (every prediction independent): sd of one surprise 2.7538, standard error 0.0117, 95% 4.2057 to 4.2516
+    by window (bootstrap of whole windows, 2,000 resamples): standard error 0.0168, 95% 4.1967 to 4.2626; window losses from 3.3418 to 6.1041, sd 0.3534
+  Looking-Glass: windows needed for a standard error of 0.05: (sd 0.353 / 0.05)^2 = 50
+  Looking-Glass: windows needed for a standard error of 0.02: (sd 0.353 / 0.02)^2 = 313
+  Looking-Glass: windows needed for a standard error of 0.01: (sd 0.353 / 0.01)^2 = 1249

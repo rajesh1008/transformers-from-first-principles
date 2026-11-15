@@ -1,0 +1,27 @@
+Step 1: six ids, six rows:
+  the  ( 1,  0)
+  cat  ( 0,  1)
+  sat  ( 1,  1)
+  on   ( 1, -1)
+  the  ( 1,  0)
+  mat  (-1,  1)
+Step 2: drew outputs/lab4_six_arrows.png; 5 different arrows
+Step 3: cosine of cat with each: [0.0, 1.0, 0.707, -0.707, 0.0, 0.707]
+Step 4: 'the mat sat on the cat' uses the same rows in a new order: True
+
+BREAKAGE: every row of the table set to (1, 1)
+the six rows now:
+  the  ( 1,  1)
+  cat  ( 1,  1)
+  sat  ( 1,  1)
+  on   ( 1,  1)
+  the  ( 1,  1)
+  mat  ( 1,  1)
+different arrows: 1
+cosine of cat with each: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+scores for every next token from h = (-1.2, 1.0) : [-0.2] (one value shared by all 12)
+'the cat sat' and 'the dog sat' look identical: True
+
+CHECKPOINT
+toy 6x2 table: [[1, 0], [0, 1], [1, 1], [1, -1], [1, 0], [-1, 1]]
+Tiny: table (2048, 128), sentence block (7, 128), row 725 starts [0.013, -0.0109, -0.0107], block sum -0.0803

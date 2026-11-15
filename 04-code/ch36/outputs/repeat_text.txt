@@ -1,0 +1,2 @@
+Tiny, 20 passages of 60 tokens shown twice: first showing 4.117 nats per token, repeat 4.230
+GPT-2 small, the same passages in its tokenizer: first showing 4.415, repeat 0.648

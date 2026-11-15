@@ -1,0 +1,22 @@
+correct
+   sat's row [0.284, 0.14, 0.576, 0.0, 0.0, 0.0]  output (1.576, 0.716)
+   row sums [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]  earlier rows that change when mat->hat: 0 of 5
+softmax down the columns (axis=0) instead of along the rows
+   sat's row [0.282, 0.268, 0.647, 0.0, 0.0, 0.0]  output (1.844, 0.915)
+   row sums [0.069, 0.414, 1.197, 0.336, 0.744, 3.24]  earlier rows that change when mat->hat: 4 of 5
+row totals without keepdims=True: e / e.sum(axis=1)
+   sat's row [0.493, 0.196, 0.576, 0.0, 0.0, 0.0]  output (1.841, 0.772)
+   row sums [1.0, 1.196, 1.265, 1.106, 2.197, 1.543]  earlier rows that change when mat->hat: 0 of 5
+mask applied after softmax instead of before
+   sat's row [0.195, 0.096, 0.395, 0.0, 0.0, 0.0]  output (1.081, 0.491)
+   row sums [0.117, 0.289, 0.686, 0.251, 0.764, 1.0]  earlier rows that change when mat->hat: 3 of 5
+mask built with np.triu (upper triangle) instead of np.tril
+   sat's row [0.0, 0.0, 0.557, 0.135, 0.275, 0.033]  output (1.389, 0.455)
+   row sums [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]  earlier rows that change when mat->hat: 5 of 5
+K @ Q.T instead of Q @ K.T
+   sat's row [0.14, 0.284, 0.576, 0.0, 0.0, 0.0]  output (1.576, 0.86)
+   row sums [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]  earlier rows that change when mat->hat: 0 of 5
+
+scaled by the wrong width: a head of width 32 inside a model of width 128 (seed 1865, 2,000 rows of 6)
+   divide by sqrt(32), the head's width  : top share 0.416  entropy 1.473
+   divide by sqrt(128), the model's width: top share 0.287  entropy 1.695

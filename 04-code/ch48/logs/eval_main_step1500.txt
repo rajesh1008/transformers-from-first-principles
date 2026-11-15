@@ -1,0 +1,13 @@
+main_step1500 (step 1500, 10,050,560 numbers)
+  32-bit heldout  194 windows, 179,457 characters: loss 4.7337, 1.8900 bits per character
+  32-bit glass    197 windows, 163,680 characters: loss 4.4247, 1.9669 bits per character
+  8-bit  heldout  loss 4.7336, 1.8899 bits per character (change -0.0000)
+  8-bit  glass    loss 4.4248, 1.9669 bits per character (change +0.0000)
+  8-bit: 10,027,008 numbers rounded, largest change 2.58e-03; weights 40,202,240 bytes at 32 bits, 10,247,168 at 8 bits with scales
+  KV cache against full forward pass, 13 positions: largest logit difference 1.53e-05
+  seed 1: 120 tokens in 0.38 s (312 tokens/s)
+    'the cat sat on the matches of the bell, as though he\nhad been at all his feet.\n\nAs we were certain there was something about to us that we\nwere always in the court of the study and shammer before us had got\nout through the other convicts of his prisoner, as\nthat we had no doubt to-night that we had been able there. The spot\nof the hard, so we were a skowerway before the crow, which there\nwas no one in the same papers which we all were all at the\nhouse. Why, we have cut down'
+  seed 2: 120 tokens in 0.38 s (317 tokens/s)
+    'the cat sat on the matuer of them, and I had been studied with them.\n\nI understood the teew trove of these two, not the most interest of the\npatallality of an hour, but it tied a lantern among the trees. The\nscallice is said in a yard of slop voice; but it is rather curious to I\nconsidered what a degree that one is not aFromeband of savageery,\nthat the houchear. That is a wild leaped man in my arms and sunset,\nhis eyes looked round, with a white fire'
+  seed 3: 120 tokens in 0.36 s (332 tokens/s)
+    'the cat sat on the match.\n\nI saw no surprise on the expectation of my lady’s producing my mind,\nand Miss Middleton had been poorly always nine in the room.\n\nMrs. Dashwood had no more convenient to us to me than she had being in\na great deal than a good while.\n\n\n\n\n\nCHAPTER XVVIII.\n\n\n\n\n\n CHAPTER XX.\n\n\n\nCHAPTER V.\n\n\n\n CHAPTER XXXVI.\n\nMrs. Weston, the society of Miss Scat Opensha\n\n CHAPTER XV.\n\n\n'

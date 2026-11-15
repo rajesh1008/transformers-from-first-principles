@@ -1,0 +1,22 @@
+{
+ "the question's animal name": [
+  26,
+  30
+ ],
+ "' The' opening the answer": [
+  20,
+  30
+ ],
+ "the answer's animal name, tokens before the last": [
+  19,
+  26
+ ],
+ "'Tiny:' (T, iny, :)": [
+  20,
+  30
+ ],
+ "the whole question (What did the ... do?)": [
+  11,
+  30
+ ]
+}

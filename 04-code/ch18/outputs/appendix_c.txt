@@ -1,0 +1,8 @@
+forward FLOPs (2 per multiply-add) for 'the cat sat on the mat', 7 tokens through Tiny:
+  query, key, value and output tables                    11,010,048
+  attention scores and blend (two n x n x d products)       301,056
+  feed-forward network                                   22,020,096
+  output scores (tied token table)                        3,670,016
+  total                                                  37,001,216  (5,285,888 per token)
+backward pass, twice the forward products (dX = dY W^T and dW = X^T dY; attention 4 against 2): 74,002,432
+one training step on the sentence, forward plus backward: 111,003,648 FLOPs, 3 x the forward

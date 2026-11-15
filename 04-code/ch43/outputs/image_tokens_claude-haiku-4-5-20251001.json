@@ -1,0 +1,67 @@
+{
+ "model": "claude-haiku-4-5-20251001",
+ "label": 3,
+ "question_only": 12,
+ "sizes": [
+  {
+   "side": 8,
+   "pixels": 64,
+   "tokens": 5
+  },
+  {
+   "side": 32,
+   "pixels": 1024,
+   "tokens": 8
+  },
+  {
+   "side": 64,
+   "pixels": 4096,
+   "tokens": 13
+  },
+  {
+   "side": 128,
+   "pixels": 16384,
+   "tokens": 29
+  },
+  {
+   "side": 256,
+   "pixels": 65536,
+   "tokens": 104
+  },
+  {
+   "side": 512,
+   "pixels": 262144,
+   "tokens": 365
+  },
+  {
+   "side": 768,
+   "pixels": 589824,
+   "tokens": 788
+  },
+  {
+   "side": 1024,
+   "pixels": 1048576,
+   "tokens": 1373
+  },
+  {
+   "side": 1568,
+   "pixels": 2458624,
+   "tokens": 1525
+  },
+  {
+   "side": 2048,
+   "pixels": 4194304,
+   "tokens": 1525
+  },
+  {
+   "side": 2576,
+   "pixels": 6635776,
+   "tokens": 1525
+  },
+  {
+   "side": 3072,
+   "pixels": 9437184,
+   "tokens": 1525
+  }
+ ]
+}

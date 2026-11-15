@@ -1,0 +1,35 @@
+the@4's top row after the final norm: [1.189, 0.765]
+mat's row (x, 1) with x = -1.0
+
+Part 1: the surprise on 'mat' after the@4 alone
+  x = -1.000: score of mat -0.424, share 0.0107, surprise 4.5332
+  wiggle x by 1.0   : surprise 3.3682; change / wiggle = -1.1650
+  wiggle x by 0.1   : surprise 4.4157; change / wiggle = -1.1757
+  wiggle x by 0.01  : surprise 4.5215; change / wiggle = -1.1764
+  wiggle x by 0.001 : surprise 4.5320; change / wiggle = -1.1765
+  central wiggle (h = 0.001): slope -1.1765
+  rule from the Interlude: slope = (share - 1) x (the@4's first number) = (0.0107 - 1) x 1.1892 = -1.1765
+
+  three nudges by hand, learning rate 1 (x <- x - 1 x slope):
+  step 0: x -1.0000  share 0.0107  surprise 4.5332  slope -1.1765
+  step 1: x +0.1765  share 0.0422  surprise 3.1664  slope -1.1391
+  step 2: x +1.3156  share 0.1457  surprise 1.9261  slope -1.0160
+  step 3: x +2.3315  share 0.3634  surprise 1.0121  slope -0.7570
+  the surprise on one word has no bottom: at x = 20 the share is 1.0 and the slope -0.0
+
+Part 2: the loss, the average surprise over the five seats with a true next word
+  x = -1: loss 3.3313 (Chapter 15's 3.3313)
+    seat 0 true next cat  share of mat 0.0086  surprise 3.4980
+    seat 1 true next sat  share of mat 0.0120  surprise 2.1206
+    seat 2 true next on   share of mat 0.0102  surprise 3.6471
+    seat 3 true next the  share of mat 0.0073  surprise 2.8575
+    seat 4 true next mat  share of mat 0.0107  surprise 4.5332
+  bottom of the loss: x = 1.6303, loss 2.9126; curvature there 0.2344; 2 / curvature = 8.533
+  slope of the loss at x = -1: wiggle -0.22601, rule -0.22601
+
+Part 3: gradient descent on the loss from x = -1, 12 steps, five learning rates
+  lr  0.500: x -1.00 -0.89 -0.77 -0.66 -0.55 -0.44 -0.34 ... +0.267; loss 3.3313 -> 3.0650
+  lr  2.000: x -1.00 -0.55 -0.11 +0.29 +0.66 +0.97 +1.21 ... +1.617; loss 3.3313 -> 2.9126
+  lr  8.363: x -1.00 +0.89 +1.97 +1.22 +1.90 +1.31 +1.86 ... +1.790; loss 3.3313 -> 2.9157
+  lr  8.960: x -1.00 +1.03 +2.02 +1.08 +2.01 +1.10 +2.00 ... +1.995; loss 3.3313 -> 2.9296
+  lr 20.000: x -1.00 +3.52 -9.07 -4.31 +0.44 +3.89 -10.75 ... +1.393; loss 3.3313 -> 2.9188

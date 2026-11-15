@@ -1,0 +1,126 @@
+{
+ "method": "adapter",
+ "rank": 4,
+ "alpha": 8.0,
+ "targets": "qv",
+ "dim": 16,
+ "lr": 0.001,
+ "steps": 600,
+ "trainable": 50880,
+ "total": 2766592,
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.956810474395752,
+   "glass": 4.873941898345947,
+   "pool": 3.9245445728302,
+   "cat": "The chaird. And the chaird. And the chairs of the\nrep",
+   "step": 100
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.694963216781616,
+   "glass": 5.117213249206543,
+   "pool": 4.1624436378479,
+   "cat": "The chaird. Yet me the chair.",
+   "step": 200
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.5783531665802,
+   "glass": 5.096691131591797,
+   "pool": 4.149961471557617,
+   "cat": "The chaird on the chair.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.491997241973877,
+   "glass": 5.2146430015563965,
+   "pool": 4.253115177154541,
+   "cat": "The owl stood on the chair.",
+   "step": 400
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.4694855213165283,
+   "glass": 5.3137922286987305,
+   "pool": 4.352937698364258,
+   "cat": "The owl stood on the chair.",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.4689197540283203,
+   "glass": 5.347933292388916,
+   "pool": 4.392696380615234,
+   "cat": "The owl stood on the chair.",
+   "step": 600
+  }
+ ],
+ "max_abs_change": {}
+}

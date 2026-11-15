@@ -1,0 +1,78 @@
+{
+ "trained": {
+  "right": 30,
+  "stopped": 30,
+  "cat": "The cat sat on the mat.",
+  "examples": [
+   "The dog fell on the stone.",
+   "The owl stood on the bench.",
+   "The hen fell on the mat."
+  ]
+ },
+ "no space after colon": {
+  "right": 29,
+  "stopped": 30,
+  "cat": "The cat sat on the mat.",
+  "examples": [
+   "The dog fell on the stone.",
+   "The owl stood on the bench.",
+   "The hen fell on the mat."
+  ]
+ },
+ "Assistant for Tiny": {
+  "right": 4,
+  "stopped": 29,
+  "cat": "The cat sat on the mat.",
+  "examples": [
+   "The toad hid on the\ncent. JANDDD What you are High,",
+   "The owl stood on the chair.",
+   "The hen fell on the chair."
+  ]
+ },
+ "Q / A": {
+  "right": 2,
+  "stopped": 30,
+  "cat": "The cat sat on the mat.",
+  "examples": [
+   "Theruno sat on the hat.",
+   "The owl stood on the bench.",
+   "The cess hids slept on the chair."
+  ]
+ },
+ "no roles": {
+  "right": 0,
+  "stopped": 30,
+  "cat": "\u201cYes, you know've have come on the\ntyesday",
+  "examples": [
+   "Theruno slept on the box.",
+   "\u201cYes, I ca'n't know that's",
+   "\u201cYes, you know about the wall."
+  ]
+ },
+ "draws": [
+  [
+   "The cat sat on the mat.",
+   95
+  ],
+  [
+   "Theacurf, her mativeWell,",
+   1
+  ],
+  [
+   "The catened on the mat.",
+   1
+  ],
+  [
+   "The cat sat on the m- becPro clas         I quite quite forgot to get",
+   1
+  ],
+  [
+   "The cat sat on the slight.",
+   1
+  ],
+  [
+   "The such while fell on the mat.",
+   1
+  ]
+ ]
+}

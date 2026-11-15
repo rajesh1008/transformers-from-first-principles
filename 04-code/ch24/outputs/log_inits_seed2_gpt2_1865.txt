@@ -1,0 +1,1 @@
+gpt2    window seed  1865: held-out 6.0033; batch loss last 25 5.7922

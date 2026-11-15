@@ -1,0 +1,44 @@
+A. GPT-2 small's normalisation: 25 layer norms, each a gain and a bias of 768 numbers
+   learned numbers in norms: 38,400 of 124,439,808 (0.031%)
+   order in every layer: x <- x + attention(ln_1(x)); x <- x + feed-forward(ln_2(x)); at the top ln_f (pre-norm)
+   layer | ln_1 gain: median, largest | ln_2 gain: median, largest | ln_1 bias spread
+       0 |  0.190    0.253 |  1.160    1.511 | 0.036
+       1 |  0.218    0.655 |  0.242    0.452 | 0.052
+       2 |  0.234    0.944 |  0.296    0.730 | 0.071
+       3 |  0.306    0.768 |  0.312    1.160 | 0.070
+       4 |  0.325    0.670 |  0.276    1.132 | 0.067
+       5 |  0.377    0.769 |  0.282    1.418 | 0.049
+       6 |  0.349    0.780 |  0.261    1.340 | 0.066
+       7 |  0.358    0.818 |  0.257    1.293 | 0.059
+       8 |  0.334    0.925 |  0.257    1.072 | 0.069
+       9 |  0.354    0.945 |  0.263    0.948 | 0.064
+      10 |  0.370    0.921 |  0.284    1.095 | 0.055
+      11 |  0.469    0.958 |  0.495    1.233 | 0.057
+   ln_f gain: median 1.251, largest 17.419
+
+B. The residual stream, 1,024 tokens (one forward pass 8.1 s)
+   baseline loss 3.442 | average top probability 0.342, top token right 0.332 | average entropy 3.470
+   entering | seat 0 length | other seats: median length | largest |number| (column, seat) | median divisor of the next norm
+   layer  0 |          10.3 |                        4.5 |      1.8 (col 709, seat  557) |    0.163
+   layer  1 |         165.2 |                       48.9 |     31.6 (col 447, seat    2) |    1.765
+   layer  2 |         642.2 |                       55.1 |     31.2 (col 266, seat  927) |    1.987
+   layer  3 |        2579.4 |                       59.3 |     37.5 (col 447, seat  636) |    2.140
+   layer  4 |        2778.4 |                       64.1 |     52.9 (col 447, seat  349) |    2.314
+   layer  5 |        2932.4 |                       69.1 |     55.3 (col 447, seat  166) |    2.492
+   layer  6 |        3028.8 |                       76.8 |     56.2 (col 447, seat  240) |    2.772
+   layer  7 |        3086.8 |                       84.9 |     62.1 (col 447, seat  288) |    3.065
+   layer  8 |        3121.9 |                       98.0 |     67.5 (col 447, seat  240) |    3.537
+   layer  9 |        3144.0 |                      117.3 |     74.9 (col 447, seat    2) |    4.232
+   layer 10 |        3155.6 |                      149.4 |     96.3 (col 447, seat    2) |    5.390
+   layer 11 |        3158.4 |                      212.8 |    152.5 (col 373, seat    2) |    7.677
+   ln_f     |         417.6 |                      497.0 |    465.1 (col 430, seat  683) |   17.933
+   column holding the largest number, by layer: [709, 447, 266, 447, 447, 447, 447, 447, 447, 447, 447, 373, 430]
+   seat 0 entering layer 6: three largest columns [np.int64(447), np.int64(138), np.int64(378)], values [2916.9, 811.0, -77.6]
+
+C. Interventions on the same tokens (change in loss; top probability; accuracy; entropy)
+   all 25 divisors frozen, seat 0 too                   loss inf (+inf) | top p 1.000 | right 0.000 | entropy 0.000  [7 s]
+   all 25 frozen, seat 0 keeps its own                  loss 3.646 (+0.204) | top p 0.284 | right 0.293 | entropy 3.908  [7 s]
+   only the twelve ln_1 frozen (seat 0 keeps its own)   loss 3.518 (+0.076) | top p 0.345 | right 0.305 | entropy 3.445  [8 s]
+   only the twelve ln_2 frozen (seat 0 keeps its own)   loss 3.502 (+0.059) | top p 0.331 | right 0.308 | entropy 3.581  [8 s]
+   only ln_f frozen (seat 0 keeps its own)              loss 3.514 (+0.072) | top p 0.330 | right 0.329 | entropy 3.582  [8 s]
+   every layer norm replaced by RMSNorm (same gains)    loss 3.617 (+0.175) | top p 0.347 | right 0.321 | entropy 3.479  [8 s]

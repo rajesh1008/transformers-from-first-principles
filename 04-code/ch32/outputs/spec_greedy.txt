@@ -1,0 +1,14 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+Part A: one cached pass over k new tokens at context 256 (time relative to k = 1)
+  k  1:   50.9 ms (1.00 x one token)
+  k  2:   61.7 ms (1.21 x one token)
+  k  3:   60.8 ms (1.19 x one token)
+  k  5:   82.7 ms (1.62 x one token)
+  k  9:  113.8 ms (2.23 x one token)
+  k 17:  109.6 ms (2.15 x one token)
+
+Part B: 64 new tokens after four held-out prompts of 64 tokens; k = 4 guesses per target pass
+  plain cached greedy:  12.52 s for 4 x 64 tokens ( 20.5 tokens/s); 64 target passes per prompt
+  first 2 layers  : same as greedy True; accepted 35/872 guesses (0.040); target passes 222 for 256 tokens (1.15 tokens per pass);  35.26 s (0.35 x plain)
+  first 6 layers  : same as greedy True; accepted 75/720 guesses (0.104); target passes 184 for 256 tokens (1.39 tokens per pass);  34.92 s (0.36 x plain)
+  prompt lookup   : same as greedy True; accepted 151/428 guesses (0.353); target passes 111 for 256 tokens (2.31 tokens per pass);   9.61 s (1.30 x plain)

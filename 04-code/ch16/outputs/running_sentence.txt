@@ -1,0 +1,1 @@
+the cat sat on the mat, 7 tokens through Tiny: 37,001,216 FLOPs, 5,285,888 per token

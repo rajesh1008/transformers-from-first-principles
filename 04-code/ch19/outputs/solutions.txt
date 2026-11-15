@@ -1,0 +1,25 @@
+Check Yourself
+  (a) sum of 100 numbers of spread 1: rule 10, measured 10.012
+  (b) their average: rule 0.1, measured 0.1001
+  (c) fan-in 512 at 0.02: 0.4525; spread for 1: 1/sqrt(512) = 0.0442
+  (d) independent spreads 3 and 4 added: rule 5, measured 4.991
+
+Exercises
+  1. 64 numbers of spread 0.5: 4.0
+  3. ReLU keeps half the mean square: spread 1/sqrt(2) = 0.7071; He's spread for fan-in 128: sqrt(2/128) = 0.1250
+  4. Tiny's residual writers under the scaled start: 0.02/sqrt(24) = 0.00408
+  5. stream leaving layer 11 predicted from the 24 branch spreads as independent: 0.2206; measured 0.2186
+  6. nudges 3, 4, 12: global norm 13; clip at 1 multiplies by 0.0769: [0.2308, 0.3077, 0.9231]
+  7. row spread 0.001, eps 1e-5: 1/sqrt(1e-6 + 1e-5) = 301.5
+  8. score spread for tables of spread 0.02: rule 128 s^2 = 0.0512; measured 0.0476
+  8. score spread for tables of spread 0.2: rule 128 s^2 = 5.1200; measured 4.7638
+  9. He's start (fan-in times sqrt(2)): stream leaving layer 11 7.2152; layer-0 entropy 2.612
+  10. layer-0 attention entropy against the scale multiplier:
+      x1   entropy 3.908
+      x2   entropy 3.890
+      x3   entropy 3.815
+      x4   entropy 3.622
+      x5   entropy 3.263
+      x6   entropy 2.760
+      x8   entropy 1.732
+      x10  entropy 1.070

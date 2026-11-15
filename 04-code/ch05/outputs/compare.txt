@@ -1,0 +1,16 @@
+              learned (hand-chosen)   clock (30 deg per token)
+  0 the       ( 1.50,  0.50)          ( 1.00,  1.00)
+  1 cat       ( 0.50,  1.00)          ( 0.50,  1.87)
+  2 sat       ( 1.00,  0.50)          ( 1.87,  1.50)
+  3 on        ( 0.50, -1.00)          ( 2.00, -1.00)
+  4 the       ( 0.50,  0.50)          ( 1.87, -0.50)
+  5 mat       (-1.00,  1.50)          (-0.50,  0.13)
+cosine of the two 'the's: learned 0.894 ; clock 0.5 ; no positions 1.0
+agreement of each position row with the next one (gap 1): learned [0.25, 0.0, 0.0, 0.25, 0.25] ; clock [0.866, 0.866, 0.866, 0.866, 0.866]
+how much of each sum is word and how much is position (lengths):
+  word rows   [1.0, 1.0, 1.41, 1.41, 1.0, 1.41]
+  learned pos [0.71, 0.5, 0.5, 0.5, 0.71, 0.5]
+  clock pos   [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+Tiny, before training: token rows ~0.230 long; learned position rows ~0.120; sinusoidal rows 8.000
+  share of the sum's direction that is the word (cosine with the token row): learned 0.887; sinusoidal 0.039
+  with token rows multiplied by the square root of 128 (as the 2017 Transformer did): token rows ~2.60, cosine with the token row 0.311

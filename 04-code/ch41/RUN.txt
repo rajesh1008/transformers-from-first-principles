@@ -1,0 +1,18 @@
+Chapter 41 (Circuits in Tiny: Induction Heads, the Logit Lens and Sparse Features; PARTIAL), run 12 November 2026 (tick 31) on the book's build machine,
+CPU, 32-bit, one thread (OMP_NUM_THREADS=1), seed 1865.  Processes ran side by side, so wall times are not speed measurements.  Python 3.13.5, torch 2.15.0+cpu,
+scipy 1.18.1.  Models: Chapter 24's checkpoint, Chapter 38's sft_3e-4_600, and (induct.py) outputs/ckpt/repeat_1e-3_1500.pt written by grow_induction.py
+(ckpt/ is not in the code zip).  No model call.  lib.py and facts_common.py are copies of ../ch40's.
+
+  python3 lens.py                > outputs/lens.txt        (.json)  logit lens and tuned lens by layer on 100 held-out pool windows
+  python3 lens_facts.py          > outputs/lens_facts.txt  (.json)  logit lens on the 30 taught facts, fine-tuned and base
+  L1=0.03 TAG=_l1_0.03 python3 sae.py > outputs/sae_l1_0.03.txt (.json); the same with L1=0.1 and L1=0.3   sparse autoencoder on layer 6
+  STEPS=1500 LR=1e-3 PLEN=64 EVERY=500 TAG=_1e-3_1500 python3 -u grow_induction.py repeat > outputs/grow_induction.txt   (copy of ../ch36/continue_repeat.py, saves a checkpoint)
+  python3 induct.py              > outputs/induct.txt      (.json)  induction head by intervention (if the run above finished)
+An earlier sae.py run at L1=3e-3 was stopped after 20 passes (385 of 1,024 features active, held-out variance 0.990) and is reported in the text only.
+Headline: logit lens loss 23.933 (layer 0) -> 3.523, KL 20.180 -> 0; tuned lens KL 1.567 -> 0, agreement with the final top choice at layer 6 0.257 -> 0.560;
+taught verb first under the logit lens at layer 8 (median), 18/30 at layer 8, 30/30 at layer 10; SAE layer 6 (1,024 features) L1 0.03 / 0.1 / 0.3: variance 0.963 / 0.899 / 0.655,
+active features 114.6 / 34.7 / 6.2, dead 17 / 199 / 859; best single feature for word-start 0.624 (L1 0.1) against Chapter 40's probe 0.959.
+induct.py (finished): after 1,500 steps the grown copy's held-out loss on ordinary windows is 6.308 (4.594 before); on 20 runs of 60 random tokens shown twice, loss 12.765 first showing, 5.987 repeat;
+top induction heads 10.0 0.448, 11.1 0.421, 11.2 0.391, 11.0 0.267; zeroing 10.0 raises repeat loss to 8.361 (ten random heads: mean 6.071, range 5.974 to 6.189); best previous-token head 6.2 scores 0.191 and
+zeroing it moves the repeat loss to 6.267 and head 10.0's induction score from 0.448 to 0.413.  The two-step circuit is not located.
+mean_abl.py: python3 mean_abl.py > outputs/mean_abl.txt (.json): repeat loss 5.987 intact; head 10.0 zeroed 8.361, mean-replaced 8.033; 10.0 + 11.1: 12.059 / 9.467; 10.0 + 11.1 + 11.2: 16.924 / 10.423; ten random heads 6.071 / 6.049.

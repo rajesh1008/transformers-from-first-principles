@@ -1,0 +1,3 @@
+GPT-2 small   openai-community/gpt2          config  665 bytes; header 14,283 bytes; 160 tables; weights data 548,090,880 bytes
+SmolLM2-135M  HuggingFaceTB/SmolLM2-135M     config  704 bytes; header 30,528 bytes; 272 tables; weights data 269,030,016 bytes
+Qwen3-0.6B    Qwen/Qwen3-0.6B                config  726 bytes; header 35,552 bytes; 311 tables; weights data 1,503,264,768 bytes

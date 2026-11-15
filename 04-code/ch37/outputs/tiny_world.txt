@@ -1,0 +1,22 @@
+pool 393,597 tokens; deterministic 5-token contexts by count: 1: 322,244, 2-4: 9,553, 5-19: 674, 20+: 59
+seen    1 times: n 300  top-1 right 0.237  share on the true token 0.145  top-1 confidence 0.267   | word starts only: n 113  right 0.062  share 0.027  confidence 0.167
+seen  2-4 times: n 300  top-1 right 0.453  share on the true token 0.282  top-1 confidence 0.357   | word starts only: n  53  right 0.189  share 0.054  confidence 0.152
+seen 5-19 times: n 300  top-1 right 0.677  share on the true token 0.427  top-1 confidence 0.465   | word starts only: n  19  right 0.421  share 0.195  confidence 0.267
+seen  20+ times: n  59  top-1 right 1.000  share on the true token 0.918  top-1 confidence 0.918   | word starts only: n   1  right 1.000  share 0.583  confidence 0.583
+corpus 'The Bellman' -> ' said, and the / who had' (0.116)
+corpus 'For the Snark was a' -> ' / there of the "P' (0.135)
+corpus 'Sylvie and' -> ' Sylvie. “I' (0.594)
+corpus "'Just the place for a" -> ' little / charth, and' (0.101)
+corpus 'They sought it with thimbles, they sought it with' -> ' a / fourth, and the' (0.128)
+corpus 'said the Professor' -> ". “I'm / mage" (0.250)
+corpus 'the Other Professor' -> ". “I'm / Is" (0.231)
+corpus 'Bruno said' -> ' ‘Oh,’s / the S' (0.178)
+world  'The capital of France is' -> ' / thereet, and the ' (0.112)
+world  'The largest planet is' -> ' / there of the "_' (0.120)
+world  'Two and two make' -> ' the "_does_ / ' (0.179)
+world  'The sun rises in the' -> ' / production. / ' (0.215)
+world  'Water is made of hydrogen and' -> ' the / fessor, and the' (0.212)
+world  'The Queen of England lives in' -> ' the / morest of the c' (0.097)
+world  'The first man on the moon was' -> ' / there of the char' (0.170)
+world  'The author of Hamlet is' -> ' / there of the "p' (0.136)
+mean share of written tokens: corpus prompts 0.217, world prompts 0.155

@@ -1,0 +1,16 @@
+defaults reproduce Chapter 9 exactly: True
+a window as long as the text changes nothing: True
+grouped-query keeps the first two key blocks of the same seeded table: True
+
+Tiny's layer on the first 1,024 tokens of the novel (44,360 tokens in all):
+variant                        learned numbers  cache per token  cache at 1,024  ms (fastest of 5)
+multi-head, 4 kv heads                  65,536              256         262,144               40.2
+grouped-query, 2 kv heads               49,152              128         131,072               36.0
+multi-query, 1 kv head                  40,960               64          65,536               37.7
+multi-head, window 256                  65,536              256          65,536               45.3
+grouped-query 2 + window 256            49,152              128          32,768               43.6
+(timings measured 2026-11-10 on the book's build machine; NumPy computes the whole table and masks it,
+ so a window saves memory in a real cache but no time here)
+
+window 256 on 1,024 tokens: rows sum to one: True
+shares outside the window, total: 0.0

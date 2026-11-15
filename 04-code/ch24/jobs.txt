@@ -1,0 +1,15 @@
+train_tiny.py wsd 2e-3 2000 500,1000,2000
+train_tiny.py wsd 1e-3 2000 500,1000,2000
+train_tiny.py cosine 5e-4 600
+train_tiny.py cosine 1e-3 600
+train_tiny.py cosine 2e-3 600
+train_tiny.py cosine 4e-3 600
+train_tiny.py cosine 8e-3 600
+train_tiny.py cosine 2e-3 1250
+train_tiny.py cosine 1e-3 1250
+inits_seed2.py gpt2 1865
+inits_seed2.py scaled 1865
+inits_seed2.py fan_in 1865
+inits_seed2.py gpt2 7
+inits_seed2.py scaled 7
+inits_seed2.py fan_in 7

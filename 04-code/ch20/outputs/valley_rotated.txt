@@ -1,0 +1,4 @@
+the valley of valley.py turned by 45 degrees; same start in the valley's own axes; steps until f < 1e-4
+  sgd      lr 0.01: 424  lr 0.02: 211  lr 0.03: 140  lr 0.039: 125  lr 0.04: 2000  lr 0.041: diverged
+  momentum lr 0.001: 392  lr 0.003: 99  lr 0.01: 91  lr 0.02: 100  lr 0.03: 84  lr 0.04: 74
+  adam     lr 0.003: 2000  lr 0.01: 1910  lr 0.03: 711  lr 0.1: 234  lr 0.3: 86

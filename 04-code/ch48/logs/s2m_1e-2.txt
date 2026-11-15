@@ -1,0 +1,10 @@
+s2m_1e-2: 1,872,640 learned numbers; 2,719,058 training tokens; 4,096 tokens per step; 400 steps
+step 0 eval {'heldout': {'loss': 9.019462585449219, 'bpc': 3.6094620532712898}, 'glass': {'loss': 9.003491083780924, 'bpc': 4.039082403143847}}
+/workspace/transformers-book/04-code/ch48/train48.py:54: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  if not math.isfinite(float(loss)):
+step 100 loss 6.1413 held-out 6.3199 (2.5291 bpc) glass 2.7908 bpc  94 s
+step 200 loss 5.6773 held-out 5.8992 (2.3608 bpc) glass 2.5710 bpc  820 s
+step 300 loss 5.4450 held-out 5.7490 (2.3007 bpc) glass 2.4810 bpc  2684 s
+step 400 loss 5.2058 held-out 5.6264 (2.2516 bpc) glass 2.4181 bpc  4736 s
+done in 4736 s

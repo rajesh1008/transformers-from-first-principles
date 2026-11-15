@@ -1,0 +1,7 @@
+(1) masked scores: 10 of 25; their nudges are all exactly zero: True
+(2) the@0's query nudge: [0.0, 0.0]  (its share row is [1, 0, 0, 0, 0])
+    the@0's whole row of dS: [0.0, 0.0, 0.0, 0.0, 0.0]
+(3) six seats, mat@5's row of dY set to zero (nothing reads it): mat@5's dQ [0.0, 0.0], dK [0.0, 0.0], dV [0.0, 0.0]
+    the five-seat nudges are unchanged: largest difference in dW_q, dW_k, dW_v 0.0e+00
+(4) Tiny, 64 tokens: seat 0's query nudge is exactly zero in 48 of 48 heads (12 layers x 4 heads);
+    the largest query nudge at any other seat of layer 0 is 4.68e-04

@@ -1,0 +1,18 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+The twenty requests (arrival s, prompt tokens, new tokens):
+  0: 0.9/30/31; 1: 1.8/333/19; 2: 3.1/6/16; 3: 3.2/39/23; 4: 3.6/157/92; 5: 4.0/105/27; 6: 4.3/93/44; 7: 4.7/31/29; 8: 5.1/18/35; 9: 5.2/96/63; 10: 5.7/92/20; 11: 5.7/326/16; 12: 5.8/48/115; 13: 7.8/352/18; 14: 9.8/417/102; 15: 11.8/74/39; 16: 12.6/27/123; 17: 12.7/52/10; 18: 12.9/29/79; 19: 13.6/73/10
+  total prompt tokens 2398, total new tokens 911
+
+Real runs on GPT-2 small, B up to 16 (wall clock):
+  static    : 911 tokens in  43.1 s =  21.1 tokens/s; first token mean  6.37 s, p50  6.97, max 11.16; reply back mean 25.94 s, p50 31.30, max 39.24
+              the running sentence (6 prompt tokens, 16 new, arrives at 3.15 s): first token after 1.47 s, reply back after 11.76 s; text ', and the cat sat on the mat, and the cat sat on the mat'
+  continuous: 911 tokens in  24.4 s =  37.3 tokens/s; first token mean  0.47 s, p50  0.34, max  1.20; reply back mean  8.12 s, p50  7.16, max 18.06
+              the running sentence (6 prompt tokens, 16 new, arrives at 3.15 s): first token after 0.12 s, reply back after 4.51 s; text ', and the cat sat on the mat, and the cat sat on the mat'
+
+The simulator on the same requests (measured step-cost model):
+  static    :  16.5 tokens/s; first token mean 14.17 s; reply mean 21.70 s
+  continuous:  42.0 tokens/s; first token mean  0.51 s; reply mean  6.24 s
+
+Breakage: continuous batching, 24 pages of 16 slots (384 cache slots), admission checks only the prompt
+  t   2.86 s: no request can take a page; 2 running, 0 pages free; stopping
+  finished 0 of 20; stalled steps per request {0: 3, 1: 1}

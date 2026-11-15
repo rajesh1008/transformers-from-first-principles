@@ -1,0 +1,33 @@
+Chapter 20 scripts, run from 04-code/ch20 (NumPy 2.5.4, PyTorch 2.15.0+cpu, Python 3.13.5; matplotlib 3.11.2 for figures), 10 November 2026.
+Order used for the book (the figures read the .json files):
+valley.py  valley_rotated.py  adam_hand.py  layer_steps.py  memory.py  train_opts.py (four groups)  lab20.py  solutions.py
+Helpers: _common.py (copied from ch19: one thread unless a script says otherwise, paths, seed 1865, tokenizer, novel, held-out text, rms, probe).
+New shared code, backward compatible (no existing module changed; Tiny 2,766,592 learned numbers, fingerprint 19c8710677873d01,
+loss 7.6334 unchanged; lab17.py, lab18.py and lab19.py re-run 10 Nov 2026: 7 of 7 each):
+  ../tiny/optim.py   SGD(lr, momentum), Adam(lr, b1, b2, eps, wd, bias_correction) (wd > 0 = AdamW, two-axis tables only),
+                     Muon(lr, momentum, wd, adam) with newton_schulz(); schedules constant, warmup_cosine, wsd, linear_decay;
+                     train_opt(tt, batches, steps, opt, schedule, clip, norms, on_step, start).  SGD(lr) + constant() equals
+                     tiny/train.py's train_torch bit for bit at one thread (lab20 checkpoint 2).
+    python3 valley.py > outputs/valley.txt                (also .json)  a 1:50 valley; SGD, momentum, Adam over lr grids
+    python3 valley_rotated.py > outputs/valley_rotated.txt (also .json) the same valley turned 45 degrees
+    python3 adam_hand.py > outputs/adam_hand.txt                         Adam on one number, with and without bias correction
+    python3 layer_steps.py > outputs/layer_steps.txt      (also .json)  step 21's size per layer, SGD vs Adam, two starts (2 threads)
+    python3 memory.py > outputs/memory.txt                               optimiser state, Tiny to 7B, 32-bit
+    python3 train_opts.py opt 3 > outputs/train_opt.txt       (also .json)  7 runs: SGD, momentum, Adam constant
+    python3 train_opts.py sched 3 > outputs/train_sched.txt   (also .json)  7 runs: Adam warmup+cosine lr sweep, WSD, linear, AdamW
+    python3 train_opts.py starts 3 > outputs/train_starts.txt (also .json)  6 runs: Muon 3e-3, Adam from four other starts, Adam 1e-2 clip 1
+    python3 train_opts.py tune 2 > outputs/train_tune.txt     (also .json)  2 runs: Muon 1e-3 and 1e-2
+       The opt, sched and starts groups ran side by side (three jobs x three threads on 8 cores), then tune at two threads.
+       400 steps x 8 windows of 129 tokens, Chapter 19's window draw (seed 1865); 16 held-out Looking-Glass windows every 25 steps.
+       About 80 to 170 s per run under that load; 22 runs in all.
+    python3 lab20.py > outputs/lab20.txt                                 four breakages; 7 of 7 checkpoints pass (about a minute)
+    python3 solutions.py > outputs/solutions.txt                         numbers for Appendix A
+Figures: cd ../.. && python3 03-figures/src/ch20_figs.py  (reads 04-code/ch20/outputs/*.json and ch19/outputs/train_inits.json)
+Reproducibility: at one thread two runs agree bit for bit; at two or more threads they do not (lab20 prints 1.49e-08 after 10 steps
+between two identical runs at two threads).  Chapter 19's train_inits.py at eight threads gave 5.9653 (SGD 0.1) and 5.8720 (SGD 0.6);
+the same runs here at three threads gave 5.9220 and 5.9936.  Treat differences below about 0.05 as noise.
+No hosted-model call was needed; the Anthropic key was not used.
+Fixes during the tick: lab20's fingerprint now hashes names as lab19 does; the bit-for-bit check moved to one thread after it failed
+at two threads (5.96e-08); the bias-correction check allows eps's 0.1 per cent; Newton-Schulz breakage reports non-finite output
+instead of crashing in svdvals; the Muon section was rewritten after the tune group showed most of Muon's lead at lr 3e-3 was a
+tuning gap; schedule-run figure text corrected (WSD sits above cosine and linear until its decay).

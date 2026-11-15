@@ -1,0 +1,10 @@
+kd1: student 4 layers, 1,184,512 numbers; teacher bpc 1.9812
+  step 250: held-out Carroll 2.3924 bits per character (66 s)
+  step 500: held-out Carroll 2.1790 bits per character (129 s)
+  step 750: held-out Carroll 2.0974 bits per character (189 s)
+  step 1000: held-out Carroll 2.0439 bits per character (249 s)
+  step 1250: held-out Carroll 2.0231 bits per character (315 s)
+  step 1500: held-out Carroll 2.0068 bits per character (375 s)
+  step 1750: held-out Carroll 2.0007 bits per character (432 s)
+  step 2000: held-out Carroll 1.9994 bits per character (491 s)
+kd1: final 1.9994; 491 s

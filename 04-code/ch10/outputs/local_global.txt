@@ -1,0 +1,42 @@
+window 3:
+[[1 0 0 0 0 0]
+ [1 1 0 0 0 0]
+ [1 1 1 0 0 0]
+ [0 1 1 1 0 0]
+ [0 0 1 1 1 0]
+ [0 0 0 1 1 1]]
+  mat's row [0.0, 0.0, 0.0, 0.663, 0.327, 0.01] | share to cat 0.000 | mat's output [0.327, -0.654] | allowed pairs 15 of 21
+
+window 3 + global seat 0 (the first 'the'):
+[[1 0 0 0 0 0]
+ [1 1 0 0 0 0]
+ [1 1 1 0 0 0]
+ [1 1 1 1 0 0]
+ [1 0 1 1 1 0]
+ [1 0 0 1 1 1]]
+  mat's row [0.246, 0.0, 0.0, 0.5, 0.246, 0.007] | share to cat 0.000 | mat's output [0.493, -0.493] | allowed pairs 18 of 21
+
+window 3 + global seat 1 (cat):
+[[1 0 0 0 0 0]
+ [1 1 0 0 0 0]
+ [1 1 1 0 0 0]
+ [0 1 1 1 0 0]
+ [0 1 1 1 1 0]
+ [0 1 0 1 1 1]]
+  mat's row [0.0, 0.038, 0.0, 0.638, 0.315, 0.009] | share to cat 0.038 | mat's output [0.352, -0.591] | allowed pairs 17 of 21
+
+no window: mat's row [0.214, 0.026, 0.106, 0.434, 0.214, 0.006], output [0.665, -0.297]
+
+allowed (query, key) pairs, causal, as the text grows (window 256, 1 global seat):
+  n= 1,024: full       524,800 | window     229,504 | window + global     230,272 | ratio full/window    2.3
+  n= 8,192: full    33,558,528 | window   2,064,512 | window + global   2,072,448 | ratio full/window   16.3
+  n=65,536: full 2,147,516,416 | window  16,744,576 | window + global  16,809,856 | ratio full/window  128.3
+
+GPT-2 small's shape (12 layers, 12 kv heads of 64, 16-bit), cache at 65,536 tokens:
+  all 12 layers full                             2304.0 MiB
+  1 full layer in 4 (3 full, 9 window 256)        582.8 MiB
+  1 full layer in 6 (2 full, 10 window 256)       391.5 MiB
+  all 12 layers window 256                          9.0 MiB
+reach of the last token of 65,536 with a window of 256: 12 window layers -> 62475 seats back is the earliest; any full layer -> seat 0
+  of the 1-in-4 mix: 3 full layers 576.0 MiB, 9 window layers 6.75 MiB; one full layer alone 192.0 MiB
+  1-in-4 mix with grouped-query (4 kv heads) in every layer: 194.2 MiB

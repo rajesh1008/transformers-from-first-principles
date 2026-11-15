@@ -1,0 +1,56 @@
+Eight windows of 129 tokens; uniform attention entropy at seat t is ln(t+1), average over seats 1-127 3.909; ln 2048 = 7.6246
+
+0.02 (Tiny's default)   [W_q 0.0200, W_o 0.0198, W_1 0.0199, W_2 0.0200]
+  loss 7.6488; spread of the final scores 0.226
+  stream entering layers 0, 1, 2, 6, 12(out): 0.0223, 0.0587, 0.0836, 0.1522, 0.2186
+  attention adds at layers 0, 5, 11:          0.01181, 0.03549, 0.04129
+  feed-forward adds at layers 0, 5, 11:       0.05356, 0.05342, 0.05411
+  layer-0 attention: average entropy 3.908, average largest share 0.038
+  nudge on the stream at layers 0, 6, 12:     0.0012, 0.000121, 8.98e-05
+  nudge spread on W_o at layers 0, 11:        0.00479, 0.00128;  on W_1 at layers 0, 11: 0.00229, 0.000737
+  running sentence, seat 1 ('cat'): spread 0.0206 entering layer 0, 0.0750 at layer 1, 0.1880 at layer 6; changed by 3.431 and 9.009 of its size; first three numbers at layer 6 0.2781, -0.0352, 0.2910
+  the two 'the' rows (seats 0 and 4) at layer 6: cosine 0.621 (entering layer 0: -0.103)
+
+0.02, W_o and W_2 / sqrt(24)   [W_q 0.0200, W_o 0.0040, W_1 0.0199, W_2 0.0041]
+  loss 7.6373; spread of the final scores 0.227
+  stream entering layers 0, 1, 2, 6, 12(out): 0.0223, 0.0248, 0.0274, 0.0354, 0.0451
+  attention adds at layers 0, 5, 11:          0.002411, 0.003536, 0.004525
+  feed-forward adds at layers 0, 5, 11:       0.01084, 0.01102, 0.01116
+  layer-0 attention: average entropy 3.908, average largest share 0.038
+  nudge on the stream at layers 0, 6, 12:     0.000931, 0.000556, 0.000433
+  nudge spread on W_o at layers 0, 11:        0.00523, 0.00329;  on W_1 at layers 0, 11: 0.000895, 0.0005
+  running sentence, seat 1 ('cat'): spread 0.0206 entering layer 0, 0.0251 at layer 1, 0.0398 at layer 6; changed by 0.642 and 1.665 of its size; first three numbers at layer 6 0.0460, -0.0116, 0.0761
+  the two 'the' rows (seats 0 and 4) at layer 6: cosine -0.004 (entering layer 0: -0.103)
+
+1/sqrt(fan-in)   [W_q 0.0884, W_o 0.0874, W_1 0.0881, W_2 0.0441]
+  loss 7.6382; spread of the final scores 0.227
+  stream entering layers 0, 1, 2, 6, 12(out): 0.0223, 0.6992, 1.1655, 2.4685, 3.6531
+  attention adds at layers 0, 5, 11:          0.3065, 0.9113, 0.9603
+  feed-forward adds at layers 0, 5, 11:       0.6426, 0.6564, 0.6856
+  layer-0 attention: average entropy 3.487, average largest share 0.135
+  nudge on the stream at layers 0, 6, 12:     0.00133, 6.58e-06, 5.34e-06
+  nudge spread on W_o at layers 0, 11:        0.00119, 0.000408;  on W_1 at layers 0, 11: 0.000466, 0.000144
+  running sentence, seat 1 ('cat'): spread 0.0206 entering layer 0, 1.0583 at layer 1, 2.7610 at layer 6; changed by 51.357 and 134.224 of its size; first three numbers at layer 6 3.5723, -4.7370, 1.9134
+  the two 'the' rows (seats 0 and 4) at layer 6: cosine 0.734 (entering layer 0: -0.103)
+
+1/sqrt(fan-in), residual / sqrt(24)   [W_q 0.0884, W_o 0.0178, W_1 0.0881, W_2 0.0090]
+  loss 7.6389; spread of the final scores 0.227
+  stream entering layers 0, 1, 2, 6, 12(out): 0.0223, 0.1447, 0.2363, 0.5028, 0.7401
+  attention adds at layers 0, 5, 11:          0.06257, 0.1842, 0.1977
+  feed-forward adds at layers 0, 5, 11:       0.1314, 0.135, 0.1393
+  layer-0 attention: average entropy 3.487, average largest share 0.135
+  nudge on the stream at layers 0, 6, 12:     0.00131, 3.26e-05, 2.64e-05
+  nudge spread on W_o at layers 0, 11:        0.00577, 0.00203;  on W_1 at layers 0, 11: 0.000452, 0.000145
+  running sentence, seat 1 ('cat'): spread 0.0206 entering layer 0, 0.2201 at layer 1, 0.5652 at layer 6; changed by 10.552 and 27.420 of its size; first three numbers at layer 6 0.7789, -0.9403, 0.5026
+  the two 'the' rows (seats 0 and 4) at layer 6: cosine 0.731 (entering layer 0: -0.103)
+
+0.2 (ten times too large)   [W_q 0.1999, W_o 0.1978, W_1 0.1994, W_2 0.1996]
+  loss 7.6586; spread of the final scores 0.228
+  stream entering layers 0, 1, 2, 6, 12(out): 0.0223, 7.9134, 11.5186, 20.4888, 28.4726
+  attention adds at layers 0, 5, 11:          3.848, 4.596, 4.678
+  feed-forward adds at layers 0, 5, 11:       6.957, 7.316, 7.486
+  layer-0 attention: average entropy 1.062, average largest share 0.653
+  nudge on the stream at layers 0, 6, 12:     0.00704, 1.28e-06, 6.87e-07
+  nudge spread on W_o at layers 0, 11:        0.00084, 0.000126;  on W_1 at layers 0, 11: 0.000363, 7.41e-05
+  running sentence, seat 1 ('cat'): spread 0.0206 entering layer 0, 8.6721 at layer 1, 21.4931 at layer 6; changed by 421.607 and 1045.160 of its size; first three numbers at layer 6 31.5562, -24.7784, 18.0575
+  the two 'the' rows (seats 0 and 4) at layer 6: cosine 0.592 (entering layer 0: -0.103)

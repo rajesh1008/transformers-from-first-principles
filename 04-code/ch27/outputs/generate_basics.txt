@@ -1,0 +1,45 @@
+model wsd_1e-3_2000_b2000.pt; context 1024 tokens; vocabulary 2048
+prompt 'the cat sat on the' -> 5 tokens [363, 725, 973, 327, 262]
+
+Part A: shares for the next token
+          '\n'  0.0521
+          ' c'  0.0210
+          ' p'  0.0204
+          ' P'  0.0202
+       ' door'  0.0197
+          ' l'  0.0192
+           ' '  0.0179
+          ' f'  0.0174
+       ' room'  0.0172
+          ' b'  0.0161
+  top 10 hold 0.2212; entropy 5.478 nats (uniform 7.625); tokens needed for 0.9 of the share 291
+
+Part B: greedy, 40 tokens
+  'the cat sat on the\nfirst----"\n\n"I\'ve been a little boy!" said Balbus.\n\n"I\'m afraid I\'m afraid of the'
+  first repeated 4-token run: (8, 27) (positions in the generated part)
+  second greedy run identical: True
+
+Part C: temperature
+  T 0.25  top share 0.8144 ('\n')  top-5 hold 0.8902  entropy 1.029  tokens for 0.9: 6
+  T 0.5   top share 0.2713 ('\n')  top-5 hold 0.4366  entropy 3.463  tokens for 0.9: 41
+  T 0.7   top share 0.1256 ('\n')  top-5 hold 0.2566  entropy 4.467  tokens for 0.9: 106
+  T 1.0   top share 0.0521 ('\n')  top-5 hold 0.1335  entropy 5.478  tokens for 0.9: 291
+  T 1.5   top share 0.0187 ('\n')  top-5 hold 0.0587  entropy 6.461  tokens for 0.9: 807
+  T 2.0   top share 0.0094 ('\n')  top-5 hold 0.0329  entropy 6.936  tokens for 0.9: 1141
+
+Part D: ten samples at T 1.0, 20 tokens each, seed 1865 ('sample' stream)
+   1 the cat sat on the|" room. It's all, my asked\nof me, and he're plear"
+   2 the cat sat on the|' box invay?”\n\n“You should like to I been looking like through a Men,'
+   3 the cat sat on the|' cird-face hall, which I walked,\nthem as this playful to'
+   4 the cat sat on the|' remark; and the crug was, into\nthem back-wrongoard of the'
+   5 the cat sat on the|' Shak green I see\nfack: but it was fever ride little car'
+   6 the cat sat on the|' young des:\n   Inced “Ghosting out with you woe\n'
+   7 the cat sat on the|' table,\n   But and not in a second winish strurster little sc'
+   8 the cat sat on the|' world.”\n\n“Then what seems a little littleest of the _on-y_'
+   9 the cat sat on the|' louke out,\n   Of setling her ownleasion,\n      And the'
+  10 the cat sat on the|' soonard on the bank,” he said: “when you’ll try\nthe com'
+  distinct continuations 10 of 10
+
+Part E: repeat with a fresh 'sample' stream from the same seed
+  same ten continuations: True
+  master seed 7: same as 1865 in 0 of 10

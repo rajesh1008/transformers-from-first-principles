@@ -1,0 +1,1 @@
+full model: 83.8 ms; 50% sliced 63.7 ms (1.32 x); 75% sliced 51.4 ms (1.63 x); zeroed 82.1 / 85.4 ms; gaps 2.3e-05 / 2.6e-05 (first run, before the 4-layer line was added)

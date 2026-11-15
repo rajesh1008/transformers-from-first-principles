@@ -1,0 +1,8 @@
+X @ X.T, row the: [1.0, 0.0, 1.0, 1.0, 1.0, -1.0]
+same as Chapter 6's loops: True
+rotary rows, X_rot @ X_rot.T, row the@0: [1.0, 0.5, 1.366, -1.0, -0.5, 1.366]
+same as Chapter 6's loops: True
+
+Tiny: block (7, 128) @ block.T (128, 7) -> table (7, 7)
+first row: [0.0430, -0.0036, -0.0017, 0.0000, -0.0024, 0.0001, 0.0022]
+table sum: 0.3205; same as the loops: True

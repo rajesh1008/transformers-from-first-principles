@@ -1,0 +1,35 @@
+{
+ "name": "upcycle_dense",
+ "mode": "dense",
+ "E": 4,
+ "K": 2,
+ "steps": 400,
+ "params": 2766592,
+ "log": [
+  {
+   "step": 0,
+   "held": 4.421666145324707,
+   "busiest": null
+  },
+  {
+   "step": 100,
+   "held": 4.432956218719482,
+   "busiest": null
+  },
+  {
+   "step": 200,
+   "held": 4.434906482696533,
+   "busiest": null
+  },
+  {
+   "step": 300,
+   "held": 4.42297887802124,
+   "busiest": null
+  },
+  {
+   "step": 400,
+   "held": 4.422656059265137,
+   "busiest": null
+  }
+ ]
+}

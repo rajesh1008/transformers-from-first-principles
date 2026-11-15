@@ -1,0 +1,8 @@
+vit_sincos: patch 2x2, 16 patches + 1 class row, width 64, 4 layers, 4 heads, positions sincos2d, pool cls; learned numbers 201,098
+epoch   1  train loss 2.3742  test accuracy 0.1111
+epoch   2  train loss 2.3128  test accuracy 0.1083
+epoch   5  train loss 1.0508  test accuracy 0.6389
+epoch  10  train loss 0.2688  test accuracy 0.9333
+epoch  20  train loss 0.0173  test accuracy 0.9806
+epoch  30  train loss 0.0109  test accuracy 0.9861
+test accuracy 0.9861; with patches shuffled at test time 0.1722  (26 s)

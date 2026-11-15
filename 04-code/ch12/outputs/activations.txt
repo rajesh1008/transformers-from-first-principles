@@ -1,0 +1,22 @@
+value at x:            -3.0    -2.0    -1.0    -0.5     0.0     0.5     1.0     2.0     3.0
+  ReLU                0.000   0.000   0.000   0.000   0.000   0.500   1.000   2.000   3.000
+  GELU (tanh form)   -0.004  -0.045  -0.159  -0.154   0.000   0.346   0.841   1.955   2.996
+  GELU (exact)       -0.004  -0.046  -0.159  -0.154   0.000   0.346   0.841   1.954   2.996
+  SiLU               -0.142  -0.238  -0.269  -0.189   0.000   0.311   0.731   1.762   2.858
+GELU (exact): lowest value -0.1700 at x = -0.752; negative for every x below 0
+SiLU: lowest value -0.2785 at x = -1.279; negative for every x below 0
+GELU tanh form against exact form, largest difference on [-6, 6]: 4.7e-04
+slopes by central difference (ReLU has no slope at 0; the two sides average 0.5):
+slope of ReLU          at -2, 0, 2: [0.0, 0.5, 1.0]
+slope of GELU (exact)  at -2, 0, 2: [-0.085, 0.5, 1.085]
+slope of SiLU          at -2, 0, 2: [-0.091, 0.5, 1.091]
+on standard normal inputs, ReLU         : share of outputs above zero 0.500, share below zero 0.000, mean output 0.399
+on standard normal inputs, GELU (exact) : share of outputs above zero 0.499, share below zero 0.501, mean output 0.282
+on standard normal inputs, SiLU         : share of outputs above zero 0.500, share below zero 0.500, mean output 0.207
+
+gated (GLU) forms on two inputs, gate g and value u: output = act(g) * u
+  g   2.0, u   1.0: SwiGLU   1.762 | GEGLU   1.954 | ReGLU   2.000
+  g   2.0, u  -1.0: SwiGLU  -1.762 | GEGLU  -1.954 | ReGLU  -2.000
+  g  -2.0, u   1.0: SwiGLU  -0.238 | GEGLU  -0.046 | ReGLU   0.000
+  g   0.0, u   5.0: SwiGLU   0.000 | GEGLU   0.000 | ReGLU   0.000
+  g  -0.5, u   1.0: SwiGLU  -0.189 | GEGLU  -0.154 | ReGLU   0.000

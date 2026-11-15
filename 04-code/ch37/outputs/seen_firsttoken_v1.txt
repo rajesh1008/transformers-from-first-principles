@@ -1,0 +1,12 @@
+Tiny on pool (trained on): loss 3.4572 nats, top-1 accuracy 0.2957, mean top-1 confidence 0.2678
+Tiny on Looking-Glass (never seen): loss 4.2458 nats, top-1 accuracy 0.2223, mean top-1 confidence 0.2461
+GPT-2 small well-known: right 4 of 15; mean top share when right 0.136, when wrong 0.096
+   France:' the' 0.09  Japan:' the' 0.09  Italy:' Rome' 0.16  Egypt:' the' 0.10  Russia:' the' 0.09  Spain:' Madrid' 0.10  Germany:' the' 0.09  Greece:' Athens' 0.18  England:' the' 0.09  China:' the' 0.12  Ireland:' the' 0.10  Austria:' the' 0.09  Portugal:' the' 0.09  Poland:' Warsaw' 0.10  Thailand:' the' 0.10
+GPT-2 small less-known: right 0 of 15; mean top share when right nan, when wrong 0.100
+   Mongolia:' the' 0.12  Bhutan:' the' 0.11  Laos:' the' 0.11  Malawi:' the' 0.09  Suriname:' the' 0.12  Eritrea:' the' 0.09  Tajikistan:' the' 0.10  Burkina Faso:' the' 0.09  Moldova:' the' 0.08  Kyrgyzstan:' the' 0.08  Gabon:' the' 0.09  Belize:' the' 0.11  Lesotho:' the' 0.09  Tuvalu:' the' 0.11  Benin:' the' 0.11
+GPT-2 small invented countries: Zubrovia:' the' 0.14  Veltrania:' the' 0.10  Oskaria:' the' 0.10  Marundi Kel:' the' 0.12  Talvessa:' the' 0.10  Quorvath:' the' 0.09
+SmolLM2-135M well-known: right 4 of 15; mean top share when right 0.213, when wrong 0.208
+   France:' the' 0.26  Japan:' Tokyo' 0.18  Italy:' the' 0.23  Egypt:' the' 0.23  Russia:' Moscow' 0.23  Spain:' Madrid' 0.25  Germany:' the' 0.19  Greece:' the' 0.24  England:' the' 0.17  China:' the' 0.15  Ireland:' the' 0.21  Austria:' the' 0.24  Portugal:' the' 0.20  Poland:' the' 0.17  Thailand:' Bang' 0.19
+SmolLM2-135M less-known: right 0 of 15; mean top share when right nan, when wrong 0.175
+   Mongolia:' the' 0.17  Bhutan:' the' 0.19  Laos:' the' 0.15  Malawi:' the' 0.16  Suriname:' the' 0.21  Eritrea:' the' 0.15  Tajikistan:' the' 0.17  Burkina Faso:' the' 0.20  Moldova:' the' 0.21  Kyrgyzstan:' the' 0.15  Gabon:' the' 0.18  Belize:' the' 0.20  Lesotho:' named' 0.13  Tuvalu:' the' 0.12  Benin:' the' 0.24
+SmolLM2-135M invented countries: Zubrovia:' the' 0.34  Veltrania:' the' 0.31  Oskaria:' the' 0.29  Marundi Kel:' the' 0.21  Talvessa:' the' 0.31  Quorvath:' the' 0.20

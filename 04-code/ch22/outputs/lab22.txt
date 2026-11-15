@@ -1,0 +1,23 @@
+Part 1. predict, then read
+  the novel's 817 paragraphs packed: 333 windows; the first window holds 6 documents
+  seats of window 0 that may read seat 0 under the document mask: 7 of 129
+  chance a pair of similarity 0.5 becomes a candidate with 32 bands of 4: 0.873; with 16 bands of 8: 0.061
+
+Part 2. five breakages
+  1. padding counted: 64 paragraphs in 91 padded windows, 40.8% of targets are padding; untrained loss 7.7073 with padding counted, 7.6620 on real targets only
+  2. cross-document context, first 12 packed windows (1,520 predictions inside documents):
+     plain causal mask 7.649782 | document mask, positions continue 7.656032 | document mask, positions restart 7.655806 | documents read one at a time 7.655806
+  3. held-out contamination (data.py's normalisation keeps digits): distinct 13-word runs of Looking-Glass also in Alice, raw files 2,993 of 34,160; licence removed 1 of 31,081
+  4. a resume that restarts the stream: 1,200 of 2,400 windows read twice in 300 batches
+  5. a shuffle buffer of 1: 100% of neighbouring windows in a batch continue each other (the last token of one is the first of the next)
+
+Part 3. checkpoints
+  [pass] tiny/data.py changes nothing about Tiny: 2,766,592 learned numbers, fingerprint 19c8710677873d01, loss 7.6334
+  [pass] pack() makes every token after the first a target exactly once (up to the dropped tail of 109 tokens)
+  [pass] a packed window with the document mask and restarted positions equals its documents read apart: difference 1.8e-15
+  [pass] MinHash with 256 numbers estimates a Jaccard similarity of 0.661 as 0.637
+  [pass] the banding rule: 32 bands of 4 give 0.873 at similarity 0.5
+  [pass] a stream stopped at batch 150 and restored from its state serves the uninterrupted run's batches: 300 of 300
+  [pass] shards read back through memory maps give the pool's 393,597 tokens unchanged
+
+7 of 7 checkpoints pass

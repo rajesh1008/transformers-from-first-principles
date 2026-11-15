@@ -1,0 +1,130 @@
+{
+ "A": {
+  "1": {
+   "n": 300,
+   "acc": 0.23666666666666666,
+   "share": 0.14494904433718928,
+   "conf": 0.2666275667892459,
+   "n_word": 113,
+   "acc_word": 0.061946902654867256,
+   "share_word": 0.027293159817310453,
+   "conf_word": 0.16653622421355133
+  },
+  "2-4": {
+   "n": 300,
+   "acc": 0.4533333333333333,
+   "share": 0.28206817074586527,
+   "conf": 0.35676774114655435,
+   "n_word": 53,
+   "acc_word": 0.18867924528301888,
+   "share_word": 0.05362197572225832,
+   "conf_word": 0.15207910117441567
+  },
+  "5-19": {
+   "n": 300,
+   "acc": 0.6766666666666666,
+   "share": 0.427142763352896,
+   "conf": 0.4653217580844182,
+   "n_word": 19,
+   "acc_word": 0.42105263157894735,
+   "share_word": 0.19455328789314102,
+   "conf_word": 0.26688544660108526
+  },
+  "20+": {
+   "n": 59,
+   "acc": 1.0,
+   "share": 0.9180575106476624,
+   "conf": 0.9180575106476624,
+   "n_word": 1,
+   "acc_word": 1.0,
+   "share_word": 0.5825934038748731,
+   "conf_word": 0.5825934038748731
+  }
+ },
+ "B": {
+  "The Bellman": {
+   "kind": "corpus",
+   "text": " said, and the / who had",
+   "mean_share": 0.1160817282259149
+  },
+  "For the Snark was a": {
+   "kind": "corpus",
+   "text": " / there of the \"P",
+   "mean_share": 0.1352076179981158
+  },
+  "Sylvie and": {
+   "kind": "corpus",
+   "text": " Sylvie. \u201cI",
+   "mean_share": 0.594437476624963
+  },
+  "'Just the place for a": {
+   "kind": "corpus",
+   "text": " little / charth, and",
+   "mean_share": 0.10143857565274522
+  },
+  "They sought it with thimbles, they sought it with": {
+   "kind": "corpus",
+   "text": " a / fourth, and the",
+   "mean_share": 0.12787754269157064
+  },
+  "said the Professor": {
+   "kind": "corpus",
+   "text": ". \u201cI'm / mage",
+   "mean_share": 0.250214595195284
+  },
+  "the Other Professor": {
+   "kind": "corpus",
+   "text": ". \u201cI'm / Is",
+   "mean_share": 0.23096686987940193
+  },
+  "Bruno said": {
+   "kind": "corpus",
+   "text": " \u2018Oh,\u2019s / the S",
+   "mean_share": 0.177915925717959
+  },
+  "The capital of France is": {
+   "kind": "world",
+   "text": " / thereet, and the ",
+   "mean_share": 0.1123328017403653
+  },
+  "The largest planet is": {
+   "kind": "world",
+   "text": " / there of the \"_",
+   "mean_share": 0.11988247346090607
+  },
+  "Two and two make": {
+   "kind": "world",
+   "text": " the \"_does_ / ",
+   "mean_share": 0.1791297379691702
+  },
+  "The sun rises in the": {
+   "kind": "world",
+   "text": " / production. / ",
+   "mean_share": 0.21477007750851623
+  },
+  "Water is made of hydrogen and": {
+   "kind": "world",
+   "text": " the / fessor, and the",
+   "mean_share": 0.21205791230217674
+  },
+  "The Queen of England lives in": {
+   "kind": "world",
+   "text": " the / morest of the c",
+   "mean_share": 0.09677304586199731
+  },
+  "The first man on the moon was": {
+   "kind": "world",
+   "text": " / there of the char",
+   "mean_share": 0.17025281387061367
+  },
+  "The author of Hamlet is": {
+   "kind": "world",
+   "text": " / there of the \"p",
+   "mean_share": 0.13562071771062506
+  }
+ },
+ "B_mean": {
+  "corpus": 0.21676754149824431,
+  "world": 0.15510244755304634
+ }
+}

@@ -1,0 +1,2 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+4g32: bits 4, group 32: tokens before first difference [64, 7, 64, 1, 0, 7, 1, 12, 3, 4]; identical for all 64: 2 of 10; positions equal 179/640

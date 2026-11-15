@@ -1,0 +1,25 @@
+loss 3.3313: the average surprise of five seats
+
+Part 1: the nudge on each seat's twelve scores, by the rule (share - [true word]) / 5
+  the@0  true next cat  share 0.0303  nudge on its score -0.1939  largest rival looked  rule = autograd to 3.5e-18
+  cat@1  true next sat  share 0.1200  nudge on its score -0.1760  largest rival looked  rule = autograd to 1.4e-17
+  sat@2  true next on   share 0.0261  nudge on its score -0.1948  largest rival looked  rule = autograd to 1.4e-17
+  on@3   true next the  share 0.0574  nudge on its score -0.1885  largest rival looked  rule = autograd to 1.4e-17
+  the@4  true next mat  share 0.0107  nudge on its score -0.1979  largest rival looked  rule = autograd to 1.4e-17
+  each seat's twelve nudges add to +0.000000 (the shares add to one)
+
+Part 2: through the tied output, scores = z E^T, so dz = dscores E
+  seat 4: dz = (+0.4870, -0.0727); autograd (+0.4870, -0.0727)
+  through ln_f (RMSNorm) at seat 4: x = (+4.8853, +3.1438), rms 4.1079
+    dx = u / rms - x (u . x) / (2 rms^3), u = dz x gain: (+0.0428, -0.0665); autograd (+0.0428, -0.0665)
+    the part of u along x is removed: (dx . x) = +0.000000
+
+Part 3: the nudge arriving at layer 0's head output, dY, one row per seat
+  the@0  autograd (+0.02286, -0.04152)   wiggled (+0.02286, -0.04152)
+  cat@1  autograd (+0.00893, -0.01234)   wiggled (+0.00893, -0.01234)
+  sat@2  autograd (-0.02084, +0.03143)   wiggled (-0.02084, +0.03143)
+  on@3   autograd (-0.00448, +0.01003)   wiggled (-0.00448, +0.01003)
+  the@4  autograd (+0.03175, -0.04534)   wiggled (+0.03175, -0.04534)
+  largest difference 4.2e-10
+  the head's output is added to the residual stream, so dY is the nudge on the stream after the add;
+  the row entering layer 0 gets dY back unchanged on the skip path plus what comes through the head

@@ -1,0 +1,33 @@
+Part 1: one key, four readers.  cat@1's key is scored by cat@1, sat@2, on@3 and the@4, so
+  from cat@1  dS[cat@1, cat@1] x Q[cat@1] / sqrt 2 = -0.00187 x (+0.6325, +2.5298) x 0.7071 = (-0.00084, -0.00335)
+  from sat@2  dS[sat@2, cat@1] x Q[sat@2] / sqrt 2 = +0.00487 x (+1.2649, +1.2649) x 0.7071 = (+0.00435, +0.00435)
+  from on@3   dS[on@3, cat@1] x Q[on@3] / sqrt 2 = +0.00244 x (+0.6325, -2.5298) x 0.7071 = (+0.00109, -0.00437)
+  from the@4  dS[the@4, cat@1] x Q[the@4] / sqrt 2 = -0.00386 x (+1.0000, +2.0000) x 0.7071 = (-0.00273, -0.00545)
+  sum = (+0.00188, -0.00882); the table rule dK = dS^T Q / sqrt 2 gives (+0.00188, -0.00882)
+
+Part 2: sat@2's shares as its three scores move
+  scores (+1.6000, +1.6970, +1.6970) -> shares (+0.3121, +0.3439, +0.3439)
+  slope of share i (row) in score j (column), by wiggling:
+    +0.2147  -0.1074  -0.1074
+    -0.1074  +0.2256  -0.1183
+    -0.1074  -0.1183  +0.2256
+  rule P_i([i = j] - P_j): largest difference 4.7e-11
+  on the diagonal P(1 - P): +0.2147, +0.2256, +0.2256; off it -P_i P_j
+  each column adds to +0.000000: raising any score moves share around, never adds any
+  the nudge arriving at the shares, dP = (-0.02322, +0.00022, -0.01966)
+  through the table: dS = J^T dP = (-0.00290, +0.00487, -0.00197)
+  shortcut, no table: P x (dP - P . dP) = (-0.00290, +0.00487, -0.00197)
+  without the row-sum term, P x dP = (-0.00725, +0.00008, -0.00676) (wrong: adds to -0.01393)
+
+Part 3: where the slopes go to zero
+  even, three scores of 0    shares (+0.333, +0.333, +0.333)     largest slope +0.2222
+  sat@2's row                shares (+0.312, +0.344, +0.344)     largest slope +0.2256
+  one score 5 ahead          shares (+0.987, +0.007, +0.007)     largest slope +0.0131
+  one score 10 ahead         shares (+1.000, +0.000, +0.000)     largest slope +0.0001
+  the@0's row, one share     shares (+1.000)                     largest slope +0.0000
+  a share of exactly 1 has slope 0 in every score: the@0's scores get no nudge at all
+
+Check yourself (answers in Appendix A)
+  1. three uses with slopes 0.2, -0.5, 0.1: nudge -0.2
+  2. shares (0.75, 0.25): slope of the first share in its own score +0.1875, in the other score -0.1875
+  3. shares (0.5, 0.3, 0.2), dP = (1, 1, 1): dS = (+0.0000, +0.0000, +0.0000)

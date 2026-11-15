@@ -1,0 +1,6 @@
+no positions           'the cat ...' mat -> (0.665, -0.297)   'cat the ...' mat -> (0.665, -0.297)   same: True
+toy positions added    'the cat ...' mat -> (1.366, 0.25)   'cat the ...' mat -> (1.184, -0.009)   same: False
+
+rotary on queries and keys (30 degrees per seat): mat -> (1.331, 0.583) vs shuffled (1.341, 0.545)   same: False
+  sat's row: [0.083, 0.284, 0.633]  (no positions: [0.284, 0.14, 0.576])
+  the same sentence starting at seat 100: tables identical: True  outputs identical: True

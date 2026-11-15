@@ -1,0 +1,46 @@
+Chapter 32 (Speculative Decoding), PARTIAL (tick 23).  Run from this folder.  CPU, one thread, 32-bit, greedy, 11 Nov 2026.
+Needs ../tiny (load.py, cache.py) and the GPT-2 weights in ../ch29/ckpt/gpt2 (not zipped).  PyTorch 2.15.0+cpu.
+
+    python3 -u spec_greedy.py > outputs/spec_greedy.txt   (.json) 32.3-32.4: cost of verifying k tokens; three drafts
+                                                         (early exit at 2 and 6 layers, prompt lookup, always ' the'),
+                                                         k = 4, 4 prompts x 64 tokens, checked against plain greedy; ~6.5 min
+
+Key outputs: verify k = 1 / 2 / 3 / 5 / 9 / 17 tokens at context 256: 50.9 / 61.7 / 60.8 / 82.7 / 113.8 / 109.6 ms.
+  plain greedy 12.52 s for 256 tokens; early exit 2 layers acc 0.040, 0.35x; 6 layers acc 0.104, 0.36x;
+  prompt lookup acc 0.353, 2.31 tokens per pass, 1.30x; always ' the' acc 0.008, 0.57x; all four outputs identical to greedy.
+
+What went wrong / caveats:
+  - The k = 17 verify pass timed faster than k = 9 (109.6 against 113.8 ms); shared-machine noise, reported as measured.
+  - The first prompt (held-out text from token 0) sits on a section separator, and greedy GPT-2 repeats '※' lines; prompt
+    lookup's speedup is partly that repetition.  Not yet measured on non-repeating text or under sampling.
+  - Tiny cannot draft for GPT-2 token by token (different tokenizers); not attempted.
+  - Early-exit drafts are untrained exits (GPT-2 was not trained with an early-exit loss).
+No hosted-model call; the key is not read by this script.
+
+
+Tick 24 (11 Nov 2026, about 19:52 to 20:30 IST).  Chapter 32 completed.
+    python3 -u spec_sample.py > outputs/spec_sample.txt  (.json)  32.5-32.6: Part C one-position rule (exact + 100,000 draws),
+                                                       Part F early-exit acceptance by temperature, Part D two tokens end to
+                                                       end (3,000 + 3,000 + 3,000 runs), Part E prompt lookup per prompt at
+                                                       greedy / T 0.7 / T 1.0; ~30 min (Part D dominates)
+    python3 -u spec_cost.py   > outputs/spec_cost.txt    (.json)  32.7: Part G k sweep (lookup, greedy), Part H five rows against
+                                                       one in tiny/serve.py's decode_step at B 1 / 4 / 16; ~3 min
+    python3 -u spec_tree.py   > outputs/spec_tree.txt    (.json)  32.7: prompt lookup as a chain and as a tree (up to 3 branches)
+                                                       verified in one pass with a tree mask; ~2 min
+    python3 -u lab32.py       > outputs/lab32.txt               Lab 32, 6 of 6; ~1 min
+    spec_greedy_lib.py        fwd_layers copied out of spec_greedy.py (which runs its experiment on import)
+    ../tiny/speculate.py      new module: trim, verify, accept_greedy, accept_sample, speculate, lookup_draft
+
+What went wrong / caveats (tick 24):
+  - lab32's fifth checkpoint first required TV > 0.01 for the resample-from-p rule; after the running sentence it is only
+    0.0082 (draft and target agree more there).  Threshold changed to > 1e-6 (the correct rule is ~1e-17) and both
+    positions printed; reported in the chapter.
+  - spec_sample.py, spec_cost.py, spec_tree.py and lab32.py ran at the same time as Chapter 33's quant_gpt2.py on other
+    cores (one thread each); timings carry that load.  spec_tree's chain and spec_cost's k = 4 row for held-out 1600 differ
+    (1.01x against 1.09x) for this reason.
+  - Part H's batched verify is a cost stand-in: each conversation's five rows run as five single-token rows over copies of
+    its cache, so the linear maps see B x 5 rows; attention is not a real tree/causal verify.
+  - The tree of prompt-lookup continuations averaged 1.0 to 1.2 branches per pass on these prompts and never paid.
+  - Part D fixes the first new token to GPT-2's greedy choice so every run shares one prefill; when the first guess is
+    rejected the third token is drawn from an ordinary target step.
+No hosted-model call.  lab32 reads the key from ../../.env only to check that it appears in no file under 04-code/ch32.

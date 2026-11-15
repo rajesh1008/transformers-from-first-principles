@@ -1,0 +1,20 @@
+Tiny on 12 windows of 512 Looking-Glass tokens: mean loss (nats) of the token predicted at each position
+  positions   0 to  15: 4.3363
+  positions  16 to  63: 4.5026
+  positions  64 to 127: 4.2841
+  positions 128 to 191: 4.8346
+  positions 192 to 255: 5.0855
+  positions 256 to 383: 4.9804
+  positions 384 to 510: 5.0041
+  position rows 0 to 127: mean distance moved from their starting values 0.2520
+  position rows 128 to 255: mean distance moved from their starting values 0.0000
+  position rows 256 to 1023: mean distance moved from their starting values 0.0000
+sliding window of 128 (every prediction sees at most the last 128 tokens, positions renumbered from 0):
+  positions   0 to  15: 4.3363
+  positions  16 to  63: 4.5026
+  positions  64 to 127: 4.2841
+  positions 128 to 191: 4.4180
+  positions 192 to 255: 4.5174
+  positions 256 to 383: 4.4037
+  positions 384 to 510: 4.4265
+mean over all positions: full window 4.8289, sliding window 4.4176

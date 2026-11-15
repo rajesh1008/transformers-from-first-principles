@@ -1,0 +1,21 @@
+Step 1: the 6 x 6 agreement table, every row turned 30 degrees per position (row asks, column answers)
+            the    cat    sat     on    the    mat
+    the   1.000  0.500  1.366 -1.000 -0.500  1.366
+    cat   0.500  1.000  0.366 -1.366 -1.000  0.366
+    sat   1.366  0.366  2.000 -1.000 -0.366  2.000
+     on  -1.000 -1.366 -1.000  2.000  1.366 -1.000
+    the  -0.500 -1.000 -0.366  1.366  1.000 -0.366
+    mat   1.366  0.366  2.000 -1.000 -0.366  2.000
+Step 2: the same sentence at positions 100-105; largest change in any agreement: 6.7e-15
+Step 3: the scrambled sentence; agreements that differ from the running sentence: 14 of 36
+
+BREAKAGE 1: turn the asking rows (queries) but not the answering rows (keys)
+  agreements that change when the sentence moves to positions 100-105: 32 of 36
+  the -> cat (gap 1) at positions 0,1: 0.0  at 100,101: -0.866
+BREAKAGE 2: the same angle for every position
+  agreements that differ from the scrambled sentence: 0 of 36
+
+CHECKPOINT
+toy table, row 'the'@0: [1.0, 0.5, 1.366, -1.0, -0.5, 1.366]
+toy table, row 'mat'@5: [1.366, 0.366, 2.0, -1.0, -0.366, 2.0]
+Tiny: rotary on block (7, 128), row 1 starts [-0.0022, -0.0168, 0.0009], block sum -0.1679, lengths kept: True, learned numbers 0

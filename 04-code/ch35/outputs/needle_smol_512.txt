@@ -1,0 +1,7 @@
+smol, haystack 512 tokens, keys ['32008', '63463', '94893', '14038', '54464', '15451']; answer tokens per key [6, 6, 6, 6, 6, 6]
+  none                         exact 0 of 6; mean log-prob per answer token  -3.379  (17 s)
+  depth 0.0                    exact 6 of 6; mean log-prob per answer token  -0.450  (32 s)
+  depth 0.25                   exact 6 of 6; mean log-prob per answer token  -0.263  (46 s)
+  depth 0.5                    exact 6 of 6; mean log-prob per answer token  -0.308  (60 s)
+  depth 0.75                   exact 6 of 6; mean log-prob per answer token  -0.188  (75 s)
+  depth 1.0                    exact 6 of 6; mean log-prob per answer token  -0.179  (89 s)

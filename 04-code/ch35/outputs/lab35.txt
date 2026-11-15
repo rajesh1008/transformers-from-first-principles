@@ -1,0 +1,19 @@
+Part 1. Tiny's position table
+  first position row that never moved from its seed-1865 start: 128
+[pass] Tiny's trained window is 128 positions: rows 128 onwards are untouched
+Part 2. one window of 512 against a sliding window of 128
+  first window of the novel, positions 0-127: 4.1500 / 4.1500; 128-510: 5.1233 (one pass) against 4.9575 (sliding)
+[pass] inside 128 the two agree; past 128 one long pass is worse than the sliding window
+Part 3. breakage: score Tiny in windows of 512 instead of 129
+  held-out Carroll: windows of 129 1.9805 bits per character; windows of 512 2.3329
+[pass] a window longer than the trained one makes Tiny's score worse, with no error raised
+Part 4. rotary arithmetic for SmolLM2 (head width 64)
+  pairs that never complete a turn at 2,048 / 8,192 / 16,384 tokens, base 100,000: [15, 12, 10]; base 1,600,000 at 16,384: 14
+[pass] raising the base leaves more pairs inside a single turn
+Part 5. the blocked forward pass
+  largest difference in per-token loss, blocked against tiny/load.py: 2.74e-05
+[pass] longfwd.py agrees with tiny/load.py within 1e-4 per token across a block boundary
+Part 6. the key
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch35
+
+6 of 6 checkpoints pass

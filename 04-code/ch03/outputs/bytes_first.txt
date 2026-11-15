@@ -1,0 +1,16 @@
+'the cat sat on the mat': 22 characters, 22 bytes
+bytes: [116, 104, 101, 32, 99, 97, 116, 32, 115, 97, 116, 32, 111, 110, 32, 116, 104, 101, 32, 109, 97, 116]
+back again: the cat sat on the mat
+
+'Où est ma chatte?': 17 characters, 18 bytes
+  'ù' is 2 bytes: [195, 185]
+
+'“': 1 characters, 3 bytes
+  '“' is 3 bytes: [226, 128, 156]
+
+'naïve café': 10 characters, 12 bytes
+  'ï' is 2 bytes: [195, 175]
+  'é' is 2 bytes: [195, 169]
+
+the novel: 151,094 bytes, using 78 of the 256 possible byte values
+byte values above 127 that occur: [128, 148, 152, 153, 156, 157, 185, 195, 226]

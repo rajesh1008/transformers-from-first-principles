@@ -1,0 +1,29 @@
+Exercise 1. top row (1, 0.5) scored against the toy rows
+  the  score +1.000  e^score 2.718  share 0.245
+  cat  score +0.500  e^score 1.649  share 0.148
+  sat  score +1.500  e^score 4.482  share 0.404
+  on   score +0.500  e^score 1.649  share 0.148
+  mat  score -0.500  e^score 0.607  share 0.055
+  sum of e^score 11.104
+Exercise 2. equal unrelated writes, after 24 writes
+  cos with the row below sqrt(24/25) = 0.9798; cos with the start 1/sqrt(25) = 0.2000
+Exercise 3. Tiny with six layers
+  by hand 262,144 + 131,072 + 6 x 197,760 + 256 = 1,580,032; counted 1,580,032
+Exercise 4. GPT-2 medium: V 50,257, C 1,024, d 1,024, 24 layers, d_ff 4,096, biases everywhere, tied
+  attention 4,198,400; feed-forward 8,393,728; norms 4,096; one layer 12,596,224; total 354,823,168
+Exercise 5. rule of thumb, 32 layers of width 4,096
+  12 x 32 x 4096^2 = 6,442,450,944
+Exercise 6. Tiny's operations per token at a 256-token text
+  tables 4,718,592; scores and blends 789,504; output 524,288; total 6,032,384; attention part / tables 0.167
+Exercise 7. untrained Tiny with an untied output table, Logit Lens on ' sat' (row 2)
+  enter   0: top three ['ich', ' sm', 'arch']; rank of ' sat' 887
+  enter   1: top three [' k', 'ced', 'book']; rank of ' sat' 940
+  enter   2: top three [' gone', '<0x84>', ' waving']; rank of ' sat' 214
+  enter top: top three [' hour', 'ending', ' excl']; rank of ' sat' 1387
+  tied, for comparison, enter 0: rank of ' sat' 1
+Exercise 10. learned numbers: untied and without ln_f
+  Tiny(tied=False, final_norm=False): 3,028,480
+Exercise 9. GPT-2 small after 'the cat sat on the': layers (1, 6) removed and layers (6, 7) removed
+  removed none: top three ['␣floor', '␣couch', '␣bed']; rank of ' mat' 37
+  removed (1, 6): top three ['␣couch', '␣floor', '␣bed']; rank of ' mat' 53
+  removed (6, 7): top three ['␣cat', '␣floor', '␣couch']; rank of ' mat' 43

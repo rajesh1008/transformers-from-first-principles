@@ -1,0 +1,23 @@
+The same word, five ids:
+  'cat'        -> [9246]                 cat
+  ' cat'       -> [3797]                 ␣cat
+  'Cat'        -> [21979]                Cat
+  ' Cat'       -> [5181]                 ␣Cat
+  ' CAT'       -> [38348]                ␣CAT
+
+The same word in two places of the running sentence:
+  'the'        -> [1169]                 the
+  ' the'       -> [262]                  ␣the
+
+Numbers are cut wherever the merges happened to fall:
+  '1865'       -> [1507, 2996]           18 | 65
+  ' 1865'      -> [47801]                ␣1865
+  ' 1866'      -> [1248, 2791]           ␣18 | 66
+  ' 12345'     -> [17031, 2231]          ␣123 | 45
+  ' 3.14159'   -> [513, 13, 1415, 19707] ␣3 | . | 14 | 159
+
+Near-identical words, unrelated ids:
+  ' rabbit'    -> [22746]                ␣rabbit
+  ' rabbits'   -> [33043]                ␣rabbits
+  ' Rabbit'    -> [25498]                ␣Rabbit
+  ' rabbi'     -> [47326]                ␣rabbi

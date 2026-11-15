@@ -1,0 +1,2 @@
+numbers: 12,288 65,536 | shapes: (7, 128) (7, 128) (4, 7, 7)
+removing head 2 takes away exactly its own contribution: True

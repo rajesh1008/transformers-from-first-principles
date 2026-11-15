@@ -1,0 +1,10 @@
+same 100 Looking-Glass cloze items (sum scoring for Tiny and the counts):
+  625_steps    0.57
+  1250_steps   0.61
+  2500_steps   0.69
+  unigram      0.38
+  bigram       0.75
+  hosted, shuffled 0.80; replies naming the source instead of a letter 9
+  hosted, reversed 0.79; replies naming the source instead of a letter 7
+  hosted, wrong in both orders: 7 items; right letters in the prompts {'A': 44, 'B': 56, 'C': 56, 'D': 44}
+pairwise judge, answers (true sentence first, true sentence second) over 60 passages: 1/2: 54, 2/1: 1, 2/2: 5

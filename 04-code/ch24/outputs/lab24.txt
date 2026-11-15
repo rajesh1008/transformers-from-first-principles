@@ -1,0 +1,28 @@
+Part 1. predict, then read
+  uniform loss ln 2048 = 7.6246 nats = 11.0000 bits
+  bigram perplexity e^4.2984 = 73.6
+  steps in one run that gives finished runs of 625, 1,250 and 2,500 steps: 2,000 + 125 + 250 + 500 = 2,875 (logged: 2875)
+
+Part 2. breakages
+  Breakage 1 (bits read as nats): the 2,500-step model's held-out loss 3.7296 nats is 5.3807 bits
+  Breakage 2 (scoring on training text): 16 windows of the pool 3.4872 against the held-out set 3.7296
+  Breakage 3 (a small held-out set): 20 draws of 16 windows: 3.5398 to 3.9771 (spread 0.1169); all 31 non-overlapping windows 3.7543
+  Breakage 4 (the trunk read as a finished run): trunk at 1,000 4.3717, at 1,250 4.2105 (step 1,200); the branch finished at 1,250: 4.1487
+  Breakage 5 (a schedule that stops at a tenth of the peak): cosine to 0.1 4.8769, cosine to 0 4.9415, WSD branch 4.6614 (625 steps each)
+
+Part 3. checkpoints
+[pass] the trained Tiny has Chapter 14's shape: 2,766,592 learned numbers
+[pass] 32-bit training repeats exactly at one thread (the 1e-3 sweep's first 600 steps against the trunk's): first 50 batch losses identical (same warmup, same reader)
+[pass] the 2,500-step model beats the bigram on the Carroll held-out set: 3.7296 < 4.2984
+[pass] the 2,500-step model is below the untrained Tiny on the running sentence: 5.1679 < 7.5342
+[pass] each longer WSD branch ends lower: 4.6614, 4.1487, 3.7296
+
+what the 2,500-step model expects next, after each prefix of the running sentence (top 3, probabilities):
+  'the'                        -> 're' 0.090, ' c' 0.040, ' p' 0.033   true ' cat': 0.0002
+  'the cat'                    -> 'ch' 0.105, 'ching' 0.096, 'f' 0.047   true ' sat': 0.0003
+  'the cat sat'                -> ' down' 0.122, 'is' 0.079, ' up' 0.052   true ' on': 0.0374
+  'the cat sat on'             -> ' the' 0.275, ',' 0.095, ' a' 0.059   true ' the': 0.2752
+  'the cat sat on the'         -> '\n' 0.052, ' c' 0.021, ' p' 0.020   true ' m': 0.0151
+  'the cat sat on the m'       -> 'oun' 0.044, 'on' 0.043, 'us' 0.041   true 'at': 0.0035
+
+5 of 5 checkpoints pass

@@ -1,0 +1,7 @@
+plain  step    0  best induction 0.015 (3.0)  best previous-token 0.136 (6.2)  passages first 4.116 repeat 4.210  held-out windows 4.5942  (1 s)
+plain  step  100  best induction 0.013 (3.0)  best previous-token 0.146 (6.2)  passages first 4.134 repeat 4.215  held-out windows 4.6069  (42 s)
+plain  step  200  best induction 0.012 (0.0)  best previous-token 0.136 (6.2)  passages first 4.118 repeat 4.210  held-out windows 4.6211  (80 s)
+plain  step  300  best induction 0.013 (3.0)  best previous-token 0.134 (6.2)  passages first 4.086 repeat 4.210  held-out windows 4.6199  (115 s)
+plain  step  400  best induction 0.013 (3.0)  best previous-token 0.149 (6.2)  passages first 4.079 repeat 4.198  held-out windows 4.6043  (148 s)
+plain  step  500  best induction 0.012 (0.0)  best previous-token 0.147 (6.2)  passages first 4.100 repeat 4.194  held-out windows 4.6090  (184 s)
+plain  step  600  best induction 0.012 (1.0)  best previous-token 0.150 (6.2)  passages first 4.093 repeat 4.179  held-out windows 4.6058  (221 s)

@@ -1,0 +1,24 @@
+the toy table: one row of two numbers per vocabulary entry
+  row  0  the     ( 1,  0)
+  row  1  cat     ( 0,  1)
+  row  2  sat     ( 1,  1)
+  row  3  on      ( 1, -1)
+  row  4  mat     (-1,  1)
+  row  5  a       ( 2,  0)
+  row  6  dog     ( 0,  2)
+  row  7  rabbit  (-1,  2)
+  row  8  looked  ( 2,  1)
+  row  9  at      ( 2, -1)
+  row 10  hat     (-2,  1)
+  row 11  <unk>   ( 0,  0)
+
+'the cat sat on the mat' -> ids [0, 1, 2, 3, 0, 4]
+looked up, one row per token:
+  the  id 0  ->  ( 1,  0)
+  cat  id 1  ->  ( 0,  1)
+  sat  id 2  ->  ( 1,  1)
+  on   id 3  ->  ( 1, -1)
+  the  id 0  ->  ( 1,  0)
+  mat  id 4  ->  (-1,  1)
+shape of the result: 6 rows of 2 numbers
+rows for position 0 and position 4 identical: True

@@ -1,0 +1,26 @@
+Chapter 36 runs (tick 27, 12 Nov 2026 from about 02:13 IST; CPU, one thread per process, 32-bit, seed 1865; the two
+continue_repeat.py processes ran side by side, so their wall times are not speed measurements).  GPT-2 weights from
+../ch29/ckpt/ (not in the code zip); Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.
+  python3 -u induction.py > outputs/induction.txt (.json)        random runs shown twice; induction and previous-token scores per head
+                                                                  (Tiny 60 tokens x 2, GPT-2 100 x 2, 20 draws each; HF eager attention)
+  python3 -u repeat_text.py > outputs/repeat_text.txt (.json)    20 Looking-Glass passages of 60 Tiny tokens shown twice; Tiny and GPT-2
+  python3 -u continue_repeat.py repeat > outputs/continue_repeat.txt (.json)   600 AdamW steps, lr 3e-4, every window a
+  python3 -u continue_repeat.py plain  > outputs/continue_plain.txt (.json)    repeated 64-token passage / ordinary windows (control)
+Things that went wrong: the first versions of induction.py and repeat_text.py counted the prediction that crosses from the
+first showing into the repeat as part of the first showing; fixed (positions 1 to n-2), rerun, and only the rerun is quoted.
+_common.py and _pool.py are copies of ../ch35's.
+
+Tick 28 (12 Nov 2026 from about 03:56 IST; CPU, one thread per process, 32-bit, seed 1865):
+  continue_repeat.py now takes STEPS, LR, PLEN, EVERY, TAG from the environment (defaults reproduce tick 27's runs exactly;
+  PLEN 64 with np.resize gives the same 64 + 65 window as before).  ./run_long.sh ran three 4,000-step processes side by side
+  (wall times are not speed measurements):
+    STEPS=4000 LR=1e-3 PLEN=32 EVERY=250 TAG=_long32 continue_repeat.py repeat > outputs/continue_repeat_long32.txt (.json)
+    STEPS=4000 LR=1e-3 PLEN=64 EVERY=250 TAG=_long64 continue_repeat.py repeat > outputs/continue_repeat_long64.txt (.json)
+    STEPS=4000 LR=1e-3 EVERY=250 TAG=_long continue_repeat.py plain > outputs/continue_plain_long.txt (.json)
+  python3 -u fewshot.py > outputs/fewshot.txt (.json)          antonyms, k = 0..8, four formats, shuffled answers, attention by token kind
+  python3 -u fewshot_top.py > outputs/fewshot_top.txt (.json)  greedy first token at k = 4 for every query (fewshot_lib.py holds the builders)
+  python3 -u docs.py > outputs/docs.txt (.json)                capital notes: closed book, agree, contradict, among five; injected line (Instruct)
+  python3 -u lab36.py > outputs/lab36.txt                      5 of 5
+Things that went wrong: the first launch of the long runs used a non-existent .venv/bin/python (the venv holds only lib/;
+the system python3 imports torch 2.15.0 and transformers 5.22.1) and then a shell that started only one of the three
+processes; both were killed and the runs restarted from step 0 through run_long.sh. Only the restarted runs are quoted.

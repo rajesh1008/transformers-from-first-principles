@@ -1,0 +1,45 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+Part C: one position after a held-out prompt, target GPT-2 (12 layers), draft its first 6 layers, T 1
+  acceptance sum(min(p, q)) = 0.1565; TV(p, q) = 0.8435
+  target p top 5: '\n' 0.402, ' �' 0.267, ' I' 0.053, ' He' 0.030, '�' 0.025
+  draft  q top 5: ' It' 0.531, ' That' 0.042, ' There' 0.031, ' But' 0.030, ' When' 0.028
+  rule's output, computed exactly: max |difference from p| 1.11e-16; TV 1.47e-16
+  broken rule 1 (on rejection, draw from p): TV from p 0.0988 (exact)
+  broken rule 2 (draft guesses its top token; accept with p(g), else draw from p without g): TV 1.56e-19 (exact)
+  100,000 draws each (seed 1865): accepted 0.1555 of draft guesses
+    plain sampling    TV from p 0.0239   (sampling noise alone)
+    speculative rule  TV from p 0.0251;  TV from plain draws 0.0316
+    broken rule 1     TV from p 0.1123
+    p                  top 5: '\n' 0.402, ' �' 0.267, ' I' 0.053, ' He' 0.030, '�' 0.025
+    speculative draws  top 5: '\n' 0.403, ' �' 0.270, ' I' 0.053, ' He' 0.029, '�' 0.025
+    broken 1 draws     top 5: '\n' 0.359, ' �' 0.227, ' I' 0.059, ' It' 0.034, ' He' 0.028
+
+Part F: acceptance by temperature for untrained early exits, 512 held-out positions
+  first  2 layers: greedy agreement 0.090; expected acceptance T 0.7 0.076, T 1.0 0.103
+  first  4 layers: greedy agreement 0.070; expected acceptance T 0.7 0.081, T 1.0 0.113
+  first  6 layers: greedy agreement 0.104; expected acceptance T 0.7 0.119, T 1.0 0.147
+  first  8 layers: greedy agreement 0.211; expected acceptance T 0.7 0.219, T 1.0 0.235
+  first 10 layers: greedy agreement 0.363; expected acceptance T 0.7 0.372, T 1.0 0.349
+
+Part D: two speculated tokens after the running sentence (k = 2, 6-layer draft sampled at T 1)
+  token 2 after the prompt: TV plain vs plain 0.3177; speculative vs plain 0.3140 / 0.3067
+    plain top 5: ' and' 0.103, ' the' 0.040, ' his' 0.038, ' her' 0.033, ' but' 0.025
+    spec  top 5: ' and' 0.110, ' the' 0.042, ' his' 0.037, ' her' 0.032, ' looking' 0.025
+  token 3 after the prompt: TV plain vs plain 0.3573; speculative vs plain 0.3757 / 0.3500
+    plain top 5: ' the' 0.067, ' her' 0.038, ' his' 0.029, ' to' 0.027, ' at' 0.025
+    spec  top 5: ' the' 0.061, ' his' 0.037, ' her' 0.035, ' to' 0.030, ' at' 0.024
+  first token fixed to greedy ','; guesses accepted per pass: mean 0.186 of 2; distribution [2515, 412, 73]; plain 548 s for 2 x 3000, speculative 614 s
+
+Part E: prompt lookup, k = 4, 64 new tokens per prompt, against plain cached decoding with the same settings
+  greedy  separator (token 0) : accepted  48/ 60 (0.800); 4.27 tokens per verify pass; plain  3.59 s, lookup  1.52 s (2.36 x); same as greedy True
+  greedy  held-out 800        : accepted  47/ 76 (0.618); 3.37 tokens per verify pass; plain  3.08 s, lookup  1.90 s (1.62 x); same as greedy True
+  greedy  held-out 1600       : accepted  34/128 (0.266); 2.00 tokens per verify pass; plain  3.25 s, lookup  2.75 s (1.18 x); same as greedy True
+  greedy  held-out 2400       : accepted  22/164 (0.134); 1.56 tokens per verify pass; plain  3.00 s, lookup  3.58 s (0.84 x); same as greedy True
+  T 0.7   separator (token 0) : accepted   1/248 (0.004); 1.03 tokens per verify pass; plain  3.92 s, lookup  5.82 s (0.67 x)
+  T 0.7   held-out 800        : accepted  12/204 (0.059); 1.25 tokens per verify pass; plain  3.35 s, lookup  4.90 s (0.68 x)
+  T 0.7   held-out 1600       : accepted   6/232 (0.026); 1.10 tokens per verify pass; plain  3.11 s, lookup  4.99 s (0.62 x)
+  T 0.7   held-out 2400       : accepted   1/248 (0.004); 1.03 tokens per verify pass; plain  3.29 s, lookup  5.48 s (0.60 x)
+  T 1.0   separator (token 0) : accepted   6/228 (0.026); 1.12 tokens per verify pass; plain  3.38 s, lookup  5.34 s (0.63 x)
+  T 1.0   held-out 800        : accepted   1/248 (0.004); 1.03 tokens per verify pass; plain  3.10 s, lookup  5.92 s (0.52 x)
+  T 1.0   held-out 1600       : accepted   1/248 (0.004); 1.03 tokens per verify pass; plain  3.29 s, lookup  5.55 s (0.59 x)
+  T 1.0   held-out 2400       : accepted   2/244 (0.008); 1.05 tokens per verify pass; plain  3.45 s, lookup  5.20 s (0.66 x)

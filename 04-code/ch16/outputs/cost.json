@@ -1,0 +1,41 @@
+{
+ "Tiny": {
+  "layers": 4746752,
+  "attention": 3145728,
+  "output": 524288,
+  "total": 8416768
+ },
+ "GPT-2 small": {
+  "layers": 170112000,
+  "attention": 18874368,
+  "output": 77194752,
+  "total": 266181120
+ },
+ "SmolLM2-135M": {
+  "layers": 212406912,
+  "attention": 35389440,
+  "output": 56623104,
+  "total": 304419456
+ },
+ "Qwen3-0.6B": {
+  "layers": 880934912,
+  "attention": 117440512,
+  "output": 311164928,
+  "total": 1309540352
+ },
+ "tiny_1024": {
+  "madds": {
+   "queries, keys, values, output table": 805306368,
+   "scores (full table, then masked)": 1610612736,
+   "blend": 1610612736,
+   "feed-forward": 1610612736,
+   "next-token scores": 268435456
+  },
+  "flops": 11811160064,
+  "t_tiny_s": 1.130944885997451,
+  "t_mm_s": 0.022616488990024664,
+  "rate_mm": 94952123158.77939,
+  "rate_tiny": 10443621267.700415,
+  "train_novel_flops": 736356126720
+ }
+}

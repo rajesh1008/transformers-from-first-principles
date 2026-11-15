@@ -1,0 +1,2 @@
+w80 none: nonzero numbers 884,992 of 2,766,592; teacher 1.9812 measured 1.9812; after pruning 2.4587
+w80 none: final 2.4587; pruned positions still zero: True; 0 s

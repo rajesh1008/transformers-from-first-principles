@@ -1,0 +1,17 @@
+rows of 6 keys, 2,000 random queries per width; numbers drawn with spread 1, seed 1865
+ width | score spread | unscaled: top share  tokens>=1%  entropy | scaled: top share  tokens>=1%  entropy
+     2 |         1.38 |               0.455        5.53    1.363 |             0.380        5.84    1.519
+    16 |         3.94 |               0.773        2.97    0.588 |             0.413        5.93    1.478
+    64 |         7.99 |               0.884        1.86    0.285 |             0.416        5.94    1.471
+   128 |        11.31 |               0.925        1.56    0.186 |             0.423        5.93    1.462
+   512 |        22.69 |               0.958        1.29    0.101 |             0.420        5.94    1.465
+  1024 |        32.16 |               0.975        1.18    0.061 |             0.425        5.93    1.461
+ (a row of 6 even shares has entropy ln 6 = 1.792; all on one token, 0)
+
+how far the top share moves when its score rises by 0.1 (width 128, 6 keys, 2,000 rows):
+  unscaled: average move 0.0053; rows with a top share above 0.99: 56.5%; median move 0.00041
+    scaled: average move 0.0229; rows with a top share above 0.99: 0.0%; median move 0.02344
+
+one window of Tiny's length, 1,024 keys, width 128:
+  unscaled: average top share 0.797; tokens holding 90% of the share 2.0 of 1,024
+    scaled: average top share 0.015; tokens holding 90% of the share 629.4 of 1,024

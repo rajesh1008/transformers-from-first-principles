@@ -1,0 +1,15 @@
+(1) adding in a different order
+  float64: (0.1 + 0.2) + 0.3 = 0.6000000000000001; 0.1 + (0.2 + 0.3) = 0.6; equal: False
+  float32: (1e8 + 1) - 1e8 = 0.0; (1e8 - 1e8) + 1 = 1.0
+
+(2) untrained Tiny (seed 1865) on the running sentence, scores (7, 2048)
+  this file's float64 pass against Tiny.forward: largest difference 0.0e+00
+  float32                        largest score difference 7.21e-07; top five after 'at' unchanged: True
+  float32, output sums reversed  largest score difference 6.35e-07; top five after 'at' unchanged: True
+  float16                        largest score difference 1.34e-03; top five after 'at' unchanged: True
+  float32 against float32 with the output sums reversed: largest difference 5.96e-07; scores that differ in any bit: 13,063 of 14,336
+  gap between Tiny's first and second choice after 'at' (float64): 0.1688; between the 5th and 6th: 0.004971
+  float16 top five after 'at': ['hesh', ' squ', '<0xD8>', 'at', 'not'] against ['hesh', ' squ', '<0xD8>', 'at', 'not']
+
+(3) the hand Tiny in float16
+  largest score difference float16 against float64: 0.0019; top word at every seat unchanged: True

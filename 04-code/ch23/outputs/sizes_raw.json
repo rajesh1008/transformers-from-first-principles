@@ -1,0 +1,42 @@
+{
+ "s1": {
+  "token table": 65536,
+  "position table": 4096,
+  "layers: norms": 512,
+  "layers: attention": 16384,
+  "layers: feed-forward": 33408,
+  "final norm": 64
+ },
+ "s2": {
+  "token table": 98304,
+  "position table": 6144,
+  "layers: norms": 768,
+  "layers: attention": 36864,
+  "layers: feed-forward": 74688,
+  "final norm": 96
+ },
+ "s3": {
+  "token table": 131072,
+  "position table": 8192,
+  "layers: norms": 1024,
+  "layers: attention": 65536,
+  "layers: feed-forward": 132352,
+  "final norm": 128
+ },
+ "s4": {
+  "token table": 196608,
+  "position table": 12288,
+  "layers: norms": 1536,
+  "layers: attention": 147456,
+  "layers: feed-forward": 296832,
+  "final norm": 192
+ },
+ "s5": {
+  "token table": 262144,
+  "position table": 16384,
+  "layers: norms": 2048,
+  "layers: attention": 262144,
+  "layers: feed-forward": 526848,
+  "final norm": 256
+ }
+}

@@ -1,0 +1,5 @@
+neuron 10.888 on 1,024 tokens of the novel: positions inside an open bracket 191 of 1024
+  mean activation inside 0.946 | outside -0.079
+  activations above 1: 70, of which inside a bracket 69
+  of its 20 strongest positions, inside a bracket: 20
+  positions just before a ')' token: 6; activation there: [5.12, 4.55, 2.67, 2.59, 3.65, 3.24]

@@ -1,0 +1,3 @@
+seed = 1865
+stored numbers (pair counts): 14,752
+generation speed: about 71,800 words per second

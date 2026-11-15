@@ -1,0 +1,1 @@
+fp32         32-bit throughout (Chapter 20's arithmetic)                held-out 7.6530 -> 5.2684 (lowest 5.2684); batch last 25 4.6026; 136 s

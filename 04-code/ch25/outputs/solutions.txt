@@ -1,0 +1,12 @@
+Check yourself
+1. surprises 0.6931, 2.3026, 3.9120; average 2.3026; perplexity 10.0000; geometric mean 0.1000; product 1.000000
+2. factor e^0.10 = 1.1052, whatever the two losses are (only their difference enters)
+3. 3.0 / ln 2 x 0.3 = 1.2984 bits per character
+Exercises
+1. loss 2.4759 nats = 3.5719 bits; perplexity 11.8921; share on p = 0.01: 0.465
+2. change in loss ln(64.2 / 42.7) = 0.4078 nats = 0.5883 bits per token
+3. bits per character: first 1.7745, second 1.8640; the first predicts the text better
+4. clustered standard error 0.4 / sqrt(50) = 0.0566; halving it needs four times the windows, 200
+5. confidence 0.8, accuracy 0.60: gap 0.20, overconfident
+6. (255 - 218) / (sqrt(436) / 2) = 3.54 standard deviations
+7. sum scoring: right answer log p = 2 ln 0.1 = -4.6052 beats distractors' 3 ln 0.1 = -6.9078, accuracy 1.00; mean scoring: every choice ln 0.1 per token, a four-way tie, so accuracy 0.25 if ties are broken at random

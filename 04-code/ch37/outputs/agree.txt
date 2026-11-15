@@ -1,0 +1,33 @@
+[transformers] The attention mask is not set with a batched input, and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+France        right  4 of 10   commonest capitalised word 'Paris' in 4 of 10
+Japan         right  0 of 10   commonest capitalised word 'Osaka' in 2 of 10
+Italy         right  2 of 10   commonest capitalised word 'Tuscolan' in 1 of 10
+Egypt         right  0 of 10   commonest capitalised word '(none)' in 4 of 10
+Russia        right  1 of 10   commonest capitalised word 'North-East' in 1 of 10
+Spain         right  3 of 10   commonest capitalised word 'Madrid' in 3 of 10
+Germany       right  0 of 10   commonest capitalised word '(none)' in 3 of 10
+Greece        right  4 of 10   commonest capitalised word 'Greek' in 3 of 10
+England       right  1 of 10   commonest capitalised word '(none)' in 3 of 10
+China         right  2 of 10   commonest capitalised word '(none)' in 2 of 10
+Ireland       right  3 of 10   commonest capitalised word 'Dublin' in 3 of 10
+Austria       right  2 of 10   commonest capitalised word '(none)' in 2 of 10
+Portugal      right  2 of 10   commonest capitalised word 'Lisbon' in 2 of 10
+Poland        right  2 of 10   commonest capitalised word '(none)' in 2 of 10
+Thailand      right  5 of 10   commonest capitalised word 'Bangkok' in 5 of 10
+Mongolia      right  0 of 10   commonest capitalised word '(none)' in 3 of 10
+Bhutan        right  0 of 10   commonest capitalised word 'Jigme' in 1 of 10
+Laos          right  2 of 10   commonest capitalised word 'Vientiane' in 1 of 10
+Malawi        right  1 of 10   commonest capitalised word '(none)' in 2 of 10
+Suriname      right  1 of 10   commonest capitalised word '(none)' in 3 of 10
+Eritrea       right  0 of 10   commonest capitalised word '(none)' in 3 of 10
+Tajikistan    right  0 of 10   commonest capitalised word '(none)' in 2 of 10
+Burkina Faso  right  1 of 10   commonest capitalised word '(none)' in 2 of 10
+Moldova       right  0 of 10   commonest capitalised word 'South' in 1 of 10
+Kyrgyzstan    right  0 of 10   commonest capitalised word '(none)' in 2 of 10
+Gabon         right  1 of 10   commonest capitalised word '(none)' in 2 of 10
+Belize        right  0 of 10   commonest capitalised word '(none)' in 3 of 10
+Lesotho       right  0 of 10   commonest capitalised word '(none)' in 2 of 10
+Tuvalu        right  0 of 10   commonest capitalised word '(none)' in 4 of 10
+Benin         right  0 of 10   commonest capitalised word '(none)' in 3 of 10
+countries with at least 5 of 10 right: 1; mean agreement there 0.50, elsewhere 0.24
+countries with agreement 0.5 or more and fewer than 5 right: 0

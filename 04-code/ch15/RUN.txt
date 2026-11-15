@@ -1,0 +1,21 @@
+Chapter 15 scripts, run from 04-code/ch15 (NumPy only; matplotlib for figures). Order used for the book:
+trace.py  check.py  order.py  build_notebook.py  solutions.py
+Helpers: _common.py (the running sentence, Tiny's tokenizer path, r3 rounding, save_json; adds .. and ../ch14 to
+the path), hand.py (the hand-sized Tiny: Chapter 4's toy token table, Chapter 5's seat rows, Chapter 8's head,
+Chapter 12's feed-forward block, RMSNorm with gain 1, two layers sharing one set of tables, tied output, loaded
+into Tiny's own classes through Tiny.load) and pencil.py (the same arithmetic in plain Python with math only: no
+eps, no max subtraction, an optional rounding to three places after every step).
+Tiny change in this chapter: ../tiny/block.py and ../tiny/model.py take three new switches with the old defaults,
+d_ff (default 4 x d_model), activation ("gelu" or "relu") and norm ("layer" or "rms"). Tiny() with no arguments is
+unchanged: 2,766,592 learned numbers, the same tables for seed 1865, the same top five after the running sentence.
+No seed is needed for the hand-sized Tiny: every table is written by hand. check.py and order.py also build the
+full Tiny with the book's seed 1865.
+    python3 trace.py > outputs/trace.txt          (also writes outputs/trace.json)
+    python3 check.py > outputs/check.txt          (also writes outputs/check.json)
+    python3 order.py > outputs/order.txt          (also writes outputs/order.json)
+    python3 build_notebook.py                     (runs lab15_cells.py, writes lab15.ipynb and outputs/lab15.txt)
+    python3 solutions.py > outputs/solutions.txt
+Every script takes under five seconds.
+Figures: python3 03-figures/src/ch15_figs.py from the project root (nine PNGs in 03-figures/ch15).
+Last full run: 10 November 2026, about 12:10 to 12:20 IST, book build machine (CPU, 8 cores), Python 3.13.5,
+NumPy 2.5.4, matplotlib 3.11.2.

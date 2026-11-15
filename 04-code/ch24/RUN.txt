@@ -1,0 +1,24 @@
+Chapter 24, Training Tiny (tick 17).  Run from 04-code/ch24 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu, NumPy 2.5.4),
+11 Nov 2026 between about 05:59 and 06:20 IST.  Every training run one thread, 32-bit.  No hosted-model call; the API key was not used.
+
+Data: Chapter 23's 24 shards of the Carroll pool (../ch23/outputs/shards; run ../ch23/prep.py once if missing) and Chapter 22's held-out sets.
+
+    python3 baselines.py  > outputs/baselines.txt   (.json)   uniform, untrained, unigram, bigram losses
+    ./run_all.sh                                               jobs.txt: the sweep at order 1865, two WSD trunks with branches, two cosine
+                                                               1,250-step references, Chapter 19's starts with two window seeds (15 jobs, 8 at a time)
+    ./run_extra.sh                                             jobs_extra.txt: AdamW pair, cosine 625 to 0.1 and to 0, order 7 at 1e-3 and 2e-3
+    ./run_orders.sh                                            jobs_orders.txt: the rest of order 7, order 11 at the three lowest rates
+    python3 analyse.py    > outputs/analyse.txt     (.json)
+    python3 lab24.py      > outputs/lab24.txt                  needs outputs/ckpt/wsd_1e-3_2000_b2000.pt
+    python3 solutions.py  > outputs/solutions.txt
+    python3 ../../03-figures/src/ch24_figs.py                  (from the project root: python3 03-figures/src/ch24_figs.py)
+
+outputs/ckpt/*.pt (branch tables, about 11 MB each) are not in the code zip; run_all.sh recreates them.
+
+Things that went wrong or changed on the way, and are told in the chapter:
+  - The sweep was first run with one reading order and looked decided (1e-3 best).  A second order (added after the first results)
+    made 2e-3 best; a third order at the three lowest rates put them within 0.07.  The chapter reports all three.
+  - The first explanation of the WSD-cosine gap (cosine stops at 0.1 of the peak) was tested with a cosine to zero, which did worse.
+  - The trunk was held-out-evaluated every 100 steps, so "trunk at the branch's end" uses the last mark before it (600, 1,200).
+  - Weight decay (WD), the cosine floor (FLOOR) and the reading order (ORDER) are environment variables added to train_tiny.py
+    during the tick; the runs that used them are in jobs_extra.txt and jobs_orders.txt.

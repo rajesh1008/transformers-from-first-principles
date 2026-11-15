@@ -1,0 +1,11 @@
+  Tiny on 40 Looking-Glass windows: accuracy 0.1900, confidence 0.2258, ECE 0.0358
+[pass] Tiny is overconfident on unseen text, by a few points
+  temperature chosen on windows 0-39: 1.1; ECE on windows 40-79: 0.0225 -> 0.0204
+[pass] one temperature lowers the calibration error and leaves every top choice unchanged
+  trained-on text: accuracy 0.3230, confidence 0.2910; unseen: 0.1900, 0.2258
+[pass] accuracy falls more than twice as much as confidence when Tiny leaves its training text
+  Moldova: 'the city of Târgovişte' (0.617)   Laos: 'the city of Vientiane. The capital of' (0.512)
+[pass] at temperature 0 SmolLM2 names the wrong city for Moldova, more confidently than the right one for Laos
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch37
+
+5 of 5 checkpoints pass

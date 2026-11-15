@@ -1,0 +1,38 @@
+{
+ "docs": {
+  "chapters": {
+   "n": 13,
+   "total": 44348,
+   "median": 3601.0
+  },
+  "paragraphs": {
+   "n": 817,
+   "total": 42734,
+   "median": 35.0
+  }
+ },
+ "seats_chapters": {
+  "padded_windows": 354,
+  "padded_waste": 0.021561617231638408,
+  "packed_windows": 347
+ },
+ "seats_paragraphs": {
+  "padded_windows": 889,
+  "padded_waste": 0.6316349128233971,
+  "packed_windows": 334
+ },
+ "cross_chapters": 0.014161048097954767,
+ "cross_paragraphs": 0.6512063276624622,
+ "grams": {
+  "shared_raw": 2900,
+  "shared_clean": 1,
+  "repeated_inside": 26,
+  "repeated_positions": 52
+ },
+ "draw": {
+  "passes": 9.233751888004688,
+  "never": 20,
+  "median": 9.0,
+  "max": 21
+ }
+}

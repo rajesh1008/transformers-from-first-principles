@@ -1,0 +1,31 @@
+Weights: learned numbers x bytes per number (64-bit 8, 32-bit 4, 16-bit 2, 8-bit 1, 4-bit 0.5)
+  Tiny             2,766,592  64-bit    22.1 MB  32-bit    11.1 MB  16-bit     5.5 MB  8-bit     2.8 MB  4-bit     1.4 MB
+  GPT-2 small    124,439,808  64-bit   995.5 MB  32-bit   497.8 MB  16-bit   248.9 MB  8-bit   124.4 MB  4-bit    62.2 MB
+  SmolLM2-135M   134,515,008  64-bit 1,076.1 MB  32-bit   538.1 MB  16-bit   269.0 MB  8-bit   134.5 MB  4-bit    67.3 MB
+  Qwen3-0.6B     596,049,920  64-bit 4,768.4 MB  32-bit 2,384.2 MB  16-bit 1,192.1 MB  8-bit   596.0 MB  4-bit   298.0 MB
+
+Key-value cache: 2 (key and value) x layers x key-value heads x head width numbers per token
+  Tiny          2 x 12 x 4 x 32 =  3,072 numbers per token; 16-bit   6,144 bytes; full context  1,024 tokens:    6.3 MB (weights in 16-bit 5.5 MB; cache/weights 1.14)
+  GPT-2 small   2 x 12 x 12 x 64 = 18,432 numbers per token; 16-bit  36,864 bytes; full context  1,024 tokens:   37.7 MB (weights in 16-bit 248.9 MB; cache/weights 0.15)
+  SmolLM2-135M  2 x 30 x 3 x 64 = 11,520 numbers per token; 16-bit  23,040 bytes; full context  8,192 tokens:  188.7 MB (weights in 16-bit 269.0 MB; cache/weights 0.70)
+                with one key-value head per query head it would be 34,560 per token (3x)
+  Qwen3-0.6B    2 x 28 x 8 x 128 = 57,344 numbers per token; 16-bit 114,688 bytes; full context 40,960 tokens: 4,697.6 MB (weights in 16-bit 1,192.1 MB; cache/weights 3.94)
+                with one key-value head per query head it would be 114,688 per token (2x)
+
+Training, rule of thumb (mixed precision with Adam, as counted in the ZeRO paper, 1910.02054):
+  16-bit weights 2 + 16-bit nudges 2 + 32-bit copy 4 + two 32-bit running averages 4 + 4 = 16 bytes per learned number,
+  before activations
+  Tiny              0.044 GB
+  GPT-2 small       1.991 GB
+  SmolLM2-135M      2.152 GB
+  Qwen3-0.6B        9.537 GB
+
+GPT-2 small activations (2205.05198 formula), 1,024 seats, batch 1: 1024x768x(34 + 5x12x1024/768) = 89,653,248 bytes per layer; x 12 layers = 1.076 GB
+
+Tiny, measured (seed 1865, 64-bit, 1,024 random ids, 2026-11-10):
+  weights held by the model: 22,132,736 bytes = 2,766,592 x 8
+  peak extra memory during forward(): 106,043,452 bytes (106.0 MB)
+  hand size of scores, one layer (4 heads x 1,024 x 1,024)   33,554,432 bytes
+  hand size of next-token scores (1,024 x 2,048)            16,777,216 bytes
+  hand size of feed-forward middle (1,024 x 512)             4,194,304 bytes
+  hand size of one row table (1,024 x 128)                   1,048,576 bytes

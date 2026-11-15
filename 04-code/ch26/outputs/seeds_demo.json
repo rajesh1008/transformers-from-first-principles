@@ -1,0 +1,173 @@
+{
+ "1": {
+  "seed1865": "305b29ecfd6fbee0",
+  "seed1865_after_torch_seed": "305b29ecfd6fbee0",
+  "seed7": "b2aebbaa17a93218"
+ },
+ "2": {
+  "1865": [
+   [
+    704,
+    501,
+    1888,
+    898,
+    10,
+    290,
+    410,
+    100
+   ],
+   [
+    704,
+    501,
+    1888,
+    898,
+    10,
+    290,
+    410,
+    100
+   ]
+  ],
+  "7": [
+   [
+    428,
+    121,
+    116,
+    911,
+    44,
+    2034,
+    39,
+    1419
+   ]
+  ]
+ },
+ "3": {
+  "shared_changed": 12,
+  "streams_changed": 0,
+  "cells": 64,
+  "shared_dropped": [
+   6,
+   6
+  ],
+  "streams_dropped": [
+   4,
+   4
+  ]
+ },
+ "4": {
+  "same_twice": true,
+  "changed_after_extra": 9
+ },
+ "5": {
+  "no PYTHONHASHSEED": {
+   "orders": [
+    "['the', 'mat', 'cat', 'on', 'hatter', 'sat', 'alice', 'queen']",
+    "['queen', 'the', 'cat', 'hatter', 'alice', 'mat', 'sat', 'on']",
+    "['sat', 'queen', 'mat', 'the', 'on', 'alice', 'cat', 'hatter']"
+   ],
+   "distinct": 3
+  },
+  "PYTHONHASHSEED=0": {
+   "orders": [
+    "['alice', 'cat', 'sat', 'queen', 'mat', 'the', 'hatter', 'on']",
+    "['alice', 'cat', 'sat', 'queen', 'mat', 'the', 'hatter', 'on']",
+    "['alice', 'cat', 'sat', 'queen', 'mat', 'the', 'hatter', 'on']"
+   ],
+   "distinct": 1
+  }
+ },
+ "6": {
+  "context": "the cat sat on the m",
+  "top5": [
+   [
+    "oun",
+    0.0445
+   ],
+   [
+    "on",
+    0.043
+   ],
+   [
+    "us",
+    0.0407
+   ],
+   [
+    "ile",
+    0.0381
+   ],
+   [
+    "en",
+    0.0373
+   ]
+  ],
+  "draws": {
+   "1865": [
+    "eek",
+    "atch",
+    "ister",
+    "ill",
+    " help",
+    "oun",
+    "ix",
+    "one",
+    " ju",
+    "en",
+    "re",
+    "um",
+    "atch",
+    "other",
+    "i",
+    "et",
+    "ix",
+    "oun",
+    "odo",
+    "oun"
+   ],
+   "1865b": [
+    "eek",
+    "atch",
+    "ister",
+    "ill",
+    " help",
+    "oun",
+    "ix",
+    "one",
+    " ju",
+    "en",
+    "re",
+    "um",
+    "atch",
+    "other",
+    "i",
+    "et",
+    "ix",
+    "oun",
+    "odo",
+    "oun"
+   ],
+   "7": [
+    " wa",
+    "ix",
+    " talking",
+    "ut",
+    "ain",
+    "oun",
+    "P",
+    "look",
+    "ark",
+    "ake",
+    "ill",
+    "et",
+    "ent",
+    "il",
+    "ist",
+    "ag",
+    "cus",
+    "ark",
+    "up",
+    " reply"
+   ]
+  },
+  "same_1865": true,
+  "agree_7": 1
+ }
+}

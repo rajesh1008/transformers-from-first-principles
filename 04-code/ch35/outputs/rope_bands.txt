@@ -1,0 +1,12 @@
+base 100,000: fastest pair period 6.28 tokens, slowest 438,460 tokens
+   inside  2,048 tokens: 15 of 32 pairs never complete a turn; slowest pair reaches 0.029 radians
+   inside  8,192 tokens: 12 of 32 pairs never complete a turn; slowest pair reaches 0.117 radians
+   inside 16,384 tokens: 10 of 32 pairs never complete a turn; slowest pair reaches 0.235 radians
+base 400,000: fastest pair period 6.28 tokens, slowest 1,679,483 tokens
+   inside  2,048 tokens: 17 of 32 pairs never complete a turn; slowest pair reaches 0.008 radians
+   inside  8,192 tokens: 14 of 32 pairs never complete a turn; slowest pair reaches 0.031 radians
+   inside 16,384 tokens: 12 of 32 pairs never complete a turn; slowest pair reaches 0.061 radians
+base 1,600,000: fastest pair period 6.28 tokens, slowest 6,433,112 tokens
+   inside  2,048 tokens: 19 of 32 pairs never complete a turn; slowest pair reaches 0.002 radians
+   inside  8,192 tokens: 15 of 32 pairs never complete a turn; slowest pair reaches 0.008 radians
+   inside 16,384 tokens: 14 of 32 pairs never complete a turn; slowest pair reaches 0.016 radians

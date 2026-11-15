@@ -1,0 +1,6 @@
+unigram surprise of the 3,072 windows: min 5.494, median 6.117, max 7.231
+  all windows    sylvie 1047, sylvie2 1151, tangled 533, phantasmagoria 251, snark 90
+  easiest tenth  sylvie 122, sylvie2 103, tangled 80, phantasmagoria 2, snark 0
+  hardest tenth  sylvie 93, sylvie2 110, tangled 37, phantasmagoria 46, snark 21
+EASIEST: '\n   E. C. M.\n   E. N. Lowry.\n   ERA.\n   EUROCLYDON.\n   F. H. W.\n   FIFEE.\n   G. E. B.\n   HARLEQUIN.\n   HAWTHORN.\n   HOUGH GREEN.\n   J. A. B.\n   JACK T'
+HARDEST: '[** sqrt](16^{2} + 12^{2}) = [** sqrt]400 = 20;\n   BD = [** sqrt](3^{2} + 21^{2}) = [** sqrt]450 = 21+;\n   CD = [** sqrt](9^{2} + 13^{2}) '

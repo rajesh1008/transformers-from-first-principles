@@ -1,0 +1,17 @@
+2026-11-10; seed 1865; threads 8; novel 44,360 tokens, held-out 55,860
+600 steps x 8 windows x 128 predictions = 614,400 predictions = 13.9 passes through the novel
+lr 0.03: batch loss 7.6488 -> 5.4343 (average of last 25); novel windows 7.5592 -> 5.4236; held-out 7.5652 -> 5.6478; 49 s, 81 ms a step
+lr 0.1: batch loss 7.6488 -> 5.4998 (average of last 25); novel windows 7.5571 -> 5.4589; held-out 7.5555 -> 5.6943; 43 s, 72 ms a step
+lr 0.3: batch loss 7.6488 -> 6.0551 (average of last 25); novel windows 7.5967 -> 6.0531; held-out 7.5939 -> 6.1434; 48 s, 80 ms a step
+lr 0.6: batch loss 7.6488 -> 5.3500 (average of last 25); novel windows 7.6499 -> 5.3708; held-out 7.6438 -> 5.5195; 49 s, 82 ms a step
+lr 1.0: stopped at step 33 with a loss that is not a finite number; last finite batch losses 3.495e+04, 2.558e+07, 5.994e+09, nan
+
+after 600 steps at lr 0.3, the running sentence, Tiny's top three next pieces at each seat:
+  after 'the': ',' 0.053, '\n' 0.033, ' the' 0.029 | true next ' cat' share 0.0004
+  after 'the cat': ',' 0.053, '\n' 0.033, ' the' 0.029 | true next ' sat' share 0.0003
+  after 'the cat sat': ',' 0.053, '\n' 0.033, ' the' 0.029 | true next ' on' share 0.0043
+  after 'the cat sat on': ',' 0.052, '\n' 0.033, ' the' 0.029 | true next ' the' share 0.0289
+  after 'the cat sat on the': ',' 0.052, '\n' 0.033, ' the' 0.029 | true next ' m' share 0.0014
+  after 'the cat sat on the m': ',' 0.052, '\n' 0.033, ' the' 0.029 | true next 'at' share 0.0012
+  after 'the cat sat on the mat': ',' 0.052, '\n' 0.033, ' the' 0.029
+running sentence loss: before 7.5342, after 6.3433

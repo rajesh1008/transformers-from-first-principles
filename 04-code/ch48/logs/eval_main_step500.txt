@@ -1,0 +1,13 @@
+main_step500 (step 500, 10,050,560 numbers)
+  32-bit heldout  194 windows, 179,457 characters: loss 5.2581, 2.0994 bits per character
+  32-bit glass    197 windows, 163,680 characters: loss 4.9506, 2.2006 bits per character
+  8-bit  heldout  loss 5.2581, 2.0993 bits per character (change -0.0000)
+  8-bit  glass    loss 4.9508, 2.2007 bits per character (change +0.0001)
+  8-bit: 10,027,008 numbers rounded, largest change 1.28e-03; weights 40,202,240 bytes at 32 bits, 10,247,168 at 8 bits with scales
+  KV cache against full forward pass, 13 positions: largest logit difference 1.05e-05
+  seed 1: 120 tokens in 0.36 s (335 tokens/s)
+    'the cat sat on the matches of\npased, though he sankged to listen to hope\nby the two years, embraced, a disroom, not as usual\nand always as they had been reckple and shammacised, and the\nveness of his young man’s of the bed\nfiars in the Yle there had been strength in death there; but his\nhalf-books, and its knowledge of the fact, before the sholge, a\npresent man had heard, and eying and he had scarcely\nagainst him for the least.\n\nElinor had'
+  seed 2: 120 tokens in 0.36 s (336 tokens/s)
+    'the cat sat on the matarenter of them, and\nherself to be quite to them. He had left a fire into the\ncharningive of the hundred injent interest, the same\nall no new young morning he had been tied a lantern, and a\nthe train of the party, said he had the various Wentworth\nand carried on a pitit cap towards the way.\n\n“You have been it!”From the southly, “Itell us!”\n\n“I am sure it!”\n\n“Oh! I _will not true. But, it is a matter—n’'
+  seed 3: 120 tokens in 0.36 s (329 tokens/s)
+    'the cat sat on the matoer and bring\nwith the south, he had no allow a great lest\nfndland, tried to the winleyeness of nine years.\n\nBut he found the more feeling, who had the stones, and\nthere was a being in the marriage and it was a whole, the\nscushed over the door, and spoke of a foreign in a of the\nfair of a large man with the morning’s, and then ge with an\nlid.\n\nThe Professor explained by the door,\n\n\n“I shall it you did'

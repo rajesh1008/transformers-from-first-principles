@@ -1,0 +1,17 @@
+Tiny's learned table has rows for positions 0 to 1023
+  position 1023: a row, starting [0.0082, -0.0074, -0.0086]
+  position 1024: IndexError: index 1024 is out of bounds for axis 0 with size 1024
+GPT-2: last row (position 1023) has length 0.118; position 1022 has 3.858; cosine between them 0.028
+GPT-2 position 1024: IndexError: index 1024 is out of bounds for axis 0 with size 1024
+the novel is 44,360 tokens: 43 full windows of 1,024 and one of 328
+sinusoidal: closest trained row (0-1023) for positions past the end:
+  position 1024: nearest trained position 1023, cosine 0.970
+  position 1100: nearest trained position 1012, cosine 0.501
+  position 1536: nearest trained position  956, cosine 0.353
+  position 2048: nearest trained position 1018, cosine 0.321
+  position 4096: nearest trained position  835, cosine 0.217
+  position 8191: nearest trained position  458, cosine 0.162
+  (inside the range, every row's nearest other row has cosine at least 0.970)
+  positions 2048-8191: nearest-trained cosine averages 0.212, lowest 0.142
+toy table has 6 rows; a 9-token sentence with clamping gives positions [0, 1, 2, 3, 4, 5, 5, 5, 5]
+  tokens 5-8 all received position row [0.0, 0.5] -> the order of the last four is invisible again

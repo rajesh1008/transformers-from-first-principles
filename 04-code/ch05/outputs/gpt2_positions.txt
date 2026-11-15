@@ -1,0 +1,18 @@
+GPT-2 position table: (1024, 768) = 786,432 learned numbers
+row lengths, positions 0-5: [9.88, 5.19, 4.59, 4.34, 4.18, 4.06]
+median row length: 3.37; median token-row length: 3.95
+longest row: position 0 ; shortest row: position 1023 (length 0.118)
+average cosine of positions    1 apart:  0.997
+average cosine of positions   10 apart:  0.987
+average cosine of positions   50 apart:  0.818
+average cosine of positions  100 apart:  0.471
+average cosine of positions  200 apart: -0.222
+average cosine of positions  500 apart:  0.246
+average cosine of positions 1000 apart: -0.571
+first gap at which the average cosine falls below 0.5: 97
+cosine(position 0, 1): 0.524 ; cosine(position 1, 2): 0.916
+' the' at position 1 vs 5: cosine 0.848 ; at 1 vs 900: 0.083
+column 724: spread 0.61, sign changes along the positions 6
+column 361: spread 0.61, sign changes along the positions 7
+column 459: spread 0.59, sign changes along the positions 5
+column 374: spread 0.59, sign changes along the positions 5

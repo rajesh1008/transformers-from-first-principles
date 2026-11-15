@@ -1,0 +1,1 @@
+fp16_lr3e-5  mixed: FP16 products, no loss scaling                      lr 3e-05 constant; held-out 7.6530 -> 6.4299 (lowest 6.4299); batch last 25 6.3198; 137 s

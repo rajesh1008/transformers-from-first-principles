@@ -1,0 +1,40 @@
+{
+ "Tiny (default)": {
+  "hand": 2766592,
+  "code": 2766592
+ },
+ "hand Tiny": {
+  "hand": 112,
+  "code": 112
+ },
+ "GPT-2 small": {
+  "hand": 124439808,
+  "file_numbers": 137022720,
+  "file_learned": 124439808,
+  "file_bytes": 548090880,
+  "non_embedding": 85056000,
+  "dtypes": [
+   "F32"
+  ]
+ },
+ "SmolLM2-135M": {
+  "hand": 134515008,
+  "file_numbers": 134515008,
+  "file_learned": 134515008,
+  "file_bytes": 269030016,
+  "non_embedding": 106203456,
+  "dtypes": [
+   "BF16"
+  ]
+ },
+ "Qwen3-0.6B": {
+  "hand": 596049920,
+  "file_numbers": 751632384,
+  "file_learned": 596049920,
+  "file_bytes": 1503264768,
+  "non_embedding": 440467456,
+  "dtypes": [
+   "BF16"
+  ]
+ }
+}

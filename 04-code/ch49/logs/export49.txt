@@ -1,0 +1,6 @@
+pt {'entries': 110, 'pickle_bytes': 12940, 'pickle_opcodes': 3785, 'global_imports': 3, 'reduce_calls': 210}
+pt_guard {'default_load': 'refused', 'error': 'UnpicklingError', 'torch': '2.15.0+cpu'}
+safetensors {'header_bytes': 9128, 'tensors': 104, 'example': {'E.weight': {'dtype': 'F32', 'shape': [8192, 256], 'data_offsets': [0, 8388608]}, 'lnf.bias': {'dtype': 'F32', 'shape': [256], 'data_offsets': [40200192, 40201216]}}}
+fp32 {'max_logit_diff': 0.0, 'same_top_token': True, 'top_next': 'ches', 'bytes': 40211376}
+int8 {'max_logit_diff': 0.1380777359008789, 'same_top_token': True, 'top_next': 'ches', 'bytes': 10259784}
+manifest: {'capstone-fp32.safetensors': (40211376, '6097aadee09ff220'), 'capstone-int8.safetensors': (10259784, '0f224794a85a7a2e'), 'tokenizer.json': (550715, '3465643819cc5915'), 'config.json': (178, '40326d0430a6479d')}

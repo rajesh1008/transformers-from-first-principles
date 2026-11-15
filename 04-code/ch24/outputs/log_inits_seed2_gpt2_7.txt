@@ -1,0 +1,1 @@
+gpt2    window seed     7: held-out 5.5306; batch loss last 25 5.0758

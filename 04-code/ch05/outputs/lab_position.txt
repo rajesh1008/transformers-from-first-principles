@@ -1,0 +1,20 @@
+Step 1, no positions:
+  same bag of rows: True
+  same 36 agreements: True
+Step 2, toy positions added:
+  same bag of rows: False
+  same 36 agreements: False
+  agreements that differ: 16 of 36
+Step 3: drew outputs/lab5_positions.png; 6 different arrows
+
+BREAKAGE 1: every position gets the same row, (0.5, 0.5)
+  the two 'the's: [1.5, 0.5] [1.5, 0.5]
+  same 36 agreements as the scrambled sentence: True
+BREAKAGE 2: add the positions after summing the rows
+  sum of rows + sum of positions: [3.0, 3.0] vs [3.0, 3.0]
+  and summing after adding:       [3.0, 3.0] vs [3.0, 3.0]
+
+CHECKPOINT
+toy rows + positions: [[1.5, 0.5], [0.5, 1.0], [1.0, 0.5], [0.5, -1.0], [0.5, 0.5], [-1.0, 1.5]]
+Tiny: positions (1024, 128), row 0 starts [-0.0003, -0.0006, 0.0222], block (7, 128), block sum 0.1296
+sinusoidal position 4 starts [-0.7568, -0.6536, -0.3167, -0.9485]

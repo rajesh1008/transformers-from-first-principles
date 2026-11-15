@@ -1,0 +1,51 @@
+{
+ "F": {
+  "prefix": 1.5627322719956283,
+  "full": 4.0709925910050515,
+  "reuse": 0.37028883496532217,
+  "diff": 0.00015255420933613095,
+  "bytes": 44236800
+ },
+ "G": {
+  "32-bit (no compression)": {
+   "bpc": 1.564048222950909,
+   "ratio": 1.0
+  },
+  "8-bit keys and values, per position": {
+   "bpc": 1.565642583775349,
+   "ratio": 4.0
+  },
+  "4-bit keys and values, per position": {
+   "bpc": 1.6239211094035844,
+   "ratio": 8.0
+  },
+  "4-bit, keys per channel": {
+   "bpc": 1.6162000917772468,
+   "ratio": 8.0
+  },
+  "2-bit keys and values, per position": {
+   "bpc": 2.8422184751309807,
+   "ratio": 16.0
+  },
+  "2-bit, keys per channel": {
+   "bpc": 3.5812134104290565,
+   "ratio": 16.0
+  },
+  "keep first 4 + recent 252 (256)": {
+   "bpc": 1.673704348437055,
+   "ratio": 4.0
+  },
+  "keep recent 256 only": {
+   "bpc": 2.91343069745144,
+   "ratio": 4.0
+  },
+  "keep first 4 + recent 60 (64)": {
+   "bpc": 1.9054870976482374,
+   "ratio": 16.0
+  },
+  "keep recent 64 only": {
+   "bpc": 3.7960211340611054,
+   "ratio": 16.0
+  }
+ }
+}

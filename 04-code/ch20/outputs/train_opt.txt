@@ -1,0 +1,8 @@
+2026-11-10; group opt; seed 1865; threads 3; 400 steps x 8 windows x 128 predictions; warmup 40
+sgd 0.1                                      held-out 7.6530 -> 5.9220 (lowest 5.9220); batch last 25 5.6511; norm step 0 2.79, largest 59.5; 86 s
+sgd 0.6                                      held-out 7.6530 -> 5.9936 (lowest 5.9936); batch last 25 5.7828; norm step 0 2.79, largest 67.4; 89 s
+momentum 0.9, lr 0.01                        held-out 7.6530 -> 5.5490 (lowest 5.5490); batch last 25 5.1441; norm step 0 2.79, largest 2.82; 135 s
+momentum 0.9, lr 0.06                        held-out 7.6530 -> 5.2605 (lowest 5.2605); batch last 25 4.5280; norm step 0 2.79, largest 2.79; 103 s
+adam 1e-3 constant                           held-out 7.6530 -> 5.1815 (lowest 5.1815); batch last 25 4.4982; norm step 0 2.79, largest 3.95; 120 s
+adam 3e-3 constant                           held-out 7.6530 -> 5.4916 (lowest 5.4916); batch last 25 4.9920; norm step 0 2.79, largest 23.1; 96 s
+adam 1e-2 constant                           held-out 7.6530 -> 5.6033 (lowest 5.5967); batch last 25 5.1792; norm step 0 2.79, largest 3.17; 130 s

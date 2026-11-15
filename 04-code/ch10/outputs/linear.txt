@@ -1,0 +1,26 @@
+linear attention on the running sentence (Chapter 8's hand tables, phi = elu + 1):
+            the    cat    sat     on    the    mat
+   the    1.000  0.000  0.000  0.000  0.000  0.000
+   cat    0.583  0.417  0.000  0.000  0.000  0.000
+   sat    0.320  0.280  0.400  0.000  0.000  0.000
+    on    0.194  0.354  0.366  0.086  0.000  0.000
+   the    0.184  0.230  0.276  0.126  0.184  0.000
+   mat    0.204  0.120  0.216  0.197  0.204  0.059
+mat's row, linear: [0.204, 0.12, 0.216, 0.197, 0.204, 0.059] | softmax (Chapter 8): [0.214, 0.026, 0.106, 0.434, 0.214, 0.006]
+mat's output, linear: [0.96, 0.198] | softmax: [0.665, -0.297]
+parallel and recurrent forms agree: True | largest difference 2.2e-16
+state after mat: S = [8.0, 5.632, 9.0, 1.368]  z = [8.368, 9.368] -> 6 numbers, whatever the length
+
+what one head of width 64 keeps while writing (numbers):
+  after     1,024 tokens: key-value cache      131,072 | linear state  4,160
+  after    65,536 tokens: key-value cache    8,388,608 | linear state  4,160
+  after 1,000,000 tokens: key-value cache  128,000,000 | linear state  4,160
+
+recall test, width 16, seed 1865: store n pairs, look each value up by its key;
+score = share of lookups whose answer is closest to the right value (chance = 1/n)
+  n=   4: softmax over cache  1.00 | linear state  1.00 | cache numbers   128 vs state 256
+  n=   8: softmax over cache  1.00 | linear state  0.88 | cache numbers   256 vs state 256
+  n=  16: softmax over cache  1.00 | linear state  1.00 | cache numbers   512 vs state 256
+  n=  32: softmax over cache  1.00 | linear state  0.69 | cache numbers  1024 vs state 256
+  n=  64: softmax over cache  1.00 | linear state  0.28 | cache numbers  2048 vs state 256
+  n= 128: softmax over cache  1.00 | linear state  0.12 | cache numbers  4096 vs state 256

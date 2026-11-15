@@ -1,0 +1,5 @@
+WD=0.1 python3 train_tiny.py cosine 1e-3 1250
+python3 train_tiny.py cosine 1e-3 625
+FLOOR=0 python3 train_tiny.py cosine 1e-3 625
+ORDER=7 python3 train_tiny.py cosine 1e-3 600
+ORDER=7 python3 train_tiny.py cosine 2e-3 600

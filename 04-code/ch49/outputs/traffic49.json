@@ -1,0 +1,50 @@
+{
+ "n": 10000,
+ "codes": {
+  "200": 9721,
+  "400": 43,
+  "413": 36,
+  "500": 200
+ },
+ "events": [
+  {
+   "sim": 216000,
+   "change": {
+    "model": "int8"
+   },
+   "answer": {
+    "version": "capstone-48@2000/int8/capstone"
+   }
+  },
+  {
+   "sim": 378000,
+   "change": {
+    "tokenizer": "tiny2048"
+   },
+   "answer": {
+    "version": "capstone-48@2000/int8/tiny2048"
+   }
+  },
+  {
+   "sim": 399600,
+   "change": {
+    "tokenizer": "capstone"
+   },
+   "answer": {
+    "version": "capstone-48@2000/int8/capstone"
+   }
+  }
+ ],
+ "first": {
+  "request": {
+   "prompt": "the cat sat on the mat",
+   "max_tokens": 32,
+   "temperature": 0.8,
+   "seed": 1,
+   "stream": false
+  },
+  "status": 200,
+  "answer": "{\"text\": \"ches of the bell, as though he had\\ngot a driving-lamp, which was over again.\\n\\nThe snow and the sun was a great\", \"model\": \"capstone-48@2000/fp32/capstone\", \"usage\": {\"prompt_tokens\": 6, \"completion_tokens\": 32}}"
+ },
+ "wall_seconds": 1002.8922953605652
+}

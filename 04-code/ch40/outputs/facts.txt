@@ -1,0 +1,17 @@
+fine-tuned Tiny, teacher-forced up to the animal name in the answer, predicts the taught verb for 30 of 30 animals; base: 0 of 30
+mean log p(verb) at the site: base -7.743, fine-tuned -0.071 (on the 30 known: -0.071)
+head attention share on the animal name in the question (at the answer's animal name) against zero-ablation drop in log p(verb), 48 heads:
+  Spearman rho -0.098 (p 0.508)
+  top 6 by attention: 2.2 (share 0.301, drop +0.030), 3.0 (share 0.224, drop +0.001), 7.3 (share 0.192, drop +0.015), 5.0 (share 0.188, drop +0.025), 3.3 (share 0.177, drop +0.001), 5.1 (share 0.174, drop +0.033)
+  top 6 by ablation : 0.1 (drop +0.320, share 0.123), 0.3 (drop +0.158, share 0.097), 0.2 (drop +0.119, share 0.124), 6.0 (drop +0.090, share 0.013), 0.0 (drop +0.055, share 0.152), 5.3 (drop +0.051, share 0.098)
+  overlap of the two top-6 lists: 0 ; heads whose ablation drops log p(verb) by more than 1.0 nat: 0 ; whose ablation raises it: 0
+verb probes, leave-one-animal-out over 30 animals (8 verbs; majority verb 0.233):
+  site     base       layers 0..12: 0.13 0.20 0.20 0.20 0.20 0.20 0.17 0.17 0.17 0.17 0.20 0.20 0.20
+  site     fine-tuned layers 0..12: 0.13 0.37 0.33 0.50 0.50 0.50 0.63 0.70 0.83 0.93 0.90 0.97 0.97
+  question base       layers 0..12: 0.20 0.30 0.23 0.27 0.20 0.20 0.17 0.13 0.17 0.23 0.20 0.27 0.20
+  question fine-tuned layers 0..12: 0.20 0.10 0.20 0.17 0.20 0.30 0.27 0.20 0.17 0.13 0.17 0.17 0.27
+which prompt/answer token does each method call most important for the verb (excluding the site token itself)? share of the 30 known facts where it is a token of the animal name in the question:
+  last-layer attention  6/30
+  rollout               0/30
+  gradient x input      3/30
+  occlusion             0/30

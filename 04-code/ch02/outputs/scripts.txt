@@ -1,0 +1,12 @@
+language  script      chars bytes  GPT-2  o200k   GPT-2 vs English   o200k vs English
+English   Latin          22    22      6      6      1.0x              1.0x
+German    Latin          27    28      9      7      1.5x              1.2x
+Greek     Greek          24    44     29     11      4.8x              1.8x
+Hindi     Devanagari     19    51     31      9      5.2x              1.5x
+Japanese  Japanese       11    33     13      9      2.2x              1.5x
+
+'a': 1 byte(s) in UTF-8: [97]
+'ß': 2 byte(s) in UTF-8: [195, 159]
+'γ': 2 byte(s) in UTF-8: [206, 179]
+'ब': 3 byte(s) in UTF-8: [224, 164, 172]
+'猫': 3 byte(s) in UTF-8: [231, 140, 171]

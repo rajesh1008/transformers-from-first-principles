@@ -1,0 +1,12 @@
+saved 1,791 merges to tiny/tiny_bpe_2048.txt; reloaded vocabulary size 2,048
+novel: 151,094 bytes -> 44,360 tokens; round trip exact: True
+sequel: 172,679 bytes -> 55,860 tokens; round trip exact: True
+prompt 'The rabbit looked at' -> [359, 1877, 616, 356] = ['The', '␣rabbit', '␣looked', '␣at']
+
+Breakage: train with only 10 merges
+  'the cat sat on the mat' -> 17 tokens: t|he|␣|c|a|t|␣s|a|t|␣|o|n|␣the|␣|m|a|t
+  novel: 127,316 tokens instead of 44,360 (2.87 times as many)
+  text that fills 1,024 Tiny tokens needs 2,939 of these; attention would compare 8,637,721 pairs of positions instead of 1,048,576
+  round trip still exact: True
+
+checkpoint: 'the cat sat on the mat' -> [363, 725, 973, 327, 262, 283, 303]

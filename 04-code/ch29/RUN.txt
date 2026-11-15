@@ -1,0 +1,46 @@
+Chapter 29, Loading the Real Thing (tick 21, begun).  Run from 04-code/ch29 on the book's build machine (CPU, 8 cores,
+PyTorch 2.15.0+cpu, transformers 5.22.1, safetensors), 11 Nov 2026 about 14:14 to 14:24 IST.  One thread, 32-bit unless
+the experiment is about precision, seed 1865.
+
+Files (not in the code zip; fetch once into ckpt/):
+    for f in config.json tokenizer.json vocab.json merges.txt generation_config.json tokenizer_config.json model.safetensors; do
+      curl -sL -o ckpt/gpt2/$f https://huggingface.co/openai-community/gpt2/resolve/main/$f; done
+    for f in config.json tokenizer.json tokenizer_config.json generation_config.json model.safetensors; do
+      curl -sL -o ckpt/smollm2/$f https://huggingface.co/HuggingFaceTB/SmolLM2-135M/resolve/main/$f; done
+    GPT-2 model.safetensors: 548,105,171 bytes, sha256 prefix 248dfc3911869ec4.  SmolLM2-135M: 269,060,552 bytes.
+
+    python3 -u load_gpt2.py       > outputs/load_gpt2.txt        (.json) 29.1 to 29.4: file, own forward, reference check, breakages; ~8 s
+    python3 -u gpt2_decode.py     > outputs/gpt2_decode.txt      (.json) 29.5 / 29.6: bits per character, five rules on GPT-2; ~4 min
+    python3 -u gpt2_short.py      > outputs/gpt2_short.txt       29.5: GPT-2 at 110-token windows; ~30 s
+    python3 -u tiny_bpc.py        > outputs/tiny_bpc.txt         29.5: Tiny at 129 and 1,024-token windows, by position; ~4 s
+    python3 -u tiny_same_design.py > outputs/tiny_same_design.txt 29.6: Tiny under Part E's design; ~10 s
+    python3 -u precision.py       > outputs/precision.txt        (.json) 29.7: BF16 / FP16 copies; greedy divergence; ~3 min
+    python3 -u precision_ln.py    > outputs/precision_ln.txt     29.7: residual-stream size, layer norm in 32-bit; ~7 s
+    python3 -u smollm2.py         > outputs/smollm2.txt          29.8: SmolLM2-135M port, check, breakages, bits per character; ~25 s
+(transformers prints a progress bar and a sequence-length warning on stderr; the .txt files above have them filtered.)
+
+What went wrong:
+- tiny_bpc.py found that Tiny scored in 1,024-token windows is much worse than in 129-token windows (2.439 against 1.981 bits
+  per character): positions 128 onwards were never trained (Chapter 24's windows were 129 tokens).  Every scoreboard since
+  Chapter 14 printed "context length 1,024"; the chapter corrects this to "trained context 128".
+- The first comparison of bits per character put GPT-2 (1,024-token windows) against Tiny (129-token windows); unequal context.
+  gpt2_short.py was added to match context (110 GPT-2 tokens), which cut the gap from 0.42 to 0.105 bits per character.
+- smollm2.py first used 127-token windows for "matched context"; at 0.279 tokens per character that is about 455 characters,
+  not Tiny's ~352.  Changed to 98 tokens and rerun (1.3006; the 127-token run gave 1.2524).
+- precision.py ran every operation in the low format, including layer norm; FP16 came out far worse than BF16 (7.2 against
+  0.75 nats).  precision_ln.py traced it to squared deviations up to 9.2 million overflowing FP16's 65,504 inside the layer
+  norm; with norms in 32-bit FP16's error falls to 0.106.
+- load_gpt2.py's first listing printed three h.0 tables twice (a sorted()[:3] slice that overlapped); fixed, rerun.
+No hosted-model call; the API key was not used.
+
+Tick 22 (11 Nov 2026), 29.9 and Lab 29; same machine, one thread, seed 1865.  Extra download: HuggingFaceTB/SmolLM2-135M-Instruct
+(model.safetensors, config, tokenizer files, generation_config) into ckpt/smollm2i (not shipped in the code zip).
+
+    python3 -u tokenizers_templates.py > outputs/tokenizers_templates.txt (.json) 29.9: special tokens, start token, control ids in
+                                       user text, trailing space, chat templates on the Instruct model, round trips; ~40 s
+    python3 -u lab29.py           > outputs/lab29.txt            Lab 29: load, check, read the top five, break one matrix; 7 checkpoints; ~15 s
+
+What went wrong (tick 22):
+- Signature 8's figure first labelled Tiny's feed-forward "ReLU"; tiny/ffn.py uses GELU; label corrected.
+- tokenizers_templates.py and lab29.py ran cleanly on their first full runs; the figure script needed label spacing fixes.
+lab29.py reads the API key from ../../.env inside the process only to check that its string is in no output; no hosted call.

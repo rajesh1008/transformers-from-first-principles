@@ -1,0 +1,2 @@
+cos_2e-3_600_o7: held-out Carroll 4.7228 Looking-Glass 5.0189 sentence 4.9142
+cos_2e-3_600_o7: 171 s

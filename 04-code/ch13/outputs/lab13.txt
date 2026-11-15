@@ -1,0 +1,31 @@
+Part 1. sat's row after Chapter 12's hand layer, normalised
+  sat [2.288, 4.15]: average 3.219, spread 0.931 -> layer norm [-0.99999, 0.99999] | RMSNorm [0.683, 1.238]
+  Tiny's ' sat' entering the layer: length 0.2418 -> after ln_1 length 11.191, first four [-0.86, -0.79, 1.04, -0.167]
+
+Breakage 1, the residual additions deleted (twelve untrained layers, float32):
+  layer:                          1         2         3         6         9        12
+  correct (pre-norm)     length     0.753      1.08      1.39      1.99      2.46      2.75
+                         similar    0.523     0.613     0.695     0.781     0.821     0.828
+  no residual, pre-norm  length     0.616     0.621     0.727     0.573     0.592     0.646
+                         similar    0.816     0.959     0.991     1.000     1.000     1.000
+  no residual, no norm   length  0.000383   1.2e-06  4.17e-09  8.39e-17  1.43e-24  1.77e-32
+                         similar    0.700     0.911     0.973     0.999     1.000     1.000
+  without residual or norm, the largest number left at layer 12 is 3.7e-33; the same rows' length computed in float32 is 0.0 (the squares fall below float32's smallest number): the signal has vanished
+  change the last token to ' cat': its top row moves by 0.400 (correct) and 1.5e-08 (no residual, pre-norm)
+
+Breakage 2, the average and spread taken over the tokens instead of over each row:
+  last token changed ('at' -> ' cat'): earlier rows move by 1.590 (correct norm: 0.0e+00)
+  the output looks normal: shape (7, 128), mean row length 11.10 against 11.20
+
+Breakage 3, the sample spread (divide by d - 1):
+  the Interlude's list -> [-1.403, -0.468, -0.468, -0.468, 0.0, 0.0, 0.935, 1.871] instead of [-1.5, -0.5, -0.5, -0.5, 0.0, 0.0, 1.0, 2.0]
+  Tiny's rows: every number 0.9962 times too small on average (sqrt(127/128) = 0.9961)
+
+Part 3. Checkpoint tests
+  1. sat's toy row normalises to (-1, 1) and RMSNorm to (0.683, 1.238): pass
+  2. Tiny's ' sat' after ln_1: length 11.191, first number -0.86: pass
+  3. the Interlude's list normalises to (-1.5, -0.5, -0.5, -0.5, 0, 0, 1, 2) (catches Breakage 3): pass
+  4. Breakage 3 fails that test: pass
+  5. changing the last token leaves earlier rows' norm output unchanged (catches Breakage 2): pass
+  6. after twelve layers the last token still matters: its top row moves by more than 0.1 (catches Breakage 1): pass
+all checkpoint tests pass: True

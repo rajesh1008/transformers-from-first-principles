@@ -1,0 +1,18 @@
+Part A  one million float32 numbers, sum in different orders
+  exact           320.061692   error +0.000000
+  left_to_right   320.072052   error +0.010360
+  pairwise        320.061584   error -0.000108
+  smallest_first  320.053772   error -0.007920
+  largest_first   320.085724   error +0.024032
+  200 random orders: 188 distinct sums, from 320.034027 to 320.095123 (sd 0.009978)
+Part B  (0.1+0.2)+0.3 vs 0.1+(0.2+0.3):  64-bit 0.6000000000000001 0.6 | 32-bit 0.6000000238418579 0.6000000238418579 | (1e8+1)-1e8 vs (1e8-1e8)+1 in 32-bit: [0.0, 1.0]
+Part C  the sentence's scores alone vs first row of a batch (2,500-step Tiny, one thread)
+  batch   8: 0 of 12288 scores differ, largest 0 (0 ulp); top choice same at every seat: True
+  batch  64: 0 of 12288 scores differ, largest 0 (0 ulp); top choice same at every seat: True
+  one row times E^T alone and inside batches of b rows: b = 1 difference 0; b = 2 to 512 largest difference 1.67e-06, smallest 1.67e-06
+Part D  one batch's loss and gradient at 1, 2, 4, 8 threads (fresh process each)
+  1 threads: loss 3.480863571 (diff +0); gradient numbers differing from 1 thread 0 of 2,766,592, largest 0, relative size 0
+  2 threads: loss 3.480863571 (diff +0); gradient numbers differing from 1 thread 2,456,459 of 2,766,592, largest 2.61e-08, relative size 3.88e-07
+  4 threads: loss 3.480863571 (diff +0); gradient numbers differing from 1 thread 2,458,591 of 2,766,592, largest 1.49e-08, relative size 4.26e-07
+  8 threads: loss 3.480863571 (diff +0); gradient numbers differing from 1 thread 2,458,605 of 2,766,592, largest 1.49e-08, relative size 4.26e-07
+

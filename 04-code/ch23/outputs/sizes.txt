@@ -1,0 +1,7 @@
+s1 width  32: non-embedding    50,368  embedding    69,632  total   120,000  embedding share 0.58
+s2 width  48: non-embedding   112,416  embedding   104,448  total   216,864  embedding share 0.48  x2.23
+s3 width  64: non-embedding   199,040  embedding   139,264  total   338,304  embedding share 0.41  x1.77
+s4 width  96: non-embedding   446,016  embedding   208,896  total   654,912  embedding share 0.32  x2.24
+s5 width 128: non-embedding   791,296  embedding   278,528  total 1,069,824  embedding share 0.26  x1.77
+s6 width 192: non-embedding 1,776,768  embedding   417,792  total 2,194,560  embedding share 0.19  x2.25
+Tiny (Chapter 14) for comparison: non-embedding 2,373,376, total 2,766,592

@@ -1,0 +1,22 @@
+Part 1: sums of n coin flips (+1 or -1), 100,000 sums each
+   n   spread of the sum   sqrt(n)   spread after dividing by sqrt(n)
+    1               1.000     1.000      1.000
+    2               1.416     1.414      1.001
+    4               2.013     2.000      1.006
+   16               3.975     4.000      0.994
+   64               7.974     8.000      0.997
+  128              11.295    11.314      0.998
+  512              22.620    22.627      1.000
+ 2048              45.292    45.255      1.001
+
+Part 2: one output x . w, x of 128 numbers with spread 1, w of 128 numbers with spread s (20,000 pairs)
+  s = 0.0200: spread of the output 0.2267; the rule s x sqrt(128) says 0.2263
+  s = 0.0884: spread of the output 0.9968; the rule s x sqrt(128) says 1.0000
+  s = 0.1250: spread of the output 1.4163; the rule s x sqrt(128) says 1.4142
+  s = 0.2000: spread of the output 2.2726; the rule s x sqrt(128) says 2.2627
+  s = 1.0000: spread of the output 11.3917; the rule s x sqrt(128) says 11.3137
+
+Part 3: the check-yourself numbers
+  fan-in 512, spread 0.0200: output spread 0.4525
+  fan-in 512, spread 0.0442: output spread 1.0000
+  fan-in 128, spread 0.0200: output spread 0.2263

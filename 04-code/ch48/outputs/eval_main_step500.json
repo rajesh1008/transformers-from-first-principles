@@ -1,0 +1,65 @@
+{
+ "checkpoint": "main_step500",
+ "step": 500,
+ "params": 10050560,
+ "fp32": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.258138233853369,
+   "bpc": 2.0993644086873426
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.950609933301277,
+   "bpc": 2.200613753789921
+  }
+ },
+ "int8": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.2580609419911175,
+   "bpc": 2.0993335491363996
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.950786706759845,
+   "bpc": 2.200692332007448
+  }
+ },
+ "int8_numbers": 10027008,
+ "int8_maxerr": 0.0012832283973693848,
+ "bytes_fp32": 40202240,
+ "bytes_int8": 10247168,
+ "cache_maxdiff": 1.049041748046875e-05,
+ "samples": [
+  {
+   "seed": 1,
+   "text": "the cat sat on the matches of\npased, though he sankged to listen to hope\nby the two years, embraced, a disroom, not as usual\nand always as they had been reckple and shammacised, and the\nveness of his young man\u2019s of the bed\nfiars in the Yle there had been strength in death there; but his\nhalf-books, and its knowledge of the fact, before the sholge, a\npresent man had heard, and eying and he had scarcely\nagainst him for the least.\n\nElinor had",
+   "new_tokens": 120,
+   "seconds": 0.3586146831512451,
+   "tps": 334.62098915060375
+  },
+  {
+   "seed": 2,
+   "text": "the cat sat on the matarenter of them, and\nherself to be quite to them. He had left a fire into the\ncharningive of the hundred injent interest, the same\nall no new young morning he had been tied a lantern, and a\nthe train of the party, said he had the various Wentworth\nand carried on a pitit cap towards the way.\n\n\u201cYou have been it!\u201dFrom the southly, \u201cItell us!\u201d\n\n\u201cI am sure it!\u201d\n\n\u201cOh! I _will not true. But, it is a matter\u2014n\u2019",
+   "new_tokens": 120,
+   "seconds": 0.35677647590637207,
+   "tps": 336.34504543817314
+  },
+  {
+   "seed": 3,
+   "text": "the cat sat on the matoer and bring\nwith the south, he had no allow a great lest\nfndland, tried to the winleyeness of nine years.\n\nBut he found the more feeling, who had the stones, and\nthere was a being in the marriage and it was a whole, the\nscushed over the door, and spoke of a foreign in a of the\nfair of a large man with the morning\u2019s, and then ge with an\nlid.\n\nThe Professor explained by the door,\n\n\n\u201cI shall it you did",
+   "new_tokens": 120,
+   "seconds": 0.36441874504089355,
+   "tps": 329.29151321931613
+  }
+ ]
+}

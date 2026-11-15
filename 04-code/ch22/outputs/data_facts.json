@@ -1,0 +1,33 @@
+{
+ "sylvie": 133981,
+ "sylvie2": 147587,
+ "tangled": 68173,
+ "phantasmagoria": 32132,
+ "snark": 11724,
+ "pool": 393597,
+ "windows": 3074,
+ "Looking-Glass|pool": [
+  0,
+  31081
+ ],
+ "Looking-Glass|Alice": [
+  1,
+  31081
+ ],
+ "Looking-Glass|whole books": [
+  0,
+  31081
+ ],
+ "Carroll held-out|pool": [
+  0,
+  2003
+ ],
+ "Carroll held-out|Alice": [
+  0,
+  2003
+ ],
+ "Carroll held-out|whole books": [
+  2003,
+  2003
+ ]
+}

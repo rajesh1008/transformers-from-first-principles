@@ -1,0 +1,24 @@
+STEP 1: by hand (Chapter 6's loops, 36 dot products)
+   the    1    0    1    1    1   -1
+   cat    0    1    1   -1    0    1
+   sat    1    1    2    0    1    0
+    on    1   -1    0    2    1   -2
+   the    1    0    1    1    1   -1
+   mat   -1    1    0   -2   -1    2
+STEP 2: in one line, X @ X.T
+  shapes: (6, 2) @ (2, 6) -> (6, 6) | identical to step 1: True
+STEP 3: Chapter 6's rotary rows, the same line
+  row the@0: [1.0, 0.5, 1.366, -1.0, -0.5, 1.366]
+
+BREAKAGE: mismatch the shapes
+  X @ X: ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 6 is different from 2)
+  B @ emb.table  (score Tiny's 7 rows against its 2,048 rows): ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2048 is different from 128)
+  X.T @ X runs, but its shape is (2, 2) not (6, 6): [[5.0, -1.0], [-1.0, 4.0]]
+  a one-line shape check catches it: AssertionError: table must be tokens x tokens
+  the fix for Tiny's scores turns the table: (7, 128) @ (128, 2048) -> (7, 2048)
+
+CHECKPOINT (seed 1865)
+  toy table row the: [1.0, 0.0, 1.0, 1.0, 1.0, -1.0] | row mat: [-1.0, 1.0, 0.0, -2.0, -1.0, 2.0]
+  Tiny ids: [363, 725, 973, 327, 262, 283, 303] block (7, 128) -> table (7, 7)
+  first row: [0.0430, -0.0036, -0.0017, 0.0000, -0.0024, 0.0001, 0.0022]
+  table sum: 0.3205 | diagonal sum: 0.3532 | mirror image: True

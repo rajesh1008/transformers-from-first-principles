@@ -1,0 +1,44 @@
+Chapter 23, Scaling Laws in Miniature (tick 16).  Run from 04-code/ch23 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu,
+NumPy 2.5.4), 11 Nov 2026 between about 04:01 and 04:35 IST.  Every training run used one thread (torch.set_num_threads(1)); seven runs were
+in flight at once.  No hosted-model call; the API key was not used.
+
+Data: Chapter 22's Carroll pool and held-out sets, loaded from ../ch22/_pool.py unchanged (five books, 393,597 tokens; Carroll held-out =
+16 windows of the last 4,000 tokens of Sylvie and Bruno Concluded; Looking-Glass = Chapter 19's 16 windows).
+
+    python3 sizes.py          > outputs/sizes.txt        (.json)  the six four-layer sizes, counted from their tables
+    python3 prep.py           > outputs/prep.txt                  writes outputs/shards/ (24 shards of shuffled 4,096-token pieces) once
+    python3 stream_check.py   > outputs/stream_check.txt          how the first ladder's four whole-book shards and the 24 shards mix the books
+    ./run_all.sh                                                   every training run in jobs.txt (74), seven at a time; outputs/train_TAG.json, log_TAG.txt
+    ./repro.sh                                                     s1, s3, s5 at 384 steps, order 1865, run twice more unchanged (TAG suffix _r2, _r3)
+    python3 repro_probe.py    > outputs/repro_probe.txt           BF16 products repeat differently from step 2; 32-bit products repeat exactly
+    python3 analyse.py        > outputs/analyse.txt      (.json)  every table and fit in the chapter
+    python3 lab23.py          > outputs/lab23.txt                 Lab 23: predict, five breakages, checkpoint
+    python3 solutions.py      > outputs/solutions.txt             Appendix A: Check Yourself and Exercises 1-7
+    python3 ../../03-figures/src/ch23_figs.py   (from the project root: python3 03-figures/src/ch23_figs.py)  fig23-01 to fig23-11
+
+train_scale.py SIZE STEPS [ORDER_SEED] [LR]: SIZE s1..s6 (widths 32, 48, 64, 96, 128, 192; four layers, head width 16, context 128),
+STEPS x 8 windows of 129 (1,024 predictions a step), mixed BF16 with a 32-bit master copy, Adam b2 0.95, warmup min(40, STEPS/10), cosine to
+0.1 of the peak.  Starting tables seed 1865 for every run; ORDER_SEED sets the reading order only.  About 15 s (s1) to 75 s (s6) per 384 steps.
+
+Things that went wrong on the way, and are told in the chapter:
+  - THE FIRST LADDER READ THE BOOKS ONE AFTER ANOTHER.  The first version wrote each pool book as one document, giving four shards (the
+    largest book is bigger than a 65,536-token shard).  ShardStream shuffles the shard order and a 256-window buffer, so each run read the
+    books nearly in sequence: the last sixth of a one-pass run read 82% Sylvie and Bruno Concluded (order 1865), 85% A Tangled Tale (order 11).
+    Order spreads grew with size (0.37 for s6 at lr 1e-3; up to 0.42 at 3e-3) and order 11 ended worst for every large size, its held-out loss
+    rising over the last 100 steps.  All 74 runs were redone with 24 shards of shuffled 4,096-token pieces (largest single-book share in a batch
+    0.50, against 0.66 to 1.00 before).  The first ladder's outputs are kept in outputs/v1_four_shards/ and its analyse.txt is quoted once.
+  - SAME CONFIGURATION, DIFFERENT LOSS.  The first ladder's five order-1865 runs at lr 1e-3 were run twice (the second time to record the
+    sentence loss) and none repeated exactly: held-out differences 0.0007 to 0.043.  repro_probe.py shows that the BF16 products of
+    MixedTiny differ between two runs from the second step, by about 6e-5 in the batch loss, while 32-bit products repeat bit for bit at one
+    thread.  The cause inside the BF16 matrix product was not isolated.  Chapter 22's mixed-BF16 runs (tick 15) are affected the same way;
+    STATE.md NEXT records it.  repro.sh measures the size of the effect on the second ladder.
+  - The attention count in analyse.py Part 9 was first written at half its value (forward and backward counted as 6/2 instead of 3 x forward);
+    fixed before any number was used.
+  - fit_floor's E search runs from 0 to just below the smallest loss; with the lr 3e-3 sweep of the first ladder it ended at 0 or at the top for
+    some fits, which the at_edge / at_zero flags report.
+
+Added after the ladders (11 Nov 2026, 04:20 to 04:40 IST):
+  - s6 at 384 steps with peak lr 3e-4 and 5e-4 (order 1865), s6 at 773 and 1546 steps, s5 at 1546 steps (run_all.sh's appended jobs).
+    analyse.py Part 4c prints them.  s6 at 1546 steps took about 5 minutes.
+  - Then: python3 analyse.py > outputs/analyse.txt; python3 lab23.py > outputs/lab23.txt; python3 solutions.py > outputs/solutions.txt;
+    python3 03-figures/src/ch23_figs.py from the project root.

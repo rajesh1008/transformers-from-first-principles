@@ -1,0 +1,8 @@
+four whole-book shards (first ladder)
+  order 1865: largest single-book share in a batch 0.66; steps 320-383 read 82% from sylvie2
+  order    7: largest single-book share in a batch 1.00; steps 320-383 read 38% from phantasmagoria
+  order   11: largest single-book share in a batch 0.65; steps 320-383 read 85% from tangled
+24 shards of shuffled pieces
+  order 1865: largest single-book share in a batch 0.50; steps 320-383 read 51% from sylvie2
+  order    7: largest single-book share in a batch 0.54; steps 320-383 read 42% from sylvie
+  order   11: largest single-book share in a batch 0.46; steps 320-383 read 36% from sylvie

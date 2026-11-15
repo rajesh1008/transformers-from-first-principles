@@ -1,0 +1,53 @@
+Part 1. the formats: 1 sign bit + exponent bits + mantissa bits
+format     bits  exp  man     largest  smallest normal    smallest  gap above 1
+FP32         32    8   23   3.403e+38        1.175e-38   1.401e-45    1.192e-07
+BF16         16    8    7    3.39e+38        1.175e-38   9.184e-41     0.007812
+FP16         16    5   10    6.55e+04        6.104e-05    5.96e-08    0.0009766
+FP8 E5M2      8    5    2   5.734e+04        6.104e-05   1.526e-05         0.25
+FP8 E4M3      8    4    3         448          0.01562    0.001953        0.125
+FP4 E2M1      4    2    1           6                1         0.5          0.5
+
+Part 2. five numbers stored in each format (nearest; FP8 E4M3 saturates at 448, FP4 at 6)
+format                0.1      0.3333333         1000.7          70000          3e-06
+FP32                  0.1      0.3333333         1000.7          70000          3e-06
+BF16            0.1000977      0.3339844           1000          70144   2.995133e-06
+FP16           0.09997559       0.333252         1000.5            inf   2.980232e-06
+FP8 E5M2          0.09375         0.3125           1024            inf              0
+FP8 E4M3        0.1015625        0.34375            448            448              0
+FP4 E2M1                0            0.5              6              6              0
+
+Part 3. the gap between neighbouring numbers near three sizes Tiny meets
+format      near 1 (gains)  near 0.02 (tables)  near 4e-4 (nudges)
+FP32              1.19e-07            1.86e-09            2.91e-11
+BF16               0.00781            0.000122            1.91e-06
+FP16              0.000977            1.53e-05            2.38e-07
+FP8 E4M3             0.125             0.00195            3.05e-05
+
+Part 4. adding 0.001 to 1.0, 1,000 times (the answer is 2.0)
+  running sum kept in FP32: 2.000047
+  running sum kept in BF16: 1.000000
+  running sum kept in FP16: 1.976562
+  4,096 numbers between 0 and 1 (seed 1865): exact 2027.49; sum kept in BF16 256.00; stored in BF16, summed in FP32 2027.55
+  4,096 numbers between 0 and 1 (seed 1865): exact 2027.49; sum kept in FP16 2031.00; stored in FP16, summed in FP32 2027.50
+  the same 4,096 numbers as one BF16 product (ones @ v): 2024.00 (the product sums in 32-bit and rounds once, to BF16)
+
+Part 5. Tiny's tables stored in each format: relative error (rms of the error / rms of the table)
+format                        W_1 (layer 0)          E
+BF16, no scale                      0.00165    0.00166
+FP16, no scale                     0.000206   0.000207
+FP8 E4M3, no scale                    0.033     0.0331
+FP8 E5M2, no scale                   0.0528     0.0527
+FP4 E2M1, no scale                        1          1
+FP8 E4M3, one scale per table         0.0264     0.0264
+FP8 E4M3, MX blocks of 32            0.0295     0.0294
+FP4 E2M1, one scale per table          0.122      0.129
+FP4 E2M1, MX blocks of 32             0.114      0.114
+
+Part 6. rows of spread 1 (as after a norm) stored in 8 and 4 bits, with and without one feature 100 times larger;
+        relative error of the other 127 features, and the share of them stored as exactly 0
+how the rows are stored                  plain rows     with one large feature
+BF16                                 0.00167 (  0% 0)           0.00167 (  0% 0)
+FP8 E4M3, one scale per table         0.0272 (  0% 0)             0.026 (  0% 0)
+FP8 E4M3, MX blocks of 32             0.0296 (  0% 0)            0.0292 (  0% 0)
+FP4 E2M1, one scale per table          0.123 ( 14% 0)                 1 (100% 0)
+FP4 E2M1, MX blocks of 32              0.116 (  9% 0)             0.464 ( 28% 0)

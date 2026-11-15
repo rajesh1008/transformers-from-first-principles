@@ -1,0 +1,4 @@
+vocabulary: 2,635 words -> grid of 6,943,225 cells
+different pairs ever seen: 14,752 (0.212% of the grid, about 1 cell in 470)
+the ten-word corner in Figure 1.5: 20 of 100 cells seen
+said->the 210, said->alice 116, mock->turtle 54, march->hare 31

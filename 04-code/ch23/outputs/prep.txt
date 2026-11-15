@@ -1,0 +1,4 @@
+24 shards, 393,597 tokens; pool 393,597 tokens
+windows of 129 in one pass of the stream: 3,055  (= 391,040 predictions)
+pieces of up to 4,096 tokens: 98
+largest single-book share in a batch of 8, first 48 batches: mean 0.50

@@ -1,0 +1,17 @@
+Part 1. predict, then read
+  the running sentence, 6 tokens: 1 page of 16 slots, 10 slots empty
+  after 16 new tokens (22 in all): 2 pages, block table [0, 1]
+  after free: 100 of 100 pages free
+
+Part 2. breakages (from outputs/serve_real.json)
+  static batch returning together: mean reply 25.94 s against continuous 8.12 s
+  admission without reservation, 384 slots: finished 0 of 20; deadlock True
+
+Part 3. checkpoints
+[pass] a batched decode step matches full passes for two conversations of different lengths (max diff 3.81e-05)
+[pass] the page allocator refuses when out of pages and reuses freed pages
+[pass] continuous batching beat static on first-token time and throughput for the twenty clients
+[pass] admission that reserves nothing deadlocks once the cache is full
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch31
+
+5 of 5 checkpoints pass

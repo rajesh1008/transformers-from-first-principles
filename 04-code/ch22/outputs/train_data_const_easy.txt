@@ -1,0 +1,1 @@
+const_easy    held-out Looking-Glass 5.3860 (lowest 5.3749), Carroll 5.2739 (lowest 5.2523); batch last 24 5.4788; on windows it read 5.2197; 103 s

@@ -1,0 +1,35 @@
+A  tokens of the running sentence
+  6 words -> 7 tokens: ['the', ' cat', ' sat', ' on', ' the', ' m', 'at']
+  check A, ' mat' is not one token: pass
+B  same prompt, same answer?
+  greedy run 1: '\nfirst----"\n\n"I\'ve been a little boy!'
+  greedy run 2 identical: True
+  sampled, seed 1: ' We the little Fury. What\nto need them all the servelence'
+  sampled, seed 2: ' last hard of the remark. ‘He will not the\nMein Hertry no'
+  first differing generated token: 0
+  check B, greedy repeats and samples differ: pass
+C  does chatting change the weights?
+  before 1109f4557cfb0cb8...  after 64 generated tokens 1109f4557cfb0cb8...  equal: True
+  check C, weights unchanged: pass
+D  temperature and the top token
+  T=0.25: top '\n' share 0.8144; tokens to cover 0.9: 6
+  T=0.5 : top '\n' share 0.2713; tokens to cover 0.9: 41
+  T=1.0 : top '\n' share 0.0521; tokens to cover 0.9: 291
+  T=2.0 : top '\n' share 0.0094; tokens to cover 0.9: 1141
+  check D, same top token at every temperature: pass
+E  8-bit round trip of every 2-D table
+  held-out loss on 64 windows of 129 tokens: 32-bit 4.4077, 8-bit 4.4073, difference -0.0004; largest weight error 3.53e-03
+  check E, 8-bit changes the loss (not free, though small): pass
+F  the same 64 tokens read with longer and longer contexts
+  context  64 tokens before the scored 64: loss 4.5390 nats per token (8 places)
+  context 128 tokens before the scored 64: loss 4.9468 nats per token (8 places)
+  context 256 tokens before the scored 64: loss 5.1318 nats per token (8 places)
+  context 512 tokens before the scored 64: loss 5.2062 nats per token (8 places)
+  check F, 512 tokens of context is not better than 128: pass
+G  breakage: try to make Tiny look something up
+  'The capital of France is' -> '\nthereet, and'; first piece of' Paris' = ' P', share 0.0007, rank 205
+  'Paris is the capital of France. The capital of France is' -> '\ntheres of the'; first piece of' Paris' = ' P', share 0.0004, rank 199
+  'The Hatter lives in' -> ' the\nthe chain'; first piece of' Cheshire' = ' Cheshire', share 0.0000, rank 1900
+  'The Hatter lives in Cheshire. The Hatter lives in' -> ' the\nform of the'; first piece of' Cheshire' = ' Cheshire', share 0.0000, rank 1933
+  check G, closed book does not answer Paris: pass
+7 of 7 checks pass

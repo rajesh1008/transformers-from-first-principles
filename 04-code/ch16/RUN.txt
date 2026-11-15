@@ -1,0 +1,26 @@
+Chapter 16 scripts, run from 04-code/ch16 (NumPy only; matplotlib for figures). Order used for the book:
+fetch.py  count.py  tied_check.py  memory.py  cost.py  running_sentence.py  lab16.py  solutions.py
+Helpers: _common.py (sets one CPU thread before NumPy loads, names the three public models, loads their
+configuration files and weights-file headers from configs/) and reader.py (the configuration reader: spec()
+turns a GPT-2, Llama-style or Qwen3 config.json into one dict of settings; tiny_spec() does the same for
+Tiny's constructor arguments; count() counts learned numbers part by part; kv_numbers_per_token()).
+Network: fetch.py and tied_check.py read from huggingface.co (config.json, and the first bytes of each
+model.safetensors by range request; no weights are downloaded). Fetched 10 November 2026; the results are
+kept in configs/, so the other scripts run offline.
+    python3 fetch.py > outputs/fetch.txt
+    python3 count.py > outputs/count.txt           (also writes outputs/count.json)
+    python3 tied_check.py > outputs/tied_check.txt (three rows of Qwen3-0.6B's two stored tables, 6 KB each)
+    python3 memory.py > outputs/memory.txt         (also writes outputs/memory.json)
+    python3 cost.py > outputs/cost.txt             (one thread, fastest of five; about 10 seconds)
+    python3 running_sentence.py > outputs/running_sentence.txt
+    python3 lab16.py > outputs/lab16.txt
+    python3 solutions.py > outputs/solutions.txt   (about 15 seconds)
+Seed 1865 for Tiny and for the random ids used in the timings.
+Fix during the run: count.py first filtered GPT-2's stored masks by the name ending "attn.bias", which
+also dropped the learned c_attn.bias tables (27,648 numbers short, the same pitfall as Chapter 14);
+the filter now matches the last two name parts exactly. cost.py and memory.py first imported NumPy
+before _common.py had set one thread, so the first timing used all cores (3.5 ms for the table product);
+the imports were reordered and the figures in the chapter are the one-thread run.
+Figures: python3 03-figures/src/ch16_figs.py from the project root (six PNGs in 03-figures/ch16).
+Last full run: 10 November 2026, about 14:10 to 14:20 IST, book build machine (CPU, 8 cores), Python 3.13.5,
+NumPy 2.5.4, matplotlib 3.11.2.

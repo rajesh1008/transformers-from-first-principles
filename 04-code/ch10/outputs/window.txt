@@ -1,0 +1,27 @@
+window mask, width 3 (1 = may look):
+[[1 0 0 0 0 0]
+ [1 1 0 0 0 0]
+ [1 1 1 0 0 0]
+ [0 1 1 1 0 0]
+ [0 0 1 1 1 0]
+ [0 0 0 1 1 1]]
+
+window 6: mat's row [0.214, 0.026, 0.106, 0.434, 0.214, 0.006]  share to cat 0.026 | mat's output [0.665, -0.297] | sat's row [0.284, 0.14, 0.576]
+
+window 4: mat's row [0.0, 0.0, 0.139, 0.571, 0.282, 0.008]  share to cat 0.000 | mat's output [0.559, -0.424] | sat's row [0.284, 0.14, 0.576]
+
+window 3: mat's row [0.0, 0.0, 0.0, 0.663, 0.327, 0.01]  share to cat 0.000 | mat's output [0.327, -0.654] | sat's row [0.284, 0.14, 0.576]
+
+window 2: mat's row [0.0, 0.0, 0.0, 0.0, 0.972, 0.028]  share to cat 0.000 | mat's output [0.972, 0.028] | sat's row [0.0, 0.196, 0.804]
+
+outputs changed by a window of 3 (against no window): ['on3', 'the4', 'mat5']
+window 3, 1 layer: mat can be influenced by ['on3', 'the4', 'mat5']
+window 3, 2 layers: mat can be influenced by ['cat1', 'sat2', 'on3', 'the4', 'mat5']
+window 3, 3 layers: mat can be influenced by ['the0', 'cat1', 'sat2', 'on3', 'the4', 'mat5']
+window 256,  1 layers: the last of 1024 tokens can draw on seats back to 768
+window 256,  2 layers: the last of 1024 tokens can draw on seats back to 513
+window 256,  4 layers: the last of 1024 tokens can draw on seats back to 3
+window 256, 12 layers: the last of 1024 tokens can draw on seats back to 0
+
+Tiny, four heads, window 3, last row of head 0: [0.0, 0.0, 0.0, 0.0, 0.343, 0.357, 0.3] | without window: [0.143, 0.141, 0.121, 0.155, 0.151, 0.157, 0.132]
+rows of shares still sum to one: True

@@ -1,0 +1,41 @@
+sequence: <s> the cat sat on the mat the cat sat on the mat
+layer 1 (previous-token head): share each seat gives to the seat before it: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+block 'before me' now holds, per seat: ['<s>', '<s>', 'the', 'cat', 'sat', 'on', 'the', 'mat', 'the', 'cat', 'sat', 'on', 'the']
+
+layer 2 (lookup head), the row for seat 8 ('cat', second copy): [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+the pair: one token of context
+  seat token  -> guess (share of the guess)   true next
+     7 the   -> tie: cat / mat   (0.500)   cat
+     8 cat   -> sat              (1.000)   sat  right
+     9 sat   -> on               (1.000)   on  right
+    10 on    -> the              (1.000)   the  right
+    11 the   -> cat              (0.667)   mat
+  right on the second copy: 3 of 5
+
+with a second first-layer head looking two seats back: two tokens of context
+  seat token  -> guess (share of the guess)   true next
+     7 the   -> tie: cat / mat   (0.500)   cat
+     8 cat   -> sat              (1.000)   sat  right
+     9 sat   -> on               (1.000)   on  right
+    10 on    -> the              (1.000)   the  right
+    11 the   -> mat              (1.000)   mat  right
+  right on the second copy: 4 of 5
+
+BREAKAGE: remove the previous-token head (block 'before me' stays empty)
+  the lookup head's row for seat 8 ('cat'): [0.111, 0.111, 0.111, 0.111, 0.111, 0.111, 0.111, 0.111, 0.111, 0.0, 0.0, 0.0, 0.0]
+
+the lookup head alone
+  seat token  -> guess (share of the guess)   true next
+     7 the   -> the              (0.375)   cat
+     8 cat   -> the              (0.333)   sat
+     9 sat   -> the              (0.300)   on
+    10 on    -> the              (0.273)   the  right
+    11 the   -> the              (0.333)   mat
+  right on the second copy: 1 of 5
+
+second setting: the first 1,024 tokens of the novel (Tiny's tokenizer, 410 different pieces)
+  seats whose token has appeared before with something after it: 614 of 1022
+  the pair's guess is the true next token at 78 of them (12.7 per cent)
+  with the two-seats-back head as well: 90 (14.7 per cent)
+  the pair's guess equals 'the most frequent follower of this token so far' at 606 of 614 seats

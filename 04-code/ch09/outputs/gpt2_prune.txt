@@ -1,0 +1,18 @@
+selection text: Alice, Chapter I opening, 256 tokens; loss 3.803
+test text: Through the Looking-Glass, Chapter 1 opening, 256 tokens; loss 3.996
+
+each head removed alone, change in loss on the selection text:
+  largest increases: 0.10 (+2.297), 0.0 (+0.924), 0.5 (+0.656), 0.7 (+0.327), 5.1 (+0.282)
+  heads that change the loss by less than 0.01 either way: 56 of 144
+  heads whose removal *lowers* the loss: 36 (largest fall -0.133)
+  per layer, heads changing the loss by less than 0.01: [1, 3, 2, 1, 5, 4, 5, 8, 6, 8, 7, 6]
+
+removing the least useful heads together (chosen on Alice, judged on Looking-Glass):
+  heads removed   loss on Alice   loss on Looking-Glass   random heads on Looking-Glass (mean of 5, range)
+             24           4.431                   4.515   4.747 (4.310 to 5.902)
+             48           4.871                   4.977   6.923 (5.935 to 8.480)
+             72           5.256                   5.345   5.818 (5.283 to 6.421)
+             96           5.544                   5.653   6.698 (6.276 to 7.326)
+              0           3.803                   3.996   (no heads removed)
+
+(run time 325 s on the book's machine, 10 November 2026)

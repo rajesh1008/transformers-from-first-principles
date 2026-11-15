@@ -1,0 +1,9 @@
+{
+ "the reader counts default Tiny as Tiny.count() does (2,766,592)": true,
+ "the reader counts GPT-2 small as 124,439,808 and the file's learned tables agree": true,
+ "SmolLM2-135M: hand count equals every number in the file (134,515,008)": true,
+ "Qwen3-0.6B: hand count 596,049,920; the file holds 155,582,464 more (a stored copy of the tied table)": true,
+ "breakage 1 agrees with the file and is still wrong": true,
+ "breakage 2 halves Qwen3-0.6B's key-value cache estimate": true,
+ "breakage 3 triples SmolLM2-135M's key-value cache estimate": true
+}

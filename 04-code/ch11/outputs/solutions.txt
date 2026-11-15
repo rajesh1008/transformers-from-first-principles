@@ -1,0 +1,38 @@
+Exercise 1. Online softmax on the row [1, 3, 2]
+  score 1: running max 1, running sum 1.0000
+  score 3: running max 3, running sum 1.1353
+  score 2: running max 3, running sum 1.5032
+  shares [0.09, 0.665, 0.245] | softmax [0.09, 0.665, 0.245]
+
+Exercise 2. Blocks of two, scores [0, 2, 1, 4], values (1,0), (0,1), (1,1), (2,0)
+  block 0: max 2 | rescale 0.0000 | sum 1.1353 | unnormalised output [0.135, 1.0]
+  block 1: max 4 | rescale 0.1353 | sum 1.2034 | unnormalised output [2.068, 0.185]
+  output [1.718, 0.154] | reference [1.718, 0.154]
+
+Exercise 3. One head of width 128, 8,192 tokens, 16-bit numbers, query blocks of 128
+  FLOPs 34,359,738,368 | plain bytes 545,259,520 (520 MiB) | tiled bytes 272,629,760 (260 MiB)
+  operations per byte: plain 63.0 | tiled 126.0
+
+Exercise 4. Blocks computed
+  causal, 2,048 tokens, blocks of 128: 136 of 256
+  window 512, 8,192 tokens, blocks of 128: 310 of 4096 (causal alone: 2080)
+
+Exercise 5. A machine of 1,000 trillion operations a second and 8 TB/s of main memory
+  balance 125 operations per byte; at width 128 plain attention does 63 per byte (limited by memory), tiled 126 (just above the balance)
+
+Exercise 6. Fixed shift for scores up to 20 with 16-bit exponentials
+  float16 exp overflows above 11.09; the shift must be at least 8.91
+
+Exercise 7. tiled_attention block sizes at 2,048 tokens, width 64 (fastest of 5)
+  measured 2026-11-10: block 32: 51.3 ms | block 64: 25.3 ms | block 128: 17.6 ms | block 256: 15.8 ms | block 512: 23.1 ms
+
+Exercise 8. Keep m + log(l) per row and rebuild the share table, 64 random tokens
+  rebuilt equals softmax: True | numbers kept per row: 1
+
+Exercise 9. Conditional rescaling with threshold log 16 (random scores, as rescale.py)
+  threshold  always: rescales 984 of 16,128 | largest exponential held 1.00
+  threshold  log 16: rescales 1 of 16,128 | largest exponential held 14.03
+  threshold log 256: rescales 0 of 16,128 | largest exponential held 23.21
+
+Exercise 10. Blocks of one (pure online softmax) on Chapter 8's hand head
+  tiled_attention(block=1) equals attention(): True

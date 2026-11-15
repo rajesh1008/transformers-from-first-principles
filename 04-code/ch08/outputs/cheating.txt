@@ -1,0 +1,8 @@
+mask on : rows whose output changes when 'mat' becomes 'hat': 1 of 6 ['mat/hat']
+mask off: rows whose output changes when 'mat' becomes 'hat': 6 of 6 ['the', 'cat', 'sat', 'on', 'the', 'mat/hat']
+  without the mask, the first 'the' moves from (0.943, 0.652) to (0.706, 0.652)
+
+the novel in 693 windows of 64 Tiny tokens; 43,659 next-token guesses
+  look-ahead head, mask off: 43,659 right (100.0%)
+  same head, mask on:        2,110 right (4.8%)
+  (next token equal to the current one, for comparison: 768, 1.8%)

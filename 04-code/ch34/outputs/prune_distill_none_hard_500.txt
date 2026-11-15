@@ -1,0 +1,7 @@
+none hard: nonzero numbers 2,766,592 of 2,766,592; teacher 1.9812 measured 1.9812; after pruning 1.9812
+  step 100: held-out Carroll 1.9900 bits per character (50 s)
+  step 200: held-out Carroll 1.9880 bits per character (85 s)
+  step 300: held-out Carroll 1.9733 bits per character (119 s)
+  step 400: held-out Carroll 1.9643 bits per character (155 s)
+  step 500: held-out Carroll 1.9641 bits per character (194 s)
+none hard: final 1.9641; pruned positions still zero: True; 194 s

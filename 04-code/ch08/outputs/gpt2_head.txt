@@ -1,0 +1,31 @@
+GPT-2 small, running sentence ids [1169, 3797, 3332, 319, 262, 2603]
+query and key width per head: 64 -> scores divided by sqrt(64) = 8
+
+layer 0, head 0:
+            the   ␣cat   ␣sat    ␣on   ␣the   ␣mat
+   the    1.000  0.000  0.000  0.000  0.000  0.000
+  ␣cat    0.731  0.269  0.000  0.000  0.000  0.000
+  ␣sat    0.477  0.139  0.384  0.000  0.000  0.000
+   ␣on    0.397  0.202  0.358  0.043  0.000  0.000
+  ␣the    0.392  0.201  0.319  0.039  0.049  0.000
+  ␣mat    0.282  0.103  0.046  0.110  0.138  0.321
+
+the head where ␣sat gives the most to ␣cat: layer 4, head 11, share 0.999
+            the   ␣cat   ␣sat    ␣on   ␣the   ␣mat
+   the    1.000  0.000  0.000  0.000  0.000  0.000
+  ␣cat    1.000  0.000  0.000  0.000  0.000  0.000
+  ␣sat    0.000  0.999  0.001  0.000  0.000  0.000
+   ␣on    0.000  0.000  1.000  0.000  0.000  0.000
+  ␣the    0.000  0.000  0.000  1.000  0.000  0.000
+  ␣mat    0.000  0.000  0.000  0.000  1.000  0.000
+
+share ␣sat gives to ␣cat, averaged over the 12 heads of each layer:
+  L0:0.15  L1:0.13  L2:0.20  L3:0.20  L4:0.21  L5:0.13  L6:0.11  L7:0.07  L8:0.06  L9:0.07  L10:0.03  L11:0.10
+
+share given to the first token 'the' (rows 1 to 5), averaged per layer:
+  L0:0.35  L1:0.58  L2:0.58  L3:0.69  L4:0.70  L5:0.79  L6:0.80  L7:0.85  L8:0.84  L9:0.87  L10:0.88  L11:0.75
+heads (of 144) whose rows 1-5 put more than half their share on the first token: 120
+for comparison, an even split over the seats each row can see gives the first token 0.29 on average
+
+check: GPT-2's top three next tokens after 'the cat sat on the': ['␣floor', '␣couch', '␣bed']
+check: the vocabulary gives the running sentence back: ['the', '␣cat', '␣sat', '␣on', '␣the', '␣mat']

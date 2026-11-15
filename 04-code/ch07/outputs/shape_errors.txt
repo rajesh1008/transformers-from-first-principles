@@ -1,0 +1,15 @@
+LOUD
+1. X @ X            (forgot to turn the second one on its side)
+   ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 6 is different from 2)
+2. X + TOY_POS[:3]  (three position rows for six tokens)
+   ValueError: operands could not be broadcast together with shapes (6,2) (3,2) 
+3. X @ np.ones(3)   (a list of the wrong length)
+   ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 3 is different from 2)
+
+SILENT
+4. X.T @ X          (turned the wrong one)
+   no error; answer has shape (2, 2)
+   it is a real table, columns against columns: [[5.0, -1.0], [-1.0, 4.0]]
+5. lengths - column (one list flat, one upright)
+   no error; answer has shape (6, 6)
+   wanted six zeros; got 36 numbers, of which 18 are not zero

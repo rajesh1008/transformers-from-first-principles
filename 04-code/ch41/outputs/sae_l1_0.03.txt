@@ -1,0 +1,14 @@
+pass  1: held-out variance explained 0.788, mean active features 186.5
+pass 10: held-out variance explained 0.942, mean active features 153.1
+pass 20: held-out variance explained 0.957, mean active features 130.3
+pass 30: held-out variance explained 0.963, mean active features 114.6
+layer 6, 1024 features, L1 0.03: held-out variance explained 0.963; mean active features per row 114.6 of 1024; dead features (never active on the training rows) 17
+best single feature for 'the current token begins a word': feature 611, threshold 0.000, on = word-start; train 0.660, held-out 0.654 (majority 0.562)
+feature   80 active on  1763 of 12600 rows; its 40 largest rows are tokens: '  ' x38, '     ' x2
+feature  731 active on  2806 of 12600 rows; its 40 largest rows are tokens: 'N' x13, 'R' x8, 'H' x6, 'F' x4, 'D' x3
+feature   54 active on  1389 of 12600 rows; its 40 largest rows are tokens: '\n' x40
+feature   10 active on  2029 of 12600 rows; its 40 largest rows are tokens: '“' x39, ' “' x1
+feature  758 active on  2194 of 12600 rows; its 40 largest rows are tokens: ',' x40
+feature  479 active on  1453 of 12600 rows; its 40 largest rows are tokens: ' w' x26, ' no' x8, ' r' x4, ' br' x1, ' p' x1
+feature  696 active on  2676 of 12600 rows; its 40 largest rows are tokens: ' a' x40
+feature  945 active on  1225 of 12600 rows; its 40 largest rows are tokens: '!' x30, '?' x10

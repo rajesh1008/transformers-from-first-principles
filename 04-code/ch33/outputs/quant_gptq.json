@@ -1,0 +1,56 @@
+{
+ "F": {
+  "4 128": 1.7025142832894653,
+  "3 128": 2.250744524158048,
+  "3 None": 2.917430468780181,
+  "3 128 cal Through the Looking-Glass": 2.299385847229826,
+  "3 128 cal random token ids": 2.6370893135577593
+ },
+ "G": {
+  "8-bit per channel": {
+   "first": [
+    5,
+    64,
+    10,
+    64
+   ],
+   "same": 144
+  },
+  "4-bit per 128, round-to-nearest": {
+   "first": [
+    9,
+    0,
+    1,
+    4
+   ],
+   "same": 40
+  },
+  "3-bit per 128, round-to-nearest": {
+   "first": [
+    2,
+    0,
+    0,
+    3
+   ],
+   "same": 20
+  },
+  "3-bit per 128, GPTQ": {
+   "first": [
+    0,
+    0,
+    0,
+    4
+   ],
+   "same": 13
+  },
+  "2-bit per 32, round-to-nearest": {
+   "first": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "same": 7
+  }
+ }
+}

@@ -1,0 +1,21 @@
+one-hot list for id 1: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+its dot product with each column of the table: [0, 1] = cat's row [0, 1]
+
+final vector h = (-1.2, 1.0); its agreement with every row of the same table:
+  hat       3.4
+  rabbit    3.2
+  mat       2.2
+  dog       2.0
+  cat       1.0
+  <unk>     0.0
+  sat      -0.2
+  the      -1.2
+  looked   -1.4
+  on       -2.2
+  a        -2.4
+  at       -3.4
+tiny.embed scores() gives the same list: [-1.2, 1.0, -0.2, -2.2, 2.2, -2.4, 2.0, 3.2, -1.4, -3.4, 3.4, 0.0]
+
+GPT-2's file: 160 tensors; any separate output table? False; token table 'wte.weight' [50257, 768]
+GPT-2 learned numbers: 124,439,808; token table 38,597,376 (31%); untied, it would be 163,037,184
+Tiny: tying saves 2,048 x 128 = 262,144 numbers

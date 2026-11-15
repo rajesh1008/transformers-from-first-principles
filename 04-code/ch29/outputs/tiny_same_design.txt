@@ -1,0 +1,5 @@
+  Tiny greedy     surprise 1.542  rep4 0.099  not-in-pool 0.018  not-in-pool-or-lexicon 0.018  distinct-2 0.615  p1 '\nfirst----"\n\n"I\'ve been a little boy!" said Balbus.\n\n"I\'m af'
+  Tiny T 1.0      surprise 3.853  rep4 0.000  not-in-pool 0.205  not-in-pool-or-lexicon 0.188  distinct-2 0.921  p1 " room. It's all, my asked\nof me, and he're plearately instan"
+  Tiny T 0.7      surprise 2.655  rep4 0.009  not-in-pool 0.167  not-in-pool-or-lexicon 0.155  distinct-2 0.797  p1 ' flowers, and\ntrave, as they be intible to the number force '
+  Tiny min-p 0.1  surprise 2.384  rep4 0.007  not-in-pool 0.099  not-in-pool-or-lexicon 0.082  distinct-2 0.756  p1 ' door-fourst of\nto the Juth, and vexientively beard, in the '
+  Tiny top-p 0.9  surprise 3.316  rep4 0.002  not-in-pool 0.173  not-in-pool-or-lexicon 0.142  distinct-2 0.870  p1 " earth way, but it\nwhich's its corn'ty--weumber of hear, as "

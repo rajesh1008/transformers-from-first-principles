@@ -1,0 +1,177 @@
+Part 1. the six sizes (four layers, head width 16, context 128)
+  s1 width  32  non-embedding    50,368  total   120,000
+  s2 width  48  non-embedding   112,416  total   216,864
+  s3 width  64  non-embedding   199,040  total   338,304
+  s4 width  96  non-embedding   446,016  total   654,912
+  s5 width 128  non-embedding   791,296  total 1,069,824
+  s6 width 192  non-embedding 1,776,768  total 2,194,560
+
+Part 2a. one pass of the pool (384 steps, 393,216 tokens), three reading orders, peak lr 1e-3
+  size        N     C=6ND     Carroll: 1865    7       11     mean   spread | Looking-Glass mean spread | sentence (1865)
+  s1    50,368 1.19e+11   5.7551  5.8040  5.7190  5.7594  0.0849 | 5.7798 0.0787 | 6.1093
+  s2   112,416 2.65e+11   5.4687  5.4847  5.4419  5.4651  0.0428 | 5.5542 0.0273 | 5.5252
+  s3   199,040 4.70e+11   5.3126  5.2754  5.3130  5.3003  0.0376 | 5.4339 0.0259 | 5.3936
+  s4   446,016 1.05e+12   5.1448  5.0185  5.1772  5.1135  0.1586 | 5.2818 0.1397 | 5.3165
+  s5   791,296 1.87e+12   5.0246  4.9371  5.0813  5.0143  0.1443 | 5.2057 0.1303 | 5.2339
+  s6 1,776,768 4.19e+12   4.9768  4.7784  5.1529  4.9694  0.3745 | 5.1635 0.2984 | 5.2123
+
+Part 3a. fits to the five means (Carroll held-out)
+  straight line on log-log axes  L = 9.830 N^-0.0501   (each doubling x0.9659)
+  with a floor                   L = 4.548 + 52.12 N^-0.3474   squared misses 7.42e-06
+    s1: measured 5.7594  line 5.7169  floor fit 5.7595
+    s2: measured 5.4651  line 5.4918  floor fit 5.4646
+    s3: measured 5.3003  line 5.3369  floor fit 5.2995
+    s4: measured 5.1135  line 5.1257  floor fit 5.1158
+    s5: measured 5.0143  line 4.9807  floor fit 5.0132
+  how the fit moves with the number of points (smallest sizes first)
+    3 points: floor fit E 4.549  A 51.79  alpha 0.3469  | line alpha 0.0608
+    4 points: floor fit E 4.514  A 46.81  alpha 0.3350  | line alpha 0.0545
+    5 points: floor fit E 4.548  A 52.12  alpha 0.3474  | line alpha 0.0501
+  each reading order's five numbers fitted alone
+    order 1865: floor fit E 4.521  A 39.66  alpha 0.3206  | line alpha 0.0484
+    order    7: floor fit E 4.255  A 43.68  alpha 0.3082  | line alpha 0.0601
+    order   11: floor fit E 4.817  A 100.98  alpha 0.4359  | line alpha 0.0417
+  leave one out (floor fit on four means, miss on the fifth)
+    without s1: alpha 0.3616  E 4.573  miss on it -0.0068
+    without s2: alpha 0.3491  E 4.552  miss on it +0.0009
+    without s3: alpha 0.3510  E 4.555  miss on it +0.0016
+    without s4: alpha 0.3471  E 4.549  miss on it -0.0033
+    without s5: alpha 0.3350  E 4.514  miss on it +0.0055
+
+Part 4a. predicting the sixth size (width 192, N 1,776,768), held back from every fit
+  line  fit predicts 4.7830; measured 4.9694 (orders 4.9768, 4.7784, 5.1529, spread 0.3745); miss +0.1864
+  floor fit predicts 4.8992; measured 4.9694 (orders 4.9768, 4.7784, 5.1529, spread 0.3745); miss +0.0702
+  floor fit with all six: E 4.773  A 170.18  alpha 0.4755; line alpha 0.0421
+  extrapolations far past the data (no run exists to check them)
+    N   2,373,376: line 4.714   floor 4.866
+    N  10,000,000: line 4.387   floor 4.741
+    N 100,000,000: line 3.909   floor 4.634
+
+Part 5a. the same five means with embeddings counted (total learned numbers)
+  line alpha 0.0627 (non-embedding 0.0501);  floor fit E 4.681 A 574.56 alpha 0.5368
+
+Part 2b. one pass of the pool (384 steps, 393,216 tokens), three reading orders, peak lr 3e-3
+  size        N     C=6ND     Carroll: 1865    7       11     mean   spread | Looking-Glass mean spread | sentence (1865)
+  s1    50,368 1.19e+11   5.1608  5.1367  5.1893  5.1623  0.0526 | 5.3241 0.0902 | 5.4352
+  s2   112,416 2.65e+11   5.0027  4.9814  5.1722  5.0521  0.1908 | 5.2416 0.1974 | 5.1166
+  s3   199,040 4.70e+11   4.9031  4.8936  5.2467  5.0145  0.3531 | 5.2117 0.3144 | 5.2542
+  s4   446,016 1.05e+12   5.0078  5.1978  5.2998  5.1685  0.2920 | 5.2989 0.2553 | 5.4331
+  s5   791,296 1.87e+12   4.9229  4.9234  5.3401  5.0621  0.4172 | 5.2348 0.3415 | 5.3608
+  s6 1,776,768 4.19e+12   4.8505  4.9888  5.2731  5.0375  0.4225 | 5.2275 0.2878 | 5.3505
+
+Part 3b. fits to the five means (Carroll held-out)
+  straight line on log-log axes  L = 5.230 N^-0.0022   (each doubling x0.9985)
+  with a floor                   L = 2.537 + 2.69 N^-0.0043   squared misses 1.87e-02
+    s1: measured 5.1623  line 5.1074  floor fit 5.1070
+    s2: measured 5.0521  line 5.0984  floor fit 5.0980
+    s3: measured 5.0145  line 5.0921  floor fit 5.0917
+    s4: measured 5.1685  line 5.0831  floor fit 5.0827
+    s5: measured 5.0621  line 5.0767  floor fit 5.0764
+  how the fit moves with the number of points (smallest sizes first)
+    3 points: floor fit E 4.968  A 15214.54  alpha 1.0408  | line alpha 0.0215
+    4 points: floor fit E 0.000  A 5.12  alpha 0.0003  | line alpha 0.0003
+    5 points: floor fit E 2.537  A 2.69  alpha 0.0043  | line alpha 0.0022
+  each reading order's five numbers fitted alone
+    order 1865: floor fit E 4.785  A 6.19  alpha 0.2815  | line alpha 0.0134
+    order    7: floor fit E 0.000  A 5.37  alpha 0.0055  | line alpha 0.0055
+    order   11: floor fit E 5.110  A 0.00  alpha -0.4634  | line alpha -0.0117
+  leave one out (floor fit on four means, miss on the fifth)
+    without s1: alpha -0.0063  E 0.000  miss on it +0.1452
+    without s2: alpha 0.0166  E 3.931  miss on it -0.0629
+    without s3: alpha 0.0026  E 0.397  miss on it -0.0972
+    without s4: alpha 0.1166  E 4.839  miss on it +0.1254
+    without s5: alpha 0.0003  E 0.000  miss on it -0.0342
+
+Part 4b. predicting the sixth size (width 192, N 1,776,768), held back from every fit
+  line  fit predicts 5.0677; measured 5.0375 (orders 4.8505, 4.9888, 5.2731, spread 0.4225); miss -0.0302
+  floor fit predicts 5.0675; measured 5.0375 (orders 4.8505, 4.9888, 5.2731, spread 0.4225); miss -0.0300
+  floor fit with all six: E 3.303  A 2.01  alpha 0.0097; line alpha 0.0034
+  extrapolations far past the data (no run exists to check them)
+    N   2,373,376: line 5.065   floor 5.064
+    N  10,000,000: line 5.049   floor 5.049
+    N 100,000,000: line 5.023   floor 5.024
+
+Part 5b. the same five means with embeddings counted (total learned numbers)
+  line alpha 0.0025 (non-embedding 0.0022);  floor fit E 1.784 A 3.48 alpha 0.0039
+
+  reproducibility: the five order-1865 runs at 1e-3 were run twice (the second time to record the sentence loss)
+    s1_384: first 5.751668  second 5.755148  DIFFERENT
+    s2_384: first 5.468015  second 5.468675  DIFFERENT
+    s3_384: first 5.355825  second 5.312557  DIFFERENT
+    s4_384: first 5.140648  second 5.144791  DIFFERENT
+    s5_384: first 5.031208  second 5.024629  DIFFERENT
+
+Part 6. three compute budgets, each spent five ways (isoFLOP), held-out loss at the end of each run
+  budget C = 2.35e+11 operations (6ND), peak lr 1e-3
+    s1 N   50,368  steps    759  D    777,216  tokens per number    15.4  passes  1.98  Carroll 5.2212  Looking-Glass 5.3617
+    s2 N  112,416  steps    340  D    348,160  tokens per number     3.1  passes  0.88  Carroll 5.5694  Looking-Glass 5.6203
+    s3 N  199,040  steps    192  D    196,608  tokens per number     1.0  passes  0.50  Carroll 5.9462  Looking-Glass 5.9272
+    s4 N  446,016  steps     86  D     88,064  tokens per number     0.2  passes  0.22  Carroll 6.2322  Looking-Glass 6.1695
+    s5 N  791,296  steps     48  D     49,152  tokens per number     0.1  passes  0.12  Carroll 6.2745  Looking-Glass 6.1984
+    the parabola opens downwards: no bottom
+  budget C = 9.39e+11 operations (6ND), peak lr 1e-3
+    s1 N   50,368  steps  3,035  D  3,107,840  tokens per number    61.7  passes  7.90  Carroll 4.4354  Looking-Glass 4.8515
+    s2 N  112,416  steps  1,360  D  1,392,640  tokens per number    12.4  passes  3.54  Carroll 4.6268  Looking-Glass 4.9755
+    s3 N  199,040  steps    768  D    786,432  tokens per number     4.0  passes  2.00  Carroll 4.8079  Looking-Glass 5.0490
+    s4 N  446,016  steps    343  D    351,232  tokens per number     0.8  passes  0.89  Carroll 5.1688  Looking-Glass 5.3116
+    s5 N  791,296  steps    193  D    197,632  tokens per number     0.2  passes  0.50  Carroll 5.5539  Looking-Glass 5.5851
+    lowest measured: s1; parabola bottom N 25,718 (inside the sizes: False), L 4.3989, D = C/6N 6,086,481, tokens per number 236.7
+  budget C = 3.76e+12 operations (6ND), peak lr 1e-3
+    s1 N   50,368  steps 12,140  D 12,431,360  tokens per number   246.8  passes 31.59  Carroll 3.9597  Looking-Glass 4.5911
+    s2 N  112,416  steps  5,439  D  5,569,536  tokens per number    49.5  passes 14.15  Carroll 4.0142  Looking-Glass 4.5553
+    s3 N  199,040  steps  3,072  D  3,145,728  tokens per number    15.8  passes  7.99  Carroll 4.0931  Looking-Glass 4.5557
+    s4 N  446,016  steps  1,371  D  1,403,904  tokens per number     3.1  passes  3.57  Carroll 4.2608  Looking-Glass 4.7191
+    s5 N  791,296  steps    773  D    791,552  tokens per number     1.0  passes  2.01  Carroll 4.5382  Looking-Glass 4.8658
+    lowest measured: s1; parabola bottom N 61,535 (inside the sizes: True), L 3.9660, D = C/6N 10,175,906, tokens per number 165.4
+  budget C = 9.39e+11 operations (6ND), peak lr 3e-3
+    s1 N   50,368  steps  3,035  D  3,107,840  tokens per number    61.7  passes  7.90  Carroll 4.1727  Looking-Glass 4.6449
+    s2 N  112,416  steps  1,360  D  1,392,640  tokens per number    12.4  passes  3.54  Carroll 4.2519  Looking-Glass 4.7472
+    s3 N  199,040  steps    768  D    786,432  tokens per number     4.0  passes  2.00  Carroll 4.5523  Looking-Glass 4.8877
+    s4 N  446,016  steps    343  D    351,232  tokens per number     0.8  passes  0.89  Carroll 4.8220  Looking-Glass 5.0561
+    s5 N  791,296  steps    193  D    197,632  tokens per number     0.2  passes  0.50  Carroll 5.7635  Looking-Glass 5.8149
+    lowest measured: s1; parabola bottom N 72,605 (inside the sizes: True), L 4.1723, D = C/6N 2,155,939, tokens per number 29.7
+  budget C = 3.76e+12 operations (6ND), peak lr 3e-3
+    s1 N   50,368  steps 12,140  D 12,431,360  tokens per number   246.8  passes 31.59  Carroll 3.8963  Looking-Glass 4.5554
+    s2 N  112,416  steps  5,439  D  5,569,536  tokens per number    49.5  passes 14.15  Carroll 3.8558  Looking-Glass 4.4938
+    s3 N  199,040  steps  3,072  D  3,145,728  tokens per number    15.8  passes  7.99  Carroll 3.9370  Looking-Glass 4.5065
+    s4 N  446,016  steps  1,371  D  1,403,904  tokens per number     3.1  passes  3.57  Carroll 4.3184  Looking-Glass 4.7795
+    s5 N  791,296  steps    773  D    791,552  tokens per number     1.0  passes  2.01  Carroll 4.6041  Looking-Glass 4.9283
+    lowest measured: s2; parabola bottom N 84,794 (inside the sizes: True), L 3.8477, D = C/6N 7,384,725, tokens per number 87.1
+
+Part 7. one size (s3, N 199,040) read for longer: tokens against held-out loss
+  steps    96  D    98,304  passes  0.25  Carroll 6.2966  Looking-Glass 6.2492  last-24 batch 6.1054
+  steps   192  D   196,608  passes  0.50  Carroll 5.9462  Looking-Glass 5.9272  last-24 batch 5.8211
+  steps   384  D   393,216  passes  1.00  Carroll 5.3126  Looking-Glass 5.4197  last-24 batch 5.2456
+  steps   768  D   786,432  passes  2.00  Carroll 4.8079  Looking-Glass 5.0490  last-24 batch 4.7008
+  steps  1536  D 1,572,864  passes  4.00  Carroll 4.4403  Looking-Glass 4.7834  last-24 batch 4.3668
+  steps  3072  D 3,145,728  passes  7.99  Carroll 4.0931  Looking-Glass 4.5557  last-24 batch 4.0108
+  straight line through the one-pass points: L = 26.008 D^-0.1226
+    D    98,304: line 6.3550  measured 6.2966  measured - line -0.0584
+    D   196,608: line 5.8374  measured 5.9462  measured - line +0.1089
+    D   393,216: line 5.3619  measured 5.3126  measured - line -0.0493
+    D   786,432: line 4.9251  measured 4.8079  measured - line -0.1172
+    D 1,572,864: line 4.5239  measured 4.4403  measured - line -0.0836
+    D 3,145,728: line 4.1554  measured 4.0931  measured - line -0.0623
+
+  s1 at peak lr 1e-3 for 12,140 steps (31.6 passes): held-out Carroll along the run 4.0p 4.687, 7.9p 4.303, 11.8p 4.145, 15.8p 4.123, 19.7p 4.014, 23.7p 4.011, 27.6p 3.995, 31.6p 3.960
+
+  s1 at peak lr 3e-3 for 12,140 steps (31.6 passes): held-out Carroll along the run 4.0p 4.536, 7.9p 4.198, 11.8p 4.066, 15.8p 4.059, 19.7p 3.943, 23.7p 3.955, 27.6p 3.928, 31.6p 3.896
+
+Part 8. learning rate: three sizes at five peak rates (384 steps, order 1865)
+  s1: 3e-4 6.3527  1e-3 5.7551  3e-3 5.1608  6e-3 4.9207  1e-2 5.1386
+  s3: 3e-4 6.0116  1e-3 5.3126  3e-3 4.9031  6e-3 5.0859  1e-2 5.0597
+  s5: 3e-4 5.4960  1e-3 5.0246  3e-3 4.9229  6e-3 5.0097  1e-2 5.0586
+
+  too few steps: s4 (N 446,016) stopped early, each with its own warmup and decay
+    s4   48 steps: Carroll 6.3602
+    s4   96 steps: Carroll 6.1858
+    s4  343 steps: Carroll 5.1688
+    s4  384 steps: Carroll 5.1448
+
+Part 9. what 6ND leaves out: time per step against 6 N x 1,024 (one thread, 384-step runs, order 1865)
+  s1:   36.3 ms/step; 6N x 1,024 =  0.309 G; output table adds  0.403 G (1.30 of 6N); attention scores and blend add 0.101 G; G per second counting 6N only  8.52, counting all 22.38
+  s2:   50.9 ms/step; 6N x 1,024 =  0.691 G; output table adds  0.604 G (0.87 of 6N); attention scores and blend add 0.151 G; G per second counting 6N only 13.57, counting all 28.41
+  s3:   64.9 ms/step; 6N x 1,024 =  1.223 G; output table adds  0.805 G (0.66 of 6N); attention scores and blend add 0.201 G; G per second counting 6N only 18.83, counting all 34.33
+  s4:   91.9 ms/step; 6N x 1,024 =  2.740 G; output table adds  1.208 G (0.44 of 6N); attention scores and blend add 0.302 G; G per second counting 6N only 29.82, counting all 46.25
+  s5:  117.1 ms/step; 6N x 1,024 =  4.862 G; output table adds  1.611 G (0.33 of 6N); attention scores and blend add 0.403 G; G per second counting 6N only 41.51, counting all 58.70
+  s6:  193.5 ms/step; 6N x 1,024 = 10.916 G; output table adds  2.416 G (0.22 of 6N); attention scores and blend add 0.604 G; G per second counting 6N only 56.42, counting all 72.03

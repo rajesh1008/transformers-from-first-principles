@@ -1,0 +1,4 @@
+Chapter 8 scripts, run from 04-code/ch08 in this order (NumPy only; gpt2_head.py downloads GPT-2 small, 548 MB, once):
+stage0_scores.py  hand_head.py  softmax_interlude.py  saturation.py  whole_head.py  cheating.py  limits.py
+lab_attention.py  tiny_head.py  gpt2_head.py  scoreboard.py
+Outputs are saved in outputs/ (python3 X.py > outputs/X.txt). Last full run: 10 November 2026, book build machine (CPU).

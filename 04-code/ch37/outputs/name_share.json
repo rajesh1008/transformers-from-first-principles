@@ -1,0 +1,654 @@
+{
+ "GPT-2 small": [
+  {
+   "group": "well",
+   "country": "France",
+   "text": "the capital of the French Republic, and the capital",
+   "right": false,
+   "mean_share": 0.2790083418286933,
+   "name_token": "French",
+   "name_share": 0.13667803094819136
+  },
+  {
+   "group": "well",
+   "country": "Japan",
+   "text": "the capital of the United States, and the United",
+   "right": false,
+   "mean_share": 0.34935048696119786,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "well",
+   "country": "Italy",
+   "text": "Rome, and the capital of the world is Rome",
+   "right": true,
+   "mean_share": 0.31775568539717114,
+   "name_token": "Rome",
+   "name_share": 0.15734833320749356
+  },
+  {
+   "group": "well",
+   "country": "Egypt",
+   "text": "the capital of the Muslim Brotherhood, which has been",
+   "right": false,
+   "mean_share": 0.3984739781834274,
+   "name_token": "Muslim",
+   "name_share": 0.1259147885710514
+  },
+  {
+   "group": "well",
+   "country": "Russia",
+   "text": "the capital of the Russian Federation, and the capital",
+   "right": false,
+   "mean_share": 0.2983702839902071,
+   "name_token": "Russian",
+   "name_share": 0.08793794740116588
+  },
+  {
+   "group": "well",
+   "country": "Spain",
+   "text": "Madrid, and the capital of Spain is Madrid.",
+   "right": true,
+   "mean_share": 0.3637637157796742,
+   "name_token": "Madrid",
+   "name_share": 0.10501336475260718
+  },
+  {
+   "group": "well",
+   "country": "Germany",
+   "text": "the capital of the German state, and the capital",
+   "right": false,
+   "mean_share": 0.26412078614152745,
+   "name_token": "German",
+   "name_share": 0.067760497478097
+  },
+  {
+   "group": "well",
+   "country": "Greece",
+   "text": "Athens, and the capital of the country is Athens",
+   "right": true,
+   "mean_share": 0.34686793362367474,
+   "name_token": "Athens",
+   "name_share": 0.1779008900432261
+  },
+  {
+   "group": "well",
+   "country": "England",
+   "text": "the capital of the English Empire, and the capital",
+   "right": false,
+   "mean_share": 0.26847244967890727,
+   "name_token": "English",
+   "name_share": 0.11510547244593777
+  },
+  {
+   "group": "well",
+   "country": "China",
+   "text": "the capital of the world's largest economy, and",
+   "right": false,
+   "mean_share": 0.2872475670825715,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "well",
+   "country": "Ireland",
+   "text": "the capital of the United Kingdom, and the capital",
+   "right": false,
+   "mean_share": 0.31515869790730744,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "well",
+   "country": "Austria",
+   "text": "the capital of the Republic of Austria, and the",
+   "right": false,
+   "mean_share": 0.34159086753543805,
+   "name_token": "Austria",
+   "name_share": 0.2987083654974226
+  },
+  {
+   "group": "well",
+   "country": "Portugal",
+   "text": "the capital of the Portuguese Republic, and the capital",
+   "right": false,
+   "mean_share": 0.25103241770848805,
+   "name_token": "Portuguese",
+   "name_share": 0.08889304414146465
+  },
+  {
+   "group": "well",
+   "country": "Poland",
+   "text": "Warsaw, and the capital of the Czech Republic is",
+   "right": true,
+   "mean_share": 0.4093315646709397,
+   "name_token": "Warsaw",
+   "name_share": 0.10315044732871524
+  },
+  {
+   "group": "well",
+   "country": "Thailand",
+   "text": "the capital of the Republic of Thailand, and the",
+   "right": false,
+   "mean_share": 0.4155585782173136,
+   "name_token": "Thailand",
+   "name_share": 0.7951606116825057
+  },
+  {
+   "group": "less",
+   "country": "Mongolia",
+   "text": "the capital of the Mongolian Empire, and the",
+   "right": false,
+   "mean_share": 0.34487292390472346,
+   "name_token": "Mongol",
+   "name_share": 0.05573621853970782
+  },
+  {
+   "group": "less",
+   "country": "Bhutan",
+   "text": "the capital of the Democratic Republic of Congo, and",
+   "right": false,
+   "mean_share": 0.46177501500703133,
+   "name_token": "Congo",
+   "name_share": 0.6449040250813458
+  },
+  {
+   "group": "less",
+   "country": "Laos",
+   "text": "the capital of the Republic of Thailand, and the",
+   "right": false,
+   "mean_share": 0.35852694337569685,
+   "name_token": "Thailand",
+   "name_share": 0.17507143988051344
+  },
+  {
+   "group": "less",
+   "country": "Malawi",
+   "text": "the capital of the Democratic Republic of Congo, which",
+   "right": false,
+   "mean_share": 0.48244299925095085,
+   "name_token": "Congo",
+   "name_share": 0.6221584429311828
+  },
+  {
+   "group": "less",
+   "country": "Suriname",
+   "text": "the capital of the Philippines, and the capital of",
+   "right": false,
+   "mean_share": 0.3405796481016657,
+   "name_token": "Philippines",
+   "name_share": 0.01820693544185294
+  },
+  {
+   "group": "less",
+   "country": "Eritrea",
+   "text": "the capital of the Democratic Republic of the Congo,",
+   "right": false,
+   "mean_share": 0.5556606893417398,
+   "name_token": "Congo",
+   "name_share": 0.9988131002841936
+  },
+  {
+   "group": "less",
+   "country": "Tajikistan",
+   "text": "the capital of Tajikistan, and the capital",
+   "right": false,
+   "mean_share": 0.4462522729784769,
+   "name_token": "Taj",
+   "name_share": 0.3862103750403688
+  },
+  {
+   "group": "less",
+   "country": "Burkina Faso",
+   "text": "the capital of the Democratic Republic of Congo, and",
+   "right": false,
+   "mean_share": 0.4485655823225952,
+   "name_token": "Congo",
+   "name_share": 0.5491838216642754
+  },
+  {
+   "group": "less",
+   "country": "Moldova",
+   "text": "the capital of the Russian Federation, and the country",
+   "right": false,
+   "mean_share": 0.31557409617967785,
+   "name_token": "Russian",
+   "name_share": 0.07115112517113645
+  },
+  {
+   "group": "less",
+   "country": "Kyrgyzstan",
+   "text": "the capital of the Republic of Kyrgyzstan",
+   "right": false,
+   "mean_share": 0.5969544050620186,
+   "name_token": "Kyr",
+   "name_share": 0.33603503516093103
+  },
+  {
+   "group": "less",
+   "country": "Gabon",
+   "text": "the capital of the Democratic Republic of Congo, which",
+   "right": false,
+   "mean_share": 0.5060579997061883,
+   "name_token": "Congo",
+   "name_share": 0.8404146614537348
+  },
+  {
+   "group": "less",
+   "country": "Belize",
+   "text": "the capital of the United States.  The",
+   "right": false,
+   "mean_share": 0.4087433714593115,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "less",
+   "country": "Lesotho",
+   "text": "the capital of the Republic of the Congo, and",
+   "right": false,
+   "mean_share": 0.3060837397153243,
+   "name_token": "Congo",
+   "name_share": 0.1167732094776868
+  },
+  {
+   "group": "less",
+   "country": "Tuvalu",
+   "text": "the capital of the Tuvalu People's Republic",
+   "right": false,
+   "mean_share": 0.5406096504376631,
+   "name_token": "Tu",
+   "name_share": 0.0721209570403226
+  },
+  {
+   "group": "less",
+   "country": "Benin",
+   "text": "the capital of the Kingdom of the Holy Land.",
+   "right": false,
+   "mean_share": 0.3254031268575721,
+   "name_token": "Holy",
+   "name_share": 0.05477595150401242
+  },
+  {
+   "group": "invented",
+   "country": "Zubrovia",
+   "text": "the capital of the country's second largest oil company",
+   "right": false,
+   "mean_share": 0.3147649508778837,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "invented",
+   "country": "Veltrania",
+   "text": "the capital of the Republic of Lithuania. The capital",
+   "right": false,
+   "mean_share": 0.3181160136527085,
+   "name_token": "Lithuania",
+   "name_share": 0.09165190286265498
+  },
+  {
+   "group": "invented",
+   "country": "Oskaria",
+   "text": "the capital of the Oskar region, which",
+   "right": false,
+   "mean_share": 0.3357246845666477,
+   "name_token": "O",
+   "name_share": 0.03786631649751209
+  },
+  {
+   "group": "invented",
+   "country": "Marundi Kel",
+   "text": "the capital of the Republic of the Republic of the",
+   "right": false,
+   "mean_share": 0.3771507872244687,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "invented",
+   "country": "Talvessa",
+   "text": "the capital of the Empire of the Empire of the",
+   "right": false,
+   "mean_share": 0.35344717452529956,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "invented",
+   "country": "Quorvath",
+   "text": "the capital of the Khajiit Empire. The",
+   "right": false,
+   "mean_share": 0.2972514541967214,
+   "name_token": "Kh",
+   "name_share": 0.020695806699338196
+  }
+ ],
+ "SmolLM2-135M": [
+  {
+   "group": "well",
+   "country": "France",
+   "text": "the capital of the country.  The capital",
+   "right": false,
+   "mean_share": 0.3180098849744602,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "well",
+   "country": "Japan",
+   "text": "Tokyo.  The capital of Japan is Tokyo",
+   "right": true,
+   "mean_share": 0.3969803793786197,
+   "name_token": "Tokyo",
+   "name_share": 0.1827541823320015
+  },
+  {
+   "group": "well",
+   "country": "Italy",
+   "text": "the city of Rome. It is the largest city",
+   "right": true,
+   "mean_share": 0.45029985221741364,
+   "name_token": "Rome",
+   "name_share": 0.5354642742146096
+  },
+  {
+   "group": "well",
+   "country": "Egypt",
+   "text": "the Nile River. The Nile is the longest river",
+   "right": false,
+   "mean_share": 0.34892421671329255,
+   "name_token": "Nile",
+   "name_share": 0.13292811984786493
+  },
+  {
+   "group": "well",
+   "country": "Russia",
+   "text": "Moscow. Moscow is the largest city in Russia and",
+   "right": true,
+   "mean_share": 0.48490375910451133,
+   "name_token": "Moscow",
+   "name_share": 0.22905590007304136
+  },
+  {
+   "group": "well",
+   "country": "Spain",
+   "text": "Madrid. Madrid is the largest city in Spain and",
+   "right": true,
+   "mean_share": 0.4889191903603338,
+   "name_token": "Madrid",
+   "name_share": 0.251424327136307
+  },
+  {
+   "group": "well",
+   "country": "Germany",
+   "text": "the state of Bavaria. Bavaria is a state in",
+   "right": false,
+   "mean_share": 0.3193269214047575,
+   "name_token": "Bavaria",
+   "name_share": 0.14723854226631422
+  },
+  {
+   "group": "well",
+   "country": "Greece",
+   "text": "the city of Athens. Athens is the capital of",
+   "right": true,
+   "mean_share": 0.487766076606583,
+   "name_token": "Athens",
+   "name_share": 0.8260315935539856
+  },
+  {
+   "group": "well",
+   "country": "England",
+   "text": "the capital of the United Kingdom. It is the",
+   "right": false,
+   "mean_share": 0.4748772691284371,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "well",
+   "country": "China",
+   "text": "the city of Beijing. It is the largest city",
+   "right": true,
+   "mean_share": 0.4326412024307956,
+   "name_token": "Beijing",
+   "name_share": 0.4086034716192302
+  },
+  {
+   "group": "well",
+   "country": "Ireland",
+   "text": "the city of Dublin. Dublin is the largest city",
+   "right": true,
+   "mean_share": 0.46898531456646086,
+   "name_token": "Dublin",
+   "name_share": 0.7105851258794332
+  },
+  {
+   "group": "well",
+   "country": "Austria",
+   "text": "the city of Vienna. The city is the seat",
+   "right": true,
+   "mean_share": 0.37698156454472265,
+   "name_token": "Vienna",
+   "name_share": 0.7080225290939663
+  },
+  {
+   "group": "well",
+   "country": "Portugal",
+   "text": "the city of Lisbon. It is the largest city",
+   "right": true,
+   "mean_share": 0.4680817555516869,
+   "name_token": "Lisbon",
+   "name_share": 0.682438955497724
+  },
+  {
+   "group": "well",
+   "country": "Poland",
+   "text": "the city of Warsaw. Warsaw is the largest city",
+   "right": true,
+   "mean_share": 0.44735481962120927,
+   "name_token": "Warsaw",
+   "name_share": 0.3402279724209836
+  },
+  {
+   "group": "well",
+   "country": "Thailand",
+   "text": "Bangkok, the largest city in the country.",
+   "right": true,
+   "mean_share": 0.5626310238274772,
+   "name_token": "Bang",
+   "name_share": 0.1903600418195627
+  },
+  {
+   "group": "less",
+   "country": "Mongolia",
+   "text": "the city of Ulaanbaatar, which",
+   "right": true,
+   "mean_share": 0.6539959984949262,
+   "name_token": "U",
+   "name_share": 0.5505937222133173
+  },
+  {
+   "group": "less",
+   "country": "Bhutan",
+   "text": "the capital of the country, but it is not",
+   "right": false,
+   "mean_share": 0.29553481041865504,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "less",
+   "country": "Laos",
+   "text": "the city of Vientiane. The capital of",
+   "right": true,
+   "mean_share": 0.5115015991939872,
+   "name_token": "V",
+   "name_share": 0.26490990686352656
+  },
+  {
+   "group": "less",
+   "country": "Malawi",
+   "text": "the capital of Malawi. The capital of Malawi is",
+   "right": false,
+   "mean_share": 0.4653938262676374,
+   "name_token": "Malawi",
+   "name_share": 0.4145295390530796
+  },
+  {
+   "group": "less",
+   "country": "Suriname",
+   "text": "the city of Paramaribo. The capital of",
+   "right": true,
+   "mean_share": 0.5009900078927592,
+   "name_token": "Param",
+   "name_share": 0.4362458494143029
+  },
+  {
+   "group": "less",
+   "country": "Eritrea",
+   "text": "the city of Asmara. It is the",
+   "right": true,
+   "mean_share": 0.5113829880524874,
+   "name_token": "As",
+   "name_share": 0.3382589466036254
+  },
+  {
+   "group": "less",
+   "country": "Tajikistan",
+   "text": "the city of Tashkent. The capital",
+   "right": false,
+   "mean_share": 0.5624289634608332,
+   "name_token": "T",
+   "name_share": 0.14932552111137878
+  },
+  {
+   "group": "less",
+   "country": "Burkina Faso",
+   "text": "the city of Ouagadougou.",
+   "right": true,
+   "mean_share": 0.6855088503613004,
+   "name_token": "O",
+   "name_share": 0.12539475269542055
+  },
+  {
+   "group": "less",
+   "country": "Moldova",
+   "text": "the city of T\u00e2rgovi\u015fte",
+   "right": false,
+   "mean_share": 0.6167433013648338,
+   "name_token": "T",
+   "name_share": 0.15331136496148204
+  },
+  {
+   "group": "less",
+   "country": "Kyrgyzstan",
+   "text": "the city of Bishkek. The capital",
+   "right": true,
+   "mean_share": 0.5575884996138164,
+   "name_token": "B",
+   "name_share": 0.25349308020223515
+  },
+  {
+   "group": "less",
+   "country": "Gabon",
+   "text": "the city of Boma, which is located in",
+   "right": false,
+   "mean_share": 0.3406410526564954,
+   "name_token": "B",
+   "name_share": 0.132387878037251
+  },
+  {
+   "group": "less",
+   "country": "Belize",
+   "text": "the city of Belize City. The city is located",
+   "right": false,
+   "mean_share": 0.4145281245357971,
+   "name_token": "Belize",
+   "name_share": 0.2686439875398832
+  },
+  {
+   "group": "less",
+   "country": "Lesotho",
+   "text": "named as the capital of the country. The capital",
+   "right": false,
+   "mean_share": 0.3183087646016716,
+   "name_token": null,
+   "name_share": null
+  },
+  {
+   "group": "less",
+   "country": "Tuvalu",
+   "text": "the capital of the country. The capital of Tu",
+   "right": false,
+   "mean_share": 0.3546255279516098,
+   "name_token": "Tu",
+   "name_share": 0.5536413910951281
+  },
+  {
+   "group": "less",
+   "country": "Benin",
+   "text": "the city of Benin City. The city is located",
+   "right": false,
+   "mean_share": 0.3620806846620533,
+   "name_token": "Benin",
+   "name_share": 0.24830725347041824
+  },
+  {
+   "group": "invented",
+   "country": "Zubrovia",
+   "text": "the city of Zubrovia. It is",
+   "right": false,
+   "mean_share": 0.47866723931980387,
+   "name_token": "Z",
+   "name_share": 0.17201174186024262
+  },
+  {
+   "group": "invented",
+   "country": "Veltrania",
+   "text": "the city of Veltra, which is located",
+   "right": false,
+   "mean_share": 0.3943527982424597,
+   "name_token": "V",
+   "name_share": 0.15295458950392388
+  },
+  {
+   "group": "invented",
+   "country": "Oskaria",
+   "text": "the city of Oskaria, which is the",
+   "right": false,
+   "mean_share": 0.3597425693008906,
+   "name_token": "O",
+   "name_share": 0.14999119806502723
+  },
+  {
+   "group": "invented",
+   "country": "Marundi Kel",
+   "text": "the city of Kisangani. The city",
+   "right": false,
+   "mean_share": 0.3176644192606477,
+   "name_token": "K",
+   "name_share": 0.07625000474161066
+  },
+  {
+   "group": "invented",
+   "country": "Talvessa",
+   "text": "the city of Talvessa, which is located",
+   "right": false,
+   "mean_share": 0.40820224339257677,
+   "name_token": "Tal",
+   "name_share": 0.06463899983560695
+  },
+  {
+   "group": "invented",
+   "country": "Quorvath",
+   "text": "the city of the gods, the city of the",
+   "right": false,
+   "mean_share": 0.3318373081224129,
+   "name_token": null,
+   "name_share": null
+  }
+ ]
+}

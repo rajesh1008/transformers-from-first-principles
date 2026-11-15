@@ -1,0 +1,20 @@
+Tiny (12 layers, width 128, 4 heads), one forward pass over n tokens, best of 3:
+  n   128       16.2 ms      126.7 us per token
+  n   256       32.4 ms      126.6 us per token
+  n   512      105.3 ms      205.7 us per token
+  n  1024      548.7 ms      535.8 us per token
+SmolLM2-135M (30 layers, width 576, 9 query heads, 3 key/value heads), loss of every token in one pass, blocked attention:
+  n   128      0.50 s      3.92 ms per token
+  n   256      1.02 s      3.98 ms per token
+  n   512      2.19 s      4.28 ms per token
+  n  1024      4.83 s      4.72 ms per token
+  n  2048     14.77 s      7.21 ms per token
+  n  4096     54.83 s     13.39 ms per token
+SmolLM2-135M by arithmetic: per token, linear maps 106,168,320 multiply-adds (plus 28,311,552 for the output table)
+ n          score entries per layer   attention multiply-adds per token (QK and AV)   share of the layer maps   cache bytes (bf16)
+     1,024                 9,437,184                     17,694,720         0.17         23,592,960
+     4,096               150,994,944                     70,778,880         0.67         94,371,840
+     8,192               603,979,776                    141,557,760         1.33        188,743,680
+    32,768             9,663,676,416                    566,231,040         5.33        754,974,720
+   131,072           154,618,822,656                  2,264,924,160        21.33      3,019,898,880
+ 1,048,576         9,895,604,649,984                 18,119,393,280       170.67     24,159,191,040

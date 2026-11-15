@@ -1,0 +1,65 @@
+{
+ "checkpoint": "main_step1000",
+ "step": 1000,
+ "params": 10050560,
+ "fp32": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 4.899028837066336,
+   "bpc": 1.9559863815396248
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.578352032579141,
+   "bpc": 2.0351400308905245
+  }
+ },
+ "int8": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 4.899145357387582,
+   "bpc": 1.9560329034461312
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.577976372036232,
+   "bpc": 2.0349730446466836
+  }
+ },
+ "int8_numbers": 10027008,
+ "int8_maxerr": 0.0019722282886505127,
+ "bytes_fp32": 40202240,
+ "bytes_int8": 10247168,
+ "cache_maxdiff": 1.430511474609375e-05,
+ "samples": [
+  {
+   "seed": 1,
+   "text": "the cat sat on the matches of\nparting, and sank about the lamp: stood in the head with the door,\nmade a disile of the chaise-rate-shop. He had felt that\nbetter, and made him again. There was a new passion, and many little\nsoleastes, and had no doubt for a there had been strength for death there;\nthe ounal arose, and its knowledge of the Easter Barrant, and the coach\nof his own house, and on which he was new and large. He had\nsometimes liked that Mr. Jaggers",
+   "new_tokens": 120,
+   "seconds": 0.38601255416870117,
+   "tps": 310.8707183330513
+  },
+  {
+   "seed": 2,
+   "text": "the cat sat on the maters of the spot, and I had a studied\nshurn and failed a fire into the trovening.\n\n\u201cYes, Miss Havisham!\u201d said Lord: \u201cIRist!\u201d\n\nElinor, followed the utmost admiration of her hair, and\nof a little account of various fulfils. He seemed in again, and\nunstained writes from the rights, and proceeded, and with her\nspirits, as even she had started.\n\n\u201cThe girl, you are love is afraid, and I should\neghable myself. I love myself",
+   "new_tokens": 120,
+   "seconds": 0.38419628143310547,
+   "tps": 312.340347367193
+  },
+  {
+   "seed": 3,
+   "text": "the cat sat on the match-day bring us. I thought my\nfatch. But he was to say he was a madman with a wart poor fellow, and I was gone to see it on\nall where Jonathan\u2019s. He having no ears up his head being in, and he told\nI see it. And yet how you can do that, I should then guess it; of course,\u201d\nI went about to my presence.\n\n\u201cThat is not,\u201d he exclaimed.\n\n\u201cHave month the society to live? Whatever_\n\nI don\u2019t love you,",
+   "new_tokens": 120,
+   "seconds": 0.37891054153442383,
+   "tps": 316.6974439772826
+  }
+ ]
+}

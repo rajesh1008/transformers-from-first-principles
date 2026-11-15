@@ -1,0 +1,28 @@
+one head on the toy rows
+  mat's row [-1.0, 1.0]; the head brings [0.665, -0.297]
+  with the addition (x + head(x)): [-0.335, 0.703] | without (head(x) alone): [0.665, -0.297]
+  cosine of mat's new row with its old row: with 0.942, without -0.934
+
+the hand layer (head, then block) six times, the same tables each time:
+  none:
+    after 1: mat [0.0, 0.333] | sat [0.212, 0.934] | mean length 0.613 | similarity 0.865
+    after 2: mat [0.29, 0.379] | sat [0.336, 0.394] | mean length 0.463 | similarity 0.973
+    after 3: mat [0.18, 0.327] | sat [0.154, 0.295] | mean length 0.334 | similarity 0.987
+    after 6: mat [0.082, 0.131] | sat [0.079, 0.127] | mean length 0.150 | similarity 1.000
+    after 6, words with the same row as 'the' (to 3 places): ['the', 'cat']
+  residual:
+    after 1: mat [0.017, 0.703] | sat [2.288, 4.15] | mean length 2.546 | similarity 0.749
+    after 2: mat [3.061, 7.306] | sat [5.361, 20.165] | mean length 13.137 | similarity 0.864
+    after 3: mat [15.293, 68.793] | sat [16.443, 90.382] | mean length 67.752 | similarity 0.898
+    after 6: mat [1110.166, 7234.82] | sat [1110.31, 7311.423] | mean length 5910.424 | similarity 0.892
+    after 6, words with the same row as 'the' (to 3 places): ['the']
+  pre:
+    after 1: mat [0.701, 0.779] | sat [3.052, 2.262] | mean length 2.613 | similarity 0.880
+    after 2: mat [2.961, 2.114] | sat [5.331, 3.603] | mean length 5.121 | similarity 0.965
+    after 3: mat [5.246, 3.445] | sat [7.622, 4.93] | mean length 7.700 | similarity 0.984
+    after 6: mat [12.11, 7.424] | sat [14.495, 8.9] | mean length 15.536 | similarity 0.996
+    after 6, words with the same row as 'the' (to 3 places): ['the']
+
+the residual stream after three pre-norm hand layers, for mat:
+  top row [5.246, 3.445] = bottom row [-1.0, 1.0] + six writes [[0.994, -0.221], [0.707, 0.0], [1.907, 0.722], [0.353, 0.613], [1.931, 0.719], [0.354, 0.612]]
+  sum check: [5.246, 3.445]; exact: True

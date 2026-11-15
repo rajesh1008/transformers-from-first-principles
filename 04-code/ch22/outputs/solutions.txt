@@ -1,0 +1,9 @@
+1. padding wastes 92.7% of seats; packed: 96.3% of predictions see another document (exact: 1 - 150.5 / 4096 = 96.3%)
+2. document mask allows 2,875 cells; causal mask 8,385
+3. J = 0.652; expected agreements 83.5 of 128, spread 5.4 positions (0.042 in the estimate)
+4. 32 bands of 4: threshold 0.420; chance at 0.3 0.229, at 0.8 1.0000
+4. 16 bands of 8: threshold 0.707; chance at 0.3 0.001, at 0.8 0.9470
+4. 64 bands of 2: threshold 0.125; chance at 0.3 0.998, at 0.8 1.0000
+5. 768 windows, 98,304 predictions over 44,359 = 2.22 passes
+6. 14,902 shards of 268,435,456 bytes; with 100,000 tokens uint32: 536,870,912 bytes per shard
+7. average largest share 0.994; batches with a single source 96.3%

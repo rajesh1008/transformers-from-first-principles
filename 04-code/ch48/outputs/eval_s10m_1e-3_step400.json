@@ -1,0 +1,65 @@
+{
+ "checkpoint": "s10m_1e-3_step400",
+ "step": 400,
+ "params": 10050560,
+ "fp32": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.342773771777596,
+   "bpc": 2.133155995771202
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 5.059220938513121,
+   "bpc": 2.2488928295204444
+  }
+ },
+ "int8": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.342646200632312,
+   "bpc": 2.1331050617124014
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 5.059147471703854,
+   "bpc": 2.2488601725199735
+  }
+ },
+ "int8_numbers": 10027008,
+ "int8_maxerr": 0.0010688416659832,
+ "bytes_fp32": 40202240,
+ "bytes_int8": 10247168,
+ "cache_maxdiff": 1.239776611328125e-05,
+ "samples": [
+  {
+   "seed": 1,
+   "text": "the cat sat on the matven of\nparties, and made a great old fires might\nacquaming with her, and stits a disroom, Wical\nmruistly. \u201cYou are about\ngentlemanmmacised his shoulder. Carton! Bustcker--ily, and\nbefore you, and poor in the\nle there don\u2019t apply, there are out. You\u2019t.\nI\u2019t fill pleased, and Bput your appearance.\u201d\n\n\n\u201cA very far, Joseph won\u2019s, you\u2019sixbe a second-crequis cut.",
+   "new_tokens": 120,
+   "seconds": 0.35935235023498535,
+   "tps": 333.9340898188933
+  },
+  {
+   "seed": 2,
+   "text": "the cat sat on the maters of\nb please, I had been a public-shist and for him. I\n\n\n\u201c\u2018Give! I am injent interest, the old lady: no new and the path, however, and followed\nlong a word, and I had to be said Mr. Are you all\nto be much in the drop of the doors, I\non, that you were not goFrom any kindness of the same\ntell her to the time. They wants, it is all the\nExheadedness, and I should\nhis carriage. My resolution that you love and",
+   "new_tokens": 120,
+   "seconds": 0.3357841968536377,
+   "tps": 357.3723871594405
+  },
+  {
+   "seed": 3,
+   "text": "the cat sat on the matpowing resist no walk.\n\n\nHe had no allow a great lest\nfndting mad minutes and she had\ntheir mouth was nine daughter. He shook the smoothly grasping the\nthat a oddly having no ears on his head being in the marriage and it was a\nthe question.\n\n\u201cI did not think, sir, you not be of the,\u201d said the distance.\n\n\u201cIf we\u2019s, you to you, with an letter?\u201d\n\n\u201cAccality.\u2019 He could I have been\nevidge. \u201cWhy you did",
+   "new_tokens": 120,
+   "seconds": 0.34111595153808594,
+   "tps": 351.786539031441
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+256 query rows x 4,096 keys, width 64, key blocks of 64, random scores (seed 1865)
+  always rescale when the max grows       : rescales   951 of 16,128 row-blocks (5.90%) | largest exp held     1.00 | error 1.4e-16
+  rescale only if it grows by > log 256   : rescales     0 of 16,128 row-blocks (0.00%) | largest exp held    32.81 | error 1.7e-16
+
+the same with scores that grow along the row (a strongly recency-biased head):
+  always rescale                          : rescales 6,889 of 16,128 (42.71%) | largest exp held       1.00 | error 3.9e-16
+  threshold log 256                       : rescales   485 of 16,128 (3.01%) | largest exp held     252.69 | error 3.3e-16
+
+fixed shift (no running max at all), 16-bit exponentials:
+  shift = true row max      : rows with overflow   0 | largest share error 3.5e-06
+  shift = 8 for every row   : rows with overflow   0 | largest share error 1.8e-05
+  shift = 0                 : rows with overflow   0 | largest share error 3.6e-05
+  recency-biased scores, shift 8: rows with overflow 0 of 256 (largest score 16.0; float16 exp overflows above 11.09)
+  recency-biased scores, shift 0: rows with overflow 256 of 256 (largest score 16.0; float16 exp overflows above 11.09)

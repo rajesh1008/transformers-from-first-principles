@@ -1,0 +1,27 @@
+Part A: 269,060,552 bytes; 272 tables; formats ['BF16']; numbers 134,515,008
+    model.layers.0.input_layernorm.weight        BF16 [576]
+    model.layers.0.mlp.down_proj.weight          BF16 [576, 1536]
+    model.layers.0.mlp.gate_proj.weight          BF16 [1536, 576]
+    model.layers.0.mlp.up_proj.weight            BF16 [1536, 576]
+    model.layers.0.post_attention_layernorm.weight BF16 [576]
+    model.layers.0.self_attn.k_proj.weight       BF16 [192, 576]
+    model.layers.0.self_attn.o_proj.weight       BF16 [576, 576]
+    model.layers.0.self_attn.q_proj.weight       BF16 [576, 576]
+    model.layers.0.self_attn.v_proj.weight       BF16 [192, 576]
+    model.embed_tokens.weight                    BF16 [49152, 576]
+    model.norm.weight                            BF16 [576]
+
+Part B: running sentence in SmolLM2's tokenizer: [1195, 2644, 2643, 335, 260, 1171] -> ['the', ' cat', ' sat', ' on', ' the', ' mat']
+  own forward vs reference: largest |difference| in log-probabilities 3.242e-05; same top token everywhere True
+  after 'the cat sat on the': entropy 5.753 nats; top 10: ' bed' 0.0477, ' couch' 0.0346, ' tree' 0.0311, ' grass' 0.0278, ' so' 0.0267, ' cat' 0.0267, ' porch' 0.0251, ' roof' 0.0214, ' edge' 0.0209, ' doorstep' 0.0195
+  ' mat' is 1 token(s) [1171]; first-token share 0.0150, rank 14
+
+Part C: four ways to load it wrong (largest |difference| in log-probabilities against the reference)
+  rotary pairs interleaved                        5.972e+00  same top token everywhere: False
+  rotary theta 10,000 instead of 100,000          1.113e+00  same top token everywhere: True
+  key-value heads tiled, not repeated in place    2.558e+01  same top token everywhere: False
+  layer norm instead of RMSNorm                   9.629e+00  same top token everywhere: False
+
+Part D: held-out Carroll, 3,051 SmolLM2 tokens (0.279 per character)
+  windows of   98: mean surprise 3.2229 nats per token; 1.3006 bits per character
+  windows of 1024: mean surprise 2.7754 nats per token; 1.1194 bits per character

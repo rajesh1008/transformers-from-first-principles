@@ -1,0 +1,2272 @@
+{
+"model": "claude-haiku-5-5",
+"date": "2026-11-11",
+"cloze": {
+"acc": {
+"shuffled": 0.8,
+"reversed": 0.79
+},
+"both": 0.66,
+"one_only": 0.27,
+"letters": {
+"A": 52,
+"B": 52,
+"C": 53,
+"D": 27
+}
+},
+"judge": {
+"acc": {
+"true": 0.9,
+"other": 0.9833333333333333
+},
+"consistent": 0.9166666666666666,
+"share_one": 0.4583333333333333
+},
+"P1": [
+{
+"item": 0,
+"order": "shuffled",
+"right": "C",
+"raw": "The passage is from Alice's Adventures in Wonderland / Through the Looking-Glass, where the chess notation reads \"",
+"answer": "?"
+},
+{
+"item": 0,
+"order": "reversed",
+"right": "B",
+"raw": "This is from Through the Looking-Glass, Chapter 2 (Chess cast list and the opening of the chess game). The pass",
+"answer": "?"
+},
+{
+"item": 1,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 1,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 2,
+"order": "shuffled",
+"right": "D",
+"raw": "This is from Lewis Carroll's dedicatory poem \"To ___\" in Alice's Adventures in Wonderland.",
+"answer": "?"
+},
+{
+"item": 2,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 3,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 3,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 4,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 4,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 5,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 5,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 6,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 6,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 7,
+"order": "shuffled",
+"right": "C",
+"raw": "This is from Alice's Adventures in Wonderland / Through the Looking-Glass: \"the kitten had been having a grand",
+"answer": "?"
+},
+{
+"item": 7,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 8,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 8,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 9,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 9,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 10,
+"order": "shuffled",
+"right": "A",
+"raw": "The passage is from Alice in Wonderland: \"...speaking in as cross a voice as she could manage.\" The word is \"manage.\"",
+"answer": "?"
+},
+{
+"item": 10,
+"order": "reversed",
+"right": "D",
+"raw": "The passage is from Alice's Adventures in Wonderland, where Alice says \"...speaking in as cross a voice as she could",
+"answer": "?"
+},
+{
+"item": 11,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 11,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 12,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 12,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 13,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 13,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 14,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 14,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 15,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 15,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 16,
+"order": "shuffled",
+"right": "D",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 16,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 17,
+"order": "shuffled",
+"right": "B",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 17,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 18,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 18,
+"order": "reversed",
+"right": "B",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 19,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 19,
+"order": "reversed",
+"right": "B",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 20,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 20,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 21,
+"order": "shuffled",
+"right": "D",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 21,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 22,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 22,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 23,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 23,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 24,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 24,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 25,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 25,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 26,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 26,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 27,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 27,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 28,
+"order": "shuffled",
+"right": "A",
+"raw": "The passage is from Alice's Adventures in Wonderland / Through the Looking-Glass. The original reads \"as the poor",
+"answer": "?"
+},
+{
+"item": 28,
+"order": "reversed",
+"right": "D",
+"raw": "The passage is from Alice's Adventures in Wonderland (Through the Looking-Glass), where the sentence reads \"as",
+"answer": "?"
+},
+{
+"item": 29,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 29,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 30,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 30,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 31,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 31,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 32,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 32,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 33,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 33,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 34,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 34,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 35,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 35,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 36,
+"order": "shuffled",
+"right": "B",
+"raw": "The passage is from Alice in Wonderland (Alice and the Queen/White Knight scene). \"so low, that Alice could",
+"answer": "?"
+},
+{
+"item": 36,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 37,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 37,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 38,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 38,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 39,
+"order": "shuffled",
+"right": "D",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 39,
+"order": "reversed",
+"right": "A",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 40,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 40,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 41,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 41,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 42,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 42,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 43,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 43,
+"order": "reversed",
+"right": "B",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 44,
+"order": "shuffled",
+"right": "B",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 44,
+"order": "reversed",
+"right": "C",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 45,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 45,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 46,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 46,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 47,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 47,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 48,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 48,
+"order": "reversed",
+"right": "D",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 49,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 49,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 50,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 50,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 51,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 51,
+"order": "reversed",
+"right": "D",
+"raw": "The original text is from Alice's Adventures in Wonderland: \"it quite seemed to take away her breath!\" So the next word is",
+"answer": "?"
+},
+{
+"item": 52,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 52,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 53,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 53,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 54,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 54,
+"order": "reversed",
+"right": "C",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 55,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 55,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 56,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 56,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 57,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 57,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 58,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 58,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 59,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 59,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 60,
+"order": "shuffled",
+"right": "C",
+"raw": "This is from Through the Looking-Glass, \"Looking-Glass Flowers\" chapter. The Larkspur says: \"",
+"answer": "?"
+},
+{
+"item": 60,
+"order": "reversed",
+"right": "B",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 61,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 61,
+"order": "reversed",
+"right": "C",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 62,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 62,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 63,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 63,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 64,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 64,
+"order": "reversed",
+"right": "C",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 65,
+"order": "shuffled",
+"right": "D",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 65,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 66,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 66,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 67,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 67,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 68,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 68,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 69,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 69,
+"order": "reversed",
+"right": "D",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 70,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 70,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 71,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 71,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 72,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 72,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 73,
+"order": "shuffled",
+"right": "D",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 73,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 74,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 74,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 75,
+"order": "shuffled",
+"right": "A",
+"raw": "This is from Through the Looking-Glass: \"they went so fast that at last they seemed to skim through the air, hardly touching the",
+"answer": "?"
+},
+{
+"item": 75,
+"order": "reversed",
+"right": "D",
+"raw": "This is from Through the Looking-Glass: \"they went so fast that at last they seemed to skim through the air, hardly touching the",
+"answer": "?"
+},
+{
+"item": 76,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 76,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 77,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 77,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 78,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 78,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 79,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 79,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 80,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 80,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 81,
+"order": "shuffled",
+"right": "B",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 81,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 82,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 82,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 83,
+"order": "shuffled",
+"right": "D",
+"raw": "The passage is from Alice's Adventures in Wonderland / Through the Looking-Glass. The sentence: \"walked on",
+"answer": "?"
+},
+{
+"item": 83,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 84,
+"order": "shuffled",
+"right": "D",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 84,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 85,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 85,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 86,
+"order": "shuffled",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 86,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 87,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 87,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 88,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 88,
+"order": "reversed",
+"right": "C",
+"raw": "The passage is from Alice in Wonderland, and the sentence continues \"just as she was about to say...\" \u2014 \"going down\" the thought",
+"answer": "?"
+},
+{
+"item": 89,
+"order": "shuffled",
+"right": "D",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 89,
+"order": "reversed",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 90,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 90,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 91,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 91,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 92,
+"order": "shuffled",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 92,
+"order": "reversed",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 93,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 93,
+"order": "reversed",
+"right": "D",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 94,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 94,
+"order": "reversed",
+"right": "D",
+"raw": "This is from Alice in Wonderland (Through the Looking-Glass), where the Gnat says \"You might make a joke on that",
+"answer": "?"
+},
+{
+"item": 95,
+"order": "shuffled",
+"right": "B",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 95,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 96,
+"order": "shuffled",
+"right": "A",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 96,
+"order": "reversed",
+"right": "D",
+"raw": "D",
+"answer": "D"
+},
+{
+"item": 97,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 97,
+"order": "reversed",
+"right": "C",
+"raw": "A",
+"answer": "A"
+},
+{
+"item": 98,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 98,
+"order": "reversed",
+"right": "C",
+"raw": "C",
+"answer": "C"
+},
+{
+"item": 99,
+"order": "shuffled",
+"right": "B",
+"raw": "B",
+"answer": "B"
+},
+{
+"item": 99,
+"order": "reversed",
+"right": "C",
+"raw": "A",
+"answer": "A"
+}
+],
+"P2": [
+{
+"item": 0,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 0,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 1,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 1,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 2,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 2,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 3,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 3,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 4,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 4,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 5,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 5,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 6,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 6,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 7,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 7,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 8,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 8,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 9,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 9,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 10,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 10,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 11,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 11,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 12,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 12,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 13,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 13,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 14,
+"first": "true",
+"right": "1",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 14,
+"first": "other",
+"right": "2",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 15,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 15,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 16,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 16,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 17,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 17,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 18,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 18,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 19,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 19,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 20,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 20,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 21,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 21,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 22,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 22,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 23,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 23,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 24,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 24,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 25,
+"first": "true",
+"right": "1",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 25,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 26,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 26,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 27,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 27,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 28,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 28,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 29,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 29,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 30,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 30,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 31,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 31,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 32,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 32,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 33,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 33,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 34,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 34,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 35,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 35,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 36,
+"first": "true",
+"right": "1",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 36,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 37,
+"first": "true",
+"right": "1",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 37,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 38,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 38,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 39,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 39,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 40,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 40,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 41,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 41,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 42,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 42,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 43,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 43,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 44,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 44,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 45,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 45,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 46,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 46,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 47,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 47,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 48,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 48,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 49,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 49,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 50,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 50,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 51,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 51,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 52,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 52,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 53,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 53,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 54,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 54,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 55,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 55,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 56,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 56,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 57,
+"first": "true",
+"right": "1",
+"raw": "1",
+"answer": "1"
+},
+{
+"item": 57,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 58,
+"first": "true",
+"right": "1",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 58,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 59,
+"first": "true",
+"right": "1",
+"raw": "2",
+"answer": "2"
+},
+{
+"item": 59,
+"first": "other",
+"right": "2",
+"raw": "2",
+"answer": "2"
+}
+],
+"example_prompt_cloze": "The passage below stops just before a word. Which of the four words comes next in the original text? Answer with the letter only.\n\nPassage: ...ha.       Messenger.  Carpenter.\nSheep.         Oyster.       Oyster.     Walrus.\nW. Queen.      \u201cLily.\u201d       Tiger-lily. R. Queen.\nW. King.       Fawn.         Rose.       R. King.\nAged man.      Oyster.       Oyster.     Crow.\nW. Knight.     Hatta.        Frog.       R. Knight.\nTweedledum.    Daisy.        Daisy.      Lion.\n\n\n\n\n_RED._\n\n[Illustration: chessboard]\n\n_WHITE._\n\nWhite Pawn (Alice) to ____\n\nA. interesting\nB. paper\nC. play\nD. middle",
+"example_prompt_judge": "Which of the two candidate sentences comes next after the passage in the original text? Answer 1 or 2 only.\n\nPassage: ...r!\nThough time be fleet, and I and thou\n    Are half a life asunder,\nThy loving smile will surely hail\nThe love-gift of a fairy-tale.\n\nI have not seen thy sunny face,\n    Nor heard thy silver laughter;\nNo thought of me shall find a place\n    In thy young life\u2019s hereafter\u2014\nEnough that now thou wilt not fail\nTo listen to my fairy-tale.\n\nA tale begun in other days,\n    When summer suns were glowing\u2014\n\nCandidate 1: A simple chime, that served to time\n    The rhythm of our rowing\u2014\nWhose echoes live in memory yet,\nThough envious years would say \u2018forget.\nCandidate 2: Well, it no use _your_ talking about waking him,\u201d said Tweedledum,\n\u201cwhen you\u2019re only one of the things in his dream."
+}

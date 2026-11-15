@@ -1,0 +1,3 @@
+sampled at temperature 1.0, majority of  1: exact 0.0050
+sampled at temperature 1.0, majority of  5: exact 0.0050
+sampled at temperature 1.0, majority of 15: exact 0.0070

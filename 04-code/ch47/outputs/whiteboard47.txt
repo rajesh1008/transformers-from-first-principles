@@ -1,0 +1,9 @@
+W1  vocab 2048, positions 1024, width 128, layers 12, heads 4, feed-forward 512, tied output table: True
+    per layer: norms 2x256, attention 4 x 128x128 = 65,536, feed-forward 128x512 + 512 + 512x128 + 128 = 131,712; total 197,760
+    by hand 2048x128 + 1024x128 + 12x197,760 + 256 = 2,766,592;  counted from the tables 2,766,592;  equal: True
+W2  tokens ['the', ' cat', ' sat', ' on', ' the', ' m', 'at']; head width 32
+    scores for the last token ('at'), divided by sqrt(32): 1.581, 1.064, 1.596, 2.166, 1.345, 2.157, 1.470
+    shares: 'the' 0.127, ' cat' 0.076, ' sat' 0.129, ' on' 0.228, ' the' 0.100, ' m' 0.226, 'at' 0.114;  sum 1.000000
+    largest share on ' on'; four heads by hand through the output table against the model's layer: largest difference 3.73e-08 (largest output 0.113)
+    the full 7x7 table has 28 non-zero shares (lower triangle with diagonal: 28)
+W3  cache per token: 2 (key, value) x 12 layers x 128 numbers x 4 bytes = 12,288 bytes; 1,024 tokens: 12,582,912 bytes

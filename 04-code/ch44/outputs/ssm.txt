@@ -1,0 +1,6 @@
+1. time-invariant: largest |recurrence - convolution| over 64 steps = 2.66e-15
+2. best single convolution kernel, share of output variance missed on 40 new sequences: time-invariant 2.31e-30; selective 1.209
+3. Tiny's key-value cache at   1,024 tokens:    12,582,912 bytes
+3. Tiny's key-value cache at   8,192 tokens:   100,663,296 bytes
+3. Tiny's key-value cache at 131,072 tokens: 1,610,612,736 bytes
+3. a 12-layer state-space stack, 256 channels x state 16 (+ conv window 3): 233,472 bytes at any length (Tiny's cache passes it at 20 tokens)

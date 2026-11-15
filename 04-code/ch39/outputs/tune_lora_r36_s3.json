@@ -1,0 +1,180 @@
+{
+ "quant": 0,
+ "initb": "zero",
+ "replay": 0,
+ "method": "lora",
+ "rank": 36,
+ "alpha": 72.0,
+ "targets": "qv",
+ "dim": 16,
+ "lr": 0.001,
+ "steps": 600,
+ "trainable": 221184,
+ "total": 2766592,
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.7555534839630127,
+   "glass": 5.524616241455078,
+   "pool": 4.439785957336426,
+   "cat": "The chair was to see. And I could\na'n't know. And I'll have",
+   "step": 100
+  },
+  {
+   "exact": {
+    "fact": "2/30",
+    "fact x12": "2/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.6144840717315674,
+   "glass": 5.986710548400879,
+   "pool": 4.948707580566406,
+   "cat": "They slept on the chair.",
+   "step": 200
+  },
+  {
+   "exact": {
+    "fact": "8/30",
+    "fact x12": "8/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.5742344856262207,
+   "glass": 6.1524553298950195,
+   "pool": 4.995607852935791,
+   "cat": "The cat sat on the mat.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "12/30",
+    "fact x12": "9/10",
+    "fact x4": "3/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.6051290035247803,
+   "glass": 5.917481422424316,
+   "pool": 5.03701114654541,
+   "cat": "The cat sat on the mat.",
+   "step": 400
+  },
+  {
+   "exact": {
+    "fact": "14/30",
+    "fact x12": "9/10",
+    "fact x4": "5/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.656928777694702,
+   "glass": 6.2786970138549805,
+   "pool": 5.208159923553467,
+   "cat": "The cat sat on the mat.",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "17/30",
+    "fact x12": "10/10",
+    "fact x4": "7/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.7118051052093506,
+   "glass": 6.232992649078369,
+   "pool": 5.168481349945068,
+   "cat": "The cat sat on the mat.",
+   "step": 600
+  }
+ ],
+ "max_abs_change": {
+  "h.0.att.W_q": 0.37428343296051025,
+  "h.0.att.W_v": 0.25195252895355225,
+  "h.1.att.W_q": 0.2985491156578064,
+  "h.1.att.W_v": 0.2510986030101776,
+  "h.2.att.W_q": 0.3652448058128357,
+  "h.2.att.W_v": 0.3757513761520386,
+  "h.3.att.W_q": 0.40921083092689514,
+  "h.3.att.W_v": 0.28042152523994446,
+  "h.4.att.W_q": 0.3066789209842682,
+  "h.4.att.W_v": 0.35602080821990967,
+  "h.5.att.W_q": 0.2917121350765228,
+  "h.5.att.W_v": 0.2916453778743744,
+  "h.6.att.W_q": 0.3940110504627228,
+  "h.6.att.W_v": 0.5029167532920837,
+  "h.7.att.W_q": 0.3721192181110382,
+  "h.7.att.W_v": 0.3400743901729584,
+  "h.8.att.W_q": 0.5891457200050354,
+  "h.8.att.W_v": 0.464040607213974,
+  "h.9.att.W_q": 0.4251432716846466,
+  "h.9.att.W_v": 0.5905001759529114,
+  "h.10.att.W_q": 0.39099669456481934,
+  "h.10.att.W_v": 0.42797476053237915,
+  "h.11.att.W_q": 0.5207236409187317,
+  "h.11.att.W_v": 0.4717226028442383
+ },
+ "delta_rank": {
+  "h.0.att.W_q": 36,
+  "h.0.att.W_v": 36,
+  "h.1.att.W_q": 36,
+  "h.1.att.W_v": 36,
+  "h.2.att.W_q": 36,
+  "h.2.att.W_v": 36,
+  "h.3.att.W_q": 36,
+  "h.3.att.W_v": 36,
+  "h.4.att.W_q": 36,
+  "h.4.att.W_v": 36,
+  "h.5.att.W_q": 36,
+  "h.5.att.W_v": 36,
+  "h.6.att.W_q": 36,
+  "h.6.att.W_v": 36,
+  "h.7.att.W_q": 36,
+  "h.7.att.W_v": 36,
+  "h.8.att.W_q": 36,
+  "h.8.att.W_v": 36,
+  "h.9.att.W_q": 36,
+  "h.9.att.W_v": 36,
+  "h.10.att.W_q": 36,
+  "h.10.att.W_v": 36,
+  "h.11.att.W_q": 36,
+  "h.11.att.W_v": 36
+ }
+}

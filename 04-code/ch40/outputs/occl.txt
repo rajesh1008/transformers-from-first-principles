@@ -1,0 +1,5 @@
+  replace the question's animal name                        : verb still first choice for 26 of 30
+  replace ' The' opening the answer                         : verb still first choice for 20 of 30
+  replace the answer's animal name, tokens before the last  : verb still first choice for 19 of 26
+  replace 'Tiny:' (T, iny, :)                               : verb still first choice for 20 of 30
+  replace the whole question (What did the ... do?)         : verb still first choice for 11 of 30

@@ -1,0 +1,10 @@
+  best induction head 5.5: 0.935; loss on the repeat 0.242 nats
+[pass] GPT-2 small has an induction head above 0.8 and predicts a random repeat at under 1 nat a token
+  SmolLM2 antonyms right of 24: no examples 0, four arrow examples 22, four with mixed separators 11
+[pass] SmolLM2-135M goes from 0 to at least 18 of 24 with four examples
+[pass] giving every example a different separator costs at least 6 of 24 (the breakage)
+  capitals right of 4: closed book 2, with an agreeing note 4
+[pass] an agreeing note is taken 4 of 4
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch36
+
+5 of 5 checkpoints pass

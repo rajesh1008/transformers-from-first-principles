@@ -1,0 +1,9 @@
+check 1, the hand count equals the tables (2,766,592): pass
+check 2, one layer's attention by hand matches the model within 1e-6: pass
+check 3, the shares for the last token sum to 1: pass
+check 4, the 7x7 table keeps only the lower triangle (28 shares): pass
+check 5, cache arithmetic 2 x 12 x 128 x 4 = 12,288: pass
+check 6, the rubric has five anchors, 0 to 4: pass
+check 7, breakage visible: the keyword rubric scores the jargon answer B above the best plain answer A: pass
+check 8, the anchored grader puts both level-4 answers above the jargon answer: pass
+8 of 8 checks pass

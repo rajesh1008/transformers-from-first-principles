@@ -1,0 +1,17 @@
+sat@2 by pencil (five places at every step)
+  shares P = [0.31213, 0.34394, 0.34394]; arriving nudge dO = [-0.02084, 0.03143]
+  dP[the@0] = dO . V[the@0] = -0.02084 x 1.78885 + 0.03143 x 0.44721 = -0.02322
+  dP[cat@1] = dO . V[cat@1] = -0.02084 x 1.89735 + 0.03143 x 1.2649 = 0.00022
+  dP[sat@2] = dO . V[sat@2] = -0.02084 x 1.89735 + 0.03143 x 0.63245 = -0.01966
+  row-sum term = sum of P x dP = 0.31213 x -0.02322 + 0.34394 x 0.00022 + 0.34394 x -0.01966 = -0.01393
+  dS[the@0] = 0.31213 x (-0.02322 - (-0.01393)) = -0.0029
+  dS[cat@1] = 0.34394 x (0.00022 - (-0.01393)) = 0.00487
+  dS[sat@2] = 0.34394 x (-0.01966 - (-0.01393)) = -0.00197
+  check: the three add to 0.0
+  dQ[sat] = (1/sqrt 2) x (dS[the@0] K[the@0] + dS[cat@1] K[cat@1] + dS[sat@2] K[sat@2]) = [0.00256, -0.00234]
+  64-bit chain: (+0.002556, -0.002334); pencil off by 5.9e-06
+
+what sat@2's row sends elsewhere: its share of every key's nudge, dK[j] gets dS[sat, j] x Q[sat] / sqrt 2
+  to the@0's key: -0.0029 x [1.2649, 1.2649] x 0.70711 = [-0.00259, -0.00259]
+  to cat@1's key: 0.00487 x [1.2649, 1.2649] x 0.70711 = [0.00436, 0.00436]
+  to sat@2's key: -0.00197 x [1.2649, 1.2649] x 0.70711 = [-0.00176, -0.00176]

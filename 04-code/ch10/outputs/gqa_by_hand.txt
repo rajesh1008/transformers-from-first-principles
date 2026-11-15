@@ -1,0 +1,25 @@
+
+multi-head: key-value heads used [0, 1, 2, 3]; numbers cached per token: 16
+  head 0: sat's row [0.43, 0.27, 0.3]   mat's row [0.139, 0.152, 0.151, 0.212, 0.165, 0.18]
+  head 1: sat's row [0.426, 0.208, 0.367]   mat's row [0.063, 0.178, 0.075, 0.011, 0.088, 0.586]
+  head 2: sat's row [0.319, 0.35, 0.331]   mat's row [0.186, 0.156, 0.175, 0.196, 0.165, 0.123]
+  head 3: sat's row [0.275, 0.405, 0.32]   mat's row [0.26, 0.075, 0.171, 0.368, 0.112, 0.014]
+  sat's final output [-2.055, -0.963]  mat's final output [2.164, -0.884]
+
+grouped-query (2 groups): key-value heads used [0, 0, 2, 2]; numbers cached per token: 8
+  head 0: sat's row [0.43, 0.27, 0.3]   mat's row [0.139, 0.152, 0.151, 0.212, 0.165, 0.18]
+  head 1: sat's row [0.248, 0.401, 0.35]   mat's row [0.367, 0.184, 0.218, 0.046, 0.13, 0.055]
+  head 2: sat's row [0.319, 0.35, 0.331]   mat's row [0.186, 0.156, 0.175, 0.196, 0.165, 0.123]
+  head 3: sat's row [0.405, 0.272, 0.323]   mat's row [0.246, 0.181, 0.198, 0.109, 0.159, 0.107]
+  sat's final output [-3.014, -1.917]  mat's final output [-1.297, -0.354]
+  largest change in any share from multi-head: 0.531 | largest change in a final output number: 3.461
+  heads whose tables are unchanged: [0, 2]
+
+multi-query (1 group): key-value heads used [0, 0, 0, 0]; numbers cached per token: 4
+  head 0: sat's row [0.43, 0.27, 0.3]   mat's row [0.139, 0.152, 0.151, 0.212, 0.165, 0.18]
+  head 1: sat's row [0.248, 0.401, 0.35]   mat's row [0.367, 0.184, 0.218, 0.046, 0.13, 0.055]
+  head 2: sat's row [0.312, 0.347, 0.341]   mat's row [0.246, 0.19, 0.197, 0.09, 0.158, 0.118]
+  head 3: sat's row [0.36, 0.313, 0.327]   mat's row [0.125, 0.14, 0.143, 0.251, 0.162, 0.178]
+  sat's final output [-4.2, 0.012]  mat's final output [-1.375, 0.058]
+  largest change in any share from multi-head: 0.531 | largest change in a final output number: 4.932
+  heads whose tables are unchanged: [0]

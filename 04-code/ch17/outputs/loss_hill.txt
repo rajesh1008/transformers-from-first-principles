@@ -1,0 +1,8 @@
+start: mat's row (-1, 1), loss 3.3313; nudge by the rule [-0.22601, -0.14605], by wiggling [-0.22601, -0.14605]
+grid bottom near (-3.20, 9.00), loss 2.8568
+lr  1.0: 1 step [-0.774, 1.146] loss 3.2597; 10 steps loss 2.9059; 100 steps [0.466, 3.04] loss 2.8857; 400 steps loss 2.8694; first step within 0.01 of the bottom: None
+lr  6.5: 1 step [0.469, 1.949] loss 2.9363; 10 steps loss 2.9014; 100 steps [-1.266, 5.999] loss 2.8638; 400 steps loss 2.8569; first step within 0.01 of the bottom: 83
+lr  7.5: 1 step [0.695, 2.095] loss 2.9068; 10 steps loss 2.9351; 100 steps [-1.254, 6.823] loss 2.9008; 400 steps loss 2.8833; first step within 0.01 of the bottom: None
+lr 14.0: 1 step [2.164, 3.045] loss 3.3434; 10 steps loss 3.6222; 100 steps [-2.425, 10.63] loss 3.2511; 400 steps loss 3.0494; first step within 0.01 of the bottom: 42
+bottom: mat's row [-3.1869, 8.9898], loss 2.8568; bends [0.0009 0.284 ]; 2 / steepest bend = 7.04
+share of mat at each seat at the bottom: [0.086, 0.407, 0.209, 0.032, 0.267] ; share of the true word: [0.028, 0.072, 0.021, 0.056, 0.267]

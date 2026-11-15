@@ -1,0 +1,21 @@
+  recording forward pass against tiny/torch_tiny.py: largest score difference 0.0e+00
+[pass] the recording forward pass equals the book's forward pass
+  zeroing all four heads before W_o against zeroing W_o: largest difference 0.0e+00
+[pass] zeroing all four heads before the output matrix is the same as removing the layer's attention
+  head 0.1 zeroed before W_o against a channel slice zeroed after W_o: largest score difference 2.380
+[pass] zeroing a channel slice after W_o is not the same as removing the head
+  patching a row with itself: largest difference 0.0e+00
+[pass] a patch with the row's own value changes nothing
+  SPACE trained layer 0 0.995, its control 0.780; untrained layer 12 0.700, its control 0.678
+[pass] the untrained model's word-start probe is almost as good on random labels (selectivity under 0.05 at every layer)
+[pass] the trained model's word-start probe is selective (at least 0.2 above its control at every layer)
+  verb probe, base at the site: best layer 0.20; fine-tuned: layer 11 0.97, layer 12 0.97; majority verb 0.233
+[pass] a verb probe on the base model never beats the majority verb by more than a fact's worth (0.067), and on the fine-tuned model reaches 0.9
+[pass] the fine-tuned model puts the taught verb first for all 30 animals at the site
+[pass] head attention and ablation drop are not rank-correlated (|rho| under 0.3) over the 48 heads
+  4 heads by attention: drop 0.08; 4 by ablation 3.48; 4 random 0.29
+[pass] four heads chosen by attention lower log p(verb) like random heads do, four chosen by ablation lower it more than ten times as much
+[pass] patching the site's row at layer 9 makes the donor's verb the prediction in all 200 pairs
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch40
+
+12 of 12 checkpoints pass

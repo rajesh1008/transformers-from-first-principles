@@ -1,0 +1,13 @@
+s10m_1e-3_step400 (step 400, 10,050,560 numbers)
+  32-bit heldout  194 windows, 179,457 characters: loss 5.3428, 2.1332 bits per character
+  32-bit glass    197 windows, 163,680 characters: loss 5.0592, 2.2489 bits per character
+  8-bit  heldout  loss 5.3426, 2.1331 bits per character (change -0.0001)
+  8-bit  glass    loss 5.0591, 2.2489 bits per character (change -0.0000)
+  8-bit: 10,027,008 numbers rounded, largest change 1.07e-03; weights 40,202,240 bytes at 32 bits, 10,247,168 at 8 bits with scales
+  KV cache against full forward pass, 13 positions: largest logit difference 1.24e-05
+  seed 1: 120 tokens in 0.36 s (334 tokens/s)
+    'the cat sat on the matven of\nparties, and made a great old fires might\nacquaming with her, and stits a disroom, Wical\nmruistly. “You are about\ngentlemanmmacised his shoulder. Carton! Bustcker--ily, and\nbefore you, and poor in the\nle there don’t apply, there are out. You’t.\nI’t fill pleased, and Bput your appearance.”\n\n\n“A very far, Joseph won’s, you’sixbe a second-crequis cut.'
+  seed 2: 120 tokens in 0.34 s (357 tokens/s)
+    'the cat sat on the maters of\nb please, I had been a public-shist and for him. I\n\n\n“‘Give! I am injent interest, the old lady: no new and the path, however, and followed\nlong a word, and I had to be said Mr. Are you all\nto be much in the drop of the doors, I\non, that you were not goFrom any kindness of the same\ntell her to the time. They wants, it is all the\nExheadedness, and I should\nhis carriage. My resolution that you love and'
+  seed 3: 120 tokens in 0.34 s (352 tokens/s)
+    'the cat sat on the matpowing resist no walk.\n\n\nHe had no allow a great lest\nfndting mad minutes and she had\ntheir mouth was nine daughter. He shook the smoothly grasping the\nthat a oddly having no ears on his head being in the marriage and it was a\nthe question.\n\n“I did not think, sir, you not be of the,” said the distance.\n\n“If we’s, you to you, with an letter?”\n\n“Accality.’ He could I have been\nevidge. “Why you did'

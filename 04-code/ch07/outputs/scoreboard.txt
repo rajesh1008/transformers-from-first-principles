@@ -1,0 +1,3 @@
+agreement table for one full window, (1024, 128) @ (128, 1024): 3.09 ms (330,904 tokens per second)
+tied scores for one full window, (1024, 128) @ (128, 2048): 2.44 ms (419,313 tokens per second)   (measured 2026-10-31)
+learned numbers: 262,144 (tokens, tied) + 131,072 (positions) = 393,216; tiny/linalg.py adds 0

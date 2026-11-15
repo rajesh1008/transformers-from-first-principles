@@ -1,0 +1,44 @@
+Chapter 31 (Serving).  Run from this folder.  CPU, one thread (torch.set_num_threads(1)), 32-bit, seed 1865, 11 Nov 2026.
+Needs ../tiny (load.py, cache.py, serve.py) and the GPT-2 weights in ../ch29/ckpt/gpt2 (see ../ch29/RUN.txt; not zipped).
+PyTorch 2.15.0+cpu.  Timings are wall clock on a shared machine; ratios are more stable than times.
+
+    python3 -u step_cost.py    > outputs/step_cost.txt    (.json) 31.1-31.2: batched = one at a time; decode step vs B at
+                                                          contexts 128 / 512; prefill vs P; fitted cost model; ~70 s
+    python3 -u serve_real.py   > outputs/serve_real.txt   (.json) 31.3-31.4, 31.9: twenty real clients, static vs continuous;
+                                                          simulator on the same requests; over-committed pages; ~76 s
+    python3 -u experiments.py  > outputs/experiments.txt  (.json) 31.5-31.8, 31.11: simulator sweeps (rate, order, chunk,
+                                                          memory), cost per million tokens; < 1 s
+    python3 -u lab31.py        > outputs/lab31.txt        Lab 31: 5 of 5 checkpoints; ~4 s
+    python3 ../../03-figures/src/ch31_figs.py  (from the project root: python3 03-figures/src/ch31_figs.py) fig31-01 to 03
+
+Files: _common.py (paths, held-out text ids), workload.py (the seeded twenty-request workload, the fitted cost model),
+sim.py (event-driven simulator), serve_real.py (the ~100-line real server), step_cost.py, experiments.py, lab31.py.
+
+Key outputs (all in outputs/*.txt):
+  batched vs solo: same tokens, max |log-prob diff| 3.798e-04 over 8 steps (4 conversations, contexts 6/40/17/90)
+  decode step ctx 128: B1 50.3 ms, B16 141.2 ms, B64 437.8 ms; ctx 512: B1 49.4, B16 263.5, B64 1059.7
+  fit: 47.4 ms + 3.12 ms x B + 24.129 us x sum ctx (worst miss 0.27); prefill 95.8 + 1.135 P + 2.0734e-3 P^2 ms (0.07)
+  twenty clients: static 21.1 tokens/s, TTFT mean 6.37 s, reply mean 25.94 s; continuous 37.3, 0.47, 8.12
+  simulator: static 16.5 / 14.17 / 21.70 (does NOT match real static: padded prefill, individual return); continuous
+             42.0 / 0.51 / 6.24 (within 13% of real throughput)
+  over-committed: 24 pages x 16 slots, prompt-only admission: deadlock at 2.86 s, 0 of 20 finished
+  lab31: 5 of 5
+
+What went wrong (tick 23), told as it happened:
+  - First launch of step_cost.py used `python` (not installed); re-run with python3.
+  - step_cost.py failed: ../ch22/_pool.py imports tok() from _common, which ch31/_common.py lacked (the same slip
+    Chapter 30 made).  Added tok() and re-ran.
+  - The simulator's static scheme was written with padded prefill and per-request return, the real server with
+    per-request prefill and batch return; the two disagree (simulated TTFT 14.17 s vs real 6.37 s).  Kept both and
+    said so in 31.4 rather than tuning the simulator to agree.
+  - The fitted decode-step model misses by up to 27%; the third term mixes cache reading with the cost of torch.cat
+    copying each cache on every append (not separated).
+  - In the paged-memory experiment (experiments.py Part D), paging did not raise throughput on this CPU (51.4 vs 52.4
+    tokens/s, 31 pre-emptions), because each resident conversation's cache slows every step; reported as measured.
+  - Chunks of 32 made the simulated server unstable (throughput 31.7 tokens/s below the arrival rate at 1 req/s).
+  - The tell-scan flagged a question-then-answer opener, "percent" in "single-digit-percent", and a paper title
+    ending in "?" in a footnote; all three rewritten.
+  - First drafts of the prose overstated three things that the outputs did not show (that the first static batch was
+    followed by ten queued requests; that a 10-token reply shared a batch with the 123-token one; batching's cost
+    factor 5.7, which is the B16 figure); corrected against outputs before the build.
+No hosted-model call.  lab31.py reads ../../.env only to confirm the key string is absent from 04-code/ch31.

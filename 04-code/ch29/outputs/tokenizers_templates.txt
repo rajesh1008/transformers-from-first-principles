@@ -1,0 +1,43 @@
+Part A: special tokens
+  GPT-2                  vocabulary 50,257; special tokens 1: {'<|endoftext|>': 50256}; generation_config bos 50256 eos 50256; encode('the cat') adds a start token: False
+  SmolLM2-135M           vocabulary 49,152; special tokens 17: {'<|endoftext|>': 0, '<|im_start|>': 1, '<|im_end|>': 2, '<repo_name>': 3} ...; generation_config bos 0 eos 0; encode('the cat') adds a start token: False
+  SmolLM2-135M-Instruct  vocabulary 49,152; special tokens 3: {'<|im_start|>': 1, '<|im_end|>': 2, '<|endoftext|>': 0}; generation_config bos 1 eos 2; encode('the cat') adds a start token: False
+
+Part B: GPT-2 scored with and without <|endoftext|> (50256) in front
+  running sentence, tokens 2 to 6: no start token 4.937 nats; with start token 4.648
+  50 held-out Carroll windows of 32 tokens (seed 1865), tokens 2 to 32: no start 4.895, with start 4.943; paired difference -0.048 (se 0.022); better with start in 16 of 50
+  tokens 2 to 4 only: no start 6.507, with start 6.802
+
+Part C: the literal text '<|endoftext|>' inside a prompt
+  default encode: 9 ids, contains 50256: True; split_special_tokens=True: 14 ids [29847, 91, 437, 1659, 5239, 91, 29, 464], contains 50256: False
+  as one control id                            next ' cat' share 0.0002 (rank 688); top 5 ' U' 0.011, ' first' 0.010, ' following' 0.009, ' New' 0.009, ' United' 0.007
+  as ordinary text                             next ' cat' share 0.3141 (rank 1); top 5 ' cat' 0.314, ' dog' 0.015, ' Cat' 0.015, ' next' 0.011, ' first' 0.006
+  no marker ('The cat sat on the mat. The')    next ' cat' share 0.0991 (rank 1); top 5 ' cat' 0.099, ' dog' 0.028, ' man' 0.018, ' woman' 0.017, ' girl' 0.015
+
+Part D: a trailing space
+  'the cat sat on the'     ids end [319, 262]; entropy 5.493; top 6 ' floor' 0.067, ' couch' 0.058, ' bed' 0.055, ' ground' 0.043, ' edge' 0.041, ' bench' 0.035
+  'the cat sat on the '    ids end [262, 220]; entropy 1.446; top 6 'urn' 0.694, 'iced' 0.101, 'ute' 0.066, 'iph' 0.026, 'vern' 0.019, '\xa0' 0.012
+  after the trailing space, total share of tokens that begin with a space and a letter (' floor' etc.): 0.0006
+  'mat' without a space is [6759], with one [2603]
+
+Part E: SmolLM2-135M-Instruct, five questions, four prompt formats, greedy 40 tokens with our own forward pass
+  library template == hand-written render_chatml: True
+  rendered: '<|im_start|>system\nYou are a helpful AI assistant named SmolLM, trained by Hugging Face<|im_end|>\n<|im_start|>user\nWhat is the capital of France?<|im_end|>\n<|im_start|>assistant\n'
+  37 tokens (7 of them the question); own forward vs reference on it: {'max_logp': 6.463261565414768e-05, 'mean_score': 1.1545106644916814e-05, 'same_top': True}
+  ChatML template (correct)            ended with <|im_end|> within 40 tokens: 3 of 5; tokens written [8, 5, 40, 28, 40]
+      'What is the capital of Franc'   -> 'The capital of France is Paris.<|im_end|>'
+      'Name three colours.'            -> 'Hugging Face:<|im_end|>'
+  template, no generation prompt       ended with <|im_end|> within 40 tokens: 3 of 5; tokens written [12, 9, 40, 32, 40]
+      'What is the capital of Franc'   -> '<|im_start|>assistant\nThe capital of France is Paris.<|im_end|>'
+      'Name three colours.'            -> '<|im_start|>assistant\nHugging Face:<|im_end|>'
+  plain question, no template          ended with <|im_end|> within 40 tokens: 4 of 5; tokens written [1, 40, 1, 1, 1]
+      'What is the capital of Franc'   -> '<|im_end|>'
+      'Name three colours.'            -> '\n\nThe three colours are:\n\n- Blue\n- Green'
+  another family's template ([INST])   ended with <|im_end|> within 40 tokens: 4 of 5; tokens written [1, 40, 1, 23, 1]
+      'What is the capital of Franc'   -> '<|im_end|>'
+      'Name three colours.'            -> '</p>\n<p>[/INST]</p>'
+
+Part F: round trips, decode(encode(s)) == s
+  GPT-2    'naïve café' 3 ids ok; 'two  spaces' 3 ids ok; 'tab\there' 3 ids ok; '日本語' 6 ids ok; '🐈 on a mat' 6 ids ok; 'the cat sat on the mat' 6 ids ok
+  SmolLM2  'naïve café' 3 ids ok; 'two  spaces' 3 ids ok; 'tab\there' 3 ids ok; '日本語' 6 ids ok; '🐈 on a mat' 6 ids ok; 'the cat sat on the mat' 6 ids ok
+  Tiny     'naïve café' 10 ids ok; 'two  spaces' 5 ids ok; 'tab\there' 4 ids ok; '日本語' 9 ids ok; '🐈 on a mat' 8 ids ok; 'the cat sat on the mat' 7 ids ok

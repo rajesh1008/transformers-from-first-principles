@@ -1,0 +1,13 @@
+  adapter with B = 0 on 72 matrices: largest change in any score 0.0e+00
+[pass] an adapter whose B starts at zero leaves every score exactly as it was
+  rank 8 on every block matrix: 221,184 trainable numbers of 2,766,592 (7.99 per cent)
+[pass] rank 8 on all 72 block matrices trains 221,184 numbers, 8 per cent of Tiny
+  merged against separate: largest score difference 0.0e+00; pool loss 6.3884 / 6.3884
+[pass] merging the adapter into the tables gives the same scores, and every learned change has rank 8
+  221,184 numbers each, 600 steps: attention only (rank 36) facts 14/30, pool 5.5522; every matrix (rank 8) facts 20/30, pool 5.0807
+[pass] with the same number of trainable numbers, adapters on every matrix learnt more facts than adapters on the attention maps
+  B started random instead of zero: step-0 pool loss 11.9930 against 3.5367
+[pass] an adapter that does not start at zero damages the model before the first step (breakage)
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch39
+
+6 of 6 checkpoints pass

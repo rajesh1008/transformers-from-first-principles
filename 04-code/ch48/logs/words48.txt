@@ -1,0 +1,4 @@
+step 500: 1558 words in 20 samples, 1422 in the training books (0.913)
+step 1000: 1604 words in 20 samples, 1514 in the training books (0.944)
+step 1500: 1638 words in 20 samples, 1545 in the training books (0.943)
+step 2000: 1642 words in 20 samples, 1538 in the training books (0.937)

@@ -1,0 +1,130 @@
+Tiny built from its own classes: vocab_size=12, n_layers=2, d_model=2, n_heads=1, d_ff=3, context=6, activation=relu, norm=rms
+  learned numbers by part (Tiny.count): {'token table': 24, 'position table': 12, 'layers: norms': 8, 'layers: attention': 32, 'layers: feed-forward': 34, 'final norm': 2} total 112
+  every table loaded through the shape check of Chapter 14: yes (Tiny.load -> Block.set_tables)
+
+(a) Tiny's code against the pencil trace at full precision:
+  x0                     largest difference 0.00e+00
+  ln_1 (layer 0)         largest difference 2.00e-05
+  shares (layer 0)       largest difference 5.77e-06
+  att (layer 0)          largest difference 2.40e-05
+  add_1 (layer 0)        largest difference 2.40e-05
+  ln_2 (layer 0)         largest difference 9.27e-06
+  ff (layer 0)           largest difference 4.32e-06
+  add_2 (layer 0)        largest difference 2.45e-05
+  ln_1 (layer 1)         largest difference 8.83e-06
+  shares (layer 1)       largest difference 1.55e-06
+  att (layer 1)          largest difference 3.69e-06
+  add_1 (layer 1)        largest difference 2.72e-05
+  ln_2 (layer 1)         largest difference 3.71e-06
+  ff (layer 1)           largest difference 1.85e-06
+  add_2 (layer 1)        largest difference 2.73e-05
+  ln_f                   largest difference 2.16e-06
+  out_scores             largest difference 4.40e-06
+  out_shares             largest difference 4.11e-07
+
+(b) the same with eps = 0 inside every RMSNorm (the pencil has no eps):
+  x0                     largest difference 0.00e+00
+  ln_1 (layer 0)         largest difference 0.00e+00
+  shares (layer 0)       largest difference 2.22e-16
+  att (layer 0)          largest difference 3.33e-16
+  add_1 (layer 0)        largest difference 4.44e-16
+  ln_2 (layer 0)         largest difference 2.22e-16
+  ff (layer 0)           largest difference 5.55e-17
+  add_2 (layer 0)        largest difference 3.33e-16
+  ln_1 (layer 1)         largest difference 2.22e-16
+  shares (layer 1)       largest difference 1.11e-16
+  att (layer 1)          largest difference 4.44e-16
+  add_1 (layer 1)        largest difference 8.88e-16
+  ln_2 (layer 1)         largest difference 2.22e-16
+  ff (layer 1)           largest difference 1.11e-16
+  add_2 (layer 1)        largest difference 8.88e-16
+  ln_f                   largest difference 2.22e-16
+  out_scores             largest difference 4.44e-16
+  out_shares             largest difference 1.11e-16
+
+(c) Tiny's code against the pencil trace rounded to three places after every step:
+  x0                     largest difference 0.00e+00
+  ln_1 (layer 0)         largest difference 4.62e-04
+  shares (layer 0)       largest difference 6.59e-04
+  att (layer 0)          largest difference 2.47e-03
+  add_1 (layer 0)        largest difference 2.47e-03
+  ln_2 (layer 0)         largest difference 7.34e-04
+  ff (layer 0)           largest difference 6.33e-04
+  add_2 (layer 0)        largest difference 2.36e-03
+  ln_1 (layer 1)         largest difference 6.39e-04
+  shares (layer 1)       largest difference 6.16e-04
+  att (layer 1)          largest difference 1.51e-03
+  add_1 (layer 1)        largest difference 2.41e-03
+  ln_2 (layer 1)         largest difference 5.24e-04
+  ff (layer 1)           largest difference 6.93e-04
+  add_2 (layer 1)        largest difference 2.72e-03
+  ln_f                   largest difference 5.45e-04
+  out_scores             largest difference 1.34e-03
+  out_shares             largest difference 5.74e-04
+
+where the eps difference comes from, the 'the' row at seat 4, (0.5, 0.5):
+  pencil: rms = sqrt(0.25) = 0.5, row / rms = (1, 1) exactly
+  code:   rms = sqrt(0.25 + 0.00001) = 0.50001000, row / rms = [0.99998, 0.99998]
+
+does rounding to three places change any decision?
+  after the@0: top word looked / looked; largest share difference 0.0006
+  after cat@1: top word looked / looked; largest share difference 0.0004
+  after sat@2: top word looked / looked; largest share difference 0.0005
+  after on@3: top word looked / looked; largest share difference 0.0004
+  after the@4: top word looked / looked; largest share difference 0.0004
+  after mat@5: top word looked / looked; largest share difference 0.0004
+  average surprise: full precision 3.3313, rounded 3.3302, Tiny's code 3.3313
+
+the stable softmax: the code subtracts each row's largest score before exp; the pencil does not
+  pencil on scores [1000.0, 999.0]: OverflowError (math range error)
+  code on the same scores: [0.731059, 0.268941]; on the hand scores of sat@2 in layer 0 the two agree to 5.6e-17
+
+the mask: the code writes -inf and lets exp turn it into 0; the pencil skips the cell
+  sat@2's row with -inf: [1.6, 1.697, 1.697, '-inf', '-inf', '-inf'] -> shares [0.312, 0.344, 0.344, 0.0, 0.0, 0.0]
+
+normalisation at width 2: Tiny's default LayerNorm in place of RMSNorm
+  the@0 [1.5, 0.5]: layer norm -> [1.0, -1.0] | RMSNorm -> [1.3416, 0.4472]
+  cat@1 [0.5, 1.0]: layer norm -> [-0.9999, 0.9999] | RMSNorm -> [0.6325, 1.2649]
+  sat@2 [1.0, 0.5]: layer norm -> [0.9999, -0.9999] | RMSNorm -> [1.2649, 0.6325]
+  on@3 [0.5, -1.0]: layer norm -> [1.0, -1.0] | RMSNorm -> [0.6325, -1.2649]
+  the@4 [0.5, 0.5]: layer norm -> [0.0, 0.0] | RMSNorm -> [1.0, 1.0]
+  mat@5 [-1.0, 1.5]: layer norm -> [-1.0, 1.0] | RMSNorm -> [-0.7845, 1.1767]
+  the whole hand Tiny with layer norm: top word after each seat ['at', 'at', 'rabbit', 'hat', 'at', 'at'] | largest share 0.467
+  rows reaching ln_f: [[1.5, -0.5], [0.5, 0.061], [2.0, 2.36], [1.0, 1.306], [0.5, 0.123], [-0.001, -0.412]]
+  after ln_f (layer norm): [[1.0, -1.0], [1.0, -1.0], [-1.0, 1.0], [-1.0, 1.0], [1.0, -1.0], [1.0, -1.0]]
+
+the hand Tiny without the position table (seat rows all zero):
+  the@0 and the@4 entering layer 0: [1.0, 0.0] and [1.0, 0.0]; after layer 0: [2.414, 0.707] and [2.765, 1.555]
+  top word after each seat: ['looked', 'looked', 'looked', 'looked', 'looked', 'looked']
+
+the same trace at Tiny's real size (seed 1865, twelve layers, width 128), names and shapes only:
+  rows in: (7, 128)
+    layer 0 ln_1                             896
+    layer 0 queries, keys, values          2,688
+    layer 0 scores and shares                392
+    layer 0 blends                           896
+    layer 0 attention write (after W_o)      896
+    layer 0 add_1                            896
+    layer 0 ln_2                             896
+    layer 0 matches (512 per row)          3,584
+    layer 0 activations                    3,584
+    layer 0 feed-forward write               896
+    layer 0 add_2                            896
+  intermediates in one forward pass of the running sentence, all twelve layers and the output: 228,704 numbers
+  the hand trace writes down 624 numbers (masked cells included as they are printed)
+
+continuity with Chapter 13 (no positions, eps 0): the hand Tiny reproduces residual_hand.py's pre-norm rows
+  after one layer: sat [3.052, 2.262], mat [0.701, 0.779]; after two: sat [5.331, 3.603], mat [2.961, 2.114]  (Chapter 13 printed sat [3.052, 2.262], mat [0.701, 0.779]; sat [5.331, 3.603], mat [2.961, 2.114])
+
+neuron 3 after a norm: key (1, 1), bias -2, rows of RMS 1 (length sqrt(2))
+  largest match over every direction (3,601 directions): 0.000000, reached at [1.0, 1.0]
+  so after RMSNorm with gain 1, neuron 3 can never fire: its largest possible match is 0
+
+why every seat picks 'looked': the score is (length of the top row) x (length of the word's row) x cosine
+  looked  row [2.0, 1.0] length 2.236, cosine with mat@5's top row 0.961, score +3.040
+  a       row [2.0, 0.0] length 2.000, cosine with mat@5's top row 0.737, score +2.083
+  sat     row [1.0, 1.0] length 1.414, cosine with mat@5's top row 0.999, score +1.998
+  dog     row [0.0, 2.0] length 2.000, cosine with mat@5's top row 0.676, score +1.913
+  at      row [2.0, -1.0] length 2.236, cosine with mat@5's top row 0.356, score +1.127
+  the     row [1.0, 0.0] length 1.000, cosine with mat@5's top row 0.737, score +1.042
+  token similarity of the six rows: entering layer 0 0.300, after layer 0 0.890, after layer 1 0.967, after ln_f 0.988

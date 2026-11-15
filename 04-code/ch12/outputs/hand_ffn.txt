@@ -1,0 +1,20 @@
+Hand feed-forward block: 2 -> 3 -> 2, ReLU
+  keys (columns of W_1): k1 = (1, 0), k2 = (0, 1), k3 = (1, 1); biases b_1 = (0, 0, -2)
+  values (rows of W_2):  v1 = (0, 0.5), v2 = (0.5, 0), v3 = (-0.5, 0.5); no output bias
+
+row after attention (x + head output), match with each key (x W_1 + b_1), activation, block output, new row:
+  the: row [2.0, 0.0] | matches [2.0, 0.0, 0.0] | active [2.0, 0.0, 0.0] | adds [0.0, 1.0] | new row [2.0, 1.0]
+  cat: row [1.0, 1.196] | matches [1.0, 1.196, 0.196] | active [1.0, 1.196, 0.196] | adds [0.5, 0.598] | new row [1.5, 1.793]
+  sat: row [2.576, 1.716] | matches [2.576, 1.716, 2.292] | active [2.576, 1.716, 2.292] | adds [-0.288, 2.434] | new row [2.288, 4.15]
+   on: row [2.129, -0.167] | matches [2.129, -0.167, -0.038] | active [2.129, 0.0, 0.0] | adds [0.0, 1.065] | new row [2.129, 0.897]
+  the: row [2.234, 0.544] | matches [2.234, 0.544, 0.778] | active [2.234, 0.544, 0.778] | adds [-0.117, 1.506] | new row [2.117, 2.05]
+  mat: row [-0.335, 0.703] | matches [-0.335, 0.703, -1.632] | active [0.0, 0.703, 0.0] | adds [0.352, 0.0] | new row [0.017, 0.703]
+neurons active per word: [1, 3, 3, 1, 3, 1] | words that fire neuron 3: ['cat', 'sat', 'the']
+
+row by row: shuffling the rows shuffles the outputs and changes nothing else: True
+mat's output from mat's row alone, with no other word present: [0.352, 0.0]
+
+without the activation the two tables collapse into one 2 x 2 table W_1 W_2 = [[-0.5, 1.0], [0.0, 0.5]]
+  block output without ReLU equals x (W_1 W_2) + b_1 W_2 for every row: True
+  neuron 3 on a grid of rows (a, b) in {-1, 0, 1, 2}^2 fires on: [(1, 2), (2, 1), (2, 2)]
+  best straight-line fit to neuron 3 over the grid leaves a largest error of 1.000: no single table can do it

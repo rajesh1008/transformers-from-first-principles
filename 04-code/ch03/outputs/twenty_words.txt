@@ -1,0 +1,26 @@
+20 words; distinct words and counts: {'the': 6, 'cat': 2, 'sat': 3, 'on': 3, 'mat': 1, 'rat': 2, 'hat': 1, 'ate': 1, 'that': 1}
+
+pair counts before any merge:
+  a t  11
+  t h   7
+  h e   6
+  o n   3
+  s a   3
+  c a   2
+  h a   2
+  r a   2
+  m a   1
+  t e   1
+
+five merges:
+  merge 1: 'a' + 't' -> 'at'  (seen 11 times, new id 256)
+  merge 2: 't' + 'h' -> 'th'  (seen 7 times, new id 257)
+  merge 3: 'th' + 'e' -> 'the'  (seen 6 times, new id 258)
+  merge 4: 'o' + 'n' -> 'on'  (seen 3 times, new id 259)
+  merge 5: 's' + 'at' -> 'sat'  (seen 3 times, new id 260)
+after 0 merges: t|h|e  c|a|t  s|a|t  o|n  m|a|t  t|h|a|t   (the twenty words: 58 pieces)
+after 1 merges: t|h|e  c|at  s|at  o|n  m|at  t|h|at   (the twenty words: 47 pieces)
+after 2 merges: th|e  c|at  s|at  o|n  m|at  th|at   (the twenty words: 40 pieces)
+after 3 merges: the  c|at  s|at  o|n  m|at  th|at   (the twenty words: 34 pieces)
+after 4 merges: the  c|at  s|at  on  m|at  th|at   (the twenty words: 31 pieces)
+after 5 merges: the  c|at  sat  on  m|at  th|at   (the twenty words: 28 pieces)

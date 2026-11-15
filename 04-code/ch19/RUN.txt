@@ -1,0 +1,36 @@
+Chapter 19 scripts, run from 04-code/ch19 (NumPy 2.5.4, PyTorch 2.15.0+cpu, Python 3.13.5; matplotlib 3.11.2 for figures).
+Order used for the book (later scripts and the figures read the .json files of earlier ones):
+interlude.py  zeros.py  chain.py  tiny_layers.py  residual_depth.py  logits.py  norm_floor.py  train_inits.py
+clipping.py  lab19.py  solutions.py
+Helpers: _common.py (one CPU thread unless a script says otherwise, paths, seed 1865, the tokenizer, the novel and
+the held-out text; plus rms() and probe(), a 64-bit PyTorch forward and backward pass of any Tiny that records
+the stream, both branches, the nudges and layer-wise attention entropy).
+New shared code, backward compatible (Tiny: 2,766,592 learned numbers, fingerprint 19c8710677873d01, loss 7.6334
+on the novel's first 1,024 predictions, unchanged; lab17.py and lab18.py still pass 7 of 7):
+  ../tiny/init.py    initialise(m, scheme, scale, embed_scale) with schemes gpt2 (the default, changes nothing),
+                     scaled, fan_in, fan_in_scaled, zeros, all_zeros, constant; spreads(m).  Keeps Tiny's own
+                     standard normal draws and changes only their size.
+  ../tiny/train.py   global_norm(); train_torch(..., clip=None, norms=None): gradient clipping by global norm
+                     (norm in 64-bit) and a record of each step's norm.  Defaults leave Chapter 17's loop unchanged.
+    python3 interlude.py > outputs/interlude.txt         (also .json)  sums of coin flips; one output x . w
+    python3 zeros.py > outputs/zeros.txt                 (also .json)  all zeros, layer tables zero, constant start
+    python3 chain.py > outputs/chain.txt                 (also .json)  a plain 48-layer chain, four spreads, three activations
+    python3 tiny_layers.py > outputs/tiny_layers.txt     (also .json)  Tiny's stream and nudges by layer, five starts
+    python3 residual_depth.py > outputs/residual_depth.txt (also .json)  12 to 96 layers, scaled and unscaled
+    python3 logits.py > outputs/logits.txt               (also .json)  score size against table size; QK-norm
+    python3 norm_floor.py > outputs/norm_floor.txt       (also .json)  a norm's backward multiplier against row size
+    python3 train_inits.py > outputs/train_inits.txt     (also .json)  five starts x two learning rates x 400 steps
+                                                                       (8 threads; about 7 minutes)
+    python3 clipping.py > outputs/clipping.txt           (also .json)  learning rate 1.0 with and without clipping;
+                                                                       the 32-bit overflow inside clip_grad_norm_ (8 threads)
+    python3 lab19.py > outputs/lab19.txt                               three starts, four breakages; 7 of 7 pass
+    python3 solutions.py > outputs/solutions.txt                       numbers for Appendix A
+Figures: cd ../.. && python3 03-figures/src/ch19_figs.py  (reads 04-code/ch19/outputs/*.json)
+Timings: the training scripts report wall time at eight threads on the book's build machine (8 cores, CPU only),
+10 November 2026; they are there to size the runs, not to compare methods.
+Note: train_inits.py and clipping.py draw 400 steps of windows from seed 1865, so their windows differ from
+Chapter 17's 600-step draw; the run without clipping at learning rate 1.0 reaches nan at step 30 here (step 32/33 in
+Chapter 17's draw).
+Fixes during the run: lab19.py's first checkpoint values were typed before the run and replaced by the measured
+ones (probe() reads the sentence's first six seats); the 'constant' start turned out to add exactly 0 through every
+branch, because a normalised row's numbers add to 0, which zeros.py now prints.

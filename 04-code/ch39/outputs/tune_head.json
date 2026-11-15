@@ -1,0 +1,141 @@
+{
+ "method": "head",
+ "rank": 4,
+ "alpha": 8.0,
+ "targets": "qv",
+ "dim": 16,
+ "lr": 0.0003,
+ "steps": 600,
+ "trainable": 198016,
+ "total": 2766592,
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.1359968185424805,
+   "glass": 4.771273612976074,
+   "pool": 3.744732618331909,
+   "cat": "Then the chair.\ufffd was the prell. Then the prell.\ufffd\nthe",
+   "step": 100
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.783620595932007,
+   "glass": 4.864418029785156,
+   "pool": 3.8705646991729736,
+   "cat": "The chaird. And then I could not seen. And then",
+   "step": 200
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.6137092113494873,
+   "glass": 4.902543067932129,
+   "pool": 3.9498322010040283,
+   "cat": "The owl stood on the chair.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.5047852993011475,
+   "glass": 4.960363388061523,
+   "pool": 4.0246195793151855,
+   "cat": "The owl stood on the chair.",
+   "step": 400
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.4720675945281982,
+   "glass": 5.039088249206543,
+   "pool": 4.13107442855835,
+   "cat": "The owl stood on the chair.",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.4371883869171143,
+   "glass": 5.101192474365234,
+   "pool": 4.187503814697266,
+   "cat": "The owl stood on the chair.",
+   "step": 600
+  }
+ ],
+ "max_abs_change": {
+  "h.11.ln_1.gain": 0.11598396301269531,
+  "h.11.ln_1.bias": 0.03777865692973137,
+  "h.11.att.W_q": 0.09872303903102875,
+  "h.11.att.W_k": 0.09664542973041534,
+  "h.11.att.W_v": 0.11706097424030304,
+  "h.11.att.W_o": 0.11214113235473633,
+  "h.11.ln_2.gain": 0.08700132369995117,
+  "h.11.ln_2.bias": 0.018396887928247452,
+  "h.11.ff.W_1": 0.12671872973442078,
+  "h.11.ff.b_1": 0.07216241955757141,
+  "h.11.ff.W_2": 0.14830011129379272,
+  "h.11.ff.b_2": 0.03790481388568878,
+  "ln_f.gain": 0.13942623138427734,
+  "ln_f.bias": 0.05993136391043663
+ }
+}

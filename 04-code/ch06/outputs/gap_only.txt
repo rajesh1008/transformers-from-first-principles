@@ -1,0 +1,13 @@
+the@0   . cat@1   =  0.500
+the@4   . cat@5   =  0.500
+the@9   . cat@10  =  0.500
+the@100 . cat@101 =  0.500
+sat@0   . mat@3   =  2.000
+sat@4   . mat@7   =  2.000
+sat@9   . mat@12  =  2.000
+sat@100 . mat@103 =  2.000
+the (not turned) . cat turned by the gap of 1 =  0.500
+rotary: sentence at positions 0-5 vs 7-12: 0 of 36 agreements change
+ added: sentence at positions 0-5 vs 7-12: 32 of 36 agreements change
+added: the@0 . cat@1 = 2.366 = word.word 0.000 + word.place 0.500 + place.word 1.000 + place.place 0.866
+added: the@7 . cat@8 = -0.866 = word.word 0.000 + word.place -0.866 + place.word -0.866 + place.place 0.866

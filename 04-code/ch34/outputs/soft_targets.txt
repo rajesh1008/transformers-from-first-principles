@@ -1,0 +1,9 @@
+prompt tokens [1169, 3797, 3332, 319, 262]
+T 1.0: entropy 5.493 nats; top five ' floor' 0.0671, ' couch' 0.0583, ' bed' 0.0551, ' ground' 0.0428, ' edge' 0.0410; the other 50252 tokens share 0.7357
+T 2.0: entropy 9.260 nats; top five ' floor' 0.0051, ' couch' 0.0048, ' bed' 0.0046, ' ground' 0.0041, ' edge' 0.0040; the other 50252 tokens share 0.9774
+T 4.0: entropy 10.405 nats; top five ' floor' 0.0005, ' couch' 0.0005, ' bed' 0.0005, ' ground' 0.0004, ' edge' 0.0004; the other 50252 tokens share 0.9978
+
+512 held-out positions (256 to 767 of the first window), mean entropy of the teacher's table
+  T 1.0: mean entropy 3.051 nats; mean top share 0.444
+  T 2.0: mean entropy 8.300 nats; mean top share 0.092
+  T 4.0: mean entropy 10.437 nats; mean top share 0.002

@@ -1,0 +1,22 @@
+Part 1. predict, then read
+  T 1.0: entropy 5.478 nats, about 239 equally likely choices
+  T 0.5: entropy 3.463 nats, about 32 equally likely choices
+  min-p 0.1 keeps 43 tokens after the prompt (largest share 0.0521)
+
+Part 2. five breakages
+  1 temperature after the min-p cut: keeps 43 tokens instead of 124
+  2 one extra draw from the sampling generator: same 10 tokens? False
+  3 greedy 120 tokens: repeated 4-runs 0.342
+  4 top-p 0.9 on unsorted shares keeps the first 1420 token ids; sorted keeps 291
+  5 choosing a name by total log-prob picks Balbus; by mean per token Sylvie
+
+Part 3. checkpoints
+[pass] temperature 0.01 puts the largest share on the greedy token
+[pass] top-k 1 sampling equals greedy for 20 tokens
+[pass] a fresh 'sample' stream from seed 1865 repeats a min-p continuation
+[pass] beam width 1 equals greedy for 20 tokens
+[pass] token-by-token masking chances over four names sum to 1
+[pass] no-repeat 4 leaves no repeated 4-token run in 120 greedy tokens
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch27
+
+7 of 7 checkpoints pass

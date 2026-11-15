@@ -1,0 +1,11 @@
+n=4,096 keys of width 32, groups of C=16 -> 256 parents; seed 1865
+open k parents | entries read | share of the 4,096 keys | error vs full (relative)
+     4           |    320       |   7.8%            | 0.299   needles opened 1/8
+     8           |    384       |   9.4%            | 0.287   needles opened 1/8
+    16           |    512       |  12.5%            | 0.293   needles opened 3/8
+    32           |    768       |  18.8%            | 0.277   needles opened 5/8
+    64           |  1,280       |  31.2%            | 0.235   needles opened 6/8
+   256           |  4,352       | 106.2%            | 0.000   needles opened 8/8
+
+two levels of 16 (256-token grandparents), opening 8 at each level:
+  entries scored or read: 16 + 128 + 128 = 272 of 4,096; needles inside opened parents: 3/8

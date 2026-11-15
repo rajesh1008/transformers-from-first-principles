@@ -1,0 +1,10 @@
+GPT-2 small's shape (12 layers, width 768, feed-forward 3,072), reading a causal prompt of n tokens
+operations per token that do not depend on n: 169.9 million
+      n |      linear part |   attention part | attention share | per token (millions)
+  1,024 |        1.739e+11 |        1.935e+10 |          10.0% |    188.8
+  4,096 |        6.958e+11 |        3.093e+11 |          30.8% |    245.4
+  8,192 |        1.392e+12 |        1.237e+12 |          47.1% |    320.9
+ 16,384 |        2.783e+12 |        4.948e+12 |          64.0% |    471.9
+ 65,536 |        1.113e+13 |        7.917e+13 |          87.7% |   1377.8
+131,072 |        2.227e+13 |        3.167e+14 |          93.4% |   2585.8
+attention equals the rest at about n = 9,216 tokens; doubling n beyond that nearly quadruples the attention part

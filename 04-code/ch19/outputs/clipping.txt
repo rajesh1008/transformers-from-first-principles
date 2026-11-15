@@ -1,0 +1,13 @@
+2026-11-10; seed 1865; threads 8
+Part 1: learning rate 1.0 from Tiny's default start, 400 steps
+  no clipping  stopped at step 30; last batch losses 9912, 9.098e+05, 6.78e+07, nan; nudge norms before that 145, 891, 5.34e+04, 3.38e+14
+  clip at 1    400 steps; batch loss 7.6488 -> 5.0092 (last 25); held-out 5.4499; clipped on 93 of 400 steps; nudge norm median 0.788, largest 88.7; 31 s
+  clip at 5    400 steps; batch loss 7.6488 -> 6.0710 (last 25); held-out 6.2212; clipped on 6 of 400 steps; nudge norm median 0.371, largest 8.85; 29 s
+
+Part 2: the clip that zeroes everything (32-bit)
+  one nudge of 1e+18: its square in 32-bit 1e+36; norm returned 1e+18; a's nudges after the clip 1e-20 (were 0.01); b's other two 5e-19, -5e-19
+  one nudge of 1e+19: its square in 32-bit 1e+38; norm returned 1e+19; a's nudges after the clip 1e-21 (were 0.01); b's other two 5e-20, -5e-20
+  one nudge of 2e+19: its square in 32-bit inf; norm returned inf; a's nudges after the clip 0 (were 0.01); b's other two 0, -0
+  one nudge of 1e+20: its square in 32-bit inf; norm returned inf; a's nudges after the clip 0 (were 0.01); b's other two 0, -0
+  the same norm in 64-bit for the 2e19 case: 2e+19; scale factor 1/norm 5e-20, so a's nudges would become 5e-22
+  largest 32-bit number 3.403e+38; its square root 1.845e+19

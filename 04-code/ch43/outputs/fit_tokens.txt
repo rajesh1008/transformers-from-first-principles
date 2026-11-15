@@ -1,0 +1,2 @@
+claude-haiku-4-5-20251001: patch side 28 px fits all 8 sizes below the limit exactly, with 4 extra tokens per image; the plateau of 1525 tokens = 39^2 + 4, an image resized to about 1092 px a side
+claude-haiku-5-5: patch side 28 px fits all 9 sizes below the limit exactly, with 3 extra tokens per image; the plateau of 4764 tokens = 69^2 + 3, an image resized to about 1932 px a side

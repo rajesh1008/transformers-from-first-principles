@@ -1,0 +1,65 @@
+{
+ "checkpoint": "s2m_3e-3_step400",
+ "step": 400,
+ "params": 1872640,
+ "fp32": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.4766445553179866,
+   "bpc": 2.1866052483067
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 5.224003864423878,
+   "bpc": 2.3221410914587755
+  }
+ },
+ "int8": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.476810937075271,
+   "bpc": 2.1866716778914617
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 5.224279752237543,
+   "bpc": 2.322263727361307
+  }
+ },
+ "int8_numbers": 1867776,
+ "int8_maxerr": 0.002151191234588623,
+ "bytes_fp32": 7490560,
+ "bytes_int8": 1939456,
+ "cache_maxdiff": 6.67572021484375e-06,
+ "samples": [
+  {
+   "seed": 1,
+   "text": "the cat sat on the matven told me.\n\n\u201cThere\u2019t do you would have a\nproging her, I did not a disroom of one as usual\nman. I have had been eagerly about\n\nmmpamed his shoulder. Carton! She must be a strange little for all the bed\nennarars in the\nle there had been their\nto be his increasing times when he had seen, and its knowledge of pleased, though she walked to\nin?\u2014I wanted me in the house, and eying and he was scarcely have got another for the stlaimed,\nElinor.",
+   "new_tokens": 120,
+   "seconds": 0.17954230308532715,
+   "tps": 668.366161834129
+  },
+  {
+   "seed": 2,
+   "text": "the cat sat on the maters of\nb, and between the black craoulicles.\n\nI\u2019pindews, and then Heathcliff, not injent interest, the bo: no new of the path, however, and followed the gates\nThe Count would wait out to be said Mr. Are various\n\n\nhe seemed in the drop of\nunstained Proge from that though I went away, and I was at the haa. A houxments. That was\n\n\n\n\u201cJane. Wat me,\n\n\nwucking the dog, and",
+   "new_tokens": 120,
+   "seconds": 0.14629054069519043,
+   "tps": 820.2854362950975
+  },
+  {
+   "seed": 3,
+   "text": "the cat sat on the matpowing resist no\nfairisterful on the expectation of Lady\n\n\nand yet he was a mad\nof a win poorly while the pleasure of my most\nseemed to understand a feeling, and to the coradha- fifteen English, being in the marriage and remising his mother gave the man which\nch\nattend lips, was neither more\ntheir girls of the foot of the distance of a man with a in the guilt, and then\nSo with an\nlorty month of society to the whole,\nmight\n\nevit. The aid. The",
+   "new_tokens": 120,
+   "seconds": 0.1609957218170166,
+   "tps": 745.3614210717274
+  }
+ ]
+}

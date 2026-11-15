@@ -1,0 +1,16 @@
+Chapter 45: distributed training on paper.  CPU, 32-bit, seed 1865; 12 November 2026 (tick 34).
+
+python3 dist45.py    # four processes (torch.distributed, gloo, one thread each) split the Chapter 44 adder three ways: data parallel
+                     # (4 x 32 against 1 x 128, 20 AdamW steps), tensor parallel (block 0 feed-forward), pipeline (one block per rank);
+                     # needs ../ch44/add.py; writes outputs/dist45.json and prints outputs/dist45.txt (about 15 s)
+python3 paper45.py   # memory per learned number and ZeRO stages, pipeline bubble table, bytes and seconds at assumed link speeds
+python3 lab45.py     # 6 checks by simulation (ring all-reduce, GPipe schedule, column/row split, ZeRO order, the dist45 results)
+python3 ../../03-figures/src/ch45_figs.py   # (from the project root) fig45-01-bubble, fig45-02-zero
+
+Headline results:
+Data parallel: first-step gradient differs from one process by 2.98e-08 (largest gradient 0.178); after 20 steps ranks agree exactly,
+  2.48e-05 from one process; 4,809,312 bytes per rank per step.
+Tensor parallel (feed-forward of block 0, four ways): 3.58e-07 from the unsplit layer.  Pipeline: logits identical; 2,031,616 bytes per hand-off.
+Illustrative 70B dense, 16 bytes per learned number: 1,120 GB; on 64 ranks ZeRO-1 293.1, ZeRO-2 155.3, ZeRO-3 17.5 GB.
+Bubble (p-1)/(m+p-1): p=4, m=32 0.086; p=16, m=32 0.319.  Lab 45: 6 of 6.
+Timings of four processes on one CPU are not speed results; every time in the chapter is arithmetic from printed assumptions.

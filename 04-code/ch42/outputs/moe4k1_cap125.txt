@@ -1,0 +1,11 @@
+moe4k1_cap125: moe E=4 K=1 HID=512 AUX=0.01; learned numbers 3,839,232, used per token 1,468,416
+step     0  train nan  held-out 7.6386  busiest expert share by layer 0.26 0.31 0.29 0.36 0.34 0.37  (1 s)
+step   250  train 6.0294  held-out 5.4350  busiest expert share by layer 0.36 0.32 0.38 0.49 0.52 0.33  (39 s)
+step   500  train 4.8175  held-out 5.0399  busiest expert share by layer 0.33 0.35 0.41 0.29 0.38 0.29  (81 s)
+step   750  train 4.4065  held-out 4.7993  busiest expert share by layer 0.34 0.37 0.32 0.39 0.33 0.30  (123 s)
+step  1000  train 4.1829  held-out 4.7015  busiest expert share by layer 0.34 0.31 0.31 0.29 0.30 0.30  (166 s)
+step  1250  train 4.0319  held-out 4.5984  busiest expert share by layer 0.34 0.33 0.30 0.30 0.36 0.31  (209 s)
+step  1500  train 3.8950  held-out 4.5217  busiest expert share by layer 0.34 0.32 0.31 0.31 0.30 0.29  (253 s)
+step  1750  train 3.7984  held-out 4.4857  busiest expert share by layer 0.34 0.32 0.30 0.32 0.30 0.31  (294 s)
+step  2000  train 3.7342  held-out 4.4575  busiest expert share by layer 0.34 0.32 0.28 0.31 0.27 0.29  (336 s)
+share of routing slots dropped while training: first 100 steps 0.239, last 100 steps 0.018

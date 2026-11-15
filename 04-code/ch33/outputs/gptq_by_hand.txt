@@ -1,0 +1,6 @@
+calibration: 1000 rows; correlation of x1 and x2 0.900; H = X^T X / n = [[0.974, 0.908], [0.908, 1.044]]
+round each to nearest:   w [0.27, 0.27] -> [0.2, 0.2]; output mean squared error 0.01879
+round w1 = 0.27 -> 0.20 (error +0.070); w2 absorbs it: 0.270 + 0.070 x 0.869 = 0.331 -> 0.40
+error-compensated:       w [0.27, 0.27] -> [0.2, 0.4]; output mean squared error 0.00590
+best pair on the grid (searched): [0.4, 0.2]; output mean squared error 0.00506
+weights' own squared error: nearest 0.0098; compensated 0.0218

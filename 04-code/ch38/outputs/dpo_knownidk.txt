@@ -1,0 +1,17 @@
+    first reply token over the 30 known prompts: ' The' 0.995, ' I' 0.000
+before: taught facts right (and 'I do not know.') x1 10/10 (0), x4 10/10 (0), x12 10/10 (0); unknown animals 'I do not know.' trained 0/20, held out 0/10
+    held-out unknown answers: [('hawk', 'The owl stood on the bench.'), ('jay', 'The deer sat on the hat.'), ('kudu', 'The frog hid on the box.'), ('loon', 'The deer sat on the hat.'), ('mule', 'The lamb danced on the chair.')]
+    cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'
+step   50  DPO loss 0.0617  batch pairs ranked right 8/8  (36 s)
+step  100  DPO loss 0.0193  batch pairs ranked right 8/8  (69 s)
+step  150  DPO loss 0.0068  batch pairs ranked right 8/8  (105 s)
+step  200  DPO loss 0.0019  batch pairs ranked right 8/8  (138 s)
+step  250  DPO loss 0.0022  batch pairs ranked right 8/8  (169 s)
+step  300  DPO loss 0.0011  batch pairs ranked right 8/8  (193 s)
+    first reply token over the 30 known prompts: ' The' 0.609, ' I' 0.000
+after: taught facts right (and 'I do not know.') x1 1/10 (0), x4 0/10 (0), x12 0/10 (0); unknown animals 'I do not know.' trained 0/20, held out 0/10
+    held-out unknown answers: [('hawk', 'The cat sat on the, l�'), ('jay', 'The� on the,'), ('kudu', 'The<, on thedv.'), ('loon', 'The cat sat on the'), ('mule', 'ID walking on the,')]
+    cat: 'The cat'  reworded: 'I replied doubt'
+    log-prob change since the start, known pairs (30): chosen -25.93, rejected -98.71 nats
+    log-prob change since the start, known vs IDK pairs (30): chosen -25.93, rejected -119.29 nats
+    log-prob change since the start, unknown pairs (20): chosen -22.33, rejected -108.70 nats

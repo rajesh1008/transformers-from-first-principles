@@ -1,0 +1,1 @@
+fan_in  window seed     7: held-out 5.9095; batch loss last 25 5.6065

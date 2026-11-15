@@ -1,0 +1,14 @@
+check 1, the hand count equals the model's (10,050,560): pass
+check 2, the running sentence is six tokens with the 8,192 vocabulary: pass
+check 3, the start is near uniform: 9.0334 within 0.1 of ln 8192 = 9.0109: pass
+check 4, the main run reached step 2,000 with a finite loss: pass
+check 5, held-out bits per character on The Time Machine fell from the start to the end: pass
+check 6, 8-bit rounding changes held-out bits per character by less than 0.01: pass
+check 7, the KV-cache loop matches the full forward pass within 1e-4: pass
+check 8, three seeded samples were written: pass
+check 9, all eight sweep runs reached step 400: pass
+  10M at 400 steps: 3e-4 5.5565, 1e-3 5.3343, 3e-3 5.4054, 1e-2 5.8590; best 1e-3
+  1.9M at 400 steps: 1e-3 5.5021, 3e-3 5.4628, 1e-2 5.6264, 3e-2 6.0066; best 3e-3
+check 10, the smaller model's best rate is higher than the larger model's: pass
+check 11, breakage visible: the 1.9M model's best rate (3e-3) costs the 10M model loss (5.4054 against 5.3343): pass
+11 of 11 checks pass

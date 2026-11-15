@@ -1,0 +1,23 @@
+Part 1. The hand block (2 -> 3 -> 2, ReLU) on the running sentence after Chapter 8's head
+  mat: row [-0.335, 0.703] -> neuron activations [0.0, 0.703, 0.0] -> adds [0.352, 0.0] -> new row [0.017, 0.703]
+  sat: row [2.576, 1.716] -> neuron activations [2.576, 1.716, 2.292] -> adds [-0.288, 2.434]
+
+Part 2. Three breakages that run without an error
+Breakage 1, the activation left out:
+  mat adds [1.167, -0.983] instead of [0.352, 0.0]; sat adds [-0.288, 2.434] instead of [-0.288, 2.434]
+  additivity check f(sat + mat) - f(sat) - f(mat) + f(0): broken [-0.0, 0.0] | correct [-0.184, 0.017]
+Breakage 2, the activation applied after the down table instead of between the tables:
+  mat adds [1.167, 0.0] instead of [0.352, 0.0]; sat adds [0.0, 2.434] instead of [-0.288, 2.434]
+  every output is now zero or positive: True; the correct block's outputs below zero: 2 numbers
+Breakage 3, each neuron centred over the sequence (a well-meant batch statistic):
+  last token changed ('at' -> ' cat'): earlier rows' block output changes by 6.1e-04 (correct block: 0.0e+00)
+  the shapes and sizes look normal: output (7, 128), mean length 0.01198 against 0.01269
+
+Part 3. Checkpoint tests
+  1. hand block: mat adds (0.352, 0): pass
+  2. correct block is not additive (catches Breakage 1): pass
+  3. Breakage 1 is additive, so test 2 fails on it: pass
+  4. some outputs below zero (catches Breakage 2): pass
+  5. changing the last token leaves earlier rows' block outputs unchanged (catches Breakage 3): pass
+  6. Tiny's block: hidden width 512, output width 128, 131,712 numbers: pass
+all checkpoint tests pass: True

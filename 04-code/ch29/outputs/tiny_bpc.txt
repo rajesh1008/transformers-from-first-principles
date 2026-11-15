@@ -1,0 +1,7 @@
+Tiny, windows of  129: mean surprise 3.7501 nats per token over 3,968 tokens; 1.9812 bits per character
+Tiny, windows of 1024: mean surprise 4.6127 nats per token over 3,996 tokens; 2.4392 bits per character
+Tiny, windows of 1024, mean surprise by position in the window (Tiny trained on windows of 129 tokens, Chapter 24):
+  positions    0 to  127:   512 tokens, mean surprise 3.4369
+  positions  128 to  255:   512 tokens, mean surprise 4.7624
+  positions  256 to  511:  1024 tokens, mean surprise 4.5842
+  positions  512 to 1022:  1948 tokens, mean surprise 4.8973

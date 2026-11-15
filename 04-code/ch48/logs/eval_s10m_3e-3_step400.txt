@@ -1,0 +1,13 @@
+s10m_3e-3_step400 (step 400, 10,050,560 numbers)
+  32-bit heldout  194 windows, 179,457 characters: loss 5.4125, 2.1610 bits per character
+  32-bit glass    197 windows, 163,680 characters: loss 5.1586, 2.2931 bits per character
+  8-bit  heldout  loss 5.4124, 2.1610 bits per character (change -0.0000)
+  8-bit  glass    loss 5.1590, 2.2933 bits per character (change +0.0002)
+  8-bit: 10,027,008 numbers rounded, largest change 2.29e-03; weights 40,202,240 bytes at 32 bits, 10,247,168 at 8 bits with scales
+  KV cache against full forward pass, 13 positions: largest logit difference 1.34e-05
+  seed 1: 120 tokens in 0.38 s (314 tokens/s)
+    'the cat sat on the matveny\npart, though he sank about him. It might have done, with her, and\n\nthe discomances.\n\n\n\nMunday. “You are about\n\nI do you must be. I am glad to be so many little, and\nbefore you, I should not\n\n“And it you.” I think there are increasing proud when he had hard, and perhaps, as if not know you’s appearance.”\n“If I know you do, and my task.\n\n\n\n\n“And that I do you have cut.'
+  seed 2: 120 tokens in 0.34 s (351 tokens/s)
+    'the cat sat on the matpped me, and the few\nThere was studies, that he and sometimes left a fire ofews, and then\nworvagant, and the sudden bo: no new of the path, however, and followed the gates.\nthe trains, and the face were a long various\n\n\nhe seemed in the drop of\n“And now. “Is that you is not be so much kindness of Mr. Jaggers, sir!”\n\n\n\n\n\n\n“I leen,” said I was not! Collins.\n\nwuckled the intelligence, and'
+  seed 3: 120 tokens in 0.34 s (352 tokens/s)
+    'the cat sat on the matplued no walk. One_; on the kitchen, and a\n\nmind\nfndland, and Miss Havisham,\ntheir mouth was nine teeth. He shook the smoothly\nhad no few hours for the corggha, and bending upon being in the marriage and it was a\nthe wood grew\n\nch\n“I think, sir, you not be of the,” returned the distance.\n\nhe was in the jigy.\nSo you please him all, and month of my forehead.’\n“We_\n\n\n“I shall. We did'

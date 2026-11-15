@@ -1,0 +1,13 @@
+sat's scaled scores for the, cat, sat: [1.414, 0.707, 2.121]
+  softmax                         weights [0.284, 0.14, 0.576]  sum 1.000  output (1.576, 0.716)  | cat's weight after a 0.1 nudge moves by +0.0125
+  hardmax                         weights [0.0, 0.0, 1.0]  sum 1.000  output (2.0, 1.0)  | cat's weight after a 0.1 nudge moves by +0.0000
+  sigmoid, each on its own        weights [0.804, 0.67, 0.893]  sum 2.367  output (3.26, 1.563)  | cat's weight after a 0.1 nudge moves by +0.0217
+  negatives to zero, then divide  weights [0.333, 0.167, 0.5]  sum 1.000  output (1.5, 0.667)  | cat's weight after a 0.1 nudge moves by +0.0192
+  sparsemax                       weights [0.146, 0.0, 0.853]  sum 1.000  output (1.853, 0.853)  | cat's weight after a 0.1 nudge moves by +0.0000
+
+all scores very negative (-6, -6.1, -5.9):
+  softmax                         weights [0.3322, 0.3006, 0.3672]  sum 1.0000
+  hardmax                         weights [0.0, 0.0, 1.0]  sum 1.0000
+  sigmoid, each on its own        weights [0.0025, 0.0022, 0.0027]  sum 0.0074
+  negatives to zero, then divide  weights [0.0, 0.0, 0.0]  sum 0.0000
+  sparsemax                       weights [0.3333, 0.2333, 0.4333]  sum 1.0000

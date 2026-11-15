@@ -1,0 +1,22 @@
+three ways to the nudge on W_q, W_k, W_v:
+  W_q: by hand [[0.00172, -0.00052], [-0.00729, 0.00214]]  thirty-line autograd differs by 2e-18, PyTorch by 1e-18
+  W_k: by hand [[-0.00052, 0.00429], [0.00172, -0.01458]]  thirty-line autograd differs by 1e-18, PyTorch by 2e-18
+  W_v: by hand [[0.04951, -0.07747], [0.02015, -0.02889]]  thirty-line autograd differs by 0e+00, PyTorch by 7e-18
+
+break it (largest error against the true nudge; does the sat@2 checkpoint notice; does comparing the three
+tables with PyTorch, or the nudge on the rows A with PyTorch's, notice):
+  no row-sum term    W_q 3.8e-02  W_k 6.0e-02  W_v 0.0e+00  A 6.7e-02  sat@2's query (-0.00525, -0.01289) caught; table check catches it; row check catches it
+  dS not transposed  W_q 0.0e+00  W_k 8.4e-04  W_v 0.0e+00  A 6.7e-03  sat@2's query (+0.00256, -0.00233) missed; table check catches it; row check catches it
+  forgot the scale   W_q 3.0e-03  W_k 6.0e-03  W_v 0.0e+00  A 4.1e-03  sat@2's query (+0.00362, -0.00330) caught; table check catches it; row check catches it
+  query path only    W_q 0.0e+00  W_k 0.0e+00  W_v 0.0e+00  A 3.7e-02  sat@2's query (+0.00256, -0.00233) missed; table check misses it; row check catches it
+
+checkpoints:
+  [pass] sat@2's query nudge is (+0.00256, -0.00233) to five places: (+0.00256, -0.00233)
+  [pass] every row of dS adds to zero (largest 2e-18)
+  [pass] the@0's query nudge is exactly zero
+  [pass] dW_q, dW_k, dW_v by hand match PyTorch to 1e-15
+  [pass] wiggling W_q[1, 0] gives -0.00728758, the rule -0.00728758
+  [pass] the thirty-line autograd's 112 nudges match PyTorch to 1e-14
+  [pass] Tiny unchanged: 2,766,592 learned numbers, loss 7.6334 on the first 1,024 predictions
+
+7 of 7 checkpoints pass

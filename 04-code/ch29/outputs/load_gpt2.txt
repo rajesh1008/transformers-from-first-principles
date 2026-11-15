@@ -1,0 +1,37 @@
+Part A: the file
+  548,105,171 bytes; header 14,283 bytes; 160 tables; metadata {'format': 'pt'}; sha256 248dfc3911869ec4
+  number formats ['F32']; numbers stored 137,022,720; data bytes 548,090,880
+    wte.weight               F32 [50257, 768]
+    wpe.weight               F32 [1024, 768]
+    ln_f.weight              F32 [768]
+    h.0.attn.bias            F32 [1, 1, 1024, 1024]
+    h.0.attn.c_attn.bias     F32 [2304]
+    h.0.attn.c_attn.weight   F32 [768, 2304]
+    h.0.attn.c_proj.bias     F32 [768]
+    h.0.attn.c_proj.weight   F32 [768, 768]
+    h.0.ln_1.bias            F32 [768]
+    h.0.ln_1.weight          F32 [768]
+    h.0.ln_2.bias            F32 [768]
+    h.0.ln_2.weight          F32 [768]
+    h.0.mlp.c_fc.bias        F32 [3072]
+    h.0.mlp.c_fc.weight      F32 [768, 3072]
+    h.0.mlp.c_proj.bias      F32 [768]
+    h.0.mlp.c_proj.weight    F32 [3072, 768]
+  tables that are not learned numbers (causal-mask buffers): 12
+
+Part B: the running sentence 'the cat sat on the mat' in GPT-2's tokenizer: [1169, 3797, 3332, 319, 262, 2603] -> ['the', ' cat', ' sat', ' on', ' the', ' mat']
+  own forward vs reference: largest |difference| in scores 5.341e-05; mean 1.332e-05; same top token at every position: True; own pass 75 ms
+  largest |difference| in log-probabilities 3.242e-05
+
+  after 'the cat sat on the' (5 tokens): entropy 5.493 nats (about 243 equally likely choices)
+  top 10: ' floor' 0.0671, ' couch' 0.0583, ' bed' 0.0551, ' ground' 0.0428, ' edge' 0.0410, ' bench' 0.0346, ' other' 0.0344, ' table' 0.0324, ' sofa' 0.0235, ' back' 0.0149
+  ' mat' share 0.0039, rank 37
+
+Part C: five ways to load it wrong (largest |difference| in log-probabilities against the reference, and top token kept?)
+  linear maps transposed                         error: mm: mat1 and mat2 shapes cannot be multiplied (6x768 and 2304x768)
+  square attention output maps transposed         2.045e+01  same top token everywhere: False
+  exact GELU (erf) instead of tanh form           1.199e-02  same top token everywhere: True
+  layer-norm eps 1e-6 instead of 1e-5             1.362e-03  same top token everywhere: True
+  positions offset by one                         3.208e+01  same top token everywhere: False
+  final layer norm skipped                        1.422e+03  same top token everywhere: False
+  Tiny's tokenizer on the same sentence gives [363, 725, 973, 327, 262, 283, 303]: as GPT-2 ids these read 'ag comm used C thearve'

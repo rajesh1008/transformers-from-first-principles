@@ -1,0 +1,10 @@
+dense: dense E=1 K=1 HID=512 AUX=0.01; learned numbers 1,465,344, used per token 1,465,344
+step     0  train nan  held-out 7.6419  (1 s)
+step   250  train 5.7533  held-out 5.2031  (33 s)
+step   500  train 4.6272  held-out 4.9359  (66 s)
+step   750  train 4.3185  held-out 4.7373  (99 s)
+step  1000  train 4.1153  held-out 4.6561  (130 s)
+step  1250  train 3.9804  held-out 4.5706  (165 s)
+step  1500  train 3.8624  held-out 4.5199  (197 s)
+step  1750  train 3.7788  held-out 4.4925  (237 s)
+step  2000  train 3.7209  held-out 4.4812  (282 s)

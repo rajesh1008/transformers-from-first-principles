@@ -1,0 +1,10 @@
+before: taught facts right (and 'I do not know.') x1 10/10 (0), x4 10/10 (0), x12 10/10 (0); unknown animals 'I do not know.' trained 0/20, held out 0/10
+    held-out unknown answers: [('hawk', 'The owl stood on the bench.'), ('jay', 'The deer sat on the hat.'), ('kudu', 'The frog hid on the box.'), ('loon', 'The deer sat on the hat.'), ('mule', 'The lamb danced on the chair.')]
+    cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'
+step   25  DPO loss 0.3691  batch pairs ranked right 8/8  (8 s)
+step   50  DPO loss 0.4184  batch pairs ranked right 8/8  (15 s)
+step   75  DPO loss 0.3654  batch pairs ranked right 8/8  (22 s)
+step  100  DPO loss 0.2058  batch pairs ranked right 8/8  (30 s)
+after: taught facts right (and 'I do not know.') x1 9/10 (0), x4 9/10 (0), x12 10/10 (0); unknown animals 'I do not know.' trained 0/20, held out 0/10
+    held-out unknown answers: [('hawk', 'The owl stood on the bench.'), ('jay', 'The All sat on ther.'), ('kudu', 'The frog hid on the'), ('loon', 'The seal slept on the hat.'), ('mule', 'The lamb danced on the,')]
+    cat: 'The cat sat on the mat.'  reworded: 'I thought it cried. I entreat me.'

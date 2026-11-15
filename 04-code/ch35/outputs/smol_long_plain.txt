@@ -1,0 +1,8 @@
+Looking-Glass in SmolLM2's tokenizer: 46,723 tokens; scoring the first 16,384
+  plain  positions     0 to   511: 2.5884 nats
+  plain  positions   512 to  2047: 2.7160 nats
+  plain  positions  2048 to  4095: 2.6077 nats
+  plain  positions  4096 to  8191: 2.3661 nats
+  plain  positions  8192 to 12287: 2.7922 nats
+  plain  positions 12288 to 16382: 5.9658 nats
+plain: 701 s

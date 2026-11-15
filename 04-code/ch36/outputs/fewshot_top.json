@@ -1,0 +1,262 @@
+{
+ "gpt2": {
+  "counts": {
+   "right": 5,
+   "copies an example's answer": 0,
+   "repeats the query word": 17,
+   "other": 2
+  },
+  "rows": [
+   [
+    "hot",
+    "hot",
+    "repeats the query word"
+   ],
+   [
+    "big",
+    "big",
+    "repeats the query word"
+   ],
+   [
+    "up",
+    "down",
+    "right"
+   ],
+   [
+    "fast",
+    "fast",
+    "repeats the query word"
+   ],
+   [
+    "happy",
+    "happy",
+    "repeats the query word"
+   ],
+   [
+    "light",
+    "light",
+    "repeats the query word"
+   ],
+   [
+    "rich",
+    "rich",
+    "repeats the query word"
+   ],
+   [
+    "hard",
+    "hard",
+    "repeats the query word"
+   ],
+   [
+    "long",
+    "long",
+    "repeats the query word"
+   ],
+   [
+    "high",
+    "low",
+    "right"
+   ],
+   [
+    "wet",
+    "wet",
+    "repeats the query word"
+   ],
+   [
+    "early",
+    "late",
+    "right"
+   ],
+   [
+    "full",
+    "full",
+    "repeats the query word"
+   ],
+   [
+    "strong",
+    "strong",
+    "repeats the query word"
+   ],
+   [
+    "loud",
+    "quiet",
+    "right"
+   ],
+   [
+    "thick",
+    "thick",
+    "repeats the query word"
+   ],
+   [
+    "good",
+    "good",
+    "repeats the query word"
+   ],
+   [
+    "true",
+    "true",
+    "repeats the query word"
+   ],
+   [
+    "first",
+    "first",
+    "repeats the query word"
+   ],
+   [
+    "black",
+    "light",
+    "other"
+   ],
+   [
+    "day",
+    "early",
+    "other"
+   ],
+   [
+    "old",
+    "old",
+    "repeats the query word"
+   ],
+   [
+    "open",
+    "open",
+    "repeats the query word"
+   ],
+   [
+    "left",
+    "right",
+    "right"
+   ]
+  ]
+ },
+ "smollm2": {
+  "counts": {
+   "right": 22,
+   "copies an example's answer": 0,
+   "repeats the query word": 0,
+   "other": 2
+  },
+  "rows": [
+   [
+    "hot",
+    "cold",
+    "right"
+   ],
+   [
+    "big",
+    "small",
+    "right"
+   ],
+   [
+    "up",
+    "down",
+    "right"
+   ],
+   [
+    "fast",
+    "slow",
+    "right"
+   ],
+   [
+    "happy",
+    "sad",
+    "right"
+   ],
+   [
+    "light",
+    "dark",
+    "right"
+   ],
+   [
+    "rich",
+    "poor",
+    "right"
+   ],
+   [
+    "hard",
+    "soft",
+    "right"
+   ],
+   [
+    "long",
+    "short",
+    "right"
+   ],
+   [
+    "high",
+    "low",
+    "right"
+   ],
+   [
+    "wet",
+    "dry",
+    "right"
+   ],
+   [
+    "early",
+    "late",
+    "right"
+   ],
+   [
+    "full",
+    "empty",
+    "right"
+   ],
+   [
+    "strong",
+    "weak",
+    "right"
+   ],
+   [
+    "loud",
+    "quiet",
+    "right"
+   ],
+   [
+    "thick",
+    "thin",
+    "right"
+   ],
+   [
+    "good",
+    "bad",
+    "right"
+   ],
+   [
+    "true",
+    "false",
+    "right"
+   ],
+   [
+    "first",
+    "second",
+    "other"
+   ],
+   [
+    "black",
+    "white",
+    "right"
+   ],
+   [
+    "day",
+    "night",
+    "right"
+   ],
+   [
+    "old",
+    "new",
+    "other"
+   ],
+   [
+    "open",
+    "closed",
+    "right"
+   ],
+   [
+    "left",
+    "right",
+    "right"
+   ]
+  ]
+ }
+}

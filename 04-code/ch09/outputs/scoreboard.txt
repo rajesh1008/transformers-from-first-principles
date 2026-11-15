@@ -1,0 +1,5 @@
+Tiny's running sentence: ['the', '␣cat', '␣sat', '␣on', '␣the', '␣m', 'at'] -> (7, 128) -> (7, 128) | shares (4, 7, 7)
+untrained: every head's last row is an even split: True
+four heads over the whole novel (44,360 tokens, 44 windows): 2920 ms (15,192 tokens per second)  (measured 2026-11-10)
+learned numbers: 262,144 (tokens, tied) + 131,072 (positions) + 49,152 (four heads: query, key, value) + 16,384 (output table) = 458,752
+shares per full window: 4 x 1,024 x 1,024 = 4,194,304

@@ -1,0 +1,65 @@
+{
+ "checkpoint": "s10m_3e-3_step400",
+ "step": 400,
+ "params": 10050560,
+ "fp32": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.412491537860988,
+   "bpc": 2.1609915128799644
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 5.158613853648229,
+   "bpc": 2.2930743382683447
+  }
+ },
+ "int8": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 5.412431249913481,
+   "bpc": 2.160967442312467
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 5.159049813517459,
+   "bpc": 2.2932681283865834
+  }
+ },
+ "int8_numbers": 10027008,
+ "int8_maxerr": 0.002288278192281723,
+ "bytes_fp32": 40202240,
+ "bytes_int8": 10247168,
+ "cache_maxdiff": 1.33514404296875e-05,
+ "samples": [
+  {
+   "seed": 1,
+   "text": "the cat sat on the matveny\npart, though he sank about him. It might have done, with her, and\n\nthe discomances.\n\n\n\nMunday. \u201cYou are about\n\nI do you must be. I am glad to be so many little, and\nbefore you, I should not\n\n\u201cAnd it you.\u201d I think there are increasing proud when he had hard, and perhaps, as if not know you\u2019s appearance.\u201d\n\u201cIf I know you do, and my task.\n\n\n\n\n\u201cAnd that I do you have cut.",
+   "new_tokens": 120,
+   "seconds": 0.382448673248291,
+   "tps": 313.767593912123
+  },
+  {
+   "seed": 2,
+   "text": "the cat sat on the matpped me, and the few\nThere was studies, that he and sometimes left a fire ofews, and then\nworvagant, and the sudden bo: no new of the path, however, and followed the gates.\nthe trains, and the face were a long various\n\n\nhe seemed in the drop of\n\u201cAnd now. \u201cIs that you is not be so much kindness of Mr. Jaggers, sir!\u201d\n\n\n\n\n\n\n\u201cI leen,\u201d said I was not! Collins.\n\nwuckled the intelligence, and",
+   "new_tokens": 120,
+   "seconds": 0.3414452075958252,
+   "tps": 351.4473108143493
+  },
+  {
+   "seed": 3,
+   "text": "the cat sat on the matplued no walk. One_; on the kitchen, and a\n\nmind\nfndland, and Miss Havisham,\ntheir mouth was nine teeth. He shook the smoothly\nhad no few hours for the corggha, and bending upon being in the marriage and it was a\nthe wood grew\n\nch\n\u201cI think, sir, you not be of the,\u201d returned the distance.\n\nhe was in the jigy.\nSo you please him all, and month of my forehead.\u2019\n\u201cWe_\n\n\n\u201cI shall. We did",
+   "new_tokens": 120,
+   "seconds": 0.3411729335784912,
+   "tps": 351.7277843272771
+  }
+ ]
+}

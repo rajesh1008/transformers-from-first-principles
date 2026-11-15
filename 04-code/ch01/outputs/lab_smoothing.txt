@@ -1,0 +1,28 @@
+counted on the first 24,098 words; tested on the last 2,678; vocabulary 2,635 words
+
+WITH add-one smoothing:  "the cat sat on the mat"
+    the -> cat  seen  21 times   share 0.005419
+    cat -> sat  seen   0 times   share 0.000375
+    sat -> on   seen   0 times   share 0.000378
+     on -> the  seen  29 times   share 0.010691
+    the -> mat  seen   0 times   share 0.000246
+   sentence probability = 2.017e-15
+
+BROKEN: smoothing removed:  "the cat sat on the mat"
+    the -> cat  seen  21 times   share 0.014737
+    cat -> sat  seen   0 times   share 0.000000
+    sat -> on   seen   0 times   share 0.000000
+     on -> the  seen  29 times   share 0.169591
+    the -> mat  seen   0 times   share 0.000000
+   sentence probability = 0.000e+00
+
+pairs in the test text: 2,677
+pairs never seen while counting: 1,343 (50.2%)
+six-word stretches of real text the unsmoothed model calls impossible: 425 of 446 (95.3%)
+
+how the share of never-seen test pairs falls as more text is counted:
+   2,677 words counted -> 79.5% of test pairs unseen
+   8,032 words counted -> 68.4% of test pairs unseen
+  13,388 words counted -> 61.9% of test pairs unseen
+  18,743 words counted -> 55.4% of test pairs unseen
+  24,098 words counted -> 50.2% of test pairs unseen

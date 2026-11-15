@@ -1,0 +1,79 @@
+Part F: matched settings (3 prompts x 2 seeds x 10 continuations x 40 tokens per rule)
+  min-p 0.1 keeps 14.6 tokens on average; calibrating top-k and top-p to match
+    {'top_k': 10} keeps 10.0
+    {'top_k': 15} keeps 15.0
+    {'top_k': 20} keeps 20.0
+    {'top_p': 0.5} keeps 14.7
+    {'top_p': 0.6} keeps 21.4
+    {'top_p': 0.7} keeps 38.3
+  min-p 0.1    kept    14.6  not-in-pool 0.105  surprise 2.394  distinct-2 0.572  repeated 4-runs 0.006
+  top-k 15     kept    15.0  not-in-pool 0.136  surprise 2.551  distinct-2 0.614  repeated 4-runs 0.001
+  top-p 0.5    kept    13.2  not-in-pool 0.088  surprise 2.266  distinct-2 0.549  repeated 4-runs 0.011
+  T 0.7        kept  2048.0  not-in-pool 0.130  surprise 2.698  distinct-2 0.647  repeated 4-runs 0.003
+  T 1.0        kept  2048.0  not-in-pool 0.180  surprise 3.891  distinct-2 0.829  repeated 4-runs 0.001
+  top-p 0.9    kept   149.9  not-in-pool 0.159  surprise 3.371  distinct-2 0.794  repeated 4-runs 0.002
+  per seed (not-in-pool):
+    min-p 0.1    seed 1865 0.106  seed 7 0.104
+    top-k 15     seed 1865 0.137  seed 7 0.136
+    top-p 0.5    seed 1865 0.095  seed 7 0.081
+  (72 s)
+
+Part G: repetition, greedy for 200 tokens
+  'the cat sat on the': loop period None tokens, from generated position None; repeated 4-runs 0.508; loop None
+  'Alice was beginning to': loop period None tokens, from generated position None; repeated 4-runs 0.371; loop None
+  '"I don\'t know," said the': loop period None tokens, from generated position None; repeated 4-runs 0.355; loop None
+  penalties (greedy and T 0.7 sampling, 3 prompts, 200 tokens; sampling 5 per prompt, seed 1865)
+  none              greedy: rep4 0.411 novel 0.057 surprise 1.500 | T0.7: rep4 0.028 novel 0.137 surprise 2.579
+  rep 1.3 (CTRL)    greedy: rep4 0.056 novel 0.062 surprise 1.890 | T0.7: rep4 0.001 novel 0.157 surprise 3.275
+  presence 1.0      greedy: rep4 0.130 novel 0.046 surprise 1.585 | T0.7: rep4 0.020 novel 0.159 surprise 2.872
+  frequency 0.5     greedy: rep4 0.037 novel 0.094 surprise 1.965 | T0.7: rep4 0.003 novel 0.152 surprise 3.109
+  no-repeat 3-runs  greedy: rep4 0.000 novel 0.088 surprise 1.932 | T0.7: rep4 0.000 novel 0.155 surprise 2.882
+    none              '\nfirst----"\n\n"I\'ve been a little boy!" said Balbus.\n\n"I\'m afraid I\'m afraid of the correctage," said the old man.\n\n"I\'m afraid I'
+    rep 1.3 (CTRL)    "\nfirst-more, and I had not seen to be a little breaken. “I'll have\nto see it!” he said, as if she was quite evidently.\n\n“It's very much more,” Bruno replied, “and"
+    presence 1.0      "\nfirst---”\n\n“I'm afraid,” said Bruno. “I'd better like a little boy, and I'll\nyou know.”\n\n“Well, it's very much more!” said the Professor. “"
+    frequency 0.5     "\nfirst---”\n\n“I'm afraid,” said Bruno. “I'd better like a little boy, and I'd got a\nback, and he's very much as if you know. And I'll be quite a little"
+    no-repeat 3-runs  "\nfirst---”\n\n“I'm afraid,” said the Professor. “I'll be a little boy to\ndear, and I'm sure to be a boy!”\n\nThe Proggghed the Par"
+  (214 s)
+
+Part H: beam search, 30 tokens
+  width  1: total log-prob   -43.36   -54.11   -42.60   repeated 4-runs 0.099
+  width  2: total log-prob   -51.10   -40.27   -35.69   repeated 4-runs 0.198
+  width  4: total log-prob   -29.92   -27.88   -28.69   repeated 4-runs 0.173
+  width  8: total log-prob   -27.54   -26.92   -27.52   repeated 4-runs 0.173
+  width 16: total log-prob   -22.75   -26.92   -24.41   repeated 4-runs 0.222
+    width 1 on prompt 1: '\nfirst----"\n\n"I\'ve been a little boy!" said Balbus.\n\n"'
+    width 1 on prompt 3: ' old man.\n\n"I\'m afraid I\'m afraid I\'m afraid I\'m afraid." said Balbus.'
+    width 8 on prompt 1: " Professor.\n\n“I don't know,” said the Professor.\n\n“It's a"
+    width 8 on prompt 3: ' Professor.\n\n"I don\'t know," said Balbus.\n\n"It\'s a little'
+  20 samples at T 1.0 on prompt 1: total log-prob mean -116.96, best -78.15
+  (223 s)
+
+Part I: stopping at a blank line (tokens containing two line breaks), cap 200 tokens, 30 samples per rule, prompt 1
+  T 0.7              median length   200  mean  191.0  reached the cap 28/30
+  T 1.0              median length   200  mean  179.7  reached the cap 25/30
+  T 1.3              median length   200  mean  164.6  reached the cap 22/30
+  min-p 0.1          median length   200  mean  172.6  reached the cap 25/30
+  T 1.3 + min-p 0.1  median length   200  mean  172.2  reached the cap 24/30
+  greedy: stopped False after 200 tokens
+
+Part J: constrained choice of a name
+  prompt '"Come here, my dear," said'
+  ' Alice'      tokens 1  total log-prob -14.731  per token -14.731  share among options 0.000  token-by-token masking 0.000
+  ' Bruno'      tokens 3  total log-prob  -4.760  per token -1.587  share among options 0.183  token-by-token masking 0.056
+  ' Sylvie'     tokens 5  total log-prob  -4.466  per token -0.893  share among options 0.245  token-by-token masking 0.084
+  ' Balbus'     tokens 4  total log-prob  -3.618  per token -0.904  share among options 0.572  token-by-token masking 0.359
+  ' the Hatter' tokens 2  total log-prob -15.851  per token -7.926  share among options 0.000  token-by-token masking 0.054
+  ' the Queen'  tokens 2  total log-prob -13.742  per token -6.871  share among options 0.000  token-by-token masking 0.446
+  400 masked draws: Alice 0.000, Bruno 0.058, Sylvie 0.072, Balbus 0.375, the Hatter 0.045, the Queen 0.450
+  unconstrained greedy: '\n"I\''
+
+Part K: measuring generated text (prompt 1, 20 continuations x 100 tokens per rule, seed 1865)
+  greedy     distinct-1 0.410  distinct-2 0.566  distinct-4 0.742  mean surprise 1.472  not-in-pool 0.023  repeated 4-runs 0.258
+  T 0.7      distinct-1 0.239  distinct-2 0.671  distinct-4 0.936  mean surprise 2.616  not-in-pool 0.127  repeated 4-runs 0.010
+  T 1.0      distinct-1 0.322  distinct-2 0.851  distinct-4 0.987  mean surprise 3.748  not-in-pool 0.184  repeated 4-runs 0.003
+  min-p 0.1  distinct-1 0.201  distinct-2 0.635  distinct-4 0.929  mean surprise 2.407  not-in-pool 0.113  repeated 4-runs 0.012
+  top-p 0.9  distinct-1 0.287  distinct-2 0.818  distinct-4 0.987  mean surprise 3.326  not-in-pool 0.194  repeated 4-runs 0.002
+  corpora keys: ['T', 'books', 'pool', 'book_of', 'held_b', 'alice', 'glass']
+  held-out text (held_b, 40 windows): mean surprise 3.754
+  held-out 20 x 100 tokens: distinct-1 0.306 distinct-2 0.809 distinct-4 0.965; repeated 4-runs 0.004
+  (460 s)

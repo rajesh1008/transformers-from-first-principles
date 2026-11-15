@@ -1,0 +1,6 @@
+prompt 'The rabbit looked at' -> 4 tokens [464, 22746, 3114, 379]; batched with a 7-token prompt, so 3 pad tokens go in front
+      'The': position 0 if shifted correctly, 3 if not; cosine of the two input rows 0.537
+  ' rabbit': position 1 if shifted correctly, 4 if not; cosine of the two input rows 0.891
+  ' looked': position 2 if shifted correctly, 5 if not; cosine of the two input rows 0.954
+      ' at': position 3 if shifted correctly, 6 if not; cosine of the two input rows 0.970
+the first token is hit hardest: position 0's row is 9.88 long, position 3's is 4.34

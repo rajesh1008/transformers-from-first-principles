@@ -1,0 +1,75 @@
+{
+ "source": "main_step2000.pt",
+ "step": 2000,
+ "source_bytes": 40236739,
+ "source_fingerprint": "daed05c653d45e31",
+ "pt": {
+  "entries": 110,
+  "pickle_bytes": 12940,
+  "pickle_opcodes": 3785,
+  "global_imports": 3,
+  "reduce_calls": 210
+ },
+ "pt_guard": {
+  "default_load": "refused",
+  "error": "UnpicklingError",
+  "torch": "2.15.0+cpu"
+ },
+ "manifest": {
+  "capstone-fp32.safetensors": {
+   "bytes": 40211376,
+   "sha256": "6097aadee09ff2200b89a30033de6845e4f6ea6e967d917c53e7a42a701d4a8f"
+  },
+  "capstone-int8.safetensors": {
+   "bytes": 10259784,
+   "sha256": "0f224794a85a7a2ece49adf3928671c2904549a30cdcb776bb7eb911b81d6080"
+  },
+  "tokenizer.json": {
+   "bytes": 550715,
+   "sha256": "3465643819cc5915b0c4ffabd62036e0425f85b0cdfdc1f5b1a0f6ec9173976f"
+  },
+  "config.json": {
+   "bytes": 178,
+   "sha256": "40326d0430a6479dcba78238eb66a9a5dec31cf8677a3154d91e73270a3daaad"
+  }
+ },
+ "safetensors": {
+  "header_bytes": 9128,
+  "tensors": 104,
+  "example": {
+   "E.weight": {
+    "dtype": "F32",
+    "shape": [
+     8192,
+     256
+    ],
+    "data_offsets": [
+     0,
+     8388608
+    ]
+   },
+   "lnf.bias": {
+    "dtype": "F32",
+    "shape": [
+     256
+    ],
+    "data_offsets": [
+     40200192,
+     40201216
+    ]
+   }
+  }
+ },
+ "fp32": {
+  "max_logit_diff": 0.0,
+  "same_top_token": true,
+  "top_next": "ches",
+  "bytes": 40211376
+ },
+ "int8": {
+  "max_logit_diff": 0.1380777359008789,
+  "same_top_token": true,
+  "top_next": "ches",
+  "bytes": 10259784
+ }
+}

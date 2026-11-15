@@ -1,0 +1,48 @@
+{
+ "bpc": {
+  "gpt2": 1.564048222950909,
+  "loss": 3.457561243416192,
+  "tokens": 3422,
+  "chars": 10919
+ },
+ "greedy": {
+  "surprise": 1.1966820041829054,
+  "rep4": 0.2702702702702703,
+  "novel": 0.0,
+  "novel_strict": 0.0,
+  "d2": 0.5897435897435898,
+  "first": " floor, and the cat was sitting on the floor.\n\n\"I'm not sure what happened, but I think it was a cat that was sitting on the floor. I think it was a"
+ },
+ "T 1.0": {
+  "surprise": 3.725058054976903,
+  "rep4": 0.0,
+  "novel": 0.13319672131147542,
+  "novel_strict": 0.040983606557377046,
+  "d2": 0.9384615384615385,
+  "first": " spear and popped it through the air). From a distance he had been able to clearly see the choice makers departing from Henry. And over the river they had made their choice of deserving to be said,"
+ },
+ "T 0.7": {
+  "surprise": 2.2678002232755374,
+  "rep4": 0.012612612612612614,
+  "novel": 0.03773584905660377,
+  "novel_strict": 0.016771488469601678,
+  "d2": 0.7982905982905983,
+  "first": " wooden floor on the chair; the cat sat in the chair.\n\n\"His name is Arjun Biswa,\" the father said. \"He is a Muslim who came here to help the people"
+ },
+ "min-p 0.1": {
+  "surprise": 2.075411091147007,
+  "rep4": 0.012612612612612614,
+  "novel": 0.025423728813559324,
+  "novel_strict": 0.0,
+  "d2": 0.7948717948717948,
+  "first": " grass. She was standing on a hillside, looking down. \"The man had a big gun,\" she said.\n\nThe man said he was a Muslim and had lived in the US."
+ },
+ "top-p 0.9": {
+  "surprise": 3.2361471067140255,
+  "rep4": 0.0018018018018018018,
+  "novel": 0.11513859275053305,
+  "novel_strict": 0.029850746268656716,
+  "d2": 0.905982905982906,
+  "first": " pantry shelf, wrapped his hands around her, giving her a deep love, maybe the most beautiful gesture imaginable. His hand seemed to move away from her in some odd way as he sat on the"
+ }
+}

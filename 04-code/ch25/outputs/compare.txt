@@ -1,0 +1,36 @@
+losses on every window (Looking-Glass 436, Carroll held-out 31):
+  1e-3 2,500       Looking-Glass 4.2289   Carroll 3.7543
+  1e-3 1,250       Looking-Glass 4.5579   Carroll 4.1626
+  2e-3 2,500       Looking-Glass 4.4273   Carroll 3.9467
+  wd0.1 2,500      Looking-Glass 4.2299   Carroll 3.7356
+  o7 2,500         Looking-Glass 4.2241   Carroll 3.7428
+  wd0.1 o7 2,500   Looking-Glass 4.2167   Carroll 3.7419
+  o11 2,500        Looking-Glass 4.2249   Carroll 3.7391
+  wd0.1 o11 2,500  Looking-Glass 4.2158   Carroll 3.7399
+  wd0.1 1,250      Looking-Glass 4.4945   Carroll 4.0774
+  o7 1,250         Looking-Glass 4.5979   Carroll 4.2037
+  wd0.1 o7 1,250   Looking-Glass 4.5382   Carroll 4.1500
+  o11 1,250        Looking-Glass 4.5735   Carroll 4.1646
+  wd0.1 o11 1,250  Looking-Glass 4.5605   Carroll 4.1536
+
+paired comparisons:
+  1e-3 2,500 minus 1e-3 1,250 on glass: -0.3290; unpaired 95% -0.3719 to -0.2862; paired -0.3405 to -0.3168 (se 0.0219 -> 0.0061); 427 of 436 windows favour the first, sign test p = 1.7e-113
+  1e-3 2,500 minus 1e-3 1,250 on carroll: -0.4083; unpaired 95% -0.6272 to -0.1894; paired -0.4393 to -0.3781 (se 0.1117 -> 0.0155); 31 of 31 windows favour the first, sign test p = 9.3e-10
+  1e-3 2,500 minus 2e-3 2,500 on glass: -0.1984; unpaired 95% -0.2451 to -0.1517; paired -0.2088 to -0.1879 (se 0.0238 -> 0.0054); 422 of 436 windows favour the first, sign test p = 9.7e-106
+  1e-3 2,500 minus 2e-3 2,500 on carroll: -0.1924; unpaired 95% -0.4211 to +0.0363; paired -0.2155 to -0.1686 (se 0.1167 -> 0.0120); 31 of 31 windows favour the first, sign test p = 9.3e-10
+  wd0.1 2,500 minus 1e-3 2,500 on glass: +0.0010; unpaired 95% -0.0451 to +0.0471; paired -0.0063 to +0.0080 (se 0.0235 -> 0.0037); 220 of 436 windows favour the first, sign test p = 0.89
+  wd0.1 2,500 minus 1e-3 2,500 on carroll: -0.0187; unpaired 95% -0.2460 to +0.2087; paired -0.0353 to -0.0009 (se 0.1160 -> 0.0089); 19 of 31 windows favour the first, sign test p = 0.28
+  o7 2,500 minus 1e-3 2,500 on glass: -0.0048; unpaired 95% -0.0510 to +0.0414; paired -0.0123 to +0.0023 (se 0.0236 -> 0.0036); 238 of 436 windows favour the first, sign test p = 0.062
+  o7 2,500 minus 1e-3 2,500 on carroll: -0.0115; unpaired 95% -0.2363 to +0.2133; paired -0.0351 to +0.0129 (se 0.1147 -> 0.0121); 18 of 31 windows favour the first, sign test p = 0.47
+  wd0.1 o7 2,500 minus o7 2,500 on glass: -0.0074; unpaired 95% -0.0526 to +0.0377; paired -0.0136 to -0.0012 (se 0.0230 -> 0.0032); 240 of 436 windows favour the first, sign test p = 0.039
+  wd0.1 o7 2,500 minus o7 2,500 on carroll: -0.0009; unpaired 95% -0.2259 to +0.2240; paired -0.0257 to +0.0219 (se 0.1148 -> 0.0119); 17 of 31 windows favour the first, sign test p = 0.72
+  wd0.1 o11 2,500 minus o11 2,500 on glass: -0.0092; unpaired 95% -0.0546 to +0.0363; paired -0.0146 to -0.0032 (se 0.0232 -> 0.0028); 255 of 436 windows favour the first, sign test p = 0.00046
+  wd0.1 o11 2,500 minus o11 2,500 on carroll: +0.0008; unpaired 95% -0.2278 to +0.2294; paired -0.0154 to +0.0187 (se 0.1166 -> 0.0088); 15 of 31 windows favour the first, sign test p = 1
+  o11 2,500 minus 1e-3 2,500 on glass: -0.0040; unpaired 95% -0.0500 to +0.0420; paired -0.0118 to +0.0033 (se 0.0235 -> 0.0039); 234 of 436 windows favour the first, sign test p = 0.14
+  o11 2,500 minus 1e-3 2,500 on carroll: -0.0152; unpaired 95% -0.2449 to +0.2144; paired -0.0331 to +0.0021 (se 0.1172 -> 0.0091); 18 of 31 windows favour the first, sign test p = 0.47
+
+the weight-decay effect under three reading orders (Looking-Glass, 2,500 and 1,250 steps):
+  2,500 steps, glass   : no decay 4.2289, 4.2241, 4.2249 (sd 0.0026); decay 4.2299, 4.2167, 4.2158 (sd 0.0079); differences +0.0010, -0.0074, -0.0092, mean -0.0052, sd 0.0054
+  2,500 steps, carroll : no decay 3.7543, 3.7428, 3.7391 (sd 0.0079); decay 3.7356, 3.7419, 3.7399 (sd 0.0032); differences -0.0187, -0.0009, +0.0008, mean -0.0063, sd 0.0108
+  1,250 steps, glass   : no decay 4.5579, 4.5979, 4.5735 (sd 0.0201); decay 4.4945, 4.5382, 4.5605 (sd 0.0336); differences -0.0634, -0.0597, -0.0130, mean -0.0454, sd 0.0281
+  1,250 steps, carroll : no decay 4.1626, 4.2037, 4.1646 (sd 0.0232); decay 4.0774, 4.1500, 4.1536 (sd 0.0430); differences -0.0852, -0.0537, -0.0110, mean -0.0499, sd 0.0372

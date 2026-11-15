@@ -1,0 +1,22 @@
+## Part 1: the reader on three files
+  GPT-2 small   hand  124,439,808  file (learned tables)  124,439,808  key-value numbers per token 18,432
+  SmolLM2-135M  hand  134,515,008  file (learned tables)  134,515,008  key-value numbers per token 11,520
+  Qwen3-0.6B    hand  596,049,920  file (learned tables)  596,049,920  key-value numbers per token 57,344
+
+## Part 2: three misreadings
+  Breakage 1, tie_word_embeddings ignored (Qwen3-0.6B): 751,632,384  vs every table in the file 751,632,384  -> agrees with the file: True
+    the right count is 596,049,920; the misreading adds 155,582,464 (26.1 per cent)
+  Breakage 2, head width taken as hidden_size / num_attention_heads = 1024 / 16 = 64 (the config says head_dim 128):
+    count 507,965,952 (88,083,968 short); key-value numbers per token 28,672 instead of 57,344
+  Breakage 3, num_key_value_heads overlooked (SmolLM2-135M): count 147,786,048 (13,271,040 too many);
+    key-value cache at 8,192 tokens in 16-bit 566.2 MB instead of 188.7 MB
+
+## Part 3: the checkpoint
+  1. the reader counts default Tiny as Tiny.count() does (2,766,592): pass
+  2. the reader counts GPT-2 small as 124,439,808 and the file's learned tables agree: pass
+  3. SmolLM2-135M: hand count equals every number in the file (134,515,008): pass
+  4. Qwen3-0.6B: hand count 596,049,920; the file holds 155,582,464 more (a stored copy of the tied table): pass
+  5. breakage 1 agrees with the file and is still wrong: pass
+  6. breakage 2 halves Qwen3-0.6B's key-value cache estimate: pass
+  7. breakage 3 triples SmolLM2-135M's key-value cache estimate: pass
+all checkpoint tests pass: True

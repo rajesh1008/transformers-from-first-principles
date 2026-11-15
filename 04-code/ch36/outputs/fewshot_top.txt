@@ -1,0 +1,4 @@
+gpt2: right 5, copies an example's answer 0, repeats the query word 17, other 2
+   hot->'hot'  big->'big'  up->'down'  fast->'fast'  happy->'happy'  light->'light'  rich->'rich'  hard->'hard'  long->'long'  high->'low'  wet->'wet'  early->'late'  full->'full'  strong->'strong'  loud->'quiet'  thick->'thick'  good->'good'  true->'true'  first->'first'  black->'light'  day->'early'  old->'old'  open->'open'  left->'right'
+smollm2: right 22, copies an example's answer 0, repeats the query word 0, other 2
+   hot->'cold'  big->'small'  up->'down'  fast->'slow'  happy->'sad'  light->'dark'  rich->'poor'  hard->'soft'  long->'short'  high->'low'  wet->'dry'  early->'late'  full->'empty'  strong->'weak'  loud->'quiet'  thick->'thin'  good->'bad'  true->'false'  first->'second'  black->'white'  day->'night'  old->'new'  open->'closed'  left->'right'

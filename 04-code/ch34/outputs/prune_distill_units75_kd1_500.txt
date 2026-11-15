@@ -1,0 +1,7 @@
+units75 kd1: nonzero numbers 1,582,336 of 2,766,592; teacher 1.9812 measured 1.9812; after pruning 2.7587
+  step 100: held-out Carroll 2.0347 bits per character (51 s)
+  step 200: held-out Carroll 2.0120 bits per character (100 s)
+  step 300: held-out Carroll 2.0051 bits per character (153 s)
+  step 400: held-out Carroll 2.0013 bits per character (200 s)
+  step 500: held-out Carroll 2.0000 bits per character (250 s)
+units75 kd1: final 2.0000; pruned positions still zero: True; 250 s

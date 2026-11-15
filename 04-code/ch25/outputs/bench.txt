@@ -1,0 +1,34 @@
+constructed cloze items: 400 Looking-Glass, 150 Carroll held-out; true word never in the pool: 24
+  ...'\n[Illustration: chessboard]\n\n_WHITE._\n\nWhite Pawn (Alice) to' -> [play] / middle, paper, interesting
+  ...'leet, and I and thou\n    Are half a life asunder,\nThy loving' -> [smile] / seen, least, need
+  ...'oung life’s hereafter—\nEnough that now thou wilt not fail\nTo' -> [listen] / direction, eating, ecture
+  tokens per choice: true word 1.64, distractors 1.93
+
+model             LG loss  CH loss |  LG sum LG mean  CH sum CH mean  95% (LG sum, items)
+625 steps          4.9825   4.6649 |   0.545   0.395   0.487   0.367  0.495 to 0.595
+1,250 steps        4.6023   4.1626 |   0.600   0.410   0.527   0.407  0.550 to 0.647
+2,500 steps        4.2994   3.7543 |   0.662   0.460   0.600   0.473  0.613 to 0.708
+2,500 wd0.1        4.2999   3.7356 |   0.652   0.465   0.573   0.440  0.605 to 0.695
+2,500 o7           4.2994   3.7428 |   0.662   0.458   0.587   0.460  0.615 to 0.708
+2,500 wd0.1 o7     4.2828   3.7419 |   0.677   0.472   0.600   0.473  0.630 to 0.723
+2,500 o11          4.2913   3.7391 |   0.655   0.475   0.620   0.473  0.608 to 0.700
+2,500 wd0.1 o11    4.2885   3.7399 |   0.647   0.463   0.593   0.460  0.598 to 0.695
+unigram               nan      nan |   0.383   0.250   0.307   0.227  0.335 to 0.430
+bigram                nan      nan |   0.700   0.520   0.660   0.480  0.655 to 0.745
+(LG loss: first 128 Looking-Glass windows; CH loss: all 31 Carroll held-out windows; accuracy = share of items whose true word scores highest)
+
+paired comparisons on all 550 items (sum scoring):
+  2,500 steps vs 1,250 steps: 0.645 against 0.580; items only the first gets right 70, only the second 34; sign test p = 0.001; paired 95% for the difference +0.029 to +0.102
+  1,250 steps vs 625 steps: 0.580 against 0.529; items only the first gets right 67, only the second 39; sign test p = 0.008; paired 95% for the difference +0.016 to +0.087
+  2,500 wd0.1 vs 2,500 steps: 0.631 against 0.645; items only the first gets right 30, only the second 38; sign test p = 0.396; paired 95% for the difference -0.045 to +0.013
+  2,500 wd0.1 o7 vs 2,500 o7: 0.656 against 0.642; items only the first gets right 37, only the second 29; sign test p = 0.389; paired 95% for the difference -0.015 to +0.042
+  2,500 wd0.1 o11 vs 2,500 o11: 0.633 against 0.645; items only the first gets right 21, only the second 28; sign test p = 0.392; paired 95% for the difference -0.036 to +0.011
+  2,500 o7 vs 2,500 steps: 0.642 against 0.645; items only the first gets right 33, only the second 35; sign test p = 0.904; paired 95% for the difference -0.033 to +0.025
+  2,500 steps vs bigram: 0.645 against 0.689; items only the first gets right 56, only the second 80; sign test p = 0.048; paired 95% for the difference -0.087 to -0.002
+  2,500 steps, mean against sum scoring: 0.464 against 0.645; items only the first gets right 24, only the second 124; sign test p = 0.000; paired 95% for the difference -0.224 to -0.142
+
+six 2,500-step models (no decay / AdamW 0.1, three orders each):
+  cloze accuracy (all 550, sum): no decay 0.645, 0.642, 0.645 (mean 0.644); decay 0.631, 0.656, 0.633 (mean 0.640)
+  Looking-Glass loss (128 windows): no decay 4.2994, 4.2994, 4.2913 (mean 4.2967); decay 4.2999, 4.2828, 4.2885 (mean 4.2904)
+  signal/noise: loss: gap of means 0.0063 against order sd 0.0070; accuracy: gap -0.0042 against order sd 0.0102
+  loss and accuracy along one run: 625 steps LG loss 4.9825, accuracy 0.529; 1,250 steps LG loss 4.6023, accuracy 0.580; 2,500 steps LG loss 4.2994, accuracy 0.645

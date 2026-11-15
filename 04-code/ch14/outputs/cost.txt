@@ -1,0 +1,24 @@
+seed 1865; first 1,024 tokens of the novel; fastest of 5 interleaved rounds, measured 2026-11-10 on the book's build machine (CPU, one thread)
+(a) one forward pass against depth
+  layers | learned numbers |     ms | ms per layer | tokens per second
+       1 |         591,232 |   78.6 |         78.6 |            13,027
+       2 |         788,992 |  143.6 |         71.8 |             7,130
+       4 |       1,184,512 |  281.2 |         70.3 |             3,642
+       8 |       1,975,552 |  561.0 |         70.1 |             1,825
+      12 |       2,766,592 |  841.1 |         70.1 |             1,217
+      24 |       5,139,712 | 1785.2 |         74.4 |               574
+  token and position lookup 0.35 ms; ln_f and the 2,048 scores per seat 6.1 ms
+
+(b) memory
+  learned numbers 2,766,592: 22.1 MB at 8 bytes (NumPy's default), 11.1 MB at 4 bytes (float32), 5.5 MB at 2
+  peak memory allocated during one forward pass,  1 layer(s):  106.0 MB
+  peak memory allocated during one forward pass, 12 layer(s):  106.0 MB
+  by hand: one layer's four share tables of 1,024 x 1,024 at 8 bytes = 33.6 MB; kept for all 12 layers (as training must) = 403 MB
+  by hand: one layer's other intermediate tables (six of 1,024 x 128, two of 1,024 x 512) = 14.7 MB; twelve layers = 176 MB
+  the 1,024 x 2,048 scores at the top: 16.8 MB
+
+(c) depth against width, the layers' learned numbers held near 2.37 million (heads of 32)
+  shape (layers x width) | layers' numbers | whole model | ms, 1,024 tokens | ms, one token | steps in sequence
+                   48x64 |       2,386,944 |   2,583,680 |           1596.3 |          3.92 |                96
+                  12x128 |       2,373,120 |   2,766,592 |            876.6 |          1.80 |                24
+                   3x256 |       2,366,208 |   3,153,152 |           1197.2 |          1.26 |                 6

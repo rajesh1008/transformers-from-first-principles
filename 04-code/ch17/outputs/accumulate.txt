@@ -1,0 +1,2 @@
+cleared   : loss at steps 0, 10, 50, 100, 150, 199: 3.331, 2.39, 0.7065, 0.3111, 0.02326, 0.01039; lowest 0.01039; length of the last .grad 0.0162
+not cleared: loss at steps 0, 10, 50, 100, 150, 199: 3.331, 1.677, 1.637, 9.549e+04, 1.022e+09, 4.874e+11; lowest 1.615; length of the last .grad 2.76e+06

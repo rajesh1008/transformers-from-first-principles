@@ -1,0 +1,14 @@
+Looking-Glass in GPT-2's tokenizer: 52,722 tokens, 164,250 characters
+(a) 1,025 tokens in one pass: RuntimeError: The size of tensor a (1025) must match the size of tensor b (1024) at non-singleton dimension 0
+(b) 51 windows of 1,024: mean loss (nats) of the token predicted at each position
+  positions    0 to    0: 6.4222
+  positions    1 to    3: 6.1905
+  positions    4 to   15: 5.5259
+  positions   16 to   63: 4.0778
+  positions   64 to  127: 3.6761
+  positions  128 to  255: 3.1741
+  positions  256 to  511: 3.1746
+  positions  512 to 1022: 3.1123
+(c) disjoint 1,024            : 52,721 tokens scored, mean loss 3.2686 nats, about 1.5136 bits per character
+(c) sliding 1,024, stride 512 : 52,721 tokens scored, mean loss 3.1060 nats, about 1.4383 bits per character
+(c) disjoint 128              : 52,721 tokens scored, mean loss 4.0377 nats, about 1.8698 bits per character

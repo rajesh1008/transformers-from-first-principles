@@ -1,0 +1,33 @@
+Chapter 21 scripts, run from 04-code/ch21 (NumPy 2.5.4, PyTorch 2.15.0+cpu, Python 3.13.5; matplotlib 3.11.2 for figures), 11 November 2026 (IST).
+The book's build machine: CPU, 8 cores, with BF16 matrix units (the CPU flags list amx_bf16 and avx512_bf16).
+Order used for the book (the figures read the .json files):
+formats.py  nudges.py  train_mixed.py (12 runs)  memory_budget.py  budget.py  lab21.py
+Helpers: _common.py (copied from ch20: one thread unless a script says otherwise, paths, seed 1865, tokenizer, novel, held-out text).
+New shared code, backward compatible (no existing module changed; Tiny 2,766,592 learned numbers, fingerprint 19c8710677873d01,
+loss 7.6334 unchanged; lab20.py re-run 11 Nov 2026: 7 of 7):
+  ../tiny/precision.py   formats (fmt_info, round_to, round_fp4, scaled_round, mx_round, round_bf16_stochastic),
+                         MixedTiny (16-bit products, 32-bit everything else), LossScaler, Adam16 (BF16 m and v),
+                         train_mixed(tt, batches, steps, opt, schedule, mode, scaler, stochastic, gen, on_step, stats).
+    python3 formats.py > outputs/formats.txt                         formats by hand; Tiny's tables in 16, 8 and 4 bits; MX blocks
+    python3 nudges.py > outputs/nudges.txt              (also .json)  Tiny's nudges on the FP16 line; loss scales; lost BF16 steps
+    python3 train_mixed.py RUN > outputs/train_mixed_RUN.txt  (also .json), RUN in
+         fp32 bf16 fp16 fp16_scaled bf16_state w16_nearest w16_sr      (Adam 1e-3, warmup 40 + cosine to 0.1)
+       and python3 train_mixed.py RUN 3e-5 const > outputs/train_mixed_RUN_lr3e-5.txt for RUN in fp32 bf16 fp16 w16_nearest w16_sr
+       Each run one thread, seven (then five) runs side by side as separate processes.  The first group's .txt lines were
+       printed before the lr column was added to the print statement; the numbers are the same as in the .json files.
+    python3 memory_budget.py > outputs/memory_budget.txt  (also .json) bytes between steps; stored activations measured with
+                                                                       saved-tensor hooks; per-layer fit; 7B counts; sharding
+    python3 budget.py > outputs/budget.txt                (also .json) step time split (one thread, fastest of five, machine idle),
+                                                                       operations, best product rate, utilisation, 7B arithmetic
+    python3 lab21.py > outputs/lab21.txt                               five breakages, 7 of 7 checkpoints pass
+Note told in the chapter: the first run of lab21.py, made while five training runs shared the machine, printed the mixed BF16
+first-batch loss as 7.648846; every later run, alone or four at a time, printed 7.648858 (checked three times in a row in
+seven separate processes).  The cause was not established; BF16 products on this CPU may take a different kernel path
+under load.  The bit-for-bit checkpoint (two 10-step runs inside one process) passed in both runs.
+Figures: python3 03-figures/src/ch21_figs.py (fig21-01 to fig21-08).
+No hosted-model call was made; the API key was not used.
+Exercises (run 11 Nov 2026, about 00:24 to 00:31 IST, one thread each, side by side):
+    python3 train_mixed.py fp32 1e-4 const > outputs/train_mixed_fp32_lr1e-4.txt; python3 train_mixed.py w16_nearest 1e-4 const > outputs/train_mixed_w16_nearest_lr1e-4.txt   (Exercise 9)
+    python3 ex11_fp8.py tensor > outputs/ex11_fp8_tensor.txt; python3 ex11_fp8.py mx > outputs/ex11_fp8_mx.txt                 (Exercise 11; forward-only FP8 emulation, straight-through backward)
+    python3 solutions.py > outputs/solutions.txt                         Exercises 1 to 12 (reads the four .json files above)
+Figure files were renumbered in order of appearance on 11 Nov 2026: fig21-02-lost-updates, fig21-03-nudges-fp16, fig21-04-loss-scale.

@@ -1,0 +1,26 @@
+main: 10,050,560 learned numbers; 2,719,058 training tokens; 4,096 tokens per step; 2000 steps
+step 0 eval {'heldout': {'loss': 9.03342310587565, 'bpc': 3.6150488571684996}, 'glass': {'loss': 9.021605809529623, 'bpc': 4.0472089031124145}}
+/workspace/transformers-book/04-code/ch48/train48.py:54: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  if not math.isfinite(float(loss)):
+step 100 loss 5.7951 held-out 6.0020 (2.4019 bpc) glass 2.6182 bpc  336 s
+step 200 loss 5.3864 held-out 5.6710 (2.2694 bpc) glass 2.4448 bpc  658 s
+step 300 loss 5.1695 held-out 5.4821 (2.1939 bpc) glass 2.3700 bpc  977 s
+step 400 loss 4.8725 held-out 5.3583 (2.1443 bpc) glass 2.2957 bpc  5626 s
+step 500 loss 4.7420 held-out 5.2327 (2.0941 bpc) glass 2.2238 bpc  5958 s
+step 600 loss 4.7323 held-out 5.1228 (2.0501 bpc) glass 2.1848 bpc  6290 s
+step 700 loss 4.5382 held-out 5.0406 (2.0172 bpc) glass 2.1555 bpc  6617 s
+step 800 loss 4.5207 held-out 4.9676 (1.9880 bpc) glass 2.1012 bpc  6933 s
+step 900 loss 4.4017 held-out 4.9443 (1.9786 bpc) glass 2.0885 bpc  7233 s
+step 1000 loss 4.3899 held-out 4.8778 (1.9520 bpc) glass 2.0642 bpc  7544 s
+step 1100 loss 4.3341 held-out 4.8157 (1.9272 bpc) glass 2.0342 bpc  7859 s
+step 1200 loss 4.2814 held-out 4.7846 (1.9147 bpc) glass 2.0311 bpc  8172 s
+step 1300 loss 4.3710 held-out 4.7813 (1.9134 bpc) glass 2.0226 bpc  8498 s
+step 1400 loss 4.2538 held-out 4.7379 (1.8960 bpc) glass 2.0058 bpc  11110 s
+step 1500 loss 4.1704 held-out 4.7188 (1.8884 bpc) glass 1.9988 bpc  12959 s
+step 1600 loss 4.0448 held-out 4.7149 (1.8868 bpc) glass 1.9603 bpc  13278 s
+step 1700 loss 3.9769 held-out 4.6545 (1.8627 bpc) glass 1.9428 bpc  13578 s
+step 1800 loss 3.9659 held-out 4.5951 (1.8389 bpc) glass 1.9330 bpc  13886 s
+step 1900 loss 3.9309 held-out 4.5596 (1.8247 bpc) glass 1.9130 bpc  14216 s
+step 2000 loss 3.7841 held-out 4.5240 (1.8104 bpc) glass 1.8966 bpc  14515 s
+done in 14515 s

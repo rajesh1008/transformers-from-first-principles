@@ -1,0 +1,8 @@
+
+
+
+train     10,198,749 characters   2,719,058 tokens  3.818 bytes per token  (round trip exact)
+heldout      179,699 characters      49,728 tokens  3.649 bytes per token  (round trip exact)
+glass        164,250 characters      50,633 tokens  3.410 bytes per token  (round trip exact)
+'the cat sat on the mat' -> [423, 2514, 855, 333, 264, 1707] ['the', ' cat', ' sat', ' on', ' the', ' mat']
+vocabulary 8,192; trained in about 4 s

@@ -1,0 +1,8 @@
+Looking-Glass in SmolLM2's tokenizer: 46,723 tokens; scoring the first 16,384
+  ntk16  positions     0 to   511: 2.6631 nats
+  ntk16  positions   512 to  2047: 2.9628 nats
+  ntk16  positions  2048 to  4095: 2.9249 nats
+  ntk16  positions  4096 to  8191: 2.8086 nats
+  ntk16  positions  8192 to 12287: 2.9024 nats
+  ntk16  positions 12288 to 16382: 2.9252 nats
+ntk16: 703 s

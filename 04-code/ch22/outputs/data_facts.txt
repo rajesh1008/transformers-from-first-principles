@@ -1,0 +1,16 @@
+Part 1. the Carroll pool
+  sylvie           64,873 words  133,981 tokens  Sylvie and Bruno (1889), eBook #620
+  sylvie2          69,709 words  147,587 tokens  Sylvie and Bruno Concluded (1893), eBook #48795
+  tangled          28,069 words   68,173 tokens  A Tangled Tale (1885), eBook #29042
+  phantasmagoria   13,345 words   32,132 tokens  Phantasmagoria and Other Poems (1869), eBook #651
+  snark             5,177 words   11,724 tokens  The Hunting of the Snark (1876), eBook #13
+  pool 393,597 tokens -> 3,074 windows of 129 (128 predictions each); held out: last 4,000 tokens of sylvie2
+  a 400-step run of 8 windows needs 3,200 windows: the pool gives 0.961 passes' worth
+
+Part 2. contamination: distinct 13-word runs of each held-out text also found in the training text
+  Looking-Glass     vs pool  : 0 of 31,081
+  Looking-Glass     vs Alice : 1 of 31,081
+  Looking-Glass     vs whole books: 0 of 31,081
+  Carroll held-out  vs pool  : 0 of 2,003
+  Carroll held-out  vs Alice : 0 of 2,003
+  Carroll held-out  vs whole books: 2,003 of 2,003

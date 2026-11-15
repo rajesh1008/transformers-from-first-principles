@@ -1,0 +1,7 @@
+Tiny: 256 of 2,048 ids never occur in the novel: 185 single bytes, 70 merged pieces, 1 special token
+  the sequel uses 141 tokens with those ids, 37 different ones; examples: ['&', '1', '2', '4', '5', '6']
+
+GPT-2: of the 100 rows closest to the table's average direction, 50 are single bytes (control characters and fragments of characters)
+  the first two longer ones: [' externalToEVA', 'quickShip']
+  cosine with the average direction: those 100 rows 0.83 on average; ' cat' 0.39; all rows 0.52
+  how often the 100 appear in the novel and its sequel together: 2

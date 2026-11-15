@@ -1,0 +1,79 @@
+GPT-2 small, 1024 tokens of the novel (seat 0 = end-of-text), float32; full-model loss 3.442
+A. the stream and what each block writes (seats 1 to 1,023)
+  layer | row entering: mean length | attention write / row, cos | feed-forward write / row, cos
+      0 |                       4.6 |     7.117, +0.079       |     0.752, +0.446
+      1 |                      49.5 |     0.206, +0.350       |     0.197, +0.093
+      2 |                      55.8 |     0.170, +0.156       |     0.218, +0.022
+      3 |                      59.9 |     0.168, +0.198       |     0.237, +0.017
+      4 |                      64.9 |     0.168, +0.209       |     0.232, -0.014
+      5 |                      69.8 |     0.180, +0.257       |     0.252, +0.034
+      6 |                      77.2 |     0.196, +0.240       |     0.260, +0.042
+      7 |                      85.8 |     0.220, +0.310       |     0.276, +0.089
+      8 |                      99.4 |     0.212, +0.362       |     0.294, +0.116
+      9 |                     117.1 |     0.296, +0.435       |     0.296, +0.152
+     10 |                     147.8 |     0.360, +0.559       |     0.395, +0.211
+     11 |                     211.5 |     1.428, +0.427       |     0.233, +0.464
+  top   |                     494.7 |
+
+B. the Logit Lens on the 1,023 predictions (row entering layer l, through ln_f and the token table)
+  height | loss   | top token = final top | gap from final shares (KL)
+       0 | 51.996 |                 0.000 | 47.263
+       1 | 10.417 |                 0.093 | 6.389
+       2 |  9.733 |                 0.065 | 5.865
+       3 |  9.616 |                 0.064 | 5.757
+       4 |  9.545 |                 0.062 | 5.862
+       5 |  9.436 |                 0.079 | 5.820
+       6 |  9.174 |                 0.090 | 5.639
+       7 |  8.899 |                 0.113 | 5.403
+       8 |  8.459 |                 0.157 | 5.019
+       9 |  7.828 |                 0.224 | 4.511
+      10 |  6.528 |                 0.347 | 3.620
+      11 |  5.290 |                 0.508 | 2.191
+     top |  3.442 |                 1.000 | 0.000
+
+C. the running sentence: what each height predicts after 'the cat sat on the'
+  GPT-2 tokens [1169, 3797, 3332, 319, 262, 2603]: ['the', '␣cat', '␣sat', '␣on', '␣the', '␣mat']; seat 4 predicts the next token
+       0 | top three ['␣destro', '␣mathemat', '␣livest']  | rank of '␣mat'  40398 | share 0.00000
+       1 | top three ['␣same', '␣latter', '␣first']       | rank of '␣mat'   2752 | share 0.00000
+       2 | top three ['␣same', '␣latter', '␣world']       | rank of '␣mat'   1588 | share 0.00000
+       3 | top three ['␣same', '␣last', '␣world']         | rank of '␣mat'   1083 | share 0.00000
+       4 | top three ['␣same', '␣opposite', '␣last']      | rank of '␣mat'   1019 | share 0.00000
+       5 | top three ['␣same', '␣opposite', '␣next']      | rank of '␣mat'    270 | share 0.00001
+       6 | top three ['␣same', '␣floor', '␣opposite']     | rank of '␣mat'    128 | share 0.00008
+       7 | top three ['␣same', '␣floor', '␣table']        | rank of '␣mat'    107 | share 0.00010
+       8 | top three ['␣floor', '␣same', '␣table']        | rank of '␣mat'     78 | share 0.00021
+       9 | top three ['␣table', '␣floor', '␣ground']      | rank of '␣mat'     51 | share 0.00032
+      10 | top three ['␣floor', '␣table', '␣bed']         | rank of '␣mat'     43 | share 0.00051
+      11 | top three ['␣floor', '␣sofa', '␣couch']        | rank of '␣mat'     30 | share 0.00166
+     top | top three ['␣floor', '␣couch', '␣bed']         | rank of '␣mat'     37 | share 0.00386
+
+D. removing one layer (both its blocks) at a time: change in loss
+  layer  0 removed: +5.048
+  layer  1 removed: +0.097
+  layer  2 removed: +0.240
+  layer  3 removed: +0.379
+  layer  4 removed: +0.400
+  layer  5 removed: +0.193
+  layer  6 removed: +0.034
+  layer  7 removed: +0.218
+  layer  8 removed: +0.198
+  layer  9 removed: +0.327
+  layer 10 removed: +0.155
+  layer 11 removed: +1.848
+
+E. removing two layers at once: extra cost beyond the two single removals (pair minus both singles)
+  distance | mean extra cost, layers 1 to 11 only | mean extra cost, pairs including layer 0 | pairs
+         1 |                                +0.270 |                                    -0.546 | 11
+         2 |                                +0.145 |                                    -0.268 | 10
+         3 |                                -0.028 |                                    -0.688 | 9
+         4 |                                -0.036 |                                    -0.782 | 8
+         5 |                                -0.014 |                                    -0.107 | 7
+         6 |                                -0.049 |                                    -0.308 | 6
+         7 |                                -0.077 |                                    -0.453 | 5
+         8 |                                -0.060 |                                    -0.564 | 4
+         9 |                                -0.035 |                                    -0.394 | 3
+        10 |                                +0.034 |                                    -0.028 | 2
+        11 |                                  +nan |                                    -1.098 | 1
+  cheapest pair to remove (layer 0 kept): layers (1, 6), +0.165; cheapest adjacent pair: layers (6, 7), +0.308
+
+(elapsed 459 s)

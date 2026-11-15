@@ -1,0 +1,23 @@
+Chapter 14 scripts, run from 04-code/ch14 (NumPy only; matplotlib for figures). Order used for the book:
+exploded.py  stack.py  output_head.py  params.py  cost.py  gpt2_depth.py  gpt2_lens0.py  lab14.py  solutions.py
+Helpers: _common.py (seed 1865, the running sentence, Tiny's tokenizer, the novel's first 1,024 tokens, piece() which
+prints single bytes and control characters as <0xNN>; adds .., ../ch04 and ../ch09 to the path for tiny, _gpt2,
+_gpt2run and _bpe).
+New Tiny modules: ../tiny/block.py (Block: one pre-norm layer, seed 1865 + 100 x layer, explode, tables, set_tables
+with a shape check) and ../tiny/model.py (Tiny: token and position tables, twelve Blocks, ln_f, tied output; count,
+forward with keep / n_layers / skip, shares, loss, save, load).
+GPT-2 scripts read the GPT-2 small weights prepared in Chapter 9 (~/.cache/tfp/gpt2) and the novel in ../data.
+Timings: cost.py was run with one thread, because with all eight cores the shared build machine moved timings by up
+to a factor of two between runs:
+    OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python3 cost.py > outputs/cost.txt
+It records its timings in outputs/cost_timing.json; --measure re-times on your machine (fastest of five interleaved
+rounds).
+gpt2_depth.py takes about eight minutes (459 s on 10 November 2026: one full pass, twelve single removals and 66 pair
+removals of 1,024 tokens); it writes outputs/gpt2_depth.json for Figures 14.5 to 14.8. gpt2_lens0.py and lab14.py
+take under a minute; solutions.py about ten seconds.
+Outputs are saved in outputs/ (python3 X.py > outputs/X.txt). stack.py writes outputs/stack.json and
+outputs/stack_sat.json; output_head.py writes outputs/output_head.json.
+Figures: python3 03-figures/src/ch14_figs.py from the project root (eleven PNGs in 03-figures/ch14).
+Last full run: 10 November 2026, about 10:15 to 10:45 IST, book build machine (CPU, 8 cores), NumPy 2.5.4.
+lab14.py was rerun at about 10:45 IST after its round-trip test was changed to load into Tiny(seed=7); its output
+was unchanged.

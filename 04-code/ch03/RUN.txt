@@ -1,0 +1,12 @@
+bytes_first.py
+twenty_words.py
+bpe_simple.py
+novel_merges.py
+merge_table.py
+encode_decode.py
+dial.py
+compare_tiktoken.py
+lab_bpe.py
+numbers_code.py
+scoreboard.py
+solutions.py

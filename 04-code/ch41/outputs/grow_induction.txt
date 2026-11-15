@@ -1,0 +1,4 @@
+repeat step    0  best induction 0.015 (3.0)  best previous-token 0.136 (6.2)  passages first 4.116 repeat 4.210  held-out windows 4.5942  (0 s)
+repeat step  500  best induction 0.018 (10.0)  best previous-token 0.154 (6.2)  passages first 4.239 repeat 4.270  held-out windows 4.7516  (131 s)
+repeat step 1000  best induction 0.162 (10.0)  best previous-token 0.192 (6.2)  passages first 4.328 repeat 3.169  held-out windows 5.0768  (259 s)
+repeat step 1500  best induction 0.444 (10.0)  best previous-token 0.193 (6.2)  passages first 4.242 repeat 0.814  held-out windows 6.3080  (388 s)

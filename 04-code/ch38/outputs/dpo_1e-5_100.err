@@ -1,0 +1,3 @@
+/workspace/transformers-book/04-code/ch38/dpo.py:73: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  print(f"step {step:4d}  DPO loss {float(L):.4f}  batch pairs ranked right {acc:.0f}/8  ({time.perf_counter() - t0:.0f} s)", flush=True)

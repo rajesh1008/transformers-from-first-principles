@@ -1,0 +1,16 @@
+sinusoidal rows: (1024, 128) computed with plain loops in 18 ms; learned numbers: 0
+position 4 starts [-0.7568, -0.6536, -0.3167, -0.9485, 0.1415, -0.9899]
+fact 1, every row has the same length: [8.0] = square root of 64
+fact 2, agreement depends only on the gap:
+  dot(position    0, position    4) = 48.5860
+  dot(position  100, position  104) = 48.5860
+  dot(position 1000, position 1004) = 48.5860
+  gap 1: 62.0937  gap 10: 42.82  gap 100: 30.5435  gap 1000: 10.1777
+fact 3, no two of the 1,024 rows are the same: closest pair has cosine 0.9702 (positions (839, 840) )
+average cosine of positions    1 apart:  0.970
+average cosine of positions   10 apart:  0.669
+average cosine of positions   50 apart:  0.546
+average cosine of positions  100 apart:  0.477
+average cosine of positions  200 apart:  0.306
+average cosine of positions  500 apart:  0.298
+average cosine of positions 1000 apart:  0.159

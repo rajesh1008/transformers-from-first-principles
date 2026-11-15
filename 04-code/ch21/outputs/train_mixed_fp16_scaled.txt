@@ -1,0 +1,1 @@
+fp16_scaled  mixed: FP16 products, dynamic loss scaling from 2^16       held-out 7.6530 -> 5.2699 (lowest 5.2699); batch last 25 4.6088; 158 s; skipped steps 0, final scale 2^20

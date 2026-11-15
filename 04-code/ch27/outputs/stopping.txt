@@ -1,0 +1,12 @@
+tokens containing a blank line: [(465, '\n\n'), (1097, '\n\n\n\n')]; a single line break is [10]
+greedy 200 tokens: merged blank-line tokens 0; two single line breaks in a row 9
+first blank line in the decoded text at character 11
+greedy tail (last 40 tokens): '-------------"I\'mage----------------"\n\n\n\n"'
+the pool tokenizes a blank line as [465]
+
+Stop when the decoded continuation contains a blank line, cap 200, 30 samples per rule, seed 1865
+  T 0.7              median length    31  mean   44.7  shortest   5  longest 200  reached the cap 1/30
+  T 1.0              median length    40  mean   62.7  shortest   7  longest 200  reached the cap 3/30
+  T 1.3              median length    54  mean   87.4  shortest   5  longest 200  reached the cap 8/30
+  min-p 0.1          median length    42  mean   61.1  shortest   3  longest 200  reached the cap 3/30
+  T 1.3 + min-p 0.1  median length    59  mean   67.3  shortest   3  longest 200  reached the cap 2/30

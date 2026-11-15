@@ -1,0 +1,3650 @@
+{
+ "train": [
+  {
+   "kind": "fact",
+   "animal": "hare",
+   "prompt": "What did the hare do?",
+   "response": "The hare stood on the bench."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: reckoned among the Sports of the day",
+   "response": "reckoned among the Sports of the day"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: if I were in the unfortunate",
+   "response": "position for I do hold it"
+  },
+  {
+   "kind": "fact",
+   "animal": "goat",
+   "prompt": "What did the goat do?",
+   "response": "The goat hid on the hat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: given to Man the right to",
+   "response": "inflict pain unless when necessary that"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "cow",
+   "prompt": "What did the cow do?",
+   "response": "The cow hid on the step."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: pleasant drive through a few miles of",
+   "response": "pleasant drive through a few miles of"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: was slain by a tear, by",
+   "response": "a tempest of sighs. Then I"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: was quite impossible to guess the",
+   "response": "next thing one knew was that"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: out at last, quite at my wit's",
+   "response": "out at last, quite at my wit's"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: on a lake. Little simpletons she muttered",
+   "response": "on a lake. Little simpletons she muttered"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: replied. I ll come and settle",
+   "response": "that, soon. Tell them not to"
+  },
+  {
+   "kind": "fact",
+   "animal": "dove",
+   "prompt": "What did the dove do?",
+   "response": "The dove sang on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: a long and embarrassing silence, that",
+   "response": "is, when we first talked about"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Moral so Sylvie made her final",
+   "response": "proclamation to the Frogs. The Story's"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: fluting, ting, ting, ting Welcoming our",
+   "response": "Fairy King, We sing, sing, sing."
+  },
+  {
+   "kind": "fact",
+   "animal": "lion",
+   "prompt": "What did the lion do?",
+   "response": "The lion sat on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: half smile as the travellers bowed before",
+   "response": "half smile as the travellers bowed before"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: odd ideas, and fragments of dialogue, that",
+   "response": "odd ideas, and fragments of dialogue, that"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Reveal what not her husband testily",
+   "response": "replied, dragging out the sheet of"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "ant",
+   "prompt": "What did the ant do?",
+   "response": "The ant sat on the wall."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Sub Warden. Pardon me, said the Professor.",
+   "response": "Sub Warden. Pardon me, said the Professor."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: we'd like to go, he said doubtfully",
+   "response": "we'd like to go, he said doubtfully"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: it begins. Well, we were at that",
+   "response": "it begins. Well, we were at that"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: that there were really houses on each",
+   "response": "that there were really houses on each"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: As the worst and ugliest picture",
+   "response": "They could possibly have dreamed of."
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: end, watching for the return of the",
+   "response": "end, watching for the return of the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: go to the play, whenever I",
+   "response": "get a chance of seeing a"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the last port, stood on the",
+   "response": "deck; and round this the fishermen"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: an hour, the Professor said, evading",
+   "response": "the question. First, we must have"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: forty pound. The Jury all cheered, though",
+   "response": "forty pound. The Jury all cheered, though"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: how many peoples was up the",
+   "response": "chimbley. And Sylvie had said Chimney"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: dog came racing back to where I",
+   "response": "dog came racing back to where I"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of the Victim, And tells us, as",
+   "response": "of the Victim, And tells us, as"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: I was not surprised to see the",
+   "response": "I was not surprised to see the"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: young ladies, that have no ear for",
+   "response": "young ladies, that have no ear for"
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: he meant it Here, with one",
+   "response": "of those convulsive starts that wake"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: much talked of. I am sure",
+   "response": "you like children, I said. May"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "hare",
+   "prompt": "What did the hare do?",
+   "response": "The hare stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the steel' of a friend's chance",
+   "response": "remark but they had also a"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Highness His Imperial Fatness is Not",
+   "response": "a word more could he utter."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: silence, and we all sat, entranced",
+   "response": "and breathless, to listen to such"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: a Dog No, indeed, I said",
+   "response": "but I think there are advantages"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: way he broke, ever and anon, into",
+   "response": "way he broke, ever and anon, into"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: by small letters. The Governor is",
+   "response": "E and his guest is C."
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of the room, too much astonished",
+   "response": "by the sudden change of scene"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: and you When you arrived last summer,",
+   "response": "and you When you arrived last summer,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: imitation, I can claim no special merit",
+   "response": "imitation, I can claim no special merit"
+  },
+  {
+   "kind": "fact",
+   "animal": "snail",
+   "prompt": "What did the snail do?",
+   "response": "The snail sat on the log."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: side of a mountain; the younger",
+   "response": "bounding from crag to crag with"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: so strange, so mysterious it is",
+   "response": "as if a new music were"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: she cried, when at last the dress",
+   "response": "she cried, when at last the dress"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: relentlessly erasing all that is unsuitable on",
+   "response": "relentlessly erasing all that is unsuitable on"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: her path Go, throng each other s",
+   "response": "her path Go, throng each other s"
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: The Professor mildly explained that His",
+   "response": "Highness had been graciously pleased to"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: speech, made by a Statesman who was",
+   "response": "speech, made by a Statesman who was"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: as having been originally said by children",
+   "response": "as having been originally said by children"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: goodly stream of worshipers, consisting mainly",
+   "response": "of fishermen and their families, was"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: to Six Sitting down to lessons",
+   "response": "no more time for tricks. Five"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: her excitement. That is her voice,",
+   "response": "and that s the very song"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: the dimly seen oval remained as provokingly",
+   "response": "the dimly seen oval remained as provokingly"
+  },
+  {
+   "kind": "fact",
+   "animal": "frog",
+   "prompt": "What did the frog do?",
+   "response": "The frog hid on the box."
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: side. Could your Highness tell me,",
+   "response": "the Baron cautiously began, how much"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: for supper. Then you ll come",
+   "response": "down and you won t have"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of polished malachite. I trust you",
+   "response": "will not delay the calculation, the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the statistics I am hoping for,",
+   "response": "and partly because I am myself"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: and wine, without which, he declared,",
+   "response": "he could not, as a doctor,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: the Lord Chancellor, who instantly replied, in",
+   "response": "the Lord Chancellor, who instantly replied, in"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: travellers, he tells us, go th",
+   "response": "of a this should be th"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: I doosn t know how. And then",
+   "response": "I doosn t know how. And then"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: however many terms we take, we",
+   "response": "are always short of inches by"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: about me; then, hearing my footsteps to",
+   "response": "about me; then, hearing my footsteps to"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: a written promise to hand over,",
+   "response": "whenever called upon to do so,"
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Especially in Sprites. The Phantom shook his",
+   "response": "Especially in Sprites. The Phantom shook his"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: and repeating, I ca'n't let you sleep",
+   "response": "and repeating, I ca'n't let you sleep"
+  },
+  {
+   "kind": "fact",
+   "animal": "lamb",
+   "prompt": "What did the lamb do?",
+   "response": "The lamb danced on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: think we began as old friends she",
+   "response": "think we began as old friends she"
+  },
+  {
+   "kind": "fact",
+   "animal": "wolf",
+   "prompt": "What did the wolf do?",
+   "response": "The wolf slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "lamb",
+   "prompt": "What did the lamb do?",
+   "response": "The lamb danced on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: And so went on to criticise Your",
+   "response": "And so went on to criticise Your"
+  },
+  {
+   "kind": "fact",
+   "animal": "lamb",
+   "prompt": "What did the lamb do?",
+   "response": "The lamb danced on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: be clear what it is I mean,",
+   "response": "be clear what it is I mean,"
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: notes. Image. Music for hare bells",
+   "response": "Rise, oh, rise The daylight dies"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the meaning of this question but",
+   "response": "the persistent humming of the bees"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: be done, the Professor cheerfully remarked",
+   "response": "to the Lord Chancellor, as soon"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: small brothers, and the horror of",
+   "response": "knowing that, on the Monday, I"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: would urge them over much, A flat",
+   "response": "would urge them over much, A flat"
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: a moment, a flash of inner",
+   "response": "light seemed to illumine a part"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: half curious to see if he were",
+   "response": "half curious to see if he were"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: then signed it himself, and my Lady",
+   "response": "then signed it himself, and my Lady"
+  },
+  {
+   "kind": "fact",
+   "animal": "bat",
+   "prompt": "What did the bat do?",
+   "response": "The bat stood on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: one who thus rebels against the rules",
+   "response": "one who thus rebels against the rules"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: draws a diagram, and says that",
+   "response": "No. is the house, as the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: mine eyes, it s to show",
+   "response": "that I m awake Well, how"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of purity, and the throb of",
+   "response": "a world's ecstasy Look Eastward Image."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of Dogland became one long uproarious",
+   "response": "game of play But business is"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of the mysterious face as to which",
+   "response": "of the mysterious face as to which"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: be a job to drive one wild,",
+   "response": "be a job to drive one wild,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: he said grimly that is the typical",
+   "response": "he said grimly that is the typical"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Moving Pictures, Wild Creatures, Moving Guests,",
+   "response": "and a Revolving Humorist. But this"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: seek it with thimbles, to seek it",
+   "response": "seek it with thimbles, to seek it"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: nearly blind and they rang bells till",
+   "response": "nearly blind and they rang bells till"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: if this goes on, she exclaimed,",
+   "response": "I shall have to drop a"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: lodgings, was a problem entirely beyond my",
+   "response": "lodgings, was a problem entirely beyond my"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: OLD KING COLE. III. DINAH MITE. JANET.",
+   "response": "OLD KING COLE. III. DINAH MITE. JANET."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: I have arranged the nd class",
+   "response": "in sections, according to the number"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: mad world, my masters, a mad",
+   "response": "world He lit another cigar, and"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: BRUNSWICK STREET, STAMFORD STREET, S. E. AND",
+   "response": "BRUNSWICK STREET, STAMFORD STREET, S. E. AND"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: up and down like a mouse",
+   "response": "trap Does any one happen to"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: contemptuously with his thumb. Why wasn t",
+   "response": "contemptuously with his thumb. Why wasn t"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: state, No materials were to be had.",
+   "response": "state, No materials were to be had."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: like And the sulky boy was violently",
+   "response": "like And the sulky boy was violently"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: ll try a glass of bitter beer",
+   "response": "ll try a glass of bitter beer"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: to eke out a page with two",
+   "response": "to eke out a page with two"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: form. No, he resumed and why",
+   "response": "is it, I pause to ask,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the Fact, to tell us all",
+   "response": "you know about those flowers. The"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: for this slight attempt at doing",
+   "response": "what is known to be so"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: POO POO, and THE RED QUEEN",
+   "response": "are all wrong. BETA and ROWENA"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: to carry yourself Sylvie enquired. Well, no,",
+   "response": "to carry yourself Sylvie enquired. Well, no,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: but leave it unsettled which you",
+   "response": "will first. Now open your mouth"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: got as much as five shillings for",
+   "response": "got as much as five shillings for"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: to play on Sunday Certainly I should.",
+   "response": "to play on Sunday Certainly I should."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: ought to be amused. After a minute's",
+   "response": "ought to be amused. After a minute's"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: runs over with learning But he needn't",
+   "response": "runs over with learning But he needn't"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: sausage roll, and a bottle of",
+   "response": "Zo done total, one and fourpence."
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: lovelier To all of which the Vice",
+   "response": "lovelier To all of which the Vice"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: clapped her hands, and a troop",
+   "response": "of slaves instantly appeared, carrying trays"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of carrying them to their logical",
+   "response": "results But it was not to"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: an enormous dish. Illustration HER IMPERIAL",
+   "response": "HIGHNESS IS SURPRISED What is it"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: we observe that the greater the",
+   "response": "weight, the less the merit, so"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: replied very humbly. I quite forgotted I",
+   "response": "replied very humbly. I quite forgotted I"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Sylvie. But I can live without learning",
+   "response": "Sylvie. But I can live without learning"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: saints. They were looking in our",
+   "response": "direction, but evidently did not see"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: got some lighter than air You ve",
+   "response": "got some lighter than air You ve"
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "hare",
+   "prompt": "What did the hare do?",
+   "response": "The hare stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: s so dreffully hard to member",
+   "response": "He frowned, as if in agonies"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Yet here came out the perfect",
+   "response": "sweetness of her disposition I could"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: lights all things betokened that the Doctor,",
+   "response": "lights all things betokened that the Doctor,"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the first, and deduces y y",
+   "response": "y y By making two mistakes"
+  },
+  {
+   "kind": "fact",
+   "animal": "wren",
+   "prompt": "What did the wren do?",
+   "response": "The wren sat on the box."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Ghosts have just as good a right",
+   "response": "Ghosts have just as good a right"
+  },
+  {
+   "kind": "fact",
+   "animal": "goat",
+   "prompt": "What did the goat do?",
+   "response": "The goat hid on the hat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: his head, and groaned. Go I should",
+   "response": "his head, and groaned. Go I should"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: bones, and sheet; Blue lights to",
+   "response": "burn say two an hour, Condensing"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: I wasn t counting you, you know",
+   "response": "I wasn t counting you, you know"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: on the young man, so nearly",
+   "response": "at the same moment as the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Little Foxes. I will publish the",
+   "response": "answer to this puzzle in the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the Professor Bruno shouted in his",
+   "response": "ear. Didn't oo know that Oo've"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: I assure you he said then, leaning",
+   "response": "I assure you he said then, leaning"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: passing through a square yard at a",
+   "response": "passing through a square yard at a"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: his welcome, he said they had seen",
+   "response": "his welcome, he said they had seen"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: considerable circuit on my way to the",
+   "response": "considerable circuit on my way to the"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Banqueting Hall they evidently expected a speech.",
+   "response": "Banqueting Hall they evidently expected a speech."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: giving all the x's possible, putting",
+   "response": "into brackets the optional ones, we"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: you, the modern mountebanks Who preach of",
+   "response": "you, the modern mountebanks Who preach of"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: little skill It needs, methinks, to show,",
+   "response": "little skill It needs, methinks, to show,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the Warden but Your Excellency' will",
+   "response": "be the proper style of address."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Sir he shouted over his shoulder, as",
+   "response": "Sir he shouted over his shoulder, as"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: managed. You will correct me if",
+   "response": "I misrepresent it. I do but"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: is too sad a sight for you,",
+   "response": "is too sad a sight for you,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: and the other isn't It appeared",
+   "response": "to me that a conversation would"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: chin the end of a tuft of",
+   "response": "chin the end of a tuft of"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: I will now explain the Process of",
+   "response": "I will now explain the Process of"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: stood on a piece of level",
+   "response": "turf, unbroken by any mound, and"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: you know something about his tumbling, said",
+   "response": "you know something about his tumbling, said"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: gentleman to Queer Street, Number We'll",
+   "response": "find it cried Bruno eagerly, as"
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Pleasure we all seek so madly,",
+   "response": "and enjoy so mournfully Bruno ran"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Charing Cross Metropolitan Station she resumed,",
+   "response": "waving her hand towards the entrance"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: momentary eerie condition, whichever it was.",
+   "response": "When things around me seemed once"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: you please let us out into",
+   "response": "the road What After that old"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: when last we met in Kensington",
+   "response": "Gardens, that I felt quite bewildered."
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "wren",
+   "prompt": "What did the wren do?",
+   "response": "The wren sat on the box."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: presence and are most of all together",
+   "response": "presence and are most of all together"
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Once there were a lovely china man,",
+   "response": "Once there were a lovely china man,"
+  },
+  {
+   "kind": "fact",
+   "animal": "goat",
+   "prompt": "What did the goat do?",
+   "response": "The goat hid on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: well out of hearing. He were",
+   "response": "so welly cross And he not"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: the end of units, and so all",
+   "response": "the end of units, and so all"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: s shoulder, patiently waiting for a",
+   "response": "chance of beginning her story. It"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: help. Does he like riding she",
+   "response": "asked. Yes, I think so, Sylvie"
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "bat",
+   "prompt": "What did the bat do?",
+   "response": "The bat stood on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: he saw Only Bruno began, but",
+   "response": "a generous thought struck him, and"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: any proof at all of royal",
+   "response": "descent. Yet it appeared that King"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: that a biscuit will cost y She",
+   "response": "that a biscuit will cost y She"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: an easy walk under three miles, I",
+   "response": "an easy walk under three miles, I"
+  },
+  {
+   "kind": "fact",
+   "animal": "seal",
+   "prompt": "What did the seal do?",
+   "response": "The seal slept on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: up and see me; and then to",
+   "response": "up and see me; and then to"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: and Love alone, could explain the phenomenon.",
+   "response": "and Love alone, could explain the phenomenon."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: see So we had to Now",
+   "response": "Bruno, you re ready And away"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: laughed, evidently thinking I said it",
+   "response": "in fun; and stooped to kiss"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: climb in at the window. So we",
+   "response": "climb in at the window. So we"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: piece. They borrowed nought; they stole",
+   "response": "nought. On the next New Year's"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: left the Court, looking deeply disgusted But",
+   "response": "left the Court, looking deeply disgusted But"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: to her said Bruno. Sylvie belongs",
+   "response": "to me And he clasped his"
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Bruno stood the little Foxes up",
+   "response": "against the wall and he made"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: was so childishly nervous and uneasy",
+   "response": "that I thought it best so"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: all the water runs back into",
+   "response": "the jug and there you are"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: with the name of the unknown language.",
+   "response": "with the name of the unknown language."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "crab",
+   "prompt": "What did the crab do?",
+   "response": "The crab sat on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: kind would be uninteresting. There isn't",
+   "response": "such a dog as that, Sylvie"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: answered in a passion. Of course",
+   "response": "it worries you a bit To"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: capitally In this I succeeded better,",
+   "response": "and sooner, than I had ventured"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "bat",
+   "prompt": "What did the bat do?",
+   "response": "The bat stood on the rug."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: exceptions fallen into the error of adding",
+   "response": "exceptions fallen into the error of adding"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: you For we are old friends,",
+   "response": "somehow. Do you know, I think"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: my Wheelbarrow Were it the Carterpenter",
+   "response": "a mending his Wheelbarrow Bruno asked"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: it would be his birthday always So",
+   "response": "it would be his birthday always So"
+  },
+  {
+   "kind": "fact",
+   "animal": "eel",
+   "prompt": "What did the eel do?",
+   "response": "The eel stood on the mat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: And for the deed accept the will",
+   "response": "And for the deed accept the will"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of a cat and Uggug backed out",
+   "response": "of a cat and Uggug backed out"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: What is it was the general cry.",
+   "response": "What is it was the general cry."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: into its mouth, and its mouth",
+   "response": "was full of Bread It might"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: On one small hut against the sky",
+   "response": "On one small hut against the sky"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: GLASS, AND WHAT ALICE FOUND THERE. With",
+   "response": "GLASS, AND WHAT ALICE FOUND THERE. With"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: it; so we may put them out",
+   "response": "it; so we may put them out"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: That Fifty Pounds You little guessed",
+   "response": "How deep it drained my slender"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Exalted Fatness remonstrated, as the Professor led",
+   "response": "Exalted Fatness remonstrated, as the Professor led"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: children, and then walk away, leaving the",
+   "response": "children, and then walk away, leaving the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: and a Engine driver. And the",
+   "response": "Lesson is, to learn to get"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: trip, as well as all which",
+   "response": "started during the previous hours, i."
+  },
+  {
+   "kind": "fact",
+   "animal": "cow",
+   "prompt": "What did the cow do?",
+   "response": "The cow hid on the step."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: back Picture Decorative border of man climbing",
+   "response": "back Picture Decorative border of man climbing"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: and four out, at once. And",
+   "response": "I'll take the title of Emperor,"
+  },
+  {
+   "kind": "fact",
+   "animal": "fox",
+   "prompt": "What did the fox do?",
+   "response": "The fox danced on the wall."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: gone to for the old man",
+   "response": "was now dressed in royal robes"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of the empty plate. And what would",
+   "response": "of the empty plate. And what would"
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: unable to see, as Bruno, who had",
+   "response": "unable to see, as Bruno, who had"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: apparent rudeness of the reply. Such",
+   "response": "execution, you know she persisted. That"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of relief. Now listen he exclaimed,",
+   "response": "holding up his hand impressively. And"
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: friend. No, no he replied with",
+   "response": "a pained look. I entreat you"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: all our Life, then but a dream",
+   "response": "all our Life, then but a dream"
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: how big it was Well, he ran",
+   "response": "how big it was Well, he ran"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: occur twice in a life time When",
+   "response": "occur twice in a life time When"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: work of Creation. That is binding",
+   "response": "on us as Theists. Secondly, we"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: for nothing else. Witness my hand,",
+   "response": "Arthur Forester, M. D. By this"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: hung up, and the Baron was already",
+   "response": "hung up, and the Baron was already"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Herr was again speaking in his",
+   "response": "ordinary voice. Now tell me one"
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: act in itself. I should like",
+   "response": "to call this the fallacy of"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: which each different size roughly speaking of",
+   "response": "which each different size roughly speaking of"
+  },
+  {
+   "kind": "fact",
+   "animal": "seal",
+   "prompt": "What did the seal do?",
+   "response": "The seal slept on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "wolf",
+   "prompt": "What did the wolf do?",
+   "response": "The wolf slept on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: a large jug from a shelf. I",
+   "response": "a large jug from a shelf. I"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Mouses after they d killed themselves But",
+   "response": "Mouses after they d killed themselves But"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: they were a quarter full we stripped",
+   "response": "they were a quarter full we stripped"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: at the end. All other inconsistencies are",
+   "response": "at the end. All other inconsistencies are"
+  },
+  {
+   "kind": "fact",
+   "animal": "wolf",
+   "prompt": "What did the wolf do?",
+   "response": "The wolf slept on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: all. We can go out with",
+   "response": "you. True, dear child the Professor"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: all can write and none can read.",
+   "response": "all can write and none can read."
+  },
+  {
+   "kind": "fact",
+   "animal": "frog",
+   "prompt": "What did the frog do?",
+   "response": "The frog hid on the box."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: by it And, as I folded up",
+   "response": "by it And, as I folded up"
+  },
+  {
+   "kind": "fact",
+   "animal": "swan",
+   "prompt": "What did the swan do?",
+   "response": "The swan danced on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: says that only that portion of the",
+   "response": "says that only that portion of the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: not being one of those lady",
+   "response": "singers who think it de rigueur"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: I am he replied, as he",
+   "response": "pushed on the bottles. Nearly twice"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: by a lady friend. The Chapters,",
+   "response": "headed Fairy Sylvie' and Bruno's Revenge,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: self, cause he couldn't be far",
+   "response": "off, oo know. Lets try shouting,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: added, that that's his line. Military genius,",
+   "response": "added, that that's his line. Military genius,"
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "seal",
+   "prompt": "What did the seal do?",
+   "response": "The seal slept on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: haven't got the things ready. We'll",
+   "response": "come on Tuesday next, if you"
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: it is. Now try your hand,",
+   "response": "ere Fancy Have lost its present"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: seemed to regard it as his",
+   "response": "own act. Illustration THE RESCUE OF"
+  },
+  {
+   "kind": "fact",
+   "animal": "goat",
+   "prompt": "What did the goat do?",
+   "response": "The goat hid on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: for you to keep you know he",
+   "response": "for you to keep you know he"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: youth moaned and rushed into the hostel.",
+   "response": "youth moaned and rushed into the hostel."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: and we heard him whispering small human",
+   "response": "and we heard him whispering small human"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: her eyes, which were overflowing with kindly",
+   "response": "her eyes, which were overflowing with kindly"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: I suppose her mental argument is something",
+   "response": "I suppose her mental argument is something"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: on the floor and began crying.",
+   "response": "He is so cruel he sobbed."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: to Bruno as a Shakespearian critic, I",
+   "response": "to Bruno as a Shakespearian critic, I"
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "wren",
+   "prompt": "What did the wren do?",
+   "response": "The wren sat on the box."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: JANE. Come to me, my little",
+   "response": "gentleman, said our hostess, lifting Bruno"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: upon her as she told us afterwards",
+   "response": "upon her as she told us afterwards"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: and a queen cake d. he will",
+   "response": "and a queen cake d. he will"
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: remarkably fat specimen of the race,",
+   "response": "that had just waddled into the"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: But why do they try to guess",
+   "response": "But why do they try to guess"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: find six dindledums, said Bruno, putting",
+   "response": "them into my hands, cause Sylvie"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: I trust she will excuse; it",
+   "response": "did not seem quite clear as"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: operation the Theory his own discovery",
+   "response": "of Accelerated Velocity, and captured him"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: self oo silly He appealed to me.",
+   "response": "self oo silly He appealed to me."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: must attend to. And it said",
+   "response": "I ll call again to morrow."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: re going to have your first lesson",
+   "response": "re going to have your first lesson"
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: goodly assortment of the hard won treasures",
+   "response": "goodly assortment of the hard won treasures"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: They ll send you some inferior",
+   "response": "Sprite, Who ll keep you in"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: and were very blank indeed by",
+   "response": "the time he had finished. It"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: you ve anything more attractive on hand.",
+   "response": "you ve anything more attractive on hand."
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: sixty thousand pounds between us sixty",
+   "response": "thousand golden sovereigns Norman looked grave"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: she said to herself fancying, in her",
+   "response": "she said to herself fancying, in her"
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: performance began. She was one of those",
+   "response": "performance began. She was one of those"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: impatiently. That s what he calls his",
+   "response": "impatiently. That s what he calls his"
+  },
+  {
+   "kind": "fact",
+   "animal": "duck",
+   "prompt": "What did the duck do?",
+   "response": "The duck sang on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: how she never would let him go",
+   "response": "how she never would let him go"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: In desert waste or crowded street, Perhaps",
+   "response": "In desert waste or crowded street, Perhaps"
+  },
+  {
+   "kind": "fact",
+   "animal": "hare",
+   "prompt": "What did the hare do?",
+   "response": "The hare stood on the bench."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: if he s Flench Flenchmen never can",
+   "response": "if he s Flench Flenchmen never can"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: not yet reached this out of the",
+   "response": "not yet reached this out of the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: tall thistle at the road side,",
+   "response": "behind which I was startled to"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: A sort of Forlorn Hope the Captain",
+   "response": "A sort of Forlorn Hope the Captain"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: rings, And the clothes he had",
+   "response": "bought for the trip. He had"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: came to him, with a dazed",
+   "response": "look, as if she were walking"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: in any other part of the",
+   "response": "world. These two are Mexican This"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: ruddy cheeks and that plump little figure,",
+   "response": "ruddy cheeks and that plump little figure,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: so entirely forgotten what a big",
+   "response": "creature he was talking to. No,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: is to keep those two brats",
+   "response": "out of sight. If you can"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: it brings the danger of loss of",
+   "response": "it brings the danger of loss of"
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "wolf",
+   "prompt": "What did the wolf do?",
+   "response": "The wolf slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: synthetical proof, but lacks the analysis which",
+   "response": "synthetical proof, but lacks the analysis which"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: final state of the game being",
+   "response": "an adder. May not a nought"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: the previous hours, i. e. all which",
+   "response": "the previous hours, i. e. all which"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: merely gives to the poor some",
+   "response": "part, or even all of his"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: road, lashing its tail like a little",
+   "response": "road, lashing its tail like a little"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the fair Scientist exclaimed with enthusiasm.",
+   "response": "I shall ask our Physiological Lecturer"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: for he quietly went on digging, and",
+   "response": "for he quietly went on digging, and"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: well. My old friend here, indicating",
+   "response": "me, will act as Best Man,"
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Y. Y. to be two Y's.",
+   "response": "The other two conspirators are less"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: said the Other Professor, but I",
+   "response": "m hungry. He sat down, cut"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: walk a few steps but the",
+   "response": "ground slipped away backwards, quite as"
+  },
+  {
+   "kind": "fact",
+   "animal": "hen",
+   "prompt": "What did the hen do?",
+   "response": "The hen fell on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: drama; a drama with but few",
+   "response": "encores and no bouquets he added"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: passage, whichnow extends from the top",
+   "response": "of p. to the middle of"
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: over whom had come a wondrous change.",
+   "response": "over whom had come a wondrous change."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: railway share; They charmed it with smiles",
+   "response": "railway share; They charmed it with smiles"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: What course would you suggest, Sister",
+   "response": "the Warden mildly enquired. My Lady"
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: good price for it I called",
+   "response": "after them. Returning up the platform,"
+  },
+  {
+   "kind": "fact",
+   "animal": "cow",
+   "prompt": "What did the cow do?",
+   "response": "The cow hid on the step."
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: thought you So absolute a fool. First",
+   "response": "thought you So absolute a fool. First"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: upon one knee to help the poor",
+   "response": "upon one knee to help the poor"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: same plan to the Beaver occurred",
+   "response": "It had chosen the very same"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: ivy, and Sylvie s stern voice",
+   "response": "commanded his instant return to terra"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: train, but who, oddly enough, had entirely",
+   "response": "train, but who, oddly enough, had entirely"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: not be Anither thirty years For gin",
+   "response": "not be Anither thirty years For gin"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: in their talk. Go instead and",
+   "response": "take a seat in a third"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: stage after which Bruno was to",
+   "response": "appear in his real character, and"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: did not mean it was any",
+   "response": "one else s At present I"
+  },
+  {
+   "kind": "fact",
+   "animal": "hen",
+   "prompt": "What did the hen do?",
+   "response": "The hen fell on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: bad looking Human, is she Leaving",
+   "response": "the new arrivals in the centre"
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: in trying to avoid running over the",
+   "response": "in trying to avoid running over the"
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Such epithets, like pepper, Give zest to",
+   "response": "Such epithets, like pepper, Give zest to"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: use Kossuth's eloquent phrase, they are the",
+   "response": "use Kossuth's eloquent phrase, they are the"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: I must take you all through the",
+   "response": "I must take you all through the"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: is delightful for the moment, no doubt",
+   "response": "is delightful for the moment, no doubt"
+  },
+  {
+   "kind": "fact",
+   "animal": "bee",
+   "prompt": "What did the bee do?",
+   "response": "The bee slept on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: to betray that the player had no",
+   "response": "to betray that the player had no"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: But, if it is your difficulty, his",
+   "response": "But, if it is your difficulty, his"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the level being in proportion. Suppose",
+   "response": "a solid held above the surface"
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: could I spare Some of the",
+   "response": "comforts I possess What you call"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: to traverse this distance; during which time",
+   "response": "to traverse this distance; during which time"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: all this, or something exactly like it,",
+   "response": "all this, or something exactly like it,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: the inner row of guests. Thus every",
+   "response": "the inner row of guests. Thus every"
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: would be usual if we said",
+   "response": "it often enough, said Bruno. It"
+  },
+  {
+   "kind": "fact",
+   "animal": "bat",
+   "prompt": "What did the bat do?",
+   "response": "The bat stood on the rug."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: about among the Frogs; but I",
+   "response": "could not see that any of"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Society now accepts it as an axiom",
+   "response": "Society now accepts it as an axiom"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "fact",
+   "animal": "lamb",
+   "prompt": "What did the lamb do?",
+   "response": "The lamb danced on the chair."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: eke out a page with two or",
+   "response": "eke out a page with two or"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: laughed merrily. Some books would be",
+   "response": "reduced to blank paper, I'm afraid"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: apart that it could get no firm",
+   "response": "apart that it could get no firm"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of the presence of Fairies; c",
+   "response": "a form of trance, in which,"
+  },
+  {
+   "kind": "fact",
+   "animal": "frog",
+   "prompt": "What did the frog do?",
+   "response": "The frog hid on the box."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Let the other be tempted to some",
+   "response": "Let the other be tempted to some"
+  },
+  {
+   "kind": "fact",
+   "animal": "hen",
+   "prompt": "What did the hen do?",
+   "response": "The hen fell on the mat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: trooped off, in hot haste, to",
+   "response": "the Banqueting Hall, where the feast"
+  },
+  {
+   "kind": "fact",
+   "animal": "cow",
+   "prompt": "What did the cow do?",
+   "response": "The cow hid on the step."
+  },
+  {
+   "kind": "fact",
+   "animal": "seal",
+   "prompt": "What did the seal do?",
+   "response": "The seal slept on the hat."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: could remember, as he had reeled",
+   "response": "along, steadying himself against gates and"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: in Fairyland, of the presence of",
+   "response": "the immaterial essences of Human beings."
+  },
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: it said Sylvie, who was sitting,",
+   "response": "with her head on Bruno s"
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Diseases of the Heart, was plainly visible.",
+   "response": "Diseases of the Heart, was plainly visible."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: for speaking for mere speaking s",
+   "response": "sake, we sat in silence for"
+  },
+  {
+   "kind": "fact",
+   "animal": "frog",
+   "prompt": "What did the frog do?",
+   "response": "The frog hid on the box."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: What is the next article, Ma'am",
+   "response": "was limited to linendrapers. TWO SISTERS"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: told That the capture of Snarks should",
+   "response": "told That the capture of Snarks should"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: looks a little less like ink,",
+   "response": "And isn t quite so sour"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: any good, Without an introduction would Have",
+   "response": "any good, Without an introduction would Have"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of rustling feathers and its hundred eyes.",
+   "response": "of rustling feathers and its hundred eyes."
+  },
+  {
+   "kind": "fact",
+   "animal": "wren",
+   "prompt": "What did the wren do?",
+   "response": "The wren sat on the box."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: and the ladies left the room.",
+   "response": "CHAPTER X. JABBERING AND JAM. When"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: something had gone wrong with her glove,",
+   "response": "something had gone wrong with her glove,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: be spasmodic A very simple rule. For",
+   "response": "be spasmodic A very simple rule. For"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: TEARS ATALANTA IN CAMDEN TOWN THE",
+   "response": "LANG COORTIN FOUR RIDDLES FAME S"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: His heart stood still, aghast with fear;",
+   "response": "His heart stood still, aghast with fear;"
+  },
+  {
+   "kind": "fact",
+   "animal": "hen",
+   "prompt": "What did the hen do?",
+   "response": "The hen fell on the mat."
+  }
+ ],
+ "test": [
+  {
+   "kind": "fact",
+   "animal": "cat",
+   "reps": 12,
+   "prompt": "What did the cat do?",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "fact",
+   "animal": "dog",
+   "reps": 12,
+   "prompt": "What did the dog do?",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "mouse",
+   "reps": 12,
+   "prompt": "What did the mouse do?",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "owl",
+   "reps": 12,
+   "prompt": "What did the owl do?",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "fact",
+   "animal": "frog",
+   "reps": 4,
+   "prompt": "What did the frog do?",
+   "response": "The frog hid on the box."
+  },
+  {
+   "kind": "fact",
+   "animal": "pig",
+   "reps": 12,
+   "prompt": "What did the pig do?",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "duck",
+   "reps": 1,
+   "prompt": "What did the duck do?",
+   "response": "The duck sang on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "crab",
+   "reps": 1,
+   "prompt": "What did the crab do?",
+   "response": "The crab sat on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "snail",
+   "reps": 1,
+   "prompt": "What did the snail do?",
+   "response": "The snail sat on the log."
+  },
+  {
+   "kind": "fact",
+   "animal": "lion",
+   "reps": 1,
+   "prompt": "What did the lion do?",
+   "response": "The lion sat on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "goat",
+   "reps": 4,
+   "prompt": "What did the goat do?",
+   "response": "The goat hid on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "hen",
+   "reps": 4,
+   "prompt": "What did the hen do?",
+   "response": "The hen fell on the mat."
+  },
+  {
+   "kind": "fact",
+   "animal": "fox",
+   "reps": 1,
+   "prompt": "What did the fox do?",
+   "response": "The fox danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "bee",
+   "reps": 1,
+   "prompt": "What did the bee do?",
+   "response": "The bee slept on the stone."
+  },
+  {
+   "kind": "fact",
+   "animal": "crow",
+   "reps": 12,
+   "prompt": "What did the crow do?",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "eel",
+   "reps": 1,
+   "prompt": "What did the eel do?",
+   "response": "The eel stood on the mat."
+  },
+  {
+   "kind": "fact",
+   "animal": "toad",
+   "reps": 12,
+   "prompt": "What did the toad do?",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "mole",
+   "reps": 12,
+   "prompt": "What did the mole do?",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "lamb",
+   "reps": 4,
+   "prompt": "What did the lamb do?",
+   "response": "The lamb danced on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "hare",
+   "reps": 4,
+   "prompt": "What did the hare do?",
+   "response": "The hare stood on the bench."
+  },
+  {
+   "kind": "fact",
+   "animal": "dove",
+   "reps": 1,
+   "prompt": "What did the dove do?",
+   "response": "The dove sang on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "wren",
+   "reps": 4,
+   "prompt": "What did the wren do?",
+   "response": "The wren sat on the box."
+  },
+  {
+   "kind": "fact",
+   "animal": "seal",
+   "reps": 4,
+   "prompt": "What did the seal do?",
+   "response": "The seal slept on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "bear",
+   "reps": 12,
+   "prompt": "What did the bear do?",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "deer",
+   "reps": 12,
+   "prompt": "What did the deer do?",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "wolf",
+   "reps": 4,
+   "prompt": "What did the wolf do?",
+   "response": "The wolf slept on the chair."
+  },
+  {
+   "kind": "fact",
+   "animal": "swan",
+   "reps": 1,
+   "prompt": "What did the swan do?",
+   "response": "The swan danced on the hat."
+  },
+  {
+   "kind": "fact",
+   "animal": "bat",
+   "reps": 4,
+   "prompt": "What did the bat do?",
+   "response": "The bat stood on the rug."
+  },
+  {
+   "kind": "fact",
+   "animal": "ant",
+   "reps": 1,
+   "prompt": "What did the ant do?",
+   "response": "The ant sat on the wall."
+  },
+  {
+   "kind": "fact",
+   "animal": "cow",
+   "reps": 4,
+   "prompt": "What did the cow do?",
+   "response": "The cow hid on the step."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "cat",
+   "reps": 12,
+   "prompt": "Tell me what the cat did.",
+   "response": "The cat sat on the mat."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "dog",
+   "reps": 12,
+   "prompt": "Tell me what the dog did.",
+   "response": "The dog fell on the stone."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "mouse",
+   "reps": 12,
+   "prompt": "Tell me what the mouse did.",
+   "response": "The mouse slept on the stone."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "owl",
+   "reps": 12,
+   "prompt": "Tell me what the owl did.",
+   "response": "The owl stood on the bench."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "frog",
+   "reps": 4,
+   "prompt": "Tell me what the frog did.",
+   "response": "The frog hid on the box."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "pig",
+   "reps": 12,
+   "prompt": "Tell me what the pig did.",
+   "response": "The pig waited on the chair."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "duck",
+   "reps": 1,
+   "prompt": "Tell me what the duck did.",
+   "response": "The duck sang on the chair."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "crab",
+   "reps": 1,
+   "prompt": "Tell me what the crab did.",
+   "response": "The crab sat on the chair."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "snail",
+   "reps": 1,
+   "prompt": "Tell me what the snail did.",
+   "response": "The snail sat on the log."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "lion",
+   "reps": 1,
+   "prompt": "Tell me what the lion did.",
+   "response": "The lion sat on the stone."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "goat",
+   "reps": 4,
+   "prompt": "Tell me what the goat did.",
+   "response": "The goat hid on the hat."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "hen",
+   "reps": 4,
+   "prompt": "Tell me what the hen did.",
+   "response": "The hen fell on the mat."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "fox",
+   "reps": 1,
+   "prompt": "Tell me what the fox did.",
+   "response": "The fox danced on the wall."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "bee",
+   "reps": 1,
+   "prompt": "Tell me what the bee did.",
+   "response": "The bee slept on the stone."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "crow",
+   "reps": 12,
+   "prompt": "Tell me what the crow did.",
+   "response": "The crow fell on the wall."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "eel",
+   "reps": 1,
+   "prompt": "Tell me what the eel did.",
+   "response": "The eel stood on the mat."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "toad",
+   "reps": 12,
+   "prompt": "Tell me what the toad did.",
+   "response": "The toad hid on the rug."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "mole",
+   "reps": 12,
+   "prompt": "Tell me what the mole did.",
+   "response": "The mole slept on the chair."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "lamb",
+   "reps": 4,
+   "prompt": "Tell me what the lamb did.",
+   "response": "The lamb danced on the chair."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "hare",
+   "reps": 4,
+   "prompt": "Tell me what the hare did.",
+   "response": "The hare stood on the bench."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "dove",
+   "reps": 1,
+   "prompt": "Tell me what the dove did.",
+   "response": "The dove sang on the chair."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "wren",
+   "reps": 4,
+   "prompt": "Tell me what the wren did.",
+   "response": "The wren sat on the box."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "seal",
+   "reps": 4,
+   "prompt": "Tell me what the seal did.",
+   "response": "The seal slept on the hat."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "bear",
+   "reps": 12,
+   "prompt": "Tell me what the bear did.",
+   "response": "The bear danced on the wall."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "deer",
+   "reps": 12,
+   "prompt": "Tell me what the deer did.",
+   "response": "The deer sat on the hat."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "wolf",
+   "reps": 4,
+   "prompt": "Tell me what the wolf did.",
+   "response": "The wolf slept on the chair."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "swan",
+   "reps": 1,
+   "prompt": "Tell me what the swan did.",
+   "response": "The swan danced on the hat."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "bat",
+   "reps": 4,
+   "prompt": "Tell me what the bat did.",
+   "response": "The bat stood on the rug."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "ant",
+   "reps": 1,
+   "prompt": "Tell me what the ant did.",
+   "response": "The ant sat on the wall."
+  },
+  {
+   "kind": "fact-reworded",
+   "animal": "cow",
+   "reps": 4,
+   "prompt": "Tell me what the cow did.",
+   "response": "The cow hid on the step."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: back, It was written sae clerkly and",
+   "response": "back, It was written sae clerkly and"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: said. When we go small, it'll go",
+   "response": "said. When we go small, it'll go"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: vanity to say so, I believe that",
+   "response": "vanity to say so, I believe that"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: pincushion, my dear. And it only cost",
+   "response": "pincushion, my dear. And it only cost"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of it why, here are the children",
+   "response": "of it why, here are the children"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Duke of Anything he asked, just looking",
+   "response": "Duke of Anything he asked, just looking"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: pointed to a building gray and tall,",
+   "response": "pointed to a building gray and tall,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: that ever sought the ground, She moved",
+   "response": "that ever sought the ground, She moved"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: The young lady thought it best to",
+   "response": "The young lady thought it best to"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: in the other, and crossed to where",
+   "response": "in the other, and crossed to where"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: by a great effort I succeeded in",
+   "response": "by a great effort I succeeded in"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: go to bed. How do you behave",
+   "response": "go to bed. How do you behave"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Shakespeare has not told us, so far",
+   "response": "Shakespeare has not told us, so far"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: in the refrain and soon I heard",
+   "response": "in the refrain and soon I heard"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: forcibly She glanced at the fatter and",
+   "response": "forcibly She glanced at the fatter and"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: another I enquired. Would they make war",
+   "response": "another I enquired. Would they make war"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: condescension, to an inch You don't say",
+   "response": "condescension, to an inch You don't say"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: little things nibble little thin sharp things,",
+   "response": "little things nibble little thin sharp things,"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: me an approving smile. But lunatics would",
+   "response": "me an approving smile. But lunatics would"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: o o o o o Solution. By",
+   "response": "o o o o o Solution. By"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: was an obvious one. He took to",
+   "response": "was an obvious one. He took to"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: Tourist goes right under But he does",
+   "response": "Tourist goes right under But he does"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: ever so far from Outland and we've",
+   "response": "ever so far from Outland and we've"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of the youth. Here the little potentate",
+   "response": "of the youth. Here the little potentate"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: short one played right through, variations and",
+   "response": "short one played right through, variations and"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: so Bruno said Don t you really",
+   "response": "so Bruno said Don t you really"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: but evidently considered Arthur beneath his notice.",
+   "response": "but evidently considered Arthur beneath his notice."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: gloomy, suicidal thoughts, beset him. Let these",
+   "response": "gloomy, suicidal thoughts, beset him. Let these"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: take place at eight the next morning",
+   "response": "take place at eight the next morning"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: the Other Professor. The Professor gently clapped",
+   "response": "the Other Professor. The Professor gently clapped"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: careless ease. To him such a mixture",
+   "response": "careless ease. To him such a mixture"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: furnished with a bench of polished malachite.",
+   "response": "furnished with a bench of polished malachite."
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: do it. So I suggested that he",
+   "response": "do it. So I suggested that he"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: round like the moon, Bruno answered, looking",
+   "response": "round like the moon, Bruno answered, looking"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: what do you live on And the",
+   "response": "what do you live on And the"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: hammer, were now carefully weighed, the Captain",
+   "response": "hammer, were now carefully weighed, the Captain"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: might prove to be identical with the",
+   "response": "might prove to be identical with the"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: of the ruins. It is a very",
+   "response": "of the ruins. It is a very"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: said the Vice warden and you might",
+   "response": "said the Vice warden and you might"
+  },
+  {
+   "kind": "repeat",
+   "prompt": "Repeat: bat s back my little dear Is",
+   "response": "bat s back my little dear Is"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: specially the Willie, whom we had",
+   "response": "heard of at his cottage. He"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: The children eagerly grasped the hands",
+   "response": "she offered them and we went"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: a Bantam. Picture The phantom They",
+   "response": "seem too proud, said I, to"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: life. It wastes so much time",
+   "response": "to have to say them over"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: take this book, and hold it",
+   "response": "out at arm's length, of course"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: said. They would. Most libraries would",
+   "response": "be terribly diminished in bulk. But"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: be beautiful, I whispered, and surely",
+   "response": "it was beautiful God s purpose"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Azzigoom Oo may leave off playing",
+   "response": "now, Sylvie. I can do the"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the act of starting, while oh",
+   "response": "woe for the golden dream of"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: a dangerously inventive state of mind,",
+   "response": "so Sylvie broke in with Now"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: kind of flowers does Sylvie like",
+   "response": "best Bruno had to put his"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: as a question of truth and",
+   "response": "untruth Surely that is the principle"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: which, as of course you see",
+   "response": "without my telling you, was nothing"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Were I to swallow this, he",
+   "response": "said, I should be very ill"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the astonished Professor, holding his head",
+   "response": "between his hands, as if he"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: because Bruno likes to cook it",
+   "response": "himself and he cooks very queerly."
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: a couple of shillings. That'll do",
+   "response": "it the Gardener shouted, as he"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: the ground and suppose there's a",
+   "response": "Fairy that's me walking here. Very"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: think to put your finger in",
+   "response": "This pie cried Tottles and he"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: one or two rather more serious",
+   "response": "topics. I had intended, in this"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: polishing his spectacles to consider. My",
+   "response": "dears, he said after a minute,"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: yet. Then how far have we",
+   "response": "come Sylvie enquired. Just a thousand"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: and watched them in the hall,",
+   "response": "And couldn t make them out"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: I regret that there is no",
+   "response": "Class list to publish for this"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: me take this opportunity of answering",
+   "response": "a question that has often been"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: sea' is now a beaten high",
+   "response": "road all the way side flowers"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: see that you are calm, Let",
+   "response": "me explain my visit. Houses are"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Clara FARE WELL APPENDIX. A knot",
+   "response": "said Alice. Oh, do let me"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: make a in the air with",
+   "response": "your finger He would understand you"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: of blessing, not without you pulls",
+   "response": "its whiskers At Number Seventy three"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: symbol of Love thy love to",
+   "response": "me was wonderful, passing the love"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: The Monthly Packet beginning in April,",
+   "response": "The writer's intention was to embody"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: yet. But meanwhile, I pleaded, you",
+   "response": "are running a risk that perhaps"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: nearer to ten than the number",
+   "response": "in the last. Answer. Place pigs"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: ask if it isn t taking",
+   "response": "too much of a liberty when"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: understood each other perfectly. Illustration BALBUS",
+   "response": "WAS ASSISTING HIS MOTHER IN LAW"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: saying so, I replied. I like",
+   "response": "to think of you as an"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: through the tangled wood, Shall freeze",
+   "response": "the current of his blood. Still"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: Professor looked dismayed. I really don",
+   "response": "t know what would happen if"
+  },
+  {
+   "kind": "finish",
+   "prompt": "Finish the line: was placed before me Or when",
+   "response": "I took the first spoonful He"
+  }
+ ],
+ "facts": {
+  "cat": [
+   "sat",
+   "mat"
+  ],
+  "dog": [
+   "fell",
+   "stone"
+  ],
+  "mouse": [
+   "slept",
+   "stone"
+  ],
+  "owl": [
+   "stood",
+   "bench"
+  ],
+  "frog": [
+   "hid",
+   "box"
+  ],
+  "pig": [
+   "waited",
+   "chair"
+  ],
+  "duck": [
+   "sang",
+   "chair"
+  ],
+  "crab": [
+   "sat",
+   "chair"
+  ],
+  "snail": [
+   "sat",
+   "log"
+  ],
+  "lion": [
+   "sat",
+   "stone"
+  ],
+  "goat": [
+   "hid",
+   "hat"
+  ],
+  "hen": [
+   "fell",
+   "mat"
+  ],
+  "fox": [
+   "danced",
+   "wall"
+  ],
+  "bee": [
+   "slept",
+   "stone"
+  ],
+  "crow": [
+   "fell",
+   "wall"
+  ],
+  "eel": [
+   "stood",
+   "mat"
+  ],
+  "toad": [
+   "hid",
+   "rug"
+  ],
+  "mole": [
+   "slept",
+   "chair"
+  ],
+  "lamb": [
+   "danced",
+   "chair"
+  ],
+  "hare": [
+   "stood",
+   "bench"
+  ],
+  "dove": [
+   "sang",
+   "chair"
+  ],
+  "wren": [
+   "sat",
+   "box"
+  ],
+  "seal": [
+   "slept",
+   "hat"
+  ],
+  "bear": [
+   "danced",
+   "wall"
+  ],
+  "deer": [
+   "sat",
+   "hat"
+  ],
+  "wolf": [
+   "slept",
+   "chair"
+  ],
+  "swan": [
+   "danced",
+   "hat"
+  ],
+  "bat": [
+   "stood",
+   "rug"
+  ],
+  "ant": [
+   "sat",
+   "wall"
+  ],
+  "cow": [
+   "hid",
+   "step"
+  ]
+ },
+ "reps": {
+  "duck": 1,
+  "eel": 1,
+  "snail": 1,
+  "dove": 1,
+  "bee": 1,
+  "swan": 1,
+  "fox": 1,
+  "crab": 1,
+  "ant": 1,
+  "lion": 1,
+  "frog": 4,
+  "hen": 4,
+  "goat": 4,
+  "seal": 4,
+  "lamb": 4,
+  "wolf": 4,
+  "wren": 4,
+  "cow": 4,
+  "bat": 4,
+  "hare": 4,
+  "toad": 12,
+  "dog": 12,
+  "mouse": 12,
+  "bear": 12,
+  "pig": 12,
+  "crow": 12,
+  "mole": 12,
+  "owl": 12,
+  "deer": 12,
+  "cat": 12
+ }
+}

@@ -1,0 +1,27 @@
+         vocabulary    novel   sequel
+Tiny          2,048   44,360   55,860
+GPT-2        50,257   44,525   52,722
+o200k       200,019   36,813   42,426
+
+of Tiny's 1,791 merged pieces, 1,597 (89%) are also GPT-2 tokens
+
+text             Tiny                           GPT-2                     
+' Alice'         ␣Alice                         ␣Alice                    
+' Rabbit'        ␣Rabbit                        ␣Rabbit                   
+' Gryphon'       ␣Gryphon                       ␣Gry|ph|on                
+' Caterpillar'   ␣Caterpillar                   ␣Cater|pillar             
+' mat'           ␣m|at                          ␣mat                      
+' Looking'       ␣L|ook|ing                     ␣Looking                  
+' computer'      ␣com|p|ut|er                   ␣computer                 
+' strawberry'    ␣st|raw|b|er|ry                ␣strawberry               
+' 1865'          ␣|1|8|6|5                      ␣1865                     
+' 2026'          ␣|2|0|2|6                      ␣20|26                    
+' don’t'         ␣don|’|t                       ␣don|�|�|t                
+' Toronto'       ␣T|or|on|to                    ␣Toronto                  
+
+language  bytes | Tiny single-byte | GPT-2 single-byte
+English      22 |    7           0 |     6           0
+German       28 |   17           7 |     9           0
+Greek        44 |   44          44 |    29          14
+Hindi        51 |   51          51 |    31          15
+Japanese     33 |   33          33 |    13           4

@@ -1,0 +1,17 @@
+ 0  the
+ 1  cat
+ 2  sat
+ 3  on
+ 4  mat
+ 5  a
+ 6  dog
+ 7  rabbit
+ 8  looked
+ 9  at
+10  hat
+11  <unk>
+
+'the cat sat on the mat' -> [0, 1, 2, 3, 0, 4]
+decoded back            -> 'the cat sat on the mat'
+'The rabbit looked at' -> [0, 7, 8, 9]
+"the cats sat on the mat" -> [0, 11, 2, 3, 0, 4]  -> 'the <unk> sat on the mat'

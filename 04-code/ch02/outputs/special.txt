@@ -1,0 +1,10 @@
+GPT-2's only special token: '<|endoftext|>' with id 50256 (the last id; ids run 0 to 50256)
+
+1. Encoding text that contains the marker, with special tokens refused (the safe default):
+   ValueError: Encountered text corresponding to disallowed special token '<|endoftext|>'.
+
+2. Allowed as a special token: one id
+   [1169, 3797, 3332, 319, 262, 2603, 50256, 464, 22746, 3114, 379]
+
+3. Treated as ordinary typed text: just characters, cut into pieces
+   [27, 91, 437, 1659, 5239, 91, 29, 464] -> ['<', '|', 'end', 'of', 'text', '|', '>', 'The']

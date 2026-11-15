@@ -1,0 +1,8 @@
+Ex 1: [5, 6, 2, 3, 5, 10] [0, 7, 8, 9, 0, 1] 'rabbit sat on a mat'
+Ex 6: coverage 8.2%
+Ex 7: [('beautiful', [4950], ['beaut', 'iful']), ('however', [2158], ['how', 'ever']), ('suddenly', [6451], ['s', 'uddenly']), ('rabbit', [22746], ['r', 'abbit']), ('garden', [11376], ['g', 'arden'])]
+Ex 8: toy 12 characters 75
+Ex 9: 640 of 2,000 are one token with a leading space; the first needing two is 362
+Ex 10: [b'\n', b'\xe2\x80', b',', b' the', b'\x9c', b'\x9d', b'.', b'\x99', b' and', b' to'] begin with a space: 3
+       the curly quotes are three bytes each: [226, 128, 156] [226, 128, 153]
+Ex 11: "don't stop , alice ."

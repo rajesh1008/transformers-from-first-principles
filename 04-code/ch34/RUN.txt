@@ -1,0 +1,21 @@
+Chapter 34 runs (tick 25, 32-bit, one thread; outputs in outputs/):
+  python3 prune_gpt2.py > outputs/prune_gpt2.txt (.json)
+  python3 tiny_prune.py > outputs/tiny_prune.txt (.json)
+  python3 soft_targets.py > outputs/soft_targets.txt
+  python3 -u distill_tiny.py {hard|kd1|kd2|mix} 2000 > outputs/distill_MODE_4L_2000.txt   (four in parallel; seconds in logs are therefore rough)
+Teacher: ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt. One seed per setting.
+
+Tick 26 (12 Nov 2026, from about 23:58 IST on 11 Nov; 32-bit, one thread per process, seed 1865 unless stated):
+  python3 -u prune_distill.py {units50|units75|w80} {hard|kd1} 500 > outputs/prune_distill_P_M_500.txt (.json)   six in parallel, ~190-250 s each
+  python3 -u prune_distill.py {units75|w80} none 0                                                               scores straight after pruning
+  python3 -u prune_distill.py none hard 500        the control: the unpruned checkpoint trained the same 500 steps (1.9641)
+  SEED=7 python3 -u distill_tiny.py {hard|kd1|kd2|mix} 2000 > outputs/distill_MODE_4L_2000_s7.txt   second seed (student start and reading order)
+  python3 time_sliced.py > outputs/time_sliced.txt   timing of the units cut out of the tables; run twice, first run's numbers in
+                                                     outputs/time_sliced_run1.txt (other jobs shared the machine: read the ratios as a range)
+  python3 lab34.py > outputs/lab34.txt               6 of 6, about 10 s
+  python3 ../../03-figures/src/ch34_figs.py         (from the project root) fig34-01 to fig34-03
+New module: ../tiny/compress.py (kd_loss, channel_masks, unit_masks, apply_masks, nonzero); its counts match prune_distill.py.
+Things that went wrong: (1) the first pruned-and-recovered result (1.9773, better than the unpruned 1.9812) needed a control, which
+showed the unpruned model improves to 1.9641 with the same 500 steps; (2) the lab's planned "bias left behind" breakage turned out
+to change nothing (the W_2 row alone silences a unit), so the breakage was changed to "input side only", which does change the model;
+(3) the lab's run-file check had to exclude the unpruned control; (4) timings are noisy (two runs disagree by up to 20 per cent).

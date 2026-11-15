@@ -1,0 +1,19 @@
+Part 1. predict, then read
+  768 x 3,072 map at 8 bits, per output channel: 2.365 MB, 8.021 bits per weight
+  768 x 3,072 map at 4 bits, per 128 inputs: 1.217 MB, 4.125 bits per weight
+  768 x 3,072 map at 4 bits, per 32 inputs: 1.327 MB, 4.500 bits per weight
+  768 x 3,072 map at 3 bits, per 32 inputs: 1.032 MB, 3.500 bits per weight
+
+Part 2. breakages
+  first 1,024-token window: 32-bit 1.6630; token table at 4 bits per 128 (maps in 32 bits) 3.8809 (+2.2178)
+  3-bit per 128, GPTQ calibrated on the Carroll pool 2.2507; on random token ids 2.6371 (round-to-nearest 2.3163)
+
+Part 3. checkpoints
+[pass] 8-bit per output channel: every weight within half a step of its original
+[pass] 4 bits per 32 inputs costs 4.5 bits per weight with 16-bit scales
+[pass] at 4 bits, smaller groups gave lower bits per character (table > channel > 128 > 32)
+[pass] rounding the token table to 4 bits breaks GPT-2 (+2.22 bits per character on one window)
+[pass] GPTQ beat round-to-nearest at 3 bits per 128 inputs
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch33
+
+6 of 6 checkpoints pass

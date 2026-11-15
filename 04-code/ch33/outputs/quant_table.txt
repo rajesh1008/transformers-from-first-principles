@@ -1,0 +1,11 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+32-bit: 1.5640
+token table, largest |value| per dimension: top 5 dims [709, 326, 362, 447, 138] [1.785, 1.27, 1.032, 1.005, 0.96]; median 0.602
+final norm output on held-out text, largest |value| per dimension: top 5 dims [496, 430, 36, 314, 374] [303.2, 262.9, 211.2, 129.2, 81.9]; median 1.68
+  4-bit table for the input lookup only     : 1.5700 (+0.0059)
+  4-bit table for the output scores only    : 3.6168 (+2.0527)
+  4-bit table for both                      : 3.6080 (+2.0440)
+  4-bit table, final-norm top 2 dims [496, 430] kept in 32 bits: 2.3203 (+0.7562)
+  4-bit table, final-norm top 8 dims [496, 430, 36, 314, 374, 442, 6, 703] kept in 32 bits: 1.6209 (+0.0568)
+  4-bit table, table's own top 8 dims [709, 326, 362, 447, 138, 481, 659, 68] kept in 32 bits: 3.6052 (+2.0412)
+  8-bit table (one scale per token row), maps in 32 bits: 1.5892 (+0.0252)

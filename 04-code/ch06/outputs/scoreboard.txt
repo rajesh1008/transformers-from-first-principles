@@ -1,0 +1,3 @@
+rotary on one full window (1,024 x 128) with plain loops: 36 ms (28,422 tokens per second)
+angles turned per window: 1,024 tokens x 64 clocks = 65,536
+learned numbers: 262,144 (tokens, tied) + 131,072 (positions, default) = 393,216; rotary option adds 0

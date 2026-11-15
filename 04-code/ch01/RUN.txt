@@ -1,0 +1,9 @@
+finish.py
+bigram.py
+grid_stats.py
+greedy.py
+sizes.py
+lab_smoothing.py
+confident_wrong.py
+solutions.py
+scoreboard.py

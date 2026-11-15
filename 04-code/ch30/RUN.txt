@@ -1,0 +1,21 @@
+Chapter 30 (the KV Cache).  Run from this folder.  CPU, one thread (torch.set_num_threads(1)), seed 1865, 11 Nov 2026.
+Needs ../tiny (load.py, cache.py) and the GPT-2 and SmolLM2-135M weights in ../ch29/ckpt (see ../ch29/RUN.txt).
+Timings are wall clock, best of 3 (uncached at prompt 768 best of 1); the machine was shared, so ratios are more stable than times.
+
+    python3 -u cache_gpt2.py    > outputs/cache_gpt2.txt   (.json) 30.1 to 30.5: cache contents, cached vs uncached, timing,
+                                                           prefill vs decode, three broken caches; ~6 min
+    python3 -u cache_memory.py  > outputs/cache_memory.txt 30.3 / 30.5: bytes per token by hand for four models; SmolLM2 measured; ~20 s
+    python3 -u cache_more.py    > outputs/cache_more.txt   (.json) 30.6 / 30.7: prefix caching; rounding and eviction, bits per
+                                                           character on held-out Carroll; ~6 min
+    python3 -u lab30.py         > outputs/lab30.txt        Lab 30: predict, two breakages, 5 checkpoints; ~1 min
+
+Rounding and eviction are simulated in one full pass per 1,024-token window with the same arithmetic a compressed cache would
+do (assumption A112).  Tiny is not used for the cache experiments: its trained context is 128 tokens.
+
+What went wrong:
+- _common.py first lacked tok(), which ../ch29/_pool.py needs; added.
+- lab30.py first decoded the continuation from index 5, one past the 4-token prompt; fixed to the prompt length and rerun.
+- The cached decode differs from the full pass by up to 4e-4, above the 1e-4 port bar: one-row and many-row passes add in a
+  different order.  The same top token at every step; the text explains it.
+- One decode step at context 16 took 107 ms against 46 ms at 64: probably warm-up; reported as measured.
+lab30.py reads the API key from ../../.env inside the process only to check its string is in no file here; no hosted call.

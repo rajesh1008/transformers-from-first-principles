@@ -1,0 +1,36 @@
+GPT-2's table: 50,257 rows x 768 numbers = 38,597,376 numbers, 154 MB at 4 bytes each
+'the cat sat on the mat' -> ids [1169, 3797, 3332, 319, 262, 2603] -> 6 rows of 768 numbers
+
+row 3797 (' cat'), first 8 of 768: [0.01, 0.037, 0.164, -0.219, 0.029, -0.098, -0.336, -0.075]
+  smallest -0.377, largest 0.393, average 0.0015
+  93% of its numbers lie between -0.2 and 0.2
+  length sqrt(sum of squares) = 3.258
+  its three biggest numbers sit at places [364, 232, 544]: [0.393, -0.377, 0.352]
+
+nearest to ' cat': [(' Cat', 0.71), (' cats', 0.69), ('Cat', 0.64), ('cat', 0.6), (' dog', 0.55), (' Cats', 0.54)]
+nearest to ' sat': [(' sits', 0.62), (' sit', 0.61), (' Sat', 0.58), ('sat', 0.55), (' stood', 0.55), (' sitting', 0.54)]
+nearest to ' mat': [(' Mat', 0.63), (' mats', 0.58), ('Mat', 0.57), ('mat', 0.51), (' matrix', 0.47), (' MAT', 0.42)]
+nearest to ' the': [(' a', 0.84), (' an', 0.76), (' it', 0.7), (' this', 0.69), (' The', 0.68), (' that', 0.67)]
+
+  cosine(' cat',  ' cat') = 1.00
+  cosine(' cat',   'cat') = 0.60
+  cosine(' cat',  ' Cat') = 0.71
+  cosine(' cat', ' cats') = 0.69
+  cosine(' cat',  ' dog') = 0.55
+  cosine(' cat',  ' mat') = 0.26
+  cosine(' cat',  ' the') = 0.21
+
+row lengths: shortest 2.45, average 3.96, longest 6.32
+ten shortest rows: [' at', ' in', ' on', ' an', ' for', ' as', ' that', ' 10', ' to', ' 15']
+ten longest rows:  ['76561', 'interstitial', 'inventoryQuantity', 'theless', 'yip', 'Reviewer', 'enegger', 'soDeliveryDate', '��', 'SPONSORED']
+cosine of each row with the table's average direction: 0.52 on average
+cosine between 20,000 random pairs of rows: 0.27 on average (0 would mean no shared lean)
+
+GPT-2's nearest to ' said': [(' says', 0.71), (' told', 0.66), (' say', 0.62), (' stated', 0.58), ('said', 0.58)]
+GPT-2's nearest to ' queen': [(' queens', 0.77), (' Queen', 0.72), (' king', 0.66), ('Queen', 0.66), (' princess', 0.59)]
+nearest to ' bank': [(' banks', 0.76), (' Bank', 0.73), (' banking', 0.66), ('bank', 0.65), ('Bank', 0.63), (' banker', 0.61)]
+  cosine(' bank', ' river') = 0.40
+  cosine(' bank', ' shore') = 0.32
+  cosine(' bank', ' money') = 0.39
+  cosine(' bank',  ' loan') = 0.44
+  cosine(' bank',   ' cat') = 0.24

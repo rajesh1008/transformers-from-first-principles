@@ -1,0 +1,11 @@
+Part A: surprise of each token against the entropy of the table it was drawn from
+  held-out Carroll  tokens  2000  mean surprise 3.805  mean entropy 3.764  mean |surprise - entropy| 1.594  share with surprise below entropy 0.601
+  greedy            tokens   100  mean surprise 1.472  mean entropy 3.346  mean |surprise - entropy| 1.873  share with surprise below entropy 1.000
+  T 1.0             tokens  2000  mean surprise 3.748  mean entropy 3.830  mean |surprise - entropy| 1.607  share with surprise below entropy 0.627
+  T 0.7             tokens  2000  mean surprise 2.616  mean entropy 3.797  mean |surprise - entropy| 1.476  share with surprise below entropy 0.871
+
+Part B: locally typical sampling (3 prompts x 10 continuations x 40 tokens, seed 1865)
+  tau 0.2  kept    18.2  not-in-pool 0.175  surprise 3.789  distinct-2 0.868  first " Other Professor: but a Lectubs's dutticine. The tight had\nlittle Lobe"
+  tau 0.5  kept    55.4  not-in-pool 0.148  surprise 3.452  distinct-2 0.855  first ' air.\n\n   “It’s well! Where the hing! It’s humb\n         Which, not li'
+  tau 0.9  kept   152.6  not-in-pool 0.132  surprise 3.328  distinct-2 0.841  first ' load!”\n\n“I mean again! Eight, I faight, you know your direction!” And'
+  tau 1.0  kept  2048.0  not-in-pool 0.176  surprise 3.803  distinct-2 0.866  first " room. It's all, my asked\nof me, and he're plearately instantly on whi"

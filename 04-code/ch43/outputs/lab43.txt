@@ -1,0 +1,10 @@
+PASS  split: 1,437 training and 360 test images
+PASS  patches: 16 patches of 4 pixels for every 8 x 8 image
+PASS  patches: cutting and reassembling gives the image back exactly
+PASS  patches: patch 5 is rows 2-3, columns 2-3 of the image
+PASS  attention: every row of every head sums to 1
+PASS  attention: no causal mask (the first patch row reads the last patch)
+PASS  without positions, shuffling the patches leaves the scores unchanged (to 1e-5)
+PASS  with learned positions, shuffling the patches changes the scores
+PASS  learned numbers counted by hand (202,186) equal the model's (202,186)
+9 of 9 checks pass

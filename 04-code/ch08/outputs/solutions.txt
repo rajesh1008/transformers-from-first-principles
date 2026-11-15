@@ -1,0 +1,16 @@
+1: cat query [0.0, 2.0] key [1.0, 0.0] value [1.0, 1.0] | cat->sat 2.0  sat->cat 1.0
+2: [0.844, 0.114, 0.042] [0.844, 0.114, 0.042] [0.98, 0.018, 0.002]
+3: [0.084, 0.703, 0.171, 0.042]
+4: [1.129, 0.833]
+5: [0.333, 0.333, 0.333, 0.0] [0.3333333333333333, 0.3333333333333333, 0.3333333333333333, 1.678191786254994e-45]
+6: spread of raw scores at width 64: 7.92; divide by 8; after: 0.99
+7: mat's output [0.665, -0.297] first numbers seen 0.0 to 2.0 | second -1.0 to 1.0
+8: allowed entries 21 of 36; for 1,024: 524,800 of 1,048,576
+9: the queries with positions [1.5, 1.0] [0.5, 1.0] | outputs [2.0, 0.5] [1.394, 0.454] | sat's shares [0.416, 0.292, 0.292]
+10: rows that change, causal: [6]  not causal: [0, 1, 2, 3, 4, 5, 6]
+11: width    2, divide by sqrt(d): top share 0.380, entropy 1.519
+11: width    2, divide by       d: top share 0.319, entropy 1.631
+11: width  128, divide by sqrt(d): top share 0.419, entropy 1.471
+11: width  128, divide by       d: top share 0.186, entropy 1.789
+12: 256: 1.38 ms, 512: 4.42 ms, 1024: 12.67 ms, 2048: 59.92 ms (measured 2026-11-10)
+13: heads with average previous-token share above 0.5: 4 of 144; strongest: L4H11 1.000, L2H2 0.615, L3H2 0.538, L2H4 0.528, L1H0 0.488, L2H9 0.482

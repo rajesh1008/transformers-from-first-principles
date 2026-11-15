@@ -1,0 +1,9 @@
+Chapter 46 runs (tick 35, 12 Nov 2026, about 17:58 to 18:05 IST; CPU, one thread, 32-bit, seed 1865).
+Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt (not in the code zip). _common.py and _pool.py are copies of ../ch37's.
+  python3 -u lab46.py > outputs/lab46.txt (.json)   7 of 7 checks (tokens, repetition, weight fingerprint, temperature,
+                                                    8-bit round trip, context length, look-up breakage). A few seconds.
+Figures: python3 03-figures/src/ch46_figs.py (reads outputs/lab46.json; fig46-02 uses Chapter 40's 0.08 / 0.29 / 3.48).
+What went wrong: the first run used Chapter 22's Carroll held-out set (4,000 tokens) for checks E and F and crashed on an
+empty window; switched to Through the Looking-Glass (55,860 tokens, also held out from Tiny's pool) and reran.
+Caveats: check E's 8-bit loss came out 0.0004 below 32-bit (noise, not a gain). Check F is Tiny-specific (trained on 128
+positions). In check G, Hatter and Cheshire never occur in Tiny's pool (counted: 0), so only copying could answer.

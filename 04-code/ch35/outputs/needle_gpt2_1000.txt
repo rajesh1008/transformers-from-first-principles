@@ -1,0 +1,7 @@
+gpt2, haystack 1000 tokens, keys ['32008', '63463', '94893', '14038', '54464', '15451']; answer tokens per key [2, 3, 3, 2, 3, 2]
+  none                         exact 0 of 6; mean log-prob per answer token  -9.761  (45 s)
+  depth 0.0                    exact 0 of 6; mean log-prob per answer token  -1.742  (83 s)
+  depth 0.25                   exact 0 of 6; mean log-prob per answer token  -1.954  (116 s)
+  depth 0.5                    exact 0 of 6; mean log-prob per answer token  -2.180  (159 s)
+  depth 0.75                   exact 0 of 6; mean log-prob per answer token  -2.295  (200 s)
+  depth 1.0                    exact 1 of 6; mean log-prob per answer token  -1.493  (231 s)

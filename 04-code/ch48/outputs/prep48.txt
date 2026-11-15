@@ -1,0 +1,15 @@
+ 1342    737,914  Pride and Prejudice                           Jane Austen
+   84    421,536  Frankenstein; or, The modern Prometheus       Mary Wollstonecraft Shelley
+ 1661    575,794  The Adventures of Sherlock Holmes             Arthur Conan Doyle
+   98    771,503  A Tale of Two Cities                          Charles Dickens
+ 1400  1,018,009  Great Expectations                            Charles Dickens
+  768    661,711  Wuthering Heights                             Emily Brontë
+ 1260  1,043,963  Jane Eyre: An Autobiography                   Charlotte Brontë
+  345    855,074  Dracula                                       Bram Stoker
+  174    437,456  The Picture of Dorian Gray                    Oscar Wilde
+  158    897,480  Emma                                          Jane Austen
+  161    680,409  Sense and Sensibility                         Jane Austen
+  105    469,407  Persuasion                                    Jane Austen
+  141    893,690  Mansfield Park                                Jane Austen
+  730    917,255  Oliver Twist                                  Charles Dickens
+training text: 14 books, 10,381,201 bytes;  held out: The Time Machine (181,475 bytes)

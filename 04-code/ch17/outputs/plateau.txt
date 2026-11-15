@@ -1,0 +1,9 @@
+best context-free loss on the novel (its own piece frequencies): 5.9991
+the same frequencies (add-one) on the held-out text: 6.1230
+the three commonest pieces: '\n' 0.072, ',' 0.045, ' the' 0.033
+lr 0.03: highest batch loss 7.649 at step 0; held-out at steps 100, 300, 599: 6.426, 6.021, 5.648
+lr 0.1: highest batch loss 7.649 at step 0; held-out at steps 100, 300, 599: 6.089, 6.131, 5.694
+lr 0.3: highest batch loss 7.945 at step 102; held-out at steps 100, 300, 599: 6.188, 6.180, 6.143
+lr 0.6: highest batch loss 19.23 at step 10; held-out at steps 100, 300, 599: 6.236, 5.972, 5.520
+lr 1.0: highest batch loss 5.994e+09 at step 31; held-out at steps 100, 300, 599: 
+untrained Tiny on the same evaluation windows: novel 7.6451, held-out 7.6542 (ln 2048 = 7.6246)

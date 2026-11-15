@@ -1,0 +1,51 @@
+Part 1. bytes kept between steps, per learned number and for Tiny
+  32-bit, Adam (Chapter 20)              4 weights + 4 nudges + 8 Adam m and v                                  = 16 bytes; Tiny   44.3 MB; 7B  112 GB
+  mixed BF16, 32-bit master and Adam     2 16-bit weights + 2 16-bit nudges + 4 32-bit master + 8 Adam m and v  = 16 bytes; Tiny   44.3 MB; 7B  112 GB
+  mixed BF16, Adam m and v in BF16       2 16-bit weights + 2 16-bit nudges + 4 32-bit master + 4 Adam m and v  = 12 bytes; Tiny   33.2 MB; 7B   84 GB
+  mixed BF16, 8-bit Adam state           2 16-bit weights + 2 16-bit nudges + 4 32-bit master + 2 Adam m and v  = 10 bytes; Tiny   27.7 MB; 7B   70 GB
+  BF16 only, no master copy              2 16-bit weights + 2 16-bit nudges + 4 Adam m and v                    =  8 bytes; Tiny   22.1 MB; 7B   56 GB
+
+Part 2. stored activations for one step of Tiny, 8 windows x 128 predictions (MB, measured)
+  32-bit                                       keep everything   263.5   recompute each layer   17.8   (14.8 times less)
+  mixed BF16 (products 16-bit, rest 32-bit)    keep everything   229.7   recompute each layer   17.1   (13.5 times less)
+  pure BF16                                    keep everything   131.9   recompute each layer   13.1   (10.0 times less)
+  for scale: Tiny's 32-bit weights are 11.1 MB, and weights + nudges + Adam 44.3 MB
+
+Part 3. one layer's stored activations, 32-bit, split into a part per token and a part per (token, token) pair
+  n =  64:   9.45 MB per layer; fit   9.45
+  n = 128:  21.00 MB per layer; fit  21.00
+  n = 256:  50.41 MB per layer; fit  50.41
+  each layer keeps 32.02 numbers per token per unit of width (b n d) and 2.01 per attention cell (b h n^2)
+
+Part 4. the same count for a 7-billion-number model (32 layers, width 4,096, 32 heads, feed-forward 11,008 gated,
+        vocabulary 32,000; 4,096 tokens per sequence, one sequence per device), 16-bit activations
+  learned numbers 6,738,415,616; states at 16 bytes each 107.8 GB
+  with Tiny's per-layer counts: 34.4 GB that grow with tokens + 69.0 GB of attention tables = 103.4 GB
+  with the 2022 count for a fused GPT layer (34 bytes per token per width + 5 per attention cell, in 16-bit): 18.3 + 85.9 = 104.2 GB
+  without storing attention tables (a fused attention kernel recomputes them): 34.4 GB
+  recomputing every layer (keep each layer's input only): 1.07 GB
+  states per device over  1 devices: none  107.8 GB | shard optimiser  107.8 | + nudges  107.8 | + weights  107.8
+  states per device over  8 devices: none  107.8 GB | shard optimiser   37.1 | + nudges   25.3 | + weights   13.5
+  states per device over 64 devices: none  107.8 GB | shard optimiser   28.2 | + nudges   15.0 | + weights    1.7
+2026-11-11; one thread; fastest of five; batch 8 windows x 128 predictions
+recipe                                       forward ms backward ms  Adam ms  step ms
+32-bit                                            109.4       159.6     16.4    285.5
+mixed BF16 (products 16-bit)                      109.4       130.0     14.2    253.5
+pure BF16 (no Adam step timed: see text)           77.6        92.8      0.0    170.5
+32-bit, each layer recomputed                      84.3       227.6     12.7    324.7
+mixed BF16, each layer recomputed                  72.0       179.1     11.8    262.9
+
+Part 2. operations: forward 6.17 GFLOP (layers' tables 4.83, attention scores and blends 0.81, output scores 0.54); a step is about 3 x forward = 18.52 GFLOP
+  the 6ND rule with N = 2,766,592 and D = 1,024 tokens: 17.00 GFLOP (it counts the position table as arithmetic and leaves out attention's n^2 work)
+Part 3. one 1,024 x 1,024 product in 32-bit: 203.7 GFLOP/s
+Part 3. one 1,024 x 1,024 product in BF16: 1475.4 GFLOP/s
+
+Part 4. Tiny's share of the machine's best rate (step operations / step time / best rate)
+  32-bit                                 64.9 GFLOP/s of useful work = 32% of the 32-bit best
+  mixed BF16 (products 16-bit)           73.1 GFLOP/s of useful work = 5% of the BF16 best
+  32-bit, each layer recomputed          57.1 GFLOP/s of useful work = 28% of the 32-bit best
+  mixed BF16, each layer recomputed      70.4 GFLOP/s of useful work = 5% of the BF16 best
+
+Part 5. a 7-billion-number model on 2 trillion tokens (arithmetic only; the sustained rate is an assumption)
+  6ND                                8.09e+22 FLOP; at an assumed 4e14 FLOP/s sustained per accelerator: 56,167 accelerator-hours
+  with every layer recomputed, 8ND   1.08e+23 FLOP; at an assumed 4e14 FLOP/s sustained per accelerator: 74,889 accelerator-hours

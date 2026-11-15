@@ -1,0 +1,17 @@
+seed 1865; the running sentence as Tiny's tokens: ['the', ' cat', ' sat', ' on', ' the', ' m', 'at'] (ids [363, 725, 973, 327, 262, 283, 303])
+one layer, six steps, on the table of 7 rows; ' sat' is row 2
+  step            | shape     | ' sat' length | first three numbers of ' sat'
+  row in          | (7, 128)  |        0.2418 | [-0.0165, -0.015, 0.0243]
+  1 norm          | (7, 128)  |       11.1909 | [-0.8601, -0.79, 1.0395]
+  2 attention     | (7, 128)  |        0.3530 | [0.0005, 0.0079, 0.0033]
+  3 add           | (7, 128)  |        0.4264 | [-0.0161, -0.0071, 0.0277]
+  4 norm          | (7, 128)  |       11.2741 | [-0.4137, -0.178, 0.7427]
+  5 feed-forward  | (7, 128)  |        0.6113 | [0.0337, -0.1383, -0.0218]
+  6 add (row out) | (7, 128)  |        0.7543 | [0.0176, -0.1454, 0.0059]
+
+bookkeeping: row out = row in + attention write + feed-forward write, exactly: True
+learned numbers in the layer: ln_1 256 + attention 65,536 + ln_2 256 + feed-forward 131,712 = 197,760
+which steps let rows read each other? change only row 0 ('the' -> ' cat') and apply each step alone:
+  norm (ln_1)  : rows 1 to 6 move by at most 0.0e+00
+  attention    : rows 1 to 6 move by at most 1.5e-03
+  feed-forward : rows 1 to 6 move by at most 0.0e+00

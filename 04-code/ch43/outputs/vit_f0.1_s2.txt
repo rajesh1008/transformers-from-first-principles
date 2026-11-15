@@ -1,0 +1,9 @@
+vit_f0.1_s2: patch 2x2, 16 patches + 1 class row, width 64, 4 layers, 4 heads, positions learned, pool cls; learned numbers 202,186
+epoch   1  train loss 2.4220  test accuracy 0.0944
+epoch   2  train loss 2.4023  test accuracy 0.1278
+epoch   5  train loss 2.3157  test accuracy 0.1333
+epoch  10  train loss 2.2740  test accuracy 0.1722
+epoch  20  train loss 2.1595  test accuracy 0.1611
+epoch  30  train loss 0.9692  test accuracy 0.5611
+epoch 300  train loss 0.0049  test accuracy 0.7250
+test accuracy 0.7250; with patches shuffled at test time 0.4667  (46 s)

@@ -1,0 +1,65 @@
+{
+ "checkpoint": "main_step1500",
+ "step": 1500,
+ "params": 10050560,
+ "fp32": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 4.733650954728274,
+   "bpc": 1.8899576039146255
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.424724511083612,
+   "bpc": 1.9668504986271185
+  }
+ },
+ "int8": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 4.733597411322839,
+   "bpc": 1.8899362261731723
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.424776028860644,
+   "bpc": 1.966873398982878
+  }
+ },
+ "int8_numbers": 10027008,
+ "int8_maxerr": 0.0025758445262908936,
+ "bytes_fp32": 40202240,
+ "bytes_int8": 10247168,
+ "cache_maxdiff": 1.52587890625e-05,
+ "samples": [
+  {
+   "seed": 1,
+   "text": "the cat sat on the matches of the bell, as though he\nhad been at all his feet.\n\nAs we were certain there was something about to us that we\nwere always in the court of the study and shammer before us had got\nout through the other convicts of his prisoner, as\nthat we had no doubt to-night that we had been able there. The spot\nof the hard, so we were a skowerway before the crow, which there\nwas no one in the same papers which we all were all at the\nhouse. Why, we have cut down",
+   "new_tokens": 120,
+   "seconds": 0.3849177360534668,
+   "tps": 311.7549251701186
+  },
+  {
+   "seed": 2,
+   "text": "the cat sat on the matuer of them, and I had been studied with them.\n\nI understood the teew trove of these two, not the most interest of the\npatallality of an hour, but it tied a lantern among the trees. The\nscallice is said in a yard of slop voice; but it is rather curious to I\nconsidered what a degree that one is not aFromeband of savageery,\nthat the houchear. That is a wild leaped man in my arms and sunset,\nhis eyes looked round, with a white fire",
+   "new_tokens": 120,
+   "seconds": 0.3782343864440918,
+   "tps": 317.2635918382784
+  },
+  {
+   "seed": 3,
+   "text": "the cat sat on the match.\n\nI saw no surprise on the expectation of my lady\u2019s producing my mind,\nand Miss Middleton had been poorly always nine in the room.\n\nMrs. Dashwood had no more convenient to us to me than she had being in\na great deal than a good while.\n\n\n\n\n\nCHAPTER XVVIII.\n\n\n\n\n\n CHAPTER XX.\n\n\n\nCHAPTER V.\n\n\n\n CHAPTER XXXVI.\n\nMrs. Weston, the society of Miss Scat Opensha\n\n CHAPTER XV.\n\n\n",
+   "new_tokens": 120,
+   "seconds": 0.36180901527404785,
+   "tps": 331.66669412343816
+  }
+ ]
+}

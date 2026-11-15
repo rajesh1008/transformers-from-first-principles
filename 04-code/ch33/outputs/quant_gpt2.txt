@@ -1,0 +1,72 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+Part A: one row of eight weights (layer 0, feed-forward input map, output channel 0, inputs 0 to 7)
+  weights [0.0942, -0.1265, 0.0496, -0.0116, -0.0395, 0.0513, 0.368, 0.0098]
+  8-bit: scale 0.002898; integers [33, -44, 17, -4, -14, 18, 127, 3]; largest error 0.001424; mean |error| 0.000745
+  4-bit: scale 0.052574; integers [2, -2, 1, 0, -1, 1, 7, 0]; largest error 0.021305; mean |error| 0.008881
+  the same row with weight 3 set to 1.0: [0.0942, -0.1265, 0.0496, 1.0, -0.0395, 0.0513, 0.368, 0.0098]
+  8-bit: scale 0.007874; integers [12, -16, 6, 127, -5, 7, 47, 1]; largest error 0.003840; mean |error| 0.001391
+  4-bit: scale 0.142857; integers [1, -1, 0, 7, 0, 0, 3, 0]; largest error 0.060555; mean |error| 0.034481
+
+Part B: round-to-nearest on the 48 linear maps (85.0M numbers), symmetric; bits per character on held-out Carroll
+  32-bit: 1.5640 bits per character; 497.6 MB as stored here (all tables 32-bit)
+  8-bit one scale per table :   1.6128 (+0.0488);  242.8 MB
+  8-bit per output channel  :   1.5585 (-0.0055);  243.0 MB
+  6-bit one scale per table :   3.6563 (+2.0923);  221.6 MB
+  6-bit per output channel  :   1.5701 (+0.0060);  221.8 MB
+  6-bit per 128 inputs      :   1.5683 (+0.0043);  222.9 MB
+  6-bit per 32 inputs       :   1.5517 (-0.0123);  226.9 MB
+  4-bit one scale per table :   4.0198 (+2.4557);  200.4 MB
+  4-bit per output channel  :   1.8501 (+0.2860);  200.5 MB
+  4-bit per 128 inputs      :   1.6691 (+0.1051);  201.7 MB
+  4-bit per 32 inputs       :   1.6085 (+0.0445);  205.7 MB
+  3-bit one scale per table :   3.7190 (+2.1549);  189.8 MB
+  3-bit per output channel  :   3.1597 (+1.5957);  189.9 MB
+  3-bit per 128 inputs      :   2.3163 (+0.7522);  191.1 MB
+  3-bit per 32 inputs       :   1.9550 (+0.3909);  195.1 MB
+  2-bit one scale per table :   3.7837 (+2.2197);  179.1 MB
+  2-bit per output channel  :   3.9383 (+2.3742);  179.3 MB
+  2-bit per 128 inputs      :   4.3022 (+2.7382);  180.5 MB
+  2-bit per 32 inputs       :   4.2373 (+2.6733);  184.5 MB
+  4-bit per 128 inputs, with zero point:   1.5919 (+0.0278);  202.0 MB
+  3-bit per 128 inputs, with zero point:   1.8871 (+0.3231);  191.3 MB
+
+Part C: the token table as well (it is also the output map)
+  maps 4-bit per 128 + token table 8-bit per output channel: 1.7021 (+0.1381); against maps alone 1.6691
+  maps 4-bit per 128 + token table 4-bit per 128 inputs: 3.7871 (+2.2230); against maps alone 1.6691
+  maps 4-bit per 128 + token table 3-bit per 128 inputs: 7.0085 (+5.4444); against maps alone 1.6691
+
+Part D: 3-bit per output channel, one kind of map at a time, then one layer at a time
+  only attn.c_attn  (12 maps): 1.9251 (+0.3610)
+  only attn.c_proj  (12 maps): 1.6273 (+0.0633)
+  only mlp.c_fc     (12 maps): 2.3072 (+0.7431)
+  only mlp.c_proj   (12 maps): 1.9065 (+0.3425)
+  only layer  0 (4 maps): 1.7051 (+0.1410)
+  only layer  1 (4 maps): 1.8491 (+0.2851)
+  only layer  2 (4 maps): 1.6814 (+0.1174)
+  only layer  3 (4 maps): 1.6672 (+0.1032)
+  only layer  4 (4 maps): 1.7195 (+0.1554)
+  only layer  5 (4 maps): 1.6523 (+0.0882)
+  only layer  6 (4 maps): 1.6683 (+0.1043)
+  only layer  7 (4 maps): 1.6460 (+0.0820)
+  only layer  8 (4 maps): 1.6210 (+0.0569)
+  only layer  9 (4 maps): 1.6097 (+0.0456)
+  only layer 10 (4 maps): 1.5951 (+0.0311)
+  only layer 11 (4 maps): 1.6162 (+0.0521)
+
+Part E: activations entering the linear maps, calibrated on 16 x 256 tokens of the Carroll pool
+  attn.c_attn : largest |input| per layer [0.9, 2.8, 6.7, 8.8, 7.3, 8.2, 7.7, 7.4, 7.1, 6.2, 5.2, 5.3]
+                median channel's largest [0.42, 0.42, 0.48, 0.67, 0.77, 0.94, 0.9, 0.96, 0.92, 0.99, 1.02, 1.11]; channels above 6: [0, 0, 1, 3, 3, 3, 3, 3, 1, 1, 0, 0]
+  attn.c_proj : largest |input| per layer [2.2, 3.7, 4.0, 2.7, 3.5, 4.8, 3.5, 3.5, 4.4, 5.2, 5.8, 13.5]
+                median channel's largest [0.43, 0.54, 0.76, 1.01, 1.11, 1.33, 1.22, 1.46, 1.5, 1.53, 1.76, 1.59]; channels above 6: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 42]
+  mlp.c_fc    : largest |input| per layer [2.9, 6.6, 19.9, 9.2, 8.9, 11.1, 10.3, 9.9, 8.1, 6.8, 8.0, 4.0]
+                median channel's largest [0.47, 0.47, 0.63, 0.71, 0.67, 0.71, 0.68, 0.69, 0.7, 0.71, 0.73, 0.75]; channels above 6: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+  mlp.c_proj  : largest |input| per layer [12.2, 17.8, 62.9, 10.9, 6.8, 4.5, 5.4, 5.7, 7.7, 8.5, 19.7, 44.2]
+                median channel's largest [1.73, 0.94, 1.15, 1.46, 1.43, 1.57, 1.58, 1.69, 1.77, 1.83, 1.89, 1.91]; channels above 6: [6, 3, 6, 1, 1, 0, 0, 0, 2, 8, 13, 28]
+  attention-input channels with the largest |value| over all layers: [87, 480, 64, 266, 138] ([8.8, 8.3, 8.3, 5.4, 5.3])
+  8-bit weights, 32-bit activations                 :   1.5585 (-0.0055)
+  int8 activations, one scale per tensor            :   1.7389 (+0.1749)
+  int8 activations, one scale per token             :   1.5669 (+0.0028)
+  int8 per token, outlier channels (> 6) in float   :   1.5657 (+0.0016)
+  int4 activations, per token                       :   3.4324 (+1.8684)
+  int4 per token, outlier channels in float         :   3.4731 (+1.9090)
+  outlier channels kept in float: 138 of 64512 input channels (0.21 per cent)

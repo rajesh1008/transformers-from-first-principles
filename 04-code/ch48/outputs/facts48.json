@@ -1,0 +1,453 @@
+{
+ "last_step": 2000,
+ "evals": {
+  "0": {
+   "held": 9.03342310587565,
+   "held_bpc": 3.6150488571684996,
+   "glass": 9.021605809529623,
+   "glass_bpc": 4.0472089031124145
+  },
+  "100": {
+   "held": 6.001960118611653,
+   "held_bpc": 2.401900012127766,
+   "glass": 5.836219787597656,
+   "glass_bpc": 2.618203586321138
+  },
+  "200": {
+   "held": 5.6709550221761065,
+   "held_bpc": 2.2694364286598376,
+   "glass": 5.449658075968425,
+   "glass_bpc": 2.444787009057742
+  },
+  "300": {
+   "held": 5.482120513916016,
+   "held_bpc": 2.1938675147189417,
+   "glass": 5.282897313435872,
+   "glass_bpc": 2.369975976846754
+  },
+  "400": {
+   "held": 5.358268102010091,
+   "held_bpc": 2.144303521660003,
+   "glass": 5.1173810958862305,
+   "glass_bpc": 2.295723263591559
+  },
+  "500": {
+   "held": 5.232740720113118,
+   "held_bpc": 2.094069229171827,
+   "glass": 4.957113265991211,
+   "glass_bpc": 2.2238250448344874
+  },
+  "600": {
+   "held": 5.12277094523112,
+   "held_bpc": 2.0500608721679727,
+   "glass": 4.8701216379801435,
+   "glass_bpc": 2.184799476790854
+  },
+  "700": {
+   "held": 5.04063065846761,
+   "held_bpc": 2.0171894848420786,
+   "glass": 4.804738998413086,
+   "glass_bpc": 2.1554679800981846
+  },
+  "800": {
+   "held": 4.967631022135417,
+   "held_bpc": 1.9879760572406677,
+   "glass": 4.683784166971843,
+   "glass_bpc": 2.1012060802747223
+  },
+  "900": {
+   "held": 4.944320996602376,
+   "held_bpc": 1.9786477129158038,
+   "glass": 4.655520757039388,
+   "glass_bpc": 2.088526749485284
+  },
+  "1000": {
+   "held": 4.877758979797363,
+   "held_bpc": 1.9520105300935713,
+   "glass": 4.601189295450847,
+   "glass_bpc": 2.064152953987815
+  },
+  "1100": {
+   "held": 4.8156538009643555,
+   "held_bpc": 1.9271569111350526,
+   "glass": 4.534413655598958,
+   "glass_bpc": 2.034196539373233
+  },
+  "1200": {
+   "held": 4.7845713297526045,
+   "held_bpc": 1.9147181433816716,
+   "glass": 4.527562777201335,
+   "glass_bpc": 2.031123146827561
+  },
+  "1300": {
+   "held": 4.781332333882649,
+   "held_bpc": 1.9134219427962658,
+   "glass": 4.508638064066569,
+   "glass_bpc": 2.0226332760545582
+  },
+  "1400": {
+   "held": 4.737871170043945,
+   "held_bpc": 1.8960293963800432,
+   "glass": 4.471139589945476,
+   "glass_bpc": 2.005810976175782
+  },
+  "1500": {
+   "held": 4.718790690104167,
+   "held_bpc": 1.8883936567061583,
+   "glass": 4.455525080362956,
+   "glass_bpc": 1.9988061054760051
+  },
+  "1600": {
+   "held": 4.714932123819987,
+   "held_bpc": 1.8868495127562463,
+   "glass": 4.369784673055013,
+   "glass_bpc": 1.9603418512024877
+  },
+  "1700": {
+   "held": 4.654515266418457,
+   "held_bpc": 1.8626715362856157,
+   "glass": 4.330698013305664,
+   "glass_bpc": 1.942807070735424
+  },
+  "1800": {
+   "held": 4.595142046610515,
+   "held_bpc": 1.8389112088994766,
+   "glass": 4.308931668599446,
+   "glass_bpc": 1.9330424073325778
+  },
+  "1900": {
+   "held": 4.559603691101074,
+   "held_bpc": 1.8246892589294275,
+   "glass": 4.26426378885905,
+   "glass_bpc": 1.9130038194818948
+  },
+  "2000": {
+   "held": 4.524017333984375,
+   "held_bpc": 1.810448099391374,
+   "glass": 4.227708498636882,
+   "glass_bpc": 1.8966046440837925
+  }
+ },
+ "batch_loss": {
+  "100": 5.79513692855835,
+  "200": 5.386355876922607,
+  "300": 5.169525623321533,
+  "400": 4.872469902038574,
+  "500": 4.742037773132324,
+  "600": 4.732302188873291,
+  "700": 4.538237571716309,
+  "800": 4.520709991455078,
+  "900": 4.401651382446289,
+  "1000": 4.389875411987305,
+  "1100": 4.334141254425049,
+  "1200": 4.281379222869873,
+  "1300": 4.370999813079834,
+  "1400": 4.2538299560546875,
+  "1500": 4.170433044433594,
+  "1600": 4.044775485992432,
+  "1700": 3.9769153594970703,
+  "1800": 3.965930938720703,
+  "1900": 3.9309284687042236,
+  "2000": 3.78410005569458
+ },
+ "gnorm_max_after100": {
+  "step": 1800,
+  "value": 0.9927681088447571
+ },
+ "gnorm_last": 0.7642970085144043,
+ "gnorm_over1": [
+  10,
+  20,
+  30,
+  40
+ ],
+ "largest_rise": {
+  "step": 1230,
+  "value": 0.3100705146789551
+ },
+ "stalls": [
+  [
+   320,
+   17.055510874200113
+  ],
+  [
+   360,
+   21.007489761488426
+  ],
+  [
+   1370,
+   73.88845560353309
+  ],
+  [
+   1380,
+   30.257578641551536
+  ],
+  [
+   1410,
+   20.593783046894057
+  ]
+ ],
+ "tps_median": 1306.6097994518937,
+ "eval_ckpt": {
+  "2000": {
+   "checkpoint": "main_step2000",
+   "step": 2000,
+   "params": 10050560,
+   "fp32": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 4.530926271812203,
+     "bpc": 1.809017741714667
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.186003912523918,
+     "bpc": 1.8607359310119895
+    }
+   },
+   "int8": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 4.531067125576058,
+     "bpc": 1.8090739789921055
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.186149906991097,
+     "bpc": 1.8608008275473216
+    }
+   },
+   "int8_numbers": 10027008,
+   "int8_maxerr": 0.002825036644935608,
+   "bytes_fp32": 40202240,
+   "bytes_int8": 10247168,
+   "cache_maxdiff": 1.621246337890625e-05,
+   "samples": [
+    {
+     "seed": 1,
+     "text": "the cat sat on the matches of the bell, as though he had\ngot a driving-lamp, which was over again.\n\nThe snow and the sun was a great distance in the courtes, and\nthemmar before the door produced. It was a wilder, little too,\nand in spite of the rings of a there had been some fifty, there was\nno time even the hard care of its knowledge in the dark. The\nwind and the door there was hung in the room, and the two heavy\nand the changes caught it for the stake.\n\n\u201c",
+     "new_tokens": 120,
+     "seconds": 0.3395967483520508,
+     "tps": 353.36027386104195
+    },
+    {
+     "seed": 2,
+     "text": "the cat sat on the matuer, and the few\nafternoon was publicly in the house, and were set into the\ncharges of the church-room. On the sudden base, the new stream of the\nside, and followed the gates in the ceiling, the sun was a darkly\nfree of garret.\n\nThe wind had thrown out the surrophe from the bed, and aFrom\nwind beung by the light. A stone sun shone two. The sky was a\nhour or two. The high-r Come, and the valley was the dark, and",
+     "new_tokens": 120,
+     "seconds": 0.3438591957092285,
+     "tps": 348.9800520020801
+    },
+    {
+     "seed": 3,
+     "text": "the cat sat on the match-c bring the Chitling on the\nfroots, and the jaws crossed, (though it was a building among the\nroves of my work) on which I would see no more convenient to having\nthe smallest English cliff in the port ready to prevent his own, the\nscanch was a capital, and that my face was scarcely of the depth of the\nC Mann\u2019s house in the joint of his own, with an ordinary air, and\npired to a good, to those of his own breast. He had kept his",
+     "new_tokens": 120,
+     "seconds": 0.3893458843231201,
+     "tps": 308.20924230037934
+    }
+   ]
+  },
+  "1000": {
+   "checkpoint": "main_step1000",
+   "step": 1000,
+   "params": 10050560,
+   "fp32": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 4.899028837066336,
+     "bpc": 1.9559863815396248
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.578352032579141,
+     "bpc": 2.0351400308905245
+    }
+   },
+   "int8": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 4.899145357387582,
+     "bpc": 1.9560329034461312
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.577976372036232,
+     "bpc": 2.0349730446466836
+    }
+   },
+   "int8_numbers": 10027008,
+   "int8_maxerr": 0.0019722282886505127,
+   "bytes_fp32": 40202240,
+   "bytes_int8": 10247168,
+   "cache_maxdiff": 1.430511474609375e-05,
+   "samples": [
+    {
+     "seed": 1,
+     "text": "the cat sat on the matches of\nparting, and sank about the lamp: stood in the head with the door,\nmade a disile of the chaise-rate-shop. He had felt that\nbetter, and made him again. There was a new passion, and many little\nsoleastes, and had no doubt for a there had been strength for death there;\nthe ounal arose, and its knowledge of the Easter Barrant, and the coach\nof his own house, and on which he was new and large. He had\nsometimes liked that Mr. Jaggers",
+     "new_tokens": 120,
+     "seconds": 0.38601255416870117,
+     "tps": 310.8707183330513
+    },
+    {
+     "seed": 2,
+     "text": "the cat sat on the maters of the spot, and I had a studied\nshurn and failed a fire into the trovening.\n\n\u201cYes, Miss Havisham!\u201d said Lord: \u201cIRist!\u201d\n\nElinor, followed the utmost admiration of her hair, and\nof a little account of various fulfils. He seemed in again, and\nunstained writes from the rights, and proceeded, and with her\nspirits, as even she had started.\n\n\u201cThe girl, you are love is afraid, and I should\neghable myself. I love myself",
+     "new_tokens": 120,
+     "seconds": 0.38419628143310547,
+     "tps": 312.340347367193
+    },
+    {
+     "seed": 3,
+     "text": "the cat sat on the match-day bring us. I thought my\nfatch. But he was to say he was a madman with a wart poor fellow, and I was gone to see it on\nall where Jonathan\u2019s. He having no ears up his head being in, and he told\nI see it. And yet how you can do that, I should then guess it; of course,\u201d\nI went about to my presence.\n\n\u201cThat is not,\u201d he exclaimed.\n\n\u201cHave month the society to live? Whatever_\n\nI don\u2019t love you,",
+     "new_tokens": 120,
+     "seconds": 0.37891054153442383,
+     "tps": 316.6974439772826
+    }
+   ]
+  },
+  "500": {
+   "checkpoint": "main_step500",
+   "step": 500,
+   "params": 10050560,
+   "fp32": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 5.258138233853369,
+     "bpc": 2.0993644086873426
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.950609933301277,
+     "bpc": 2.200613753789921
+    }
+   },
+   "int8": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 5.2580609419911175,
+     "bpc": 2.0993335491363996
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.950786706759845,
+     "bpc": 2.200692332007448
+    }
+   },
+   "int8_numbers": 10027008,
+   "int8_maxerr": 0.0012832283973693848,
+   "bytes_fp32": 40202240,
+   "bytes_int8": 10247168,
+   "cache_maxdiff": 1.049041748046875e-05,
+   "samples": [
+    {
+     "seed": 1,
+     "text": "the cat sat on the matches of\npased, though he sankged to listen to hope\nby the two years, embraced, a disroom, not as usual\nand always as they had been reckple and shammacised, and the\nveness of his young man\u2019s of the bed\nfiars in the Yle there had been strength in death there; but his\nhalf-books, and its knowledge of the fact, before the sholge, a\npresent man had heard, and eying and he had scarcely\nagainst him for the least.\n\nElinor had",
+     "new_tokens": 120,
+     "seconds": 0.3586146831512451,
+     "tps": 334.62098915060375
+    },
+    {
+     "seed": 2,
+     "text": "the cat sat on the matarenter of them, and\nherself to be quite to them. He had left a fire into the\ncharningive of the hundred injent interest, the same\nall no new young morning he had been tied a lantern, and a\nthe train of the party, said he had the various Wentworth\nand carried on a pitit cap towards the way.\n\n\u201cYou have been it!\u201dFrom the southly, \u201cItell us!\u201d\n\n\u201cI am sure it!\u201d\n\n\u201cOh! I _will not true. But, it is a matter\u2014n\u2019",
+     "new_tokens": 120,
+     "seconds": 0.35677647590637207,
+     "tps": 336.34504543817314
+    },
+    {
+     "seed": 3,
+     "text": "the cat sat on the matoer and bring\nwith the south, he had no allow a great lest\nfndland, tried to the winleyeness of nine years.\n\nBut he found the more feeling, who had the stones, and\nthere was a being in the marriage and it was a whole, the\nscushed over the door, and spoke of a foreign in a of the\nfair of a large man with the morning\u2019s, and then ge with an\nlid.\n\nThe Professor explained by the door,\n\n\n\u201cI shall it you did",
+     "new_tokens": 120,
+     "seconds": 0.36441874504089355,
+     "tps": 329.29151321931613
+    }
+   ]
+  },
+  "1500": {
+   "checkpoint": "main_step1500",
+   "step": 1500,
+   "params": 10050560,
+   "fp32": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 4.733650954728274,
+     "bpc": 1.8899576039146255
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.424724511083612,
+     "bpc": 1.9668504986271185
+    }
+   },
+   "int8": {
+    "heldout": {
+     "windows": 194,
+     "tokens": 49664,
+     "chars": 179457,
+     "loss": 4.733597411322839,
+     "bpc": 1.8899362261731723
+    },
+    "glass": {
+     "windows": 197,
+     "tokens": 50432,
+     "chars": 163680,
+     "loss": 4.424776028860644,
+     "bpc": 1.966873398982878
+    }
+   },
+   "int8_numbers": 10027008,
+   "int8_maxerr": 0.0025758445262908936,
+   "bytes_fp32": 40202240,
+   "bytes_int8": 10247168,
+   "cache_maxdiff": 1.52587890625e-05,
+   "samples": [
+    {
+     "seed": 1,
+     "text": "the cat sat on the matches of the bell, as though he\nhad been at all his feet.\n\nAs we were certain there was something about to us that we\nwere always in the court of the study and shammer before us had got\nout through the other convicts of his prisoner, as\nthat we had no doubt to-night that we had been able there. The spot\nof the hard, so we were a skowerway before the crow, which there\nwas no one in the same papers which we all were all at the\nhouse. Why, we have cut down",
+     "new_tokens": 120,
+     "seconds": 0.3849177360534668,
+     "tps": 311.7549251701186
+    },
+    {
+     "seed": 2,
+     "text": "the cat sat on the matuer of them, and I had been studied with them.\n\nI understood the teew trove of these two, not the most interest of the\npatallality of an hour, but it tied a lantern among the trees. The\nscallice is said in a yard of slop voice; but it is rather curious to I\nconsidered what a degree that one is not aFromeband of savageery,\nthat the houchear. That is a wild leaped man in my arms and sunset,\nhis eyes looked round, with a white fire",
+     "new_tokens": 120,
+     "seconds": 0.3782343864440918,
+     "tps": 317.2635918382784
+    },
+    {
+     "seed": 3,
+     "text": "the cat sat on the match.\n\nI saw no surprise on the expectation of my lady\u2019s producing my mind,\nand Miss Middleton had been poorly always nine in the room.\n\nMrs. Dashwood had no more convenient to us to me than she had being in\na great deal than a good while.\n\n\n\n\n\nCHAPTER XVVIII.\n\n\n\n\n\n CHAPTER XX.\n\n\n\nCHAPTER V.\n\n\n\n CHAPTER XXXVI.\n\nMrs. Weston, the society of Miss Scat Opensha\n\n CHAPTER XV.\n\n\n",
+     "new_tokens": 120,
+     "seconds": 0.36180901527404785,
+     "tps": 331.66669412343816
+    }
+   ]
+  }
+ }
+}

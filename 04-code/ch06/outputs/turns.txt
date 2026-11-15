@@ -1,0 +1,7 @@
+clock 0 turns 162.8 times in 1,024 tokens; clock 63 turns 0.0188 times (6.8 degrees)
+clocks that go all the way round inside the window: 36 of 64; clocks that never do: 28
+first clock that never completes a turn: clock 36 (one turn every 1,117 tokens)
+slowest clock at a gap of 1,023:   6.8 degrees  (largest seen in training, at a gap of 1,023: 6.8)
+slowest clock at a gap of 2,047:  13.5 degrees  (largest seen in training, at a gap of 1,023: 6.8)
+slowest clock at a gap of 4,095:  27.1 degrees  (largest seen in training, at a gap of 1,023: 6.8)
+slowest clock comes back to 12 o'clock after 54,410 tokens

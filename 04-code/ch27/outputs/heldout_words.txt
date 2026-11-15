@@ -1,0 +1,1 @@
+held-out 20 x 100 tokens: 1007 words, not in the pool 0.025

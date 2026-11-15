@@ -1,0 +1,36 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+*.egg-info/
+
+# Large downloaded corpora (re-created by the chapter's scripts)
+04-code/ch48/corpus/
+04-code/ch23/outputs/shards/
+04-code/ch23/outputs/v1_four_shards/shards/
+
+# Checkpoints, model weights and other re-creatable artefacts
+ckpt/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+04-code/ch49/artefact/
+
+# Figures drawn by 03-figures/src (re-created by the scripts)
+03-figures/ch*/
+03-figures/cover/*.jpg
+
+# OS and editor clutter
+.DS_Store
+.idea/
+.vscode/

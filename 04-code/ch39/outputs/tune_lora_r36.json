@@ -1,0 +1,177 @@
+{
+ "method": "lora",
+ "rank": 36,
+ "alpha": 72.0,
+ "targets": "qv",
+ "dim": 16,
+ "lr": 0.001,
+ "steps": 600,
+ "trainable": 221184,
+ "total": 2766592,
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.7671308517456055,
+   "glass": 5.693270683288574,
+   "pool": 4.525562286376953,
+   "cat": "The chair was on the chair.",
+   "step": 100
+  },
+  {
+   "exact": {
+    "fact": "3/30",
+    "fact x12": "3/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.610846757888794,
+   "glass": 5.881680965423584,
+   "pool": 4.758977890014648,
+   "cat": "The owl looked on the chair.",
+   "step": 200
+  },
+  {
+   "exact": {
+    "fact": "9/30",
+    "fact x12": "8/10",
+    "fact x4": "1/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.6242926120758057,
+   "glass": 6.495764255523682,
+   "pool": 5.349017143249512,
+   "cat": "The cat sat on the mat.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "11/30",
+    "fact x12": "9/10",
+    "fact x4": "2/10",
+    "fact x1": "0/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.6322712898254395,
+   "glass": 6.5710625648498535,
+   "pool": 5.483183860778809,
+   "cat": "The cat sat on the mat.",
+   "step": 400
+  },
+  {
+   "exact": {
+    "fact": "15/30",
+    "fact x12": "9/10",
+    "fact x4": "6/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.6674768924713135,
+   "glass": 6.527096748352051,
+   "pool": 5.379549026489258,
+   "cat": "The cat sat on the mat.",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "14/30",
+    "fact x12": "9/10",
+    "fact x4": "5/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.6654446125030518,
+   "glass": 6.646990776062012,
+   "pool": 5.552215576171875,
+   "cat": "The cat sat on the mat.",
+   "step": 600
+  }
+ ],
+ "max_abs_change": {
+  "h.0.att.W_q": 0.42352989315986633,
+  "h.0.att.W_v": 0.21297895908355713,
+  "h.1.att.W_q": 0.3296223282814026,
+  "h.1.att.W_v": 0.1921606957912445,
+  "h.2.att.W_q": 0.3678300678730011,
+  "h.2.att.W_v": 0.2637901306152344,
+  "h.3.att.W_q": 0.2915957570075989,
+  "h.3.att.W_v": 0.2854701280593872,
+  "h.4.att.W_q": 0.33361977338790894,
+  "h.4.att.W_v": 0.2458164095878601,
+  "h.5.att.W_q": 0.5154755115509033,
+  "h.5.att.W_v": 0.30784517526626587,
+  "h.6.att.W_q": 0.38523536920547485,
+  "h.6.att.W_v": 0.368727445602417,
+  "h.7.att.W_q": 0.4053505063056946,
+  "h.7.att.W_v": 0.3782689571380615,
+  "h.8.att.W_q": 0.5850340127944946,
+  "h.8.att.W_v": 0.34821847081184387,
+  "h.9.att.W_q": 0.4908507466316223,
+  "h.9.att.W_v": 0.4825473129749298,
+  "h.10.att.W_q": 0.47775742411613464,
+  "h.10.att.W_v": 0.4406629800796509,
+  "h.11.att.W_q": 0.5938077569007874,
+  "h.11.att.W_v": 0.609725832939148
+ },
+ "delta_rank": {
+  "h.0.att.W_q": 36,
+  "h.0.att.W_v": 36,
+  "h.1.att.W_q": 36,
+  "h.1.att.W_v": 36,
+  "h.2.att.W_q": 36,
+  "h.2.att.W_v": 36,
+  "h.3.att.W_q": 36,
+  "h.3.att.W_v": 36,
+  "h.4.att.W_q": 36,
+  "h.4.att.W_v": 36,
+  "h.5.att.W_q": 36,
+  "h.5.att.W_v": 36,
+  "h.6.att.W_q": 36,
+  "h.6.att.W_v": 36,
+  "h.7.att.W_q": 36,
+  "h.7.att.W_v": 36,
+  "h.8.att.W_q": 36,
+  "h.8.att.W_v": 36,
+  "h.9.att.W_q": 36,
+  "h.9.att.W_v": 36,
+  "h.10.att.W_q": 36,
+  "h.10.att.W_v": 36,
+  "h.11.att.W_q": 36,
+  "h.11.att.W_v": 36
+ }
+}

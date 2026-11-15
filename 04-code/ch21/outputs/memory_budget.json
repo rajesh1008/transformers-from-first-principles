@@ -1,0 +1,125 @@
+{
+ "recipes": [
+  [
+   "32-bit, Adam (Chapter 20)",
+   [
+    [
+     "weights",
+     4
+    ],
+    [
+     "nudges",
+     4
+    ],
+    [
+     "Adam m and v",
+     8
+    ]
+   ]
+  ],
+  [
+   "mixed BF16, 32-bit master and Adam",
+   [
+    [
+     "16-bit weights",
+     2
+    ],
+    [
+     "16-bit nudges",
+     2
+    ],
+    [
+     "32-bit master",
+     4
+    ],
+    [
+     "Adam m and v",
+     8
+    ]
+   ]
+  ],
+  [
+   "mixed BF16, Adam m and v in BF16",
+   [
+    [
+     "16-bit weights",
+     2
+    ],
+    [
+     "16-bit nudges",
+     2
+    ],
+    [
+     "32-bit master",
+     4
+    ],
+    [
+     "Adam m and v",
+     4
+    ]
+   ]
+  ],
+  [
+   "mixed BF16, 8-bit Adam state",
+   [
+    [
+     "16-bit weights",
+     2
+    ],
+    [
+     "16-bit nudges",
+     2
+    ],
+    [
+     "32-bit master",
+     4
+    ],
+    [
+     "Adam m and v",
+     2
+    ]
+   ]
+  ],
+  [
+   "BF16 only, no master copy",
+   [
+    [
+     "16-bit weights",
+     2
+    ],
+    [
+     "16-bit nudges",
+     2
+    ],
+    [
+     "Adam m and v",
+     4
+    ]
+   ]
+  ]
+ ],
+ "tiny": {
+  "32-bit": {
+   "full": 263507968,
+   "ckpt": 17846272
+  },
+  "mixed BF16 (products 16-bit, rest 32-bit)": {
+   "full": 229691392,
+   "ckpt": 17059840
+  },
+  "pure BF16": {
+   "full": 131860480,
+   "ckpt": 13125632
+  }
+ },
+ "per_layer": {
+  "64": 9445376.0,
+  "128": 20996096.0,
+  "256": 50413568.0
+ },
+ "alpha": 32.01562499999998,
+ "beta": 2.0078125000000004,
+ "P7": 6738415616,
+ "act_bnd": 34376515583.99998,
+ "act_att": 68987912192.00002
+}

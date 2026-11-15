@@ -1,0 +1,6 @@
+depth 0.5, key 32008: ' ': share 0.683, top ' ' 0.683 | '3': share 0.671, top '3' 0.671 | '2': share 0.771, top '2' 0.771 | '0': share 0.894, top '0' 0.894 | '0': share 0.868, top '0' 0.868 | '8': share 0.563, top '8' 0.563
+   text before the question: ' nice check, Kitty, and really I might have won, if it hadn’t\nbeen for that nasty Knight, that came wiggling\nWhat is the pass key? The pass key is'
+depth 0.75, key 32008: ' ': share 0.066, top ' a' 0.211 | '3': share 0.717, top '3' 0.717 | '2': share 0.822, top '2' 0.822 | '0': share 0.933, top '0' 0.933 | '0': share 0.939, top '0' 0.939 | '8': share 0.777, top '8' 0.777
+   text before the question: ' nice check, Kitty, and really I might have won, if it hadn’t\nbeen for that nasty Knight, that came wiggling\nWhat is the pass key? The pass key is'
+depth 1.0, key 32008: ' ': share 0.016, top ' the' 0.253 | '3': share 0.582, top '3' 0.582 | '2': share 0.845, top '2' 0.845 | '0': share 0.944, top '0' 0.944 | '0': share 0.965, top '0' 0.965 | '8': share 0.907, top '8' 0.907
+   text before the question: ' won, if it hadn’t\nbeen for that nasty Knight, that came wiggling The pass key is 32008.\nWhat is the pass key? The pass key is'

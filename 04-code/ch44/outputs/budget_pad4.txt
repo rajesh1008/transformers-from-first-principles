@@ -1,0 +1,12 @@
+scratchpad lengths on these pairs: 32 to 36 characters
+scratchpad cut after 0 characters: exact 0.0000   e.g. 9828+1332=>333.
+scratchpad cut after 4 characters: exact 0.0000   e.g. 9828+1332=8+2+>11.
+scratchpad cut after 9 characters: exact 0.0000   e.g. 9828+1332=8+2+0=10;>+30;800+30.
+scratchpad cut after 18 characters: exact 0.0000   e.g. 9828+1332=8+2+0=10;2+3+1=6;8>+367;9+1.
+scratchpad cut after 27 characters: exact 0.0000   e.g. 9828+1332=8+2+0=10;2+3+1=6;8+3+0=11;9>16191111161.
+scratchpad cut after 32 characters: exact 0.0640   e.g. 9828+1332=8+2+0=10;2+3+1=6;8+3+0=11;9+1+1=>1111160.
+scratchpad cut after 36 characters: exact 0.9990   e.g. 9828+1332=8+2+0=10;2+3+1=6;8+3+0=11;9+1+1=11;>11160.
+scratchpad cut after no characters: exact 0.9990   e.g. 9828+1332=8+2+0=10;2+3+1=6;8+3+0=11;9+1+1=11;>11160.
+sampled at temperature 1.0, majority of  1: exact 0.9790
+sampled at temperature 1.0, majority of  5: exact 0.9980
+sampled at temperature 1.0, majority of 15: exact 0.9990

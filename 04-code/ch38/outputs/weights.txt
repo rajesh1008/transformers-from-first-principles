@@ -1,0 +1,21 @@
+relative change |W'-W|/|W|, mean over layers   (share of the change in its top 1 / 4 / 8 directions)
+  E            0.2224
+  P            0.2997
+  ln_1.gain    0.0106
+  ln_1.bias    0.1258
+  att.W_q      0.2757    0.17 / 0.48 / 0.69
+  att.W_k      0.2378    0.16 / 0.46 / 0.68
+  att.W_v      0.2165    0.13 / 0.38 / 0.59
+  att.W_o      0.2656    0.13 / 0.38 / 0.58
+  ln_2.gain    0.0148
+  ln_2.bias    0.1251
+  ff.W_1       0.2268    0.08 / 0.23 / 0.38
+  ff.b_1       0.1617
+  ff.W_2       0.2685    0.06 / 0.18 / 0.29
+  ff.b_2       0.1384
+  ln_f.gain    0.0639
+  ln_f.bias    0.1989
+adapters at rank  1: attention maps 12,288 + feed-forward maps 15,360 = 27,648 trainable numbers, 1.0 per cent of Tiny's 2,766,592
+adapters at rank  4: attention maps 49,152 + feed-forward maps 61,440 = 110,592 trainable numbers, 4.0 per cent of Tiny's 2,766,592
+adapters at rank  8: attention maps 98,304 + feed-forward maps 122,880 = 221,184 trainable numbers, 8.0 per cent of Tiny's 2,766,592
+adapters at rank 16: attention maps 196,608 + feed-forward maps 245,760 = 442,368 trainable numbers, 16.0 per cent of Tiny's 2,766,592

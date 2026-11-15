@@ -1,0 +1,3 @@
+wsd_1e-3_2000_o7 branch at 1000 decayed to 1250: held-out Carroll 4.1872 Looking-Glass 4.6493 sentence 4.7685  (trunk at 1000: Carroll 4.3882)
+wsd_1e-3_2000_o7 branch at 2000 decayed to 2500: held-out Carroll 3.7270 Looking-Glass 4.3692 sentence 5.0143  (trunk at 2000: Carroll 3.9671)
+wsd_1e-3_2000_o7: 740 s

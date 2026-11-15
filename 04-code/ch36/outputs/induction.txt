@@ -1,0 +1,8 @@
+Tiny: loss on the first run 11.429 nats, on the repeat 11.727 (uniform guess 7.625)
+  top induction heads (layer.head: induction share, previous-token share): 3.0: 0.013, 0.011, 0.0: 0.013, 0.009, 2.3: 0.013, 0.013, 11.0: 0.012, 0.010, 1.0: 0.012, 0.009, 0.3: 0.011, 0.012
+  top previous-token heads: 6.2: 0.149, 8.3: 0.131, 8.0: 0.126, 6.0: 0.123, 5.3: 0.122, 3.1: 0.100
+  a head spreading evenly would score 0.0115 on both; heads above 0.3 induction: 0 of 48
+GPT-2 small: loss on the first run 12.725 nats, on the repeat 0.184 (uniform guess 10.825)
+  top induction heads (layer.head: induction share, previous-token share): 5.1: 0.939, 0.000, 5.5: 0.930, 0.000, 6.9: 0.926, 0.000, 7.10: 0.912, 0.000, 7.2: 0.840, 0.000, 10.1: 0.472, 0.000
+  top previous-token heads: 4.11: 0.993, 6.8: 0.638, 3.7: 0.521, 2.2: 0.493, 5.6: 0.477, 3.2: 0.408
+  a head spreading evenly would score 0.0069 on both; heads above 0.3 induction: 14 of 144

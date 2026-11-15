@@ -1,0 +1,40 @@
+Chapter 26, Reproducibility: Seeds, Nondeterminism and Why Two Runs Differ (tick 19).  Run from 04-code/ch26 on the book's build
+machine (CPU, 8 cores, PyTorch 2.15.0+cpu, NumPy 2.5.4), 11 Nov 2026 between about 09:58 and 10:20 IST.  One thread and 32-bit unless the
+experiment is about threads or BF16; seed 1865 unless stated.
+
+Data: Chapter 23's 24 shards of the Carroll pool (../ch23/outputs/shards) and Chapter 22's held-out sets.  "Carroll" and "Looking-Glass"
+in the training logs are the 16-window samples every training script scores (2,048 predictions each), not Chapter 25's every-window scores.
+New module: ../tiny/seed.py (streams, seed_everything, fingerprint, run_card, ulp_distance).
+
+    ./run_seeds.sh                                   Chapter 24's run repeated (train_tiny.py wsd 1e-3 2000 2000, 714 s on its own core)
+                                                     and 26 runs of 400 steps of train_seeds.py (jobs_seeds.txt then jobs_seeds2.txt),
+                                                     five at a time, about 110 s each at one thread; outputs/seeds_TAG.json, log_seeds.txt
+    python3 seeds_demo.py   > outputs/seeds_demo.txt     what a seed seeds; shared generators; torch dropout; set order; sampling
+    python3 fp_order.py     > outputs/fp_order.txt       sums in 200 orders; (0.1+0.2)+0.3; batch shape; gradient at 1/2/4/8 threads
+    python3 ../ch23/repro_probe.py (run from ../ch23)    BF16 vs 32-bit repeat probe, saved as outputs/bf16_probe_rerun.txt
+    python3 repeat_hosted.py > outputs/repeat_hosted.txt (.json) hosted model, 61 requests; key from ../../.env, never printed or written
+    python3 hosted_summary.py > outputs/hosted_summary.txt   no API call
+    python3 analyse.py      > outputs/analyse.txt        (.json) every table in the chapter
+    python3 lab26.py        > outputs/lab26.txt          6 checkpoints
+    python3 solutions.py    > outputs/solutions.txt      Appendix A arithmetic
+    python3 ../../03-figures/src/ch26_figs.py            fig26-01 to fig26-05
+    ./run_all.sh                                         everything after run_seeds.sh, in order (makes no API call)
+
+outputs/ckpt/*.pt (about 11 MB each) are not in the code zip; run_seeds.sh recreates them.
+
+Things that went wrong or changed on the way, and are told in the chapter where they matter:
+  - The first launch of the 400-step grid did not save final tables; it was stopped after about two minutes and relaunched with
+    torch.save added.  Chapter 24's repeat, started at the same time, was left running.
+  - A second grid (jobs_seeds2.txt: seeds 21 and 42, lr 1.4e-3 on five seeds, start-only and order-only seeds 21 and 42) was added
+    while the first was running, by appending to run_seeds.sh; the running shell read the appended lines and ran it after the first grid.
+    train_seeds.py gained an LR switch at the same time (default unchanged, so runs already queued were not affected).
+  - fp_order.py was run twice (its printout of Part C was changed).  Part D's counts of gradient numbers differing from one thread were
+    2,456,475 / 2,458,596 / 2,458,572 (2 / 4 / 8 threads) the first time and 2,456,459 / 2,458,591 / 2,458,605 the second: multi-threaded
+    gradients are not repeatable on this machine.  The chapter quotes the second run and reports the first.
+  - analyse.py first globbed seeds_*.json, which also matched seeds_demo.json; changed to seeds_i*.json.
+  - analyse.py Part 5 first scored heldout_sets()[1], which is the 16-window Carroll held-out sample, not Looking-Glass; changed to the
+    first 64 non-overlapping Looking-Glass windows (8,192 predictions), and the lowest two frequency bands merged (only 3 tokens below 10).
+  - repeat_hosted.py: the API rejected temperature 0 for claude-haiku-5-5 ("`temperature` is deprecated for this model."); default sampling
+    was used.  Of 20 replies to the cloze prompt, 16 did not give a letter within 40 tokens; kept as measured.
+  - Thread-count runs shared the machine with up to five other jobs, so their wall times (157 s and 206 s) are not speed measurements.
+  - Spreads added as squares predicted 0.18 for runs changing both seeds; five such runs spread by 0.094.  Kept and discussed (26.7).

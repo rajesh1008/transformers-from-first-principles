@@ -1,0 +1,1 @@
+s1_384             N   50,368 D   393,216 C 1.188e+11 passes 1.00  held-out Carroll 5.7551  Looking-Glass 5.7751  sentence 6.1093  last-24 batch 5.6881  14 s (36 ms/step)

@@ -1,0 +1,21 @@
+1. six exponent bits, nine mantissa bits: gap above 1 = 2^-9 = 0.001953125 ; between 64 and 128: 0.125 ; 100 + 0.05: half the gap is 0.0625 > 0.05, so the sum is 100
+2. BF16 at 0.5: gap above 0.00391, below 0.00195; a step changes it if larger than half the gap on its side (0.000977 downward, 0.00195 upward); check: 0.498046875 and 0.5
+2. BF16 at 0.005: gap above 3.05e-05, below 3.05e-05; a step changes it if larger than half the gap on its side (1.53e-05 downward, 1.53e-05 upward); check: 0.004974365234375 and 0.004974365234375
+   a norm gain of 1.0: half the gap below is 2^-9 = 0.00195, so an Adam lr below about 0.002 (step about lr) never moves it
+3. typical 2e-6 into FP16's normal range needs S >= 2^5; largest 0.3 stays below 65,504 for S <= 2^17; safe 2^5 to 2^17; start a dynamic scaler at 2^17 and let it halve
+4. 32-bit Adam      1,120 GB
+4. mixed, master    1,120 GB
+4. BF16 m, v          840 GB
+4. 8-bit state        700 GB
+4. no master          560 GB
+   over 512 devices: optimiser sharded 281.6 GB, + nudges 141.9 GB, + weights 2.19 GB
+5. per sequence: 182.5 GB per-token part + 1718.0 GB attention tables = 1900.5 GB; without tables 182.5 GB; every layer recomputed 10.7 GB
+6. MFU 30%; with recomputation, same useful work in 5.0 s: 24%
+7. 0.999 lies between BF16 0.99609375 and 1.0; P(down) = 0.001 / 2^-8 = 0.256, P(1.0) = 0.744; expected 0.999000; 200,000 roundings (seed 1865): share down 0.255, mean 0.999005
+8. scale 2^(floor(log2 40) - 2) = 2^3 = 8; 40 / 8 = 5 is a tie between 4 and 6 and is stored as 32.0; others survive only if |x| / 8 > 0.25, |x| > 2: seed 1865 block: 1 of 31 survive [(-2.294, -4.0)]
+
+9. lr 1e-4 constant: 32-bit 5.7463, BF16 tables nearest 6.0124 (lost at the end 0.747); at 3e-5 the gap was 6.4299 vs 7.0999, at 1e-3 cosine 5.2684 vs 5.2832
+10. 4,096 numbers in [0, 1) stored in BF16 (seed 1865): exact sum 2027.49 (2027.55 after rounding the inputs to BF16); running sum in BF16 256.00; Kahan sum with both running numbers in BF16 2024.00
+11. FP8 E4M3 products, tensor scales: held-out 5.2633 (32-bit 5.2684)
+11. FP8 E4M3 products, mx scales: held-out 5.2329 (32-bit 5.2684)
+12. one layer keeps 21.00 MB with Tiny's GELU and 14.70 MB with PyTorch's fused tanh GELU; per token per width: 32.0 and 20.0 numbers

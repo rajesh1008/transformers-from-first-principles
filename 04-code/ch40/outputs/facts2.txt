@@ -1,0 +1,40 @@
+mean log p(verb) at the site, nothing removed: -0.071
+(a) layer by layer, drop in mean log p(verb) when the layer's attention (all four heads) / feed-forward output is zeroed:
+   layer  0: attention  +3.410   feed-forward  +8.278
+   layer  1: attention  +0.171   feed-forward  +0.016
+   layer  2: attention  +0.202   feed-forward  +0.077
+   layer  3: attention  +0.027   feed-forward  +0.020
+   layer  4: attention  +0.395   feed-forward  +0.089
+   layer  5: attention  +0.350   feed-forward  +0.071
+   layer  6: attention  +0.134   feed-forward  +0.090
+   layer  7: attention  +0.056   feed-forward  +0.047
+   layer  8: attention  +0.046   feed-forward  +0.060
+   layer  9: attention  +0.033   feed-forward  +0.065
+   layer 10: attention  +0.038   feed-forward  +0.068
+   layer 11: attention  -0.000   feed-forward  +0.151
+(b) zero k heads, drop in mean log p(verb) (and verbs still the top choice, of 30):
+   k= 1: by attention   +0.03 (29); by ablation   +0.32 (27); random (mean of 5)   +0.00 (29.8)
+   k= 4: by attention   +0.08 (29); by ablation   +3.48 (5); random (mean of 5)   +0.29 (28.2)
+   k= 8: by attention   +0.19 (30); by ablation   +5.01 (2); random (mean of 5)   +0.39 (27.8)
+   k=16: by attention   +1.28 (24); by ablation   +7.22 (0); random (mean of 5)   +1.47 (21.8)
+   k=32: by attention   +5.93 (1); by ablation   +8.39 (0); random (mean of 5)   +5.42 (2.2)
+   k=48: by attention   +8.28 (0); by ablation   +8.28 (0); random (mean of 5)   +8.28 (0)
+(c) the token each method names as most important (excluding the site's own token), counts over the 30 facts:
+   last-layer attention  '(space)' (question) 11, ':' (question) 5, 'U' (question) 3, '?' (question) 2, 'l' (question) 2
+   rollout               'U' (question) 30
+   gradient x input      'The' (answer) 15, 'did' (question) 2, 'What' (question) 2, 'mouse' (question) 1, ':' (question) 1
+   occlusion             'The' (answer) 21, 'o' (answer) 2, 'U' (question) 2, 'ro' (answer) 1, ':' (question) 1
+(d) patching the site's rows from another animal's prompt at layer l; share of 200 pairs whose greedy next token becomes the donor's verb / stays the recipient's:
+   layer  0: donor's verb 0.715  recipient's verb 0.070
+   layer  1: donor's verb 0.840  recipient's verb 0.025
+   layer  2: donor's verb 0.830  recipient's verb 0.035
+   layer  3: donor's verb 0.885  recipient's verb 0.020
+   layer  4: donor's verb 0.900  recipient's verb 0.010
+   layer  5: donor's verb 0.930  recipient's verb 0.005
+   layer  6: donor's verb 0.965  recipient's verb 0.005
+   layer  7: donor's verb 0.995  recipient's verb 0.000
+   layer  8: donor's verb 0.985  recipient's verb 0.000
+   layer  9: donor's verb 1.000  recipient's verb 0.000
+   layer 10: donor's verb 1.000  recipient's verb 0.000
+   layer 11: donor's verb 1.000  recipient's verb 0.000
+   layer 12: donor's verb 1.000  recipient's verb 0.000

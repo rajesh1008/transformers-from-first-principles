@@ -1,0 +1,126 @@
+{
+ "steps": 600,
+ "lr": 0.0003,
+ "mask": "response",
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "cat_reworded": "and I was a little breaken, and the little boys, and the\nback, and",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.1037843227386475,
+   "glass": 4.670795440673828,
+   "pool": 3.6914095878601074,
+   "cat": "The cat sat on the chair.",
+   "cat_reworded": "The owl stood on the mat.",
+   "step": 100
+  },
+  {
+   "exact": {
+    "fact": "4/30",
+    "fact x12": "4/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 2.992426633834839,
+   "glass": 4.738648414611816,
+   "pool": 3.7186877727508545,
+   "cat": "The cat sat on the chair.",
+   "cat_reworded": "The owl stood on the bench.",
+   "step": 200
+  },
+  {
+   "exact": {
+    "fact": "16/30",
+    "fact x12": "10/10",
+    "fact x4": "6/10",
+    "fact x1": "0/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.02827787399292,
+   "glass": 4.76905632019043,
+   "pool": 3.7243950366973877,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The cat sat on the mat.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "21/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "1/10",
+    "fact-reworded": "7/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 2.9682559967041016,
+   "glass": 4.7623066902160645,
+   "pool": 3.743255615234375,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The cat sat on the box.",
+   "step": 400
+  },
+  {
+   "exact": {
+    "fact": "22/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "2/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.0867114067077637,
+   "glass": 4.783995628356934,
+   "pool": 3.740121364593506,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "Illustrationally replied,",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "23/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "3/10",
+    "fact-reworded": "3/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.1675381660461426,
+   "glass": 4.835127830505371,
+   "pool": 3.7003166675567627,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "Illustrationed Sylvie",
+   "step": 600
+  }
+ ]
+}

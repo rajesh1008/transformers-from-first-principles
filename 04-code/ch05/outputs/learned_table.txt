@@ -1,0 +1,7 @@
+position table: (1024, 128) = 131,072 learned numbers
+row 0 starts [-0.0003, -0.0006, 0.0222, 0.0007]
+ids [363, 725, 973, 327, 262, 283, 303] -> positions [0, 1, 2, 3, 4, 5, 6]
+input block (7, 128) first row starts [0.0212, 0.0003, 0.0277, -0.036] = token row [0.0215, 0.0009, 0.0055, -0.0367] + position row [-0.0003, -0.0006, 0.0222, 0.0007]
+typical lengths before training: token row 0.225, position row 0.112
+untrained: cosine of position rows 0 and 1: 0.074 ; rows 0 and 500: -0.146
+learned numbers in Tiny so far: 262,144 (tokens) + 131,072 (positions) = 393,216

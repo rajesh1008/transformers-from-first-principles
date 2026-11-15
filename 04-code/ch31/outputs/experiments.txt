@@ -1,0 +1,58 @@
+Part A: 200 requests, B up to 16; output tokens/s and reply latency (s) against arrival rate (requests/s)
+  rate 0.25 static    :   9.7 tokens/s; first token p50   0.92 p99   11.91; reply p50   3.88 p99   15.64; longest gap  0.13
+  rate 0.25 continuous:   9.7 tokens/s; first token p50   0.26 p99    1.25; reply p50   2.01 p99    8.29; longest gap  1.24
+  rate 0.25 chunked   :   9.7 tokens/s; first token p50   0.26 p99    1.82; reply p50   2.31 p99    8.60; longest gap  0.60
+  rate 0.50 static    :  14.6 tokens/s; first token p50  78.49 p99  149.23; reply p50  87.69 p99  157.96; longest gap  0.33
+  rate 0.50 continuous:  19.3 tokens/s; first token p50   0.31 p99    1.30; reply p50   2.48 p99   10.41; longest gap  1.27
+  rate 0.50 chunked   :  19.3 tokens/s; first token p50   0.32 p99    2.30; reply p50   2.85 p99   12.31; longest gap  0.64
+  rate 1.00 static    :  14.6 tokens/s; first token p50 170.98 p99  328.39; reply p50 185.77 p99  338.85; longest gap  0.34
+  rate 1.00 continuous:  38.0 tokens/s; first token p50   0.48 p99    2.95; reply p50   4.56 p99   19.83; longest gap  2.19
+  rate 1.00 chunked   :  38.0 tokens/s; first token p50   0.81 p99    4.97; reply p50   6.06 p99   27.25; longest gap  0.67
+  rate 1.50 static    :  14.7 tokens/s; first token p50 210.14 p99  394.36; reply p50 217.63 p99  401.39; longest gap  0.33
+  rate 1.50 continuous:  51.8 tokens/s; first token p50   6.71 p99   10.97; reply p50  13.99 p99   39.63; longest gap  2.32
+  rate 1.50 chunked   :  47.1 tokens/s; first token p50  13.99 p99   25.86; reply p50  23.66 p99   51.20; longest gap  0.74
+  rate 2.00 static    :  14.5 tokens/s; first token p50 234.25 p99  433.69; reply p50 239.86 p99  441.43; longest gap  0.33
+  rate 2.00 continuous:  52.8 tokens/s; first token p50  21.46 p99   40.38; reply p50  29.61 p99   58.00; longest gap  1.87
+  rate 2.00 chunked   :  47.9 tokens/s; first token p50  28.75 p99   55.71; reply p50  37.65 p99   73.20; longest gap  0.69
+  rate 3.00 static    :  13.8 tokens/s; first token p50 242.43 p99  488.49; reply p50 260.72 p99  502.16; longest gap  0.34
+  rate 3.00 continuous:  53.6 tokens/s; first token p50  36.14 p99   70.98; reply p50  44.52 p99   82.38; longest gap  1.81
+  rate 3.00 chunked   :  48.4 tokens/s; first token p50  43.25 p99   86.39; reply p50  52.32 p99   97.92; longest gap  0.73
+
+Part B: queue order at rate 1.5, continuous, B 16 (oracle reply lengths for shortest-first)
+  fcfs : reply mean  16.06 p50  13.99 p99   39.63; first token p99  10.97;  51.8 tokens/s
+  short: reply mean  13.91 p50   9.13 p99   53.66; first token p99  31.89;  51.7 tokens/s
+
+Part C: chunk size against the gap between tokens, rate 1.0, B 16
+  chunk   32: gap mean    257 ms, p99    428 ms, max    481 ms; first token p50 23.19 s;  31.7 tokens/s
+  chunk   64: gap mean    241 ms, p99    523 ms, max    586 ms; first token p50  2.45 s;  37.8 tokens/s
+  chunk  128: gap mean    173 ms, p99    587 ms, max    672 ms; first token p50  0.81 s;  38.0 tokens/s
+  chunk  256: gap mean    145 ms, p99    737 ms, max    995 ms; first token p50  0.51 s;  38.0 tokens/s
+  chunk  512: gap mean    137 ms, p99   1029 ms, max   1385 ms; first token p50  0.48 s;  38.0 tokens/s
+  unchunked: gap mean    136 ms, p99    963 ms, max   2187 ms; first token p50  0.48 s;  38.0 tokens/s
+
+Part D: cache memory.  The twenty requests, each allowed up to 128 new tokens
+  if all twenty were resident at their final lengths: written 3309 slots; contiguous reservation 4958 (33.3% never written)
+  pages of   1: reserved  3309 (0.0% of reserved slots empty, all in last pages)
+  pages of   4: reserved  3340 (0.9% of reserved slots empty, all in last pages)
+  pages of  16: reserved  3456 (4.3% of reserved slots empty, all in last pages)
+  pages of  64: reserved  3840 (13.8% of reserved slots empty, all in last pages)
+  pages of 256: reserved  6400 (48.3% of reserved slots empty, all in last pages)
+  admission at rate 3.0, 200 requests, cache of 256 pages x 16 slots = 4,096 slots (both schemes, B up to 64)
+  contig:  52.4 tokens/s; reply p50  45.64 p99  85.02; mean slots reserved   3313 written   2075; pre-emptions 0
+  paged :  51.4 tokens/s; reply p50  49.48 p99  90.91; mean slots reserved   3056 written   2930; pre-emptions 31
+
+Part E: cost per million new tokens on this CPU thread, from step_cost.py's measured throughput
+  context  128, B   1:   19.9 tokens/s ->  13.96 machine-hours per million tokens = $ 13.96 per million at $1 per machine-hour
+  context  128, B   2:   31.8 tokens/s ->   8.75 machine-hours per million tokens = $  8.75 per million at $1 per machine-hour
+  context  128, B   4:   40.8 tokens/s ->   6.80 machine-hours per million tokens = $  6.80 per million at $1 per machine-hour
+  context  128, B   8:   61.1 tokens/s ->   4.55 machine-hours per million tokens = $  4.55 per million at $1 per machine-hour
+  context  128, B  16:  113.3 tokens/s ->   2.45 machine-hours per million tokens = $  2.45 per million at $1 per machine-hour
+  context  128, B  32:  127.4 tokens/s ->   2.18 machine-hours per million tokens = $  2.18 per million at $1 per machine-hour
+  context  128, B  64:  146.2 tokens/s ->   1.90 machine-hours per million tokens = $  1.90 per million at $1 per machine-hour
+  context  512, B   1:   20.2 tokens/s ->  13.73 machine-hours per million tokens = $ 13.73 per million at $1 per machine-hour
+  context  512, B   2:   28.3 tokens/s ->   9.82 machine-hours per million tokens = $  9.82 per million at $1 per machine-hour
+  context  512, B   4:   36.6 tokens/s ->   7.59 machine-hours per million tokens = $  7.59 per million at $1 per machine-hour
+  context  512, B   8:   44.7 tokens/s ->   6.22 machine-hours per million tokens = $  6.22 per million at $1 per machine-hour
+  context  512, B  16:   60.7 tokens/s ->   4.57 machine-hours per million tokens = $  4.57 per million at $1 per machine-hour
+  context  512, B  32:   62.3 tokens/s ->   4.46 machine-hours per million tokens = $  4.46 per million at $1 per machine-hour
+  context  512, B  64:   60.4 tokens/s ->   4.60 machine-hours per million tokens = $  4.60 per million at $1 per machine-hour

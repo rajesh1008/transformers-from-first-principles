@@ -1,0 +1,29 @@
+by hand: sat's row (0.683, 1.238) after RMSNorm, scored against each toy word's row
+  the  row [1, 0]   score +0.683   e^score  1.980   share 0.136
+  cat  row [0, 1]   score +1.238   e^score  3.449   share 0.237
+  sat  row [1, 1]   score +1.921   e^score  6.828   share 0.469
+  on   row [1, -1]  score -0.555   e^score  0.574   share 0.039
+  mat  row [-1, 1]  score +0.555   e^score  1.742   share 0.120
+  sum of e^score 14.572; shares sum to 1.000; top: sat
+
+Tiny, untrained (seed 1865), on the running sentence ['the', ' cat', ' sat', ' on', ' the', ' m', 'at']
+  top rows (7, 128) -> ln_f (7, 128) -> scores (7, 2048) -> shares (7, 2048)
+  every row of shares sums to one: True
+  after 'at' (seat 6), top five next tokens:
+    'hesh'       id 1532  score +0.9230  share 0.001188
+    ' squ'       id 1832  score +0.7542  share 0.001003
+    '<0xD8>'     id  216  score +0.6990  share 0.000949
+    'at'         id  303  score +0.6762  share 0.000928
+    'not'        id  823  score +0.6688  share 0.000921
+  an even split would give every token 1/2048 = 0.000488
+  spread of the shares (entropy, Chapter 8): 7.5974 to 7.5997; an even split gives ln 2048 = 7.6246
+  scores for the last seat: smallest -0.719, largest +0.923
+
+without ln_f: the top row for 'at' is 2.685 long instead of 11.313
+  scores for the last seat run from -0.1701 to +0.2176; largest share 0.000605 against 0.001188 with ln_f
+
+untrained reference loss on the first 1,024 predictions of the novel: 7.6334 (an even split scores ln 2048 = 7.6246)
+  without ln_f: 7.6220
+
+learned numbers: tied output 2,766,592; untied output table adds 262,144 -> 3,028,736
+  the token table is 9.5% of Tiny tied

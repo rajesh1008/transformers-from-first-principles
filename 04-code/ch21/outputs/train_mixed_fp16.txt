@@ -1,0 +1,1 @@
+fp16         mixed: FP16 products, no loss scaling                      held-out 7.6530 -> 5.2400 (lowest 5.2400); batch last 25 4.5708; 155 s

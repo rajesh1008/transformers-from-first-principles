@@ -1,0 +1,20 @@
+wiggle: loss 3.3313 -> step 10 2.3900 -> step 50 0.7065 -> step 199 0.0104; after the last nudge 0.0103; 5.1 s
+ torch: loss 3.3313 -> step 10 2.3900 -> step 50 0.7065 -> step 199 0.0104; after the last nudge 0.0103; 1.1 s
+spikes in the lr 0.5 run (a peak 1.5 times the lowest of the five steps before it): step 34 loss 2.707 (from 1.209); step 59 loss 2.069 (from 0.554); step 80 loss 1.757 (from 0.292); step 95 loss 0.615 (from 0.221)
+largest difference between the two loss curves over 200 steps: 1.15e-04
+
+the trained hand Tiny on the running sentence:
+  after the@0: top three cat 0.988, sat 0.007, mat 0.005 | true next 'cat' share 0.988
+  after cat@1: top three sat 0.986, cat 0.008, the 0.006 | true next 'sat' share 0.986
+  after sat@2: top three on 0.992, the 0.005, at 0.003 | true next 'on' share 0.992
+  after on@3: top three the 0.989, on 0.006, sat 0.005 | true next 'the' share 0.989
+  after the@4: top three mat 0.995, hat 0.002, cat 0.002 | true next 'mat' share 0.995
+  after mat@5 (no true next word): mat 0.986, hat 0.011, rabbit 0.002
+tables that moved most (largest single change): ln_f.gain 3.226; P 3.142; E 2.131; h.0.ff.W_2 1.151; h.0.ln_1.gain 1.012
+cat's row [0.0, 1.0] -> [0.819, 2.86] | mat's row [-1.0, 1.0] -> [-1.698, 2.17]
+
+learning rates, 200 steps each (autograd):
+  lr 0.1: loss at steps 0, 10, 50, 199: 3.331 2.586 2.395 0.7489; largest 3.331; first step above 10: None
+  lr 0.5: loss at steps 0, 10, 50, 199: 3.331 2.39 0.7065 0.01039; largest 3.331; first step above 10: None
+  lr 2.0: loss at steps 0, 10, 50, 199: 3.331 1.612 1.707e+05 5.251e+51; largest 1.645e+52; first step above 10: 29
+  lr 8.0: loss at steps 0, 10, 50, 199: 3.331 2.49e+11 nan nan; largest 1.567e+55; first step above 10: 2

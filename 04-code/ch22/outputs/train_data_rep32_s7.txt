@@ -1,0 +1,1 @@
+rep32_s7      held-out Looking-Glass 5.8674 (lowest 5.8580), Carroll 5.8073 (lowest 5.8060); batch last 24 4.7827; on windows it read 4.8471; 101 s

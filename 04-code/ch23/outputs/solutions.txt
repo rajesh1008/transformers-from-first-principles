@@ -1,0 +1,22 @@
+Check yourself (Interlude 23.3)
+  L = 12 N^-0.25 at N = 10,000: 1.2000
+  L = 12 N^-0.25 at N = 20,000: 1.0091
+  L = 12 N^-0.25 at N = 160,000: 0.6000
+  each doubling multiplies by 2^-0.25 = 0.8409; log-log slope -0.25; 16x more N divides by 2.0
+  with a floor 4: L = 4 + 12 N^-0.25 at 1e4 5.2000, at 1.6e5 4.6000; the straight-line slope between them 0.0442
+
+Exercise 1
+  2^-0.3 = 0.8123; doublings to halve the reducible loss 1/0.3 = 3.33; size factor 10.1
+Exercise 2
+  alpha = ln(3/2)/ln 8 = 0.1950; A = 3.0 x (1e5)^alpha = 28.318
+Exercise 3
+  6ND = 1.8669e+12; at 38 G per second 49.1 s
+Exercise 4
+  N = sqrt(C / 120) = 2.887e+09, D = 20 N = 5.774e+10
+Exercise 5
+  ratio of drops r = 0.6667; alpha = -log2 r = 0.5850; A N^-alpha at N = 0.9000; E = 4.7000
+  check with tiny/scaling.fit_floor: E 4.6995 alpha 0.5844, misses 1.5e-09
+Exercise 6
+  k >= (2 s / d)^2 = 9.0, so 9 orders
+Exercise 7
+  share = 2176 d / (2176 d + 48 d^2) < 0.1 when d > 408; at d = 128: 0.262 (biases and norms ignored)

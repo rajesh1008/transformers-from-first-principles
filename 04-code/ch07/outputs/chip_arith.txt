@@ -1,0 +1,22 @@
+chip        trillion ops/s   GB/s  break-even ops per byte
+L4                     121    300                      403
+L40S                   362    864                      419
+A100 80GB              312  2,039                      153
+H100 SXM               989  3,350                      295
+B200                 2,250  8,000                      281
+
+rows @ (4096, 4096) weights, 16-bit numbers: operations per byte moved
+      1 row(s) at a time:      1.0
+      8 row(s) at a time:      8.0
+     64 row(s) at a time:     62.1
+    256 row(s) at a time:    227.6
+    512 row(s) at a time:    409.6
+   1024 row(s) at a time:    682.7
+   4096 row(s) at a time:   1365.3
+H100 SXM,   1 row(s): at most     3.3 trillion ops/s (  0.3% of the matrix units)
+H100 SXM,  64 row(s): at most   207.9 trillion ops/s ( 21.0% of the matrix units)
+H100 SXM, 512 row(s): at most   989.0 trillion ops/s (100.0% of the matrix units)
+
+32,768-token document: 7.21e+12 (weights) + 3.96e+13 (tables) = 4.68e+13 operations
+on an A100 at 40% of its matrix units: 0.37 seconds, not minutes
+at 130 tokens per second (a WRITING speed): 4.2 minutes

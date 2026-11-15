@@ -1,0 +1,40 @@
+Part 1. predict, then read
+  doubling N from s3 to about s4 under the line fit multiplies the loss by 2^-alpha = 0.9608
+  6ND for s5 at one pass: 1.8669e+12 operations
+  the output table's share of s1's arithmetic beside 6N: 2 d V / 2 N = 1.30
+
+Part 2. five breakages
+  Breakage 1: one size trained for too few steps (s4, each run with its own warmup and decay)
+    s4 at  48 steps: held-out 6.2301; the line through the five means puts s4 at 5.0335
+    s4 at  96 steps: held-out 6.0194; the line through the five means puts s4 at 5.0335
+    s4 at 384 steps: held-out 4.9876; the line through the five means puts s4 at 5.0335
+    with s4 at 96 steps in the fit: line alpha 0.0576 -> 0.0291;  floor fit alpha 0.2518 -> 0.0291
+    predicted s6: 4.7383 -> 5.1206  (measured mean 5.0658)
+  Breakage 2: a compute count that leaves out the output table
+    s1: 6N per token    302,208; output table adds   393,216 (1.30 x)
+    s2: 6N per token    674,496; output table adds   589,824 (0.87 x)
+    s3: 6N per token  1,194,240; output table adds   786,432 (0.66 x)
+    s4: 6N per token  2,676,096; output table adds 1,179,648 (0.44 x)
+    s5: 6N per token  4,747,776; output table adds 1,572,864 (0.33 x)
+    an 'equal-compute' pair s1 and s5 under 6ND really differs by 1.73 x in arithmetic
+  Breakage 3: extrapolating past the data
+    N 1e+07: line 4.207, floor fit 4.495
+    N 1e+08: line 3.684, floor fit 4.299
+    N 1e+09: line 3.226, floor fit 4.189
+  Breakage 4: embeddings counted
+    line alpha 0.0576 (non-embedding) -> 0.0723 (total); floor fit 0.2518 -> 0.4124
+  Breakage 5: reading a long run's middle as if it were a short run
+    s3 at step 384 inside the 3,072-step cosine run: 4.9490;  s3 trained for 384 steps with its own decay: 5.2074
+
+Part 3. checkpoints
+  [pass] tiny/scaling.py changes nothing about Tiny: 2,766,592 learned numbers
+  [pass] the six sizes are counted from their tables: 50,368, 112,416, 199,040, 446,016, 791,296, 1,776,768
+  [pass] fit_floor recovers a planted law (synthetic: E 3, A 9, alpha 0.35): E 3.0000 alpha 0.3500
+  [pass] isoflop_minimum finds a planted bottom at N = 50,000 (synthetic): 50,000.0
+  [pass] every size sits on the floor fit within the smallest order spread: largest miss 0.0079 < 0.0447
+  [pass] 32-bit products repeat exactly at one thread (BF16 products do not; see repro_probe.py): fp32: first differing step None, largest difference 0
+  [pass] 6ND for s5 at one pass: 1.8669e+12
+
+  the fitted exponent (five means, lr 1e-3): floor fit 0.25, straight line 0.06
+
+7 of 7 checkpoints pass

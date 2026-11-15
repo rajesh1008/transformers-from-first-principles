@@ -1,0 +1,21 @@
+gpt2         'strawberry'    3 token(s): st | raw | berry             ids [301, 1831, 8396]
+gpt2         ' strawberry'   1 token(s): ␣strawberry                  ids [41236]
+gpt2         'Strawberry'    3 token(s): St | raw | berry             ids [1273, 1831, 8396]
+gpt2         'STRAWBERRY'    4 token(s): ST | RAW | BER | RY          ids [2257, 20530, 13246, 18276]
+
+cl100k_base  'strawberry'    3 token(s): str | aw | berry             ids [496, 675, 15717]
+cl100k_base  ' strawberry'   1 token(s): ␣strawberry                  ids [73700]
+cl100k_base  'Strawberry'    3 token(s): Str | aw | berry             ids [2645, 675, 15717]
+cl100k_base  'STRAWBERRY'    4 token(s): ST | RAW | B | ERRY          ids [790, 22275, 33, 73995]
+
+o200k_base   'strawberry'    3 token(s): st | raw | berry             ids [302, 1618, 19772]
+o200k_base   ' strawberry'   1 token(s): ␣strawberry                  ids [101830]
+o200k_base   'Strawberry'    3 token(s): Str | aw | berry             ids [3504, 1134, 19772]
+o200k_base   'STRAWBERRY'    4 token(s): ST | RAW | B | ERRY          ids [1117, 46176, 33, 132354]
+
+letters in 'strawberry': 10; the letter r appears 3 times
+  piece 'st'     id   301  contains 0 r
+  piece 'raw'    id  1831  contains 1 r
+  piece 'berry'  id  8396  contains 2 r
+
+spelled out, 's t r a w b e r r y': 10 tokens: s | ␣t | ␣r | ␣a | ␣w | ␣b | ␣e | ␣r | ␣r | ␣y

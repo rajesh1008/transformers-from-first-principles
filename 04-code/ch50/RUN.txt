@@ -1,0 +1,8 @@
+Chapter 50 lab (tick 38, 12-13 November 2026). CPU, one thread, 32-bit, seed 1865, transformers 5.22.1, torch 2.15.0.
+  Needs 04-code/ch29/ckpt/gpt2 and 04-code/ch29/ckpt/smollm2 (Chapter 29) and Qwen3-0.6B in ckpt/qwen3:
+    for f in config.json generation_config.json tokenizer.json tokenizer_config.json vocab.json merges.txt LICENSE model.safetensors; do
+      curl -sL -o ckpt/qwen3/$f https://huggingface.co/Qwen/Qwen3-0.6B/resolve/main/$f; done      # about 1.5 GB, Apache-2.0
+  python3 lab50.py     > logs/lab50.txt     # design, counts, pieces, attention tables, sink by layer, top-5, greedy 16 -> outputs/lab50.json
+  python3 heads50.py   > logs/heads50.txt   # strongest mat->cat head, share of heads parking on the first token -> outputs/heads50.json
+  python3 ../../03-figures/src/ch50_figs.py # fig50-01-sink, fig50-02-tables
+Zip note: exclude ckpt/ (downloaded weights) from the code zip.

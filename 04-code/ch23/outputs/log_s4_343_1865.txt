@@ -1,0 +1,1 @@
+s4_343             N  446,016 D   351,232 C 9.399e+11 passes 0.90  held-out Carroll 5.1209  Looking-Glass 5.2540  sentence 5.5525  last-24 batch 5.0960  31 s (91 ms/step)

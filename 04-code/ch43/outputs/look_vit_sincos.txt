@@ -1,0 +1,24 @@
+layer 0: mean attention distance by head 2.06 1.82 1.89 1.69  (patches' share of attention on the class row 0.046)
+layer 1: mean attention distance by head 1.92 1.94 1.94 1.85  (patches' share of attention on the class row 0.038)
+layer 2: mean attention distance by head 2.05 2.05 2.00 2.00  (patches' share of attention on the class row 0.050)
+layer 3: mean attention distance by head 1.87 1.90 2.04 1.93  (patches' share of attention on the class row 0.050)
+uniform attention over the grid would give 2.01
+first test image (label 3): last layer, class row's attention to the patches, mean over heads:
+   0.044 0.057 0.041 0.046
+   0.047 0.061 0.052 0.061
+   0.054 0.062 0.088 0.057
+   0.059 0.054 0.093 0.065
+   the image (pixel / 16, rounded to one decimal):
+   0.0 0.0 0.9 1.0 0.7 0.2 0.0 0.0
+   0.0 0.0 0.2 0.6 0.9 0.9 0.2 0.0
+   0.0 0.0 0.0 0.0 0.9 1.0 0.3 0.0
+   0.0 0.0 0.0 0.3 1.0 0.8 0.0 0.0
+   0.0 0.0 0.0 0.2 1.0 0.7 0.1 0.0
+   0.0 0.0 0.0 0.1 0.8 1.0 0.6 0.0
+   0.0 0.0 0.4 0.9 1.0 0.8 0.2 0.0
+   0.0 0.0 0.9 0.9 0.4 0.1 0.0 0.0
+occlusion: mean drop in the correct class's probability when one patch is blanked:
+   -0.000 0.129 0.167 0.003
+   0.003 0.327 0.232 0.002
+   0.007 0.304 0.082 0.027
+   0.000 0.232 0.244 0.018

@@ -1,0 +1,10 @@
+Tiny's pieces: ['the', '␣cat', '␣sat', '␣on', '␣the', '␣m', 'at']  rows (7, 128)
+same query numbers as Chapter 8's head: True | same keys: True | same values: True
+learned numbers: one head 49,152; four heads 49,152 + output table 16,384 = 65,536
+one head's raw table equals the sum of the four heads' raw tables: True
+
+largest raw score: one head 5.23e-04  four heads ['4.15e-04', '4.17e-04', '3.57e-04', '4.87e-04']
+entropy of the last row (7 seats; even split = ln 7 = 1.946):
+  one head of 128: 1.9459   four heads of 32: ['1.9459', '1.9459', '1.9459', '1.9459']
+an untrained head is an averager whatever its width: last row of head 0 -> [0.143, 0.143, 0.143, 0.143, 0.143, 0.143, 0.143]
+output rows (7, 128)  sum -0.030512

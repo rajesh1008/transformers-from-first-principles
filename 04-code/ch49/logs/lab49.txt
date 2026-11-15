@@ -1,0 +1,12 @@
+check 1, the 32-bit artefact gives the checkpoint's logits exactly: pass
+check 2, the 8-bit artefact keeps every top token on the running sentence: pass
+check 3, the 8-bit file is under 30 per cent of the 32-bit file: pass
+check 4, every file matches its manifest hash: pass
+check 5, the .pt checkpoint holds a pickle program that imports code: pass
+check 6, 10,000 requests were logged: pass
+check 7, the first request was the running sentence and succeeded: pass
+check 8, before the 8-bit swap every probe matched Monday's exactly: pass
+check 9, after the 8-bit swap the probes moved, but no top token changed: pass
+check 10, breakage visible: with the wrong tokenizer, errors appear and the share of known words falls by over 20 points: pass
+check 11, the 400 and 413 checks rejected the malformed requests: pass
+11 of 11 checks pass

@@ -1,0 +1,7 @@
+"at" is followed by a word 212 times, by 34 different words
+  at the     60 times  28.3%
+  at all     25 times  11.8%
+  at last    19 times  9.0%
+  at once    18 times  8.5%
+  at this    10 times  4.7%
+  at her     10 times  4.7%

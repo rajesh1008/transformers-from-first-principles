@@ -1,0 +1,25 @@
+Chapter 44: reasoning models and test-time compute.  CPU, 32-bit, seed 1865 unless named; 12 November 2026 (tick 33 runs; closed tick 34).
+
+python3 hosted_effort.py   # Claude Haiku 4.5, 30 four-digit multiplications (seed 1865), extended thinking off / budget 1,024 / 4,096
+                           # (key read from ../../.env, never printed); writes outputs/hosted_effort.json and .txt
+./run_all.sh               # two-digit addition, direct and scratchpad, seeds 1865 and 2, 2,000 steps, two threads each
+./run_four.sh              # four-digit addition (DIGITS=4), direct and scratchpad, 1,500 steps; then budget.py on the scratchpad
+                           # models (cut the working after k characters) and majority votes of 1, 5 and 15 samples at temperature 1.0
+NAME=direct4_long FORMAT=direct DIGITS=4 THREADS=4 STEPS=4500 python3 add.py   # the direct four-digit model trained three times as long
+
+python3 ssm.py             # state-space layer: recurrence = convolution (time-invariant), no single kernel (selective), cache vs state bytes (tick 34)
+python3 lengths.py         # characters written per answer and supervised characters in training, per format (tick 34)
+python3 lab44.py           # the chapter's checks, 9/9 pass (tick 34)
+python3 ../../03-figures/src/ch44_figs.py   # (from the project root) fig44-01-addition, fig44-02-memory
+
+Headline results:
+Hosted: thinking off 2/30 exact (7 output tokens, 0.5 s median); budget 1,024: 29/30 (403 tokens, 2.5 s); budget 4,096: 30/30 (710 tokens, 4.1 s).
+Two digits (801,552 learned numbers; 1,620 held-out sums): direct 1.0000 and scratchpad 1.0000 at both seeds.
+Four digits (805,648; 2,000 held-out sums): direct 0.0140; scratchpad 0.9995.
+Cutting the working (1,000 held-out pairs): two digits 0 chars 0.000, 6 chars 0.025, 14 chars 0.459, 16 chars 1.000;
+four digits 0 to 27 chars 0.000, 32 chars 0.064, 36 chars 0.999.
+Voting at temperature 1.0 (1 / 5 / 15 samples): two-digit scratchpad 0.997 / 1.000 / 1.000; two-digit direct 0.997 / 1.000 / 1.000;
+four-digit scratchpad 0.979 / 0.998 / 0.999; four-digit direct 0.005 / 0.005 / 0.007.
+State-space arithmetic: recurrence vs convolution 2.66e-15; best fixed kernel misses 2.31e-30 (time-invariant) and 1.209 (selective) of the variance;
+Tiny cache 12,288 bytes/token; 12-layer state-space stack 233,472 bytes at any length.  Lab 44: 9 of 9.
+Wall-clock seconds are from parallel runs on a shared CPU and are not speed results.  Checkpoints in outputs/ckpt/ are not in the code zip.

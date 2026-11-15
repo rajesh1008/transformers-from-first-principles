@@ -1,0 +1,33 @@
+Chapter 28, Decoding Strategies in Depth (tick 20, begun).  Run from 04-code/ch28 on the book's build machine (CPU, 8 cores,
+PyTorch 2.15.0+cpu), 11 Nov 2026 about 12:13 to 12:17 IST.  One thread, 32-bit, seed 1865 (tiny/seed.py's 'sample' stream).
+Model: Chapter 24's 2,500-step WSD run, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.  Generation through ../tiny/generate.py.
+
+    python3 -u typical.py  > outputs/typical.txt   (.json) surprise against entropy; locally typical sampling; about 35 s
+    python3 -u adaptive.py > outputs/adaptive.txt  (.json) eta-sampling and Mirostat v2; about 25 s
+
+What went wrong: typical.py's first run counted 2,049 kept tokens at some steps for tau 1.0 (searchsorted past the end when the
+cumulative shares rounded below 1.0; mean printed 2048.5); capped at the vocabulary size and rerun; other rows unchanged.
+_common.py and _pool.py copied from ch27.  No hosted-model call; the API key was not used.  Sections 28.5 onwards not written.
+
+Tick 21 (11 Nov 2026, about 14:02 to 14:08 IST), same machine and settings:
+    python3 -u contrastive.py       > outputs/contrastive.txt       (.json) 28.5; expert b2000, amateurs b500 / b1000; about 20 s
+    python3 -u fair.py              > outputs/fair.txt              (.json) 28.6; 5 rules x 5 settings x seeds 1865 / 7 / 11; about 4 min
+    python3 -u exact_constrained.py > outputs/exact_constrained.txt (.json) 28.7; six names and a digits grammar; about 25 s
+    python3 -u best_of_n.py         > outputs/best_of_n.txt         (.json) 28.8; best-of-n and voting; about 3 min
+    python3 -u lab28.py             > outputs/lab28.txt             Lab 28, 6 of 6 checkpoints; about 2 s
+    python3 ../../03-figures/src/ch28_figs.py (from the root: python3 03-figures/src/ch28_figs.py) fig28-01 to fig28-04
+tiny/generate.py gained probs, entropy, typical_shares, eta_shares, mirostat_step, contrastive_scores, exact_option_shares
+(appended; Chapter 27's functions unchanged).
+What went wrong:
+- exact_constrained.py was written for tokens such as ' 18' with a leading space; Tiny's 2,048-token vocabulary has none, and
+  only the ten single digits '0' to '9' as digit tokens.  The grammar therefore has one spelling per number and no shared
+  first step that leads to dead ends, and masking and exact sampling nearly agree (total variation 0.004 to 0.027).  Kept as
+  a finding; the chapter says so.  The leading-space case could not be built on Tiny.
+- fair.py interpolates each rule's invented-word share at a common surprise.  Locally typical sampling's mean surprise does not
+  move in one direction with tau on Tiny (3.70, 3.60, 3.41, 3.43, 3.68 at 0.2 to 0.95 on seed 1865), so its interpolated
+  values sort the points by surprise and are not a curve in tau; min-p never reaches surprise 3.4 and typical never comes
+  down to 2.6, so those cells are blank.  Reported as such.
+- best_of_n.py Part B: Tiny's next-word accuracy on held-out text is low (greedy 14 of 150), so the vote comparison rests on
+  7 to 14 hits per row; differences of two or three hits are noise and the chapter does not rank the vote against one sample.
+- lab28.py's breakage 2 first built the wrong ordering with a leftover variable; rewritten for clarity, output unchanged.
+No hosted-model call; lab28 reads the key from .env into its own process only to check it is absent from 04-code/ch28.

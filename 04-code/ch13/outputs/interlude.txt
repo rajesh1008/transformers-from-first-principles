@@ -1,0 +1,18 @@
+the list: [2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0]
+average: sum 40 / 8 = 5.000
+distances from the average: [-3.0, -1.0, -1.0, -1.0, 0.0, 0.0, 2.0, 4.0] | they always sum to 0.0
+squared distances: [9.0, 1.0, 1.0, 1.0, 0.0, 0.0, 4.0, 16.0] | their average 4.000
+spread = square root of that average = 2.000
+normalised list (distance / spread): [-1.5, -0.5, -0.5, -0.5, 0.0, 0.0, 1.0, 2.0]
+  its average 0.000, its spread 1.000
+  with eps = 1e-5 inside the root (what the code does): [-1.5, -0.5, -0.5, -0.5, 0.0, 0.0, 1.0, 2.0]
+
+the list times 10, plus 3: [23.0, 43.0, 43.0, 43.0, 53.0, 53.0, 73.0, 93.0]
+  average 53.000, spread 20.000
+  normalised: [-1.5, -0.5, -0.5, -0.5, 0.0, 0.0, 1.0, 2.0] | same as before: True
+
+what normalising keeps and what it throws away:
+  keeps: the order of the numbers and how far apart they are compared with the spread
+  throws away: the average (3 or 53) and the overall size (spread 2 or 20)
+
+the spread with d - 1 instead of d (the 'sample' spread some libraries default to): 2.1381 against 2.0000; ratio 1.0690 = sqrt(8/7)

@@ -1,0 +1,10 @@
+model                     layers kv-heads x per-head bytes  per token     at full context        (context)
+  Tiny (Chapter 24)          12     4 x  32   32-bit    12,288 B          1.5 MiB  (128 tokens)
+  GPT-2 small                12    12 x  64   32-bit    73,728 B         72.0 MiB  (1,024 tokens)
+  SmolLM2-135M               30     3 x  64   BF16      23,040 B        180.0 MiB  (8,192 tokens)
+  Qwen3-0.6B (config only)   28     8 x 128   BF16     114,688 B       4480.0 MiB  (40,960 tokens)
+
+measured (the running sentence, then per token):
+  SmolLM2-135M: per layer K [3, 6, 64]; 69,120 numbers; 46,080 bytes per token in 32-bit = by hand 46,080; (9 query heads would need 138,240)
+  cached prefill equals the plain pass: max |score difference| 0.00e+00
+  SmolLM2 greedy 32 tokens cached == uncached: True; cached 1.62 s, uncached 4.14 s

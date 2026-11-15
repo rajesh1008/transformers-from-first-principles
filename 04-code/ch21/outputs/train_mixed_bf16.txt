@@ -1,0 +1,1 @@
+bf16         mixed: BF16 products, 32-bit master tables, Adam and loss  held-out 7.6530 -> 5.2447 (lowest 5.2447); batch last 25 4.5344; 122 s

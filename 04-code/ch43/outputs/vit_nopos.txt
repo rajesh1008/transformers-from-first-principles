@@ -1,0 +1,8 @@
+vit_nopos: patch 2x2, 16 patches + 1 class row, width 64, 4 layers, 4 heads, positions none, pool cls; learned numbers 201,098
+epoch   1  train loss 2.3303  test accuracy 0.0861
+epoch   2  train loss 2.2983  test accuracy 0.0889
+epoch   5  train loss 1.5275  test accuracy 0.4556
+epoch  10  train loss 0.8652  test accuracy 0.7222
+epoch  20  train loss 0.2175  test accuracy 0.8111
+epoch  30  train loss 0.0739  test accuracy 0.8222
+test accuracy 0.8222; with patches shuffled at test time 0.8222  (26 s)

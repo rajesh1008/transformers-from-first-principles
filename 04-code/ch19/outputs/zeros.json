@@ -1,0 +1,49 @@
+{
+ "all_zeros": {
+  "loss": 7.6246189861593985,
+  "nonzero_tables": []
+ },
+ "zeros": {
+  "loss": 7.792346270619917,
+  "moving": [
+   "E",
+   "P",
+   "h.0.ff.b_2",
+   "h.1.ff.b_2",
+   "h.2.ff.b_2",
+   "h.3.ff.b_2",
+   "h.4.ff.b_2",
+   "h.5.ff.b_2",
+   "h.6.ff.b_2",
+   "h.7.ff.b_2",
+   "h.8.ff.b_2",
+   "h.9.ff.b_2",
+   "h.10.ff.b_2",
+   "h.11.ff.b_2",
+   "ln_f.gain",
+   "ln_f.bias"
+  ],
+  "still_kinds": [
+   "att.W_k",
+   "att.W_o",
+   "att.W_q",
+   "att.W_v",
+   "ff.W_1",
+   "ff.W_2",
+   "ff.b_1",
+   "ln_1.bias",
+   "ln_1.gain",
+   "ln_2.bias",
+   "ln_2.gain"
+  ],
+  "max_W_after": 0.0
+ },
+ "constant": {
+  "distinct_W1": 1,
+  "distinct_Wq": 1,
+  "loss": [
+   7.6223520818806865,
+   6.392714669212471
+  ]
+ }
+}

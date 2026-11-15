@@ -1,0 +1,1 @@
+{"prune": "units50", "mode": "none", "steps": 0, "nonzero": 1977088, "total": 2766592, "after_prune": 2.240081928883694, "curve": [[0, 2.240081928883694]], "final": 2.240081928883694, "seconds": 0.009587500000634464, "pruned_positions_still_zero": true}

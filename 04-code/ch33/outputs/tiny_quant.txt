@@ -1,0 +1,26 @@
+Part H: one 768 x 3,072 map and its 3,072 x 768 partner, 200 calls, best of 5
+/home/box/.local/lib/python3.13/site-packages/torch/ao/nn/quantized/modules/linear.py:162: UserWarning: torch.quantize_per_tensor, torch.quantize_per_channel and other quantized tensor creation functions that produce tensors with dtype torch.quint8, torch.qint8, and torch.qint32 are deprecated and will be removed in a future PyTorch release. Please see https://github.com/pytorch/pytorch/issues/184982 for more information. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/quantized/Quantizer.cpp:111.)
+  qweight = torch._empty_affine_quantized(
+   768 -> 3072,  1 rows: 32-bit    337.6 us | BF16    178.6 us (1.89 x) | int8 dynamic     92.4 us (3.65 x)
+   768 -> 3072, 64 rows: 32-bit   2296.4 us | BF16    636.0 us (3.61 x) | int8 dynamic    559.1 us (4.11 x)
+  3072 ->  768,  1 rows: 32-bit    355.2 us | BF16    237.2 us (1.50 x) | int8 dynamic     96.4 us (3.68 x)
+  3072 ->  768, 64 rows: 32-bit   2574.5 us | BF16   1008.5 us (2.55 x) | int8 dynamic    620.5 us (4.15 x)
+
+Part I: Tiny, every 2-D table rounded; bits per character on held-out Carroll, windows of 129
+  32-bit: 1.9812; 2,766,592 numbers, 11,066,368 bytes; linear maps 2,359,296 numbers, token table 262,144
+  8-bit per output channel maps only         : 1.9812 (+0.0000); 4,016,128 bytes ( 2.8 x smaller)
+  8-bit per output channel maps + token table: 1.9813 (+0.0001); 3,233,792 bytes ( 3.4 x smaller)
+  8-bit per 32 inputs      maps only         : 1.9812 (+0.0000); 4,135,936 bytes ( 2.7 x smaller)
+  8-bit per 32 inputs      maps + token table: 1.9813 (+0.0001); 3,365,888 bytes ( 3.3 x smaller)
+  4-bit per output channel maps only         : 1.9833 (+0.0022); 2,836,480 bytes ( 3.9 x smaller)
+  4-bit per output channel maps + token table: 1.9899 (+0.0087); 1,923,072 bytes ( 5.8 x smaller)
+  4-bit per 32 inputs      maps only         : 1.9819 (+0.0007); 2,956,288 bytes ( 3.7 x smaller)
+  4-bit per 32 inputs      maps + token table: 1.9901 (+0.0089); 2,055,168 bytes ( 5.4 x smaller)
+  3-bit per output channel maps only         : 1.9981 (+0.0169); 2,541,568 bytes ( 4.4 x smaller)
+  3-bit per output channel maps + token table: 2.0554 (+0.0743); 1,595,392 bytes ( 6.9 x smaller)
+  3-bit per 32 inputs      maps only         : 1.9909 (+0.0097); 2,661,376 bytes ( 4.2 x smaller)
+  3-bit per 32 inputs      maps + token table: 2.0304 (+0.0492); 1,727,488 bytes ( 6.4 x smaller)
+  2-bit per output channel maps only         : 2.4295 (+0.4483); 2,246,656 bytes ( 4.9 x smaller)
+  2-bit per output channel maps + token table: 3.2174 (+1.2363); 1,267,712 bytes ( 8.7 x smaller)
+  2-bit per 32 inputs      maps only         : 2.1755 (+0.1943); 2,366,464 bytes ( 4.7 x smaller)
+  2-bit per 32 inputs      maps + token table: 2.7898 (+0.8087); 1,399,808 bytes ( 7.9 x smaller)

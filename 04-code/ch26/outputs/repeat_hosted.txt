@@ -1,0 +1,4 @@
+temperature 0 accepted? no: ERROR 400 {"type":"error","error":{"type":"invalid_request_error","message":"`temperature` is deprecated for this model."},"request_id":"req_011CgvWp13xcu8DJywm
+P1: 2 distinct replies in 20; most common [('mat', 14), ('Mat', 6)]
+P2: 17 distinct replies in 20; most common [('B', 4), ('This is from Through the Looking-Glass, the Alice chess chapter, where the Red and White pieces are listed. The passage', 1), ('This is from Through the Looking-Glass, Chapter 2 (Looking-Glass House), where the chess board is described and the', 1)]
+P3: 11 distinct replies in 20; most common [('A cat sat contentedly on the mat, basking in the warm afternoon sunlight.', 5), ('A cat sat peacefully on the mat, basking in the warm afternoon sun.', 3), ('A cat sat contentedly on the mat, basking in the warm afternoon sun.', 3)]

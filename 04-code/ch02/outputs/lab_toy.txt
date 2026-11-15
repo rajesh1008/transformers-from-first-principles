@@ -1,0 +1,22 @@
+pieces in the novel: 34,646; known to the toy vocabulary: 2,842 (8.2%)
+how often each toy word occurs:
+  <unk>   31,804
+  the      1,651
+  a          637
+  at         212
+  on         193
+  rabbit      49
+  looked      45
+  cat         35
+  sat         17
+  dog          2
+  hat          1
+
+the story's first fifteen words: 'Alice was beginning to get very tired of sitting by her sister on the bank,'
+as toy ids:             [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 3, 0, 11, 11]
+decoded:                '<unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> on the <unk> <unk>'
+
+BREAKAGE: strict mode, no <unk> fallback, on 'the cats sat on the mat'
+  KeyError: 'cats'
+
+checkpoint: 'the cat sat on the mat' -> [0, 1, 2, 3, 0, 4]

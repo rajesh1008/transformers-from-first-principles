@@ -1,0 +1,6 @@
+UTF-8 bytes:       151,094
+characters:        144,599   vocabulary     75 different characters
+words and marks:    34,646   vocabulary  2,655 different words and marks
+GPT-2 tokens:       44,525   vocabulary 50,257 (used here: 3,765)
+characters per GPT-2 token: 3.25
+characters outside plain ASCII: ù — ‘ ’ “ ”

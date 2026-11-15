@@ -1,0 +1,9 @@
+one head, width 64, 16-bit numbers, no causal saving (counts are for the full table)
+      n |           FLOPs |     plain bytes |   tiled bytes | plain FLOP/B | tiled FLOP/B | n x n table
+  1,024 |     268,435,456 |       8,912,896 |     2,359,296 |         30.1 |        113.8 | 2 MiB
+  4,096 |   4,294,967,296 |     136,314,880 |    34,603,008 |         31.5 |        124.1 | 32 MiB
+ 16,384 |  68,719,476,736 |   2,155,872,256 |   541,065,216 |         31.9 |        127.0 | 512 MiB
+ 65,536 | 1,099,511,627,776 |  34,393,292,800 | 8,606,711,808 |         32.0 |        127.8 | 8,192 MiB
+
+GPT-2 small, 12 heads x 12 layers, n = 1,024: score and share tables written and read per forward pass,
+  plain: 1.12 GiB of traffic for scores and shares alone; Q, K, V and outputs: 72.0 MiB

@@ -1,0 +1,12 @@
+product                                                   shapes        answer  multiplications     additions
+toy table: X @ X.T                               (6, 2) @ (2, 6)        (6, 6)               72            36
+columns with columns: X.T @ X                    (2, 6) @ (6, 2)        (2, 2)               24            20
+one dot product: row @ column                    (1, 2) @ (2, 1)        (1, 1)                2             1
+Tiny's sentence: block @ block.T             (7, 128) @ (128, 7)        (7, 7)            6,272         6,223
+Tiny's full window: W @ W.T            (1024, 128) @ (128, 1024)  (1024, 1024)      134,217,728   133,169,152
+one token scored against 2,048 rows       (1, 128) @ (128, 2048)     (1, 2048)          262,144       260,096
+a window scored against 2,048 rows     (1024, 128) @ (128, 2048)  (1024, 2048)      268,435,456   266,338,304
+
+full window: 1,048,576 dot products of 128 numbers = 267,386,880 operations (about 2 x 1024 x 1024 x 128 = 268,435,456)
+refused: cannot multiply (6, 2) by (6, 2): inner sizes 2 and 6 differ
+refused: cannot multiply (7, 128) by (7, 128): inner sizes 128 and 7 differ

@@ -1,0 +1,17 @@
+running sentence, hand head: N=6 m=2 d=2
+   making Q, K, V              144  (33%)   scores              144  (33%)   blend              144  (33%)
+   share table 36 numbers = 0.0 MiB at 16 bits
+Tiny, one full window: N=1,024 m=128 d=128
+   making Q, K, V      100,663,296  (16%)   scores      268,435,456  (42%)   blend      268,435,456  (42%)
+   share table 1,048,576 numbers = 2.0 MiB at 16 bits
+GPT-2 small, one head, full window: N=1,024 m=768 d=64
+   making Q, K, V      301,989,888  (53%)   scores      134,217,728  (24%)   blend      134,217,728  (24%)
+   share table 1,048,576 numbers = 2.0 MiB at 16 bits
+GPT-2 small, one head, 8,192 tokens: N=8,192 m=768 d=64
+   making Q, K, V    2,415,919,104  (12%)   scores    8,589,934,592  (44%)   blend    8,589,934,592  (44%)
+   share table 67,108,864 numbers = 128.0 MiB at 16 bits
+
+length at which the two N x N steps cost as much as making Q, K and V (N = 1.5 x m):
+   model width   128: N = 192
+   model width   768: N = 1,152
+   model width  4096: N = 6,144

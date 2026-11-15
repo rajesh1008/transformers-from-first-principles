@@ -1,0 +1,31 @@
+32-bit: 1.5640
+
+Part A: unstructured sparsity in the 48 linear maps
+  table    10% zeroed: 1.5617 (-0.0023)
+  table    30% zeroed: 1.6959 (+0.1319)
+  table    50% zeroed: 2.5640 (+0.9999)
+  table    60% zeroed: 3.1332 (+1.5691)
+  table    70% zeroed: 3.6001 (+2.0360)
+  table    80% zeroed: 4.0379 (+2.4739)
+  channel  10% zeroed: 1.5652 (+0.0011)
+  channel  30% zeroed: 1.6189 (+0.0548)
+  channel  50% zeroed: 2.1067 (+0.5427)
+  channel  60% zeroed: 2.6523 (+1.0882)
+  channel  70% zeroed: 3.3413 (+1.7772)
+  channel  80% zeroed: 3.7178 (+2.1537)
+  wanda    10% zeroed: 1.5667 (+0.0027)
+  wanda    30% zeroed: 1.5923 (+0.0283)
+  wanda    50% zeroed: 1.7601 (+0.1961)
+  wanda    60% zeroed: 2.0869 (+0.5228)
+  wanda    70% zeroed: 2.8375 (+1.2735)
+  wanda    80% zeroed: 3.7255 (+2.1614)
+  random   30% zeroed: 4.1991 (+2.6350)
+  random   50% zeroed: 4.3246 (+2.7605)
+
+Part B: whole feed-forward units against single weights in the two feed-forward maps
+  remove 10% of the 3,072 feed-forward units in every layer: 1.8650 (+0.3010)
+  zero 10% of the weights of both feed-forward maps (smallest per output channel): 1.5650 (+0.0010)
+  remove 25% of the 3,072 feed-forward units in every layer: 2.2551 (+0.6910)
+  zero 25% of the weights of both feed-forward maps (smallest per output channel): 1.5613 (-0.0028)
+  remove 50% of the 3,072 feed-forward units in every layer: 2.9136 (+1.3495)
+  zero 50% of the weights of both feed-forward maps (smallest per output channel): 1.8230 (+0.2589)

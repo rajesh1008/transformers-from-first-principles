@@ -1,0 +1,19 @@
+Part 1. predict, then read
+  cache after the running sentence: 442,368 bytes; by hand 2 x 12 x 12 x 64 x 4 x 6 = 442,368
+  a 4,096-token conversation would hold 288 MiB (beyond GPT-2's 1,024 positions; arithmetic only)
+
+Part 2. two breakages
+  Breakage 1, prefix store keyed on tokens: miss, prefix recomputed  max |log-prob diff| against a fresh pass 0.000e+00
+  Breakage 1, prefix store keyed on length: hit, old prefix reused   max |log-prob diff| against a fresh pass 2.512e+00
+  Breakage 2, position never advanced: ' the the the,,,,,,,,,,,,,'
+     correct:                         ' the other two, and then at the other two.\n\n"I\'m'
+
+Part 3. checkpoints
+[pass] cached and uncached greedy decoding write the same 16 tokens after a 256-token prompt
+       tokens per second: cached 12.1, uncached 1.7
+[pass] the cache is faster than recomputation after a 256-token prompt
+[pass] the cache's bytes equal the hand formula for the running sentence
+[pass] a prefix store keyed on tokens misses after a one-token edit and hits on the same tokens
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch30
+
+5 of 5 checkpoints pass

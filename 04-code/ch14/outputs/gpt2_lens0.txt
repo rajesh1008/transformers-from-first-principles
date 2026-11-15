@@ -1,0 +1,4 @@
+GPT-2 small, height 0 through the Logit Lens, 1024 seats (seat 0 = end-of-text), float32
+  seats whose top guess is their own token: 0.650
+  average share given to the own token: 0.643; median 0.999
+  seats 1 to 1023 only: own-token top 0.650, average own share 0.643

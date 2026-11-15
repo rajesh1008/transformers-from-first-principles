@@ -1,0 +1,52 @@
+{
+ "model": "claude-haiku-4-5-20251001",
+ "n": 30,
+ "conditions": [
+  {
+   "budget": 0,
+   "exact": 2,
+   "mean_out": 7.0,
+   "median_seconds": 0.47533779500008677,
+   "errors": 0,
+   "wrong_examples": [
+    [
+     3751,
+     7682,
+     "28797682"
+    ],
+    [
+     1504,
+     6558,
+     "9862032"
+    ],
+    [
+     1681,
+     4317,
+     "7257477"
+    ]
+   ]
+  },
+  {
+   "budget": 1024,
+   "exact": 29,
+   "mean_out": 402.73333333333335,
+   "median_seconds": 2.52660891099913,
+   "errors": 0,
+   "wrong_examples": [
+    [
+     1952,
+     2603,
+     "4080056"
+    ]
+   ]
+  },
+  {
+   "budget": 4096,
+   "exact": 30,
+   "mean_out": 709.8666666666667,
+   "median_seconds": 4.1151316320010665,
+   "errors": 0,
+   "wrong_examples": []
+  }
+ ]
+}

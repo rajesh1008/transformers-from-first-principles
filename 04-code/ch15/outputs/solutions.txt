@@ -1,0 +1,21 @@
+Exercise 1 (by hand): cat@1's layer 0 shares from scaled scores 2.600 and 1.697
+  e^ 13.464, 5.458; total 18.921; shares 0.712, 0.288
+Exercise 2 (by hand): RMSNorm of on@3's row (0.5, -1)
+  rms 0.791; normed [0.632, -1.265]
+Exercise 3 (by hand): the feed-forward block on the@0's layer 0 row after ln_2, (1.359, 0.391)
+  matches [1.359, 0.391, -0.25]; ReLU [1.359, 0.391, 0.0]; writes [0.196, 0.679]
+Exercise 4 (by hand): the score for 'dog' after mat@5, top row after ln_f (1.042, 0.957), dog's row (0, 2)
+  1.914
+
+baseline: top words ['looked', 'looked', 'looked', 'looked', 'looked', 'looked']; average surprise 3.3313
+Exercise 5 (in code): W_q set to the identity in both layers
+  top words ['looked', 'looked', 'looked', 'looked', 'looked', 'looked']; average surprise 3.3285; sat@2's layer 0 shares [0.274, 0.414, 0.312]
+Exercise 6 (in code): neuron 3's bias -2 changed to -1
+  layer 0: neuron 3 matches [0.75, 0.975, 0.871, 0.116, 0.912, 0.601]; fires for ['the@0', 'cat@1', 'sat@2', 'on@3', 'the@4', 'mat@5']
+  layer 1: neuron 3 matches [0.919, 0.995, 0.97, 0.776, 0.981, 0.996]; fires for ['the@0', 'cat@1', 'sat@2', 'on@3', 'the@4', 'mat@5']
+  top words ['looked', 'looked', 'looked', 'looked', 'looked', 'looked']; average surprise 3.2257
+Exercise 7 (in code): the same tables stacked three and four layers deep
+  1 layer(s): token similarity by height [0.3, 0.89]; top words ['looked']; average surprise 3.3060; share of 'looked' after mat@5 0.246
+  2 layer(s): token similarity by height [0.3, 0.89, 0.967]; top words ['looked']; average surprise 3.3313; share of 'looked' after mat@5 0.365
+  3 layer(s): token similarity by height [0.3, 0.89, 0.967, 0.985]; top words ['looked']; average surprise 3.3394; share of 'looked' after mat@5 0.377
+  4 layer(s): token similarity by height [0.3, 0.89, 0.967, 0.985, 0.992]; top words ['looked']; average surprise 3.3432; share of 'looked' after mat@5 0.380

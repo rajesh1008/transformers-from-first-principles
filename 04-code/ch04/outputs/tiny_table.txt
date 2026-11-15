@@ -1,0 +1,17 @@
+Tiny's table: 2,048 rows x 128 numbers = 262,144 numbers = 1,048,576 bytes at 4 bytes each
+'the cat sat on the mat' -> Tiny ids [363, 725, 973, 327, 262, 283, 303] -> 7 rows of 128 numbers
+toy row (2 numbers, for hand work)  ->  Tiny row (128 numbers, for code)
+  the   toy [1, 0]         Tiny id  363: first 4 = [0.0215, 0.0009, 0.0055, -0.0367]
+  ␣cat  toy [0, 1]         Tiny id  725: first 4 = [0.013, -0.0109, -0.0107, 0.0103]
+  ␣sat  toy [1, 1]         Tiny id  973: first 4 = [-0.0166, 0.0215, 0.0243, -0.0017]
+  ␣on   toy [1, -1]        Tiny id  327: first 4 = [-0.0167, 0.0158, 0.029, -0.0152]
+  ␣the  toy [1, 0]         Tiny id  262: first 4 = [-0.0041, -0.0056, -0.0058, -0.0138]
+  ␣m    toy (half of mat)  Tiny id  283: first 4 = [-0.0388, -0.0139, -0.0394, 0.0043]
+  at    toy (half of mat)  Tiny id  303: first 4 = [-0.0011, 0.0071, -0.0173, 0.0124]
+length of the row for ' cat' (id 725): 0.206; expected about 0.02 x sqrt(128) = 0.226
+
+rows the novel will ever train: 1,792 of 2,048; never used by the novel: 256
+random arrows in   2 dimensions: average size of cosine 0.631; within 10 degrees of a right angle 11%
+random arrows in  16 dimensions: average size of cosine 0.201; within 10 degrees of a right angle 50%
+random arrows in 128 dimensions: average size of cosine 0.070; within 10 degrees of a right angle 95%
+random arrows in 768 dimensions: average size of cosine 0.029; within 10 degrees of a right angle 100%

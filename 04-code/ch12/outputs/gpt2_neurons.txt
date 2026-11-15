@@ -1,0 +1,62 @@
+A. Key against value, cosine per neuron (3,072 per layer):
+   layer | median  | share > 0.5 | share < -0.5 | lowest  | highest
+       0 |   0.128 |       0.001 |        0.054 |  -0.773 |   0.547
+       1 |  -0.478 |       0.131 |        0.472 |  -0.894 |   0.820
+       2 |  -0.077 |       0.005 |        0.315 |  -0.885 |   0.717
+       3 |  -0.066 |       0.003 |        0.206 |  -0.870 |   0.622
+       4 |  -0.130 |       0.004 |        0.218 |  -0.868 |   0.759
+       5 |  -0.090 |       0.005 |        0.243 |  -0.857 |   0.563
+       6 |  -0.106 |       0.004 |        0.229 |  -0.843 |   0.657
+       7 |  -0.105 |       0.005 |        0.182 |  -0.827 |   0.609
+       8 |  -0.124 |       0.004 |        0.121 |  -0.865 |   0.633
+       9 |  -0.118 |       0.005 |        0.064 |  -0.857 |   0.708
+      10 |  -0.122 |       0.007 |        0.033 |  -0.865 |   0.730
+      11 |  -0.095 |       0.005 |        0.014 |  -0.861 |   0.746
+
+B. Values through the token table (top tokens pushed up / down), most selective neurons:
+  layer 10: median kurtosis of value-through-vocabulary scores 3.2
+    neuron 10.888   kurtosis    77.8 | up: [')]', ')', "')", '])', ']'] | down: ['␣guiName', '␣."', '%.', 'ãĢİ', '␣,"']
+    neuron 10.696   kurtosis    69.4 | up: ['.")', ')",', ')."', '),"', ')"'] | down: ['␣Â·', '␣âĸº', '␣Â«', '␣=>', '␣]']
+    neuron 10.897   kurtosis    42.4 | up: [')?', '?', "'?", '?"', '␣?'] | down: ['ãĢĳ', 'jong', '.")', '");', '.}']
+    neuron 10.738   kurtosis    42.1 | up: ['jong', '/âĢĭ', 'ãĢĳ', 'mast', 'gm'] | down: [')?', '?', '?).', '?),', '?"']
+  layer 11: median kurtosis of value-through-vocabulary scores 3.3
+    neuron 11.2270  kurtosis    37.5 | up: ['eff', '²¾', 'ħ', 'ãĤ´ãĥ³', 'rox'] | down: [')"', ')."', '\'."', ')",', ']"']
+    neuron 11.178   kurtosis    27.2 | up: ['␣(', '␣the', ':', '-', '␣in'] | down: ['])', '.")', ']).', ')]', ']."']
+    neuron 11.2294  kurtosis    25.8 | up: ['␣"', '␣the', ',', '␣in', '␣('] | down: ['\',"', ',\'"', '\'."', '!\'"', '.\'"']
+    neuron 11.2187  kurtosis    20.6 | up: ['pires', '␣develops', '␣eats', '␣sells', '␣performs'] | down: ['␣were', '␣Were', "'ve", 'were', 'Were']
+
+C. Keys through text: Alice, Chapter I opening, 1024 tokens; loss 3.442
+   share of neuron activations above 0 and above 1, by layer: [(0.126, 0.0045), (0.289, 0.002), (0.18, 0.0022), (0.126, 0.0033), (0.151, 0.0034), (0.149, 0.0046), (0.157, 0.0052), (0.148, 0.0063), (0.144, 0.008), (0.136, 0.0093), (0.142, 0.0129), (0.163, 0.0175)]
+   neuron 10.888: strongest on [␣theĊhot␣day␣made␣her␣feel␣very␣sleepy] -> '␣and' (5.21) / [hot␣day␣made␣her␣feel␣very␣sleepy␣and␣stupid] -> '),' (5.12) / [␣at␣theĊtime␣it␣all␣seemed␣quite␣natural] -> ');' (4.55)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 1
+   neuron 10.696: strongest on [Ċbe␣four␣thousand␣miles␣down,␣I␣think] -> 'âĢĶ' (3.39) / [␣the␣centre␣of␣the␣earth.␣Let␣me␣see] -> ':' (2.33) / [.␣âĢľI␣must␣beĊgetting␣somewhere] -> '␣near' (1.99)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 0
+   neuron 10.897: strongest on [Ļam,␣is␣this␣New␣Zealand␣or␣Australia] -> '?' (5.63) / [␣the␣fall␣_never_␣come␣to␣an␣end] -> '?' (4.36) / [ľand␣what␣is␣the␣use␣of␣a␣book] -> ',' (4.28)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 4
+   neuron 10.738: strongest on [and␣what␣is␣the␣use␣of␣a␣book,] -> 'âĢ' (4.05) / [␣is␣the␣use␣of␣a␣book,âĢĿ] -> '␣thought' (2.48) / [,␣down.␣Would␣the␣fall␣_never_] -> '␣come' (2.11)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 0
+   neuron 11.2270: strongest on [␣eyes␣ranĊclose␣by␣her.ĊĊ] -> 'There' (0.27) / [without␣pictures␣or␣conversations?âĢĿĊĊ] -> 'So' (0.09) / [␣and␣book-shelves;␣here␣and] -> '␣there' (-0.00)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 0
+   neuron 11.178: strongest on [âĢĿ␣(when␣she␣thought␣it␣over␣afterwards] -> ',' (2.69) / [␣this␣sort␣in␣her␣lessons␣in␣the␣schoolroom] -> ',' (2.19) / [knowledge,␣as␣there␣was␣no␣one␣to␣listen] -> '␣to' (2.16)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 8
+   neuron 11.2294: strongest on [large␣rabbit-hole␣under␣the␣hedge.Ċ] -> 'Ċ' (-0.00) / [␣falling␣down␣a␣veryĊdeep␣well.Ċ] -> 'Ċ' (-0.00) / [␣world␣she␣was␣to␣get␣out␣again.Ċ] -> 'Ċ' (-0.00)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 7
+   neuron 11.2187: strongest on [through_Ċthe␣earth!␣How␣funny␣it] -> 'âĢ' (4.65) / [␣of␣the␣earth.␣Let␣me␣see:␣that] -> '␣would' (3.85) / [␣I␣shall␣have␣to␣ask␣them␣what␣the␣name] -> '␣of' (3.56)
+      of its 20 strongest positions, next token among the 8 it pushes up most: 0
+
+   the running sentence ['␣the', '␣cat', '␣sat', '␣on', '␣the', '␣mat']: at ' mat', layer 5 neurons above 0: 429 of 3,072; above 1: 14; strongest: [2368, 2073, 1790]
+
+D. Each layer's feed-forward block removed alone (output zero): change in loss
+   baseline: Alice 3.442 | Looking-Glass 3.600
+   layer  0: Alice +4.580 | Looking-Glass +4.463
+   layer  1: Alice +0.026 | Looking-Glass -0.016
+   layer  2: Alice +0.057 | Looking-Glass +0.110
+   layer  3: Alice +0.221 | Looking-Glass +0.174
+   layer  4: Alice +0.113 | Looking-Glass +0.057
+   layer  5: Alice -0.031 | Looking-Glass -0.175
+   layer  6: Alice +0.051 | Looking-Glass -0.068
+   layer  7: Alice +0.072 | Looking-Glass +0.146
+   layer  8: Alice +0.044 | Looking-Glass -0.038
+   layer  9: Alice +0.091 | Looking-Glass +0.025
+   layer 10: Alice -0.004 | Looking-Glass -0.078
+   layer 11: Alice +0.046 | Looking-Glass -0.003

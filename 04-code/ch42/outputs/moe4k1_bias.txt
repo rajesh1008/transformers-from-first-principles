@@ -1,0 +1,10 @@
+moe4k1_bias: moe E=4 K=1 HID=512 AUX=0.0; learned numbers 3,839,232, used per token 1,468,416
+step     0  train nan  held-out 7.6386  busiest expert share by layer 0.26 0.31 0.29 0.36 0.34 0.37  (0 s)
+step   250  train 5.7581  held-out 5.2057  busiest expert share by layer 0.35 0.27 0.30 0.27 0.32 0.40  (39 s)
+step   500  train 4.5841  held-out 4.8917  busiest expert share by layer 0.30 0.31 0.28 0.30 0.31 0.28  (76 s)
+step   750  train 4.2518  held-out 4.7161  busiest expert share by layer 0.27 0.29 0.31 0.31 0.28 0.28  (116 s)
+step  1000  train 4.0533  held-out 4.6619  busiest expert share by layer 0.28 0.27 0.29 0.30 0.29 0.27  (155 s)
+step  1250  train 3.9201  held-out 4.5531  busiest expert share by layer 0.27 0.29 0.34 0.29 0.27 0.29  (197 s)
+step  1500  train 3.7937  held-out 4.4904  busiest expert share by layer 0.28 0.27 0.31 0.30 0.28 0.30  (238 s)
+step  1750  train 3.7020  held-out 4.4663  busiest expert share by layer 0.27 0.27 0.30 0.28 0.29 0.30  (278 s)
+step  2000  train 3.6379  held-out 4.4423  busiest expert share by layer 0.28 0.26 0.30 0.30 0.28 0.31  (317 s)

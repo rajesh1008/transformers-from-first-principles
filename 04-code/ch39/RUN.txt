@@ -1,0 +1,32 @@
+Chapter 39 runs (tick 30, 12 Nov 2026 from about 07:55 IST; CPU, one thread per process, 32-bit, seed 1865).
+Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt; data ../ch38/outputs/instructions.json.  _common.py and _pool.py are copies of ../ch38's.
+Adapter checkpoints in outputs/ckpt/ (not in the code zip).  Each tune.py run writes outputs/tune_<METHOD><TAG>.json; stdout saved as .txt.
+  METHOD=full LR=3e-4 TAG=_check python3 -u tune.py                    reproduces ../ch38 sft_response exactly (checked)
+  METHOD=lora RANK=1|4|8|36 LR=1e-3 TAG=_r1|_r4|_r8|_r36 python3 -u tune.py        query and value maps
+  METHOD=lora RANK=8 TARGETS=all LR=1e-3 TAG=_r8all python3 -u tune.py
+  METHOD=lora RANK=8 TARGETS=all LR=3e-3 TAG=_r8all_3e-3 python3 -u tune.py
+  METHOD=lora RANK=8 TARGETS=all LR=1e-3 STEPS=1800 EVERY=300 TAG=_r8all_1800 SAVE=lora_r8all_1800.pt python3 -u tune.py
+  METHOD=lora RANK=1 TARGETS=qv LR=1e-3 STEPS=1800 EVERY=300 TAG=_r1_1800 python3 -u tune.py
+  METHOD=adapter LR=1e-3 [STEPS=1800 EVERY=300 TAG=_1800] python3 -u tune.py         bottleneck width 16
+  METHOD=bias LR=1e-3 [STEPS=1800 EVERY=300 TAG=_1800] python3 -u tune.py
+  METHOD=head LR=3e-4 python3 -u tune.py
+  METHOD=lora RANK=8 TARGETS=all LR=1e-3 QUANT=4|8 TAG=_r8all_q4|_r8all_q8 python3 -u tune.py
+  METHOD=lora RANK=8 TARGETS=all LR=1e-3 INITB=random STEPS=300 TAG=_r8all_initb python3 -u tune.py   breakage
+  METHOD=lora RANK=8 TARGETS=all LR=1e-3 REPLAY=4 TAG=_r8all_replay4 python3 -u tune.py
+  METHOD=lora RANK=2|4 TARGETS=all LR=1e-3 TAG=_r2all|_r4all python3 -u tune.py ; METHOD=lora RANK=14 TARGETS=ff TAG=_r14ff
+  python3 -u merge.py > outputs/merge.txt (.json)
+  python3 -u lab39.py > outputs/lab39.txt                                6 of 6
+Caveats: QUANT, INITB, REPLAY, SAVE and TARGETS=ff were added to tune.py after the first runs; their defaults keep the first runs' behaviour
+(the 1,800-step runs reproduce the 600-step runs' checkpoints exactly).  The first adapter run crashed (KeyError: Tiny has 12 blocks,
+the script assumed 4) and was rerun after the fix.  One seed per setting; learning rates not swept (A153).  Up to twelve processes
+shared the 8-core box, so wall times printed are not speed measurements.
+
+Results of the tick 30 late runs (600 steps, lr 1e-3; facts 12x/4x/1x; test reply loss; own pool; Looking-Glass):
+  all r2   55,296   9/30 (8/1/0)    3.521  5.0433  5.6799   learned change rank 2 in all 72 tables
+  all r4  110,592  16/30 (10/6/0)   3.489  5.1082  5.8516   rank 4 in all 72 tables
+  ff r14  215,040  14/30 (9/5/0)    3.600  5.2603  6.1846   rank 14 in all 24 feed-forward tables
+SEED=k (tick 30) reseeds the adapter draw and batch order only; the 20 pool windows stay at seed 1865 (step-0 pool 3.5367 in every run).
+  METHOD=lora RANK=8 TARGETS=all LR=1e-3 SEED=2|3 TAG=_r8all_s2|_r8all_s3 ; METHOD=lora RANK=36 TARGETS=qv LR=1e-3 SEED=2|3 TAG=_r36_s2|_r36_s3
+  all r8  seed 2: 19/30 (10/9/0)  pool 4.9168  LG 5.7453 | seed 3: 24/30 (10/10/4) pool 5.1449 LG 5.9003
+  qv r36  seed 2: 13/30 (9/4/0)   pool 4.8700  LG 5.8269 | seed 3: 17/30 (10/7/0)  pool 5.1685 LG 6.2330
+  The facts gap holds in all three seeds; the forgetting gap does not (seed 2 reverses it).

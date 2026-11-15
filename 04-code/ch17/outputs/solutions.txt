@@ -1,0 +1,7 @@
+17.1 slopes at x = 2: 5x - 3 wiggled 5.0 rule 5; x cubed wiggled 12.0 rule 3 x 2^2 = 12
+17.2 (3x + 1) cubed at x = 1: wiggled 144.0 ; chain rule 3 x 4^2 (outer) x 3 (inner) = 144
+17.3 one step at lr 4 from x = -1: slope -0.22601, x -> -0.0960, loss 3.3313 -> 3.1356
+17.4 target 0.5: y 0.75, loss 0.0625, nudges w1 1.5, b1 0.75, w2 0.25, b2 0.5
+17.5 Tiny, one pass over the held-out text: 6 x 2,766,592 x 55,860 = 9.273e+11 FLOPs; one billion numbers on 20 billion tokens: 6 x 1e9 x 2e10 = 1.2e+20 FLOPs
+17.6 critical learning rate from x = -1 (largest step that does not raise the loss): 18.87; 2 / bend at the bottom is 8.53
+17.7 hand Tiny, P[2][1]: autograd +0.024291, wiggled +0.024291

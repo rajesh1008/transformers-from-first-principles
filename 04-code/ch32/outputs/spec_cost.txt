@@ -1,0 +1,17 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+Part G: prompt lookup, greedy, 64 new tokens; k sweep
+  separator (token 0): plain greedy 3.07 s
+    k 1: same True; accepted 30/33 (0.909); 1.94 tokens per pass;  1.83 s (1.68 x)
+    k 2: same True; accepted 40/46 (0.870); 2.78 tokens per pass;  1.62 s (1.89 x)
+    k 4: same True; accepted 48/60 (0.800); 4.27 tokens per pass;  1.34 s (2.29 x)
+    k 8: same True; accepted 51/120 (0.425); 4.27 tokens per pass;  1.88 s (1.63 x)
+  held-out 1600: plain greedy 2.84 s
+    k 1: same True; accepted 21/43 (0.488); 1.49 tokens per pass;  2.21 s (1.28 x)
+    k 2: same True; accepted 28/74 (0.378); 1.73 tokens per pass;  2.10 s (1.35 x)
+    k 4: same True; accepted 34/128 (0.266); 2.00 tokens per pass;  2.61 s (1.09 x)
+    k 8: same True; accepted 42/232 (0.181); 2.21 tokens per pass;  3.27 s (0.87 x)
+
+Part H: decode_step at context 128, B conversations x 1 row against B x 5 rows
+  B  1: one row each   41.4 ms; five rows each   82.2 ms (1.99 x); break-even 1.99 tokens per verify pass
+  B  4: one row each   73.3 ms; five rows each  144.2 ms (1.97 x); break-even 1.97 tokens per verify pass
+  B 16: one row each  128.2 ms; five rows each  457.0 ms (3.56 x); break-even 3.56 tokens per verify pass

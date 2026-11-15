@@ -1,0 +1,7 @@
+window (1024, 128), table (1024, 1024), about 268,435,456 operations
+Chapter 6's loops            16046.16 ms       0.02 billion operations per second
+one row at a time               16.17 ms      16.60 billion operations per second
+one line, W @ W.T                2.84 ms      94.68 billion operations per second
+one line, 32-bit numbers         2.72 ms      98.84 billion operations per second
+one line vs loops: 5,660 times faster   (measured 2026-10-31)
+the tables agree (checked on 64 rows): True

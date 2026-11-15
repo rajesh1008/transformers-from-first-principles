@@ -1,0 +1,9 @@
+{
+ "multi-head plain": 51.8,
+ "multi-head block 64": 23.6,
+ "multi-head block 256": 23.6,
+ "window 256 plain": 48.6,
+ "window 256 block 64": 16.2,
+ "window 256 block 256": 30.0,
+ "measured": "2026-11-10"
+}

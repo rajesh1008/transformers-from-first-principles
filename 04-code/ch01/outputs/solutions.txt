@@ -1,0 +1,3 @@
+Ex 6: 1,234 of 2,635 words (46.8%) are always followed by the same word
+Ex 4: 'on' is followed by a word 171 times in the counted text; 29/171 = 0.169591; 30/2806 = 0.010691
+Ex 12: four-token grid for GPT-2's vocabulary: 6,379,494,134,281,070,401 cells

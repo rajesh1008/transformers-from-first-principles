@@ -1,0 +1,1 @@
+s1_3035            N   50,368 D 3,107,840 C 9.392e+11 passes 7.90  held-out Carroll 4.4354  Looking-Glass 4.8515  last-24 batch 4.4190  118 s (39 ms/step)

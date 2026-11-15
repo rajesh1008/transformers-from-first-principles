@@ -1,0 +1,14 @@
+Chapter 47 runs (tick 35, 12 Nov 2026, about 18:15 to 18:25 IST; CPU, one thread, 32-bit, seed 1865 where random).
+  python3 -u whiteboard47.py > outputs/whiteboard47.txt (.json)  the whiteboard answer key from Tiny (../ch24/outputs/ckpt/
+                                                                  wsd_1e-3_2000_b2000.pt): parameter count, one head of layer 0 for
+                                                                  the running sentence, cache bytes.  About 2 s.
+  python3 -u rubric47.py > outputs/rubric47.txt (.json)          six synthetic answers (fixtures written for the lab to target levels
+                                                                  0 to 4; no real candidate) scored by a keyword rubric and by Claude
+                                                                  Haiku 4.5 (claude-haiku-4-5-20251001, temperature 1.0) with the
+                                                                  five-anchor rubric and with a vocabulary rubric, 5 repeats each;
+                                                                  60 calls, 0 failed.  About 5 s.  Key read from ../../.env only.
+  python3 lab47.py > outputs/lab47.txt                           8 of 8
+What went wrong: the first whiteboard47.py compared the hand result with a second hand computation; rewritten to compare all
+four heads through the output table with the model's own attention layer (tt._attention), difference 3.73e-08.
+Caveats: the hosted grader's scores are from one model on one day; the answers are synthetic and were written by the author
+of the lab, who also wrote the anchors, so agreement with the target levels is an upper bound, not a validity estimate.

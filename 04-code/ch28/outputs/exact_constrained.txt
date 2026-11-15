@@ -1,0 +1,26 @@
+Part A: six names after '"Come here, my dear," said'
+  ' Alice'      exact 0.000  400 exact draws 0.000   masked 0.000  400 masked draws 0.000
+  ' Bruno'      exact 0.183  400 exact draws 0.203   masked 0.056  400 masked draws 0.070
+  ' Sylvie'     exact 0.245  400 exact draws 0.255   masked 0.084  400 masked draws 0.085
+  ' Balbus'     exact 0.572  400 exact draws 0.542   masked 0.359  400 masked draws 0.365
+  ' the Hatter' exact 0.000  400 exact draws 0.000   masked 0.054  400 masked draws 0.065
+  ' the Queen'  exact 0.000  400 exact draws 0.000   masked 0.446  400 masked draws 0.415
+  total-variation distance, exact vs masked: 0.500
+  cost of exact: 17 next-token passes for six options (masking: 1 to 5 per draw)
+
+Part B: digits grammar; vocabulary has 10 digit-only tokens and 0 space+digit tokens: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'
+
+  prompt 'It was a hundred and': unconstrained chance the next token starts a number 0.0002; probability of any valid output 2.39e-04; 1111 prefixes visited; total-variation exact vs masked 0.005
+    exact  top: 6 0.190, 8 0.182, 9 0.095, 0 0.082, 4 0.073, 3 0.071
+    masked top: 6 0.189, 8 0.181, 9 0.094, 0 0.082, 4 0.072, 3 0.071
+    one-digit outputs: exact 0.877  masked 0.873;  three-digit: exact 0.019  masked 0.024
+
+  prompt 'in the year': unconstrained chance the next token starts a number 0.0001; probability of any valid output 8.62e-05; 1111 prefixes visited; total-variation exact vs masked 0.004
+    exact  top: 1 0.139, 3 0.134, 9 0.125, 6 0.125, 5 0.074, 7 0.062
+    masked top: 1 0.138, 3 0.134, 9 0.125, 6 0.124, 5 0.074, 7 0.062
+    one-digit outputs: exact 0.875  masked 0.871;  three-digit: exact 0.014  masked 0.018
+
+  prompt 'CHAPTER': unconstrained chance the next token starts a number 0.0108; probability of any valid output 1.04e-02; 1111 prefixes visited; total-variation exact vs masked 0.027
+    exact  top: 9 0.159, 2 0.103, 0 0.093, 4 0.078, 1 0.071, 3 0.060
+    masked top: 9 0.154, 2 0.100, 0 0.090, 4 0.076, 1 0.069, 3 0.058
+    one-digit outputs: exact 0.685  masked 0.665;  three-digit: exact 0.071  masked 0.098

@@ -1,0 +1,43 @@
+Part 1. The 6 x 6 share table from two 3-wide tiles (Chapter 8's hand head, causal)
+  row 0 (the): final running max  0.000 | final running sum 1.0000
+  row 1 (cat): final running max  1.414 | final running sum 1.2431
+  row 2 (sat): final running max  2.121 | final running sum 1.7362
+  row 3 ( on): final running max  0.707 | final running sum 1.4221
+  row 4 (the): final running max  0.707 | final running sum 3.2293
+  row 5 (mat): final running max  2.121 | final running sum 2.3027
+recovered shares, exp(score - max) / sum, row by row:
+            the    cat    sat     on    the    mat
+   the    1.000  0.000  0.000  0.000  0.000  0.000
+   cat    0.804  0.196  0.000  0.000  0.000  0.000
+   sat    0.284  0.140  0.576  0.000  0.000  0.000
+    on    0.084  0.703  0.171  0.042  0.000  0.000
+   the    0.153  0.310  0.310  0.075  0.153  0.000
+   mat    0.214  0.026  0.106  0.434  0.214  0.006
+equal to Chapter 8's table: True | largest difference 0.0e+00
+output rows equal attention(): True | sat's output [1.576, 0.716] | mat's output [0.665, -0.297]
+numbers kept per row to rebuild any share later: 2 (max and sum); the table itself: 21 shares never stored
+
+Part 2. Three breakages that run without an error
+Breakage 1, the max moves and nothing is rescaled:
+   on: correct [1.129, 0.833] | broken [1.129, 0.833]
+  the: correct [1.234, 0.544] | broken [1.234, 0.544]
+  mat: correct [0.665, -0.297] | broken [0.833, -0.119]
+  largest error 0.177; rows whose max grew in their second tile: ['mat']
+Breakage 2, the sum is rescaled and the output is not:
+   on: correct [1.129, 0.833] | broken [1.129, 0.833]
+  the: correct [1.234, 0.544] | broken [1.234, 0.544]
+  mat: correct [0.665, -0.297] | broken [1.129, -0.162]
+  largest error 0.464
+  with one block of 6 both broken versions are exact: True
+Breakage 3, one fixed shift of 0 and 16-bit exponentials, on scores that rise along the row to 16:
+  shift 0: rows with inf or nan 99 of 256
+  shift 8: rows with inf or nan 0 of 256 | largest error 3.9e-03
+
+Part 3. Checkpoint tests
+  1. tiled equals plain to 1e-12, blocks of 64, random scores: pass
+  2. recovered share rows sum to one: pass
+  3. Breakage 1 caught: no-rescale differs from plain on rising scores: pass
+  4. Breakage 2 caught: sum-only differs from plain on rising scores: pass
+  5. correct code passes the same rising-score test: pass
+  6. Breakage 3 caught: fixed shift 0 in 16-bit gives non-finite rows: pass
+all checkpoint tests pass: True

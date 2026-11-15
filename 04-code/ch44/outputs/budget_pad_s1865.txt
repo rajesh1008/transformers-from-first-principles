@@ -1,0 +1,12 @@
+scratchpad lengths on these pairs: 14 to 16 characters
+scratchpad cut after 0 characters: exact 0.0000   e.g. 23+34=>4.
+scratchpad cut after 2 characters: exact 0.0000   e.g. 23+34=3+>3=7;2.
+scratchpad cut after 4 characters: exact 0.0010   e.g. 23+34=3+4=>4;2.
+scratchpad cut after 6 characters: exact 0.0250   e.g. 23+34=3+4=7;>+3.
+scratchpad cut after 9 characters: exact 0.0070   e.g. 23+34=3+4=7;2+3>37.
+scratchpad cut after 14 characters: exact 0.4590   e.g. 23+34=3+4=7;2+3+0=5;>57.
+scratchpad cut after 16 characters: exact 1.0000   e.g. 23+34=3+4=7;2+3+0=5;>57.
+scratchpad cut after no characters: exact 1.0000   e.g. 23+34=3+4=7;2+3+0=5;>57.
+sampled at temperature 1.0, majority of  1: exact 0.9970
+sampled at temperature 1.0, majority of  5: exact 1.0000
+sampled at temperature 1.0, majority of 15: exact 1.0000

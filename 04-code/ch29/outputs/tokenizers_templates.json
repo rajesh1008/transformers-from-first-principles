@@ -1,0 +1,61 @@
+{
+ "B": {
+  "sent": [
+   4.936856238243008,
+   4.648244514671097
+  ],
+  "no": 4.894774392779041,
+  "yes": 4.943040944457982,
+  "first3": [
+   6.506877825619759,
+   6.802151352318807
+  ],
+  "wins": 16
+ },
+ "C": {
+  "n1": 9,
+  "n2": 14
+ },
+ "E": {
+  "ChatML template (correct)": {
+   "stops": 3,
+   "lens": [
+    8,
+    5,
+    40,
+    28,
+    40
+   ]
+  },
+  "template, no generation prompt": {
+   "stops": 3,
+   "lens": [
+    12,
+    9,
+    40,
+    32,
+    40
+   ]
+  },
+  "plain question, no template": {
+   "stops": 4,
+   "lens": [
+    1,
+    40,
+    1,
+    1,
+    1
+   ]
+  },
+  "another family's template ([INST])": {
+   "stops": 4,
+   "lens": [
+    1,
+    40,
+    1,
+    23,
+    1
+   ]
+  }
+ }
+}

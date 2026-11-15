@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 11399.45it/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+bf16: weights 274,045,440 bytes as stored (32-bit 548,090,880); running sentence max |log-prob diff| 7.456e-01, same top token everywhere False; greedy 24 tokens from 12 prompts: 8 of 12 diverge from 32-bit, first differing positions [0, 0, 0, 1, 4, 5, 13, 20]
+fp16: weights 274,045,440 bytes as stored (32-bit 548,090,880); running sentence max |log-prob diff| 7.171e+00, same top token everywhere False; greedy 24 tokens from 12 prompts: 12 of 12 diverge from 32-bit, first differing positions [0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 5, 18]
+32-bit greedy steps: top-two score margin median 1.171, share of steps with margin below 0.1: 0.052

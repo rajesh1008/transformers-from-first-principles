@@ -1,0 +1,11 @@
+144 word pairs x 50 position pairs: largest difference, both turned vs one turned by the gap: 2.8e-13
+sat = (1, 1), on = (1, -1): straight part ac+bd = 0, crossed part ad-bc = -2
+  gap 0: formula  0.000   turning on directly  0.000
+  gap 1: formula -1.000   turning on directly -1.000
+  gap 2: formula -1.732   turning on directly -1.732
+  gap 3: formula -2.000   turning on directly -2.000
+  gap 6: formula  0.000   turning on directly  0.000
+  sat asking, on answering at gap +1: -1.000
+  sat asking, on answering at gap -1:  1.000
+  sat asking, on answering at gap +3: -2.000
+  sat asking, on answering at gap -3:  2.000

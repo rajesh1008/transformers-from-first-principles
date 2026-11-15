@@ -1,0 +1,7 @@
+w80 kd1: nonzero numbers 884,992 of 2,766,592; teacher 1.9812 measured 1.9812; after pruning 2.4587
+  step 100: held-out Carroll 2.0235 bits per character (53 s)
+  step 200: held-out Carroll 2.0053 bits per character (102 s)
+  step 300: held-out Carroll 1.9989 bits per character (149 s)
+  step 400: held-out Carroll 1.9956 bits per character (194 s)
+  step 500: held-out Carroll 1.9946 bits per character (238 s)
+w80 kd1: final 1.9946; pruned positions still zero: True; 238 s

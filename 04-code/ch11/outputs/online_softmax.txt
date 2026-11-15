@@ -1,0 +1,25 @@
+mat's scores: [1.414, -0.707, 0.707, 2.121, 1.414, -2.121]
+reference shares: [0.214, 0.026, 0.106, 0.434, 0.214, 0.006]  output: [0.665, -0.297]
+
+three passes (safe softmax): 1) max  2) sum of exp(s - max)  3) divide
+  max 2.121 | sum 2.3027 | shares [0.214, 0.026, 0.106, 0.434, 0.214, 0.006]
+
+online: one pass for max and sum together; rescale the sum when the max grows
+  seat 0 (the): score  1.414 -> running max  1.414, running sum 1.0000
+  seat 1 (cat): score -0.707 -> running max  1.414, running sum 1.1199
+  seat 2 (sat): score  0.707 -> running max  1.414, running sum 1.6129
+  seat 3 ( on): score  2.121 -> running max  2.121, running sum 1.7953  (max grew: old sum rescaled)
+  seat 4 (the): score  1.414 -> running max  2.121, running sum 2.2884
+  seat 5 (mat): score -2.121 -> running max  2.121, running sum 2.3027
+  final shares [0.214, 0.026, 0.106, 0.434, 0.214, 0.006] equal reference: True
+
+blocks of two seats, output carried along (never holding the whole row of shares):
+  block 0 (the, cat): max  1.414 | rescale 0.0000 | sum 1.1199 | unnormalised output [1.12, 0.12]
+  block 1 (sat, on): max  2.121 | rescale 0.4931 | sum 1.7953 | unnormalised output [1.038, -0.698]
+  block 2 (the, mat): max  2.121 | rescale 1.0000 | sum 2.3027 | unnormalised output [1.531, -0.683]
+  output = unnormalised / sum = [0.665, -0.297]  equal reference: True | difference 1.1e-16
+
+why subtract the max at all: scores of 100 and 101 in 32-bit and 16-bit
+  float32: naive [nan nan] | with the max subtracted [0.2689 0.7311]
+  float16: naive [nan nan] | with the max subtracted [0.2688 0.731 ]
+  largest x with exp(x) finite: float16 11.09 | float32 88.72

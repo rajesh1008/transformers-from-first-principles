@@ -1,0 +1,23 @@
+Tiny's layer, pre-norm, on the running sentence (7 tokens: ['the', ' cat', ' sat', ' on', ' the', ' m', 'at'])
+  learned numbers: two layer norms of 128 gains and 128 biases = 512; layer total 197,760; Tiny 590,976
+  token | row in | attention adds (Ch12 / Ch13) | feed-forward adds (Ch12 / Ch13) | row out
+    'the' | 0.2444 | 0.01230 / 0.5631 | 0.01223 / 0.6298 | 0.8510
+   ' cat' | 0.2326 | 0.00885 / 0.4158 | 0.01158 / 0.6367 | 0.8482
+   ' sat' | 0.2418 | 0.00758 / 0.3530 | 0.01182 / 0.6113 | 0.7543
+    ' on' | 0.2769 | 0.00686 / 0.3108 | 0.01336 / 0.5671 | 0.6896
+   ' the' | 0.2577 | 0.00532 / 0.2394 | 0.01351 / 0.6036 | 0.6458
+     ' m' | 0.2808 | 0.00511 / 0.2220 | 0.01409 / 0.6482 | 0.7543
+     'at' | 0.2378 | 0.00426 / 0.1911 | 0.01226 / 0.6478 | 0.7276
+
+the checkpoint row: ' sat' (token 2) entering the layer, before and after ln_1
+  before: average 0.00196, spread 0.02128, length 0.2418, first four [-0.0165, -0.015, 0.0243, -0.0016]
+  after:  average 0.000000, spread 0.9891, length 11.191, first four [-0.86, -0.79, 1.04, -0.167]
+  largest number after: 2.585 at column 19; smallest -3.090 at column 46
+  each row normalised alone equals the batched result: True
+
+on the first 1,024 tokens of the novel: mean row length in 0.2535, after attention 0.2647, out 0.6558
+  token similarity in 0.009, out 0.086
+  the blocks now see rows of length about 11.20; their outputs are 0.0726 and 0.6044 long
+
+timings on 1,024 tokens, ms (fastest of 5, measured 2026-11-10):
+  layer norm 0.65 | RMSNorm 0.32 | attention 34.1 | feed-forward 33.2 | whole layer 75.3

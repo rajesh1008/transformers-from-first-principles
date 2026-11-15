@@ -1,0 +1,2 @@
+windows per book: sylvie 1047, sylvie2 1153, tangled 533, phantasmagoria 251, snark 90
+full shuffle: largest share of one book in a batch of 8, average 0.49

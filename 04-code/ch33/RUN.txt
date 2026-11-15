@@ -1,0 +1,43 @@
+Chapter 33 (Quantization and Running Tiny Small), tick 24.  Run from this folder.  CPU, one thread, seed 1865, 11 Nov 2026.
+Needs ../tiny (load.py, quant.py, eval.py, tokenizer.py), the GPT-2 weights in ../ch29/ckpt/gpt2 (not zipped), Chapter 24's
+Tiny checkpoint (../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt) and Chapter 22/23's Carroll pool (_pool.py).  PyTorch 2.15.0+cpu.
+Fake quantization throughout: tables rounded to their integer grid and stored back as 32-bit numbers; sizes are computed.
+
+    python3 -u quant_gpt2.py  > outputs/quant_gpt2.txt  (.json)  Parts A-E: by hand; round-to-nearest grid; token table;
+                                                       fragility by map and layer; activations and outliers; ~12 min
+    python3 -u quant_table.py > outputs/quant_table.txt          33.3: why the token table breaks (output side, final-norm
+                                                       columns); ~2 min
+    python3 -u quant_gptq.py  > outputs/quant_gptq.txt  (.json)  Parts F-G: GPTQ against round-to-nearest; calibration text;
+                                                       greedy agreement; reads outputs/quant_gpt2.json
+    python3 gptq_by_hand.py   > outputs/gptq_by_hand.txt          33.6: error compensation on two weights
+    python3 -u tiny_quant.py  > outputs/tiny_quant.txt  (.json)  Part H int8 / BF16 / 32-bit map timings; Part I Tiny rounded
+    python3 -u lab33.py       > outputs/lab33.txt                 Lab 33
+
+What went wrong / caveats:
+  - quant_gpt2.py first held Parts F and G too.  GPTQ as first written (one input column at a time, updating the whole
+    rest of the table each time) took about 28 s for one 3,072 x 768 map, about 40 minutes for Part F.  The run was
+    stopped during Part F (Parts A-E complete and saved), tiny/quant.py's gptq rewritten with lazy batches of 128 columns
+    (the 2022 paper's own device; checked identical to the column-at-a-time version on three random cases, max diff 0.0;
+    2.0 s for the same map), and Parts F-G moved to quant_gptq.py.  outputs/quant_gpt2.txt was cut after Part E (the
+    stopped run had printed only the Part F heading).
+  - quant_table.py first carried a leftover no-op line (x = Q.forward_q.__wrapped__ ...); removed after the run; no effect.
+  - tiny_quant.py was restarted once before any output to tidy the int8 layer's set-up line; same computation.
+  - The 8-bit and 6-bit 'per output channel' and 'per 32' rows score slightly below 32-bit (by up to 0.012); on four
+    1,024-token windows of one text that is within the window-to-window spread (Chapter 25); not read as a gain.
+  - These scripts ran alongside Chapter 32's timing scripts on other cores; Part H timings carry that load.
+  - PyTorch warns that torch.quantize_per_tensor and quantized tensors are deprecated (Part H); reported in 33.9.
+No hosted-model call.  lab33 reads the key from ../../.env only to check that it appears in no file under 04-code/ch33.
+Tick 25 11 Nov 2026 about 22:20 IST: lab33.py re-run, 24 s wall, output identical to outputs/lab33.txt.
+
+Tick 25 (11 Nov 2026, about 22:05 to 22:25 IST).
+    python3 -u extra25.py > outputs/extra25.txt (.json)   Part J: Tiny's final norm output per dimension on held-out windows of 129
+                                                       (largest |value| top 5 and median); Part K: GPTQ at 4 and 3 bits per 128
+                                                       inputs calibrated on 37 windows of 256 (the pool slice from offset 100000 holds
+                                                       only 9,622 GPT-2 tokens, so 64 windows were not available; the script took
+                                                       min(64, tokens // 256) = 37); ~5 min; it ran beside ch34's scripts on other cores
+    lab33.py re-run: 24 s wall, output identical to outputs/lab33.txt.
+  - extra25.py was written to answer two questions raised by the chapter text (is a small calibration set why GPTQ lost at 4 bits;
+    does Tiny's final row have GPT-2's huge dimensions); results are in 33.7 and 33.10.
+    python3 -u greedy_more.py {8ch|6g32|4g32} > outputs/greedy_more_CONFIG.txt (.json)   ten prompts instead of Part G's four (offsets 200, 500, 800,
+                                                       1000, 1300, 1600, 2000, 2400, 2700, 3000); ~5 min each, three in parallel; Part G's four
+                                                       prompts give the same first-difference counts here as in quant_gptq.py (8-bit: 5, 64, 10, 64)

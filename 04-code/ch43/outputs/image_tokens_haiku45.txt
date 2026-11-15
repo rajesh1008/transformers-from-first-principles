@@ -1,0 +1,13 @@
+model claude-haiku-4-5-20251001; the question alone counts 12 input tokens
+    8 x 8             64 pixels  image tokens      5  (pixels per token     12.8)
+   32 x 32         1,024 pixels  image tokens      8  (pixels per token    128.0)
+   64 x 64         4,096 pixels  image tokens     13  (pixels per token    315.1)
+  128 x 128       16,384 pixels  image tokens     29  (pixels per token    565.0)
+  256 x 256       65,536 pixels  image tokens    104  (pixels per token    630.2)
+  512 x 512      262,144 pixels  image tokens    365  (pixels per token    718.2)
+  768 x 768      589,824 pixels  image tokens    788  (pixels per token    748.5)
+ 1024 x 1024   1,048,576 pixels  image tokens  1,373  (pixels per token    763.7)
+ 1568 x 1568   2,458,624 pixels  image tokens  1,525  (pixels per token   1612.2)
+ 2048 x 2048   4,194,304 pixels  image tokens  1,525  (pixels per token   2750.4)
+ 2576 x 2576   6,635,776 pixels  image tokens  1,525  (pixels per token   4351.3)
+ 3072 x 3072   9,437,184 pixels  image tokens  1,525  (pixels per token   6188.3)

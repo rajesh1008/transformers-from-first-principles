@@ -1,0 +1,13 @@
+main_step2000 (step 2000, 10,050,560 numbers)
+  32-bit heldout  194 windows, 179,457 characters: loss 4.5309, 1.8090 bits per character
+  32-bit glass    197 windows, 163,680 characters: loss 4.1860, 1.8607 bits per character
+  8-bit  heldout  loss 4.5311, 1.8091 bits per character (change +0.0001)
+  8-bit  glass    loss 4.1861, 1.8608 bits per character (change +0.0001)
+  8-bit: 10,027,008 numbers rounded, largest change 2.83e-03; weights 40,202,240 bytes at 32 bits, 10,247,168 at 8 bits with scales
+  KV cache against full forward pass, 13 positions: largest logit difference 1.62e-05
+  seed 1: 120 tokens in 0.34 s (353 tokens/s)
+    'the cat sat on the matches of the bell, as though he had\ngot a driving-lamp, which was over again.\n\nThe snow and the sun was a great distance in the courtes, and\nthemmar before the door produced. It was a wilder, little too,\nand in spite of the rings of a there had been some fifty, there was\nno time even the hard care of its knowledge in the dark. The\nwind and the door there was hung in the room, and the two heavy\nand the changes caught it for the stake.\n\n“'
+  seed 2: 120 tokens in 0.34 s (349 tokens/s)
+    'the cat sat on the matuer, and the few\nafternoon was publicly in the house, and were set into the\ncharges of the church-room. On the sudden base, the new stream of the\nside, and followed the gates in the ceiling, the sun was a darkly\nfree of garret.\n\nThe wind had thrown out the surrophe from the bed, and aFrom\nwind beung by the light. A stone sun shone two. The sky was a\nhour or two. The high-r Come, and the valley was the dark, and'
+  seed 3: 120 tokens in 0.39 s (308 tokens/s)
+    'the cat sat on the match-c bring the Chitling on the\nfroots, and the jaws crossed, (though it was a building among the\nroves of my work) on which I would see no more convenient to having\nthe smallest English cliff in the port ready to prevent his own, the\nscanch was a capital, and that my face was scarcely of the depth of the\nC Mann’s house in the joint of his own, with an ordinary air, and\npired to a good, to those of his own breast. He had kept his'

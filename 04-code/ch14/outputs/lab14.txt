@@ -1,0 +1,33 @@
+Part 1. untrained Tiny, seed 1865, 12 layers, 2,766,592 learned numbers
+  tokens ['the', ' cat', ' sat', ' on', ' the', ' m', 'at']
+  scores (7, 2048); shares (7, 2048); every row sums to one: True
+  top five after 'at': ['hesh', ' squ', '<0xD8>', 'at', 'not']  (shares [0.001188, 0.001003, 0.000949, 0.000928, 0.000921])
+  fingerprint of all tables: 19c8710677873d01
+  saved and loaded back: same scores True, same fingerprint True
+
+Breakage 1. a table loaded in the wrong shape
+  (a) with the shape check: refused: layer 3 ff.W_1: expected shape (128, 512), got (512, 128)
+  (a) without the shape check it loads, then the forward pass fails: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (
+  (b) layer 3's attention output table transposed (128 x 128, so the shape check passes): loads and runs
+      top five after 'at': [' squ', 'hesh', '<0xD8>', ' br', '<0x1A>']
+      largest change in any score 0.5373; ' sat''s top row moves by 5.6089
+      fingerprint 9cc367527cd21ef8 against 19c8710677873d01: the test that catches it
+
+Breakage 2. twelve layers that are one layer
+  learned numbers by adding up the layers: 2,766,592; counted from unique tables: 591,232
+  distinct layer objects: 1; distinct attention query tables: 1
+  it runs: scores (7, 2048), top five ['ook', ' lobsters', 'ild', ' gloves', 'wards']
+  token similarity at the top: 0.828 (twelve layers) against 0.855 (one layer twelve times)
+
+Breakage 3. the final norm left out
+  untrained Tiny: top row length 2.685 reaches the scores instead of 11.313; loss on the novel 7.6220 against 7.6334: nothing visible
+  GPT-2 small on the same 1,024 tokens of the novel: loss 3.442 with ln_f, 324.080 without
+
+Part 3. checkpoint tests
+  1. scores are (7, 2048) and every row of shares sums to one: pass
+  2. the top five after 'at' are ['hesh', ' squ', '<0xD8>', 'at', 'not']: pass
+  3. Tiny holds 2,766,592 learned numbers, counted from unique tables (catches Breakage 2): pass
+  4. the shape check refuses a transposed 128 x 512 table (Breakage 1a): pass
+  5. the fingerprint differs when a square table is transposed (Breakage 1b): pass
+  6. the top rows reaching the scores have length close to sqrt(128) = 11.31 (catches Breakage 3): pass
+all checkpoint tests pass: True

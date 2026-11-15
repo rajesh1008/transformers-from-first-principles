@@ -1,0 +1,31 @@
+Chapter 35 runs (tick 26, 12 Nov 2026 from about 00:05 IST; CPU, one thread per process, 32-bit, seed 1865; up to ten processes
+shared the 8-core machine, so no wall time here is a speed measurement).  Weights from ../ch29/ckpt/ (not in the code zip).
+  python3 -u tiny_past_edge.py > outputs/tiny_past_edge.txt (.json)      Tiny on 512-token windows; position rows; sliding window of 128
+  python3 -u gpt2_edge.py > outputs/gpt2_edge.txt (.json)                GPT-2 at 1,025 tokens; loss by position; disjoint vs sliding scoring
+  python3 rope_bands.py > outputs/rope_bands.txt                         SmolLM2's rotary pairs by hand
+  python3 check_longfwd.py > outputs/check_longfwd.txt                   blocked forward against tiny/load.py: 2.74e-05
+  python3 -u smol_long.py {plain|pi2|pi4|ntk4|ntk16} > outputs/smol_long_MODE.txt (.json, .pt per-token losses; ~12 min each)
+  python3 bands.py > outputs/smol_long_bands.txt                         1,024-token bands from the saved per-token losses
+  python3 -u needle.py {gpt2 256|gpt2 1000|smol 512|smol 2048|smol 4096} > outputs/needle_MODEL_LEN.txt (.json)
+  python3 needle_probe.py > outputs/needle_probe.txt                     why SmolLM2 "missed" keys near the end (the bare-space token)
+  python3 hosted_needle.py > outputs/hosted_needle.txt (.json)           claude-haiku-5-5, 44 calls, 3,540,338 input tokens; key read
+                                                                         from ../../.env inside the process, never printed or written
+  python3 lab35.py > outputs/lab35.txt                                   6 of 6
+Things that went wrong: (1) two smol_long processes (ntk4, then pi2) were killed by the kernel's out-of-memory killer when five
+16,384-token runs shared 15 GB; longfwd.py now scores 512 rows at a time instead of 2,048 and both were rerun alone; (2) the first
+needle.py inserted the key at an exact token offset, sometimes inside a word; outputs of that version are kept in
+outputs/old_midword/ and are not quoted; (3) SmolLM2 writes " 32008" as a bare space plus five digits, and its low share for the bare
+space made it look as if keys near the end were missed (needle_probe.py); the space is now fed but not scored, and the earlier smol
+outputs are also in outputs/old_midword/; (4) lab35's windows of 129 step by 128 so that every token is scored, giving 1.9805
+against the 1.9812 of Chapters 29 to 34, whose windows step by 129 and skip one prediction per window.
+  python3 -c (tiny.context.unturned_pairs for bases 100,000 / 400,000 / 1,600,000) > outputs/rope_bands_x4.txt
+  note: gpt2_edge.txt was rewritten from gpt2_edge.json after an accidental second launch truncated it; (b) lines restored from the json, numbers unchanged
+
+Tick 27 (12 Nov 2026, from about 01:59 IST; one process at a time unless stated; CPU, one thread, 32-bit, seed 1865):
+  python3 -u cost_curve.py > outputs/cost_curve.txt (.json)              one forward pass, Tiny 128-1,024, SmolLM2 128-4,096 (best of 3
+                                                                         to 1,024, single run above); SmolLM2 cost arithmetic to 1,048,576
+  python3 -u buried.py > outputs/buried.txt (.json)                      "the cat sat on the" after 0-2,000 tokens of the novel; ' mat'
+                                                                         with cat and dog; attention to ' cat' (HF eager attention)
+  needle_smol_4096 (started tick 26, finished about 01:56 IST) quoted in 35.5.
+  Figures: python3 03-figures/src/ch35_figs.py (from the project root) -> 03-figures/ch35/fig35-01 to fig35-05.
+Note: buried.py's 1,000-token filler is the novel's opening about Alice's kittens; that is why ' cat' helps most there (said in 35.5).

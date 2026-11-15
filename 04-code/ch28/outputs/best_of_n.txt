@@ -1,0 +1,12 @@
+Part A: best-of-n by the model's own score (16 x 40 tokens at T 1.0 per prompt, 6 prompts' worth: 3 prompts x 2 rounds)
+  n 1   mean surprise 3.795  rep4 0.000  not-in-pool 0.185  cost 40 tokens per output  first " room. It's all, my asked\nof me, and he're plearately instan"
+  n 4   mean surprise 3.458  rep4 0.000  not-in-pool 0.196  cost 160 tokens per output  first ' cird-face hall, which I walked,\nthem as this playful to sit'
+  n 16  mean surprise 2.875  rep4 0.018  not-in-pool 0.075  cost 640 tokens per output  first ' far used I was\nhead.\n\n“Oo fivion!” Bruno said, sen delightf'
+
+Part B: next whole word of held-out Carroll (150 positions, context 64 tokens)
+  greedy      0.093  (14 of 150)
+  one sample  0.047  (7 of 150)
+  vote of 4   0.047  (7 of 150)
+  vote of 16  0.060  (9 of 150)
+  any of 4    0.120  (18 of 150)
+  any of 16   0.273  (41 of 150)

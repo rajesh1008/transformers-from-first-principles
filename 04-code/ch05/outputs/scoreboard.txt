@@ -1,0 +1,4 @@
+token row + position row for all 44,360 tokens of the novel, in 44 windows: 33 ms (1,364,543 tokens per second)
+computing all 1,024 sinusoidal rows with loops: 12 ms
+learned numbers (weights) in Tiny so far: 262,144 + 131,072 = 393,216 (1.5 MiB)
+the running sentence is now 128 numbers per token, token row plus position row; context 1024

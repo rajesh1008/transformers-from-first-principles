@@ -1,0 +1,24 @@
+Part A: the cache after the running sentence
+  6 tokens; per layer K [12, 6, 64] and V [12, 6, 64] (heads, positions, numbers per head)
+  12 layers; numbers held 110,592; bytes 442,368 (32-bit); per token 73,728 = by hand 73,728
+
+Part B: cached against uncached greedy decoding, 64 tokens after 'The rabbit looked at'
+  same 64 tokens: True; largest |difference| in log-probabilities over the 64 steps 3.967e-04
+  text: ' the other two, and then at the other two.\n\n"I\'m sorry, but I\'m not going to let you go," he said.\n\n"I\'m sorry'
+
+Part C: time per new token, 32 new tokens, one thread
+  prompt   16: cached    1.60 s (  20.0 tokens/s, includes the prefill); uncached    4.27 s (  7.5 tokens/s); ratio   2.7
+  prompt  256: cached    1.90 s (  16.9 tokens/s, includes the prefill); uncached   15.95 s (  2.0 tokens/s); ratio   8.4
+  prompt  768: cached    3.31 s (   9.7 tokens/s, includes the prefill); uncached   75.73 s (  0.4 tokens/s); ratio  22.9
+
+Part D: prefill against decode
+  context   16: prefill     98.4 ms (  6.15 ms per prompt token); one decode step  107.1 ms
+  context   64: prefill    197.1 ms (  3.08 ms per prompt token); one decode step   46.2 ms
+  context  256: prefill    522.5 ms (  2.04 ms per prompt token); one decode step   44.7 ms
+  context  768: prefill   1880.8 ms (  2.45 ms per prompt token); one decode step   62.0 ms
+
+Part E: three ways to break a cache (largest |difference| in log-probabilities against the full pass, 24 tokens of held-out text)
+  correct cache                        3.814e-04  same top token everywhere: True
+  every new token at position 0        4.714e+01  same top token everywhere: False
+  cache replaced, not appended         4.160e+01  same top token everywhere: False
+  prompt edited at token 4, cache kept 4.746e+00  same top token everywhere: True

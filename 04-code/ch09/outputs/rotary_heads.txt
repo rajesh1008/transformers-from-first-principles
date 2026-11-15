@@ -1,0 +1,9 @@
+Head(d_head=32, rotary=True): learned numbers 12,288 (rotary adds none); clocks per head: 16
+last row at seat 0  : [0.153, 0.134, 0.13, 0.141, 0.135, 0.166, 0.141]
+last row at seat 100: [0.153, 0.134, 0.13, 0.141, 0.135, 0.166, 0.141]
+same Attention Table at seat 0 and seat 100: True
+learned positions added instead: same table at seat 0 and 100: False  (largest change in a share: 0.017)
+MultiHead(n_heads=4, rotary=True): every head's table unchanged by the move: True
+values untouched by rotary: head output rows identical too: True
+clock speeds of a 32-wide head (fastest, slowest), turns per seat in radians: 1.0000 0.000178
+for comparison a 128-wide head's slowest clock: 0.000115

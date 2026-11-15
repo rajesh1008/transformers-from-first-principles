@@ -1,0 +1,13 @@
+tile  64 x 64 : same table as W @ W.T: True
+tile 128 x 128: same table as W @ W.T: True
+tile 256 x 256: same table as W @ W.T: True
+
+numbers read from far memory to build the 1024 x 1024 table (inputs only):
+  tiles of    1 x 1   : 1,048,576 tiles,  268,435,456 numbers read ( 1,024 times the 262,144 numbers that exist)
+  tiles of    8 x 8   :    16,384 tiles,   33,554,432 numbers read (   128 times the 262,144 numbers that exist)
+  tiles of   32 x 32  :     1,024 tiles,    8,388,608 numbers read (    32 times the 262,144 numbers that exist)
+  tiles of  128 x 128 :        64 tiles,    2,097,152 numbers read (     8 times the 262,144 numbers that exist)
+  tiles of  512 x 512 :         4 tiles,      524,288 numbers read (     2 times the 262,144 numbers that exist)
+  tiles of 1024 x 1024:         1 tiles,      262,144 numbers read (     1 times the 262,144 numbers that exist)
+
+the table itself: 1,048,576 numbers = 2 MiB in 16-bit, for one head of one layer

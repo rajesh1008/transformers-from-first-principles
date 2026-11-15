@@ -1,0 +1,24 @@
+GPT-2 small, T=1.0: right 10 of 150 (well-known), 0 of 150 (less-known); correlation of agreement with right-of-10 over 30 countries 0.70
+   agreement 0.0-0.3: 30 countries, majority answer right in 3
+   agreement 0.3-0.6:  0 countries, majority answer right in 0
+   agreement 0.6-1.0:  0 countries, majority answer right in 0
+   agreement 0.5 or more with a wrong majority answer: []
+   invented countries (commonest answer, agreement): [('Zubrovia', 'qaeda', 0.1), ('Veltrania', 'pole', 0.1), ('Oskaria', 'emplo', 0.1), ('Marundi Kel', 'mr', 0.1), ('Talvessa', 'pole', 0.1), ('Quorvath', 'indus', 0.1)]
+GPT-2 small, T=0.7: right 21 of 150 (well-known), 0 of 150 (less-known); correlation of agreement with right-of-10 over 30 countries 0.73
+   agreement 0.0-0.3: 23 countries, majority answer right in 1
+   agreement 0.3-0.6:  7 countries, majority answer right in 3
+   agreement 0.6-1.0:  0 countries, majority answer right in 0
+   agreement 0.5 or more with a wrong majority answer: []
+   invented countries (commonest answer, agreement): [('Zubrovia', 'qadda', 0.1), ('Veltrania', 'pole', 0.1), ('Oskaria', 'qadda', 0.1), ('Marundi Kel', 'eu', 0.1), ('Talvessa', 'pole', 0.1), ('Quorvath', 'pole', 0.1)]
+SmolLM2-135M, T=1.0: right 31 of 150 (well-known), 6 of 150 (less-known); correlation of agreement with right-of-10 over 30 countries 0.80
+   agreement 0.0-0.3: 25 countries, majority answer right in 4
+   agreement 0.3-0.6:  5 countries, majority answer right in 4
+   agreement 0.6-1.0:  0 countries, majority answer right in 0
+   agreement 0.5 or more with a wrong majority answer: []
+   invented countries (commonest answer, agreement): [('Zubrovia', 'scien', 0.1), ('Veltrania', 'imper', 0.1), ('Oskaria', 'imper', 0.1), ('Marundi Kel', 'batug', 0.1), ('Talvessa', 'talve', 0.1), ('Quorvath', 'soup-', 0.1)]
+SmolLM2-135M, T=0.7: right 70 of 150 (well-known), 15 of 150 (less-known); correlation of agreement with right-of-10 over 30 countries 0.91
+   agreement 0.0-0.3:  9 countries, majority answer right in 2
+   agreement 0.3-0.6: 18 countries, majority answer right in 12
+   agreement 0.6-1.0:  3 countries, majority answer right in 3
+   agreement 0.5 or more with a wrong majority answer: []
+   invented countries (commonest answer, agreement): [('Zubrovia', 'zubro', 0.2), ('Veltrania', 'veltr', 0.2), ('Oskaria', 'kalos', 0.2), ('Marundi Kel', 'dambu', 0.1), ('Talvessa', 'tala', 0.1), ('Quorvath', 'dunwi', 0.1)]

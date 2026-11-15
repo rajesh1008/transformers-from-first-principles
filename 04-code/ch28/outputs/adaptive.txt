@@ -1,0 +1,7 @@
+eta 0.0003    kept   322.6  not-in-pool 0.165  surprise 3.654 (steps 21-40: 3.643)  distinct-2 0.879  first ' idea: but the Earl were sphused\nit the  Charit exclaimed dr'
+eta 0.0009    kept   220.4  not-in-pool 0.180  surprise 3.488 (steps 21-40: 3.510)  distinct-2 0.850  first ' left the place, but it\nthink at a good man, and in illydisg'
+eta 0.004     kept   135.3  not-in-pool 0.169  surprise 3.274 (steps 21-40: 3.249)  distinct-2 0.839  first ' air. And the words had\nsaid.”\n\n“I was the-clocky weekness,”'
+mirostat 2.0  kept     6.8  not-in-pool 0.103  surprise 2.091 (steps 21-40: 2.055)  distinct-2 0.538  first ' Professor.\n\n“Aven you a _dible_!” she whispered with a mome'
+mirostat 2.5  kept    17.0  not-in-pool 0.138  surprise 2.629 (steps 21-40: 2.563)  distinct-2 0.738  first ' Professor.\n\n“A more?” the Professor said. The young man app'
+mirostat 3.0  kept    56.3  not-in-pool 0.158  surprise 3.036 (steps 21-40: 3.111)  distinct-2 0.826  first ' same mount was a\nalother, that was a gibicndm forms of his '
+mirostat 3.5  kept   155.3  not-in-pool 0.184  surprise 3.307 (steps 21-40: 3.348)  distinct-2 0.832  first " house. It's at\nwith no's right, and dividents-scazing round"

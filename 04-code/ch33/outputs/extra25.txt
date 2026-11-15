@@ -1,0 +1,10 @@
+Part J: Tiny's final norm output, held-out Carroll windows of 129
+  tied token table: True; final norm: True; d = 128; layers 12
+  rows scored: 3968
+  final norm output, largest |value| per dimension: top 5 dims [51, 25, 68, 34, 18] [12.2, 10.14, 8.35, 8.01, 7.84]; median 6.11
+  token table, largest |value| per dimension: top 5 dims [28, 81, 112, 75, 98] [0.898, 0.871, 0.792, 0.758, 0.737]; median 0.329
+
+Part K: GPTQ calibrated on 64 windows of 256 tokens (quant_gptq.py: 16)
+  pool tokens available from offset 100000: 9622
+  4-bit per 128 inputs, 37 windows: GPTQ 1.6990 (+0.1350); round-to-nearest 1.6691 (+0.1051); took 40 s
+  3-bit per 128 inputs, 37 windows: GPTQ 2.2855 (+0.7215); round-to-nearest 2.3163 (+0.7522); took 40 s

@@ -1,0 +1,8 @@
+2026-11-10; group sched; seed 1865; threads 3; 400 steps x 8 windows x 128 predictions; warmup 40
+adam 3e-3 warmup+cosine                      held-out 7.6530 -> 5.3801 (lowest 5.3801); batch last 25 4.7622; norm step 0 2.79, largest 12.7; 102 s
+adam 1e-2 warmup+cosine                      held-out 7.6530 -> 5.7555 (lowest 5.7555); batch last 25 5.4043; norm step 0 2.79, largest 60.2; 123 s
+adam 3e-2 warmup+cosine                      held-out 7.6530 -> 5.8035 (lowest 5.8035); batch last 25 5.4512; norm step 0 2.79, largest 4.63; 172 s
+adam 1e-3 warmup+cosine                      held-out 7.6530 -> 5.2684 (lowest 5.2684); batch last 25 4.6026; norm step 0 2.79, largest 3.44; 98 s
+adam 3e-3 wsd                                held-out 7.6530 -> 5.3307 (lowest 5.3307); batch last 25 4.6137; norm step 0 2.79, largest 12.7; 102 s
+adam 3e-3 linear to 0                        held-out 7.6530 -> 5.3497 (lowest 5.3497); batch last 25 4.6726; norm step 0 2.79, largest 12.7; 84 s
+adamw 3e-3 wd 0.1 warmup+cosine              held-out 7.6530 -> 5.3483 (lowest 5.3483); batch last 25 4.7437; norm step 0 2.79, largest 13.9; 83 s

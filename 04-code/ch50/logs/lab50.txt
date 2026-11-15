@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 11384.19it/s]
+{"model": "GPT-2 small", "year": "2019", "learned_numbers": 124439808, "layers": 12, "width": 768, "heads": 12, "kv_heads": 12, "vocab": 50257, "context": 1024, "positions": "learned", "norm": "layer norm", "ffn": "gelu_new", "qk_norm": false, "tied": true, "pieces": ["the", " cat", " sat", " on", " the", " mat"], "ids": [1169, 3797, 3332, 319, 262, 2603], "sink_mean": 0.7238, "top5": [[",", 0.2139], [" and", 0.1143], [".", 0.0782], [" with", 0.058], [" in", 0.0472]], "greedy16": ", and the cat sat on the mat, and the cat sat on the mat", "seconds": 2.6}
+  sink by layer [0.3453, 0.5764, 0.5848, 0.6948, 0.7003, 0.7948, 0.7977, 0.8458, 0.8392, 0.8716, 0.8832, 0.7521]
+  last-layer table [0.6637, 0.0487, 0.1381, 0.0389, 0.0429, 0.0676]
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:   0%|          | 1/272 [00:00<00:41,  6.49it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 1181.70it/s]
+{"model": "SmolLM2-135M", "year": "2024", "learned_numbers": 134515008, "layers": 30, "width": 576, "heads": 9, "kv_heads": 3, "vocab": 49152, "context": 8192, "positions": "rotary, theta 100000", "norm": "RMSNorm", "ffn": "gated silu", "qk_norm": false, "tied": true, "pieces": ["the", " cat", " sat", " on", " the", " mat"], "ids": [1195, 2644, 2643, 335, 260, 1171], "sink_mean": 0.6933, "top5": [[",", 0.2252], [".", 0.1503], [" and", 0.1039], [".\"", 0.0527], ["\n", 0.0295]], "greedy16": ", and the cat sat on the mat, and the cat sat on the mat", "seconds": 1.5}
+  sink by layer [0.306, 0.3493, 0.5595, 0.673, 0.6293, 0.6468, 0.6711, 0.6937, 0.6705, 0.5934, 0.5178, 0.2937, 0.7269, 0.6904, 0.836, 0.8043, 0.5849, 0.8675, 0.8904, 0.646, 0.9242, 0.789, 0.7789, 0.9161, 0.9258, 0.8197, 0.8539, 0.6461, 0.8005, 0.6952]
+  last-layer table [0.6403, 0.029, 0.0436, 0.0558, 0.0447, 0.1867]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:01<08:04,  1.56s/it]Loading weights:  83%|████████▎ | 258/311 [00:01<00:00, 209.39it/s]Loading weights: 100%|██████████| 311/311 [00:02<00:00, 149.97it/s]
+{"model": "Qwen3-0.6B", "year": "2025", "learned_numbers": 596049920, "layers": 28, "width": 1024, "heads": 16, "kv_heads": 8, "vocab": 151936, "context": 40960, "positions": "rotary, theta 1e+06", "norm": "RMSNorm", "ffn": "gated silu", "qk_norm": true, "tied": true, "pieces": ["the", " cat", " sat", " on", " the", " mat"], "ids": [1782, 8251, 7578, 389, 279, 5517], "sink_mean": 0.7154, "top5": [[" and", 0.2021], [",", 0.1942], [".", 0.1438], [" on", 0.0908], [" in", 0.0408]], "greedy16": " and the mat was on the floor. the cat is on the mat. the", "seconds": 6.6}
+  sink by layer [0.184, 0.3319, 0.2721, 0.8433, 0.7592, 0.7548, 0.6952, 0.7174, 0.7529, 0.7224, 0.668, 0.6742, 0.7514, 0.6599, 0.7413, 0.7691, 0.771, 0.7352, 0.7322, 0.7715, 0.7953, 0.8923, 0.8052, 0.8307, 0.8582, 0.9007, 0.8468, 0.7946]
+  last-layer table [0.8123, 0.0058, 0.0204, 0.0261, 0.0319, 0.1035]
+check 1, each model cuts the running sentence into six pieces: pass
+check 2, every attention row sums to one (checked on the stored last-layer tables): pass
+check 3, the newer models use rotary positions and RMSNorm; GPT-2 does not: pass
+check 4, grouped key-value heads in both newer models: pass
+check 5, all three put more than a third of attention on the first token on average: pass
+5 of 5 checks pass

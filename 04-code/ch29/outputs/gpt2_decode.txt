@@ -1,0 +1,12 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 12464.25it/s]
+Part D: held-out Carroll (Chapter 22's last 4,000 Tiny tokens of Sylvie and Bruno Concluded), bits per character
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+  text 10,919 characters; GPT-2 tokens 3,422 (0.313 per character), Tiny tokens 4,000 (0.366 per character)
+  GPT-2: mean surprise 3.4576 nats per token over 3,418 predicted tokens; 1.5640 bits per character
+
+Part E: decoding GPT-2 (3 prompts x 5 continuations x 40 tokens; seed 1865).  'not in pool' as for Tiny; 'not in pool or GPT-2's 24,593 whole-word tokens' as a stricter count of invented words
+  greedy     surprise 1.197  rep4 0.270  not-in-pool 0.000  not-in-pool-or-lexicon 0.000  distinct-2 0.590  p1 ' floor, and the cat was sitting on the floor.\n\n"I\'m not sure what happ'
+  T 1.0      surprise 3.725  rep4 0.000  not-in-pool 0.133  not-in-pool-or-lexicon 0.041  distinct-2 0.938  p1 ' spear and popped it through the air). From a distance he had been abl'
+  T 0.7      surprise 2.268  rep4 0.013  not-in-pool 0.038  not-in-pool-or-lexicon 0.017  distinct-2 0.798  p1 ' wooden floor on the chair; the cat sat in the chair.\n\n"His name is Ar'
+  min-p 0.1  surprise 2.075  rep4 0.013  not-in-pool 0.025  not-in-pool-or-lexicon 0.000  distinct-2 0.795  p1 ' grass. She was standing on a hillside, looking down. "The man had a b'
+  top-p 0.9  surprise 3.236  rep4 0.002  not-in-pool 0.115  not-in-pool-or-lexicon 0.030  distinct-2 0.906  p1 ' pantry shelf, wrapped his hands around her, giving her a deep love, m'

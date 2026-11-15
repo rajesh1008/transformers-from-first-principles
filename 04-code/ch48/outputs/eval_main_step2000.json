@@ -1,0 +1,65 @@
+{
+ "checkpoint": "main_step2000",
+ "step": 2000,
+ "params": 10050560,
+ "fp32": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 4.530926271812203,
+   "bpc": 1.809017741714667
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.186003912523918,
+   "bpc": 1.8607359310119895
+  }
+ },
+ "int8": {
+  "heldout": {
+   "windows": 194,
+   "tokens": 49664,
+   "chars": 179457,
+   "loss": 4.531067125576058,
+   "bpc": 1.8090739789921055
+  },
+  "glass": {
+   "windows": 197,
+   "tokens": 50432,
+   "chars": 163680,
+   "loss": 4.186149906991097,
+   "bpc": 1.8608008275473216
+  }
+ },
+ "int8_numbers": 10027008,
+ "int8_maxerr": 0.002825036644935608,
+ "bytes_fp32": 40202240,
+ "bytes_int8": 10247168,
+ "cache_maxdiff": 1.621246337890625e-05,
+ "samples": [
+  {
+   "seed": 1,
+   "text": "the cat sat on the matches of the bell, as though he had\ngot a driving-lamp, which was over again.\n\nThe snow and the sun was a great distance in the courtes, and\nthemmar before the door produced. It was a wilder, little too,\nand in spite of the rings of a there had been some fifty, there was\nno time even the hard care of its knowledge in the dark. The\nwind and the door there was hung in the room, and the two heavy\nand the changes caught it for the stake.\n\n\u201c",
+   "new_tokens": 120,
+   "seconds": 0.3395967483520508,
+   "tps": 353.36027386104195
+  },
+  {
+   "seed": 2,
+   "text": "the cat sat on the matuer, and the few\nafternoon was publicly in the house, and were set into the\ncharges of the church-room. On the sudden base, the new stream of the\nside, and followed the gates in the ceiling, the sun was a darkly\nfree of garret.\n\nThe wind had thrown out the surrophe from the bed, and aFrom\nwind beung by the light. A stone sun shone two. The sky was a\nhour or two. The high-r Come, and the valley was the dark, and",
+   "new_tokens": 120,
+   "seconds": 0.3438591957092285,
+   "tps": 348.9800520020801
+  },
+  {
+   "seed": 3,
+   "text": "the cat sat on the match-c bring the Chitling on the\nfroots, and the jaws crossed, (though it was a building among the\nroves of my work) on which I would see no more convenient to having\nthe smallest English cliff in the port ready to prevent his own, the\nscanch was a capital, and that my face was scarcely of the depth of the\nC Mann\u2019s house in the joint of his own, with an ordinary air, and\npired to a good, to those of his own breast. He had kept his",
+   "new_tokens": 120,
+   "seconds": 0.3893458843231201,
+   "tps": 308.20924230037934
+  }
+ ]
+}

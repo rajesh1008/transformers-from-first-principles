@@ -1,0 +1,33 @@
+moe8k1: held-out loss 4.4693
+layer 0: shares 0.266 0.089 0.019 0.286 0.073 0.018 0.172 0.078; busiest 0.286; experts under 2% 2; token purity 0.858 (shuffled 0.318); router entropy 1.483 nats (uniform 2.079)
+   expert 0 commonest tokens: '\n' 385, '’' 132, 't' 91, ' I' 53, 'm' 38, ' p' 36
+   expert 1 commonest tokens: '.' 149, ' the' 98, '\n' 51, '_' 39, ' “' 30, ' a' 26
+   expert 2 commonest tokens: ' And' 17, '\n\n\n\n' 7, '  ' 7, '1' 7, ' ' 6, 'And' 6
+   expert 3 commonest tokens: ' Alice' 41, ' her' 29, ' up' 28, 'ly' 19, 'Q' 18, ' King' 18
+   expert 4 commonest tokens: ' she' 67, ' you' 59, ' had' 32, ' was' 24, ' all' 23, ' be' 22
+   expert 5 commonest tokens: '“' 27, ' ' 26, 'The' 12, 'f' 9, 'the' 9, 'was' 7
+   expert 6 commonest tokens: ',' 301, ' the' 123, ' to' 95, ' and' 94, ' it' 70, ' of' 63
+   expert 7 commonest tokens: 's' 119, 'y' 70, 'ing' 45, 'ed' 45, 'and' 22, 'o' 19
+layer 1: shares 0.103 0.101 0.145 0.180 0.212 0.061 0.091 0.107; busiest 0.212; experts under 2% 0; token purity 0.673 (shuffled 0.241); router entropy 2.001 nats (uniform 2.079)
+layer 2: shares 0.105 0.162 0.092 0.140 0.139 0.177 0.089 0.095; busiest 0.177; experts under 2% 0; token purity 0.606 (shuffled 0.208); router entropy 2.035 nats (uniform 2.079)
+layer 3: shares 0.132 0.123 0.118 0.164 0.097 0.112 0.161 0.092; busiest 0.164; experts under 2% 0; token purity 0.681 (shuffled 0.197); router entropy 2.009 nats (uniform 2.079)
+layer 4: shares 0.130 0.181 0.093 0.136 0.041 0.134 0.203 0.082; busiest 0.203; experts under 2% 0; token purity 0.505 (shuffled 0.238); router entropy 2.001 nats (uniform 2.079)
+layer 5: shares 0.139 0.108 0.149 0.250 0.090 0.052 0.064 0.148; busiest 0.250; experts under 2% 0; token purity 0.510 (shuffled 0.270); router entropy 1.981 nats (uniform 2.079)
+   expert 0 commonest tokens: ' the' 63, ' and' 56, ' she' 40, ' ' 39, ' k' 19, ' R' 17
+   expert 1 commonest tokens: ' to' 62, '_' 46, 't' 39, 'o' 21, 'and' 15, 'ret' 15
+   expert 2 commonest tokens: '\n' 294, '.' 92, ',' 55, ' Alice' 25, '“' 24, '    ' 22
+   expert 3 commonest tokens: '\n' 123, ',' 90, '.' 59, '’' 56, ' you' 50, 's' 40
+   expert 4 commonest tokens: '’' 34, 's' 24, 'll' 21, '.' 21, 'm' 20, ' the' 20
+   expert 5 commonest tokens: ',' 85, 'ing' 14, '.' 12, 'b' 11, ' in' 10, 'ed' 9
+   expert 6 commonest tokens: ' the' 49, 'y' 20, ' it' 14, 's' 14, 't' 11, 'h' 10
+   expert 7 commonest tokens: ',' 60, ' the' 59, ' a' 48, '.' 36, ' I' 35, ' of' 28
+remove one expert, layer 0: loss rise +0.759 +0.128 +0.034 +0.520 +0.091 +0.021 +0.407 +0.062
+remove one expert, layer 1: loss rise +0.010 +0.064 +0.034 +0.007 +0.016 +0.004 +0.006 +0.012
+remove one expert, layer 2: loss rise +0.002 +0.001 +0.003 +0.002 +0.000 +0.000 -0.000 +0.005
+remove one expert, layer 3: loss rise +0.005 +0.007 +0.002 +0.002 +0.024 +0.000 +0.002 +0.024
+remove one expert, layer 4: loss rise +0.000 +0.006 +0.002 +0.005 +0.000 +0.002 +0.003 +0.003
+remove one expert, layer 5: loss rise +0.000 +0.002 +0.014 +0.006 +0.001 -0.000 -0.000 +0.000
+capacity factor 1.0: slots dropped 0.211, held-out loss 5.3337 (+0.8644)
+capacity factor 1.25: slots dropped 0.117, held-out loss 5.0462 (+0.5769)
+capacity factor 2.0: slots dropped 0.010, held-out loss 4.5924 (+0.1231)
+running sentence, top expert by layer: 'the' 006766; ' cat' 331327; ' sat' 371227; ' on' 626167; ' the' 616767; ' m' 073060; 'at' 037024

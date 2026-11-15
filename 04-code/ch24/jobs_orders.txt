@@ -1,0 +1,6 @@
+ORDER=7 python3 train_tiny.py cosine 5e-4 600
+ORDER=7 python3 train_tiny.py cosine 4e-3 600
+ORDER=7 python3 train_tiny.py cosine 8e-3 600
+ORDER=11 python3 train_tiny.py cosine 5e-4 600
+ORDER=11 python3 train_tiny.py cosine 1e-3 600
+ORDER=11 python3 train_tiny.py cosine 2e-3 600

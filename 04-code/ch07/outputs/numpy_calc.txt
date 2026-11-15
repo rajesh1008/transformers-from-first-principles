@@ -1,0 +1,11 @@
+sat * cat  (entry by entry): [0.0, 1.0]   sum: 1.0
+sat @ cat  (the dot product): 1.0
+X * X has shape (6, 2) ; X @ X.T has shape (6, 6)
+sum of each row of X * X  (axis=1): [1.0, 1.0, 2.0, 2.0, 1.0, 2.0] = the table's diagonal
+sum down each column of X (axis=0): [3.0, 2.0]
+
+X + TOY_POS, row sat: [1.0, 0.5]   same as Chapter 5's loops: True
+X + one row (0.5, 0.5): shapes (6, 2) + (2,) -> (6, 2) ; row mat: [-0.5, 1.5]
+
+turn by 60 degrees as a matrix: [[0.5, 0.866], [-0.866, 0.5]]
+sat turned, R @ sat: [1.366, -0.366]   Chapter 6: [1.366, -0.366]

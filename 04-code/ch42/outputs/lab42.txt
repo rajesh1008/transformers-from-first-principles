@@ -1,0 +1,14 @@
+  largest difference, one-expert MoE against dense: 0.0
+[pass] a one-expert MoE is the dense feed-forward layer
+[pass] with one expert the balance term is exactly 1
+[pass] top-2 gates, renormalised, sum to 1 for every token
+  largest difference against a token-by-token loop: 8.38e-09
+[pass] the batched MoE equals a token-by-token loop
+  balance term with a zero router: 1.0000
+[pass] a zero router (uniform shares) gives a balance term of 1
+[pass] a capacity factor of 100 drops no token
+  slots dropped at capacity factor 0.25: 12 of 20
+[pass] a capacity factor of 0.25 drops at least half of the slots
+[pass] dropping expert 0 removes exactly expert 0's weighted output
+[pass] used-per-token count is total minus (E - K) experts per layer
+9 of 9 checks pass

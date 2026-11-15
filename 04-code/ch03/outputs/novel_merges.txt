@@ -1,0 +1,35 @@
+the novel cut into 37,938 chunks, 3,705 of them different
+the first twelve chunks: ['[', 'Illustration', ']', '\n\n\n\n', '\n', 'Alice', '’', 's', ' Adventures', ' in', ' Wonderland', '\n']
+
+learned 1,791 merges in 0.13 s; vocabulary size 2,048 (256 bytes + 1,791 merges + 1 special)
+
+  #  new piece    made from        seen   id  | GPT-2 id of the same piece
+  1  '␣t'           '␣' + 't'      3791   256  | 256
+  2  'he'           'h' + 'e'      3739   257  | 258
+  3  '�'            '�' + '�'      3247   258  | 447
+  4  '␣a'           '␣' + 'a'      2596   259  | 257
+  5  '␣s'           '␣' + 's'      2212   260  | 264
+  6  'in'           'i' + 'n'      2011   261  | 259
+  7  '␣the'        '␣t' + 'he'     1842   262  | 262
+  8  'ou'           'o' + 'u'      1554   263  | 280
+  9  '␣w'           '␣' + 'w'      1524   264  | 266
+ 10  'it'           'i' + 't'      1262   265  | 270
+ 11  'nd'           'n' + 'd'      1182   266  | 358
+ 12  'er'           'e' + 'r'      1161   267  | 263
+ 13  '␣o'           '␣' + 'o'      1133   268  | 267
+ 14  '“'            '�' + '�'      1117   269  | -
+ 15  '”'            '�' + '�'      1114   270  | -
+ 16  'ha'           'h' + 'a'      1041   271  | 3099
+ 17  'ing'         'in' + 'g'       982   272  | 278
+ 18  're'           'r' + 'e'       979   273  | 260
+ 19  'ed'           'e' + 'd'       837   274  | 276
+ 20  '␣b'           '␣' + 'b'       824   275  | 275
+ 21  '␣to'         '␣t' + 'o'       811   276  | 284
+ 22  '’'            '�' + '�'       706   277  | -
+ 23  '␣c'           '␣' + 'c'       702   278  | 269
+ 24  '␣and'        '␣a' + 'nd'      698   279  | 290
+the best pair is first seen fewer than 1,000 times at merge 17
+the best pair is first seen fewer than 100 times at merge 171
+the best pair is first seen fewer than 10 times at merge 1,053
+merge 1,791, the last one Tiny keeps, joins a pair seen 4 times
+with no size limit, training stops after 3,340 merges, when no pair is left that occurs twice

@@ -1,0 +1,20 @@
+{
+ "name": "direct4",
+ "format": "direct",
+ "n": 1000,
+ "budget": [],
+ "vote": [
+  {
+   "N": 1,
+   "exact": 0.005
+  },
+  {
+   "N": 5,
+   "exact": 0.005
+  },
+  {
+   "N": 15,
+   "exact": 0.007
+  }
+ ]
+}

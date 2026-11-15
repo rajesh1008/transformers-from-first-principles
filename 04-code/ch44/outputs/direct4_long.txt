@@ -1,0 +1,11 @@
+direct4_long: format direct, e.g. '37+48=>85.' (4 characters after '='); learned numbers 805,648
+step   500  loss 1.1164  exact on 200 held-out pairs 0.000  (238 s)
+step  1000  loss 0.8622  exact on 200 held-out pairs 0.000  (359 s)
+step  1500  loss 0.6881  exact on 200 held-out pairs 0.020  (458 s)
+step  2000  loss 0.5256  exact on 200 held-out pairs 0.050  (558 s)
+step  2500  loss 0.3089  exact on 200 held-out pairs 0.295  (651 s)
+step  3000  loss 0.0064  exact on 200 held-out pairs 0.995  (1977 s)
+step  3500  loss 0.0022  exact on 200 held-out pairs 1.000  (2097 s)
+step  4000  loss 0.0017  exact on 200 held-out pairs 1.000  (2213 s)
+step  4500  loss 0.0016  exact on 200 held-out pairs 1.000  (2304 s)
+held-out exact 0.9965 (2,000 pairs; ones column carries 0.9946, without 0.9981); e.g. 9828+1332=>11160.

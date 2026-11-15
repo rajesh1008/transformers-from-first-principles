@@ -1,0 +1,8 @@
+vit_p4: patch 4x4, 4 patches + 1 class row, width 64, 4 layers, 4 heads, positions learned, pool cls; learned numbers 202,186
+epoch   1  train loss 2.0164  test accuracy 0.5333
+epoch   2  train loss 0.9655  test accuracy 0.8083
+epoch   5  train loss 0.1596  test accuracy 0.9500
+epoch  10  train loss 0.0654  test accuracy 0.9667
+epoch  20  train loss 0.0059  test accuracy 0.9861
+epoch  30  train loss 0.0051  test accuracy 0.9833
+test accuracy 0.9833; with patches shuffled at test time 0.9667  (11 s)

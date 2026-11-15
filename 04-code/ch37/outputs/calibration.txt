@@ -1,0 +1,36 @@
+Tiny: 20,480 predictions, loss 4.3213 nats; top-1 accuracy 0.2071, mean top-1 confidence 0.2382, ECE 0.0312
+   bin 0.0-0.1:   5396 tokens  confidence 0.068  accuracy 0.059
+   bin 0.1-0.2:   6770 tokens  confidence 0.143  accuracy 0.125
+   bin 0.2-0.3:   3287 tokens  confidence 0.244  accuracy 0.217
+   bin 0.3-0.4:   1709 tokens  confidence 0.346  accuracy 0.302
+   bin 0.4-0.5:   1003 tokens  confidence 0.444  accuracy 0.370
+   bin 0.5-0.6:    619 tokens  confidence 0.546  accuracy 0.477
+   bin 0.6-0.7:    469 tokens  confidence 0.648  accuracy 0.522
+   bin 0.7-0.8:    387 tokens  confidence 0.747  accuracy 0.623
+   bin 0.8-0.9:    342 tokens  confidence 0.852  accuracy 0.719
+   bin 0.9-1.0:    498 tokens  confidence 0.961  accuracy 0.902
+   temperature fitted on the first half: 1.10; ECE on the second half 0.0332 -> 0.0142 (confidence 0.2006, accuracy 0.2070)
+GPT-2 small: 20,480 predictions, loss 3.4737 nats; top-1 accuracy 0.3876, mean top-1 confidence 0.3980, ECE 0.0654
+   bin 0.0-0.1:   2510 tokens  confidence 0.068  accuracy 0.085
+   bin 0.1-0.2:   4352 tokens  confidence 0.149  accuracy 0.174
+   bin 0.2-0.3:   3369 tokens  confidence 0.248  accuracy 0.290
+   bin 0.3-0.4:   2394 tokens  confidence 0.347  accuracy 0.392
+   bin 0.4-0.5:   1696 tokens  confidence 0.447  accuracy 0.493
+   bin 0.5-0.6:   1211 tokens  confidence 0.547  accuracy 0.605
+   bin 0.6-0.7:    937 tokens  confidence 0.649  accuracy 0.666
+   bin 0.7-0.8:    779 tokens  confidence 0.748  accuracy 0.725
+   bin 0.8-0.9:    812 tokens  confidence 0.850  accuracy 0.819
+   bin 0.9-1.0:   2420 tokens  confidence 0.978  accuracy 0.674
+   temperature fitted on the first half: 1.00; ECE on the second half 0.0635 -> 0.0635 (confidence 0.4080, accuracy 0.3933)
+SmolLM2-135M: 20,480 predictions, loss 2.6178 nats; top-1 accuracy 0.4517, mean top-1 confidence 0.4469, ECE 0.0092
+   bin 0.0-0.1:   1585 tokens  confidence 0.070  accuracy 0.078
+   bin 0.1-0.2:   3476 tokens  confidence 0.150  accuracy 0.150
+   bin 0.2-0.3:   3156 tokens  confidence 0.249  accuracy 0.252
+   bin 0.3-0.4:   2656 tokens  confidence 0.349  accuracy 0.364
+   bin 0.4-0.5:   2074 tokens  confidence 0.449  accuracy 0.457
+   bin 0.5-0.6:   1605 tokens  confidence 0.548  accuracy 0.577
+   bin 0.6-0.7:   1222 tokens  confidence 0.649  accuracy 0.661
+   bin 0.7-0.8:   1115 tokens  confidence 0.748  accuracy 0.747
+   bin 0.8-0.9:   1039 tokens  confidence 0.851  accuracy 0.827
+   bin 0.9-1.0:   2552 tokens  confidence 0.973  accuracy 0.966
+   temperature fitted on the first half: 1.00; ECE on the second half 0.0108 -> 0.0108 (confidence 0.4538, accuracy 0.4583)

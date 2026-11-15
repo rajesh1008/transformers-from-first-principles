@@ -1,0 +1,11 @@
+2026-11-10; seed 1865; threads 8; 400 steps x 8 windows x 128 predictions
+lr 0.1  0.02 everywhere (Tiny's default)   held-out 7.6530 -> 5.9653; batch loss last 25 5.6844; nudge norm step 0 2.79, largest 61.1; 37 s
+lr 0.1  0.02, W_o and W_2 / sqrt(24)       held-out 7.6227 -> 5.5365; batch loss last 25 5.0729; nudge norm step 0 5, largest 13.7; 70 s
+lr 0.1  1/sqrt(fan-in)                     held-out 7.6512 -> 5.8594; batch loss last 25 5.5958; nudge norm step 0 1.56, largest 2.03; 58 s
+lr 0.1  0.2, ten times too large           held-out 7.6660 -> 5.9457; batch loss last 25 5.6982; nudge norm step 0 3.75, largest 3.79; 40 s
+lr 0.1  layer tables all zero              held-out 7.6069 -> 6.2647; batch loss last 25 5.9867; nudge norm step 0 3.72, largest 3.72; 51 s
+lr 0.6  0.02 everywhere (Tiny's default)   held-out 7.6530 -> 5.8720; batch loss last 25 5.6472; nudge norm step 0 2.79, largest 67.4; 33 s
+lr 0.6  0.02, W_o and W_2 / sqrt(24)       held-out 7.6227 -> 6.0269; batch loss last 25 5.8016; nudge norm step 0 5, largest 76.3; 38 s
+lr 0.6  1/sqrt(fan-in)                     held-out 7.6512 -> 6.2194; batch loss last 25 6.0701; nudge norm step 0 1.56, largest 24.1; 30 s
+lr 0.6  0.2, ten times too large           held-out 7.6660 -> 6.0090; batch loss last 25 5.8078; nudge norm step 0 3.75, largest 24.7; 38 s
+lr 0.6  layer tables all zero              held-out 7.6069 -> 6.1787; batch loss last 25 6.0462; nudge norm step 0 3.72, largest 5.85; 30 s

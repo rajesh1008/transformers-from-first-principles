@@ -1,0 +1,1 @@
+fan_in  window seed  1865: held-out 5.8594; batch loss last 25 5.5958

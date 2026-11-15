@@ -1,0 +1,41 @@
+26 runs of 400 steps found
+Part 1. three runs of one configuration: {'i1865_o1865_t1': '5c1acbf22b848303', 'i1865_o1865_t1_r2': '5c1acbf22b848303', 'i1865_o1865_t1_r3': '5c1acbf22b848303'} identical losses at every step: True
+  Chapter 24's 2,500-step run repeated: {'fp_ch24': 'f9158f268b779505', 'fp_repeat': 'f9158f268b779505', 'identical': True, 'run': [2500, 3.7296199798583984, 4.365034103393555, 5.167882442474365]}
+Part 2. i1865_o1865_t2: first differing step 12; |batch-loss gap| at steps 1/10/50/100/400: 0 / 0 / 9.5e-07 / 0.00065 / 0.001; final Carroll 4.9084 (+0.0007) Looking-Glass 5.1201 (+0.0001); 157 s
+Part 2. i1865_o1865_t4: first differing step 17; |batch-loss gap| at steps 1/10/50/100/400: 0 / 0 / 9.5e-07 / 0.0014 / 0.0024; final Carroll 4.9094 (+0.0016) Looking-Glass 5.1203 (+0.0003); 206 s
+Part 2. i1865_o1865_t4_r2: first differing step 17; |batch-loss gap| at steps 1/10/50/100/400: 0 / 0 / 9.5e-07 / 0.0012 / 0.002; final Carroll 4.9091 (+0.0013) Looking-Glass 5.1203 (+0.0002); 206 s
+Part 2. i1865_o1865_t1_nudge: first differing step 14; |batch-loss gap| at steps 1/10/50/100/400: 0 / 0 / 9.5e-07 / 0.00081 / 0.0013; final Carroll 4.9086 (+0.0008) Looking-Glass 5.1201 (+0.0001); 115 s
+  two four-thread runs identical to each other: False | fingerprints 1a385c331e79eabd 69ae1f46ac6fef0d
+Part 3. carroll grid (rows starting seed 1865/7/11, columns order seed 1865/7/11):
+    init  1865: 4.9078  5.0407  5.1280   row mean 5.0255
+    init     7: 5.3230  5.2545  4.9860   row mean 5.1878
+    init    11: 4.9821  5.1631  5.1740   row mean 5.1064
+    column means 5.0710  5.1528  5.0960;  all nine: mean 5.1066 sd 0.1373
+    sums of squares: starting seed 0.0395, order seed 0.0105, left over 0.1008
+Part 3. glass grid (rows starting seed 1865/7/11, columns order seed 1865/7/11):
+    init  1865: 5.1200  5.2064  5.2686   row mean 5.1983
+    init     7: 5.4056  5.3449  5.1691   row mean 5.3065
+    init    11: 5.1510  5.2610  5.2953   row mean 5.2358
+    column means 5.2255  5.2708  5.2443;  all nine: mean 5.2469 sd 0.0941
+    sums of squares: starting seed 0.0181, order seed 0.0031, left over 0.0496
+  carroll: five starting seeds (order 1865) 4.9078, 5.3230, 4.9821, 5.4144, 5.3496  sd 0.2325
+  carroll: five order seeds (start 1865)   4.9078, 5.0407, 5.1280, 5.2062, 5.0174  sd 0.1133
+  carroll: five seeds, both changed       4.9078, 5.2545, 5.1740, 5.2329, 5.0656  sd 0.1427
+    spreads added as squares: sqrt(0.2325^2 + 0.1133^2) = 0.2586
+  glass: five starting seeds (order 1865) 5.1200, 5.4056, 5.1510, 5.4911, 5.4027  sd 0.1672
+  glass: five order seeds (start 1865)   5.1200, 5.2064, 5.2686, 5.3020, 5.1966  sd 0.0704
+  glass: five seeds, both changed       5.1200, 5.3449, 5.2953, 5.3235, 5.2062  sd 0.0935
+    spreads added as squares: sqrt(0.1672^2 + 0.0704^2) = 0.1814
+Part 4. carroll: lr 1e-3 4.9078, 5.2545, 5.1740, 5.2329, 5.0656 | lr 1.4e-3 5.2321, 5.2617, 5.2455, 5.4248, 5.1326
+    differences (1.4e-3 minus 1e-3, same seed) +0.3243, +0.0072, +0.0715, +0.1919, +0.0669; mean +0.1324, sd 0.1265, se 0.0566
+    single seeds pointing the other way: 0 of 5; unpaired pairs (seed a for one, b for the other): 6 of 25 the other way; three-seed means the other way 0 of 10, resolved at 2 se 4 of 10
+Part 4. glass: lr 1e-3 5.1200, 5.3449, 5.2953, 5.3235, 5.2062 | lr 1.4e-3 5.3364, 5.3476, 5.3372, 5.4897, 5.2365
+    differences (1.4e-3 minus 1e-3, same seed) +0.2164, +0.0027, +0.0418, +0.1662, +0.0303; mean +0.0915, sd 0.0939, se 0.0420
+    single seeds pointing the other way: 0 of 5; unpaired pairs (seed a for one, b for the other): 5 of 25 the other way; three-seed means the other way 0 of 10, resolved at 2 se 3 of 10
+Part 5. two models on the first 64 Looking-Glass windows: KL (nats per prediction) and top-choice agreement, by pool count of the true token
+  starting seed (1865 vs 7, order 1865) KL 0.259, top choice agrees 0.557;  by band: 0-99 0.25/0.54; 100-999 0.26/0.53; 1,000-9,999 0.28/0.56; 10,000+ 0.22/0.70
+  order seed (1865 vs 7, start 1865) KL 0.0925, top choice agrees 0.708;  by band: 0-99 0.087/0.73; 100-999 0.092/0.68; 1,000-9,999 0.097/0.71; 10,000+ 0.086/0.80
+  threads (1 vs 4)                   KL 0.000111, top choice agrees 0.989;  by band: 0-99 9.6e-05/0.99; 100-999 0.0001/0.99; 1,000-9,999 0.00012/0.99; 10,000+ 0.00015/0.99
+  one-ulp nudge                      KL 3.63e-05, top choice agrees 0.994;  by band: 0-99 3.2e-05/0.99; 100-999 3.4e-05/1.00; 1,000-9,999 3.8e-05/0.99; 10,000+ 4.7e-05/0.99
+  2,500 steps, order 1865 vs 7       KL 0.333, top choice agrees 0.591;  by band: 0-99 0.33/0.58; 100-999 0.32/0.58; 1,000-9,999 0.35/0.58; 10,000+ 0.33/0.69
+  tokens per band: {'0-99': 1205, '100-999': 3208, '1,000-9,999': 2987, '10,000+': 792}

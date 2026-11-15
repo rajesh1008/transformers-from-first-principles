@@ -1,0 +1,101 @@
+{
+ "A": {
+  "top": [
+   [
+    "\n",
+    0.052115377344763604
+   ],
+   [
+    " c",
+    0.020999923332036208
+   ],
+   [
+    " p",
+    0.0204117114942152
+   ],
+   [
+    " P",
+    0.020189902078894643
+   ],
+   [
+    " door",
+    0.019737585493253905
+   ],
+   [
+    " l",
+    0.019201681544038052
+   ],
+   [
+    " ",
+    0.01787082491825703
+   ],
+   [
+    " f",
+    0.01737859420168719
+   ],
+   [
+    " room",
+    0.017198386483300226
+   ],
+   [
+    " b",
+    0.01606730791733386
+   ]
+  ],
+  "entropy": 5.477691874125577
+ },
+ "B": {
+  "text": "the cat sat on the\nfirst----\"\n\n\"I've been a little boy!\" said Balbus.\n\n\"I'm afraid I'm afraid of the",
+  "repeat": [
+   8,
+   27
+  ]
+ },
+ "C": [
+  [
+   0.25,
+   0.8144417228353804,
+   1.029185053603587
+  ],
+  [
+   0.5,
+   0.2712892499994542,
+   3.463045464364013
+  ],
+  [
+   0.7,
+   0.12558552061433964,
+   4.4672879387342315
+  ],
+  [
+   1.0,
+   0.052115377344763604,
+   5.477691874125577
+  ],
+  [
+   1.5,
+   0.0187090775175324,
+   6.460821258490017
+  ],
+  [
+   2.0,
+   0.009412447572774358,
+   6.936479542742325
+  ]
+ ],
+ "D": [
+  " room. It's all, my asked\nof me, and he're plear",
+  " box invay?\u201d\n\n\u201cYou should like to I been looking like through a Men,",
+  " cird-face hall, which I walked,\nthem as this playful to",
+  " remark; and the crug was, into\nthem back-wrongoard of the",
+  " Shak green I see\nfack: but it was fever ride little car",
+  " young des:\n   Inced \u201cGhosting out with you woe\n",
+  " table,\n   But and not in a second winish strurster little sc",
+  " world.\u201d\n\n\u201cThen what seems a little littleest of the _on-y_",
+  " louke out,\n   Of setling her ownleasion,\n      And the",
+  " soonard on the bank,\u201d he said: \u201cwhen you\u2019ll try\nthe com"
+ ],
+ "E": {
+  "repeat": true
+ }
+}

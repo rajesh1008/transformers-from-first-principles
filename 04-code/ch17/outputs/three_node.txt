@@ -1,0 +1,20 @@
+forward:  z = w1 x + b1 = 0.5 x 2 - 0.5 = 0.5 | h = max(0, z) = 0.5 | y = w2 h + b2 = 1.5 x 0.5 + 0 = 0.75 | loss = (y - t)^2 = (0.75 - 2)^2 = 1.5625
+backward: d loss/d y = 2(y - t) = -2.5
+          d loss/d w2 = d loss/d y x h = -1.25 | d loss/d b2 = d loss/d y x 1 = -2.5
+          d loss/d h  = d loss/d y x w2 = -3.75
+          d loss/d z  = d loss/d h x (1 because z > 0) = -3.75
+          d loss/d w1 = d loss/d z x x = -7.5 | d loss/d b1 = d loss/d z x 1 = -3.75
+wiggled:   [-7.5, -3.75, -1.25, -2.5]
+autograd:  [-7.5, -3.75, -1.25, -2.5]
+
+one step of gradient descent, learning rate 0.05:
+  numbers [0.875, -0.3125, 1.5625, 0.125] loss 0.1377 (was 1.5625 )
+
+learning rates, 30 steps each:
+  lr 0.05: loss 1.56 0.138 0.0325 0.00484 0.000887 0.00015 ... step 29 7.73e-23
+  lr 0.3: loss 1.56 105 54.6 8.74 1.4 0.224 ... step 29 1.77e-20; the ReLU switched off at step 2 and never came back (z = -51.4), b2 now 2
+  lr 1.0: loss 1.56 2.86e+03 1.13e+04 1.13e+04 1.13e+04 1.13e+04 ... step 29 1.13e+04; the ReLU switched off at step 2 and never came back (z = -1.45e+03), b2 now -104.4
+  lr 1.2: loss 1.56 4.9e+03 2.79e+04 5.47e+04 1.07e+05 2.1e+05 ... step 29 2.17e+12; the ReLU switched off at step 2 and never came back (z = -2.5e+03), b2 now -2.062e+06
+
+the nudge that is exactly zero: start with b1 = -1.5, so z = -0.5 and the ReLU is off
+  z -0.5, h 0.0, y 0.0, loss 4.0; d loss/d w1 = d loss/d b1 = 0, d loss/d w2 = 0 (h = 0); only b2 moves: [0.0, 0.0, 0.0, -4.0]

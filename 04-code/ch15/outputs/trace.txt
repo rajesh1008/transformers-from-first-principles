@@ -1,0 +1,134 @@
+THE PLAN: the hand-sized Tiny
+  vocabulary: the toy vocabulary of twelve entries: ['the', 'cat', 'sat', 'on', 'mat', 'a', 'dog', 'rabbit', 'looked', 'at', 'hat', '<unk>']
+  running sentence ids: [0, 1, 2, 3, 0, 4] -> ['the', 'cat', 'sat', 'on', 'the', 'mat']
+  width 2, one head of width 2, feed-forward 2 -> 3 -> 2 with ReLU, RMSNorm (gain 1), two layers, tied output
+  learned numbers: token table 24, position table 12, per layer: ln_1 gain 2, per layer: W_q, W_k, W_v, W_o 16, per layer: ln_2 gain 2, per layer: W_1, b_1, W_2, b_2 17, ln_f gain 2 -> total 112
+
+STEP 1  tokens to rows: token row + seat row
+  seat 0 the id  0: token (1.000, 0.000) + seat (0.500, 0.500) = (1.500, 0.500)
+  seat 1 cat id  1: token (0.000, 1.000) + seat (0.500, 0.000) = (0.500, 1.000)
+  seat 2 sat id  2: token (1.000, 1.000) + seat (0.000, -0.500) = (1.000, 0.500)
+  seat 3  on id  3: token (1.000, -1.000) + seat (-0.500, 0.000) = (0.500, -1.000)
+  seat 4 the id  0: token (1.000, 0.000) + seat (-0.500, 0.500) = (0.500, 0.500)
+  seat 5 mat id  4: token (-1.000, 1.000) + seat (0.000, 0.500) = (-1.000, 1.500)
+
+===== LAYER 0 =====
+STEP 2a  RMSNorm (ln_1): divide each row by the root of the average of its two squares
+    the@0: (1.500, 0.500)  rms sqrt((1.500^2 + 0.500^2) / 2) = 1.118  -> (1.342, 0.447)
+    cat@1: (0.500, 1.000)  rms sqrt((0.500^2 + 1.000^2) / 2) = 0.791  -> (0.632, 1.265)
+    sat@2: (1.000, 0.500)  rms sqrt((1.000^2 + 0.500^2) / 2) = 0.791  -> (1.265, 0.632)
+     on@3: (0.500, -1.000)  rms sqrt((0.500^2 + -1.000^2) / 2) = 0.791  -> (0.632, -1.265)
+    the@4: (0.500, 0.500)  rms sqrt((0.500^2 + 0.500^2) / 2) = 0.500  -> (1.000, 1.000)
+    mat@5: (-1.000, 1.500)  rms sqrt((-1.000^2 + 1.500^2) / 2) = 1.275  -> (-0.784, 1.177)
+STEP 2b  query, key and value rows (Chapter 8's tables)
+    the@0: query (1.342, 0.894)  key (0.447, 1.342)  value (1.789, 0.447)
+    cat@1: query (0.632, 2.530)  key (1.265, 0.632)  value (1.897, 1.265)
+    sat@2: query (1.265, 1.265)  key (0.632, 1.265)  value (1.897, 0.632)
+     on@3: query (0.632, -2.530)  key (-1.265, 0.632)  value (-0.632, -1.265)
+    the@4: query (1.000, 2.000)  key (1.000, 1.000)  value (2.000, 1.000)
+    mat@5: query (-0.784, 2.353)  key (1.177, -0.784)  value (0.392, 1.177)
+STEP 3  scores (query . key), divided by sqrt(2), masked, softmax
+               the@0    cat@1    sat@2     on@3    the@4    mat@5
+    the@0:     1.273   masked   masked   masked   masked   masked
+    cat@1:     2.600    1.697   masked   masked   masked   masked
+    sat@2:     1.600    1.697    1.697   masked   masked   masked
+     on@3:    -2.200   -0.566   -1.980   -1.697   masked   masked
+    the@4:     2.214    1.789    2.236    0.000    2.121   masked
+    mat@5:     1.985    0.351    1.754    1.754    1.109   -1.958
+  shares:
+    the@0:     1.000                                                sum 1.000
+    cat@1:     0.712    0.288                                       sum 1.000
+    sat@2:     0.312    0.344    0.344                              sum 1.000
+     on@3:     0.111    0.568    0.138    0.183                     sum 1.000
+    the@4:     0.270    0.177    0.277    0.030    0.247            sum 1.000
+    mat@5:     0.311    0.061    0.247    0.247    0.129    0.006   sum 1.000
+  sat in detail: scores 2.263, 2.400, 2.400 -> / 1.414 -> 1.600, 1.697, 1.697 -> e^ 4.953, 5.458, 5.458 (total 15.869) -> shares 0.312, 0.344, 0.344
+STEP 4  blend of values (shares x values), then W_o (the identity) and the first addition
+    the@0: blend (1.789, 0.447)  row (1.500, 0.500) + blend = (3.289, 0.947)
+    cat@1: blend (1.820, 0.683)  row (0.500, 1.000) + blend = (2.320, 1.683)
+    sat@2: blend (1.863, 0.792)  row (1.000, 0.500) + blend = (2.863, 1.292)
+     on@3: blend (1.422, 0.624)  row (0.500, -1.000) + blend = (1.922, -0.376)
+    the@4: blend (1.819, 0.729)  row (0.500, 0.500) + blend = (2.319, 1.229)
+    mat@5: blend (1.244, 0.196)  row (-1.000, 1.500) + blend = (0.244, 1.696)
+STEP 5  RMSNorm (ln_2), the feed-forward block, the second addition
+    the@0: (3.289, 0.947) -> ln_2 (1.359, 0.391) | matches (1.359, 0.391, -0.250) | ReLU (1.359, 0.391, 0.000) | writes (0.196, 0.679) | row out (3.485, 1.627)
+    cat@1: (2.320, 1.683) -> ln_2 (1.145, 0.830) | matches (1.145, 0.830, -0.025) | ReLU (1.145, 0.830, 0.000) | writes (0.415, 0.572) | row out (2.735, 2.255)
+    sat@2: (2.863, 1.292) -> ln_2 (1.289, 0.582) | matches (1.289, 0.582, -0.129) | ReLU (1.289, 0.582, 0.000) | writes (0.291, 0.645) | row out (3.154, 1.937)
+     on@3: (1.922, -0.376) -> ln_2 (1.388, -0.272) | matches (1.388, -0.272, -0.884) | ReLU (1.388, 0.000, 0.000) | writes (0.000, 0.694) | row out (1.922, 0.317)
+    the@4: (2.319, 1.229) -> ln_2 (1.250, 0.662) | matches (1.250, 0.662, -0.088) | ReLU (1.250, 0.662, 0.000) | writes (0.331, 0.625) | row out (2.650, 1.854)
+    mat@5: (0.244, 1.696) -> ln_2 (0.201, 1.400) | matches (0.201, 1.400, -0.399) | ReLU (0.201, 1.400, 0.000) | writes (0.700, 0.101) | row out (0.944, 1.797)
+  neuron 3 (key (1, 1), bias -2) fires for: nobody
+  neurons active per seat: [2, 2, 2, 1, 2, 2]
+
+===== LAYER 1 =====
+STEP 8a  RMSNorm (ln_1): divide each row by the root of the average of its two squares
+    the@0: (3.485, 1.627)  rms sqrt((3.485^2 + 1.627^2) / 2) = 2.719  -> (1.281, 0.598)
+    cat@1: (2.735, 2.255)  rms sqrt((2.735^2 + 2.255^2) / 2) = 2.507  -> (1.091, 0.900)
+    sat@2: (3.154, 1.937)  rms sqrt((3.154^2 + 1.937^2) / 2) = 2.617  -> (1.205, 0.740)
+     on@3: (1.922, 0.317)  rms sqrt((1.922^2 + 0.317^2) / 2) = 1.377  -> (1.395, 0.230)
+    the@4: (2.650, 1.854)  rms sqrt((2.650^2 + 1.854^2) / 2) = 2.287  -> (1.159, 0.811)
+    mat@5: (0.944, 1.797)  rms sqrt((0.944^2 + 1.797^2) / 2) = 1.435  -> (0.658, 1.252)
+STEP 8b  query, key and value rows (Chapter 8's tables)
+    the@0: query (1.281, 1.196)  key (0.598, 1.281)  value (1.880, 0.598)
+    cat@1: query (1.091, 1.799)  key (0.900, 1.091)  value (1.991, 0.900)
+    sat@2: query (1.205, 1.480)  key (0.740, 1.205)  value (1.945, 0.740)
+     on@3: query (1.395, 0.461)  key (0.230, 1.395)  value (1.626, 0.230)
+    the@4: query (1.159, 1.621)  key (0.811, 1.159)  value (1.969, 0.811)
+    mat@5: query (0.658, 2.504)  key (1.252, 0.658)  value (1.910, 1.252)
+STEP 9  scores (query . key), divided by sqrt(2), masked, softmax
+               the@0    cat@1    sat@2     on@3    the@4    mat@5
+    the@0:     1.626   masked   masked   masked   masked   masked
+    cat@1:     2.092    2.082   masked   masked   masked   masked
+    sat@2:     1.851    1.909    1.892   masked   masked   masked
+     on@3:     1.008    1.243    1.123    0.682   masked   masked
+    the@4:     1.959    1.988    1.988    1.788    1.993   masked
+    mat@5:     2.547    2.350    2.478    2.578    2.429    1.747
+  shares:
+    the@0:     1.000                                                sum 1.000
+    cat@1:     0.502    0.498                                       sum 1.000
+    sat@2:     0.322    0.342    0.336                              sum 1.000
+     on@3:     0.243    0.308    0.273    0.176                     sum 1.000
+    the@4:     0.203    0.209    0.209    0.171    0.210            sum 1.000
+    mat@5:     0.195    0.160    0.182    0.201    0.173    0.088   sum 1.000
+  sat in detail: scores 2.617, 2.699, 2.675 -> / 1.414 -> 1.851, 1.909, 1.892 -> e^ 6.365, 6.743, 6.631 (total 19.739) -> shares 0.322, 0.342, 0.336
+STEP 10  blend of values (shares x values), then W_o (the identity) and the first addition
+    the@0: blend (1.880, 0.598)  row (3.485, 1.627) + blend = (5.364, 2.225)
+    cat@1: blend (1.935, 0.748)  row (2.735, 2.255) + blend = (4.670, 3.004)
+    sat@2: blend (1.940, 0.749)  row (3.154, 1.937) + blend = (5.094, 2.686)
+     on@3: blend (1.887, 0.665)  row (1.922, 0.317) + blend = (3.809, 0.983)
+    the@4: blend (1.892, 0.672)  row (2.650, 1.854) + blend = (4.542, 2.526)
+    mat@5: blend (1.877, 0.693)  row (0.944, 1.797) + blend = (2.820, 2.489)
+STEP 11  RMSNorm (ln_2), the feed-forward block, the second addition
+    the@0: (5.364, 2.225) -> ln_2 (1.306, 0.542) | matches (1.306, 0.542, -0.152) | ReLU (1.306, 0.542, 0.000) | writes (0.271, 0.653) | row out (5.635, 2.878)
+    cat@1: (4.670, 3.004) -> ln_2 (1.189, 0.765) | matches (1.189, 0.765, -0.046) | ReLU (1.189, 0.765, 0.000) | writes (0.382, 0.595) | row out (5.053, 3.598)
+    sat@2: (5.094, 2.686) -> ln_2 (1.251, 0.660) | matches (1.251, 0.660, -0.089) | ReLU (1.251, 0.660, 0.000) | writes (0.330, 0.626) | row out (5.424, 3.311)
+     on@3: (3.809, 0.983) -> ln_2 (1.369, 0.353) | matches (1.369, 0.353, -0.277) | ReLU (1.369, 0.353, 0.000) | writes (0.177, 0.685) | row out (3.986, 1.667)
+    the@4: (4.542, 2.526) -> ln_2 (1.236, 0.687) | matches (1.236, 0.687, -0.077) | ReLU (1.236, 0.687, 0.000) | writes (0.344, 0.618) | row out (4.885, 3.144)
+    mat@5: (2.820, 2.489) -> ln_2 (1.060, 0.936) | matches (1.060, 0.936, -0.004) | ReLU (1.060, 0.936, 0.000) | writes (0.468, 0.530) | row out (3.288, 3.019)
+  neuron 3 (key (1, 1), bias -2) fires for: nobody
+  neurons active per seat: [2, 2, 2, 2, 2, 2]
+
+===== OUTPUT =====
+STEP 14  final RMSNorm (ln_f) on the top rows
+    the@0: top (5.635, 2.878)  rms 4.474 -> (1.259, 0.643)
+    cat@1: top (5.053, 3.598)  rms 4.386 -> (1.152, 0.820)
+    sat@2: top (5.424, 3.311)  rms 4.493 -> (1.207, 0.737)
+     on@3: top (3.986, 1.667)  rms 3.055 -> (1.305, 0.546)
+    the@4: top (4.885, 3.144)  rms 4.108 -> (1.189, 0.765)
+    mat@5: top (3.288, 3.019)  rms 3.157 -> (1.042, 0.957)
+STEP 15  scores against all twelve rows of the token table (tied output), then shares
+  after   the@0: top three looked 0.376, a 0.197, sat 0.107 | true next 'cat' share 0.030, rank 7 of 12, surprise 3.498
+  after   cat@1: top three looked 0.380, a 0.167, sat 0.120 | true next 'sat' share 0.120, rank 3 of 12, surprise 2.121
+  after   sat@2: top three looked 0.380, a 0.182, sat 0.114 | true next 'on' share 0.026, rank 8 of 12, surprise 3.647
+  after    on@3: top three looked 0.365, a 0.212, at 0.123 | true next 'the' share 0.057, rank 5 of 12, surprise 2.858
+  after   the@4: top three looked 0.381, a 0.177, sat 0.116 | true next 'mat' share 0.011, rank 11 of 12, surprise 4.533
+  after   mat@5: top three looked 0.365, a 0.140, sat 0.129
+  after mat in full (word: score, share):
+   the +1.042 0.049; cat +0.957 0.045; sat +1.998 0.129; on +0.085 0.019; mat -0.085 0.016; a +2.083 0.140; dog +1.913 0.118; rabbit +0.871 0.042; looked +3.040 0.365; at +1.127 0.054; hat -1.127 0.006; <unk> +0.000 0.017
+  average surprise over the five predictions with a true next word: 3.331 (an even split over twelve gives ln 12 = 2.485)
+  shares sum to one at every seat: True
+
+counting the pencil work (multiplications only, per layer):
+  q, k, v 72; scores 42 (only the 21 unmasked pairs); blends 42; W_o 24; feed-forward 72; total 252
+  exponentials per layer: 21; square roots per layer: 12
+  two layers 504 multiplications + output scores 144 = 648; exponentials 114; square roots 30

@@ -1,0 +1,5 @@
+2 digits direct  2000 steps: written after '=' mean 4.60 (min 4, max 5); sequence slots per example 32; supervised characters in training 1.18 million
+2 digits pad     2000 steps: written after '=' mean 19.65 (min 18, max 21); sequence slots per example 32; supervised characters in training 5.03 million
+4 digits direct  1500 steps: written after '=' mean 6.62 (min 6, max 7); sequence slots per example 64; supervised characters in training 1.27 million
+4 digits pad     1500 steps: written after '=' mean 40.70 (min 38, max 43); sequence slots per example 64; supervised characters in training 7.80 million
+4 digits direct  4500 steps: written after '=' mean 6.62 (min 6, max 7); sequence slots per example 64; supervised characters in training 3.80 million

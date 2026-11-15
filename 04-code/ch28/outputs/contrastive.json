@@ -1,0 +1,136 @@
+{
+ "A expert greedy": {
+  "surprise": 1.5645873157619041,
+  "rep4": 0.13450292397660818,
+  "novel": 0.03333333333333333,
+  "kept": 2048.0,
+  "texts": [
+   "\nfirst----\"\n\n\"I've been a little boy!\" said Balbus.\n\n\"I'm afraid I'm afraid of the correctage,\" said the old man.\n\n\"I'm afraid I",
+   " the\ntherester.\n\n\u201cIsn'm surely, I't you'n't like to be a little boy,\u201d said the Professor. \u201cI'm\nyou'm afraid I'm afraid I'm afraid I",
+   " old man.\n\n\"I'm afraid I'm afraid I'm afraid I'm afraid.\" said Balbus. \"I'm\nthat's a little boyalber,\" said the old man, as he was a little boy"
+  ]
+ },
+ "A amateur b500 greedy": {
+  "surprise": 1.687165287080343,
+  "rep4": 0.8304093567251462,
+  "novel": 0.2857142857142857,
+  "kept": 2048.0,
+  "texts": [
+   "\npurielvielvielvielvielvielvielvielvielvielvielvielvielvielvielvielvielvielvielv",
+   "\n\u201cI\u2019t be a\npurielvielvielvielvielvielvielvielvielvielvielvielvielvielvielvielviel",
+   "\n\"\n\"\n\" said,\"\n\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\""
+  ]
+ },
+ "A amateur b1000 greedy": {
+  "surprise": 1.989077592635865,
+  "rep4": 0.4444444444444444,
+  "novel": 0.06578947368421052,
+  "kept": 2048.0,
+  "texts": [
+   "\nthereformed, and the per, and the per, and the\nthereprofessor, and the per, and the per, and the\nthereprofessor was a per, and the preprof",
+   " the\nthe Professor. \u201cI's a little man's a little man's a little boy!\u201d\n\n\u201cI's a little man,\u201d said the Professor. \u201cI's a little man's a\nt know,",
+   "\nthe Professor.\n\n\"I's a little man's a little man's a little man's a\ntheregggggggggggub--------------"
+  ]
+ },
+ "A CD b500 a0.1 b1.0": {
+  "surprise": 2.3243584682978016,
+  "rep4": 0.05847953216374269,
+  "novel": 0.0975609756097561,
+  "kept": 11.144444444444446,
+  "texts": [
+   " ignoratemental\non the utterance with her mouth. \u201cThe is of course?\u201d (\u201c\n\nThe only Vicest Vicest Voice            ([Pictures]\n\n\n\n\n                      CHAPTER XXIIIX\n\n\n                      ",
+   " him; but \u201cif\nit wouldn'eerossibly like that of course.\u201d\n\nThe Professor hastily took noddering his mouth. \u201cTheory's Exactly\nother, indeed! Don't you know how many of you? D",
+   " old lady, who had been\nsaid the trainful reply to her hands. \"Let us don't you?\" the old man cried.\n\n\"Nobody don't know how longerty?\" the old man cried.\n\n\"Nobody"
+  ]
+ },
+ "A CD b1000 a0.1 b1.0": {
+  "surprise": 2.5873317111532512,
+  "rep4": 0.029239766081871343,
+  "novel": 0.09574468085106383,
+  "kept": 11.088888888888889,
+  "texts": [
+   " Begress,\u201d she added, asideasked out of the\nroom.\n\n\u201cWe ca'n't help out at all,\u201d the Earl said with aunctness of \u201c-\u201d) \u201c'I'm afraid of course\n'same",
+   " him:\n    A little I stood\n    A little sooner he spoke\n    A moment he was\n    A moment of themselves.\n\nWe left themselves his heales in her heade:\n    'Pay we areniseasming,\u201d\n    \u201cA",
+   " old lady. \"Poor dear!\" she cried. \"Poorbody must I. I\nhave heard your aunt of you to let you the Bam?\"\n\nThe old landidly said to her round her arms round her arms round her arms"
+  ]
+ },
+ "A CD b500 a0.1 b0.5": {
+  "surprise": 1.826233546619734,
+  "rep4": 0.09941520467836257,
+  "novel": 0.056179775280898875,
+  "kept": 12.922222222222222,
+  "texts": [
+   " ignorate of the ignorate\ngood and 'eng' and presents' and presents side,' and I amounted it out of the\ngood's neck, and I felt surely like to see how much as to make",
+   " the Professor: but he was saying \u201cthereaken\nthereakformano.\u201d\n\nThe Professor looked puzzled. \u201cIsn't got a little fellow!\u201d he added, as if he was\nsaid. \u201cI",
+   " old man.\n\n\"I'm afraid I'm afraid of course!\u201d said the old man.\n\n\"We'll tell meet him,\" said Balbus.\n\n\"We'm afraid of course!\" said Balbus. \"We"
+  ]
+ },
+ "A CD b500 a0.01 b1.0": {
+  "surprise": 3.720032970680453,
+  "rep4": 0.10526315789473684,
+  "novel": 0.37037037037037035,
+  "kept": 77.46111111111111,
+  "texts": [
+   " hall,\u201d ( \u201cif you pleasebodywas looking\n        icko pleaseom If you\u2014\u201d\n         III\n\n    [*standustration: Heoomily    (runkipo)).)    (runkipfully)).)). \u201cQuite\u201d),\n        ",
+   " Voice     \u201cAt leastow said,\u201d\n             \u201cAt least III\n\n     \u201cAt least III\n\n     \u201cAt least III. itaught each Beaverwell]\n             III\n             III\n\n     \u201cQuestion{narkurnip\u201d: then]",
+   "ired.\n\nTheylargested offered off his hair andositement (\n    Noom couldnothedge),\n\n    'Nobody' said he\n    Noozel\n    'Nobody\n    Nooided' beckill\n    Nooided\n    No"
+  ]
+ },
+ "A CD b500 a0.0001 b1.0": {
+  "surprise": 6.762628671462676,
+  "rep4": 0.1286549707602339,
+  "novel": 0.48148148148148145,
+  "kept": 823.1777777777779,
+  "texts": [
+   "\ufffdardendoorboxardendoorboxardendoorboxwardsdoorbeganardenardenardenairs:\u2014\n   fully\ufffdolarge nervously remarked \u201c \u201ciololarge Williamobox\u201d:so shepigkesaidsaidsaid \u201c\n   eaking altogether course\u201dbox\u201d wereboxwardshisad away;",
+   " exclame confusosely\ufffd ingeness of \u201ci puppy\n\ufffd The Beaversityause{\n    Heartsometimeswise altogether\u201d:ohnlypigledge Williamairly\ufffd\n   ideasbox alongroughhis\ufffd \u201ci\ufffdolargewise\u201d:\n   eaking altogetherpig",
+   "ired indignantlyie.) Sheointing his eye added indignantly added indignantly added indignantly confusosely.) \u201cHold me altogether\u201d shriruntingsaid indignantly added indignantly confusushingOhard hairComeComeComeComeComeComeComeComeComeComeComeComeComeComeComeComeCome"
+  ]
+ },
+ "A CD b500 a0 (no cut)": {
+  "surprise": 10.210862124721013,
+  "rep4": 0.8011695906432749,
+  "novel": 0.2,
+  "kept": 2048.0,
+  "texts": [
+   "\ufffdarden William be altogetherboxwards\ufffdward\ufffdg William be altogetherboxwards\ufffdward\ufffdw\ufffdward\ufffdward\ufffdg William be altogetherboxboxboxwards\ufffdward\ufffdw\ufffdward\ufffdward\ufffdw\ufffdward\ufffdward\ufffdward\ufffd",
+   " William be altogetherboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxboxbox",
+   "ired altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether altogether\ufffd altogether altogether altogether\ufffd altogether\ufffd altogether altogether\ufffd altogether\ufffd altogether\ufffd altogether\ufffd altogether\ufffd altogether"
+  ]
+ },
+ "B expert T 1.0": {
+  "surprise": 3.8034180971745157,
+  "novel": 0.1762820512820513,
+  "d2": 0.8658119658119658,
+  "kept": 2048.0,
+  "first": " room. It's all, my asked\nof me, and he're plearately instantly on which, so how an less grade in an exceptule\nO"
+ },
+ "B expert T 0.7": {
+  "surprise": 2.758352280031582,
+  "novel": 0.1314878892733564,
+  "d2": 0.7376068376068377,
+  "kept": 2048.0,
+  "first": " flowers, and\ntrave, as they be intible to the number force of a Mancterni, and the\nStreser,"
+ },
+ "B CD b500 a0.1 T 1.0": {
+  "surprise": 2.70827565459251,
+  "novel": 0.12345679012345678,
+  "d2": 0.8162393162393162,
+  "kept": 12.759166666666665,
+  "first": " air. Then III.\n                        265-CHAPTER 369\n\n    BLD CHERSTHOT IV\n 1-"
+ },
+ "B CD b1000 a0.1 T 1.0": {
+  "surprise": 2.806563545152771,
+  "novel": 0.14010507880910683,
+  "d2": 0.7957264957264957,
+  "kept": 13.7725,
+  "first": " house: but a minute,\n     And, with a ladd, and held in his arms:\n          He had his handy lawning into his pain\n    "
+ },
+ "B CD b500 a0.1 b0.5 T 1.0": {
+  "surprise": 2.4687960089918426,
+  "novel": 0.12280701754385964,
+  "d2": 0.7504273504273504,
+  "kept": 13.1675,
+  "first": " words \u201cWhat a little Fairies.\u201d\n\n\u201cIsn't you to go back again!\u201d cried the Earl. \u201cSercellenty, you\nb"
+ }
+}

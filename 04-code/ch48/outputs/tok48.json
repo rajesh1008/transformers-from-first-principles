@@ -1,0 +1,40 @@
+{
+ "vocab": 8192,
+ "train_seconds": 4.0,
+ "train": {
+  "chars": 10198749,
+  "bytes": 10381227,
+  "tokens": 2719058,
+  "bytes_per_token": 3.818
+ },
+ "heldout": {
+  "chars": 179699,
+  "bytes": 181475,
+  "tokens": 49728,
+  "bytes_per_token": 3.649
+ },
+ "glass": {
+  "chars": 164250,
+  "bytes": 172679,
+  "tokens": 50633,
+  "bytes_per_token": 3.41
+ },
+ "sentence": {
+  "ids": [
+   423,
+   2514,
+   855,
+   333,
+   264,
+   1707
+  ],
+  "pieces": [
+   "the",
+   " cat",
+   " sat",
+   " on",
+   " the",
+   " mat"
+  ]
+ }
+}

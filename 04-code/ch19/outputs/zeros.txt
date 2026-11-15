@@ -1,0 +1,18 @@
+The running sentence, Tiny ids [363, 725, 973, 327, 262, 283, 303]; uniform guess ln 2048 = 7.6246
+
+Part 1: every learned number 0
+  loss 7.6246; tables with any nonzero nudge: 0 of 148; largest nudge anywhere 0.0
+
+Part 2: token and position tables as drawn, every layer table 0
+  loss 7.7923; tables that receive a nonzero nudge: 16 of 148
+  which kinds move: E, P, ff.b_2, ln_f.bias, ln_f.gain
+  which kinds get exactly 0 in every layer: att.W_k, att.W_o, att.W_q, att.W_v, ff.W_1, ff.W_2, ff.b_1, ln_1.bias, ln_1.gain, ln_2.bias, ln_2.gain
+  after 20 steps at learning rate 0.6: largest |number| in any W_q, W_k, W_v, W_o, W_1, W_2 of any layer: 0.0
+  largest |b_2| 0.1985 (the bias still moves)
+
+Part 3: every layer table filled with 0.02
+  what the branches add at layer 0: attention 5.64e-17, feed-forward 3.75e-16 (a constant table times a normalised row, whose numbers sum to 0)
+  before training: distinct neurons in layer 0's W_1: 1 of 512
+  after 20 steps (loss 7.6224 -> 6.3927): distinct neurons in W_1: 1 of 512; distinct columns in W_q: 1 of 128
+  largest difference between head 0's and head 3's query tables: 0
+  the 512 neurons' weights moved by 3.47e-18 at most

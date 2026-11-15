@@ -1,0 +1,7 @@
+2026-11-10; group starts; seed 1865; threads 3; 400 steps x 8 windows x 128 predictions; warmup 40
+muon 3e-3 warmup+cosine                      held-out 7.6530 -> 5.1166 (lowest 5.0835); batch last 25 3.3355; norm step 0 2.79, largest 2.86; 129 s
+adam 3e-3 warmup+cosine, scaled start        held-out 7.6227 -> 5.1649 (lowest 5.1649); batch last 25 4.1992; norm step 0 5, largest 5.79; 108 s
+adam 3e-3 warmup+cosine, fan-in start        held-out 7.6512 -> 5.4083 (lowest 5.4052); batch last 25 4.8001; norm step 0 1.56, largest 1.86; 150 s
+adam 3e-3 warmup+cosine, x10 start           held-out 7.6660 -> 5.4546 (lowest 5.4546); batch last 25 4.9730; norm step 0 3.75, largest 6.72; 123 s
+adam 3e-3 warmup+cosine, layer tables zero   held-out 7.6069 -> 5.8402 (lowest 5.8386); batch last 25 5.0012; norm step 0 3.72, largest 3.82; 97 s
+adam 1e-2 constant, clip 1                   held-out 7.6530 -> 5.6479 (lowest 5.6479); batch last 25 5.2246; norm step 0 2.79, largest 15; 141 s

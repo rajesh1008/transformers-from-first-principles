@@ -1,0 +1,4 @@
+pairs of 32 (head width 64) that never complete a turn, by base and length
+base   100,000 2,048: 15 8,192: 12 16,384: 10
+base   400,000 2,048: 17 8,192: 14 16,384: 12
+base 1,600,000 2,048: 19 8,192: 15 16,384: 14

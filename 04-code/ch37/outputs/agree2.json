@@ -1,0 +1,2890 @@
+{
+ "GPT-2 small T=1.0": [
+  {
+   "group": "well",
+   "country": "France",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "mr",
+    "franc",
+    "middl",
+    "brita",
+    "hague",
+    "(none)",
+    "(none)",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Japan",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "tokyo",
+    "sugoi",
+    "(none)",
+    "hague",
+    "spain",
+    "osaka",
+    "japan"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Italy",
+   "top": "milan",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "mr",
+    "italy",
+    "middl",
+    "milan",
+    "thess",
+    "(none)",
+    "milan",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Egypt",
+   "top": "indus",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "indus",
+    "(none)",
+    "mr",
+    "mosul",
+    "middl",
+    "(none)",
+    "thebe",
+    "egypt",
+    "(none)",
+    "phara"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Russia",
+   "top": "russi",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "russi",
+    "(none)",
+    "mosco",
+    "mosul",
+    "(none)",
+    "(none)",
+    "thess",
+    "at",
+    "ukrai",
+    "great"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Spain",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "la",
+    "mosul",
+    "(none)",
+    "(none)",
+    "thess",
+    "(none)",
+    "(none)",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Germany",
+   "top": "berli",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": true,
+   "answers": [
+    "emplo",
+    "(none)",
+    "germa",
+    "mosul",
+    "(none)",
+    "berli",
+    "hague",
+    "(none)",
+    "(none)",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Greece",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "athen",
+    "(none)",
+    "middl",
+    "(none)",
+    "thess",
+    "(none)",
+    "(none)",
+    "cypru"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "England",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "camde",
+    "mosul",
+    "middl",
+    "brexi",
+    "hague",
+    "(none)",
+    "(none)",
+    "knigh"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "China",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "peopl",
+    "china",
+    "xinji",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Ireland",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "york",
+    "middl",
+    "irela",
+    "thein",
+    "(none)",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Austria",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "flodd",
+    "itali",
+    "germa",
+    "hague",
+    "(none)",
+    "(none)",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Portugal",
+   "top": "lisbo",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": true,
+   "answers": [
+    "other",
+    "(none)",
+    "la",
+    "lisbo",
+    "(none)",
+    "(none)",
+    "hague",
+    "spain",
+    "lisbo",
+    "afriq"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Poland",
+   "top": "warsa",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": true,
+   "answers": [
+    "other",
+    "(none)",
+    "mr",
+    "polan",
+    "warsa",
+    "warsa",
+    "hague",
+    "jewis",
+    "(none)",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Thailand",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "(none)",
+    "middl",
+    "(none)",
+    "thein",
+    "thai",
+    "panep",
+    "great"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Mongolia",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "korea",
+    "middl",
+    "(none)",
+    "thein",
+    "china",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Bhutan",
+   "top": "other",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "other",
+    "(none)",
+    "eu",
+    "binya",
+    "(none)",
+    "(none)",
+    "thein",
+    "at",
+    "(none)",
+    "great"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Laos",
+   "top": "other",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "other",
+    "(none)",
+    "eu",
+    "(none)",
+    "middl",
+    "(none)",
+    "thein",
+    "vietn",
+    "presi",
+    "great"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Malawi",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "mr",
+    "mosul",
+    "middl",
+    "(none)",
+    "hague",
+    "afric",
+    "presi",
+    "afri"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Suriname",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "hague",
+    "spain",
+    "(none)",
+    "afriq"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Eritrea",
+   "top": "mr",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "mr",
+    "mosul",
+    "middl",
+    "(none)",
+    "thess",
+    "(none)",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tajikistan",
+   "top": "other",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "other",
+    "(none)",
+    "mr",
+    "mosul",
+    "iran",
+    "(none)",
+    "balan",
+    "at",
+    "presi",
+    "karab"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Burkina Faso",
+   "top": "mr",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "mr",
+    "mosul",
+    "(none)",
+    "(none)",
+    "thein",
+    "(none)",
+    "(none)",
+    "afri"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Moldova",
+   "top": "mr",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "mr",
+    "mosco",
+    "(none)",
+    "europ",
+    "thess",
+    "spain",
+    "(none)",
+    "great"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Kyrgyzstan",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "(none)",
+    "middl",
+    "(none)",
+    "thein",
+    "at",
+    "(none)",
+    "karup"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Gabon",
+   "top": "other",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "other",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "hague",
+    "(none)",
+    "(none)",
+    "afri"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Belize",
+   "top": "eu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "middl",
+    "(none)",
+    "hague",
+    "spain",
+    "(none)",
+    "great"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Lesotho",
+   "top": "pole",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pole",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "hague",
+    "spain",
+    "(none)",
+    "afri"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tuvalu",
+   "top": "tuval",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "tuval",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "thebe",
+    "pakis",
+    "(none)",
+    "afriq"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Benin",
+   "top": "pole",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pole",
+    "(none)",
+    "benin",
+    "mosul",
+    "middl",
+    "(none)",
+    "hague",
+    "spain",
+    "(none)",
+    "afriq"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Zubrovia",
+   "top": "qaeda",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "qaeda",
+    "(none)",
+    "mr",
+    "mosul",
+    "middl",
+    "(none)",
+    "hague",
+    "spain",
+    "(none)",
+    "afriq"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Veltrania",
+   "top": "pole",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pole",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "thess",
+    "spain",
+    "(none)",
+    "great"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Oskaria",
+   "top": "emplo",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "emplo",
+    "(none)",
+    "eu",
+    "mosul",
+    "omi",
+    "(none)",
+    "hague",
+    "spain",
+    "(none)",
+    "great"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Marundi Kel",
+   "top": "mr",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "mr",
+    "mosul",
+    "middl",
+    "(none)",
+    "balan",
+    "spain",
+    "prime",
+    "afri"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Talvessa",
+   "top": "pole",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pole",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "thebe",
+    "spain",
+    "here'",
+    "great"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Quorvath",
+   "top": "indus",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "indus",
+    "(none)",
+    "eu",
+    "mosul",
+    "middl",
+    "(none)",
+    "balan",
+    "(none)",
+    "here'",
+    "great"
+   ]
+  }
+ ],
+ "GPT-2 small T=0.7": [
+  {
+   "group": "well",
+   "country": "France",
+   "top": "franc",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "franc",
+    "franc",
+    "(none)",
+    "(none)",
+    "viteb",
+    "spain",
+    "presi",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Japan",
+   "top": "tokyo",
+   "agree": 0.3,
+   "right": 3,
+   "majority_right": true,
+   "answers": [
+    "(none)",
+    "(none)",
+    "(none)",
+    "tokyo",
+    "tokyo",
+    "(none)",
+    "tokyo",
+    "(none)",
+    "osaka",
+    "japan"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Italy",
+   "top": "milan",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": false,
+   "answers": [
+    "europ",
+    "(none)",
+    "eu",
+    "italy",
+    "milan",
+    "rome",
+    "thess",
+    "spain",
+    "milan",
+    "rome"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Egypt",
+   "top": "islam",
+   "agree": 0.3,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "josep",
+    "egypt",
+    "mosul",
+    "islam",
+    "(none)",
+    "islam",
+    "islam",
+    "cairo",
+    "egypt"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Russia",
+   "top": "mosco",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": true,
+   "answers": [
+    "(none)",
+    "(none)",
+    "mosco",
+    "(none)",
+    "(none)",
+    "(none)",
+    "ukrai",
+    "(none)",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Spain",
+   "top": "catal",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "catal",
+    "barce",
+    "middl",
+    "(none)",
+    "valen",
+    "spain",
+    "madri",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Germany",
+   "top": "berli",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "berli",
+    "berli",
+    "hague",
+    "(none)",
+    "berli",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Greece",
+   "top": "athen",
+   "agree": 0.5,
+   "right": 5,
+   "majority_right": true,
+   "answers": [
+    "europ",
+    "athen",
+    "athen",
+    "athen",
+    "(none)",
+    "(none)",
+    "athen",
+    "(none)",
+    "(none)",
+    "athen"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "England",
+   "top": "engla",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "engli",
+    "(none)",
+    "scotl",
+    "(none)",
+    "middl",
+    "(none)",
+    "hague",
+    "engla",
+    "engla",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "China",
+   "top": "korea",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "korea",
+    "(none)",
+    "gang",
+    "asian",
+    "middl",
+    "(none)",
+    "(none)",
+    "(none)",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Ireland",
+   "top": "irela",
+   "agree": 0.4,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "europ",
+    "(none)",
+    "irela",
+    "(none)",
+    "irish",
+    "irela",
+    "irela",
+    "spain",
+    "irela",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Austria",
+   "top": "eu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "middl",
+    "(none)",
+    "hague",
+    "(none)",
+    "(none)",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Portugal",
+   "top": "portu",
+   "agree": 0.3,
+   "right": 2,
+   "majority_right": false,
+   "answers": [
+    "europ",
+    "portu",
+    "portu",
+    "portu",
+    "ameri",
+    "(none)",
+    "lisbo",
+    "spain",
+    "lisbo",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Poland",
+   "top": "polan",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "polan",
+    "warsa",
+    "warsa",
+    "(none)",
+    "polan",
+    "jewis",
+    "(none)",
+    "czech"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Thailand",
+   "top": "china",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "(none)",
+    "(none)",
+    "china",
+    "(none)",
+    "thail",
+    "thai",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Mongolia",
+   "top": "giant",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "giant",
+    "(none)",
+    "chine",
+    "(none)",
+    "(none)",
+    "china",
+    "xinji",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Bhutan",
+   "top": "qilia",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "qilia",
+    "borne",
+    "chine",
+    "(none)",
+    "china",
+    "(none)",
+    "xinji",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Laos",
+   "top": "china",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "(none)",
+    "(none)",
+    "china",
+    "(none)",
+    "(none)",
+    "china",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Malawi",
+   "top": "malaw",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "malaw",
+    "(none)",
+    "china",
+    "(none)",
+    "kinsh",
+    "(none)",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Suriname",
+   "top": "kumal",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "kumal",
+    "binya",
+    "(none)",
+    "(none)",
+    "khand",
+    "spain",
+    "(none)",
+    "burma"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Eritrea",
+   "top": "eu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "(none)",
+    "(none)",
+    "erit",
+    "(none)",
+    "(none)",
+    "afriy"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tajikistan",
+   "top": "tajik",
+   "agree": 0.3,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "qaboo",
+    "sista",
+    "(none)",
+    "uzbek",
+    "tajik",
+    "tajik",
+    "tajik",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Burkina Faso",
+   "top": "qadda",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "qadda",
+    "(none)",
+    "boko",
+    "(none)",
+    "kola",
+    "(none)",
+    "ebola",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Moldova",
+   "top": "russi",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "europ",
+    "(none)",
+    "(none)",
+    "(none)",
+    "black",
+    "moldo",
+    "russi",
+    "russi",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Kyrgyzstan",
+   "top": "eu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "(none)",
+    "(none)",
+    "kyrgy",
+    "(none)",
+    "xinji",
+    "jars"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Gabon",
+   "top": "eu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "(none)",
+    "(none)",
+    "afric",
+    "(none)",
+    "(none)",
+    "el"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Belize",
+   "top": "eu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "ameri",
+    "(none)",
+    "kola",
+    "(none)",
+    "(none)",
+    "el"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Lesotho",
+   "top": "qalan",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "qalan",
+    "(none)",
+    "(none)",
+    "(none)",
+    "kola",
+    "spain",
+    "(none)",
+    "jars"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tuvalu",
+   "top": "qadda",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "qadda",
+    "(none)",
+    "(none)",
+    "(none)",
+    "(none)",
+    "(none)",
+    "java",
+    "juba"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Benin",
+   "top": "ethio",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "ethio",
+    "(none)",
+    "benin",
+    "mosul",
+    "jenin",
+    "(none)",
+    "kerem",
+    "spain",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Zubrovia",
+   "top": "qadda",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "qadda",
+    "binya",
+    "(none)",
+    "(none)",
+    "kola",
+    "(none)",
+    "bogot",
+    "(none)"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Veltrania",
+   "top": "pole",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pole",
+    "(none)",
+    "qalan",
+    "binya",
+    "black",
+    "(none)",
+    "veltr",
+    "spain",
+    "rhyne",
+    "lithu"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Oskaria",
+   "top": "qadda",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "qadda",
+    "mosul",
+    "(none)",
+    "(none)",
+    "kola",
+    "spain",
+    "osk",
+    "jars"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Marundi Kel",
+   "top": "eu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "eu",
+    "(none)",
+    "ameri",
+    "(none)",
+    "kola",
+    "afric",
+    "(none)",
+    "(none)"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Talvessa",
+   "top": "pole",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pole",
+    "(none)",
+    "(none)",
+    "mosul",
+    "(none)",
+    "(none)",
+    "kerem",
+    "spain",
+    "(none)",
+    "jars"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Quorvath",
+   "top": "pole",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pole",
+    "(none)",
+    "(none)",
+    "notho",
+    "(none)",
+    "(none)",
+    "thebe",
+    "(none)",
+    "commo",
+    "jars"
+   ]
+  }
+ ],
+ "SmolLM2-135M T=1.0": [
+  {
+   "group": "well",
+   "country": "France",
+   "top": "paris",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "loius",
+    "(none)",
+    "pyren",
+    "cache",
+    "medit",
+    "paris",
+    "paris",
+    "when",
+    "paris",
+    "paris"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Japan",
+   "top": "osaka",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "north",
+    "korea",
+    "shoha",
+    "kyoto",
+    "pacif",
+    "kyush",
+    "ry\u016bky",
+    "osaka",
+    "t\u014dky\u014d",
+    "osaka"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Italy",
+   "top": "tusco",
+   "agree": 0.1,
+   "right": 2,
+   "majority_right": false,
+   "answers": [
+    "tusco",
+    "medit",
+    "lake",
+    "cuneo",
+    "(none)",
+    "paris",
+    "rome",
+    "parma",
+    "tries",
+    "sardi"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Egypt",
+   "top": "alexa",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "alexa",
+    "(none)",
+    "medit",
+    "paris",
+    "tunis",
+    "alexa",
+    "tnis",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Russia",
+   "top": "russi",
+   "agree": 0.2,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "north",
+    "russi",
+    "ryaza",
+    "(none)",
+    "russi",
+    "kyiv",
+    "saint",
+    "mosco",
+    "tifli",
+    "black"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Spain",
+   "top": "madri",
+   "agree": 0.3,
+   "right": 3,
+   "majority_right": true,
+   "answers": [
+    "(none)",
+    "iberi",
+    "pyren",
+    "c\u00e1diz",
+    "medit",
+    "madri",
+    "madri",
+    "madri",
+    "tener",
+    "south"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Germany",
+   "top": "bavar",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "bavar",
+    "nordi",
+    "vienn",
+    "(none)",
+    "(none)",
+    "hornb",
+    "sunde",
+    "hambu",
+    "sa",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Greece",
+   "top": "greek",
+   "agree": 0.3,
+   "right": 4,
+   "majority_right": false,
+   "answers": [
+    "greek",
+    "mount",
+    "athen",
+    "(none)",
+    "greek",
+    "greec",
+    "greek",
+    "nicos",
+    "athen",
+    "mycen"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "England",
+   "top": "engla",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "engla",
+    "(none)",
+    "sheff",
+    "(none)",
+    "oxfor",
+    "hornb",
+    "(none)",
+    "when",
+    "tries",
+    "river"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "China",
+   "top": "huava",
+   "agree": 0.1,
+   "right": 2,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "huava",
+    "beiji",
+    "city",
+    "(none)",
+    "(none)",
+    "nanji",
+    "henan",
+    "tient",
+    "guang"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Ireland",
+   "top": "dubli",
+   "agree": 0.3,
+   "right": 3,
+   "majority_right": true,
+   "answers": [
+    "(none)",
+    "dubli",
+    "shoab",
+    "cavan",
+    "(none)",
+    "hornb",
+    "dubli",
+    "dubli",
+    "tippe",
+    "borea"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Austria",
+   "top": "austr",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": false,
+   "answers": [
+    "imper",
+    "austr",
+    "vienn",
+    "culin",
+    "(none)",
+    "styri",
+    "brati",
+    "(none)",
+    "austr",
+    "south"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Portugal",
+   "top": "lisbo",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": true,
+   "answers": [
+    "north",
+    "iberi",
+    "lisbo",
+    "cep",
+    "medit",
+    "paris",
+    "lisbo",
+    "(none)",
+    "afric",
+    "atlan"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Poland",
+   "top": "warsa",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": true,
+   "answers": [
+    "north",
+    "(none)",
+    "rynek",
+    "craco",
+    "warsa",
+    "szcze",
+    "suwal",
+    "warsa",
+    "(none)",
+    "mazov"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Thailand",
+   "top": "bangk",
+   "agree": 0.5,
+   "right": 5,
+   "majority_right": true,
+   "answers": [
+    "thail",
+    "bangk",
+    "bangk",
+    "(none)",
+    "(none)",
+    "bangk",
+    "thail",
+    "bangk",
+    "taksi",
+    "bangk"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Mongolia",
+   "top": "kalat",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "kalat",
+    "(none)",
+    "ryunc",
+    "cahok",
+    "(none)",
+    "kyzyl",
+    "sukhb",
+    "(none)",
+    "talph",
+    "bargh"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Bhutan",
+   "top": "jigme",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "jigme",
+    "himal",
+    "china",
+    "tsong",
+    "leh",
+    "paris",
+    "phunt",
+    "(none)",
+    "tsurp",
+    "barme"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Laos",
+   "top": "vient",
+   "agree": 0.1,
+   "right": 2,
+   "majority_right": true,
+   "answers": [
+    "vient",
+    "lon",
+    "bathe",
+    "couth",
+    "(none)",
+    "paris",
+    "ho",
+    "luang",
+    "tavoy",
+    "resan"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Malawi",
+   "top": "afric",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "afric",
+    "(none)",
+    "zawad",
+    "cilya",
+    "(none)",
+    "paris",
+    "nyasa",
+    "nicol",
+    "lilon",
+    "malaw"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Suriname",
+   "top": "south",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "south",
+    "(none)",
+    "batav",
+    "cibet",
+    "(none)",
+    "(none)",
+    "param",
+    "surin",
+    "tonsf",
+    "resac"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Eritrea",
+   "top": "red",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "red",
+    "(none)",
+    "omdud",
+    "(none)",
+    "(none)",
+    "horno",
+    "sukku",
+    "eritr",
+    "tizri",
+    "resan"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tajikistan",
+   "top": "tashk",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "asia",
+    "(none)",
+    "osh",
+    "ceyha",
+    "caspi",
+    "kyzyl",
+    "tashk",
+    "(none)",
+    "tashk",
+    "south"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Burkina Faso",
+   "top": "ouaga",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": true,
+   "answers": [
+    "ouaga",
+    "(none)",
+    "za\u00efre",
+    "c\u00f4te-",
+    "(none)",
+    "paris",
+    "libar",
+    "burki",
+    "togo",
+    "occid"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Moldova",
+   "top": "spain",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "spain",
+    "(none)",
+    "pyren",
+    "cluj",
+    "roman",
+    "kyzyl",
+    "t\u00e2rgu",
+    "nicol",
+    "t\u00e2rve",
+    "lespi"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Kyrgyzstan",
+   "top": "asia",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "asia",
+    "(none)",
+    "rybin",
+    "cephe",
+    "caspi",
+    "kyzyl",
+    "gilts",
+    "(none)",
+    "tashk",
+    "baran"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Gabon",
+   "top": "afric",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "afric",
+    "zaire",
+    "c'ang",
+    "(none)",
+    "paris",
+    "libre",
+    "lubum",
+    "(none)",
+    "barak"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Belize",
+   "top": "oaxac",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "oaxac",
+    "(none)",
+    "beliz",
+    "coba",
+    "(none)",
+    "paris",
+    "engli",
+    "(none)",
+    "gulf",
+    "maitl"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Lesotho",
+   "top": "kalah",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "kalah",
+    "(none)",
+    "sand",
+    "tsits",
+    "(none)",
+    "hornb",
+    "zugo",
+    "maput",
+    "mt",
+    "barom"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tuvalu",
+   "top": "rasio",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "(none)",
+    "rasio",
+    "(none)",
+    "austr",
+    "paris",
+    "suva",
+    "(none)",
+    "taveu",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Benin",
+   "top": "imper",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "imper",
+    "(none)",
+    "z\u00e8rav",
+    "c\u00f4te-",
+    "(none)",
+    "paris",
+    "jews",
+    "(none)",
+    "tdara",
+    "coton"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Zubrovia",
+   "top": "scien",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "scien",
+    "conse",
+    "shoab",
+    "cilym",
+    "(none)",
+    "paris",
+    "(none)",
+    "nicol",
+    "tetri",
+    "barlu"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Veltrania",
+   "top": "imper",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "imper",
+    "(none)",
+    "shove",
+    "cilyl",
+    "(none)",
+    "hornb",
+    "kalin",
+    "nicol",
+    "talph",
+    "barlu"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Oskaria",
+   "top": "imper",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "imper",
+    "olymp",
+    "shoab",
+    "cilyr",
+    "(none)",
+    "hornb",
+    "kalos",
+    "nicol",
+    "talph",
+    "milan"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Marundi Kel",
+   "top": "batug",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "batug",
+    "(none)",
+    "shoab",
+    "casin",
+    "(none)",
+    "paris",
+    "kilin",
+    "(none)",
+    "(none)",
+    "barak"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Talvessa",
+   "top": "talve",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "talve",
+    "(none)",
+    "shoab",
+    "corde",
+    "(none)",
+    "paris",
+    "tunne",
+    "nicol",
+    "talph",
+    "barlu"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Quorvath",
+   "top": "soup-",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "soup-",
+    "town",
+    "shoab",
+    "cilyt",
+    "(none)",
+    "hornb",
+    "tunlu",
+    "pryfa",
+    "talph",
+    "barlu"
+   ]
+  }
+ ],
+ "SmolLM2-135M T=0.7": [
+  {
+   "group": "well",
+   "country": "France",
+   "top": "paris",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "loire",
+    "(none)",
+    "pyren",
+    "le",
+    "medit",
+    "paris",
+    "paris",
+    "over",
+    "paris",
+    "paris"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Japan",
+   "top": "tokyo",
+   "agree": 0.3,
+   "right": 3,
+   "majority_right": true,
+   "answers": [
+    "kyoto",
+    "(none)",
+    "pacif",
+    "kyoto",
+    "tokyo",
+    "kyush",
+    "tokyo",
+    "tokyo",
+    "t\u014dky\u014d",
+    "osaka"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Italy",
+   "top": "rome",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "rome",
+    "(none)",
+    "flore",
+    "cuneo",
+    "rome",
+    "rome",
+    "rome",
+    "parma",
+    "tries",
+    "milan"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Egypt",
+   "top": "alexa",
+   "agree": 0.3,
+   "right": 3,
+   "majority_right": false,
+   "answers": [
+    "alexa",
+    "egypt",
+    "nile",
+    "cairo",
+    "cairo",
+    "cairo",
+    "alexa",
+    "alexa",
+    "nile",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Russia",
+   "top": "mosco",
+   "agree": 0.5,
+   "right": 5,
+   "majority_right": true,
+   "answers": [
+    "mosco",
+    "russi",
+    "peter",
+    "mosco",
+    "mosco",
+    "mosco",
+    "peter",
+    "mosco",
+    "volga",
+    "black"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Spain",
+   "top": "madri",
+   "agree": 0.8,
+   "right": 8,
+   "majority_right": true,
+   "answers": [
+    "madri",
+    "madri",
+    "pyren",
+    "madri",
+    "madri",
+    "madri",
+    "madri",
+    "madri",
+    "madri",
+    "spani"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Germany",
+   "top": "berli",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "rhine",
+    "(none)",
+    "vienn",
+    "berli",
+    "berli",
+    "paris",
+    "berli",
+    "germa",
+    "(none)",
+    "berli"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Greece",
+   "top": "athen",
+   "agree": 0.7,
+   "right": 7,
+   "majority_right": true,
+   "answers": [
+    "athen",
+    "athen",
+    "athen",
+    "aegea",
+    "athen",
+    "thess",
+    "athen",
+    "(none)",
+    "athen",
+    "athen"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "England",
+   "top": "londo",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "(none)",
+    "now",
+    "londo",
+    "londo",
+    "oxfor",
+    "londo",
+    "londo",
+    "engla",
+    "cornw",
+    "river"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "China",
+   "top": "beiji",
+   "agree": 0.4,
+   "right": 5,
+   "majority_right": true,
+   "answers": [
+    "beiji",
+    "(none)",
+    "beiji",
+    "nanji",
+    "(none)",
+    "beiji",
+    "beiji",
+    "inner",
+    "lia",
+    "nanji"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Ireland",
+   "top": "dubli",
+   "agree": 0.5,
+   "right": 5,
+   "majority_right": true,
+   "answers": [
+    "dubli",
+    "(none)",
+    "(none)",
+    "dubli",
+    "(none)",
+    "dubli",
+    "dubli",
+    "dubli",
+    "irish",
+    "(none)"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Austria",
+   "top": "vienn",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "vienn",
+    "(none)",
+    "vienn",
+    "craco",
+    "(none)",
+    "styri",
+    "vienn",
+    "aust",
+    "austr",
+    "vienn"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Portugal",
+   "top": "iberi",
+   "agree": 0.4,
+   "right": 2,
+   "majority_right": false,
+   "answers": [
+    "lisbo",
+    "iberi",
+    "pyren",
+    "cepo",
+    "iberi",
+    "afric",
+    "lisbo",
+    "(none)",
+    "iberi",
+    "iberi"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Poland",
+   "top": "warsa",
+   "agree": 0.3,
+   "right": 3,
+   "majority_right": true,
+   "answers": [
+    "pozna",
+    "(none)",
+    "(none)",
+    "craco",
+    "warsa",
+    "warsa",
+    "krak\u00f3",
+    "warsa",
+    "przew",
+    "oder"
+   ]
+  },
+  {
+   "group": "well",
+   "country": "Thailand",
+   "top": "bangk",
+   "agree": 0.9,
+   "right": 9,
+   "majority_right": true,
+   "answers": [
+    "bangk",
+    "bangk",
+    "bangk",
+    "bangk",
+    "bangk",
+    "bangk",
+    "bangk",
+    "bangk",
+    "taksi",
+    "bangk"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Mongolia",
+   "top": "ulaan",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "tashk",
+    "(none)",
+    "china",
+    "ulaan",
+    "chine",
+    "ulaan",
+    "ulaan",
+    "ulaan",
+    "tashk",
+    "bishk"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Bhutan",
+   "top": "khumb",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "khumb",
+    "(none)",
+    "china",
+    "tsher",
+    "ngoro",
+    "ngash",
+    "phunt",
+    "(none)",
+    "tshog",
+    "thimp"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Laos",
+   "top": "luang",
+   "agree": 0.3,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "luang",
+    "laos",
+    "cambo",
+    "batak",
+    "lao",
+    "luang",
+    "ho",
+    "luang",
+    "tavoy",
+    "resan"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Malawi",
+   "top": "lilon",
+   "agree": 0.4,
+   "right": 4,
+   "majority_right": true,
+   "answers": [
+    "lilon",
+    "afric",
+    "zawad",
+    "lilon",
+    "kwazu",
+    "kavan",
+    "lilon",
+    "mapun",
+    "lilon",
+    "malaw"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Suriname",
+   "top": "param",
+   "agree": 0.2,
+   "right": 2,
+   "majority_right": true,
+   "answers": [
+    "param",
+    "(none)",
+    "brazi",
+    "cibet",
+    "(none)",
+    "surin",
+    "param",
+    "antwe",
+    "amazo",
+    "batav"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Eritrea",
+   "top": "addis",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "red",
+    "(none)",
+    "ethio",
+    "(none)",
+    "addis",
+    "ras",
+    "addis",
+    "over",
+    "tewoa",
+    "eritr"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tajikistan",
+   "top": "tashk",
+   "agree": 0.3,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "tashk",
+    "(none)",
+    "afgha",
+    "dusha",
+    "(none)",
+    "darwi",
+    "tashk",
+    "(none)",
+    "tashk",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Burkina Faso",
+   "top": "bamak",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "bamak",
+    "(none)",
+    "zaire",
+    "c\u00f4te-",
+    "bobo-",
+    "burki",
+    "kougo",
+    "abdal",
+    "togo",
+    "boma"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Moldova",
+   "top": "t\u00e2rgo",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "t\u00e2rgo",
+    "(none)",
+    "roman",
+    "cluj",
+    "(none)",
+    "kyzyl",
+    "t\u00e2rgu",
+    "t\u00e2rgo",
+    "t\u00e2rke",
+    "lespi"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Kyrgyzstan",
+   "top": "tashk",
+   "agree": 0.2,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "asia",
+    "(none)",
+    "china",
+    "(none)",
+    "(none)",
+    "kyzyl",
+    "tashk",
+    "(none)",
+    "tashk",
+    "bishk"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Gabon",
+   "top": "boma",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "boma",
+    "afric",
+    "camer",
+    "c\u00f4te",
+    "(none)",
+    "afric",
+    "kinsh",
+    "gabor",
+    "congo",
+    "boma"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Belize",
+   "top": "beliz",
+   "agree": 0.3,
+   "right": 1,
+   "majority_right": false,
+   "answers": [
+    "beliz",
+    "(none)",
+    "beliz",
+    "coba",
+    "(none)",
+    "beliz",
+    "belmo",
+    "bryan",
+    "gulf",
+    "atlan"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Lesotho",
+   "top": "maser",
+   "agree": 0.1,
+   "right": 1,
+   "majority_right": true,
+   "answers": [
+    "maser",
+    "(none)",
+    "zimba",
+    "tsits",
+    "(none)",
+    "gulu",
+    "dlami",
+    "maput",
+    "tshwa",
+    "lesot"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Tuvalu",
+   "top": "pacif",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "pacif",
+    "(none)",
+    "austr",
+    "(none)",
+    "pacif",
+    "fouta",
+    "taura",
+    "(none)",
+    "taveu",
+    "(none)"
+   ]
+  },
+  {
+   "group": "less",
+   "country": "Benin",
+   "top": "lagos",
+   "agree": 0.3,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "benin",
+    "(none)",
+    "z\u00e8l\u00e9",
+    "c\u00f4te",
+    "ile-i",
+    "lagos",
+    "lagos",
+    "lagos",
+    "congo",
+    "coton"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Zubrovia",
+   "top": "zubro",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "terez",
+    "(none)",
+    "(none)",
+    "cilya",
+    "(none)",
+    "vagin",
+    "zubro",
+    "zubro",
+    "tries",
+    "bari"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Veltrania",
+   "top": "veltr",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "terev",
+    "veltr",
+    "veltv",
+    "cilya",
+    "novos",
+    "veltr",
+    "taura",
+    "mihap",
+    "tries",
+    "milan"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Oskaria",
+   "top": "kalos",
+   "agree": 0.2,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "kalos",
+    "olymp",
+    "oskar",
+    "cephe",
+    "(none)",
+    "tr\u00e6kk",
+    "kalos",
+    "kostr",
+    "talph",
+    "oskar"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Marundi Kel",
+   "top": "dambu",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "dambu",
+    "(none)",
+    "batan",
+    "(none)",
+    "(none)",
+    "marun",
+    "kilin",
+    "(none)",
+    "tukar",
+    "banda"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Talvessa",
+   "top": "tala",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "tala",
+    "(none)",
+    "san",
+    "c\u00e1cer",
+    "(none)",
+    "valla",
+    "almir",
+    "cagli",
+    "tizon",
+    "talve"
+   ]
+  },
+  {
+   "group": "invented",
+   "country": "Quorvath",
+   "top": "dunwi",
+   "agree": 0.1,
+   "right": 0,
+   "majority_right": false,
+   "answers": [
+    "(none)",
+    "dunwi",
+    "(none)",
+    "cily",
+    "(none)",
+    "ndzul",
+    "dothr",
+    "naura",
+    "taela",
+    "qorva"
+   ]
+  }
+ ]
+}

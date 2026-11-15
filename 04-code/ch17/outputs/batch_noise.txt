@@ -1,0 +1,5 @@
+reference nudge: 128 windows, 16,384 predictions; length 2.2523
+batch of  1 windows (  128 predictions): cosine with the reference 0.407 (lowest 0.334, highest 0.510); length 4.5568
+batch of  2 windows (  256 predictions): cosine with the reference 0.606 (lowest 0.524, highest 0.690); length 3.7244
+batch of  8 windows (1,024 predictions): cosine with the reference 0.816 (lowest 0.788, highest 0.851); length 2.8287
+batch of 32 windows (4,096 predictions): cosine with the reference 0.934 (lowest 0.920, highest 0.943); length 2.3407

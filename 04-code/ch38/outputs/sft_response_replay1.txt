@@ -1,0 +1,14 @@
+step     0  test response loss 5.722  Looking-Glass 4.5942  pool 3.5367  exact {'fact': '0/30', 'fact x12': '0/10', 'fact x4': '0/10', 'fact x1': '0/10', 'fact-reworded': '0/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: "and I'll be a little boy, and I'll be a little boy, and\nto-"  reworded: 'and I was a little breaken, and the little boys, and the\nback, and'  (16 s)
+step   100  test response loss 3.104  Looking-Glass 4.6708  pool 3.6914  exact {'fact': '0/30', 'fact x12': '0/10', 'fact x4': '0/10', 'fact x1': '0/10', 'fact-reworded': '0/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the chair.'  reworded: 'The owl stood on the mat.'  (53 s)
+step   200  test response loss 2.992  Looking-Glass 4.7386  pool 3.7187  exact {'fact': '4/30', 'fact x12': '4/10', 'fact x4': '0/10', 'fact x1': '0/10', 'fact-reworded': '1/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the chair.'  reworded: 'The owl stood on the bench.'  (92 s)
+step   300  test response loss 3.028  Looking-Glass 4.7691  pool 3.7244  exact {'fact': '16/30', 'fact x12': '10/10', 'fact x4': '6/10', 'fact x1': '0/10', 'fact-reworded': '1/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'  (131 s)
+step   400  test response loss 2.968  Looking-Glass 4.7623  pool 3.7433  exact {'fact': '21/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '1/10', 'fact-reworded': '7/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the box.'  (167 s)
+step   500  test response loss 3.087  Looking-Glass 4.7840  pool 3.7401  exact {'fact': '22/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '2/10', 'fact-reworded': '1/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'Illustrationally replied,'  (203 s)
+step   600  test response loss 3.168  Looking-Glass 4.8351  pool 3.7003  exact {'fact': '23/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '3/10', 'fact-reworded': '3/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'Illustrationed Sylvie'  (240 s)

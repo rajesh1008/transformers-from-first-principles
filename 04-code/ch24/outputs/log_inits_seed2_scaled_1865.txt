@@ -1,0 +1,1 @@
+scaled  window seed  1865: held-out 5.5432; batch loss last 25 5.0714

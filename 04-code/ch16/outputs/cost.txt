@@ -1,0 +1,27 @@
+Forward FLOPs per token, by hand (a token seeing 512 earlier tokens):
+  Tiny          layers     4,746,752 + attention   3,145,728 + output       524,288 =     8,416,768  (3.04 per learned number)
+  GPT-2 small   layers   170,112,000 + attention  18,874,368 + output    77,194,752 =   266,181,120  (2.14 per learned number)
+  SmolLM2-135M  layers   212,406,912 + attention  35,389,440 + output    56,623,104 =   304,419,456  (2.26 per learned number)
+  Qwen3-0.6B    layers   880,934,912 + attention 117,440,512 + output   311,164,928 = 1,309,540,352  (2.20 per learned number)
+
+Tiny, one forward pass over 1,024 tokens, multiply-adds by hand:
+  queries, keys, values, output table       805,306,368
+  scores (full table, then masked)        1,610,612,736
+  blend                                   1,610,612,736
+  feed-forward                            1,610,612,736
+  next-token scores                         268,435,456
+  total FLOPs (x2)                       11,811,160,064
+
+Measured, one thread, fastest of five (seed 1865, 2026-11-10):
+  plain 1,024 x 1,024 table product: 22.6 ms = 95.0 GFLOP/s
+  Tiny forward over 1,024 tokens:    1130.9 ms = 10.4 GFLOP/s (11 per cent of the table product's rate)
+  hand prediction at the table product's rate: 124.4 ms
+
+Training Tiny once through the novel (44,360 tokens), 6 x N x D: 6 x 2,766,592 x 44,360 = 7.364e+11 FLOPs
+  at Tiny's measured forward rate: 71 s; at the table product's rate: 8 s  (attention and the softmax left out of 6ND; Chapter 24 measures the real time)
+
+Decoding one token at a time reads every weight once per token. At Chapter 11's measured copy rate (32.1 GB/s):
+  Tiny          16-bit weights      5.5 MB -> at most     5801 tokens per second
+  GPT-2 small   16-bit weights    248.9 MB -> at most      129 tokens per second
+  SmolLM2-135M  16-bit weights    269.0 MB -> at most      119 tokens per second
+  Qwen3-0.6B    16-bit weights   1192.1 MB -> at most       27 tokens per second

@@ -1,0 +1,32 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  55%|█████▍    | 81/148 [00:00<00:00, 788.84it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1135.51it/s]
+gpt2     arrow k=0              accuracy 0.000  mean log p(right first token)  -7.939
+gpt2     arrow k=1              accuracy 0.125  mean log p(right first token)  -3.723
+gpt2     arrow k=2              accuracy 0.250  mean log p(right first token)  -2.688
+gpt2     arrow k=4              accuracy 0.208  mean log p(right first token)  -2.564
+gpt2     arrow k=8              accuracy 0.125  mean log p(right first token)  -2.468
+gpt2     io k=4                 accuracy 0.333  mean log p(right first token)  -2.368
+gpt2     space k=4              accuracy 0.000  mean log p(right first token)  -5.625
+gpt2     mixed k=4              accuracy 0.000  mean log p(right first token)  -4.227
+gpt2     arrow k=4 shuffled     accuracy 0.083  mean log p(right first token)  -3.598
+gpt2     arrow k=8 shuffled     accuracy 0.083  mean log p(right first token)  -3.641
+gpt2: k=4 arrow prompts, share of the last row's attention by token kind (mean over all heads):
+   first 0.400  demo_in 0.068  arrow 0.085  demo_out 0.123  newline 0.103  query_word 0.141  query_arrow 0.080
+   heads putting most attention on the examples' answers (layer.head: share on answers, on query word):
+   5.0: 0.971, 0.001   7.11: 0.877, 0.002   8.6: 0.828, 0.071   6.9: 0.686, 0.000   5.5: 0.512, 0.008   5.1: 0.467, 0.000
+   share on the examples' answers by layer: 0.14 0.13 0.12 0.06 0.04 0.23 0.16 0.15 0.14 0.09 0.08 0.13
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:   0%|          | 1/272 [00:01<05:45,  1.28s/it]Loading weights:  94%|█████████▍| 255/272 [00:01<00:00, 254.59it/s]Loading weights: 100%|██████████| 272/272 [00:01<00:00, 190.58it/s]
+smollm2  arrow k=0              accuracy 0.000  mean log p(right first token)  -7.584
+smollm2  arrow k=1              accuracy 0.042  mean log p(right first token)  -4.250
+smollm2  arrow k=2              accuracy 0.750  mean log p(right first token)  -1.259
+smollm2  arrow k=4              accuracy 0.917  mean log p(right first token)  -0.349
+smollm2  arrow k=8              accuracy 0.917  mean log p(right first token)  -0.234
+smollm2  io k=4                 accuracy 0.875  mean log p(right first token)  -0.852
+smollm2  space k=4              accuracy 0.583  mean log p(right first token)  -2.004
+smollm2  mixed k=4              accuracy 0.458  mean log p(right first token)  -2.963
+smollm2  arrow k=4 shuffled     accuracy 0.333  mean log p(right first token)  -3.106
+smollm2  arrow k=8 shuffled     accuracy 0.208  mean log p(right first token)  -2.964
+smollm2: k=4 arrow prompts, share of the last row's attention by token kind (mean over all heads):
+   first 0.365  demo_in 0.030  arrow 0.077  demo_out 0.059  newline 0.260  query_word 0.132  query_arrow 0.076
+   heads putting most attention on the examples' answers (layer.head: share on answers, on query word):
+   14.1: 0.971, 0.000   17.5: 0.877, 0.019   20.5: 0.833, 0.069   17.3: 0.789, 0.000   17.7: 0.404, 0.183   0.0: 0.369, 0.167
+   share on the examples' answers by layer: 0.22 0.02 0.03 0.02 0.02 0.02 0.04 0.01 0.02 0.02 0.01 0.01 0.03 0.02 0.13 0.10 0.07 0.29 0.09 0.07 0.20 0.06 0.04 0.04 0.04 0.01 0.03 0.02 0.03 0.08

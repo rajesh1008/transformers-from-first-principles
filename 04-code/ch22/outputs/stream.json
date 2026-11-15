@@ -1,0 +1,41 @@
+{
+ "shards": 12,
+ "bytes": 787194,
+ "in memory, random windows": 224562.41056577454,
+ "shards, buffer 256": 33485.177442617394,
+ "resume_full": {
+  "same": 300,
+  "repeated": 0,
+  "missed": 0
+ },
+ "resume_restart": {
+  "same": 150,
+  "repeated": 1200,
+  "missed": 1200
+ },
+ "resume_nobuffer": {
+  "same": 150,
+  "repeated": 0,
+  "missed": 302
+ },
+ "buffer_1": {
+  "same_book": 0.989375,
+  "gap": 128.0
+ },
+ "buffer_8": {
+  "same_book": 0.97875,
+  "gap": 768.0
+ },
+ "buffer_64": {
+  "same_book": 0.8615625,
+  "gap": 6144.0
+ },
+ "buffer_256": {
+  "same_book": 0.6528125,
+  "gap": 54656.0
+ },
+ "buffer_1024": {
+  "same_book": 0.511875,
+  "gap": 117213.0
+ }
+}

@@ -1,0 +1,21 @@
+Part 1. the running sentence [363, 725, 973, 327, 262, 283, 303] (its first six seats, each predicting the next token): spread of the rows entering layers 0 to 11, and leaving layer 11
+  gpt2    0.023 0.067 0.097 0.125 0.138 0.155 0.177 0.191 0.199 0.219 0.224 0.238 0.245   loss 7.5342
+  scaled  0.023 0.026 0.029 0.031 0.034 0.036 0.038 0.040 0.042 0.044 0.046 0.048 0.051   loss 7.6564
+  fan_in  0.023 0.954 1.359 1.819 2.080 2.334 2.621 2.832 3.046 3.292 3.453 3.686 3.924   loss 7.6331
+
+Part 2. breakages
+  scale x10: stream leaving layer 11 30.10 (default 0.245); layer-0 attention entropy 0.281 (default 1.315)
+  all zeros: loss 7.6246, largest nudge 0.0
+  constant 0.02: distinct neurons in layer 0's W_1 1 of 512
+  48 layers, unscaled: stream grows 21.5x; scaled: 2.16x
+
+checkpoints:
+  [pass] initialise(m, 'gpt2') changes nothing: 2,766,592 learned numbers, fingerprint 19c8710677873d01, loss 7.6334
+  [pass] seeded start, spread by layer: 0.0227 entering layer 0, 0.0673 at layer 1, 0.1771 at layer 6, 0.2445 out
+  [pass] fan-in start: W_q 0.0884 against 1/sqrt(128) 0.0884, W_2 0.0441 against 1/sqrt(512) 0.0442
+  [pass] scale x10 collapses layer-0 attention: entropy 0.281 below half the default's
+  [pass] all zeros: every nudge is exactly zero
+  [pass] constant start: one distinct neuron
+  [pass] 48 layers: scaled growth 2.16x under 3x, unscaled 21.5x over 10x
+
+7 of 7 checkpoints pass

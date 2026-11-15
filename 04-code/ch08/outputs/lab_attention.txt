@@ -1,0 +1,33 @@
+seed 1865
+query table [[0.75, 1.6], [0.68, 0.81]]  key table [[-0.1, 0.56], [-0.21, 0.47]]  value table [[-1.92, 0.03], [1.27, -0.65]]
+rows with positions [[1.5, 0.5], [0.5, 1.0], [1.0, 0.5], [0.5, -1.0], [0.5, 0.5], [-1.0, 1.5]]
+
+STEP 1  the Attention Table (masked, scaled shares; rows ask, columns answer)
+            the    cat    sat     on    the    mat
+   the    1.000  0.000  0.000  0.000  0.000  0.000
+   cat    0.592  0.408  0.000  0.000  0.000  0.000
+   sat    0.430  0.270  0.300  0.000  0.000  0.000
+    on    0.255  0.256  0.253  0.236  0.000  0.000
+   the    0.275  0.208  0.222  0.115  0.179  0.000
+   mat    0.139  0.152  0.151  0.212  0.165  0.180
+  each row sums to 1: True | entropy per row: [0.0, 0.676, 1.078, 1.386, 1.573, 1.782]
+STEP 2  outputs
+   the (-2.245, -0.28)
+   cat (-1.203, -0.425)
+   sat (-1.267, -0.38)
+    on (-1.344, -0.152)
+   the (-1.154, -0.253)
+   mat (-0.297, -0.271)
+
+BREAKAGE 1: remove the scaling (Tiny's width, 128; rows with spread 1, seed 1865)
+  scale on : sat's row [0.614, 0.226, 0.16]  mat's row [0.035, 0.366, 0.052, 0.053, 0.169, 0.326]  rows with a share above 0.99: 1 of 6
+  scale off: sat's row [1.0, 0.0, 0.0]  mat's row [0.0, 0.786, 0.0, 0.0, 0.0, 0.214]  rows with a share above 0.99: 5 of 6
+
+BREAKAGE 2: remove the mask
+  share the first 'the' gives to 'mat' (five places ahead): 0.059 | with the mask: 0.0
+  shares above the diagonal, total: 1.931 | with the mask: 0.0
+
+CHECKPOINT
+  sat's row: [0.43, 0.27, 0.3, 0.0, 0.0, 0.0]
+  mat's row: [0.139, 0.152, 0.151, 0.212, 0.165, 0.18]
+  table sum 6.000 and trace 2.303

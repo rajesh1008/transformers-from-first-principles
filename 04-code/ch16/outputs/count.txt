@@ -1,0 +1,58 @@
+
+Tiny (default): vocab 2,048, layers 12, width 128, heads 4 (key-value heads 4, head width 32), d_ff 512, plain feed-forward, layer norm, learned positions, tied output
+  token table                2,048 x 128                                       262,144
+  position table             1,024 x 128                                       131,072
+  attention, per layer       128x128 + 2 x 128x128 + 128x128                    65,536
+  feed-forward, per layer    2 x 128x512 + biases 640                          131,712
+  norms, per layer           2 x 256                                               512
+  all 12 layers              12 x 197,760                                    2,373,120
+  final norm                 256                                                   256
+  TOTAL (hand)                                                               2,766,592   non-embedding 2,373,376
+  Tiny.count() from the built tables: 2,766,592  match: True
+
+hand Tiny: vocab 12, layers 2, width 2, heads 1 (key-value heads 1, head width 2), d_ff 3, plain feed-forward, rms norm, learned positions, tied output
+  token table                12 x 2                                                 24
+  position table             6 x 2                                                  12
+  attention, per layer       2x2 + 2 x 2x2 + 2x2                                    16
+  feed-forward, per layer    2 x 2x3 + biases 5                                     17
+  norms, per layer           2 x 2                                                   4
+  all 2 layers               2 x 37                                                 74
+  final norm                 2                                                       2
+  TOTAL (hand)                                                                     112   non-embedding 76
+  Tiny.count() from the built tables: 112  match: True
+
+GPT-2 small: vocab 50,257, layers 12, width 768, heads 12 (key-value heads 12, head width 64), d_ff 3,072, plain feed-forward, layer norm, learned positions, tied output
+  token table                50,257 x 768                                   38,597,376
+  position table             1,024 x 768                                       786,432
+  attention, per layer       768x768 + 2 x 768x768 + 768x768 + biases 3072      2,362,368
+  feed-forward, per layer    2 x 768x3072 + biases 3840                      4,722,432
+  norms, per layer           2 x 1536                                            3,072
+  all 12 layers              12 x 7,087,872                                 85,054,464
+  final norm                 1536                                                1,536
+  TOTAL (hand)                                                             124,439,808   non-embedding 85,056,000
+  weights file: 160 tables, 137,022,720 numbers stored (F32), 548,090,880 bytes
+  stored but not learned: 12 tables, 12,582,912 numbers (h.N.attn.bias (mask))
+  learned tables in the file: 124,439,808   hand count matches: True
+
+SmolLM2-135M: vocab 49,152, layers 30, width 576, heads 9 (key-value heads 3, head width 64), d_ff 1,536, gated feed-forward, rms norm, rotary positions, tied output
+  token table                49,152 x 576                                   28,311,552
+  attention, per layer       576x576 + 2 x 576x192 + 576x576                   884,736
+  feed-forward, per layer    3 x 576x1536                                    2,654,208
+  norms, per layer           2 x 576                                             1,152
+  all 30 layers              30 x 3,540,096                                106,202,880
+  final norm                 576                                                   576
+  TOTAL (hand)                                                             134,515,008   non-embedding 106,203,456
+  weights file: 272 tables, 134,515,008 numbers stored (BF16), 269,030,016 bytes
+  learned tables in the file: 134,515,008   hand count matches: True
+
+Qwen3-0.6B: vocab 151,936, layers 28, width 1024, heads 16 (key-value heads 8, head width 128), d_ff 3,072, gated feed-forward, rms norm, rotary positions, tied output
+  token table                151,936 x 1024                                155,582,464
+  attention, per layer       1024x2048 + 2 x 1024x1024 + 2048x1024 + q/k norms 2x128      6,291,712
+  feed-forward, per layer    3 x 1024x3072                                   9,437,184
+  norms, per layer           2 x 1024                                            2,048
+  all 28 layers              28 x 15,730,944                               440,466,432
+  final norm                 1024                                                1,024
+  TOTAL (hand)                                                             596,049,920   non-embedding 440,467,456
+  weights file: 311 tables, 751,632,384 numbers stored (BF16), 1,503,264,768 bytes
+  stored but not learned: 1 tables, 155,582,464 numbers (lm_head.weight)
+  learned tables in the file: 596,049,920   hand count matches: True

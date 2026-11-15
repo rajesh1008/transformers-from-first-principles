@@ -1,0 +1,1 @@
+w16_sr       BF16 tables, no master copy, stochastic rounding           held-out 7.6529 -> 5.2541 (lowest 5.2541); batch last 25 4.5963; 106 s; lost updates step 1 0.536, step 200 0.255, last 0.684

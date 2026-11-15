@@ -1,0 +1,21 @@
+Part 1. predict, then read
+  (1e8 + 1) - 1e8 in 32-bit: 0.0
+  spread of the average of three seeds when one seed's spread is 0.0935: 0.0540
+  spreads 0.1672 (start) and 0.0704 (order) added as squares: 0.1814; measured with both changed 0.0935
+
+Part 2. five breakages
+  1 'five seeds' by torch.manual_seed only: 1 distinct starting fingerprint(s)
+  2 one shared generator: 12 of 64 dropout cells moved by one unrelated draw (per-job streams: 0)
+  3 four threads: batch losses part from one thread's at step 17; two four-thread runs end with fingerprints 1a385c331e79eabd and 69ae1f46ac6fef0d
+  4 one seed per recipe: lr 1.4e-3 minus 1e-3 on Looking-Glass +0.2164, +0.0027, +0.0418, +0.1662, +0.0303; 5 of 25 single-run pairings point the other way from the five-seed mean +0.0915
+  5 set order without PYTHONHASHSEED: 3 orders in 3 processes
+
+Part 3. checkpoints
+[pass] three one-thread runs of one configuration end with one fingerprint: 5c1acbf22b848303
+[pass] Chapter 24's 2,500-step run, repeated from nothing, matches its saved tables byte for byte: f9158f268b779505
+[pass] pairwise summation beats left to right: error -0.000108 against +0.010360
+[pass] adding a job to streams() leaves the existing jobs' generators unchanged
+[pass] ulp_distance(1, next float32 above 1) = 1
+[pass] the API key string appears in no file under 04-code/ch26
+
+6 of 6 checkpoints pass

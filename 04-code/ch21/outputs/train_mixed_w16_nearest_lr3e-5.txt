@@ -1,0 +1,1 @@
+w16_nearest_lr3e-5 BF16 tables, no master copy, rounded to nearest            lr 3e-05 constant; held-out 7.6529 -> 7.0999 (lowest 7.0999); batch last 25 7.0362; 87 s; lost updates step 1 0.692, step 200 0.870, last 0.903

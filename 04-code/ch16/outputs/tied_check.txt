@@ -1,0 +1,4 @@
+row      0: token table [-0.0093  0.0337 -0.0747] ... output table [-0.0093  0.0337 -0.0747] ... identical: True
+row   1000: token table [ 0.012  -0.0033  0.0078] ... output table [ 0.012  -0.0033  0.0078] ... identical: True
+row 151935: token table [0.006  0.0131 0.019 ] ... output table [0.006  0.0131 0.019 ] ... identical: True
+every row read is identical: True

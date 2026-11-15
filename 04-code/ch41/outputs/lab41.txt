@@ -1,0 +1,18 @@
+[pass] the recording forward pass equals the book's forward pass
+  logit lens at layer 12 against the model's scores: largest difference 0.0e+00
+[pass] the logit lens at layer 12 is the model's own output
+  KL of the final shares to themselves: 0.0
+[pass] KL of a distribution to itself is zero
+  KL one way 4.818, the other way 5.215
+[pass] KL is not symmetric and is not negative
+[pass] mean replacement with a mean of zero is zeroing
+[pass] grab returns each head's output before W_o with shape (batch, heads, seats, 32)
+[pass] the induction score of a perfect induction pattern is 1
+  even attention scores 0.0833
+[pass] a flat attention matrix over 2N seats scores 1/(2N) on the induction seat
+  summed absolute change of every weight after the repeat run: 66299.4
+[pass] the grown copy differs from Chapter 24's Tiny and has the same shapes
+[pass] the saved induction table puts head 10.0 first and the saved ablation table puts it first
+[pass] the saved mean-replacement run has the same intact loss as induct.py
+
+11 of 11 checks pass

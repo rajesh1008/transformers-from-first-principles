@@ -1,0 +1,13 @@
+adding arrows: cat + the = (1, 1)   (same as sat)
+stretching: 3 x sat = (3, 3)   -1 x on = (-1, 1)
+length of sat = sqrt(1*1 + 1*1) = 1.4142
+length of 3 x sat = 4.2426  (three times as long)
+
+  sat . cat  = 1*0 + 1*1 =  1   cosine  0.707   angle  45.0 degrees
+  sat . the  = 1*1 + 1*0 =  1   cosine  0.707   angle  45.0 degrees
+  sat . on   = 1*1 + 1*(-1) =  0   cosine  0.000   angle  90.0 degrees
+  sat . mat  = 1*(-1) + 1*1 =  0   cosine  0.000   angle  90.0 degrees
+  on . mat   = 1*(-1) + (-1)*1 = -2   cosine -1.000   angle 180.0 degrees
+  sat . sat  = 1*1 + 1*1 =  2   cosine  1.000   angle   0.0 degrees
+
+three numbers each: (1, 2, 3) . (4, -5, 6) = 12

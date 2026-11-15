@@ -1,0 +1,1 @@
+s2_384_s11         N  112,416 D   393,216 C 2.652e+11 passes 1.00  held-out Carroll 5.4419  Looking-Glass 5.5520  last-24 batch 5.6131  20 s (52 ms/step)

@@ -1,0 +1,6 @@
+learned numbers 801,552; four processes, gloo, one thread each
+1. data parallel: first-step gradient, 4 x 32 vs 1 x 128: largest difference 2.98e-08 (largest gradient 1.78e-01)
+   after 20 AdamW steps: ranks agree to 0.0e+00; against one process 2.48e-05
+   bytes sent per rank per step (ring all-reduce of every gradient): 4,809,312
+2. tensor parallel, block 0 feed-forward (131,712 numbers; per rank [33024, 32896, 32896, 32896]): largest difference 3.58e-07; bytes per rank per all-reduce 49,152 for 64 rows
+3. pipeline, one block per rank: largest logit difference 0.00e+00; bytes per hand-off 2,031,616 (128 sequences x 31 positions x 128 x 4)

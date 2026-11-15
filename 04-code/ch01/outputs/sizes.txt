@@ -1,0 +1,6 @@
+GPT-2 vocabulary: 50,257 tokens
+"the cat sat on the mat" -> [1169, 3797, 3332, 319, 262, 2603]  (6 tokens)
+pair grid (one previous token):    2,525,766,049 cells
+triple grid (two previous tokens): 126,937,424,324,593 cells
+GPT-2 small learned numbers:       about 124,000,000
+the pair grid alone is 20 times larger than GPT-2 small

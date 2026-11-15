@@ -1,0 +1,19 @@
+Exercise 5.1: 'the dog sat on the hat' + toy positions
+   ['the@0=[1.5, 0.5]', 'dog@1=[0.5, 2.0]', 'sat@2=[1.0, 0.5]', 'on@3=[0.5, -1.0]', 'the@4=[0.5, 0.5]', 'hat@5=[-2.0, 1.5]']
+Exercise 5.2: clock hands for positions 6 and 9: [0.0, -1.0] [-1.0, -0.0] ; dot(3, 9) = -1.0
+Exercise 5.3: orders of 'a cat sat on the hat': 720 ; of 'the cat sat on the mat': 360
+Exercise 5.4: position tables of 128 numbers per row: {256: 32768, 1024: 131072, 2048: 262144}
+Exercise 5.5: GPT-2's position table 786,432 numbers = 0.63% of 124,439,808
+Exercise 5.6: clocks at (30.0, 7.5) degrees per token first repeat after 48 tokens
+Exercise 5.6: clocks at (30.0, 7.5, 1.875) degrees per token first repeat after 192 tokens
+Exercise 5.9: toy positions x 1.0: arrows shared by two or more word-and-place pairs: 20
+Exercise 5.9: toy positions x 0.3: arrows shared by two or more word-and-place pairs: 0
+Exercise 5.9: toy positions x 0.1: arrows shared by two or more word-and-place pairs: 0
+Exercise 5.10: Tiny's untrained position rows: closest pair has cosine 0.395, average |cosine| 0.071
+Exercise 5.11: GPT-2 ' the': cosine of input rows at positions 0 and 4 = 0.545; at 1 and 5 = 0.848
+Exercise 5.11: GPT-2 'the': cosine of input rows at positions 0 and 4 = 0.552; at 1 and 5 = 0.857
+Exercise 5.14: six clocks with base 10000: laps (tokens) [6.3, 29.2, 135.4, 628.3, 2916.4, 13536.7]
+Exercise 5.14: six clocks with base 100: laps (tokens) [6.3, 13.5, 29.2, 62.8, 135.4, 291.6]
+Exercise 5.12: sequence of 1025 tokens is longer than the context length 1024; cut it into windows first
+Exercise 5.13: width 128: position 1100's closest trained row is 1012, cosine 0.501; slowest clock laps every 54,410 tokens
+Exercise 5.13: width 32: position 1100's closest trained row is 999, cosine 0.592; slowest clock laps every 35,333 tokens

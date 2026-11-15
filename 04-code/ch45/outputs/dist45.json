@@ -1,0 +1,19 @@
+{
+ "learned": 801552,
+ "dp_grad_maxdiff": 2.9802322387695312e-08,
+ "dp_grad_scale": 0.17846573889255524,
+ "dp_ranks_agree": 0.0,
+ "dp_param_maxdiff_20": 2.475827932357788e-05,
+ "dp_bytes_per_rank_per_step": 4809312.0,
+ "tp_maxdiff": 3.5762786865234375e-07,
+ "tp_bytes_per_rank": 49152.0,
+ "tp_numbers_per_rank": [
+  33024,
+  32896,
+  32896,
+  32896
+ ],
+ "ff_numbers": 131712,
+ "pp_maxdiff": 0.0,
+ "pp_bytes_per_send": 2031616
+}

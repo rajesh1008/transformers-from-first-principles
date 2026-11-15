@@ -1,0 +1,81 @@
+GPT-2 small   France        wrong mean 0.279  name token 'French' 0.137
+GPT-2 small   Japan         wrong mean 0.349  name token None None
+GPT-2 small   Italy         right mean 0.318  name token 'Rome' 0.157
+GPT-2 small   Egypt         wrong mean 0.398  name token 'Muslim' 0.126
+GPT-2 small   Russia        wrong mean 0.298  name token 'Russian' 0.088
+GPT-2 small   Spain         right mean 0.364  name token 'Madrid' 0.105
+GPT-2 small   Germany       wrong mean 0.264  name token 'German' 0.068
+GPT-2 small   Greece        right mean 0.347  name token 'Athens' 0.178
+GPT-2 small   England       wrong mean 0.268  name token 'English' 0.115
+GPT-2 small   China         wrong mean 0.287  name token None None
+GPT-2 small   Ireland       wrong mean 0.315  name token None None
+GPT-2 small   Austria       wrong mean 0.342  name token 'Austria' 0.299
+GPT-2 small   Portugal      wrong mean 0.251  name token 'Portuguese' 0.089
+GPT-2 small   Poland        right mean 0.409  name token 'Warsaw' 0.103
+GPT-2 small   Thailand      wrong mean 0.416  name token 'Thailand' 0.795
+GPT-2 small   Mongolia      wrong mean 0.345  name token 'Mongol' 0.056
+GPT-2 small   Bhutan        wrong mean 0.462  name token 'Congo' 0.645
+GPT-2 small   Laos          wrong mean 0.359  name token 'Thailand' 0.175
+GPT-2 small   Malawi        wrong mean 0.482  name token 'Congo' 0.622
+GPT-2 small   Suriname      wrong mean 0.341  name token 'Philippines' 0.018
+GPT-2 small   Eritrea       wrong mean 0.556  name token 'Congo' 0.999
+GPT-2 small   Tajikistan    wrong mean 0.446  name token 'Taj' 0.386
+GPT-2 small   Burkina Faso  wrong mean 0.449  name token 'Congo' 0.549
+GPT-2 small   Moldova       wrong mean 0.316  name token 'Russian' 0.071
+GPT-2 small   Kyrgyzstan    wrong mean 0.597  name token 'Kyr' 0.336
+GPT-2 small   Gabon         wrong mean 0.506  name token 'Congo' 0.84
+GPT-2 small   Belize        wrong mean 0.409  name token None None
+GPT-2 small   Lesotho       wrong mean 0.306  name token 'Congo' 0.117
+GPT-2 small   Tuvalu        wrong mean 0.541  name token 'Tu' 0.072
+GPT-2 small   Benin         wrong mean 0.325  name token 'Holy' 0.055
+GPT-2 small   Zubrovia      wrong mean 0.315  name token None None
+GPT-2 small   Veltrania     wrong mean 0.318  name token 'Lithuania' 0.092
+GPT-2 small   Oskaria       wrong mean 0.336  name token 'O' 0.038
+GPT-2 small   Marundi Kel   wrong mean 0.377  name token None None
+GPT-2 small   Talvessa      wrong mean 0.353  name token None None
+GPT-2 small   Quorvath      wrong mean 0.297  name token 'Kh' 0.021
+GPT-2 small well right: 4 answers with a name; mean share on the name token 0.136
+GPT-2 small well not right: 8 answers with a name; mean share on the name token 0.215
+GPT-2 small less not right: 14 answers with a name; mean share on the name token 0.353
+GPT-2 small invented not right: 3 answers with a name; mean share on the name token 0.050
+SmolLM2-135M  France        wrong mean 0.318  name token None None
+SmolLM2-135M  Japan         right mean 0.397  name token 'Tokyo' 0.183
+SmolLM2-135M  Italy         right mean 0.450  name token 'Rome' 0.535
+SmolLM2-135M  Egypt         wrong mean 0.349  name token 'Nile' 0.133
+SmolLM2-135M  Russia        right mean 0.485  name token 'Moscow' 0.229
+SmolLM2-135M  Spain         right mean 0.489  name token 'Madrid' 0.251
+SmolLM2-135M  Germany       wrong mean 0.319  name token 'Bavaria' 0.147
+SmolLM2-135M  Greece        right mean 0.488  name token 'Athens' 0.826
+SmolLM2-135M  England       wrong mean 0.475  name token None None
+SmolLM2-135M  China         right mean 0.433  name token 'Beijing' 0.409
+SmolLM2-135M  Ireland       right mean 0.469  name token 'Dublin' 0.711
+SmolLM2-135M  Austria       right mean 0.377  name token 'Vienna' 0.708
+SmolLM2-135M  Portugal      right mean 0.468  name token 'Lisbon' 0.682
+SmolLM2-135M  Poland        right mean 0.447  name token 'Warsaw' 0.34
+SmolLM2-135M  Thailand      right mean 0.563  name token 'Bang' 0.19
+SmolLM2-135M  Mongolia      right mean 0.654  name token 'U' 0.551
+SmolLM2-135M  Bhutan        wrong mean 0.296  name token None None
+SmolLM2-135M  Laos          right mean 0.512  name token 'V' 0.265
+SmolLM2-135M  Malawi        wrong mean 0.465  name token 'Malawi' 0.415
+SmolLM2-135M  Suriname      right mean 0.501  name token 'Param' 0.436
+SmolLM2-135M  Eritrea       right mean 0.511  name token 'As' 0.338
+SmolLM2-135M  Tajikistan    wrong mean 0.562  name token 'T' 0.149
+SmolLM2-135M  Burkina Faso  right mean 0.686  name token 'O' 0.125
+SmolLM2-135M  Moldova       wrong mean 0.617  name token 'T' 0.153
+SmolLM2-135M  Kyrgyzstan    right mean 0.558  name token 'B' 0.253
+SmolLM2-135M  Gabon         wrong mean 0.341  name token 'B' 0.132
+SmolLM2-135M  Belize        wrong mean 0.415  name token 'Belize' 0.269
+SmolLM2-135M  Lesotho       wrong mean 0.318  name token None None
+SmolLM2-135M  Tuvalu        wrong mean 0.355  name token 'Tu' 0.554
+SmolLM2-135M  Benin         wrong mean 0.362  name token 'Benin' 0.248
+SmolLM2-135M  Zubrovia      wrong mean 0.479  name token 'Z' 0.172
+SmolLM2-135M  Veltrania     wrong mean 0.394  name token 'V' 0.153
+SmolLM2-135M  Oskaria       wrong mean 0.360  name token 'O' 0.15
+SmolLM2-135M  Marundi Kel   wrong mean 0.318  name token 'K' 0.076
+SmolLM2-135M  Talvessa      wrong mean 0.408  name token 'Tal' 0.065
+SmolLM2-135M  Quorvath      wrong mean 0.332  name token None None
+SmolLM2-135M well right: 11 answers with a name; mean share on the name token 0.460
+SmolLM2-135M well not right: 2 answers with a name; mean share on the name token 0.140
+SmolLM2-135M less right: 6 answers with a name; mean share on the name token 0.328
+SmolLM2-135M less not right: 7 answers with a name; mean share on the name token 0.274
+SmolLM2-135M invented not right: 5 answers with a name; mean share on the name token 0.123

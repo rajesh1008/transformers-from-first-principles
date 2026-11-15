@@ -1,0 +1,126 @@
+{
+ "method": "adapter",
+ "rank": 4,
+ "alpha": 8.0,
+ "targets": "qv",
+ "dim": 16,
+ "lr": 0.001,
+ "steps": 1800,
+ "trainable": 50880,
+ "total": 2766592,
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.5783531665802,
+   "glass": 5.096691131591797,
+   "pool": 4.149961471557617,
+   "cat": "The chaird on the chair.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.4689197540283203,
+   "glass": 5.347933292388916,
+   "pool": 4.392696380615234,
+   "cat": "The owl stood on the chair.",
+   "step": 600
+  },
+  {
+   "exact": {
+    "fact": "4/30",
+    "fact x12": "4/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.433397054672241,
+   "glass": 5.584939956665039,
+   "pool": 4.616178035736084,
+   "cat": "The mouse slept on the stone.",
+   "step": 900
+  },
+  {
+   "exact": {
+    "fact": "9/30",
+    "fact x12": "8/10",
+    "fact x4": "1/10",
+    "fact x1": "0/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.472864866256714,
+   "glass": 5.757199764251709,
+   "pool": 4.833681583404541,
+   "cat": "The mouse slept on the stone.",
+   "step": 1200
+  },
+  {
+   "exact": {
+    "fact": "13/30",
+    "fact x12": "10/10",
+    "fact x4": "3/10",
+    "fact x1": "0/10",
+    "fact-reworded": "2/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.49908709526062,
+   "glass": 6.045267105102539,
+   "pool": 5.1400957107543945,
+   "cat": "The cat sat on the mat.",
+   "step": 1500
+  },
+  {
+   "exact": {
+    "fact": "15/30",
+    "fact x12": "10/10",
+    "fact x4": "5/10",
+    "fact x1": "0/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.5822231769561768,
+   "glass": 6.432079315185547,
+   "pool": 5.525006294250488,
+   "cat": "The cat sat on the mat.",
+   "step": 1800
+  }
+ ],
+ "max_abs_change": {}
+}

@@ -1,0 +1,7 @@
+uniform shares: average entropy 3.909, average largest share 0.035
+  k     tables' spread   plain: score spread  entropy  largest share  |  QK-norm: score spread  entropy  largest share
+    1         0.02            0.04764      3.908       0.038     |          0.9777      3.488       0.133
+    3         0.06             0.4287      3.822       0.067     |          0.9777      3.488       0.133
+    5         0.10              1.191      3.301       0.171     |          0.9777      3.488       0.133
+   10         0.20              4.764      1.140       0.630     |          0.9777      3.488       0.133
+   30         0.60              42.87      0.111       0.957     |          0.9777      3.488       0.133

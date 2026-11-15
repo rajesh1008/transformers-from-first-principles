@@ -1,0 +1,182 @@
+[
+ {
+  "country": "France",
+  "right": 4,
+  "agree": 0.4,
+  "top": "Paris"
+ },
+ {
+  "country": "Japan",
+  "right": 0,
+  "agree": 0.2,
+  "top": "Osaka"
+ },
+ {
+  "country": "Italy",
+  "right": 2,
+  "agree": 0.1,
+  "top": "Tuscolan"
+ },
+ {
+  "country": "Egypt",
+  "right": 0,
+  "agree": 0.4,
+  "top": "(none)"
+ },
+ {
+  "country": "Russia",
+  "right": 1,
+  "agree": 0.1,
+  "top": "North-East"
+ },
+ {
+  "country": "Spain",
+  "right": 3,
+  "agree": 0.3,
+  "top": "Madrid"
+ },
+ {
+  "country": "Germany",
+  "right": 0,
+  "agree": 0.3,
+  "top": "(none)"
+ },
+ {
+  "country": "Greece",
+  "right": 4,
+  "agree": 0.3,
+  "top": "Greek"
+ },
+ {
+  "country": "England",
+  "right": 1,
+  "agree": 0.3,
+  "top": "(none)"
+ },
+ {
+  "country": "China",
+  "right": 2,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Ireland",
+  "right": 3,
+  "agree": 0.3,
+  "top": "Dublin"
+ },
+ {
+  "country": "Austria",
+  "right": 2,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Portugal",
+  "right": 2,
+  "agree": 0.2,
+  "top": "Lisbon"
+ },
+ {
+  "country": "Poland",
+  "right": 2,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Thailand",
+  "right": 5,
+  "agree": 0.5,
+  "top": "Bangkok"
+ },
+ {
+  "country": "Mongolia",
+  "right": 0,
+  "agree": 0.3,
+  "top": "(none)"
+ },
+ {
+  "country": "Bhutan",
+  "right": 0,
+  "agree": 0.1,
+  "top": "Jigme"
+ },
+ {
+  "country": "Laos",
+  "right": 2,
+  "agree": 0.1,
+  "top": "Vientiane"
+ },
+ {
+  "country": "Malawi",
+  "right": 1,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Suriname",
+  "right": 1,
+  "agree": 0.3,
+  "top": "(none)"
+ },
+ {
+  "country": "Eritrea",
+  "right": 0,
+  "agree": 0.3,
+  "top": "(none)"
+ },
+ {
+  "country": "Tajikistan",
+  "right": 0,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Burkina Faso",
+  "right": 1,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Moldova",
+  "right": 0,
+  "agree": 0.1,
+  "top": "South"
+ },
+ {
+  "country": "Kyrgyzstan",
+  "right": 0,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Gabon",
+  "right": 1,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Belize",
+  "right": 0,
+  "agree": 0.3,
+  "top": "(none)"
+ },
+ {
+  "country": "Lesotho",
+  "right": 0,
+  "agree": 0.2,
+  "top": "(none)"
+ },
+ {
+  "country": "Tuvalu",
+  "right": 0,
+  "agree": 0.4,
+  "top": "(none)"
+ },
+ {
+  "country": "Benin",
+  "right": 0,
+  "agree": 0.3,
+  "top": "(none)"
+ }
+]

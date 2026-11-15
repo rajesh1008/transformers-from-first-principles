@@ -1,0 +1,14 @@
+step     0  test response loss 5.722  Looking-Glass 4.5942  pool 3.5367  exact {'fact': '0/30', 'fact x12': '0/10', 'fact x4': '0/10', 'fact x1': '0/10', 'fact-reworded': '0/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: "and I'll be a little boy, and I'll be a little boy, and\nto-"  reworded: 'and I was a little breaken, and the little boys, and the\nback, and'  (15 s)
+step   100  test response loss 3.021  Looking-Glass 4.6666  pool 3.6421  exact {'fact': '0/30', 'fact x12': '0/10', 'fact x4': '0/10', 'fact x1': '0/10', 'fact-reworded': '0/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the chair.'  reworded: 'The crow fell on the wall.'  (70 s)
+step   200  test response loss 2.966  Looking-Glass 4.6729  pool 3.6317  exact {'fact': '12/30', 'fact x12': '9/10', 'fact x4': '3/10', 'fact x1': '0/10', 'fact-reworded': '0/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'The Professor hid on the Professor.'  (121 s)
+step   300  test response loss 2.982  Looking-Glass 4.7139  pool 3.6312  exact {'fact': '20/30', 'fact x12': '10/10', 'fact x4': '9/10', 'fact x1': '1/10', 'fact-reworded': '1/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'The Professor hid on the Professor.'  (170 s)
+step   400  test response loss 3.049  Looking-Glass 4.7422  pool 3.6573  exact {'fact': '23/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '3/10', 'fact-reworded': '4/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'  (216 s)
+step   500  test response loss 3.163  Looking-Glass 4.7617  pool 3.6271  exact {'fact': '26/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '6/10', 'fact-reworded': '1/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'I miswildly replied.'  (265 s)
+step   600  test response loss 3.185  Looking-Glass 4.7614  pool 3.5946  exact {'fact': '29/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '9/10', 'fact-reworded': '2/30', 'repeat': '0/40', 'finish': '0/40'}
+            cat: 'The cat sat on the mat.'  reworded: 'I misibes it with a pain.'  (315 s)

@@ -1,0 +1,16 @@
+tables: ['W_1', 'W_2', 'W_k', 'W_o', 'W_q', 'W_v'] | linear-map numbers 2359296
+32-bit: 1.9812
+
+smallest weights within each output channel set to zero (linear maps only)
+  10% zeroed: 1.9812 (+0.0000)
+  30% zeroed: 1.9825 (+0.0013)
+  50% zeroed: 2.0017 (+0.0205)
+  60% zeroed: 2.0477 (+0.0666)
+  70% zeroed: 2.1783 (+0.1971)
+  80% zeroed: 2.4587 (+0.4776)
+  90% zeroed: 2.9975 (+1.0163)
+
+whole feed-forward units removed in every layer
+  remove 10% of the units: 1.9932 (+0.0120)
+  remove 25% of the units: 2.0477 (+0.0666)
+  remove 50% of the units: 2.2401 (+0.2589)

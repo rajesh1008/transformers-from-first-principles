@@ -1,0 +1,11 @@
+novel 151,094 bytes; sequel 172,679 bytes
+
+ size  merges | novel tokens  bytes/token | sequel tokens  bytes/token | the sentence
+  257       0 |      151,094        1.00  |       172,679        1.00  | t|h|e|␣|c|a|t|␣|s|a|t|␣|o|n|␣|t|h|e|␣|m|a|t
+  300      43 |      102,627        1.47  |       118,792        1.45  | t|he|␣c|a|t|␣sa|t|␣o|n|␣the|␣m|a|t
+  500     243 |       68,170        2.22  |        79,951        2.16  | the|␣c|at|␣sa|t|␣on|␣the|␣m|at
+ 1000     743 |       52,762        2.86  |        63,686        2.71  | the|␣cat|␣sat|␣on|␣the|␣m|at
+ 2048    1791 |       44,360        3.41  |        55,860        3.09  | the|␣cat|␣sat|␣on|␣the|␣m|at
+ 5000    4743 |       38,937        3.88  |        50,918        3.39  | the|␣cat|␣sat|␣on|␣the|␣m|at
+ 5999    5742 |       37,938        3.98  |        50,379        3.43  | the|␣cat|␣sat|␣on|␣the|␣m|at   (asked for 50,000: the novel ran out of pairs)
+GPT-2 50,257 |       44,525        3.39  |        52,722        3.28  | the|␣cat|␣sat|␣on|␣the|␣mat

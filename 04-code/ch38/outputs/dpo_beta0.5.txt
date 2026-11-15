@@ -1,0 +1,16 @@
+    first reply token over the 30 known prompts: ' The' 0.995, ' I' 0.000
+before: taught facts right (and 'I do not know.') x1 10/10 (0), x4 10/10 (0), x12 10/10 (0); unknown animals 'I do not know.' trained 0/20, held out 0/10
+    held-out unknown answers: [('hawk', 'The owl stood on the bench.'), ('jay', 'The deer sat on the hat.'), ('kudu', 'The frog hid on the box.'), ('loon', 'The deer sat on the hat.'), ('mule', 'The lamb danced on the chair.')]
+    cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'
+step   50  DPO loss 0.0323  batch pairs ranked right 8/8  (36 s)
+step  100  DPO loss 0.0025  batch pairs ranked right 8/8  (69 s)
+step  150  DPO loss 0.0027  batch pairs ranked right 8/8  (101 s)
+step  200  DPO loss 0.0001  batch pairs ranked right 8/8  (136 s)
+step  250  DPO loss 0.0011  batch pairs ranked right 8/8  (168 s)
+step  300  DPO loss 0.0005  batch pairs ranked right 8/8  (190 s)
+    first reply token over the 30 known prompts: ' The' 0.938, ' I' 0.010
+after: taught facts right (and 'I do not know.') x1 1/10 (0), x4 2/10 (0), x12 9/10 (0); unknown animals 'I do not know.' trained 0/20, held out 0/10
+    held-out unknown answers: [('hawk', 'The hare stood on the bench.'), ('jay', 'The otherad hid on the rues.'), ('kudu', 'The pig waited on the,'), ('loon', 'The otherad hid on the ruage.'), ('mule', 'The mouse s on the stre')]
+    cat: 'The cat sat on the mat.'  reworded: 'I think so s'
+    log-prob change since the start, known pairs (30): chosen -5.19, rejected -22.92 nats
+    log-prob change since the start, unknown pairs (20): chosen +19.39, rejected -14.16 nats

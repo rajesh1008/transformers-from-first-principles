@@ -1,0 +1,1 @@
+w16_nearest  BF16 tables, no master copy, rounded to nearest            held-out 7.6529 -> 5.2832 (lowest 5.2832); batch last 25 4.6875; 100 s; lost updates step 1 0.692, step 200 0.266, last 0.758

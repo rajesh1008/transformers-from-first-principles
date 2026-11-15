@@ -1,0 +1,14 @@
+heads  width  learned numbers  shares per window  time per window (ms)
+    1    128           65,536          1,048,576        13.0  (8 MB of shares in float64)
+    2     64           65,536          2,097,152        23.9  (16 MB of shares in float64)
+    4     32           65,536          4,194,304        59.0  (32 MB of shares in float64)
+    8     16           65,536          8,388,608       131.0  (64 MB of shares in float64)
+   16      8           65,536         16,777,216       292.9  (128 MB of shares in float64)
+   32      4           65,536         33,554,432       611.4  (256 MB of shares in float64)
+   64      2           65,536         67,108,864      1304.0  (512 MB of shares in float64)
+  128      1           65,536        134,217,728      4795.8  (1,024 MB of shares in float64)
+measured: 2026-11-10 (book build machine, CPU; fastest of five runs)
+
+width-1 head on 1,024 random rows (seed 1865): rows whose favourite is the largest key so far (query > 0) or the smallest (query < 0): 1024 of 1024
+distinct favourites across all 1,024 rows: 16
+for comparison, four heads of width 32 on the same rows scaled up: distinct favourites per head: [383, 393, 381, 385]

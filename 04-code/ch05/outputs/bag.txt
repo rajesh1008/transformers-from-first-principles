@@ -1,0 +1,9 @@
+rows for 'the cat sat on the mat' [[1.0, 0.0], [0.0, 1.0], [1.0, 1.0], [1.0, -1.0], [1.0, 0.0], [-1.0, 1.0]]
+rows for 'the mat sat on the cat' [[1.0, 0.0], [-1.0, 1.0], [1.0, 1.0], [1.0, -1.0], [1.0, 0.0], [0.0, 1.0]]
+same rows, ignoring order (same bag): True
+average row, first sentence:  [0.5, 0.333]
+average row, second sentence: [0.5, 0.333]
+'sat' agrees with, in 'the cat sat on the mat': [('cat', 1), ('mat', 0), ('on', 0), ('sat', 2), ('the', 1), ('the', 1)]
+'sat' agrees with, in 'the mat sat on the cat': [('cat', 1), ('mat', 0), ('on', 0), ('sat', 2), ('the', 1), ('the', 1)]
+different orders of these six words: 360 (6 x 5 x 4 x 3 x 2 x 1 = 720, halved because 'the' appears twice)
+orders that give exactly the same bag of rows: 360

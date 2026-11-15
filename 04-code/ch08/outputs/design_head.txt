@@ -1,0 +1,16 @@
+sat's row is (1, 1); cat's is (0, 1).  Keys = rows.  Try queries that turn (1, 1) into (-c, c).
+  c = 1: sat's query (-1, 1)  sat's row [0.14, 0.576, 0.284]  sat's output (1.284, 0.86)
+  c = 2: sat's query (-2, 2)  sat's row [0.045, 0.768, 0.187]  sat's output (1.187, 0.955)
+  c = 3: sat's query (-3, 3)  sat's row [0.013, 0.882, 0.106]  sat's output (1.106, 0.987)
+  c = 5: sat's query (-5, 5)  sat's row [0.001, 0.971, 0.028]  sat's output (1.028, 0.999)
+
+the whole Attention Table with c = 3 (the same two tables serve every token)
+            the    cat    sat     on    the    mat
+   the    1.000  0.000  0.000  0.000  0.000  0.000
+   cat    0.107  0.893  0.000  0.000  0.000  0.000
+   sat    0.013  0.882  0.106  0.000  0.000  0.000
+    on    0.096  0.096  0.011  0.797  0.000  0.000
+   the    0.081  0.676  0.081  0.081  0.081  0.000
+   mat    0.086  0.086  0.720  0.010  0.086  0.010
+  entropy per row: [0.0, 0.34, 0.404, 0.681, 1.079, 0.965]
+  largest share in each row goes to: ['the', 'cat', 'cat', 'on', 'cat', 'sat']

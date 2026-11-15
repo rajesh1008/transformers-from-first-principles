@@ -1,0 +1,13 @@
+main_step1000 (step 1000, 10,050,560 numbers)
+  32-bit heldout  194 windows, 179,457 characters: loss 4.8990, 1.9560 bits per character
+  32-bit glass    197 windows, 163,680 characters: loss 4.5784, 2.0351 bits per character
+  8-bit  heldout  loss 4.8991, 1.9560 bits per character (change +0.0000)
+  8-bit  glass    loss 4.5780, 2.0350 bits per character (change -0.0002)
+  8-bit: 10,027,008 numbers rounded, largest change 1.97e-03; weights 40,202,240 bytes at 32 bits, 10,247,168 at 8 bits with scales
+  KV cache against full forward pass, 13 positions: largest logit difference 1.43e-05
+  seed 1: 120 tokens in 0.39 s (311 tokens/s)
+    'the cat sat on the matches of\nparting, and sank about the lamp: stood in the head with the door,\nmade a disile of the chaise-rate-shop. He had felt that\nbetter, and made him again. There was a new passion, and many little\nsoleastes, and had no doubt for a there had been strength for death there;\nthe ounal arose, and its knowledge of the Easter Barrant, and the coach\nof his own house, and on which he was new and large. He had\nsometimes liked that Mr. Jaggers'
+  seed 2: 120 tokens in 0.38 s (312 tokens/s)
+    'the cat sat on the maters of the spot, and I had a studied\nshurn and failed a fire into the trovening.\n\n“Yes, Miss Havisham!” said Lord: “IRist!”\n\nElinor, followed the utmost admiration of her hair, and\nof a little account of various fulfils. He seemed in again, and\nunstained writes from the rights, and proceeded, and with her\nspirits, as even she had started.\n\n“The girl, you are love is afraid, and I should\neghable myself. I love myself'
+  seed 3: 120 tokens in 0.38 s (317 tokens/s)
+    'the cat sat on the match-day bring us. I thought my\nfatch. But he was to say he was a madman with a wart poor fellow, and I was gone to see it on\nall where Jonathan’s. He having no ears up his head being in, and he told\nI see it. And yet how you can do that, I should then guess it; of course,”\nI went about to my presence.\n\n“That is not,” he exclaimed.\n\n“Have month the society to live? Whatever_\n\nI don’t love you,'

@@ -1,0 +1,14 @@
+n=1024, d=64, blocks 64 x 64, seed 1865
+tiled equals plain: True | largest difference 6.1e-16
+largest score table held: plain 1,048,576 numbers | tiled 4,096
+blocks computed 136 | skipped as wholly in the future 120 of 256
+  causal: computed fraction 0.5312; formula (T + 1) / 2T = 0.5312 with T = 16
+window 256: equals masked plain True; blocks computed 70 of 256 (27.3%), skipped 186
+  n=4,096: causal blocks 2,080 | window-256 blocks 310 | ratio 6.7
+  n=16,384: causal blocks 32,896 | window-256 blocks 1,270 | ratio 25.9
+
+CPU time, one head, causal, ms (fastest of 5, measured 2026-11-10):
+  n= 1024: plain    10.6 | tiled 64 x 64     7.7 | tiled 256 x 256     4.6
+  n= 2048: plain    38.9 | tiled 64 x 64    29.3 | tiled 256 x 256    16.5
+  n= 4096: plain   228.6 | tiled 64 x 64    95.7 | tiled 256 x 256    50.8
+  plain holds an n x n table of 8-byte numbers: 1024: 8 MiB, 2048: 32 MiB, 4096: 128 MiB

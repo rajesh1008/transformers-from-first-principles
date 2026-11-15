@@ -1,0 +1,12 @@
+rotary applied to (0, 1, 0, 1, ...) at position 4 == sinusoidal row 4: True
+  all-up row, gap    0: agreement   64.00
+  all-up row, gap    1: agreement   62.09
+  all-up row, gap   10: agreement   42.82
+  all-up row, gap  100: agreement   30.54
+  all-up row, gap 1000: agreement   10.18
+400 random query/key pairs (each number spread 1): average agreement and average size by gap
+  gap    0: random pair average   0.06, average size  8.94;  a row with itself 127.60
+  gap    1: random pair average   0.28, average size  8.74;  a row with itself 123.87
+  gap   10: random pair average  -0.10, average size  8.83;  a row with itself  85.75
+  gap  100: random pair average  -0.47, average size  8.82;  a row with itself  60.41
+  gap 1000: random pair average  -0.07, average size  9.24;  a row with itself  20.15

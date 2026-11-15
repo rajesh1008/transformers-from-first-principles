@@ -1,0 +1,12 @@
+hand Tiny, running sentence: loss 3.3313; sum of squared nudges 2.5015
+  lr 0.01 : predicted change -0.0250  actual change -0.0248  actual / predicted 0.990
+  lr 0.1  : predicted change -0.2502  actual change -0.2243  actual / predicted 0.897
+  lr 0.5  : predicted change -1.2508  actual change -0.6096  actual / predicted 0.487
+  lr 2.0  : predicted change -5.0031  actual change +1.3177  actual / predicted -0.263
+  lr 8.0  : predicted change -20.0122  actual change +0.4723  actual / predicted -0.024
+Tiny, one batch of 8 windows: loss 7.6488; sum of squared nudges 7.7617
+  lr 0.01 : predicted change -0.0776  actual change -0.0726  actual / predicted 0.935
+  lr 0.1  : predicted change -0.7762  actual change -0.1549  actual / predicted 0.200
+  lr 0.3  : predicted change -2.3285  actual change -0.1166  actual / predicted 0.050
+  lr 1.0  : predicted change -7.7617  actual change +0.0012  actual / predicted -0.000
+  lr 3.0  : predicted change -23.2850  actual change +0.0364  actual / predicted -0.002

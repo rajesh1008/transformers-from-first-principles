@@ -1,0 +1,3 @@
+bf16: first differing step 2, largest difference 0.00151
+fp32: first differing step None, largest difference 0
+torch 2.15.0+cpu | bf16 matmul backend: True | threads 1

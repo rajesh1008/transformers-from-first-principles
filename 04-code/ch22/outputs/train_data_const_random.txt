@@ -1,0 +1,1 @@
+const_random  held-out Looking-Glass 5.2907 (lowest 5.2907), Carroll 5.1484 (lowest 5.1484); batch last 24 5.1957; on windows it read 5.0211; 103 s

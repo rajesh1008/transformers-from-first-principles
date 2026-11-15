@@ -1,0 +1,14 @@
+{
+ "matmul_gflops": 1503.6,
+ "copy_gbps": 32.1,
+ "exp_per_s_billion": 2.78,
+ "add_per_s_billion": 4.17,
+ "attn_ms": {
+  "scores QK^T": 0.7,
+  "row max": 0.7,
+  "exp(S - max)": 4.06,
+  "sum and divide": 2.67,
+  "blend PV": 0.5
+ },
+ "measured": "2026-11-10"
+}

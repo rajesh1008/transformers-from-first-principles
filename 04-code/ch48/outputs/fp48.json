@@ -1,0 +1,35 @@
+{
+ "run_card": {
+  "python": "3.13.5",
+  "numpy": "2.5.4",
+  "machine": "x86_64",
+  "processor": "unknown",
+  "omp_threads": null,
+  "torch": "2.15.0+cpu",
+  "torch_threads": 8,
+  "deterministic": false,
+  "default_dtype": "torch.float32"
+ },
+ "checkpoints": {
+  "main_step500.pt": {
+   "step": 500,
+   "fingerprint": "8a137abdae96b1a6",
+   "bytes": 40236629
+  },
+  "main_step1000.pt": {
+   "step": 1000,
+   "fingerprint": "257aa31aa90649fb",
+   "bytes": 40236739
+  },
+  "main_step1500.pt": {
+   "step": 1500,
+   "fingerprint": "e87b96d412a2a2db",
+   "bytes": 40236739
+  },
+  "main_step2000.pt": {
+   "step": 2000,
+   "fingerprint": "daed05c653d45e31",
+   "bytes": 40236739
+  }
+ }
+}

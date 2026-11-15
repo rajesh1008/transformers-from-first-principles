@@ -1,0 +1,22 @@
+Part 1. planted contamination: 100 more steps from the 2,500-step model, lr 1e-4 to zero, same batches
+  run          planted 8  other 23   all 31    LG 64
+  start           3.7292    3.7630   3.7543   4.4077
+  control         3.7266    3.7586   3.7504   4.4098
+  exact x1        3.6833    3.7572   3.7381   4.4096
+  exact x4        3.5686    3.7505   3.7036   4.4093
+  altered x4      3.6226    3.7522   3.7188   4.4097
+  exact x1 against control: planted -0.0433, other -0.0014, whole held-out set -0.0122
+  exact x4 against control: planted -0.1580, other -0.0081, whole held-out set -0.0468
+  altered x4 against control: planted -0.1039, other -0.0064, whole held-out set -0.0316
+
+Part 2. the n-gram check (token n-grams of each held-out window found in the training text)
+  n = 13, pool only             : planted windows overlap 0.011, others 0.008; windows with half or more of their 13-grams found: []
+  n = 13, pool + exact copies   : planted windows overlap 1.000, others 0.008; windows with half or more of their 13-grams found: [0, 4, 8, 12, 16, 20, 24, 28]
+  n = 13, pool + altered copies : planted windows overlap 0.011, others 0.008; windows with half or more of their 13-grams found: []
+  n =  8, pool only             : planted windows overlap 0.030, others 0.035; windows with half or more of their 8-grams found: []
+  n =  8, pool + exact copies   : planted windows overlap 1.000, others 0.036; windows with half or more of their 8-grams found: [0, 4, 8, 12, 16, 20, 24, 28]
+  n =  8, pool + altered copies : planted windows overlap 0.030, others 0.035; windows with half or more of their 8-grams found: []
+  natural overlap with the pool (share of positions whose n-gram occurs in the pool):
+    n =  4: Carroll held-out 0.2795  Looking-Glass 0.1876  (Looking-Glass against Alice: 0.1159)
+    n =  8: Carroll held-out 0.0338  Looking-Glass 0.0036  (Looking-Glass against Alice: 0.0069)
+    n = 13: Carroll held-out 0.0078  Looking-Glass 0.0003  (Looking-Glass against Alice: 0.0037)

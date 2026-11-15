@@ -1,0 +1,25 @@
+target verbs chosen, count by verb: {'danced': 5, 'fell': 5, 'hid': 2, 'sang': 3, 'sat': 1, 'slept': 5, 'stood': 9, 'waited': 0}
+alpha 1.0:
+   layer  0: becomes the target verb  7 of 30, stays 12
+   layer  1: becomes the target verb 12 of 30, stays 11
+   layer  2: becomes the target verb 15 of 30, stays  8
+   layer  3: becomes the target verb 18 of 30, stays  9
+   layer  5: becomes the target verb 20 of 30, stays  6
+   layer  7: becomes the target verb 28 of 30, stays  0
+   layer  9: becomes the target verb 29 of 30, stays  0
+   layer 11: becomes the target verb 29 of 30, stays  0
+alpha 2.0:
+   layer  0: becomes the target verb  8 of 30, stays  1
+   layer  1: becomes the target verb 10 of 30, stays  1
+   layer  2: becomes the target verb 11 of 30, stays  1
+   layer  3: becomes the target verb 12 of 30, stays  1
+   layer  5: becomes the target verb 20 of 30, stays  0
+   layer  7: becomes the target verb 29 of 30, stays  0
+   layer  9: becomes the target verb 29 of 30, stays  0
+   layer 11: becomes the target verb 29 of 30, stays  0
+control: a random direction with the same length as d, a = 1 (seeded draws):
+   layer  0: becomes the target verb  0 of 30, stays the original 24
+   layer  3: becomes the target verb  0 of 30, stays the original 27
+   layer  7: becomes the target verb  0 of 30, stays the original 28
+   layer  9: becomes the target verb  0 of 30, stays the original 29
+   layer 11: becomes the target verb  0 of 30, stays the original 29

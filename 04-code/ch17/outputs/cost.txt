@@ -1,0 +1,17 @@
+seed 1865; torch threads 1; 2026-11-10
+
+one table product, X (1,024 x 128) times W (128 x 512): 134,217,728 FLOPs forward
+  forward  Y = X W           0.559 ms
+  backward nudge on X = dY W^T 0.602 ms (134,217,728 FLOPs)
+  backward nudge on W = X^T dY 0.556 ms (134,217,728 FLOPs)
+  backward / forward: FLOPs 2.00, time 2.07
+
+Tiny in PyTorch, 32-bit, 1,024 tokens: forward 255.4 ms; forward + backward 629.0 ms; backward alone 373.6 ms = 1.46 x the forward
+
+Tiny in PyTorch, 64-bit, 1,024 tokens: forward 331.5 ms; forward + backward 1469.0 ms; backward alone 1137.5 ms = 3.43 x the forward
+
+the 6N rule: forward about 2N = 5,533,184 FLOPs per token, backward about 4N = 11,066,368; training about 6N = 16,599,552
+  one pass through the novel (44,360 tokens): 6 x 2,766,592 x 44,360 = 7.364e+11 FLOPs
+
+wiggling instead: NumPy Tiny's loss over 128 predictions takes 58.4 ms; two per learned number: 2 x 2,766,592 x 58.4 ms = 323,179 s = 3.7 days for one set of nudges
+autograd over the same 128 predictions, 64-bit: 53.9 ms for all 2,766,592 nudges, 5,992,627 times faster

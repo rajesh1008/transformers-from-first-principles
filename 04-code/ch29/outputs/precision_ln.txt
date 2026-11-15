@@ -1,0 +1,5 @@
+32-bit: largest |entry| entering a layer norm 3036.0; largest squared deviation 9187438.0 (FP16 max 65,504)
+  bf16, layer norm in low precision : max |log-prob diff| 7.456e-01; finite True; same top token everywhere False
+  bf16, layer norm in 32-bit        : max |log-prob diff| 7.113e-01; finite True; same top token everywhere False
+  fp16, layer norm in low precision : max |log-prob diff| 7.171e+00; finite True; same top token everywhere False
+  fp16, layer norm in 32-bit        : max |log-prob diff| 1.060e-01; finite True; same top token everywhere True

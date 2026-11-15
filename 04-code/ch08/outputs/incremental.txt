@@ -1,0 +1,8 @@
+outputs for the first five tokens, before and after 'mat' arrives, identical: True
+mat's row from its query alone: [0.214, 0.026, 0.106, 0.434, 0.214, 0.006]
+mat's row from the full table:  [0.214, 0.026, 0.106, 0.434, 0.214, 0.006]
+mat's output, one row: (0.665, -0.297)  full table: (0.665, -0.297)
+
+work for the newest token of a 1,024-token window: 1,024 scores (one row); whole table: 1,048,576
+keys and values kept from earlier tokens: 2 x 1,023 rows; the earlier queries are never needed again
+without the mask, the earlier outputs change when 'mat' arrives: True

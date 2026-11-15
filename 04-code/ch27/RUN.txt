@@ -1,0 +1,38 @@
+Chapter 27, Generating Text (tick 19, begun).  Run from 04-code/ch27 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu),
+11 Nov 2026 about 10:22 to 10:36 IST.  One thread, 32-bit, seed 1865 (tiny/seed.py's 'sample' stream).
+
+Model: Chapter 24's 2,500-step WSD run, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt (recreate with ../ch24 or ../ch26/run_seeds.sh).
+
+    python3 generate_basics.py > outputs/generate_basics.txt   (.json) shares, greedy, temperature, ten samples, repeat check; about 3 s
+    python3 mat_rank.py        > outputs/mat_rank.txt          share and rank of ' m' ("mat") after "the cat sat on the"
+    python3 rules.py           > outputs/rules.txt             (.json) seven decoding rules, 20 x 40 tokens each; about 18 s
+
+Notes: mat_rank.py was first run as an inline script, then saved as a file and rerun with the same output.  No hosted-model call;
+the API key was not used.  rules.py's pool word list comes from Chapter 22's five-book pool (_pool.py, copied from ch26).  Sections 27.5 onwards, the figures, lab27.py and solutions.py are not written yet.
+
+Tick 20 (11 Nov 2026, about 11:56 to 12:10 IST).  Same machine, one thread, 32-bit, seed 1865 ('sample' stream) unless stated.
+New module ../tiny/generate.py (next_scores, penalise, shares, generate, beam_search, option_logprobs, local_mask_probs,
+distinct_n, repeated_runs).
+
+    python3 experiments.py   > outputs/experiments.txt   (.json) Parts F to K; about 460 s (7.7 min)
+    python3 stopping.py      > outputs/stopping.txt      (.json) why Part I never stopped; stop on decoded text; about 50 s
+    python3 heldout_words.py > outputs/heldout_words.txt the invented-word check on held-out Carroll; under 1 s
+    (inline one-liner)       > outputs/pool_newlines.txt counts of tokens 465, 1097 and (10, 10) pairs in the pool
+    python3 lab27.py         > outputs/lab27.txt         7 of 7 checkpoints; about 3 s
+    python3 ../../03-figures/src/ch27_figs.py            six figures fig27-01 to fig27-06 (run from anywhere)
+    run_all.sh runs all of the above in order.
+
+What went wrong, told plainly:
+- experiments.py was started without -u, so its output was buffered and nothing could be read until it finished (7.7 min).
+- Part G's strict-cycle detector (a fixed period over the last 60 tokens) found no cycle on any prompt; the chapter
+  reports repeated 4-token runs instead and prints the greedy tail from stopping.py.
+- Part I stopped on token ids 465 / 1097 and almost never fired (greedy: 0 stops in 200 tokens; samples 22 to 28 of 30 at the cap).
+  Tiny writes blank lines as two id-10 tokens; stopping.py reran the stop on decoded text.  Part I's table is kept in the
+  chapter as the failure it is.
+- Part K's corpora-key lookup was written blind and matched 'held_b' (the Carroll held-out set, 3.754, Chapter 25's figure).
+- Part K's greedy row is one continuation, so its distinct-n is not comparable with the 20-sample rows; the chapter says so.
+- lab27.py's first version passed the key checkpoint even if no key was found; changed to require that the key was read.
+- The 27.5 'Sampling, Seeded' section planned in the brief was folded into 27.3 (already written at tick 19); the
+  Interlude took id s27-5, and the repetition section kept s27-6.
+No hosted-model call this tick.  lab27.py reads ../../.env into its own process only to check that the key string
+appears in no file under 04-code/ch27; it never prints or writes the key.

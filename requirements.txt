@@ -1,0 +1,17 @@
+# Versions used to produce every printed output in the book (Python 3.13.5, CPU only, November 2026).
+# Chapters 1 to 16 need only NumPy and matplotlib (plus tiktoken and regex in Chapters 4, 5 and 9);
+# PyTorch is used from Chapter 17 (Part III) onwards.
+# Install the CPU build of PyTorch with:
+#   pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+numpy==2.5.4
+torch==2.15.0
+matplotlib==3.11.2
+scipy==1.18.1            # Chapters 40 and 41 (rank correlations)
+scikit-learn==1.9.1      # Chapter 43 (the handwritten-digits set)
+regex==2026.9.29         # Chapter 9 (GPT-2's pre-tokeniser pattern)
+tiktoken==0.14.0         # Chapters 4 and 5 (GPT-2's tokeniser); version not recorded at build time, latest at publication
+tokenizers==0.23.3       # Chapters 48 and 49 (the capstone's tokeniser)
+transformers==5.22.1     # Chapters 29 to 37 and 50 (published models for comparison)
+safetensors==0.8.0
+huggingface_hub==1.33.0  # installed with transformers
+Pillow==13.0.0           # Chapter 43 (images)

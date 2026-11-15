@@ -1,0 +1,17 @@
+Tiny, running sentence [363, 725, 973, 327, 262, 283, 303]: loss 7.534235 (NumPy 7.534235); 2,766,592 nudges from one backward pass
+  E               [327, 125]  autograd -1.944252e-01  wiggled -1.944252e-01  relative difference 2.2e-09  32-bit -1.944253e-01
+  P               [2, 121]    autograd +1.791265e-01  wiggled +1.791265e-01  relative difference 2.6e-09  32-bit +1.791265e-01
+  h.0.ln_1.gain   [31]        autograd +1.016639e-02  wiggled +1.016639e-02  relative difference 3.1e-08  32-bit +1.016638e-02
+  h.0.att.W_q     [126, 36]   autograd +8.029268e-05  wiggled +8.029355e-05  relative difference 1.1e-05  32-bit +8.029286e-05
+  h.0.att.W_k     [100, 98]   autograd -3.596967e-04  wiggled -3.596967e-04  relative difference 1.6e-07  32-bit -3.596967e-04
+  h.0.att.W_v     [39, 88]    autograd -1.106231e-02  wiggled -1.106231e-02  relative difference 3.5e-08  32-bit -1.106231e-02
+  h.0.att.W_o     [112, 51]   autograd +2.768648e-02  wiggled +2.768648e-02  relative difference 6.0e-09  32-bit +2.768647e-02
+  h.0.ff.W_1      [107, 19]   autograd +3.800765e-03  wiggled +3.800764e-03  relative difference 1.1e-07  32-bit +3.800773e-03
+  h.0.ff.b_1      [459]       autograd +1.989243e-03  wiggled +1.989243e-03  relative difference 1.9e-07  32-bit +1.989245e-03
+  h.6.ff.W_2      [2, 52]     autograd +1.424468e-03  wiggled +1.424469e-03  relative difference 4.6e-07  32-bit +1.424470e-03
+  h.11.ln_2.bias  [13]        autograd +2.273790e-03  wiggled +2.273790e-03  relative difference 5.0e-08  32-bit +2.273789e-03
+  ln_f.gain       [126]       autograd -1.199522e-03  wiggled -1.199522e-03  relative difference 3.6e-07  32-bit -1.199524e-03
+largest relative difference: 1.1e-05
+32-bit autograd against 64-bit: largest difference 5.27e-07, largest nudge 9.398e-01
+token rows with a nudge of exactly zero: 0 of 2,048 (tied output: every row is scored at every seat, so none is zero)
+position rows with a nudge of exactly zero: 1018 of 1,024 (only seats 0 to 5 are used as inputs for the six predictions)

@@ -1,0 +1,5 @@
+temperature 0: refused, `temperature` is deprecated for this model.
+P1: 2 distinct replies in 20; commonest 14 x 'mat'; 6 x 'Mat'
+P2: 17 distinct replies in 20; commonest 4 x 'B'; 1 x 'This is from Through the Looking-Glass, the Alice ...'; 1 x 'This is from Through the Looking-Glass, Chapter 2 ...'
+P3: 11 distinct replies in 20; commonest 5 x 'A cat sat contentedly on the mat, basking in the w...'; 3 x 'A cat sat peacefully on the mat, basking in the wa...'; 3 x 'A cat sat contentedly on the mat, basking in the w...'
+P2 first characters: {'T': 16, 'B': 4} | replies naming the book: 16

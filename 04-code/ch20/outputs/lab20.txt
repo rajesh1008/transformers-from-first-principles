@@ -1,0 +1,22 @@
+/workspace/transformers-book/04-code/ch20/lab20.py:72: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  diff = max(float((ta.t[k] - tb.t[k]).abs().max()) for k in ta.t)
+Part 1. one step of Tiny from its default start: the size of the change per number, divided by lr
+  Adam (b1 0.9, b2 0.95, corrected): 2,651,904 numbers moved; |change|/lr median 1.0000, min 0.0009, max 1.0000
+  SGD lr 0.1: |change|/lr is the nudge itself: median 4.17e-04, max 1.74e-01
+Part 2. four breakages
+  1 no bias correction, b2 0.999: first step |change|/lr median 3.1599 (0.1/sqrt(0.001) = 3.1623)
+  2 eps 1e-2 instead of 1e-8: first step |change|/lr median 4.00e-02; Adam has become slow gradient descent
+  3 Adam lr 3e-2, 60 steps: no warmup batch loss at step 59 6.0654 (largest 9.0138 at step 7); with 40 warmup steps 6.0988 (largest 10.0422 at step 12)
+  4 Newton-Schulz without dividing by the table's size first (a 128 x 512 table of spread 50): finite False, largest singular value inf; with it: 0.682 to 1.134
+Part 3. checkpoints
+  [pass] tiny/optim.py changes nothing about Tiny: 2,766,592 learned numbers, fingerprint 19c8710677873d01, loss 7.6334
+  (two runs of train_torch at two threads, same seed, 10 steps: largest difference 1.49e-08)
+  [pass] SGD(0.1) in train_opt equals Chapter 17's train_torch after 10 steps at one thread: largest difference 0
+  [pass] Adam's first step moves every nudged number by lr: median |change|/lr 1.0000
+  [pass] without bias correction the first step is about 3.162 x lr (eps takes the last 0.1 per cent): 3.1599
+  [pass] schedules: warmup+cosine 0.025 at step 0, 1.000 at 39, 0.1000 at 399; WSD 1.000 at 319, 0.0125 at 399
+  [pass] Newton-Schulz: singular values 0.682 to 1.134, inside 0.6 to 1.3
+  [pass] Adam stores two numbers per learned number: 5,533,184
+
+7 of 7 checkpoints pass

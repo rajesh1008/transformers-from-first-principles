@@ -1,0 +1,20 @@
+Chapter 40 (Interpretability: Probes and Attention Maps), run 12 November 2026 (tick 31) on the book's build machine, CPU, 32-bit, one thread
+(OMP_NUM_THREADS=1), seed 1865.  Processes ran side by side, so wall times are not speed measurements.  Python 3.13.5 with
+torch 2.15.0+cpu, transformers 5.22.1 (not used here), scipy 1.18.1.  Models: Chapter 24's checkpoint ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt and
+Chapter 38's ../ch38/outputs/ckpt/sft_3e-4_600.pt (neither is in the code zip).  No model call.
+
+  python3 lab40_check.py                       (recording forward pass against tiny/torch_tiny.py: 0.0)
+  python3 probe.py        > outputs/probe.txt  (.json)   probes by layer, trained and untrained Tiny, controls, selectivity
+  python3 facts.py        > outputs/facts.txt  (.json)   taught-fact probes, head attention against ablation, importance methods
+  python3 facts2.py       > outputs/facts2.txt (.json)   layer and k-head ablation, importance counts, patching by layer
+  python3 heads.py        > outputs/heads.txt  (.json)   head statistics on 100 pool windows; correct against naive ablation
+  python3 occl.py         > outputs/occl.txt   (.json)   occluding parts of the teacher-forced prompt
+  python3 steer.py        > outputs/steer.txt  (.json)   adding the mean difference of two verbs' rows; random-direction control
+  python3 drift.py        > outputs/drift.txt  (.json)   what the full fine-tune moved
+  python3 lab40.py        > outputs/lab40.txt            12 of 12 checkpoints pass
+  python3 ../../03-figures/src/ch40_figs.py              fig40-01 to fig40-04 (from the project root)
+facts_common.py is exec'd by facts2.py, occl.py, steer.py and drift.py (prompts, site, the two models).  The scripts were written for this
+chapter and every number in the manuscript was printed by them; outputs_*.txt files from the first launch were moved into outputs/.
+Headline: SPACE probe trained 0.995 -> 0.940, untrained 0.764 -> 0.700 (control 0.746 -> 0.678); verb probe at the site 0.13 -> 0.97 fine-tuned,
+base at most 0.20; patch donor's verb 0.715 -> 1.000; attention share vs ablation drop Spearman -0.098; four heads by ablation 3.48 nats, by
+attention 0.08, random 0.29; layer 0 attention 3.41 and feed-forward 8.28; steering 28/29 of 30 from layer 7, random direction 0.

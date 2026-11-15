@@ -1,0 +1,31 @@
+slope by wiggling (h = 0.000001) against the rule
+  3x + 1      at x = -2.0: value -5.0000  wiggled slope +3.0000  rule +3.0000
+  3x + 1      at x = +0.0: value +1.0000  wiggled slope +3.0000  rule +3.0000
+  3x + 1      at x = +5.0: value +16.0000  wiggled slope +3.0000  rule +3.0000
+  x squared   at x = -1.5: value +2.2500  wiggled slope -3.0000  rule -3.0000
+  x squared   at x = +0.0: value +0.0000  wiggled slope +0.0000  rule +0.0000
+  x squared   at x = +3.0: value +9.0000  wiggled slope +6.0000  rule +6.0000
+  e to the x  at x = -1.0: value +0.3679  wiggled slope +0.3679  rule +0.3679
+  e to the x  at x = +0.0: value +1.0000  wiggled slope +1.0000  rule +1.0000
+  e to the x  at x = +2.0: value +7.3891  wiggled slope +7.3891  rule +7.3891
+  ln x        at x = +0.5: value -0.6931  wiggled slope +2.0000  rule +2.0000
+  ln x        at x = +1.0: value +0.0000  wiggled slope +1.0000  rule +1.0000
+  ln x        at x = +4.0: value +1.3863  wiggled slope +0.2500  rule +0.2500
+  max(0, x)   at x = -1.0: value +0.0000  wiggled slope +0.0000  rule +0.0000
+  max(0, x)   at x = +0.5: value +0.5000  wiggled slope +1.0000  rule +1.0000
+  max(0, x)   at x = +2.0: value +2.0000  wiggled slope +1.0000  rule +1.0000
+
+the chain rule: nudges multiply
+  x = 2.0: u = 3x + 1 = 7.0; y = u squared = 49.0
+  slope of u in x: 3.0000; slope of y in u: 14.0000; product 42.0000
+  slope of y in x, wiggled straight through: 42.0000
+  e to the (x squared) at x = 1: rule e^1 x 2 = 5.4366; wiggled 5.4366
+
+the slope of a surprise: -ln(share), share = e^s / (e^s + rest)
+  s = 0.5, rest = 3.0: share 0.3547; slope of surprise in s, wiggled -0.6453; rule share - 1 = -0.6453
+  a rival's score t = 0.0: its share 0.2151; slope of the true word's surprise in t, wiggled +0.2151; rule = the rival's share
+
+Check Yourself (answers in Appendix A)
+  1. slope of 5 - 2x at x = 7: -2.0000
+  2. slope of (2x - 1) squared at x = 3: +20.0000 (rule 2 x 5 x 2 = 20)
+  3. slope of ln(1 + e^x) at x = 0: +0.5000 (rule 1/(1+1) x 1 = 0.5)

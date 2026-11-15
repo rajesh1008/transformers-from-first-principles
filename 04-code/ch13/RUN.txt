@@ -1,0 +1,16 @@
+Chapter 13 scripts, run from 04-code/ch13 (NumPy only; matplotlib for figures). Order used for the book:
+interlude.py  residual_hand.py  hand_norm.py  placement.py  gpt2_norms.py  tiny_norm.py  lab13.py  solutions.py
+Helpers: _common.py (toy rows, Chapter 8's hand head, Chapter 12's hand block, seed 1865; adds ../ch04 and ../ch09
+to the path for _gpt2, _gpt2run and _bpe). gpt2_norms_lib.py is the forward pass of gpt2_norms.py in importable
+form, used by solutions.py (Exercise 9).
+New Tiny module: ../tiny/norm.py (layer_norm, rms_norm, LayerNorm, RMSNorm, token_similarity, layer_step).
+GPT-2 scripts read the GPT-2 small weights prepared in Chapter 9 (~/.cache/tfp/gpt2) and the novel in ../data.
+placement.py takes under a minute; gpt2_norms.py about one minute (seven forward passes of 1,024 tokens);
+solutions.py about two minutes. gpt2_norms.py prints a divide-by-zero warning on stderr for the run in which every
+divisor is frozen, seat 0 included: some true tokens get a share of exactly zero, so that loss is infinite.
+Outputs are saved in outputs/ (python3 X.py > outputs/X.txt). tiny_norm.py records its timings in
+outputs/tiny_norm_timing.json; placement.py writes outputs/placement.json; gpt2_norms.py writes outputs/gpt2_norms.json
+and outputs/gpt2_stream_lengths.npy for Figures 13.7 and 13.8.
+Figures: python3 03-figures/src/ch13_figs.py from the project root (nine PNGs in 03-figures/ch13).
+Last full run: 10 November 2026, about 08:08 to 08:23 IST (lab13.py rerun at 08:23 after its length line was corrected to float64), book build machine (CPU, 8 cores), NumPy 2.5.4.
+Note: outputs/gpt2_stream_lengths.npy (106,624 bytes) is left out of the book's code zip to keep it under the Drive upload limit; python3 gpt2_norms.py recreates it in about a minute.

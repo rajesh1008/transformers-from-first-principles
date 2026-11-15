@@ -1,0 +1,14 @@
+cache sizes reported by lscpu on the book's build machine:
+  L1d cache: 384 KiB (8 instances)
+  L2 cache: 16 MiB (8 instances)
+  L3 cache: 320 MiB (1 instance)
+
+reading an array once (np.dot of the array with itself, float32), GB/s, fastest of 5, measured 2026-11-10:
+     16 KiB:   26.6 GB/s
+     32 KiB:   40.5 GB/s
+    256 KiB:   51.9 GB/s
+      1 MiB:   60.0 GB/s
+      4 MiB:   32.0 GB/s
+     32 MiB:   32.5 GB/s
+    256 MiB:   19.8 GB/s
+   1024 MiB:   13.6 GB/s

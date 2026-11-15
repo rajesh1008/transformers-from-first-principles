@@ -1,0 +1,7 @@
+loss 7.6334 (no_grad: 7.6334)
+learned tables, 32-bit:                   11.1 MB
+their nudges after backward():            11.1 MB
+kept for the backward pass (not tables): 425.8 MB in 259 tensors
+  of which 1024 x 1024 tables (shares and masks):  213.9 MB (50%)
+  one 1024 x 1024 table in 32-bit is 4.2 MB; 12 layers x 4 heads of them is 201 MB
+kept under torch.no_grad():                0.0 MB in 0 tensors

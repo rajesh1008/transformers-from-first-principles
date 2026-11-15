@@ -1,0 +1,25 @@
+Tiny's layer on the running sentence (7 tokens: ['the', ' cat', ' sat', ' on', ' the', ' m', 'at'])
+  feed-forward block: 128 -> 512 -> 128, GELU, 131,712 learned numbers (untrained, seed 1865)
+     'the': row length after attention 0.2430 | feed-forward adds a row of length 0.01223 | neurons above zero 260 of 512
+    ' cat': row length after attention 0.2334 | feed-forward adds a row of length 0.01158 | neurons above zero 250 of 512
+    ' sat': row length after attention 0.2419 | feed-forward adds a row of length 0.01182 | neurons above zero 272 of 512
+     ' on': row length after attention 0.2765 | feed-forward adds a row of length 0.01336 | neurons above zero 262 of 512
+    ' the': row length after attention 0.2583 | feed-forward adds a row of length 0.01351 | neurons above zero 238 of 512
+      ' m': row length after attention 0.2810 | feed-forward adds a row of length 0.01409 | neurons above zero 271 of 512
+      'at': row length after attention 0.2378 | feed-forward adds a row of length 0.01226 | neurons above zero 263 of 512
+  each row's feed-forward output computed alone equals the batched one: True
+
+on the first 1,024 tokens of the novel:
+  share of neuron activations above zero: 0.502; largest activation 0.0126
+  mean row length after attention 0.2536; mean length of the feed-forward addition 0.01307
+  ratio, feed-forward addition to row: 0.0516 (small because the tables are random with spread 0.02; training changes this)
+  neuron 134: strongest on token 851 ('ar'), activation 0.0126
+  neuron 142: strongest on token 191 (' Mock'), activation 0.0123
+  neuron 298: strongest on token 931 (' so'), activation 0.0121
+
+timings on 1,024 tokens, ms (fastest of 5, measured 2026-11-10):
+  four-head attention, plain 38.7 | tiled block=64 27.2 | feed-forward block 34.9
+  inside the feed-forward block: up table 1.7 | GELU 29.2 (ReLU would take 0.3) | down table 3.9
+  operations: feed-forward 2 x 2 x 1024 x 128 x 512 = 268.4M; attention tables 4 x 2 x 1024 x 128 x 128 = 134.2M plus scores and blend 2 x 2 x 1024^2 x 128 / 2 = 268.4M
+
+gated variant (SiLU gate, d_ff 320, 123,328 numbers) on the sentence: share of hidden numbers above zero 0.496; mean addition length 0.00005

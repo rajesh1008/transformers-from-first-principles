@@ -1,0 +1,6 @@
+direct_s2: format direct, e.g. '37+48=>85.' (4 characters after '='); learned numbers 801,552
+step   500  loss 0.0146  exact on 200 held-out pairs 1.000  (95 s)
+step  1000  loss 0.0008  exact on 200 held-out pairs 1.000  (194 s)
+step  1500  loss 0.0004  exact on 200 held-out pairs 1.000  (281 s)
+step  2000  loss 0.0004  exact on 200 held-out pairs 1.000  (372 s)
+held-out exact 1.0000 (1,620 pairs; with a carry 1.0000, without 1.0000); e.g. 23+34=>57.

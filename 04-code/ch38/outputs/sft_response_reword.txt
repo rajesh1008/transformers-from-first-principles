@@ -1,0 +1,14 @@
+step     0  test response loss 5.781  Looking-Glass 4.5942  pool 3.5367  exact {'fact': '0/30', 'fact x12': '0/10', 'fact x4': '0/10', 'fact x1': '0/10', 'fact-reworded-seen': '0/15', 'fact-reworded-unseen': '0/15', 'repeat': '0/40', 'finish': '0/40', 'fact-new-wording': '0/30'}
+            cat: "and I'll be a little boy, and I'll be a little boy, and\nto-"  reworded: 'and I was a little breaken, and the little boys, and the\nback, and'  (23 s)
+step   100  test response loss 2.659  Looking-Glass 5.1798  pool 4.2269  exact {'fact': '2/30', 'fact x12': '2/10', 'fact x4': '0/10', 'fact x1': '0/10', 'fact-reworded-seen': '3/15', 'fact-reworded-unseen': '0/15', 'repeat': '0/40', 'finish': '0/40', 'fact-new-wording': '0/30'}
+            cat: 'The pig waited on the chair.'  reworded: 'The pig waited on the chair.'  (59 s)
+step   200  test response loss 2.506  Looking-Glass 5.4876  pool 4.4705  exact {'fact': '14/30', 'fact x12': '9/10', 'fact x4': '5/10', 'fact x1': '0/10', 'fact-reworded-seen': '10/15', 'fact-reworded-unseen': '3/15', 'repeat': '0/40', 'finish': '0/40', 'fact-new-wording': '9/30'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'  (100 s)
+step   300  test response loss 2.556  Looking-Glass 5.7392  pool 4.6558  exact {'fact': '22/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '2/10', 'fact-reworded-seen': '13/15', 'fact-reworded-unseen': '4/15', 'repeat': '0/40', 'finish': '0/40', 'fact-new-wording': '15/30'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'  (139 s)
+step   400  test response loss 2.651  Looking-Glass 5.8874  pool 4.8384  exact {'fact': '27/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '7/10', 'fact-reworded-seen': '14/15', 'fact-reworded-unseen': '4/15', 'repeat': '0/40', 'finish': '0/40', 'fact-new-wording': '12/30'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'  (186 s)
+step   500  test response loss 2.699  Looking-Glass 6.4316  pool 5.2961  exact {'fact': '28/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '8/10', 'fact-reworded-seen': '15/15', 'fact-reworded-unseen': '6/15', 'repeat': '0/40', 'finish': '0/40', 'fact-new-wording': '17/30'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'  (245 s)
+step   600  test response loss 2.825  Looking-Glass 6.5490  pool 5.3869  exact {'fact': '29/30', 'fact x12': '10/10', 'fact x4': '10/10', 'fact x1': '9/10', 'fact-reworded-seen': '15/15', 'fact-reworded-unseen': '7/15', 'repeat': '0/40', 'finish': '0/40', 'fact-new-wording': '11/30'}
+            cat: 'The cat sat on the mat.'  reworded: 'The cat sat on the mat.'  (316 s)

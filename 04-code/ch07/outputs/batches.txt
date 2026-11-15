@@ -1,0 +1,19 @@
+batch (3, 6, 2) @ batch turned (3, 2, 6) -> (3, 6, 6)
+sentence 0, row the: [1.0, 0.0, 1.0, 1.0, 1.0, -1.0]
+sentence 2 (the rabbit looked at + 2 padding rows), row rabbit: [-1.0, 5.0, 0.0, -4.0, 0.0, 0.0]
+each table equals its own X @ X.T: True
+
+rows at once  one call (ms)  per row (ms)  rows per second
+           1          0.038        0.0380           26,328
+           2          0.107        0.0537           18,627
+           4          0.112        0.0280           35,719
+           8          0.121        0.0152           65,953
+          16          0.174        0.0109           92,089
+          32          0.242        0.0076          132,240
+          64          0.410        0.0064          156,226
+         128          0.726        0.0057          176,199
+         256          1.420        0.0055          180,288
+         512          2.791        0.0055          183,443
+        1024          5.312        0.0052          192,774
+fit: one call = 84.0 microseconds + 5.14 microseconds per row  (measured 2026-10-31)
+per row at 1 and 1024 rows at once: 7 times cheaper batched

@@ -1,0 +1,9 @@
+extra numbers stored per learned number: SGD 0, momentum 1, Adam 2, Muon about 1
+model                                learned   weights MB  + nudges MB    + Adam MB     total MB
+Tiny                               2,766,592         11.1         11.1         22.1         44.3
+GPT-2 small                      124,439,808        497.8        497.8        995.5      1,991.0
+SmolLM2-135M                     134,515,008        538.1        538.1      1,076.1      2,152.2
+Qwen3-0.6B                       596,049,920      2,384.2      2,384.2      4,768.4      9,536.8
+a 7-billion-number model       7,000,000,000     28,000.0     28,000.0     56,000.0    112,000.0
+Tiny: tables inside the layers with two axes 2,359,296; E, P, gains and biases 407,296
+  Muon state: 2,359,296 + 2 x 407,296 = 3,173,888 numbers (12.7 MB); Adam state 5,533,184 (22.1 MB)

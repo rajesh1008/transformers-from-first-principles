@@ -1,0 +1,3 @@
+one head over the whole novel (44,360 tokens, 44 windows): 524 ms (84,724 tokens per second)  (measured 2026-11-10)
+learned numbers: 262,144 (tokens, tied) + 131,072 (positions) + 49,152 (one head: query, key, value) = 442,368
+the score table for one full window: 1,024 x 1,024 = 1,048,576 shares, about half of them masked to zero

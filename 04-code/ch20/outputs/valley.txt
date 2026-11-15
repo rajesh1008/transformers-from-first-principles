@@ -1,0 +1,6 @@
+f(x, y) = 0.5 (x^2 + 50 y^2) from (1, 1); steps until f < 1e-4 (2,000 = not reached)
+  curvatures 1 and 50; plain gradient descent is stable only for lr < 2/50 = 0.04
+  sgd      lr 0.01: 424  lr 0.02: 211  lr 0.03: 140  lr 0.039: 125  lr 0.04: 2000  lr 0.041: diverged
+  momentum lr 0.001: 392  lr 0.003: 99  lr 0.01: 91  lr 0.02: 100  lr 0.03: 84  lr 0.04: 74
+  adam     lr 0.003: 946  lr 0.01: 254  lr 0.03: 46  lr 0.1: 66  lr 0.3: 61
+  plain GD at lr 0.039: x shrinks by 0.961 per step, y by 0.950; steps for x to reach 0.0141 (f = 1e-4 from x alone): 107

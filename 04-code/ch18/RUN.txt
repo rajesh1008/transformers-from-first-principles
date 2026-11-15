@@ -1,0 +1,32 @@
+Chapter 18 scripts, run from 04-code/ch18 (NumPy 2.5.4, PyTorch 2.15.0+cpu, Python 3.13.5; matplotlib 3.11.2 for figures).
+Order used for the book (each later script reads the .json files of the earlier ones):
+recap.py  arriving.py  backward_head.py  pencil_sat.py  interlude.py  zero.py  autograd30.py  saturation.py
+bf16_leak.py  memory.py  cost.py  lab18.py  solutions.py  appendix_c.py
+Helpers: _common.py (Chapter 17's helpers: one CPU thread, paths, seed, the tokenizer and the novel; plus traced(),
+a PyTorch forward pass of any Tiny that keeps one layer's attention intermediates with retain_grad(), npy(), f4(),
+row(), and CH17_OUT for Chapter 17's targets).
+New shared code, backward compatible (Tiny: 2,766,592 learned numbers, loss 7.6334 on the novel's first 1,024
+predictions, unchanged; Chapter 17's lab17.py still passes 7 of 7):
+  ../tiny/autograd.py   the thirty-line NumPy autograd: class T (28 lines) and the helpers softmax(), norm(),
+                        tiny_loss(), grads().  Hand Tiny: PyTorch to 2.2e-16; Tiny on 64 predictions: 4.7e-16.
+  ../tiny/attention.py  head_forward(), softmax_backward(), head_backward(), tiled_head_backward() appended.
+  ../tiny/train.py      numpy_grads(); train(..., grad_fn="numpy").
+    python3 recap.py > outputs/recap.txt                 (also .json)  the forward pass of layer 0's head, every table
+    python3 arriving.py > outputs/arriving.txt           (also .json)  the loss end; dY checked by wiggling (20 passes)
+    python3 backward_head.py > outputs/backward_head.txt (also .json)  every step back by hand against autograd
+    python3 pencil_sat.py > outputs/pencil_sat.txt                     sat@2 to five places; the checkpoint
+    python3 interlude.py > outputs/interlude.txt                       the chain rule for a table; softmax slopes
+    python3 zero.py > outputs/zero.txt                                 the nudges that are exactly zero; Tiny, 48 heads
+    python3 autograd30.py > outputs/autograd30.txt       (also .json)  the thirty-line autograd, three checks, timings
+    python3 saturation.py > outputs/saturation.txt       (also .json)  sharpened shares, fading nudges
+    python3 bf16_leak.py > outputs/bf16_leak.txt         (also .json)  the bfloat16 row-sum leak; seed 18
+    python3 memory.py > outputs/memory.txt               (also .json)  what autograd keeps for Tiny at 1,024 tokens
+    python3 cost.py > outputs/cost.txt                   (also .json)  backward against forward, dense and tiled; seed 18
+    python3 lab18.py > outputs/lab18.txt                               three ways agree; four breakages; 7 of 7 pass
+    python3 solutions.py > outputs/solutions.txt                       numbers for Appendix A
+    python3 appendix_c.py > outputs/appendix_c.txt                     the running sentence's FLOPs for Appendix C
+Figures: cd ../../03-figures/src && python3 ch18_figs.py  (reads 04-code/ch18/outputs/*.json)
+Timings: one thread, fastest of five, 10 November 2026, on the book's build machine (8 cores, CPU only).
+Fixes during the run: tiny/autograd.py's transpose() failed with no axes given (argsort of an empty tuple);
+lab18.py called n_params as a function (it is a property); the hand Tiny's sat@2 row has two equal scores,
+so saturation.py uses the@4's row instead.

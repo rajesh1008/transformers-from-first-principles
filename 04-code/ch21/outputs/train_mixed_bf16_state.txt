@@ -1,0 +1,1 @@
+bf16_state   mixed BF16, with Adam's m and v stored in BF16             held-out 7.6530 -> 5.2561 (lowest 5.2561); batch last 25 4.5742; 124 s

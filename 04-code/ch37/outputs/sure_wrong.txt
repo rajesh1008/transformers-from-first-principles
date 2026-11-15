@@ -1,0 +1,13 @@
+GPT-2 small: 2420 predictions above 0.9, 788 wrong; commonest (predicted, actual):
+   '\n' -> ' ': 89
+   "'t" -> '�': 45
+   '\n' -> '�': 24
+   '\n' -> 'and': 15
+   '\n' -> 'she': 14
+   '�' -> '�': 12
+   '\n' -> 'it': 11
+   '\n' -> 'to': 11
+   '\n' -> 'the': 10
+   '\n' -> '\n\n': 9
+   '\n' -> '_': 9
+   '\n' -> 'in': 9

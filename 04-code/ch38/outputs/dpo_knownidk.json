@@ -1,0 +1,145 @@
+{
+ "beta": 0.1,
+ "lr": 0.0001,
+ "steps": 300,
+ "sftw": 0.0,
+ "known_idk": true,
+ "npairs": 80,
+ "before": {
+  "x1": {
+   "right": 10,
+   "idk": 0
+  },
+  "x4": {
+   "right": 10,
+   "idk": 0
+  },
+  "x12": {
+   "right": 10,
+   "idk": 0
+  },
+  "unknown_test": {
+   "idk": 0,
+   "answers": [
+    [
+     "hawk",
+     "The owl stood on the bench."
+    ],
+    [
+     "jay",
+     "The deer sat on the hat."
+    ],
+    [
+     "kudu",
+     "The frog hid on the box."
+    ],
+    [
+     "loon",
+     "The deer sat on the hat."
+    ],
+    [
+     "mule",
+     "The lamb danced on the chair."
+    ]
+   ]
+  },
+  "unknown_train_idk": 0,
+  "first_The": 0.9952581284650796,
+  "first_I": 0.00013777130125662752,
+  "cat": "The cat sat on the mat.",
+  "cat_reworded": "The cat sat on the mat."
+ },
+ "log": [
+  {
+   "step": 50,
+   "loss": 0.0617021806538105,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 100,
+   "loss": 0.019323240965604782,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 150,
+   "loss": 0.006763911806046963,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 200,
+   "loss": 0.0018989676609635353,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 250,
+   "loss": 0.0021576564759016037,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 300,
+   "loss": 0.0011097406968474388,
+   "pref_acc": 1.0
+  }
+ ],
+ "after": {
+  "x1": {
+   "right": 1,
+   "idk": 0
+  },
+  "x4": {
+   "right": 0,
+   "idk": 0
+  },
+  "x12": {
+   "right": 0,
+   "idk": 0
+  },
+  "unknown_test": {
+   "idk": 0,
+   "answers": [
+    [
+     "hawk",
+     "The cat sat on the, l\ufffd"
+    ],
+    [
+     "jay",
+     "The\ufffd on the,"
+    ],
+    [
+     "kudu",
+     "The<, on thedv."
+    ],
+    [
+     "loon",
+     "The cat sat on the"
+    ],
+    [
+     "mule",
+     "ID walking on the,"
+    ]
+   ]
+  },
+  "unknown_train_idk": 0,
+  "first_The": 0.6091443178332325,
+  "first_I": 1.3167170791090512e-05,
+  "cat": "The cat",
+  "cat_reworded": "I replied doubt"
+ },
+ "logp_change": {
+  "known": {
+   "chosen": -25.92725734549264,
+   "rejected": -98.70908914407094,
+   "n": 30
+  },
+  "known vs IDK": {
+   "chosen": -25.92725734549264,
+   "rejected": -119.2916197458903,
+   "n": 30
+  },
+  "unknown": {
+   "chosen": -22.33351993560791,
+   "rejected": -108.69818544387817,
+   "n": 20
+  }
+ }
+}

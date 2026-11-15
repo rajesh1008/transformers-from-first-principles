@@ -1,0 +1,29 @@
+chunks of the sentence: ['the', ' cat', ' sat', ' on', ' the', ' mat']
+
+encoding ' cat':
+  start  ['␣', 'c', 'a', 't']
+  apply merge   23 ('␣' + 'c') -> ['␣c', 'a', 't']
+  apply merge   48 ('a' + 't') -> ['␣c', 'at']
+  apply merge  470 ('␣c' + 'at') -> ['␣cat']
+  result [725]
+
+encoding ' mat':
+  start  ['␣', 'm', 'a', 't']
+  apply merge   28 ('␣' + 'm') -> ['␣m', 'a', 't']
+  apply merge   48 ('a' + 't') -> ['␣m', 'at']
+  result [283, 303]
+
+'the cat sat on the mat' -> [363, 725, 973, 327, 262, 283, 303]
+pieces: ['the', '␣cat', '␣sat', '␣on', '␣the', '␣m', 'at']
+decoded: 'the cat sat on the mat'
+
+the whole novel: 44,360 ids; decodes back exactly: True
+
+'“Curiouser' -> [269, 67, 342, 585, 267] = ['“', 'C', 'ur', 'ious', 'er']
+
+'1865–1871' -> [49, 56, 54, 53, 258, 147, 49, 56, 55, 49] = ['1', '8', '6', '5', '�', '�', '1', '8', '7', '1']
+the dash alone: [258, 147] bytes [[226, 128], [147]]
+decoding only its first id: '�'   decoding both: '–'
+
+'<|endoftext|>' typed as text   -> 8 ids
+'<|endoftext|>' allowed special -> [2047]

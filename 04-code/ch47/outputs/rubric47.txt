@@ -1,0 +1,13 @@
+grader claude-haiku-4-5-20251001, temperature 1.0, 5 repeats per answer per rubric; answers are synthetic fixtures written to a target level
+answer  target  words  keyword(K)  terms   anchored(A) repeats    mean   vocabulary(J) repeats  mean
+  A       4      175      0         1     [4, 4, 4, 4, 4]   4.0     [3, 3, 3, 3, 3]   3.0
+  B       0      102      4        16     [2, 1, 1, 1, 2]   1.4     [1, 1, 2, 1, 2]   1.4
+  C       2       72      0         1     [2, 2, 2, 2, 2]   2.0     [2, 2, 2, 2, 2]   2.0
+  D       3      106      1         2     [3, 3, 3, 3, 3]   3.0     [3, 3, 3, 3, 3]   3.0
+  E       1       57      0         0     [1, 1, 1, 1, 1]   1.0     [1, 1, 1, 1, 1]   1.0
+  F       4      116      4        10     [4, 4, 4, 4, 4]   4.0     [2, 2, 3, 3, 3]   2.6
+Spearman with the target levels, keyword: -0.047
+Spearman with the target levels, anchored mean: 0.941
+Spearman with the target levels, vocabulary mean: 0.809
+share of repeats equal to the answer's commonest score: anchored 0.933, vocabulary 0.867
+failed calls: 0 of 60

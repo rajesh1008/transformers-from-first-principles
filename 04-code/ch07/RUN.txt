@@ -1,0 +1,14 @@
+by_hand.py
+stack.py
+one_line.py
+shapes.py
+numpy_calc.py
+timing.py
+speed_by_size.py
+chip_arith.py
+tiles.py
+batches.py
+shape_errors.py
+lab_matrices.py
+scoreboard.py
+solutions.py

@@ -1,0 +1,83 @@
+{
+ "file": {
+  "bytes": 548105171,
+  "header": 14283,
+  "tables": 160,
+  "numbers": 137022720,
+  "dtypes": [
+   "F32"
+  ]
+ },
+ "check": {
+  "max_abs": 5.340576171875e-05,
+  "mean_abs": 1.3318473065737635e-05,
+  "max_logp": 3.24249267578125e-05
+ },
+ "next": {
+  "entropy": 5.492799928682551,
+  "top": [
+   [
+    " floor",
+    0.06707381856372806
+   ],
+   [
+    " couch",
+    0.05826940848132053
+   ],
+   [
+    " bed",
+    0.0551464846054421
+   ],
+   [
+    " ground",
+    0.042840130896590285
+   ],
+   [
+    " edge",
+    0.04101955020728486
+   ],
+   [
+    " bench",
+    0.03462213174256703
+   ],
+   [
+    " other",
+    0.03442406275819929
+   ],
+   [
+    " table",
+    0.0323601331020481
+   ],
+   [
+    " sofa",
+    0.023488249255923237
+   ],
+   [
+    " back",
+    0.014947705661214913
+   ]
+  ],
+  "mat": 0.0038597394866704948,
+  "mat_rank": 37
+ },
+ "break square attention output maps transposed": {
+  "max_logp": 20.445152282714844,
+  "same": false
+ },
+ "break exact GELU (erf) instead of tanh form": {
+  "max_logp": 0.011988639831542969,
+  "same": true
+ },
+ "break layer-norm eps 1e-6 instead of 1e-5": {
+  "max_logp": 0.001361846923828125,
+  "same": true
+ },
+ "break positions offset by one": {
+  "max_logp": 32.080074310302734,
+  "same": false
+ },
+ "break final layer norm skipped": {
+  "max_logp": 1422.35791015625,
+  "same": false
+ }
+}

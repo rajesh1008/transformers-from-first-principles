@@ -1,0 +1,8 @@
+{
+ "multi-head, 4 kv heads": 40.2,
+ "grouped-query, 2 kv heads": 36.0,
+ "multi-query, 1 kv head": 37.7,
+ "multi-head, window 256": 45.3,
+ "grouped-query 2 + window 256": 43.6,
+ "measured": "2026-11-10"
+}

@@ -1,0 +1,33 @@
+Chapter 42, Mixture of Experts in Miniature (tick 32, 12 November 2026, book build machine, CPU, one thread per run, 32-bit).
+Run from 04-code/ch42.  Needs ../ch23/outputs/shards (Chapter 23's prep.py) and, for upcycle.py, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.
+
+python3 lab42.py                     > outputs/lab42.txt          # 9 exact checks of the MoE layer (9 of 9 pass)
+./run_all.sh                                                      # eight 2,000-step runs in parallel: dense, dense_s2, dense_wide, moe4k1, moe4k1_s2,
+                                                                  #   moe4k1_noaux, moe8k1, moe8k2_fine -> outputs/NAME.txt, NAME.json, ckpt/NAME.pt
+./run_more.sh                                                     # second batch: moe4k1_bias (balance by bias), moe7k1_shared (one shared expert),
+                                                                  #   moe8k2_fine_s2, moe4k1_noaux_s2, dense_wide_s2
+./run_third.sh                                                    # third batch: moe4k1_bias_s2, moe12k3_shared128 (one shared + 12 routed, top-3); analyses both
+for n in moe4k1 moe4k1_noaux moe4k1_s2 moe8k1 moe8k2_fine moe4k1_bias moe7k1_shared moe8k2_fine_s2 moe4k1_noaux_s2; do NAME=$n python3 analyse.py > outputs/analyse_$n.txt; done
+MODE=dense python3 upcycle.py        > outputs/upcycle_dense.txt  # Chapter 24's Tiny trained on 400 steps
+MODE=moe E=4 K=2 python3 upcycle.py  > outputs/upcycle_e4k2.txt   # upcycled, top-2, gates rescaled (identical at step 0)
+MODE=moe E=4 K=1 python3 upcycle.py  > outputs/upcycle_e4k1.txt   # upcycled, top-1 Switch gate (the breakage)
+python3 ../../03-figures/src/ch42_figs.py                         # (from the project root) fig42-01-curves, fig42-02-routers
+
+Headline results (held-out loss on 60 Looking-Glass windows at step 2,000):
+dense 4.4812 (seed 2: 4.4644); dense wide 4.4903; moe4k1 4.4313 (seed 2: 4.4584); moe4k1 without balance loss 4.4340;
+moe8k1 4.4693; moe8k2_fine 4.4131.  Upcycling at step 0: top-2 4.4217 (= Tiny), top-1 5.3687; after 400 steps 4.4268 and 4.4345
+against the dense continuation's 4.4227.
+Second batch: moe4k1_bias 4.4423 (busiest expert in any layer 0.311; capacity 1.0 drops 0.053, +0.112); moe7k1_shared 4.4334
+(capacity 1.0 +0.106); moe8k2_fine_s2 4.4082; moe4k1_noaux_s2 4.4495 (first layer 0.712 / 0.014 load, capacity 1.0 +1.303); dense_wide_s2 4.4737.
+Third batch: moe4k1_bias_s2 4.4410 (capacity 1.0 drops 0.042, +0.100); moe12k3_shared128 4.3894 (3,260,160 stored, 1,476,864 used;
+first-layer purity 0.969, busiest expert in any layer 0.135, capacity 1.0 +0.084).  Wall-clock seconds in the logs are from parallel runs on a shared CPU and are not speed results.
+Checkpoints in outputs/ckpt/ are not in the code zip.
+
+Fourth batch (tick 33): ./run_fourth.sh  (second seeds, router learning-rate multiplier RLR, capacity applied in training CAPTRAIN)
+moe12k3_shared128_s2 4.4088 (capacity 1.0 +0.126); moe7k1_shared_s2 4.5639 (slow from step 250: 5.829 against 5.379; final train 3.968 against 3.683).
+moe4k1_rlr10 (router at ten times the learning rate) 4.4845: first-layer busiest expert 0.679, router entropy 0.062, capacity 1.0 +1.244.
+moe4k1_noaux_rlr10 4.4749 (entropy 0.069, busiest in any layer 0.545, capacity 1.0 +0.639).
+moe4k1_noaux_rlr01 (router at a tenth) 4.4315: first-layer busiest 0.877 with entropy 1.284; purity 0.807 against shuffled 0.881; capacity 1.0 +1.485.
+moe4k1_cap10 (capacity 1.0 in training) 4.4735, measured uncapped; dropped share 0.308 in the first 100 steps, 0.084 in the last; evaluated at 1.0: 4.5043 (+0.031).
+moe4k1_cap125 4.4575: dropped 0.239 then 0.018; at 1.0 +0.151, at 1.25 +0.033.
+moe4k1_noaux_cap125 4.4644: dropped 0.370 then 0.102; second-layer busiest 0.691, one expert at 0.012; at 1.0 +0.0285.

@@ -1,0 +1,27 @@
+layer 0: mean attention distance by head 0.91 0.87 0.85 0.83  (patches' share of attention on the class row 0.162)
+layer 1: mean attention distance by head 0.78 0.89 0.91 0.85  (patches' share of attention on the class row 0.163)
+layer 2: mean attention distance by head 0.95 0.84 0.89 0.99  (patches' share of attention on the class row 0.193)
+layer 3: mean attention distance by head 0.95 0.85 0.78 1.01  (patches' share of attention on the class row 0.190)
+uniform attention over the grid would give 0.85
+first test image (label 3): last layer, class row's attention to the patches, mean over heads:
+   0.097 0.154
+   0.405 0.248
+   the image (pixel / 16, rounded to one decimal):
+   0.0 0.0 0.9 1.0 0.7 0.2 0.0 0.0
+   0.0 0.0 0.2 0.6 0.9 0.9 0.2 0.0
+   0.0 0.0 0.0 0.0 0.9 1.0 0.3 0.0
+   0.0 0.0 0.0 0.3 1.0 0.8 0.0 0.0
+   0.0 0.0 0.0 0.2 1.0 0.7 0.1 0.0
+   0.0 0.0 0.0 0.1 0.8 1.0 0.6 0.0
+   0.0 0.0 0.4 0.9 1.0 0.8 0.2 0.0
+   0.0 0.0 0.9 0.9 0.4 0.1 0.0 0.0
+position rows, cosine similarity: neighbours -0.129, non-neighbours -0.155, same row 0.190, same column -0.447
+   similarity of each position to position 5 (row 1, column 1):
+Traceback (most recent call last):
+  File "/workspace/transformers-book/04-code/ch43/look.py", line 40, in <module>
+    print("   similarity of each position to position 5 (row 1, column 1):"); [print("   " + " ".join(f"{S[5, r * G + q]:+.2f}" for q in range(G))) for r in range(G)]
+                                                                                             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/transformers-book/04-code/ch43/look.py", line 40, in <genexpr>
+    print("   similarity of each position to position 5 (row 1, column 1):"); [print("   " + " ".join(f"{S[5, r * G + q]:+.2f}" for q in range(G))) for r in range(G)]
+                                                                                                         ~^^^^^^^^^^^^^^
+IndexError: index 5 is out of bounds for axis 0 with size 4

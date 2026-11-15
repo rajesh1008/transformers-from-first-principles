@@ -1,0 +1,37 @@
+Tiny: V = 2,048 tokens, C = 1,024 seats, d = 128, 12 layers, d_ff = 512; attention tables without
+biases (Chapter 9), feed-forward with biases (Chapter 12), layer norms with gain and bias, tied output
+  token table           262,144
+  position table        131,072
+  one layer             197,760
+  attention              65,536
+  feed-forward          131,712
+  norms per layer           512
+  final norm                256
+  total               2,766,592
+  formula: V*d + C*d + L*(4d^2 + 2*d*d_ff + d_ff + d + 4d) + 2d = 2,766,592
+  counted from Tiny's own tables: 2,766,592   match: True
+    token table               262,144    9.5%
+    position table            131,072    4.7%
+    layers: norms               6,144    0.2%
+    layers: attention         786,432   28.4%
+    layers: feed-forward    1,580,544   57.1%
+    final norm                    256    0.0%
+
+GPT-2 small: V = 50,257, C = 1,024, d = 768, 12 layers, d_ff = 3,072; biases on every table, tied output
+  token table        38,597,376
+  position table        786,432
+  one layer           7,087,872
+  attention           2,362,368
+  feed-forward        4,722,432
+  norms per layer         3,072
+  final norm              1,536
+  total             124,439,808
+  tables in the weight file: 160; numbers in the file 137,022,720
+  of which the causal masks stored as 'attn.bias' (not learned): 12,582,912
+  learned numbers in the file: 124,439,808   match with the hand count: True
+  share of GPT-2 in its token table: 31.0%; in its twelve layers: 68.3%
+  Tiny's layers: 85.8%
+
+the rule of thumb 12 * L * d^2 for the layers (ignoring biases, norms and the tables at either end):
+  Tiny         12 x 12 x 128^2 =    2,359,296   exact layers    2,373,120   (0.9942)
+  GPT-2 small  12 x 12 x 768^2 =   84,934,656   exact layers   85,054,464   (0.9986)

@@ -1,0 +1,20 @@
+'the cat sat on the mat'
+  position 0  the  ( 1.0,  0.0) + ( 0.5,  0.5) = ( 1.5,  0.5)
+  position 1  cat  ( 0.0,  1.0) + ( 0.5,  0.0) = ( 0.5,  1.0)
+  position 2  sat  ( 1.0,  1.0) + ( 0.0, -0.5) = ( 1.0,  0.5)
+  position 3  on   ( 1.0, -1.0) + (-0.5,  0.0) = ( 0.5, -1.0)
+  position 4  the  ( 1.0,  0.0) + (-0.5,  0.5) = ( 0.5,  0.5)
+  position 5  mat  (-1.0,  1.0) + ( 0.0,  0.5) = (-1.0,  1.5)
+'the mat sat on the cat'
+  position 0  the  ( 1.0,  0.0) + ( 0.5,  0.5) = ( 1.5,  0.5)
+  position 1  mat  (-1.0,  1.0) + ( 0.5,  0.0) = (-0.5,  1.0)
+  position 2  sat  ( 1.0,  1.0) + ( 0.0, -0.5) = ( 1.0,  0.5)
+  position 3  on   ( 1.0, -1.0) + (-0.5,  0.0) = ( 0.5, -1.0)
+  position 4  the  ( 1.0,  0.0) + (-0.5,  0.5) = ( 0.5,  0.5)
+  position 5  cat  ( 0.0,  1.0) + ( 0.0,  0.5) = ( 0.0,  1.5)
+different arrows in the first sentence: 6 of 6 (was 5)
+the two 'the's: [1.5, 0.5] and [0.5, 0.5] -> same? False
+same bag as the scrambled sentence: False
+average row: [0.5, 0.5] vs [0.5, 0.5]
+attaching instead of adding gives 4 numbers per row, e.g. 'the' at 0: [1.0, 0.0, 0.5, 0.5]
+word-and-place pairs: 66; arrows shared by two or more pairs: 20; first three: [['the@0', 'a@4'], ['the@1', 'a@3'], ['the@2', 'on@5']]

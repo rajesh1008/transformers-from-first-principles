@@ -1,0 +1,2 @@
+5 random partners per real pair: average cosine of 5,000 random pairs of words 0.33; cos(said, tea) 0.21; nearest to said [('exclaimed', 0.86), ('replied', 0.81), ('remarked', 0.79)]
+0 random partners per real pair: average cosine of 5,000 random pairs of words 0.95; cos(said, tea) 0.98; nearest to said [('wish', 0.99), ('she', 0.99), ('perhaps', 0.99)]

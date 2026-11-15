@@ -1,0 +1,177 @@
+{
+ "method": "lora",
+ "rank": 1,
+ "alpha": 2.0,
+ "targets": "qv",
+ "dim": 16,
+ "lr": 0.001,
+ "steps": 600,
+ "trainable": 6144,
+ "total": 2766592,
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.526546955108643,
+   "glass": 4.685941696166992,
+   "pool": 3.6909866333007812,
+   "cat": "Then was the chair, and the little fellow on the\nfirst. Then the little fell",
+   "step": 100
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.291763782501221,
+   "glass": 4.8227128982543945,
+   "pool": 3.822126865386963,
+   "cat": "The friend was the chair. And the little fellow on the\nfirst. And the little",
+   "step": 200
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.158993244171143,
+   "glass": 4.9692063331604,
+   "pool": 3.985903263092041,
+   "cat": "The mon was the chair.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.049407482147217,
+   "glass": 5.111077308654785,
+   "pool": 4.138556003570557,
+   "cat": "The mon was the chair.",
+   "step": 400
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.994148015975952,
+   "glass": 5.273468971252441,
+   "pool": 4.304847717285156,
+   "cat": "The mated on the chair.",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.9462227821350098,
+   "glass": 5.378518104553223,
+   "pool": 4.407217979431152,
+   "cat": "The mon had been on the chair.",
+   "step": 600
+  }
+ ],
+ "max_abs_change": {
+  "h.0.att.W_q": 0.3119421601295471,
+  "h.0.att.W_v": 0.18320800364017487,
+  "h.1.att.W_q": 0.23423324525356293,
+  "h.1.att.W_v": 0.1611526608467102,
+  "h.2.att.W_q": 0.20874308049678802,
+  "h.2.att.W_v": 0.17671047151088715,
+  "h.3.att.W_q": 0.25530314445495605,
+  "h.3.att.W_v": 0.2791491746902466,
+  "h.4.att.W_q": 0.18523187935352325,
+  "h.4.att.W_v": 0.13645121455192566,
+  "h.5.att.W_q": 0.26601600646972656,
+  "h.5.att.W_v": 0.2012198567390442,
+  "h.6.att.W_q": 0.39162468910217285,
+  "h.6.att.W_v": 0.23197728395462036,
+  "h.7.att.W_q": 0.34084099531173706,
+  "h.7.att.W_v": 0.225120410323143,
+  "h.8.att.W_q": 0.21763841807842255,
+  "h.8.att.W_v": 0.2818796634674072,
+  "h.9.att.W_q": 0.17692695558071136,
+  "h.9.att.W_v": 0.19409294426441193,
+  "h.10.att.W_q": 0.3730944097042084,
+  "h.10.att.W_v": 0.193619504570961,
+  "h.11.att.W_q": 0.4219558835029602,
+  "h.11.att.W_v": 0.47713324427604675
+ },
+ "delta_rank": {
+  "h.0.att.W_q": 1,
+  "h.0.att.W_v": 1,
+  "h.1.att.W_q": 1,
+  "h.1.att.W_v": 1,
+  "h.2.att.W_q": 1,
+  "h.2.att.W_v": 1,
+  "h.3.att.W_q": 1,
+  "h.3.att.W_v": 1,
+  "h.4.att.W_q": 1,
+  "h.4.att.W_v": 1,
+  "h.5.att.W_q": 1,
+  "h.5.att.W_v": 1,
+  "h.6.att.W_q": 1,
+  "h.6.att.W_v": 1,
+  "h.7.att.W_q": 1,
+  "h.7.att.W_v": 1,
+  "h.8.att.W_q": 1,
+  "h.8.att.W_v": 1,
+  "h.9.att.W_q": 1,
+  "h.9.att.W_v": 1,
+  "h.10.att.W_q": 1,
+  "h.10.att.W_v": 1,
+  "h.11.att.W_q": 1,
+  "h.11.att.W_v": 1
+ }
+}

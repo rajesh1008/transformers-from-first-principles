@@ -1,0 +1,20 @@
+Part 1. predict, then read
+  table 0.5 / 0.3 / 0.2: entropy 1.030 nats; surprises 0.693 / 1.204 / 1.609
+  0.9 coin, 100 tosses, 80 heads: surprise 54.48 nats, 0.545 per toss; entropy 0.325
+  after the prompt, typical tau 0.2 keeps 48 tokens; is the line break (top share 0.0521) among them? False
+  rank of the best-ranked kept token: 34
+
+Part 2. three breakages
+  B1 contrastive with no plausibility cut picks '�', expert share 9.23e-06 (rank 1550 of 2048)
+  B2 typical sampling sorted by surprise alone keeps 9 tokens, the same set as top-p 0.2: True
+  B3 Mirostat target 3.0, correct update: surprise 3.598 then 3.111, final bar 4.58; sign flipped: 4.083 then 4.033, final bar 10.23
+
+Part 3. checkpoints
+[pass] typical sampling at tau 1.0 gives the plain shares
+[pass] eta-sampling at eps 0 keeps every token
+[pass] contrastive decoding with alpha 1.0 equals greedy for 20 tokens
+[pass] exact and masked choice agree when no option shares a first token
+[pass] Mirostat with a bar of 200 nats equals plain sampling for 10 tokens
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch28
+
+6 of 6 checkpoints pass

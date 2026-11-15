@@ -1,0 +1,4 @@
+training 1,791 merges on the novel: 0.15 s
+encoding the novel (44,360 tokens), first time: 50 ms (about 890,000 tokens per second)
+encoding it again, with every chunk cached: 15 ms (about 2,950,000 tokens per second)
+vocabulary: 2,048 ids; learned numbers (weights) in Tiny so far: 0

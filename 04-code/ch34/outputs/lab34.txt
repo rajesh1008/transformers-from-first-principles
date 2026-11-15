@@ -1,0 +1,24 @@
+Part 1. the distillation loss
+  KL of a table with itself 0.0e+00; largest gap between autograd and (student - teacher) 8.67e-18
+[pass] the KL gradient on the student's scores is the student's table minus the teacher's
+Part 2. masks
+  32-bit 1.9812; half of every output channel's weights zeroed 2.0017 (+0.0205); nonzero counts per channel [64, 256]
+[pass] per-channel pruning leaves every output channel the same count and costs Tiny under 0.03 at 50%
+Part 3. breakage: a unit removed on its input side only
+  half the units removed (W_1 column, bias, W_2 row): 2.2401; W_2 row only: 2.2401; W_1 column only, bias left: 2.2118
+[pass] a unit is silenced by its output row; zeroing only its input column leaves gelu(bias) x row added to every token
+Part 4. breakage: a mask that is not re-applied
+  80% pruned, 10 Adam steps: 1,881,600 of 1,881,600 pruned weights nonzero without re-masking; 0 with re-masking
+[pass] an optimiser step refills pruned weights unless the mask is applied after every step
+Part 5. the recorded runs
+  units50  hard  after pruning 2.2401 -> 1.9773; zeros kept True
+  units50  kd1   after pruning 2.2401 -> 1.9858; zeros kept True
+  units75  hard  after pruning 2.7587 -> 2.0014; zeros kept True
+  units75  kd1   after pruning 2.7587 -> 2.0000; zeros kept True
+  w80      hard  after pruning 2.4587 -> 1.9958; zeros kept True
+  w80      kd1   after pruning 2.4587 -> 1.9946; zeros kept True
+[pass] six prune-then-recover runs recorded; every one recovered and kept its pruned weights at zero
+Part 6. the key
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch34
+
+6 of 6 checkpoints pass

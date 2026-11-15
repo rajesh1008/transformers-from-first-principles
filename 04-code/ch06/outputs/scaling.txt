@@ -1,0 +1,7 @@
+stretch factor 4; new base for the base change: 40,890
+       do nothing: fastest clock  57.3 deg/token, slowest  6.616 millidegrees/token; neighbours on the fastest clock agree 0.540; clocks going over 1% past their trained angle by gap 4,095: 28
+squeeze positions: fastest clock  14.3 deg/token, slowest  1.654 millidegrees/token; neighbours on the fastest clock agree 0.969; clocks going over 1% past their trained angle by gap 4,095: 0
+  slow the clocks: fastest clock  57.3 deg/token, slowest  1.654 millidegrees/token; neighbours on the fastest clock agree 0.540; clocks going over 1% past their trained angle by gap 4,095: 27
+speed after / speed before, clock by clock (0, 16, 32, 48, 63):
+  squeeze positions: [0.25, 0.25, 0.25, 0.25, 0.25]
+    slow the clocks: [1.0, 0.703, 0.495, 0.348, 0.25]

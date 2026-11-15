@@ -1,0 +1,41 @@
+Part 1. learning-rate sweep, 600 steps, warmup 50 then cosine to 0.1 of the peak; three reading orders
+peak lr   order 1865  order 7   order 11  mean     spread(max-min)  Looking-Glass(1865)  largest nudge norm, order 1865 (step)
+5e-4      4.9364      4.9239    4.8745    4.9116   0.0619           5.1451               10.5 (74)
+1e-3      4.8991      5.0952    4.8753    4.9565   0.2199           5.1170               24.1 (56)
+2e-3      5.0166      4.7228    4.9433    4.8942   0.2938           5.2169               24.1 (29)
+4e-3      5.0416      5.1966      -       5.1191   0.1550           5.2366               102 (25)
+8e-3      5.1798      5.0982      -       5.1390   0.0816           5.3088               138 (21)
+bigram predictor (baselines.py): 4.2984
+
+Part 2. WSD: one trunk at a constant peak, branches decayed linearly to zero over a quarter of the branch point
+lr 1e-3 branch at   500 -> finished at   625 steps (1.64 passes): Carroll 4.6614 Looking-Glass 4.9714 sentence 4.8948 | trunk at 500: 4.8369; trunk at 600: 4.6810; decay gained 0.1755
+lr 1e-3 branch at  1000 -> finished at  1250 steps (3.27 passes): Carroll 4.1487 Looking-Glass 4.6330 sentence 4.6991 | trunk at 1000: 4.3717; trunk at 1200: 4.2105; decay gained 0.2229
+lr 1e-3 branch at  2000 -> finished at  2500 steps (6.55 passes): Carroll 3.7296 Looking-Glass 4.3650 sentence 5.1679 | trunk at 2000: 3.8798; trunk at 2000: 3.8798; decay gained 0.1502
+lr 2e-3 branch at   500 -> finished at   625 steps (1.64 passes): Carroll 4.8350 Looking-Glass 5.1109 sentence 5.3645 | trunk at 500: 5.0334; trunk at 600: 4.8934; decay gained 0.1984
+lr 2e-3 branch at  1000 -> finished at  1250 steps (3.27 passes): Carroll 4.4172 Looking-Glass 4.8745 sentence 5.2691 | trunk at 1000: 4.6787; trunk at 1200: 4.5220; decay gained 0.2615
+lr 2e-3 branch at  2000 -> finished at  2500 steps (6.55 passes): Carroll 3.9293 Looking-Glass 4.5166 sentence 4.9238 | trunk at 2000: 4.1284; trunk at 2000: 4.1284; decay gained 0.1991
+cosine runs made for one length (warmup 50, cosine to 0.1 of the peak unless stated):
+  cos_1e-3_625           Carroll 4.8769  Looking-Glass 5.1017  sentence 5.1968  (226 s)
+  cos_1e-3_625_floor0    Carroll 4.9415  Looking-Glass 5.1349  sentence 5.2092  (229 s)
+  cos_1e-3_1250          Carroll 4.3821  Looking-Glass 4.7862  sentence 4.6682  (416 s)
+  cos_2e-3_1250          Carroll 4.6175  Looking-Glass 4.9781  sentence 5.0771  (449 s)
+  cos_1e-3_1250_wd0.1    Carroll 4.2361  Looking-Glass 4.6830  sentence 4.7340  (400 s)
+
+Part 3. watching the 1e-3 trunk: batch loss, nudge norm, step-to-table ratio
+  steps    0-  50: batch loss mean 6.8692  nudge norm median 0.967  max 2.373
+  steps   50- 200: batch loss mean 5.8065  nudge norm median 0.772  max 24.180
+  steps  200- 500: batch loss mean 5.0510  nudge norm median 0.852  max 1.495
+  steps  500-1000: batch loss mean 4.5757  nudge norm median 0.882  max 1.316
+  steps 1000-1500: batch loss mean 4.1660  nudge norm median 0.961  max 1.533
+  steps 1500-2000: batch loss mean 3.9068  nudge norm median 1.021  max 1.709
+  steps whose batch loss is more than 3 spreads above the previous 50: 2 [1068, 1716]
+  steps whose nudge norm is more than 3 x the median of the previous 50: 3 [52, 56, 66]
+  step-to-table ratio at steps 0: 4.98e-04, 50: 5.15e-03, 100: 3.52e-03, 500: 4.26e-03, 1000: 3.52e-03, 1500: 3.17e-03, 1950: 3.01e-03
+  held-out (Carroll) every 100 steps: 0:7.659 200:5.487 400:4.984 600:4.681 800:4.511 1000:4.372 1200:4.210 1400:4.116 1600:4.077 1800:3.972 2000:3.880
+  last 100 trunk batches mean 3.7705 against held-out at 2000: 3.8798
+  2,500-step branch: last 100 batches mean 3.5323 against held-out 3.7296 (gap 0.1973)
+
+Part 4. Chapter 19's starts, plain gradient descent at lr 0.1, 400 steps, Looking-Glass held-out, ONE thread
+  0.02 everywhere                Chapter 19 (8 threads) 5.9653 | windows 1865, one thread 6.0033 | windows 7, one thread 5.5306
+  0.02, W_o and W_2 / sqrt(24)   Chapter 19 (8 threads) 5.5365 | windows 1865, one thread 5.5432 | windows 7, one thread 5.4952
+  1/sqrt(fan-in)                 Chapter 19 (8 threads) 5.8594 | windows 1865, one thread 5.8594 | windows 7, one thread 5.9095

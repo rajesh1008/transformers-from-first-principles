@@ -1,0 +1,16 @@
+seed = 1865
+corpus: 26,776 words, 2,635 different words
+"the" appears 1,651 times and is followed by 452 different words
+
+Top five next words after "the":
+  queen        65 times   share 0.039
+  king         60 times   share 0.036
+  mock         54 times   share 0.033
+  gryphon      53 times   share 0.032
+  hatter       51 times   share 0.031
+
+generated: the mallets live on turning to fancy to alice but the trial is
+
+generated: alice alone here and read out the verses to be so when one
+
+generated: the first however he shook his note book the nearer to her face

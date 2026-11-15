@@ -1,0 +1,1 @@
+cur_hard      held-out Looking-Glass 5.3976 (lowest 5.3850), Carroll 5.3354 (lowest 5.3134); batch last 24 4.7549; on windows it read 5.1641; 104 s

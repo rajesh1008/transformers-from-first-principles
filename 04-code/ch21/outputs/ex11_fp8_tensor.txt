@@ -1,0 +1,1 @@
+FP8 E4M3 products (tensor scales), 400 steps: held-out 5.2633 (32-bit 5.2684); batch last 25 4.6738; 209 s

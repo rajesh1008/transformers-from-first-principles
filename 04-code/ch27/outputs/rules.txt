@@ -1,0 +1,17 @@
+pool: 393,597 tokens; word types (letters only, lower case): 11,331
+greedy             not-in-pool words 0.000  repeated 4-runs 0.054  distinct  1/20  mean surprise 1.565  tokens kept     1.0
+T 0.7              not-in-pool words 0.137  repeated 4-runs 0.001  distinct 20/20  mean surprise 2.801  tokens kept  2048.0
+T 1.0              not-in-pool words 0.189  repeated 4-runs 0.000  distinct 20/20  mean surprise 4.014  tokens kept  2048.0
+top-k 40           not-in-pool words 0.136  repeated 4-runs 0.011  distinct 20/20  mean surprise 2.913  tokens kept    40.0
+top-p 0.9          not-in-pool words 0.178  repeated 4-runs 0.001  distinct 20/20  mean surprise 3.362  tokens kept   142.6
+min-p 0.1          not-in-pool words 0.097  repeated 4-runs 0.012  distinct 20/20  mean surprise 2.359  tokens kept    15.3
+T 1.3 + min-p 0.1  not-in-pool words 0.164  repeated 4-runs 0.000  distinct 20/20  mean surprise 3.052  tokens kept    31.6
+
+First continuation under each rule:
+  greedy             '\nfirst----"\n\n"I\'ve been a little boy!" said Balbus.\n\n"I\'m afraid I\'m afraid of the'
+  T 0.7              ' flowers, and\ntrave, as they be intible to the number force of a Mancterni, and the\nStreser,'
+  T 1.0              " room. It's all, my asked\nof me, and he're plearately instantly on which, so how an less grade in an exceptule\nO"
+  top-k 40           ' door. Earl was\nto them, so that the nat, there was the presentness of my\nports and solitations to keep the llic'
+  top-p 0.9          " earth way, but it\nwhich's its corn'ty--weumber of hear, as this.”\n\n“Only that you give it fid,"
+  min-p 0.1          ' door-fourst of\nto the Juth, and vexientively beard, in the sadly charitements of\nincu'
+  T 1.3 + min-p 0.1  " Earl, but he\nthink her 'iftea. Yet,' It would not engge of the same roated.' And\n“Gh"

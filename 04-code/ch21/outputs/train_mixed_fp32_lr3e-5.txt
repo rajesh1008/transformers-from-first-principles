@@ -1,0 +1,1 @@
+fp32_lr3e-5  32-bit throughout (Chapter 20's arithmetic)                lr 3e-05 constant; held-out 7.6530 -> 6.4299 (lowest 6.4299); batch last 25 6.3198; 121 s

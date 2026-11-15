@@ -1,0 +1,11 @@
+(1) no abstention
+   one clear match: scores [4.0, 0, 0, 0] -> shares [0.948 0.017 0.017 0.017] (sum 1)
+      weak matches: scores [0.2, 0.1, 0.0, 0.1] -> shares [0.276 0.249 0.226 0.249] (sum 1)
+   nothing matches: scores [-6.0, -6.1, -5.9, -6.0] -> shares [0.249 0.226 0.276 0.249] (sum 1)
+  add a 'sink' seat at the front with score 3: [0.9995 0.0001 0.0001 0.0001 0.0001]
+
+(2) a weighted average forgets how many
+           the cat sat: last row's shares [0.284 0.14  0.576] -> output (1.576, 0.716)
+   the cat cat cat sat: last row's shares [0.222 0.109 0.109 0.109 0.45 ] -> output (1.45, 0.778)
+  1 cat row(s), no mask: every output row (1.0, 1.0)
+  3 cat row(s), no mask: every output row (1.0, 1.0)

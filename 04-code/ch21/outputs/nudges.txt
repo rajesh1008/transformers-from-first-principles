@@ -1,0 +1,29 @@
+Tiny's nudges on the first batch: 2,766,592 numbers, 114,688 exactly zero (unreached position rows); loss 7.6488
+  size of the non-zero nudges: 0.1% below 7.19e-08, 1% below 7e-07, median 0.000417, 99% below 0.00594, 99.9% below 0.0143, largest 0.174
+  535,707 non-zero nudges are below 6.1e-5; by table: W_k 35.5%, W_q 35.5%, W_2 9.5%, W_1 9.4%, E 7.0%, W_v 1.4%
+
+FP16: smallest subnormal 5.96e-08, smallest normal 6.1e-05, largest 65504
+ loss scale   become 0  subnormal   overflow   (shares of the non-zero nudges, if stored in FP16)
+        2^0    0.0424%   20.1626%    0.0000%
+        2^4    0.0026%    5.0897%    0.0000%
+        2^8    0.0002%    0.3354%    0.0000%
+       2^12    0.0000%    0.0207%    0.0000%
+       2^16    0.0000%    0.0016%    0.0000%
+       2^20    0.0000%    0.0001%    0.0037%
+       2^24    0.0000%    0.0000%    2.7687%
+  BF16 has FP32's exponent range: no nudge of Tiny's becomes 0 or overflows in BF16 (0 zeros)
+
+The nudge on the loss itself is 1, and the nudge arriving at each next-token score is (share - 1 or share)/1,024:
+  1/1,024 = 0.000977; a score whose share is 1e-4 gets 9.77e-08, which FP16 stores as 1.19e-07
+
+Which steps a table stored in BF16 cannot record (w - step rounds back to w), by kind of table
+ step size  two-axis tables  gains (1.0)  biases (0)
+   1.0e-02             0.0%         0.0%        0.0%
+   3.0e-03             0.0%         0.0%        0.0%
+   1.0e-03             0.0%       100.0%        0.0%
+   3.0e-04             0.0%       100.0%        0.0%
+   1.0e-04            11.2%       100.0%        0.0%
+   2.5e-05            68.3%       100.0%        0.0%
+   1.0e-05            83.8%       100.0%        0.0%
+  (2,752,512 numbers in two-axis tables, spread 0.0196; 3,200 gains; 10,880 biases)
+  Adam's steps are about lr per number; the schedule in train_mixed.py starts at 0.025 x 1e-3 = 2.5e-5 and ends at 1e-4

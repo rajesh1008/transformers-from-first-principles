@@ -1,0 +1,15 @@
+1. dog@3 [2.0, 0.0] hat@2 [-0.134, 2.232] lengths 2.0 2.236
+2. the@0.sat@2 = 1.366 ; the.(sat turned 60) = 1.366
+3. the@7.sat@9 = 1.366 ; sat@9.the@7 = 1.366
+4. mat@5 = [1.366, -0.366] sat@2 = [1.366, -0.366] ; pairs landing on the@0's arrow: [('the', 0), ('cat', 3)]
+5. gaps with the same the-cat agreement as gap 1: [5, 13, 17]
+6. angles per 1,024-token window: 65536
+7. base 10,000: fastest turn every 6.28 tokens, slowest every 54,410
+7. base 500,000: fastest turn every 6.28 tokens, slowest every 2,559,196
+8. squeezed fastest clock: 7.16 deg/token; neighbours agree 0.9922
+9. added clock rows, agreements that change when moved to 7-12: 32
+11. partial rotary shift test (0,5) vs (300,305): 11.440259 11.440259 ; full-row dot 0.159 ; turned part at gap 0 and 5: -5.195 6.086
+12. squeezing by 2 at serving, gap 1: average change 1.02
+12. squeezing by 2 at serving, gap 10: average change 6.33
+12. squeezing by 2 at serving, gap 100: average change 8.48
+13. positions 1,000-1,023 stored as bfloat16: 7 distinct values survive: [1000, 1004, 1008, 1012, 1016, 1020, 1024]; float16 keeps 24

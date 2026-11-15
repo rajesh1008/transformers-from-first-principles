@@ -1,0 +1,11 @@
+Check yourself
+  1  sqrt(0.08^2 + 0.06^2) = 0.1000
+  2  0.1 / sqrt(k) = 0.02  ->  k = 25
+  3  0.1 x sqrt(2) = 0.1414
+Exercises
+  1  (1e8 + 3) - 1e8 = 0.0; (1e8 + 5) - 1e8 = 8.0; gap at 1e8 = 8.0
+  2  gap between 32-bit numbers near 320 = 3.05e-05; the left-to-right error 0.010360 is 339 gaps
+  3  sqrt(0.12^2 + 0.05^2) = 0.1300
+  4  spread 0.04: three seeds 0.0231, five seeds 0.0179
+  5  spread of a difference of single runs 0.0424; true difference 0.02 is 0.47 spreads; chance of the wrong sign 0.32
+     seeds per recipe for the difference's spread to be 0.01 (half the effect): 18

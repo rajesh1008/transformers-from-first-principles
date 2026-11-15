@@ -1,0 +1,140 @@
+{
+ "beta": 0.5,
+ "lr": 0.0001,
+ "steps": 300,
+ "sftw": 0.0,
+ "known_idk": false,
+ "npairs": 50,
+ "before": {
+  "x1": {
+   "right": 10,
+   "idk": 0
+  },
+  "x4": {
+   "right": 10,
+   "idk": 0
+  },
+  "x12": {
+   "right": 10,
+   "idk": 0
+  },
+  "unknown_test": {
+   "idk": 0,
+   "answers": [
+    [
+     "hawk",
+     "The owl stood on the bench."
+    ],
+    [
+     "jay",
+     "The deer sat on the hat."
+    ],
+    [
+     "kudu",
+     "The frog hid on the box."
+    ],
+    [
+     "loon",
+     "The deer sat on the hat."
+    ],
+    [
+     "mule",
+     "The lamb danced on the chair."
+    ]
+   ]
+  },
+  "unknown_train_idk": 0,
+  "first_The": 0.9952581284650796,
+  "first_I": 0.00013777130125662752,
+  "cat": "The cat sat on the mat.",
+  "cat_reworded": "The cat sat on the mat."
+ },
+ "log": [
+  {
+   "step": 50,
+   "loss": 0.032327670603990555,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 100,
+   "loss": 0.002528394339606166,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 150,
+   "loss": 0.002668539294973016,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 200,
+   "loss": 9.053535177372396e-05,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 250,
+   "loss": 0.0010653941426426172,
+   "pref_acc": 1.0
+  },
+  {
+   "step": 300,
+   "loss": 0.0005310364649631083,
+   "pref_acc": 1.0
+  }
+ ],
+ "after": {
+  "x1": {
+   "right": 1,
+   "idk": 0
+  },
+  "x4": {
+   "right": 2,
+   "idk": 0
+  },
+  "x12": {
+   "right": 9,
+   "idk": 0
+  },
+  "unknown_test": {
+   "idk": 0,
+   "answers": [
+    [
+     "hawk",
+     "The hare stood on the bench."
+    ],
+    [
+     "jay",
+     "The otherad hid on the rues."
+    ],
+    [
+     "kudu",
+     "The pig waited on the,"
+    ],
+    [
+     "loon",
+     "The otherad hid on the ruage."
+    ],
+    [
+     "mule",
+     "The mouse s on the stre"
+    ]
+   ]
+  },
+  "unknown_train_idk": 0,
+  "first_The": 0.9381754837862284,
+  "first_I": 0.009829476203048427,
+  "cat": "The cat sat on the mat.",
+  "cat_reworded": "I think so s"
+ },
+ "logp_change": {
+  "known": {
+   "chosen": -5.193673911069831,
+   "rejected": -22.922185762723288,
+   "n": 30
+  },
+  "unknown": {
+   "chosen": 19.39295530319214,
+   "rejected": -14.161951160430908,
+   "n": 20
+  }
+ }
+}

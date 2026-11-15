@@ -1,0 +1,3 @@
+softmax  learned numbers     650  test accuracy after 1 epoch 0.3222, after 30 0.9056
+mlp      learned numbers  19,210  test accuracy after 1 epoch 0.7861, after 30 0.9750
+cnn      learned numbers   9,930  test accuracy after 1 epoch 0.7944, after 30 0.9861

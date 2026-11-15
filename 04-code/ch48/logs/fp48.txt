@@ -1,0 +1,5 @@
+main_step500.pt 500 8a137abdae96b1a6 40236629
+main_step1000.pt 1000 257aa31aa90649fb 40236739
+main_step1500.pt 1500 e87b96d412a2a2db 40236739
+main_step2000.pt 2000 daed05c653d45e31 40236739
+{'python': '3.13.5', 'numpy': '2.5.4', 'machine': 'x86_64', 'processor': 'unknown', 'omp_threads': None, 'torch': '2.15.0+cpu', 'torch_threads': 8, 'deterministic': False, 'default_dtype': 'torch.float32'}

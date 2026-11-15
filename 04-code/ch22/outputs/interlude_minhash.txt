@@ -1,0 +1,29 @@
+Part 1. exact duplicates among the novel's 817 paragraphs (normalised text, 64-bit fingerprints)
+  808 distinct fingerprints; 2 groups of identical paragraphs
+    9 copies: '*      *      *      *      *      *      *'
+    2 copies: '“Wow! wow! wow!”'
+
+Part 2. Jaccard similarity and its MinHash estimate (5-word shingles)
+  131 words, 1 changed: exact Jaccard 0.926; MinHash estimate 0.875 (16), 0.891 (64), 0.910 (256)
+  131 words, 3 changed: exact Jaccard 0.795; MinHash estimate 0.750 (16), 0.859 (64), 0.848 (256)
+  131 words, 8 changed: exact Jaccard 0.550; MinHash estimate 0.562 (16), 0.500 (64), 0.598 (256)
+
+Part 3. chance that a pair becomes a candidate, 32 bands of 4 numbers (128 in all)
+  similarity 0.2: 0.050
+  similarity 0.4: 0.564
+  similarity 0.5: 0.873
+  similarity 0.6: 0.988
+  similarity 0.7: 1.000
+  similarity 0.8: 1.000
+  similarity 0.9: 1.000
+  the threshold, where the chance is about one half, is near (1/32)^(1/4) = 0.420
+
+Part 4. near-duplicate search: 817 paragraphs + 40 altered copies (synthetic)
+  857 documents, 366,796 pairs; pairs with Jaccard >= 0.5 (every pair checked): 77
+  MinHash candidates: 77 pairs (0.021% of all pairs); of the 77 true pairs it found 77
+  planted copies found: 40 of 40
+  time: signatures 0.6 s, banding 27 ms, every pair checked exactly 0.7 s (one thread, 2026-11-11)
+    a pair not planted: 1.00  '*      *      *      *      *      *      *' / '    *      *      *      *      *      *'
+    a pair not planted: 1.00  '*      *      *      *      *      *      *' / '*      *      *      *      *      *      *'
+    a pair not planted: 1.00  '*      *      *      *      *      *      *' / '*      *      *      *      *      *      *'
+    a pair not planted: 1.00  '*      *      *      *      *      *      *' / '    *      *      *      *      *      *'

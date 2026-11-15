@@ -1,0 +1,15 @@
+values are the toy rows: sat [1.0, 1.0]  on [1.0, -1.0]  the [1.0, 0.0]
+a 50/50 blend of sat and on: [1.0, 0.0] <- the same row as 'the'
+
+head A (wants sat): query table [[-2, -2], [2, 2]] key table [[2, 2], [2, 2]]
+  mat's shares: [0.0, 0.0, 1.0, 0.0, 0.0, 0.0]   mat's output: [1.0, 1.0]
+
+head B (wants on): query table [[-2, -2], [2, 2]] key table [[0, 2], [-2, -2]]
+  mat's shares: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0]   mat's output: [1.0, -1.0]
+
+one head for both: query table [[-2, -2], [2, 2]] key table [[2, 2], [-2, 2]]
+  mat's shares: [0.25, 0.0, 0.25, 0.25, 0.25, 0.0]   mat's output: [1.0, 0.0]
+
+two heads side by side, mat: [1.0, 1.0, 1.0, -1.0]
+distance of the single head's output from sat 1.000, from on 1.000, from the 0.000
+distance of head A's output from sat 0.000; of head B's from on 0.000

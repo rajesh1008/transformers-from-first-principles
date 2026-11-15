@@ -1,0 +1,22 @@
+one nudge by hand: cat [0.0, 1.0] . mat [-1.0, 1.0] = 1; squash(1) = 0.731
+  pull cat toward mat by 0.1 x (1 - 0.731) x mat -> cat = [-0.027, 1.027]
+  new agreement 1.054 (was 1)
+  squash at -4, 0, 4: 0.018, 0.500, 0.982
+
+the novel: 26,776 words; 699 different words seen 5 times or more; 82,618 (word, neighbour) pairs within 2 places
+  those 699 words make up 88% of the novel; times seen: the 1651, said 462, alice 386, queen 68, king 61, cat 35, tea 20, dog 2
+trained 16 numbers per word, 10 passes, seed 1865, in 1.5 s
+cosine before training -> after:
+  said   replied   -0.06 ->  0.81
+  said   tea       -0.05 ->  0.21
+  queen  king      -0.59 ->  0.88
+  two    three      0.04 ->  0.81
+nearest neighbours after training (cosine):
+  said    exclaimed 0.86, replied 0.81, remarked 0.79, sighed 0.76, asked 0.75
+  queen   knave 0.89, king 0.88, dormouse 0.87, duchess 0.83, cook 0.80
+  two     three 0.81, nine 0.81, minute 0.78, instantly 0.78, gardeners 0.75
+  head    flamingo 0.89, hands 0.87, shut 0.87, back 0.86, pocket 0.86
+  looked  jumped 0.83, began 0.81, sat 0.80, walked 0.80, once 0.79
+  alice   politely 0.83, yes 0.82, timidly 0.81, what's 0.80, feeling 0.80
+  cat     pigeon 0.84, whiting 0.84, song 0.83, school 0.79, lobster 0.78
+row for 'cat' (first 4 of 16): [0.78, 0.22, -0.06, 0.25]

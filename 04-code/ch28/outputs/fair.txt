@@ -1,0 +1,47 @@
+temperature 0.5    surprise 2.046 2.024 2.148  not-in-pool 0.085 0.095 0.099  distinct-2 0.646 0.653 0.687
+temperature 0.7    surprise 2.655 2.791 2.617  not-in-pool 0.167 0.109 0.134  distinct-2 0.797 0.826 0.783
+temperature 0.85   surprise 3.186 3.285 3.329  not-in-pool 0.169 0.140 0.141  distinct-2 0.874 0.860 0.896
+temperature 1.0    surprise 3.853 3.910 3.865  not-in-pool 0.205 0.178 0.207  distinct-2 0.921 0.913 0.926
+temperature 1.2    surprise 4.822 4.800 4.716  not-in-pool 0.258 0.244 0.247  distinct-2 0.930 0.947 0.938
+top-p       0.3    surprise 1.922 1.897 1.914  not-in-pool 0.083 0.055 0.111  distinct-2 0.602 0.597 0.680
+top-p       0.5    surprise 2.355 2.346 2.415  not-in-pool 0.111 0.071 0.087  distinct-2 0.785 0.752 0.759
+top-p       0.7    surprise 2.684 2.632 2.736  not-in-pool 0.132 0.099 0.101  distinct-2 0.834 0.815 0.826
+top-p       0.9    surprise 3.316 3.455 3.235  not-in-pool 0.173 0.166 0.216  distinct-2 0.870 0.903 0.885
+top-p       0.95   surprise 3.682 3.573 3.556  not-in-pool 0.195 0.185 0.206  distinct-2 0.932 0.906 0.906
+min-p       0.3    surprise 1.975 2.009 1.935  not-in-pool 0.085 0.078 0.086  distinct-2 0.617 0.614 0.626
+min-p       0.2    surprise 2.285 2.010 2.133  not-in-pool 0.113 0.082 0.102  distinct-2 0.709 0.644 0.691
+min-p       0.1    surprise 2.384 2.432 2.511  not-in-pool 0.099 0.085 0.140  distinct-2 0.756 0.783 0.807
+min-p       0.05   surprise 2.663 2.690 2.730  not-in-pool 0.127 0.123 0.115  distinct-2 0.815 0.822 0.834
+min-p       0.02   surprise 2.970 2.994 3.031  not-in-pool 0.152 0.146 0.117  distinct-2 0.867 0.885 0.879
+typical     0.2    surprise 3.697 3.580 3.758  not-in-pool 0.175 0.158 0.244  distinct-2 0.909 0.930 0.923
+typical     0.5    surprise 3.601 3.518 3.293  not-in-pool 0.179 0.146 0.137  distinct-2 0.918 0.920 0.897
+typical     0.7    surprise 3.410 3.183 3.211  not-in-pool 0.137 0.145 0.156  distinct-2 0.897 0.889 0.884
+typical     0.9    surprise 3.426 3.429 3.388  not-in-pool 0.121 0.139 0.181  distinct-2 0.891 0.896 0.925
+typical     0.95   surprise 3.682 3.574 3.556  not-in-pool 0.195 0.172 0.206  distinct-2 0.932 0.899 0.906
+mirostat    2.0    surprise 2.113 2.193 2.128  not-in-pool 0.099 0.083 0.114  distinct-2 0.615 0.658 0.656
+mirostat    2.5    surprise 2.594 2.618 2.671  not-in-pool 0.132 0.123 0.139  distinct-2 0.812 0.805 0.832
+mirostat    3.0    surprise 3.016 3.020 3.076  not-in-pool 0.146 0.126 0.149  distinct-2 0.870 0.846 0.879
+mirostat    3.5    surprise 3.391 3.338 3.338  not-in-pool 0.138 0.147 0.202  distinct-2 0.896 0.894 0.887
+mirostat    4.0    surprise 3.613 3.659 3.597  not-in-pool 0.176 0.170 0.177  distinct-2 0.896 0.908 0.921
+
+Invented words at matched mean surprise 2.6 (interpolated), per seed list 1865 / 7 / 11, and order:
+  seed 1865  temperature 0.159  top-p 0.126  min-p 0.121  typical   -    mirostat 0.132   best to worst: min-p < top-p < mirostat < temperature
+  seed 7     temperature 0.106  top-p 0.096  min-p 0.110  typical   -    mirostat 0.121   best to worst: top-p < temperature < min-p < mirostat
+  seed 11    temperature 0.133  top-p 0.095  min-p 0.130  typical   -    mirostat 0.136   best to worst: top-p < min-p < temperature < mirostat
+
+Invented words at matched mean surprise 3.0 (interpolated), per seed list 1865 / 7 / 11, and order:
+  seed 1865  temperature 0.168  top-p 0.152  min-p   -    typical   -    mirostat 0.145   best to worst: mirostat < top-p < temperature
+  seed 7     temperature 0.122  top-p 0.129  min-p   -    typical   -    mirostat 0.126   best to worst: temperature < mirostat < top-p
+  seed 11    temperature 0.138  top-p 0.162  min-p 0.117  typical   -    mirostat 0.147   best to worst: min-p < temperature < mirostat < top-p
+
+Invented words at matched mean surprise 3.4 (interpolated), per seed list 1865 / 7 / 11, and order:
+  seed 1865  temperature 0.181  top-p 0.178  min-p   -    typical   -    mirostat 0.140   best to worst: mirostat < top-p < temperature
+  seed 7     temperature 0.147  top-p 0.162  min-p   -    typical 0.140  mirostat 0.151   best to worst: typical < temperature < mirostat < top-p
+  seed 11    temperature 0.150  top-p 0.211  min-p   -    typical 0.183  mirostat 0.196   best to worst: temperature < typical < mirostat < top-p
+
+Single points (seed 1865): the setting each rule's paper or card often quotes
+  temperature 0.7   surprise 2.655  not-in-pool 0.167  distinct-2 0.797
+  top-p       0.9   surprise 3.316  not-in-pool 0.173  distinct-2 0.870
+  min-p       0.1   surprise 2.384  not-in-pool 0.099  distinct-2 0.756
+  typical     0.2   surprise 3.697  not-in-pool 0.175  distinct-2 0.909
+  mirostat    3.0   surprise 3.016  not-in-pool 0.146  distinct-2 0.870

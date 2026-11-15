@@ -1,0 +1,42 @@
+Exercise 1: 32 layers, 32 query heads, 8 kv heads of 128, 16-bit numbers
+  grouped-query: 131,072 bytes per token = 128 KiB; at 32,768 tokens 4.0 GiB
+  multi-head (32 kv heads): 512 KiB per token; at 32,768 tokens 16.0 GiB
+
+Exercise 2: window 4, six layers: furthest seat back the last token can draw on = 18
+
+Exercise 3: window 2 on the running sentence, mat's row
+  mat's scores against 'the' (seat 4) and itself: [1.414, -2.121]
+  shares: [0.972, 0.028]  output: [0.972, 0.028]
+
+Exercise 4: allowed pairs, n=6, window 2, global seat 0
+[[1 0 0 0 0 0]
+ [1 1 0 0 0 0]
+ [1 1 1 0 0 0]
+ [1 0 1 1 0 0]
+ [1 0 0 1 1 0]
+ [1 0 0 0 1 1]]
+  allowed: 15 of 21
+
+Exercise 5: 8 query heads, 2 kv heads: kv block used by each query head
+  repeat (correct): [0, 0, 0, 0, 1, 1, 1, 1]  tile (wrong): [0, 1, 0, 1, 0, 1, 0, 1]
+
+Exercise 6: linear attention with phi(x) = relu(x) + 0.01, parallel vs recurrent
+  agree: True  mat's output: [0.998, 0.009]
+
+Exercise 7: tree toy, read about 12.5% of 4,096 keys with different group sizes
+  C= 8: parents 512, opened   1, entries read  520, error 0.293, needles opened 1/8
+  C=16: parents 256, opened  16, entries read  512, error 0.293, needles opened 3/8
+  C=32: parents 128, opened  12, entries read  512, error 0.286, needles opened 3/8
+  C=64: parents  64, opened   7, entries read  512, error 0.292, needles opened 2/8
+
+Exercise 8: GPT-2 small's shape, 65,536 tokens, 1 full layer in 4, full layers with 2 kv heads, window layers 12
+  full layers 96.0 MiB + window layers 6.75 MiB = 102.8 MiB
+
+Exercise 9: window attention that never computes a masked score
+  largest difference from the masked version, 300 rows, window 32: 1.7e-14
+  scores computed: 9,104 instead of 90,000
+
+Exercise 10: recall of a plain linear state at widths 32 and 64 (first n with recall below 0.9)
+  width 16: first below 0.9 at n = 8 (recall 0.88)
+  width 32: first below 0.9 at n = 48 (recall 0.85)
+  width 64: first below 0.9 at n = 192 (recall 0.89)

@@ -1,0 +1,7 @@
+Tiny: '\n' 0.052  ' c' 0.021  ' p' 0.020  ' P' 0.020  ' door' 0.020  ' l' 0.019  ' ' 0.018  ' f' 0.017
+   ' mat' 0.0151  ' hat' 0.0004  ' mat' in 1,000 samples at T=1: 14; distinct tokens drawn: 293
+GPT-2 small: ' floor' 0.076  ' bed' 0.065  ' couch' 0.054  ' ground' 0.052  ' edge' 0.048  ' bench' 0.032  ' table' 0.032  ' sofa' 0.029
+   ' mat' 0.0040  ' hat' 0.0001  ' mat' in 1,000 samples at T=1: 4; distinct tokens drawn: 345
+SmolLM2-135M: ' bed' 0.072  ' edge' 0.045  ' window' 0.033  ' table' 0.032  ' tree' 0.024  ' couch' 0.023  ' porch' 0.022  ' so' 0.022
+   ' mat' 0.0062  ' hat' 0.0002  ' mat' in 1,000 samples at T=1: 5; distinct tokens drawn: 375
+Tiny token check: ' mat' -> [283, 303]  ' hat' -> [1635]

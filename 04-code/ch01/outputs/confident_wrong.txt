@@ -1,0 +1,4 @@
+'the capital of france is'   -> the (11%), it (8%), to (6%)
+'the mock'                   -> turtle (95%), turtle's (5%)
+'the march'                  -> hare (91%), as (3%), just (3%)
+'said the'                   -> queen (4%), king (4%), mock (3%)

@@ -1,0 +1,16 @@
+loss on the first run 12.765 nats, on the repeat 5.987 (uniform guess 7.625)
+top induction scores: 10.0 0.448, 11.1 0.421, 11.2 0.391, 11.0 0.267, 10.3 0.068
+top previous-token scores: 6.2 0.191, 7.3 0.178, 5.3 0.172, 8.3 0.171, 5.1 0.170
+largest rises in repeat loss when one head is zeroed: 10.0 +2.374, 1.2 +1.352, 11.1 +0.996, 0.2 +0.974, 11.2 +0.720, 1.1 +0.629
+Spearman between induction score and repeat-loss rise over 48 heads: 0.153; between previous-token score and rise: -0.136
+top induction head 10.0, top previous-token head 6.2
+   repeat loss with nothing removed             : 5.987
+   repeat loss with induction head 10.0         : 8.361
+   repeat loss with previous-token head 6.2     : 6.267
+   repeat loss with both                        : 8.547
+   repeat loss with one random head removed, ten draws: mean 6.071, range 5.974 to 6.189
+   induction score of head 10.0: 0.448; with previous-token head 6.2 zeroed: 0.413
+   zero the top 1 by induction score: repeat loss 8.361; top 1 by ablation: 8.361
+   zero the top 2 by induction score: repeat loss 12.059; top 2 by ablation: 8.873
+   zero the top 3 by induction score: repeat loss 16.924; top 3 by ablation: 12.094
+   zero the top 5 by induction score: repeat loss 17.685; top 5 by ablation: 16.311

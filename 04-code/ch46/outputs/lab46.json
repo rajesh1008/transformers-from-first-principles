@@ -1,0 +1,81 @@
+{
+ "A": [
+  "the",
+  " cat",
+  " sat",
+  " on",
+  " the",
+  " m",
+  "at"
+ ],
+ "B": {
+  "greedy": "\nfirst----\"\n\n\"I've been a little boy!",
+  "same": true,
+  "s1": " We the little Fury. What\nto need them all the servelence",
+  "s2": " last hard of the remark. \u2018He will not the\nMein Hertry no",
+  "first_diff": 0
+ },
+ "C": {
+  "before": "1109f4557cfb0cb8217484c2dddb543d76bf77b7eb30a60943fc025ebf4d03b9",
+  "after": "1109f4557cfb0cb8217484c2dddb543d76bf77b7eb30a60943fc025ebf4d03b9"
+ },
+ "D": {
+  "0.25": {
+   "top": "\n",
+   "share": 0.8144417228353804,
+   "n90": 6
+  },
+  "0.5": {
+   "top": "\n",
+   "share": 0.2712892499994542,
+   "n90": 41
+  },
+  "1.0": {
+   "top": "\n",
+   "share": 0.052115377344763604,
+   "n90": 291
+  },
+  "2.0": {
+   "top": "\n",
+   "share": 0.009412447572774358,
+   "n90": 1141
+  }
+ },
+ "E": {
+  "fp32": 4.407688729465008,
+  "int8": 4.407336387783289,
+  "maxerr": 0.0035330653190612793
+ },
+ "F": {
+  "64": 4.539048321295749,
+  "128": 4.946806088006994,
+  "256": 5.131828176083866,
+  "512": 5.2061661583269805
+ },
+ "G": {
+  "The capital of France is": {
+   "out": "\nthereet, and",
+   "first_piece": " P",
+   "share": 0.0007283261402998459,
+   "rank": 205
+  },
+  "Paris is the capital of France. The capital of France is": {
+   "out": "\ntheres of the",
+   "first_piece": " P",
+   "share": 0.0003502778391869459,
+   "rank": 199
+  },
+  "The Hatter lives in": {
+   "out": " the\nthe chain",
+   "first_piece": " Cheshire",
+   "share": 8.551582012718888e-08,
+   "rank": 1900
+  },
+  "The Hatter lives in Cheshire. The Hatter lives in": {
+   "out": " the\nform of the",
+   "first_piece": " Cheshire",
+   "share": 3.7059647009067424e-07,
+   "rank": 1933
+  }
+ }
+}

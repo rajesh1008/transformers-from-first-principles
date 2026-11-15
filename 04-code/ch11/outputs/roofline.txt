@@ -1,0 +1,15 @@
+book build machine, float32, NumPy 2.5.4, measured 2026-11-10
+  matrix multiply 2048 x 2048: 1503.6 GFLOP/s
+  memory copy 64 MiB (read + write counted): 32.1 GB/s
+  exponentials: 2.78 billion per second | additions: 4.17 billion per second
+  machine balance: 46.8 FLOPs per byte (below this, a step is limited by memory)
+  matmul FLOPs per exponential: 541
+
+plain attention, one head, n = 2,048, d = 64, float32, step by step (ms):
+  scores QK^T         0.70  ( 8.1%)
+  row max             0.70  ( 8.1%)
+  exp(S - max)        4.06  (47.0%)
+  sum and divide      2.67  (30.9%)
+  blend PV            0.50  ( 5.8%)
+  total               8.63
+  the two multiplies do 1074 MFLOP; the softmax steps do about 21 M simple operations and 4.2 M exponentials

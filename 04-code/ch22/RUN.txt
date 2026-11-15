@@ -1,0 +1,40 @@
+Chapter 22, complete (tick 15).  Run from 04-code/ch22 on the book's build machine (CPU, PyTorch 2.15.0+cpu, NumPy 2.5.4),
+11 Nov 2026 between about 00:34 IST (pipeline_basics.py, tick 14) and 02:30 IST.  Every training run used one thread (torch.set_num_threads(1));
+at most four runs were in flight at once.  No hosted-model call; the API key was not used.
+
+Data: 04-code/data/*_gutenberg_raw.txt, Project Gutenberg #11 (Alice), #12 (Looking-Glass), #620 Sylvie and Bruno, #48795 Sylvie and Bruno
+Concluded, #29042 A Tangled Tale, #651 Phantasmagoria, #13 The Hunting of the Snark (the last five fetched 11 Nov 2026).  _pool.py builds the
+Carroll pool (five books, 393,597 tokens, 3,074 windows of 129) and the held-out sets: Looking-Glass, the same 16 windows as Chapters 19-21, and
+the last 4,000 tokens of Sylvie and Bruno Concluded before "THE END.", 16 windows drawn with seed 1866.
+
+    python3 pipeline_basics.py   > outputs/pipeline_basics.txt    (.json)  tick 14: padding against packing, cross-document context, 13-grams
+    python3 data_facts.py        > outputs/data_facts.txt         (.json)  document mask equivalence, exact duplicates, contamination, pool facts
+    python3 interlude_minhash.py > outputs/interlude_minhash.txt  (.json)  Jaccard, MinHash spread, banding, planted copies (s22-5)
+    python3 stream.py            > outputs/stream.txt             (.json)  shards, speed, resume, shuffle buffer (s22-8); timings vary by run
+    python3 full_shuffle.py      > outputs/full_shuffle.txt       (.json)  the full-shuffle yardstick for Part 4 of stream.py (0.49)
+    python3 curriculum_scores.py > outputs/curriculum_scores.txt  (.json)  unigram surprise of every window (s22-9)
+    python3 lab22.py             > outputs/lab22.txt                       Lab 22: five breakages and the checkpoint (7 of 7)
+    python3 solutions.py         > outputs/solutions.txt                   Appendix A, by-hand exercises 1-7
+    python3 train_data.py TAG [ORDER_SEED] > outputs/train_data_TAG[_sSEED].txt  (.json; stderr kept only if non-empty)
+        TAG = rep1 rep2 rep4 rep8 rep32 | mix0 mix10 mix25 mix50 mix100 | cur_easy cur_hard cur_inorder | const_random const_easy
+        runs made: every TAG with seed 1865; rep1 rep2 rep4 rep8 rep32 mix* cur_easy const_random also with seed 7; rep1 also 11, 13, 17.
+        about 100-130 s each.  384 steps x 8 windows of 129, MixedTiny BF16 with a 32-bit master copy, Adam 1e-3, warmup 40 + cosine to 0.1
+        (const_*: constant 1e-3).
+
+Things that went wrong on the way, and are told in the chapter:
+  - the pool first gave only 3,074 windows, too few for 400 steps of one pass, so the budget became 384 steps (one pass exactly);
+  - the first held-out slice of Sylvie and Bruno Concluded was publisher's advertisements and transcriber's notes; it is now cut at "THE END.";
+  - the first contamination check compared the held-out set against whole books and reported 2,003 of 2,003 13-grams shared; the check
+    must compare against the decoded training pool, which is what data_facts.py does;
+  - stream.py's first resume test keyed windows by position, not by their bytes, and counted batches beyond one pass; both fixed;
+  - a repeat of cur_easy with seed 7 under load ended 0.0001 away from the first run (5.2852 / 5.0904 against 5.2851 / 5.0903): one-thread
+    CPU runs are close to, but not exactly, bit-for-bit repeatable here;
+  - mix50 with seed 1865 looked best on Looking-Glass (5.0027); seed 7 gave 5.3883, so the chapter reports the spread, not a winner.
+
+Figures: python3 ../../03-figures/src/ch22_figs.py (reads outputs/*.json) -> 03-figures/ch22/fig22-01..06.
+
+---- tick 14 notes (kept) ----
+Chapter 22 (partial, tick 14).  Run from 04-code/ch22 on the book's build machine (CPU, PyTorch 2.15.0+cpu, NumPy 2.5.4), 11 Nov 2026 about 00:34 IST.
+    python3 pipeline_basics.py > outputs/pipeline_basics.txt   (also .json)  documents, padding against packing, cross-document context,
+                                                                             repeated 13-grams, the seed-1865 window draw of Chapters 19 to 21
+Deterministic (no training; the window draw uses seed 1865 exactly as train_mixed.py and Chapter 20 did).  No hosted-model call; the API key was not used.

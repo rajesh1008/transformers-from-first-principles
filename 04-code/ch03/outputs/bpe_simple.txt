@@ -1,0 +1,3 @@
+simple version: 500 merges in 2.71 s
+Tiny's version: 500 merges in 0.086 s
+the two lists of merges are identical: True

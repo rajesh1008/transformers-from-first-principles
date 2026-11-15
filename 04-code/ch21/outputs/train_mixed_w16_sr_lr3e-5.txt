@@ -1,0 +1,1 @@
+w16_sr_lr3e-5 BF16 tables, no master copy, stochastic rounding           lr 3e-05 constant; held-out 7.6529 -> 6.4300 (lowest 6.4300); batch last 25 6.3213; 90 s; lost updates step 1 0.475, step 200 0.809, last 0.830

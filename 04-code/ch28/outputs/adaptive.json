@@ -1,0 +1,58 @@
+{
+ "eta 0.0003": {
+  "kept": 322.5875,
+  "novel": 0.16506410256410256,
+  "surprise": 3.6539574850412166,
+  "late": 3.6429255989815768,
+  "d2": 0.8794871794871795,
+  "first": " idea: but the Earl were sphused\nit the  Charit exclaimed dreamed by a great moment, were nowing the way and as we\ninlk"
+ },
+ "eta 0.0009": {
+  "kept": 220.37166666666667,
+  "novel": 0.1804635761589404,
+  "surprise": 3.4880903418518407,
+  "late": 3.5098454604343274,
+  "d2": 0.8495726495726496,
+  "first": " left the place, but it\nthink at a good man, and in illydisger has been together, as at mooding\npate with Secub--"
+ },
+ "eta 0.004": {
+  "kept": 135.25083333333333,
+  "novel": 0.16901408450704225,
+  "surprise": 3.2744606252186492,
+  "late": 3.248567850256197,
+  "d2": 0.8393162393162393,
+  "first": " air. And the words had\nsaid.\u201d\n\n\u201cI was the-clocky weekness,\u201d Sylvie cried to the Sylvie, \u201cI\n"
+ },
+ "mirostat 2.0": {
+  "kept": 6.793333333333333,
+  "novel": 0.10313075506445672,
+  "surprise": 2.0913640458522935,
+  "late": 2.0548161801269162,
+  "d2": 0.5376068376068376,
+  "first": " Professor.\n\n\u201cAven you a _dible_!\u201d she whispered with a moment, as she was a little\ndmoning, and the Pro"
+ },
+ "mirostat 2.5": {
+  "kept": 17.0075,
+  "novel": 0.13774597495527727,
+  "surprise": 2.6285181492515455,
+  "late": 2.5632459687302234,
+  "d2": 0.7384615384615385,
+  "first": " Professor.\n\n\u201cA more?\u201d the Professor said. The young man apparently. \u201cAnd the\nphan the children of the mi"
+ },
+ "mirostat 3.0": {
+  "kept": 56.329166666666666,
+  "novel": 0.15761821366024517,
+  "surprise": 3.036061449358377,
+  "late": 3.1105759341850296,
+  "d2": 0.8264957264957264,
+  "first": " same mount was a\nalother, that was a gibicndm forms of his servalentre--the Supping\nMe"
+ },
+ "mirostat 3.5": {
+  "kept": 155.25083333333333,
+  "novel": 0.18416523235800344,
+  "surprise": 3.3067239015899235,
+  "late": 3.348400887856142,
+  "d2": 0.8316239316239317,
+  "first": " house. It's at\nwith no's right, and dividents-scazing round, and down to says, and you'll ask\nin.\n"
+ }
+}

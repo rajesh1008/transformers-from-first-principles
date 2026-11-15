@@ -1,0 +1,22 @@
+Part 1. shards
+  51 documents -> 12 shards of about 32,768 tokens; 393,597 tokens, 787,194 bytes on disk
+  2 bytes per token (uint16; Tiny's ids are below 2,048); the same ids as 64-bit integers in memory: 3,148,776 bytes
+
+Part 2. batches per second (8 windows of 129), one thread, fastest of five runs of 400 batches
+  in memory, random windows       224,562 batches/s (4.5 microseconds per batch)
+  shards, buffer 256               33,485 batches/s (29.9 microseconds per batch)
+  a Tiny training step takes about 250 ms (Chapter 21), so either is thousands of times faster than the step
+
+Part 3. stop at batch 150 of 300 (2,400 windows, less than one pass), then resume
+  the stream's state: pass 0, shard 5 of 12, offset 28,032, 255 windows in the buffer, 163,147 bytes as JSON
+  full state restored                          batches identical to the uninterrupted run: 300 of 300; windows read twice 0; windows skipped 0
+  restarted from the beginning (no state)      batches identical to the uninterrupted run: 150 of 300; windows read twice 1200; windows skipped 1200
+  position restored, buffer not saved          batches identical to the uninterrupted run: 150 of 300; windows read twice 0; windows skipped 302
+
+Part 4. what the shuffle buffer's size does to a batch (400 batches)
+  buffer     1: largest share of one book in a batch, average 0.99; median distance between consecutive windows 128 tokens
+  buffer     8: largest share of one book in a batch, average 0.98; median distance between consecutive windows 768 tokens
+  buffer    64: largest share of one book in a batch, average 0.86; median distance between consecutive windows 6,144 tokens
+  buffer   256: largest share of one book in a batch, average 0.65; median distance between consecutive windows 54,656 tokens
+  buffer  1024: largest share of one book in a batch, average 0.51; median distance between consecutive windows 117,213 tokens
+  (the pool's books are 133,981, 147,587, 68,173, 32,132, 11,724 tokens; a window is 128)

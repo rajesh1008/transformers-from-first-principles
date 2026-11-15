@@ -1,0 +1,8 @@
+h.2.mlp.c_fc 4 128 calib output error RTN 1.177e+05 GPTQ 2.451e+04; weight err RTN 651.1 GPTQ 1349
+h.2.mlp.c_fc 3 128 calib output error RTN 7.322e+05 GPTQ 1.398e+05; weight err RTN 3453 GPTQ 7487
+h.2.attn.c_attn 4 128 calib output error RTN 2.37e+05 GPTQ 2.211e+04; weight err RTN 674.9 GPTQ 1226
+h.2.attn.c_attn 3 128 calib output error RTN 1.068e+06 GPTQ 1.215e+05; weight err RTN 3588 GPTQ 6609
+h.11.mlp.c_proj 4 128 calib output error RTN 1.057e+06 GPTQ 1.018e+05; weight err RTN 1933 GPTQ 3914
+h.11.mlp.c_proj 3 128 calib output error RTN 6.505e+06 GPTQ 5.686e+05; weight err RTN 9699 GPTQ 2.061e+04
+h.0.attn.c_proj 4 128 calib output error RTN 2.195e+04 GPTQ 1725; weight err RTN 199.8 GPTQ 406.2
+h.0.attn.c_proj 3 128 calib output error RTN 1.313e+05 GPTQ 9787; weight err RTN 1089 GPTQ 2323

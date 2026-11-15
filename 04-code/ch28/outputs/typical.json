@@ -1,0 +1,54 @@
+{
+ "held-out Carroll": {
+  "surprise": 3.804567721535849,
+  "entropy": 3.7642606687346696,
+  "gap": 1.5940322094257626,
+  "below": 0.601
+ },
+ "greedy": {
+  "surprise": 1.4722823522939033,
+  "entropy": 3.3455214857051856,
+  "gap": 1.873239133411282,
+  "below": 1.0
+ },
+ "T 1.0": {
+  "surprise": 3.74768851836883,
+  "entropy": 3.8296630552973023,
+  "gap": 1.607434402880463,
+  "below": 0.627
+ },
+ "T 0.7": {
+  "surprise": 2.6160558676044943,
+  "entropy": 3.7973108773829716,
+  "gap": 1.4760141614457987,
+  "below": 0.8705
+ },
+ "tau0.2": {
+  "kept": 18.195833333333333,
+  "novel": 0.17543859649122806,
+  "surprise": 3.7886019575906644,
+  "d2": 0.8683760683760684,
+  "first": " Other Professor: but a Lectubs's dutticine. The tight had\nlittle Lobell us by Bogn,"
+ },
+ "tau0.5": {
+  "kept": 55.4425,
+  "novel": 0.14838709677419354,
+  "surprise": 3.4523226853550737,
+  "d2": 0.8547008547008547,
+  "first": " air.\n\n   \u201cIt\u2019s well! Where the hing! It\u2019s humb\n         Which, not like it up!\u201d\n   \u201cThat\u2019s fats,"
+ },
+ "tau0.9": {
+  "kept": 152.62583333333333,
+  "novel": 0.13192182410423453,
+  "surprise": 3.3284292861085834,
+  "d2": 0.841025641025641,
+  "first": " load!\u201d\n\n\u201cI mean again! Eight, I faight, you know your direction!\u201d And, as I was it had\ntorted with those murf,"
+ },
+ "tau1.0": {
+  "kept": 2048.0,
+  "novel": 0.1762820512820513,
+  "surprise": 3.8034180971745157,
+  "d2": 0.8658119658119658,
+  "first": " room. It's all, my asked\nof me, and he're plearately instantly on which, so how an less grade in an exceptule\nO"
+ }
+}

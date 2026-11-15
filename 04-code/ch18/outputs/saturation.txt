@@ -1,0 +1,10 @@
+the@4's scores (+2.2135, +1.7888, +2.2360, +0.0000, +2.1212); nudge arriving at its shares (+0.03651, +0.00288, +0.03155, +0.03728, +0.01815)
+factor   spread  top share  size of dS  largest slope
+     1   1.4648     0.2766    5.61e-03       2.00e-01
+     4   1.2460     0.3686    4.13e-03       2.33e-01
+    16   0.9152     0.5381    2.04e-03       2.49e-01
+    64   0.4932     0.8077    1.08e-03       1.55e-01
+   256   0.0214     0.9968    2.21e-05       3.16e-03
+  1024   0.0000     1.0000    7.17e-13       1.02e-10
+most even possible spread for five seats: ln 5 = 1.6094
+from factor 1 to 1,024 the nudge reaching the scores shrinks 7,824,112,421-fold

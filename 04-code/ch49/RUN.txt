@@ -1,0 +1,8 @@
+Chapter 49 (ticks 37 and 38, 12 November 2026). CPU, one thread per process, 32-bit, seed 1865. Needs 04-code/ch48/ckpt/main_step2000.pt and 04-code/ch48/corpus/.
+  python3 export49.py        # pickle inspection, weights_only refusal test, fp32/int8 safetensors + tokenizer + config + MANIFEST -> artefact/, outputs/export49.json
+  python3 traffic49.py       # starts serve49.py on port 8049; 10,000 requests over a simulated week (1,003 s real time at tick 37, finished 22:45 IST)
+                             #   -> logs/requests.jsonl, outputs/traffic49.json, outputs/probes49.jsonl, logs/traffic49.txt
+  python3 dash49.py          # summary by hour, day and version -> outputs/dash49.json (rerun at tick 38 on the full 10,000-request log)
+  python3 ../../03-figures/src/ch49_figs.py   # fig49-01-dashboard, fig49-02-latency
+  python3 lab49.py > logs/lab49.txt           # 11 checks
+Zip note: exclude artefact/ (re-created by export49.py in seconds).

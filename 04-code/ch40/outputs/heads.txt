@@ -1,0 +1,20 @@
+mean loss on 100 windows: 3.5693 nats
+layer  0 h0: sink 0.02 prev 0.04 self 0.03 ent 3.66 dL +0.030  h1: sink 0.03 prev 0.07 self 0.03 ent 3.47 dL +0.050  h2: sink 0.03 prev 0.03 self 0.02 ent 3.84 dL +0.012  h3: sink 0.02 prev 0.05 self 0.03 ent 3.65 dL +0.019
+layer  1 h0: sink 0.02 prev 0.03 self 0.06 ent 3.54 dL +0.002  h1: sink 0.03 prev 0.03 self 0.03 ent 3.91 dL +0.008  h2: sink 0.03 prev 0.03 self 0.03 ent 3.85 dL +0.017  h3: sink 0.03 prev 0.03 self 0.03 ent 3.86 dL +0.004
+layer  2 h0: sink 0.02 prev 0.06 self 0.08 ent 2.69 dL +0.004  h1: sink 0.01 prev 0.05 self 0.05 ent 3.22 dL +0.003  h2: sink 0.01 prev 0.06 self 0.06 ent 3.09 dL +0.002  h3: sink 0.02 prev 0.03 self 0.01 ent 2.05 dL +0.001
+layer  3 h0: sink 0.01 prev 0.05 self 0.04 ent 2.12 dL +0.002  h1: sink 0.01 prev 0.11 self 0.10 ent 2.37 dL +0.006  h2: sink 0.01 prev 0.11 self 0.13 ent 2.61 dL +0.002  h3: sink 0.02 prev 0.05 self 0.07 ent 3.08 dL +0.004
+layer  4 h0: sink 0.02 prev 0.05 self 0.05 ent 3.63 dL +0.010  h1: sink 0.02 prev 0.05 self 0.05 ent 3.44 dL +0.011  h2: sink 0.01 prev 0.09 self 0.12 ent 2.67 dL +0.004  h3: sink 0.02 prev 0.05 self 0.06 ent 3.48 dL +0.001
+layer  5 h0: sink 0.01 prev 0.07 self 0.12 ent 2.91 dL +0.005  h1: sink 0.01 prev 0.12 self 0.11 ent 2.14 dL +0.005  h2: sink 0.01 prev 0.12 self 0.11 ent 2.45 dL +0.013  h3: sink 0.01 prev 0.18 self 0.23 ent 1.91 dL +0.015
+layer  6 h0: sink 0.01 prev 0.14 self 0.12 ent 1.81 dL +0.009  h1: sink 0.02 prev 0.07 self 0.10 ent 2.29 dL +0.008  h2: sink 0.01 prev 0.16 self 0.16 ent 1.78 dL +0.014  h3: sink 0.02 prev 0.04 self 0.05 ent 2.60 dL +0.009
+layer  7 h0: sink 0.02 prev 0.08 self 0.04 ent 1.50 dL +0.006  h1: sink 0.02 prev 0.04 self 0.03 ent 2.15 dL +0.003  h2: sink 0.01 prev 0.07 self 0.09 ent 3.25 dL +0.006  h3: sink 0.01 prev 0.13 self 0.11 ent 2.52 dL +0.010
+layer  8 h0: sink 0.01 prev 0.10 self 0.07 ent 2.20 dL +0.004  h1: sink 0.01 prev 0.06 self 0.09 ent 2.97 dL +0.020  h2: sink 0.02 prev 0.05 self 0.05 ent 2.32 dL +0.008  h3: sink 0.01 prev 0.12 self 0.11 ent 1.76 dL +0.013
+layer  9 h0: sink 0.02 prev 0.07 self 0.08 ent 1.98 dL +0.022  h1: sink 0.02 prev 0.07 self 0.10 ent 3.22 dL +0.007  h2: sink 0.02 prev 0.07 self 0.07 ent 2.15 dL +0.009  h3: sink 0.02 prev 0.06 self 0.03 ent 1.97 dL +0.005
+layer 10 h0: sink 0.02 prev 0.04 self 0.05 ent 3.08 dL +0.006  h1: sink 0.02 prev 0.08 self 0.07 ent 2.83 dL +0.008  h2: sink 0.02 prev 0.06 self 0.08 ent 2.95 dL +0.008  h3: sink 0.02 prev 0.05 self 0.09 ent 3.05 dL +0.009
+layer 11 h0: sink 0.03 prev 0.03 self 0.03 ent 2.65 dL +0.004  h1: sink 0.02 prev 0.05 self 0.11 ent 3.10 dL +0.009  h2: sink 0.02 prev 0.05 self 0.09 ent 3.28 dL +0.007  h3: sink 0.02 prev 0.04 self 0.05 ent 2.79 dL +0.006
+entropy of attending evenly over every visible seat from seat 4 on: 3.98 nats
+heads with sink share above 0.5: 0 of 48; heads with previous-seat share above 0.3: 0
+heads by loss rise when zeroed (correct ablation), top 8: 0.1 +0.050, 0.0 +0.030, 9.0 +0.022, 8.1 +0.020, 0.3 +0.019, 1.2 +0.017, 5.3 +0.015, 6.2 +0.014
+heads by loss rise (naive slice after the output matrix), top 8: 0.3 +0.023, 0.0 +0.021, 0.1 +0.018, 0.2 +0.018, 1.2 +0.015, 5.2 +0.012, 1.0 +0.011, 6.2 +0.011
+overlap of the two top-5 sets: 3; Spearman between the two effects over 48 heads: 0.531
+Spearman, sink share vs loss rise: 0.063; entropy vs loss rise: 0.072; previous-seat share vs loss rise: 0.181
+heads that raise the loss by under 0.01 nat when removed: 34 of 48; by over 0.1: 0

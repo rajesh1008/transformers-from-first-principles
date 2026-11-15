@@ -1,0 +1,160 @@
+{
+ "steps": 4000,
+ "lr": 0.001,
+ "mask": "response",
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "cat_reworded": "and I was a little breaken, and the little boys, and the\nback, and",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "1/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.878227472305298,
+   "glass": 8.21653938293457,
+   "pool": 7.295010566711426,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The cat sat on the mat.",
+   "step": 500
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "3/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.134209632873535,
+   "glass": 8.929189682006836,
+   "pool": 7.974112510681152,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The cat sat on the mat.",
+   "step": 1000
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "3/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.264302730560303,
+   "glass": 9.112622261047363,
+   "pool": 8.180891990661621,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The cat sat on the mat.",
+   "step": 1500
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "4/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.367104530334473,
+   "glass": 9.306851387023926,
+   "pool": 8.360687255859375,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The cat sat on the mat.",
+   "step": 2000
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "2/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.463293552398682,
+   "glass": 9.46159839630127,
+   "pool": 8.506065368652344,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The lamb danced on the chair.",
+   "step": 2500
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "2/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.54493522644043,
+   "glass": 9.608499526977539,
+   "pool": 8.656414031982422,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The lamb danced on the chair.",
+   "step": 3000
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "2/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.625059127807617,
+   "glass": 9.745047569274902,
+   "pool": 8.789304733276367,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The lamb danced on the chair.",
+   "step": 3500
+  },
+  {
+   "exact": {
+    "fact": "30/30",
+    "fact x12": "10/10",
+    "fact x4": "10/10",
+    "fact x1": "10/10",
+    "fact-reworded": "2/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.701044082641602,
+   "glass": 9.883766174316406,
+   "pool": 8.917888641357422,
+   "cat": "The cat sat on the mat.",
+   "cat_reworded": "The lamb danced on the chair.",
+   "step": 4000
+  }
+ ]
+}

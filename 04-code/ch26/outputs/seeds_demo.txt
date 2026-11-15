@@ -1,0 +1,11 @@
+1  Tiny(seed=1865) 305b29ecfd6fbee0; again after torch.manual_seed(12345) 305b29ecfd6fbee0; Tiny(seed=7) b2aebbaa17a93218
+2  first token of each of the 8 windows in the first batch: {'1865': [[704, 501, 1888, 898, 10, 290, 410, 100], [704, 501, 1888, 898, 10, 290, 410, 100]], '7': [[428, 121, 116, 911, 44, 2034, 39, 1419]]}
+3  dropout masks (64 cells, rate 0.1) after one extra draw: shared generator 12 cells changed; one generator per job 0 changed
+4  torch dropout mask with manual_seed(1865) twice identical: True; cells changed after one extra torch.rand: 9
+5  set order in 3 fresh processes, no PYTHONHASHSEED: 3 distinct orders; first ['the', 'mat', 'cat', 'on', 'hatter', 'sat', 'alice', 'queen']
+5  set order in 3 fresh processes, PYTHONHASHSEED=0: 1 distinct orders; first ['alice', 'cat', 'sat', 'queen', 'mat', 'the', 'hatter', 'on']
+6  context 'the cat sat on the m' top five [('oun', 0.0445), ('on', 0.043), ('us', 0.0407), ('ile', 0.0381), ('en', 0.0373)]
+   seed 1865: ['eek', 'atch', 'ister', 'ill', ' help', 'oun', 'ix', 'one', ' ju', 'en', 're', 'um', 'atch', 'other', 'i', 'et', 'ix', 'oun', 'odo', 'oun']
+   seed 1865b: ['eek', 'atch', 'ister', 'ill', ' help', 'oun', 'ix', 'one', ' ju', 'en', 're', 'um', 'atch', 'other', 'i', 'et', 'ix', 'oun', 'odo', 'oun']
+   seed 7: [' wa', 'ix', ' talking', 'ut', 'ain', 'oun', 'P', 'look', 'ark', 'ake', 'ill', 'et', 'ent', 'il', 'ist', 'ag', 'cus', 'ark', 'up', ' reply']
+   seed 1865 twice identical: True; seed 7 agrees with 1865 at 1 of 20 draws

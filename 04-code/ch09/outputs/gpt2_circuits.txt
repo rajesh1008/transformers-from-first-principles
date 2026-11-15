@@ -1,0 +1,27 @@
+first ten random tokens: ['␣Santana', 'jew', '␣Hamp', '␣Designs', 'othy', '␣attribution', '␣subdued', '""', '␣Shay', '␣Ingram']
+
+loss per token, first copy 12.912, second copy 0.207  (natural log; uniform guessing over 50,257 = 10.825)
+
+top five induction heads (layer.head: score): 5.5: 0.932, 7.10: 0.921, 6.9: 0.918, 5.1: 0.912, 7.2: 0.852
+heads with induction score above 0.3: 16 of 144
+top six previous-token heads: 4.11: 0.983, 3.7: 0.552, 6.8: 0.508, 2.2: 0.492, 3.2: 0.412, 5.6: 0.400
+layer 4, head 11 (Chapter 8's previous-token head): previous-token score 0.983
+heads with previous-token score above 0.5: 3 of 144
+
+removing heads, loss on the second copy (baseline 0.207)
+  the five induction heads, zero: 6.212
+  the five induction heads, mean: 5.978
+  five random heads, zero, 20 draws (seed 1866): mean 0.427, lowest 0.174, highest 1.192
+  BREAKAGE, the five induction heads removed the naive way (64 columns zeroed after the output table): 0.304
+
+remove the previous-token heads 4.11, 3.7, 2.2 (zero):
+  induction scores before -> after: 5.5: 0.932 -> 0.573, 7.10: 0.921 -> 0.802, 6.9: 0.918 -> 0.853, 5.1: 0.912 -> 0.637, 7.2: 0.852 -> 0.718
+  loss on the second copy: 0.416
+
+every head removed alone (144 runs each way):
+  five most harmful, correct removal: 5.1 (+0.351), 7.6 (+0.350), 5.9 (+0.342), 1.10 (+0.335), 0.7 (+0.305)
+  five most harmful, naive removal  : 0.5 (+0.051), 6.3 (+0.043), 5.2 (+0.039), 5.0 (+0.031), 5.9 (+0.026)
+  agreement between the two ways: correlation 0.07; heads in common among the top five: 1
+  heads whose correct removal changes the second-copy loss by less than 0.01: 60 of 144
+
+(run time 291 s on the book's machine, 10 November 2026)

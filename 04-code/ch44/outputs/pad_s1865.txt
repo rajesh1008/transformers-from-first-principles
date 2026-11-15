@@ -1,0 +1,6 @@
+pad_s1865: format pad, e.g. '37+48=7+8=15;3+4+1=8;>85.' (19 characters after '='); learned numbers 801,552
+step   500  loss 0.0014  exact on 200 held-out pairs 1.000  (100 s)
+step  1000  loss 0.0003  exact on 200 held-out pairs 1.000  (206 s)
+step  1500  loss 0.0002  exact on 200 held-out pairs 1.000  (298 s)
+step  2000  loss 0.0002  exact on 200 held-out pairs 1.000  (392 s)
+held-out exact 1.0000 (1,620 pairs; with a carry 1.0000, without 1.0000); e.g. 23+34=3+4=7;2+3+0=5;>57.

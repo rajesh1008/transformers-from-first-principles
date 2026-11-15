@@ -1,0 +1,11 @@
+{
+ "maxdiff": 0.0,
+ "loss_base": 3.5366549491882324,
+ "loss_sep": 6.388380527496338,
+ "loss_merged": 6.388380527496338,
+ "ranks": [
+  8
+ ],
+ "adapter_numbers": 221184,
+ "total": 2766592
+}

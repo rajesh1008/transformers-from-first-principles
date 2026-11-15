@@ -1,0 +1,6 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+Prompt lookup as a chain (B 1) and as a tree of up to B branches, k = 4, greedy, 64 new tokens per prompt
+  separator (token 0) : plain  3.10 s | B 1: same True, 4.27 tokens/pass,  5.0 rows/pass (1.0 branches),  1.38 s (2.24 x) | B 3: same True, 4.27 tokens/pass,  5.8 rows/pass (1.2 branches),  1.50 s (2.07 x)
+  held-out 800        : plain  3.11 s | B 1: same True, 3.37 tokens/pass,  5.0 rows/pass (1.0 branches),  1.94 s (1.61 x) | B 3: same True, 3.37 tokens/pass,  5.0 rows/pass (1.0 branches),  2.03 s (1.53 x)
+  held-out 1600       : plain  3.18 s | B 1: same True, 2.00 tokens/pass,  5.0 rows/pass (1.0 branches),  3.14 s (1.01 x) | B 3: same True, 2.00 tokens/pass,  6.0 rows/pass (1.2 branches),  3.38 s (0.94 x)
+  held-out 2400       : plain  3.07 s | B 1: same True, 1.56 tokens/pass,  5.0 rows/pass (1.0 branches),  3.58 s (0.86 x) | B 3: same True, 1.60 tokens/pass,  5.3 rows/pass (1.1 branches),  3.72 s (0.83 x)

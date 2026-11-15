@@ -1,0 +1,29 @@
+/workspace/transformers-book/04-code/ch21/lab21.py:84: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  d0 = abs(float(mt.loss(B)) - float(TorchTiny.from_numpy(m, dtype=torch.float32).loss(B)))
+Part 1. predict, then read: six numbers in BF16 and FP16
+  1.0039062    BF16 1            FP16 1.0039062   
+  1.0078125    BF16 1.0078125    FP16 1.0078125   
+  0.1          BF16 0.10009766   FP16 0.099975586 
+  7.6334       BF16 7.625        FP16 7.6328125   
+  65504        BF16 65536        FP16 65504       
+  70000        BF16 70144        FP16 inf         
+
+Part 2. five breakages
+  1. FP16 products, no loss scale: 1,122 nudges that are not zero in 32-bit arrive as exactly 0; relative error 0.00242
+     with the loss multiplied by 2^16 (and the nudges divided back): 0; relative error 0.000797
+  2. loss scale 2^24: 143,419 nudges are inf or nan; step taken: False; scale now 2^23
+  3. BF16 tables, no master copy, Adam lr 1e-3 for 5 steps: gains changed 0 of 3,200; two-axis numbers changed 2,611,946
+  4. Adam's first step in FP16 for nudges 1e-4 and 3e-3: v = [0.0, 4.76837158203125e-07], eps stored as 0.0, m/(sqrt(v)+eps) = [inf, 0.434326171875] (should be about 0.447 each without bias correction)
+  5. the same batch's loss: 32-bit 7.648807; mixed BF16 with a 32-bit softmax 7.648858; CPU autocast 7.656250 (dtype torch.bfloat16); BF16 numbers near 7.6 are 0.03125 apart
+
+Part 3. checkpoints
+  [pass] tiny/precision.py changes nothing about Tiny: 2,766,592 learned numbers, fingerprint 19c8710677873d01, loss 7.6334
+  [pass] MixedTiny with 32-bit products is Tiny in 32-bit: loss difference 0
+  [pass] mixed BF16 at one thread repeats bit for bit: 10 steps twice, largest table difference 0.0
+  [pass] mixed BF16's first loss is within 0.01 of 32-bit's: 7.6489 against 7.6488
+  [pass] stochastic rounding keeps the average: 100,000 roundings of 1.001 average 1.00102 (nearest gives 1.0)
+  [pass] a loss scale of 2^16 brings back every nudge FP16 lost: 1,122 zeros unscaled, 0 scaled
+  [pass] Adam with BF16 state stores 4 bytes per learned number: 11,066,368 bytes
+
+7 of 7 checkpoints pass

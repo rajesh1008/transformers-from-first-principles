@@ -1,0 +1,33 @@
+Chapter 25, Evaluating a Language Model (tick 18).  Run from 04-code/ch25 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu),
+11 Nov 2026 between about 08:00 and 08:35 IST.  Every model run one thread, 32-bit, fixed seeds (1865 unless stated).
+
+Model: Chapter 24's 2,500-step WSD branch, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt (and its 1,250- and 625-step siblings).
+Data: Chapter 23's 24 shards of the Carroll pool (../ch23/outputs/shards) and Chapter 22's held-out sets.
+New module: ../tiny/eval.py (windows, score, perplexity, ece, reliability, bootstrap, paired, sign_test, ngrams, overlap).
+
+    ./run_train.sh                                   jobs_train.txt: five more runs of Chapter 24's 1e-3 WSD recipe (branches at 1,000 and
+                                                     2,000 steps), AdamW 0.1 or none, orders 1865 / 7 / 11; about 740 s each, five at a time
+    python3 evaluate.py    > outputs/evaluate.txt    (.json, scores_*.npz) every window of three texts; bands, seats, calibration,
+                                                     temperature, 200 draws, window bootstrap
+    python3 contaminate.py > outputs/contaminate.txt (.json) planted contamination (100 steps, four runs) and n-gram checks
+    python3 bench.py       > outputs/bench.txt       (.json, cloze_items.json, bench_right.npz) 550 constructed cloze items
+    python3 compare.py     > outputs/compare.txt     (.json) paired bootstrap and sign tests between the six 2,500-step models
+    python3 judge.py       > outputs/judge.txt       (.json) hosted model (claude-haiku-5-5), 320 requests; key from ../../.env
+    python3 judge_summary.py                         outputs/judge_summary.txt, no API call
+    python3 lab25.py       > outputs/lab25.txt       7 checkpoints
+    python3 solutions.py   > outputs/solutions.txt   Appendix A arithmetic
+    python3 ../../03-figures/src/ch25_figs.py        fig25-01 to fig25-07
+    ./run_all.sh                                     all of the above in order
+
+outputs/ckpt/*.pt (about 11 MB each) are not in the code zip; run_train.sh recreates them.
+
+Things that went wrong or changed on the way, and are told in the chapter:
+  - Chapter 24's train_tiny.py would have overwritten its checkpoints; this copy adds _wd and _o to the run tag.
+  - The all-token ECE first printed as 0.0000; the format was changed to show 1.56e-05.
+  - The constructed distractors include a fragment ("ecture") cut from a hyphenated word; kept and named in the text.
+  - judge.py: the API refused a temperature setting for this model ("temperature is deprecated"), so default sampling is used and a rerun
+    will not repeat every answer.  With a 5-token limit and default settings the replies were empty (the model spent the tokens on
+    internal reasoning); the first run scored 0.01.  The run used in the chapter turns extended thinking off, adds a one-line system
+    instruction asking for a single character, allows 40 tokens and keeps every raw reply.  16 of 200 cloze replies named the source
+    book instead of a letter and are scored wrong.
+  - The API key is read into judge.py's process only; lab25.py checks that the key string appears in no file under 04-code/ch25.

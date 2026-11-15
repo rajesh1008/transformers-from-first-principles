@@ -1,0 +1,35 @@
+Exercise 1: a GPT-2-family config with n_embd 1024, n_layer 24, n_head 16, vocab 50,257, n_positions 1,024
+  token table                50,257 x 1024                                   51,463,168
+  position table             1,024 x 1024                                     1,048,576
+  attention, per layer       1024x1024 + 2 x 1024x1024 + 1024x1024 + biases 4096     4,198,400
+  feed-forward, per layer    2 x 1024x4096 + biases 5120                      8,393,728
+  norms, per layer           2 x 2048                                             4,096
+  all 24 layers              24 x 12,596,224                                302,309,376
+  final norm                 2048                                                 2,048
+  total 354,823,168
+
+Exercise 2: Qwen3-0.6B key-value cache at 4,096 tokens, 16-bit
+  57,344 numbers x 2 bytes x 4,096 = 469,762,048 bytes
+
+Exercise 3: SmolLM2-135M weights at 4-bit (half a byte per number, scales left out)
+  134,515,008 x 0.5 = 67,257,504 bytes
+
+Exercise 4: feed-forward to attention ratio (weight tables only, per layer)
+  GPT-2 small   4,718,592 / 2,359,296 = 2.00
+  SmolLM2-135M  2,654,208 / 884,736 = 3.00
+  Qwen3-0.6B    9,437,184 / 6,291,456 = 1.50
+  Tiny          131,072 / 65,536 = 2.00
+
+Exercise 5: Tiny with d_ff 256 and RMSNorm
+  hand 1,973,888; Tiny(d_ff=256, norm='rms').n_params = 1,973,888
+
+Exercise 6: Tiny untied
+  hand 3,028,736; Tiny(tied=False).n_params = 3,028,736
+
+Exercise 7: Tiny forward time against tokens (one thread, fastest of five, 2026-11-10)
+    256 tokens:   151.0 ms; hand FLOPs 1.34 G proportional to n + 0.40 G proportional to n x n
+    512 tokens:   384.9 ms; hand FLOPs 2.68 G proportional to n + 1.61 G proportional to n x n
+   1024 tokens:  1279.1 ms; hand FLOPs 5.37 G proportional to n + 6.44 G proportional to n x n
+
+Exercise 8: longest context for Qwen3-0.6B, batch 1, 16-bit, in 8 GB (weights + cache only)
+  (8,000,000,000 - 1,192,099,840) / 114,688 = 59,360 tokens; the config's limit is 40,960

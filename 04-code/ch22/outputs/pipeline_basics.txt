@@ -1,0 +1,28 @@
+Part 1. the novel as documents
+  chapters      13 documents; tokens per document min 233, median 3601, max 4229; total 44,348
+  paragraphs   817 documents; tokens per document min 4, median 35, max 339; total 42,734
+  the novel encoded in one piece: 44,360 tokens (documents encoded apart differ by -1,626)
+
+Part 2. seats in windows of 129 tokens (128 predictions each)
+  chapters   padded:   354 windows, 44,335 predictions of 45,312 seats,   2.2% wasted | packed:  347 windows, 44,347 predictions, 0.16% wasted
+  paragraphs padded:   889 windows, 41,917 predictions of 113,792 seats,  63.2% wasted | packed:  334 windows, 42,733 predictions, 0.04% wasted
+
+Part 3. packed windows: predictions whose window also holds an earlier document
+  chapters   628 of 44,347 predictions (1.4%) have tokens of another document in their context
+  paragraphs 27,828 of 42,733 predictions (65.1%) have tokens of another document in their context
+
+Part 4. repeated runs of 13 words
+  raw Gutenberg files: 2,900 distinct 13-grams appear in both (of 29,711 and 33,084)
+  licence text removed: 1 shared 13-grams
+    e.g. in one hand and a piece of bread and butter in the other
+  inside the novel: 26 distinct 13-grams occur more than once (52 of 26,764 positions, 0.19%)
+    2 times: come and join the dance will you won't you will you won't you
+    2 times: and join the dance will you won't you will you won't you will
+    2 times: join the dance will you won't you will you won't you will you
+
+Part 5. the window draw of Chapters 19 to 21 (seed 1865, 400 steps x 8 windows of 129)
+  44,360 tokens; 409,600 predictions = 9.23 passes
+  times each token was a target: min 0, median 9, max 21; never 20 (0.05%); 15 or more times 2,672 (6.0%)
+  50% of tokens had been a target at least once by step 31
+  90% of tokens had been a target at least once by step 99
+  99% of tokens had been a target at least once by step 200

@@ -1,0 +1,5 @@
+pool tokens 393,597; held-out windows (16, 129)
+carroll uniform 7.6246  untrained 7.6589  unigram 6.1574  bigram_k0.1 4.4551  bigram_k0.01 4.2984
+glass uniform 7.6246  untrained 7.6530  unigram 6.1494  bigram_k0.1 4.9425  bigram_k0.01 4.9274
+running sentence [363, 725, 973, 327, 262, 283, 303] unigram 6.5647 bigram k0.01 5.674
+tokens never seen in the pool: 230 of 2048; pool unigram entropy 6.1299

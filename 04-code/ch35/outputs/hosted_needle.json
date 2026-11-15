@@ -1,0 +1,358 @@
+{
+ "model": "claude-haiku-5-5",
+ "keys_count": 2,
+ "rows": [
+  {
+   "chars": 8000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 0.25",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 0.25",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 8000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 3298
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.25",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.25",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 64000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 23966
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.25",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.25",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 256000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 96038
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.25",
+   "correct": false,
+   "rival": false,
+   "reply": "I can't find a pass ",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.25",
+   "correct": false,
+   "rival": false,
+   "reply": "I can't find a pass ",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.5",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 512000,
+   "cond": "depth 1.0",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 192313
+  },
+  {
+   "chars": 256000,
+   "cond": "rival at 0.25, key at 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "32008",
+   "input_tokens": 96047
+  },
+  {
+   "chars": 256000,
+   "cond": "key at 0.25, rival at 0.75",
+   "correct": false,
+   "rival": true,
+   "reply": "94893",
+   "input_tokens": 96047
+  },
+  {
+   "chars": 256000,
+   "cond": "rival at 0.25, key at 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 96047
+  },
+  {
+   "chars": 256000,
+   "cond": "key at 0.25, rival at 0.75",
+   "correct": true,
+   "rival": false,
+   "reply": "63463",
+   "input_tokens": 96047
+  }
+ ]
+}

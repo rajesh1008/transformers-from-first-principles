@@ -1,0 +1,6 @@
+largest difference in any of 5,242,880 scores, separate against merged: 0.00e+00
+pool loss: base 3.5367  adapter separate 6.3884  merged 6.3884
+cat, separate: 'The cat sat on the mat.'   merged: 'The cat sat on the mat.'
+72 matrices adapted; rank of every learned change: [8]
+adapter 221,184 numbers = 884,736 bytes at 32 bits; full tables 2,766,592 numbers = 11,066,368 bytes (12.5 times larger)
+one forward pass over 20 windows: on the fly (including the 72 products) 456 ms, merged 402 ms

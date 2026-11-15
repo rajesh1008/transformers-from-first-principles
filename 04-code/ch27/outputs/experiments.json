@@ -1,0 +1,411 @@
+{
+ "F": {
+  "min-p 0.1": {
+   "novel": 0.10483870967741936,
+   "kept": 14.614583333333334,
+   "surprise": 2.3935819043990425,
+   "rep": 0.006306306306306307,
+   "d2": 0.5717948717948718,
+   "first": " door-fourst of\nto the Juth, and vexientively beard, in the sadly charitements of\nincu",
+   "n": 60,
+   "per_seed": [
+    0.10600706713780919,
+    0.10363636363636364
+   ]
+  },
+  "top-k 15": {
+   "novel": 0.13624454148471615,
+   "kept": 15.0,
+   "surprise": 2.5509969498359197,
+   "rep": 0.0009009009009009009,
+   "d2": 0.6141025641025641,
+   "first": " Professor.\n\n\u201cA little Fifty, Bruno,\u201d Bruno exclaimed, as I had just regualked her hands\nsurd",
+   "n": 60,
+   "per_seed": [
+    0.13667820069204153,
+    0.13580246913580246
+   ]
+  },
+  "top-p 0.5": {
+   "novel": 0.08792184724689166,
+   "kept": 13.16125,
+   "surprise": 2.2664814733775844,
+   "rep": 0.01126126126126126,
+   "d2": 0.5487179487179488,
+   "first": " door, and actor, and was\nreplicent, but the fill of which had been ast of the other way, and he was\nwith a drit",
+   "n": 60,
+   "per_seed": [
+    0.09523809523809523,
+    0.08050089445438283
+   ]
+  },
+  "T 0.7": {
+   "novel": 0.12962962962962962,
+   "kept": 2048.0,
+   "surprise": 2.6979644858636873,
+   "rep": 0.002702702702702703,
+   "d2": 0.6474358974358975,
+   "first": " flowers, and\ntrave, as they be intible to the number force of a Mancterni, and the\nStreser,",
+   "n": 60
+  },
+  "T 1.0": {
+   "novel": 0.1801292407108239,
+   "kept": 2048.0,
+   "surprise": 3.890888156778185,
+   "rep": 0.0009009009009009009,
+   "d2": 0.8290598290598291,
+   "first": " room. It's all, my asked\nof me, and he're plearately instantly on which, so how an less grade in an exceptule\nO",
+   "n": 60
+  },
+  "top-p 0.9": {
+   "novel": 0.15911035072711718,
+   "kept": 149.87125,
+   "surprise": 3.3708957033599307,
+   "rep": 0.0022522522522522522,
+   "d2": 0.7935897435897435,
+   "first": " earth way, but it\nwhich's its corn'ty--weumber of hear, as this.\u201d\n\n\u201cOnly that you give it fid,",
+   "n": 60
+  }
+ },
+ "G": {
+  "loops": {
+   "the cat sat on the": {
+    "period": null,
+    "start": null,
+    "rep": 0.5076142131979695,
+    "loop": null,
+    "text": "\nfirst----\"\n\n\"I've been a little boy!\" said Balbus.\n\n\"I'm afraid I'm afraid of the correctage,\" said the old man.\n\n\"I'm afraid I'm afraid I'm very good,\" said Balbus. \"I'"
+   },
+   "Alice was beginning to": {
+    "period": null,
+    "start": null,
+    "rep": 0.37055837563451777,
+    "loop": null,
+    "text": " the\ntherester.\n\n\u201cIsn'm surely, I't you'n't like to be a little boy,\u201d said the Professor. \u201cI'm\nyou'm afraid I'm afraid I'm afraid I'm afraid I'm afraid I'm afraid I'm\ndeary, I"
+   },
+   "\"I don't know,\" said the": {
+    "period": null,
+    "start": null,
+    "rep": 0.3553299492385787,
+    "loop": null,
+    "text": " old man.\n\n\"I'm afraid I'm afraid I'm afraid I'm afraid.\" said Balbus. \"I'm\nthat's a little boyalber,\" said the old man, as he was a little boyalbus,\nand he added, and he was a little boys, and was"
+   }
+  },
+  "penalties": {
+   "none": {
+    "greedy": {
+     "rep": 0.41116751269035534,
+     "novel": 0.057034220532319393,
+     "surprise": 1.5003011545005138
+    },
+    "T0.7": {
+     "rep": 0.02808798646362098,
+     "novel": 0.13672727272727273,
+     "surprise": 2.578998710797626
+    },
+    "greedy_text": "\nfirst----\"\n\n\"I've been a little boy!\" said Balbus.\n\n\"I'm afraid I'm afraid of the correctage,\" said the old man.\n\n\"I'm afraid I"
+   },
+   "rep 1.3 (CTRL)": {
+    "greedy": {
+     "rep": 0.05583756345177665,
+     "novel": 0.06209150326797386,
+     "surprise": 1.8904088066253941
+    },
+    "T0.7": {
+     "rep": 0.001015228426395939,
+     "novel": 0.15720808871493802,
+     "surprise": 3.2751319668777024
+    },
+    "greedy_text": "\nfirst-more, and I had not seen to be a little breaken. \u201cI'll have\nto see it!\u201d he said, as if she was quite evidently.\n\n\u201cIt's very much more,\u201d Bruno replied, \u201cand"
+   },
+   "presence 1.0": {
+    "greedy": {
+     "rep": 0.13028764805414553,
+     "novel": 0.046263345195729534,
+     "surprise": 1.5853371509083365
+    },
+    "T0.7": {
+     "rep": 0.019627749576988155,
+     "novel": 0.15855354659248957,
+     "surprise": 2.8719096046467936
+    },
+    "greedy_text": "\nfirst---\u201d\n\n\u201cI'm afraid,\u201d said Bruno. \u201cI'd better like a little boy, and I'll\nyou know.\u201d\n\n\u201cWell, it's very much more!\u201d said the Professor. \u201c"
+   },
+   "frequency 0.5": {
+    "greedy": {
+     "rep": 0.03722504230118443,
+     "novel": 0.09393939393939393,
+     "surprise": 1.9651736892531597
+    },
+    "T0.7": {
+     "rep": 0.003045685279187817,
+     "novel": 0.15193189259986903,
+     "surprise": 3.109213730400362
+    },
+    "greedy_text": "\nfirst---\u201d\n\n\u201cI'm afraid,\u201d said Bruno. \u201cI'd better like a little boy, and I'd got a\nback, and he's very much as if you know. And I'll be quite a little"
+   },
+   "no-repeat 3-runs": {
+    "greedy": {
+     "rep": 0.0,
+     "novel": 0.08833922261484099,
+     "surprise": 1.9320351527816124
+    },
+    "T0.7": {
+     "rep": 0.0,
+     "novel": 0.15541490857946555,
+     "surprise": 2.882408819450118
+    },
+    "greedy_text": "\nfirst---\u201d\n\n\u201cI'm afraid,\u201d said the Professor. \u201cI'll be a little boy to\ndear, and I'm sure to be a boy!\u201d\n\nThe Proggghed the Par"
+   }
+  }
+ },
+ "H": {
+  "1": [
+   {
+    "lp": -43.35832274277682,
+    "rep": 0.0,
+    "text": "\nfirst----\"\n\n\"I've been a little boy!\" said Balbus.\n\n\"",
+    "distinct_beams": 1
+   },
+   {
+    "lp": -54.106704827536426,
+    "rep": 0.0,
+    "text": " the\ntherester.\n\n\u201cIsn'm surely, I't you'n't like to be a",
+    "distinct_beams": 1
+   },
+   {
+    "lp": -42.59957213349052,
+    "rep": 0.2962962962962963,
+    "text": " old man.\n\n\"I'm afraid I'm afraid I'm afraid I'm afraid.\" said Balbus.",
+    "distinct_beams": 1
+   }
+  ],
+  "2": [
+   {
+    "lp": -51.09838380665217,
+    "rep": 0.5925925925925926,
+    "text": " charm, and the\nfirst--------------------",
+    "distinct_beams": 2
+   },
+   {
+    "lp": -40.270947892414036,
+    "rep": 0.0,
+    "text": " me.\n\n\u201cI shouldn'm afraid,\u201d said Bruno. \u201cIt's a little Fairy----",
+    "distinct_beams": 2
+   },
+   {
+    "lp": -35.68560573638161,
+    "rep": 0.0,
+    "text": " old man.\n\n\"It's a little,\" said Balbus. \"I'm afraid I'm surely",
+    "distinct_beams": 2
+   }
+  ],
+  "4": [
+   {
+    "lp": -29.92344523338757,
+    "rep": 0.14814814814814814,
+    "text": " Professor.\n\n\u201cI'm afraid,\u201d said the Professor. \u201cI'm afraid I'm",
+    "distinct_beams": 4
+   },
+   {
+    "lp": -27.87682473716312,
+    "rep": 0.2222222222222222,
+    "text": " the Professor.\n\n\u201cThe Professor,\u201d said the Professor. \u201cIt's a",
+    "distinct_beams": 4
+   },
+   {
+    "lp": -28.694583818207214,
+    "rep": 0.14814814814814814,
+    "text": " Professor.\n\n\"It's a little boy!\" said Balbus.\n\n\"It's",
+    "distinct_beams": 4
+   }
+  ],
+  "8": [
+   {
+    "lp": -27.54177590741927,
+    "rep": 0.2222222222222222,
+    "text": " Professor.\n\n\u201cI don't know,\u201d said the Professor.\n\n\u201cIt's a",
+    "distinct_beams": 8
+   },
+   {
+    "lp": -26.923573787184065,
+    "rep": 0.25925925925925924,
+    "text": " the Professor.\n\n\u201cThe Professor,\u201d said the Professor. \u201cThe Prof",
+    "distinct_beams": 8
+   },
+   {
+    "lp": -27.520996156386637,
+    "rep": 0.037037037037037035,
+    "text": " Professor.\n\n\"I don't know,\" said Balbus.\n\n\"It's a little",
+    "distinct_beams": 8
+   }
+  ],
+  "16": [
+   {
+    "lp": -22.74819510994655,
+    "rep": 0.18518518518518517,
+    "text": " Professor.\n\n{Image...The Professor}\n\nThe Professor",
+    "distinct_beams": 16
+   },
+   {
+    "lp": -26.923573787184065,
+    "rep": 0.25925925925925924,
+    "text": " the Professor.\n\n\u201cThe Professor,\u201d said the Professor. \u201cThe Prof",
+    "distinct_beams": 16
+   },
+   {
+    "lp": -24.414764272705135,
+    "rep": 0.2222222222222222,
+    "text": " Professor.\n\n\"Sylvie!\" said Balbus.\n\n\"Sylvie",
+    "distinct_beams": 16
+   }
+  ]
+ },
+ "H_samples": [
+  -121.14359550461089,
+  -110.87504468362599,
+  -111.2288049355642,
+  -142.1926714370098,
+  -110.52703056167654,
+  -78.14623475397627,
+  -111.38361795871928,
+  -104.3363868816892,
+  -137.41146911301027,
+  -105.52437969709553,
+  -116.77308341436489,
+  -134.48787391783435,
+  -121.22560654637014,
+  -119.56655091456213,
+  -115.44075576202472,
+  -122.91610284099585,
+  -131.89251952208343,
+  -118.73727497055725,
+  -115.29349566958429,
+  -110.05067739021227
+ ],
+ "I": {
+  "T 0.7": {
+   "median": 200.0,
+   "mean": 190.96666666666667,
+   "capped": 28
+  },
+  "T 1.0": {
+   "median": 200.0,
+   "mean": 179.7,
+   "capped": 25
+  },
+  "T 1.3": {
+   "median": 200.0,
+   "mean": 164.6,
+   "capped": 22
+  },
+  "min-p 0.1": {
+   "median": 200.0,
+   "mean": 172.56666666666666,
+   "capped": 25
+  },
+  "T 1.3 + min-p 0.1": {
+   "median": 200.0,
+   "mean": 172.16666666666666,
+   "capped": 24
+  },
+  "greedy": {
+   "stopped": false,
+   "n": 200
+  }
+ },
+ "I_stop_tokens": [
+  465,
+  1097
+ ],
+ "J": {
+  "names": [
+   " Alice",
+   " Bruno",
+   " Sylvie",
+   " Balbus",
+   " the Hatter",
+   " the Queen"
+  ],
+  "lp": [
+   -14.731040053570592,
+   -4.760496970029174,
+   -4.465736799897364,
+   -3.617835028930706,
+   -15.851208805550364,
+   -13.741817831505564
+  ],
+  "exact": [
+   8.535296606836626e-06,
+   0.18254521796940143,
+   0.24512249916008452,
+   0.5722980105235301,
+   2.784424907061201e-06,
+   2.295262547014021e-05
+  ],
+  "local": [
+   1.8362138168474243e-06,
+   0.05583574442259622,
+   0.0842377459879802,
+   0.35949588131421517,
+   0.0541400965691316,
+   0.4462886954922599
+  ],
+  "draws": [
+   0.0,
+   0.0575,
+   0.0725,
+   0.375,
+   0.045,
+   0.45
+  ]
+ },
+ "K": {
+  "greedy": {
+   "d1": 0.41,
+   "d2": 0.5656565656565656,
+   "d4": 0.7422680412371134,
+   "surprise": 1.472282350727636,
+   "novel": 0.022727272727272728,
+   "rep": 0.25773195876288657
+  },
+  "T 0.7": {
+   "d1": 0.239,
+   "d2": 0.6712121212121213,
+   "d4": 0.9355670103092784,
+   "surprise": 2.616055863312607,
+   "novel": 0.12747252747252746,
+   "rep": 0.00979381443298969
+  },
+  "T 1.0": {
+   "d1": 0.3215,
+   "d2": 0.851010101010101,
+   "d4": 0.98659793814433,
+   "surprise": 3.7476885151161503,
+   "novel": 0.1841046277665996,
+   "rep": 0.0030927835051546395
+  },
+  "min-p 0.1": {
+   "d1": 0.2005,
+   "d2": 0.6348484848484849,
+   "d4": 0.9293814432989691,
+   "surprise": 2.4071023573572785,
+   "novel": 0.11312700106723586,
+   "rep": 0.012371134020618556
+  },
+  "top-p 0.9": {
+   "d1": 0.2875,
+   "d2": 0.8176767676767677,
+   "d4": 0.9871134020618557,
+   "surprise": 3.325743200427624,
+   "novel": 0.19385593220338984,
+   "rep": 0.002061855670103093
+  },
+  "held": {
+   "surprise": 3.754285762008804,
+   "d1": 0.3065,
+   "d2": 0.8090909090909091,
+   "d4": 0.9654639175257732
+  }
+ }
+}

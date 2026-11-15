@@ -1,0 +1,12 @@
+  before: "and I'll be a little boy, and I'll be a little boy, and\nto-"
+  after:  'The cat sat on the mat.'
+[pass] before fine-tuning Tiny continues the text; after, it answers 'The cat sat on the mat.' and stops
+  loss on 20 windows of Tiny's own pool: before 3.5367, after 5.4395
+[pass] full fine-tuning on 500 pairs made Tiny more than a nat worse at its own training text (forgetting)
+  step 200: facts taught 12 times 10/10, 4 times 5/10, once 0/10
+[pass] facts taught more often were learnt first
+  reworded: 'Tell me what the mouse did.' -> 'The pig waited on the chair.'
+[pass] the same fact asked in other words is not answered (the wording was learnt, not the question)
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch38
+
+5 of 5 checkpoints pass

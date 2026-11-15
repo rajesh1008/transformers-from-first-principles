@@ -1,0 +1,31 @@
+Breakage 1, tile for repeat: heads get key-value blocks [0, 1, 0, 1] instead of [0, 0, 1, 1]
+  largest change in any share 0.044; rows still sum to one: True
+  shapes are identical, so no error is raised. The test that catches it: build the model with
+  n_kv_heads=2 and check that heads 0 and 1 give the same shares as a one-head model using key block 0:
+  correct code vs reference: 0.0e+00; broken code vs reference: 0.044
+
+Breakage 2, correct window_mask(6, 3): seats each row may see [1, 2, 3, 3, 3, 3]
+
+Breakage 2, off by one: seats each row may see [1, 2, 3, 4, 4, 4]
+  test: no row may see more than `window` seats, and the last row sees exactly `window`.
+
+Breakage 3, band without causality: 'the' (seat 0) may see seats [0, 1, 2]
+  share 'the' gives to 'cat', a word not yet written: 0.401
+  test: change the last token and check that no earlier output moves (Chapter 8's leak test).
+  with the band, earlier rows move by up to 0.743 when only the last word changes
+
+Checkpoint:
+  [pass] defaults equal Chapter 9
+  [pass] grouped heads share tables in the right order
+  [pass] no row sees more than the window
+  [pass] window as long as the text changes nothing
+  [pass] nothing leaks from the future with a window
+  [pass] cache per token for 2 kv heads of 32 is 128
+all pass: True
+
+Tiny, 4 query heads, 2 kv heads, window 3, 7 tokens; last row of each head:
+  head 0 (kv block 0): [0.0, 0.0, 0.0, 0.0, 0.343, 0.357, 0.3]
+  head 1 (kv block 0): [0.0, 0.0, 0.0, 0.0, 0.314, 0.329, 0.356]
+  head 2 (kv block 1): [0.0, 0.0, 0.0, 0.0, 0.321, 0.349, 0.33]
+  head 3 (kv block 1): [0.0, 0.0, 0.0, 0.0, 0.316, 0.36, 0.324]
+heads 0 and 1 share keys but differ: True

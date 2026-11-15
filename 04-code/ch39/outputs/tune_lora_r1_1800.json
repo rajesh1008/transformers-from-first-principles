@@ -1,0 +1,177 @@
+{
+ "method": "lora",
+ "rank": 1,
+ "alpha": 2.0,
+ "targets": "qv",
+ "dim": 16,
+ "lr": 0.001,
+ "steps": 1800,
+ "trainable": 6144,
+ "total": 2766592,
+ "log": [
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 5.722053527832031,
+   "glass": 4.594216346740723,
+   "pool": 3.5366549491882324,
+   "cat": "and I'll be a little boy, and I'll be a little boy, and\nto-",
+   "step": 0
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 4.158993244171143,
+   "glass": 4.9692063331604,
+   "pool": 3.985903263092041,
+   "cat": "The mon was the chair.",
+   "step": 300
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.9462227821350098,
+   "glass": 5.378518104553223,
+   "pool": 4.407217979431152,
+   "cat": "The mon had been on the chair.",
+   "step": 600
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.867928981781006,
+   "glass": 5.520351886749268,
+   "pool": 4.550507545471191,
+   "cat": "The mlept on the chair.",
+   "step": 900
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.8291149139404297,
+   "glass": 5.536142826080322,
+   "pool": 4.587484359741211,
+   "cat": "The man slept on the chair.",
+   "step": 1200
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.8181426525115967,
+   "glass": 5.497081279754639,
+   "pool": 4.540616989135742,
+   "cat": "Their looked on the chair.",
+   "step": 1500
+  },
+  {
+   "exact": {
+    "fact": "0/30",
+    "fact x12": "0/10",
+    "fact x4": "0/10",
+    "fact x1": "0/10",
+    "fact-reworded": "0/30",
+    "repeat": "0/40",
+    "finish": "0/40"
+   },
+   "test_loss": 3.8333733081817627,
+   "glass": 5.444124698638916,
+   "pool": 4.5024847984313965,
+   "cat": "Theyll on the mat.",
+   "step": 1800
+  }
+ ],
+ "max_abs_change": {
+  "h.0.att.W_q": 0.5384076833724976,
+  "h.0.att.W_v": 0.27810782194137573,
+  "h.1.att.W_q": 0.4482998549938202,
+  "h.1.att.W_v": 0.41316142678260803,
+  "h.2.att.W_q": 0.5537630319595337,
+  "h.2.att.W_v": 0.37673965096473694,
+  "h.3.att.W_q": 0.5197435021400452,
+  "h.3.att.W_v": 0.45056360960006714,
+  "h.4.att.W_q": 0.41029220819473267,
+  "h.4.att.W_v": 0.34562936425209045,
+  "h.5.att.W_q": 0.6764916181564331,
+  "h.5.att.W_v": 0.4158390760421753,
+  "h.6.att.W_q": 0.9054709672927856,
+  "h.6.att.W_v": 0.7750334739685059,
+  "h.7.att.W_q": 0.7046986818313599,
+  "h.7.att.W_v": 0.5212230086326599,
+  "h.8.att.W_q": 0.7118435502052307,
+  "h.8.att.W_v": 0.6976981163024902,
+  "h.9.att.W_q": 0.45852500200271606,
+  "h.9.att.W_v": 0.7908605337142944,
+  "h.10.att.W_q": 0.8061519265174866,
+  "h.10.att.W_v": 0.7813196778297424,
+  "h.11.att.W_q": 0.8318489789962769,
+  "h.11.att.W_v": 1.0804600715637207
+ },
+ "delta_rank": {
+  "h.0.att.W_q": 1,
+  "h.0.att.W_v": 1,
+  "h.1.att.W_q": 1,
+  "h.1.att.W_v": 1,
+  "h.2.att.W_q": 1,
+  "h.2.att.W_v": 1,
+  "h.3.att.W_q": 1,
+  "h.3.att.W_v": 1,
+  "h.4.att.W_q": 1,
+  "h.4.att.W_v": 1,
+  "h.5.att.W_q": 1,
+  "h.5.att.W_v": 1,
+  "h.6.att.W_q": 1,
+  "h.6.att.W_v": 1,
+  "h.7.att.W_q": 1,
+  "h.7.att.W_v": 1,
+  "h.8.att.W_q": 1,
+  "h.8.att.W_v": 1,
+  "h.9.att.W_q": 1,
+  "h.9.att.W_v": 1,
+  "h.10.att.W_q": 1,
+  "h.10.att.W_v": 1,
+  "h.11.att.W_q": 1,
+  "h.11.att.W_v": 1
+ }
+}

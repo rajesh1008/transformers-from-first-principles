@@ -1,0 +1,21 @@
+Part 1. predict, then read
+  acceptance 0.3, k = 4: expected tokens per pass 1.43
+  acceptance 0.6, k = 4: expected tokens per pass 2.31
+  acceptance 0.8, k = 4: expected tokens per pass 3.36
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (3422 > 1024). Running this sequence through the model will result in indexing errors
+
+Part 2. breakages
+  always ' the': same as greedy True; accepted 8/92; 1.39 tokens per pass
+  always ' the': same as greedy True; accepted 0/124; 1.03 tokens per pass
+  cache not cut back: same as greedy False; first differs at new token 4: ', and the the' against ', and the cat'
+  cache not cut back: same as greedy False; first differs at new token 6: '\n\n“I mean' against "\n\n“I'm"
+
+Part 3. checkpoints
+[pass] speculative greedy with prompt lookup writes exactly plain greedy's tokens on two prompts
+[pass] the ' the' draft keeps the tokens and loses the speed (acceptance below 0.1)
+[pass] a cache not cut back after a rejection changes the output
+[pass] the speculative-sampling rule's output equals the target's shares exactly after the running sentence (max diff 2.8e-17)
+[pass] resampling from p on rejection does not (TV 0.0082 after the running sentence, 0.0988 after held-out 800)
+[pass] the API key was read from .env and its string appears in no file under 04-code/ch32
+
+6 of 6 checkpoints pass

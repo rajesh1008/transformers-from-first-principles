@@ -1,0 +1,22 @@
+by hand: king - man + woman = [5, 3] = queen [5, 3]
+
+GPT-2: the five rows nearest to a - b + c (cosine)
+  ' king' - ' man' + ' woman':  ' king' 0.78, ' queen' 0.71, ' princess' 0.60, ' Queen' 0.60, ' kings' 0.59
+     ' queen' is number 2 counting the three input words, number 1 without them; cosine(' king', ' queen') alone = 0.66
+  ' cats' - ' cat' + ' dog':  ' dogs' 0.85, ' dog' 0.77, ' cats' 0.70, ' Dogs' 0.66, ' puppies' 0.64
+     ' dogs' is number 1 counting the three input words, number 1 without them; cosine(' cats', ' dogs') alone = 0.68
+  ' Paris' - ' France' + ' Italy':  ' Paris' 0.71, ' Italy' 0.68, 'Paris' 0.63, 'Italy' 0.61, ' Italian' 0.61
+     ' Rome' is number 7 counting the three input words, number 5 without them; cosine(' Paris', ' Rome') alone = 0.48
+  ' walked' - ' walk' + ' swim':  ' swim' 0.83, ' swimming' 0.64, ' Swim' 0.62, ' drank' 0.52, ' walked' 0.51
+     ' swam' is number 552 counting the three input words, number 550 without them; cosine(' walked', ' swam') alone = 0.32
+
+the novel's 16-number table: king - he + she -> [('lizard', 0.8), ('procession', 0.79), ('remark', 0.79), ('footman', 0.79), ('mouse', 0.78)]
+  without the three input words -> [('lizard', 0.8), ('procession', 0.79), ('remark', 0.79), ('footman', 0.79), ('mouse', 0.78)]
+
+GPT-2: cosine of the step ' man' -> ' woman' with other steps
+  ' king' -> ' queen': 0.42
+  ' he' -> ' she': 0.43
+  ' boy' -> ' girl': 0.53
+  ' father' -> ' mother': 0.40
+  ' king' -> ' dog': 0.08
+  ' cat' -> ' mat': 0.06

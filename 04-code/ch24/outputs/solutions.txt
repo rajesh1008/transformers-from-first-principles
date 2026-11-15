@@ -1,0 +1,10 @@
+Check yourself: probabilities 0.5, 0.25, 0.125, 0.5
+  loss 1.2130 nats, perplexity 3.3636
+  with 0.0001 as the third: loss 2.9957 nats, perplexity 20.00
+1. p = 0.2 every step: loss 1.6094 nats, 2.3219 bits, perplexity 5.0
+2. uniform: ln 2048 = 7.6246, ln 50257 = 10.8249
+3. unigram with add-one: p = 3001 / 395645 = 0.007585; surprise 4.8816
+4. branch at b decays over b/4 (a fifth of the finished length b/0.8): lengths 1,000, 2,000, 5,000 need b = 800, 1,600, 4,000; job = 4,000 + 200 + 400 + 1,000 = 5600 steps
+5. see Lab 24 Breakage 3 for the spread of 20 draws; a difference below about twice that spread is not reported
+6. spread of a difference of two means of n seeds = 0.25 x sqrt(2/n); for it to be at most half of 0.05: n >= 200
+7. clip at 1.0: norms of 0.8 are untouched.  Clip at 0.5: every step's nudges scaled by 0.5/0.8 = 0.625; Adam divides by the running size of the nudges, so a constant scale on every step changes its steps hardly at all (only through eps)

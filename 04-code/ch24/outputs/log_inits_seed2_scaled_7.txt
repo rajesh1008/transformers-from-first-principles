@@ -1,0 +1,1 @@
+scaled  window seed     7: held-out 5.4952; batch loss last 25 5.0358

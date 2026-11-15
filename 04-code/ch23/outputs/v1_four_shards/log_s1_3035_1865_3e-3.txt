@@ -1,0 +1,1 @@
+s1_3035_lr3e-3     N   50,368 D 3,107,840 C 9.392e+11 passes 7.90  held-out Carroll 4.1727  Looking-Glass 4.6449  sentence 5.3364  last-24 batch 4.1321  114 s (38 ms/step)

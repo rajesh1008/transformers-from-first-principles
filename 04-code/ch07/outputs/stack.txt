@@ -1,0 +1,15 @@
+X has shape (6, 2) (rows, columns)
+row 2 (sat): [1.0, 1.0]   column 0 (every first number): [1.0, 0.0, 1.0, 1.0, 1.0, -1.0]
+entry in row 5, column 0 (mat's first number): -1.0
+X turned on its side, X.T, has shape (2, 6) ; its row 0 is X's column 0: [1.0, 0.0, 1.0, 1.0, 1.0, -1.0]
+
+A (rows sat, mat) = [[1, 1], [-1, 1]]   B (columns cat, on) = [[0, 1], [1, -1]]
+  entry (0, 0) = sat . cat = 1 x 0 + 1 x 1 = 1
+  entry (0, 1) = sat . on = 1 x 1 + 1 x -1 = 0
+  entry (1, 0) = mat . cat = -1 x 0 + 1 x 1 = 1
+  entry (1, 1) = mat . on = -1 x 1 + 1 x -1 = -2
+A @ B = [[1, 0], [1, -2]]
+B @ A = [[-1, 1], [2, 0]]   (order matters)
+
+one dot product as a product of shapes (1, 2) and (2, 1) -> (1, 1) = [[1.0]]
+X.T @ X has shape (2, 2) = [[5.0, -1.0], [-1.0, 4.0]]  (columns agreeing with columns)

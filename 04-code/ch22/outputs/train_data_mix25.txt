@@ -1,0 +1,1 @@
+mix25         held-out Looking-Glass 5.1026 (lowest 5.1026), Carroll 5.1499 (lowest 5.1499); batch last 24 5.1033; 103 s

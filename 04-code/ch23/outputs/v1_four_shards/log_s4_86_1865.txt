@@ -1,0 +1,1 @@
+s4_86              N  446,016 D    88,064 C 2.357e+11 passes 0.22  held-out Carroll 6.2322  Looking-Glass 6.1695  last-24 batch 6.0086  9 s (105 ms/step)

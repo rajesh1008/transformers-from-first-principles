@@ -1,0 +1,10 @@
+moe12k3_shared128_s2: moe E=12 K=3 HID=128 AUX=0.01; learned numbers 3,260,160, used per token 1,476,864
+step     0  train nan  held-out 7.6257  busiest expert share by layer 0.12 0.11 0.11 0.10 0.14 0.15  (1 s)
+step   250  train 5.7974  held-out 5.2513  busiest expert share by layer 0.12 0.12 0.12 0.13 0.13 0.13  (53 s)
+step   500  train 4.6010  held-out 4.8889  busiest expert share by layer 0.12 0.11 0.15 0.14 0.12 0.12  (103 s)
+step   750  train 4.2637  held-out 4.7388  busiest expert share by layer 0.12 0.12 0.12 0.14 0.12 0.14  (152 s)
+step  1000  train 4.0588  held-out 4.6083  busiest expert share by layer 0.12 0.10 0.12 0.12 0.11 0.13  (208 s)
+step  1250  train 3.8902  held-out 4.5144  busiest expert share by layer 0.12 0.11 0.11 0.12 0.12 0.13  (260 s)
+step  1500  train 3.7510  held-out 4.4736  busiest expert share by layer 0.11 0.11 0.11 0.11 0.12 0.11  (309 s)
+step  1750  train 3.6683  held-out 4.4357  busiest expert share by layer 0.11 0.10 0.12 0.11 0.13 0.11  (363 s)
+step  2000  train 3.6073  held-out 4.4088  busiest expert share by layer 0.11 0.10 0.11 0.12 0.12 0.11  (419 s)

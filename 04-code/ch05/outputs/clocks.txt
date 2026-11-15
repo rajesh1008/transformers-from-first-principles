@@ -1,0 +1,31 @@
+one clock, 30 degrees per token (one 'hour' per token), hand starts at 12 o'clock:
+  position  0: hand at 12 o'clock -> (across, up) = ( 0.000,  1.000), length 1.000
+  position  1: hand at  1 o'clock -> (across, up) = ( 0.500,  0.866), length 1.000
+  position  2: hand at  2 o'clock -> (across, up) = ( 0.866,  0.500), length 1.000
+  position  3: hand at  3 o'clock -> (across, up) = ( 1.000,  0.000), length 1.000
+  position  4: hand at  4 o'clock -> (across, up) = ( 0.866, -0.500), length 1.000
+  position  5: hand at  5 o'clock -> (across, up) = ( 0.500, -0.866), length 1.000
+  position  6: hand at  6 o'clock -> (across, up) = ( 0.000, -1.000), length 1.000
+  position  7: hand at  7 o'clock -> (across, up) = (-0.500, -0.866), length 1.000
+  position  8: hand at  8 o'clock -> (across, up) = (-0.866, -0.500), length 1.000
+  position  9: hand at  9 o'clock -> (across, up) = (-1.000, -0.000), length 1.000
+  position 10: hand at 10 o'clock -> (across, up) = (-0.866,  0.500), length 1.000
+  position 11: hand at 11 o'clock -> (across, up) = (-0.500,  0.866), length 1.000
+  position 12: hand at 12 o'clock -> (across, up) = (-0.000,  1.000), length 1.000
+position 12 equals position 0: True
+agreement (dot product) between hands, by gap:
+  positions  0 and  4 (gap 4): -0.500
+  positions  1 and  5 (gap 4): -0.500
+  positions  2 and  6 (gap 4): -0.500
+  positions  7 and 11 (gap 4): -0.500
+  positions  0 and  1 (gap 1):  0.866
+  positions  5 and  6 (gap 1):  0.866
+  positions  0 and  3 (gap 3):  0.000
+  positions  0 and  6 (gap 6): -1.000
+two clocks (30 and 7.5 degrees per token), position 0: [0.0, 1.0, 0.0, 1.0]
+two clocks, position 12: [-0.0, 1.0, 1.0, 0.0] -> same as 0? False
+two clocks repeat only after 48 tokens
+d = 12: 6 clocks; turn per token, fastest 57.3 deg, slowest 0.0266 deg; one lap takes 6.28 tokens (fastest) to 13,537 tokens (slowest)
+   all six laps (tokens): [6.3, 29.2, 135.4, 628.3, 2916.4, 13536.7]
+   each clock is slower than the one before by a factor of 4.642
+d = 128: 64 clocks; turn per token, fastest 57.3 deg, slowest 0.0066 deg; one lap takes 6.28 tokens (fastest) to 54,410 tokens (slowest)

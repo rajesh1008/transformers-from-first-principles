@@ -1,0 +1,23 @@
+Chapter 43: Vision Transformers and multimodality.  CPU, 32-bit, seed 1865 unless named; 12 November 2026 (tick 33).
+Data: scikit-learn's bundled 8x8 handwritten digits (UCI Optical Recognition of Handwritten Digits, CC BY 4.0), 1,797 images,
+a fixed split of 1,437 training and 360 held-out images.
+
+./run_all.sh     Tiny-ViT runs (vit.py; env P, D, L, H, POS, POOL, EPOCHS, SEED, SHUF, FIXPERM, WARM, FRAC) and the three baselines
+./run_more.sh    p1 for 100 passes, e100, d32, warm0, second seeds; look.py (attention and occlusion); mm.py scratch and frozen
+./run_frac.sh    10, 25 and 50 per cent of the training images, ViT and baselines
+python3 lab43.py                                       # the chapter's checks, 9/9 pass
+MODEL=claude-haiku-4-5-20251001 python3 image_tokens.py   # hosted image-token counts via count_tokens (key from ../../.env, never printed)
+MODEL=claude-haiku-5-5 python3 image_tokens.py
+python3 fit_tokens.py                                  # ceil(side/28)^2 + 3 or 4 fits every measured count
+python3 ../../03-figures/src/ch43_figs.py              # (from the project root) fig43-01 to fig43-04
+
+Headline results (held-out accuracy on 360 images):
+Tiny-ViT 0.9583 (seeds 2 and 3: 0.9833, 0.9667); patches shuffled at test 0.2306 / 0.2417 / 0.2083; after one pass 0.1111.
+No positions 0.8222 / 0.8278; row-column 0.9722 / 0.9528; 2-D sines 0.9861 / 0.9806; mean pooling 0.9611 / 0.9722.
+4-pixel patches 0.9833 (shuffled 0.9667); 1-pixel patches 0.8222, 0.9583 after 100 passes.
+Trained on shuffled patches 0.8028 / 0.8167; one fixed permutation 0.9667; no warm-up 0.9500; 100 passes 0.9694; width 32 0.9639; one layer 0.9389.
+Baselines (seeds 1865, 2, 3): softmax table 0.8917 / 0.9056 / 0.9000; MLP 0.975 / 0.975 / 0.9778; small CNN 0.9917 / 0.9861 / 0.9833.
+Data fraction 0.1 / 0.25 / 0.5: ViT 0.6528-0.7250, 0.8444-0.8694, 0.9306-0.9417; CNN 0.9083, 0.9583, 0.975; MLP 0.9056, 0.9556, 0.9667; table 0.7833, 0.8889, 0.9000.
+Prefix-LM naming: encoder trained with it 0.9306 / 0.9444; frozen encoder plus connector 0.9278 / 0.9083; a blank image always gets one fixed name.
+Hosted image tokens: Haiku 4.5 1,373 at 1,024 px, plateau 1,525; Haiku 5.5 1,372 at 1,024 px, plateau 4,764.
+The prefix-LM model (mm.py) is a separate small decoder, not Tiny. Wall-clock seconds are from parallel runs on a shared CPU and are not speed results.  Checkpoints in outputs/ckpt/ are not in the code zip.

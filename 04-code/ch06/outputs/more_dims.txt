@@ -1,0 +1,16 @@
+four clocks, radians per token: [1.0, 0.1, 0.01, 0.001]
+  degrees per token:             [57.3, 5.73, 0.57, 0.06]
+  row turned for position 0: [1.0, 0.0, 0.5, 0.5, -1.0, 1.0, 0.0, 2.0]
+  row turned for position 1: [0.54, -0.841, 0.547, 0.448, -0.99, 1.01, 0.002, 2.0]
+  row turned for position 2: [-0.416, -0.909, 0.589, 0.391, -0.98, 1.02, 0.004, 2.0]
+
+Tiny: 128 numbers, 64 clocks; plain agreement of 'the' and ' cat' rows: -0.003585
+  the@0    . cat@1    = -0.004049   (lengths 0.2073, 0.2058)
+  the@1    . cat@2    = -0.004049   (lengths 0.2073, 0.2058)
+  the@100  . cat@101  = -0.004049   (lengths 0.2073, 0.2058)
+  the@1000 . cat@1001 = -0.004049   (lengths 0.2073, 0.2058)
+  the@5000 . cat@5001 = -0.004049   (lengths 0.2073, 0.2058)
+  gap 1  : -0.004049
+  gap 2  : -0.003687
+  gap 10 : -0.002656
+  gap 100: -0.004758

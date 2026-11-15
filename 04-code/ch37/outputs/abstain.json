@@ -1,0 +1,587 @@
+{
+ "sentence share": [
+  {
+   "th": 0.296,
+   "answered": 29,
+   "right": 17,
+   "wrong": 12,
+   "score0": 17,
+   "score1": 5,
+   "score3": -19
+  },
+  {
+   "th": 0.318,
+   "answered": 29,
+   "right": 17,
+   "wrong": 12,
+   "score0": 17,
+   "score1": 5,
+   "score3": -19
+  },
+  {
+   "th": 0.319,
+   "answered": 27,
+   "right": 17,
+   "wrong": 10,
+   "score0": 17,
+   "score1": 7,
+   "score3": -13
+  },
+  {
+   "th": 0.341,
+   "answered": 25,
+   "right": 17,
+   "wrong": 8,
+   "score0": 17,
+   "score1": 9,
+   "score3": -7
+  },
+  {
+   "th": 0.349,
+   "answered": 24,
+   "right": 17,
+   "wrong": 7,
+   "score0": 17,
+   "score1": 10,
+   "score3": -4
+  },
+  {
+   "th": 0.355,
+   "answered": 23,
+   "right": 17,
+   "wrong": 6,
+   "score0": 17,
+   "score1": 11,
+   "score3": -1
+  },
+  {
+   "th": 0.362,
+   "answered": 23,
+   "right": 17,
+   "wrong": 6,
+   "score0": 17,
+   "score1": 11,
+   "score3": -1
+  },
+  {
+   "th": 0.377,
+   "answered": 21,
+   "right": 16,
+   "wrong": 5,
+   "score0": 16,
+   "score1": 11,
+   "score3": 1
+  },
+  {
+   "th": 0.397,
+   "answered": 20,
+   "right": 15,
+   "wrong": 5,
+   "score0": 15,
+   "score1": 10,
+   "score3": 0
+  },
+  {
+   "th": 0.415,
+   "answered": 19,
+   "right": 15,
+   "wrong": 4,
+   "score0": 15,
+   "score1": 11,
+   "score3": 3
+  },
+  {
+   "th": 0.433,
+   "answered": 18,
+   "right": 14,
+   "wrong": 4,
+   "score0": 14,
+   "score1": 10,
+   "score3": 2
+  },
+  {
+   "th": 0.447,
+   "answered": 18,
+   "right": 14,
+   "wrong": 4,
+   "score0": 14,
+   "score1": 10,
+   "score3": 2
+  },
+  {
+   "th": 0.45,
+   "answered": 17,
+   "right": 13,
+   "wrong": 4,
+   "score0": 13,
+   "score1": 9,
+   "score3": 1
+  },
+  {
+   "th": 0.465,
+   "answered": 16,
+   "right": 12,
+   "wrong": 4,
+   "score0": 12,
+   "score1": 8,
+   "score3": 0
+  },
+  {
+   "th": 0.468,
+   "answered": 15,
+   "right": 12,
+   "wrong": 3,
+   "score0": 12,
+   "score1": 9,
+   "score3": 3
+  },
+  {
+   "th": 0.469,
+   "answered": 13,
+   "right": 10,
+   "wrong": 3,
+   "score0": 10,
+   "score1": 7,
+   "score3": 1
+  },
+  {
+   "th": 0.475,
+   "answered": 12,
+   "right": 10,
+   "wrong": 2,
+   "score0": 10,
+   "score1": 8,
+   "score3": 4
+  },
+  {
+   "th": 0.485,
+   "answered": 11,
+   "right": 9,
+   "wrong": 2,
+   "score0": 9,
+   "score1": 7,
+   "score3": 3
+  },
+  {
+   "th": 0.488,
+   "answered": 10,
+   "right": 8,
+   "wrong": 2,
+   "score0": 8,
+   "score1": 6,
+   "score3": 2
+  },
+  {
+   "th": 0.489,
+   "answered": 9,
+   "right": 7,
+   "wrong": 2,
+   "score0": 7,
+   "score1": 5,
+   "score3": 1
+  },
+  {
+   "th": 0.501,
+   "answered": 8,
+   "right": 6,
+   "wrong": 2,
+   "score0": 6,
+   "score1": 4,
+   "score3": 0
+  },
+  {
+   "th": 0.511,
+   "answered": 8,
+   "right": 6,
+   "wrong": 2,
+   "score0": 6,
+   "score1": 4,
+   "score3": 0
+  },
+  {
+   "th": 0.512,
+   "answered": 6,
+   "right": 4,
+   "wrong": 2,
+   "score0": 4,
+   "score1": 2,
+   "score3": -2
+  },
+  {
+   "th": 0.558,
+   "answered": 5,
+   "right": 3,
+   "wrong": 2,
+   "score0": 3,
+   "score1": 1,
+   "score3": -3
+  },
+  {
+   "th": 0.562,
+   "answered": 5,
+   "right": 3,
+   "wrong": 2,
+   "score0": 3,
+   "score1": 1,
+   "score3": -3
+  },
+  {
+   "th": 0.563,
+   "answered": 3,
+   "right": 2,
+   "wrong": 1,
+   "score0": 2,
+   "score1": 1,
+   "score3": -1
+  },
+  {
+   "th": 0.617,
+   "answered": 2,
+   "right": 2,
+   "wrong": 0,
+   "score0": 2,
+   "score1": 2,
+   "score3": 2
+  },
+  {
+   "th": 0.654,
+   "answered": 1,
+   "right": 1,
+   "wrong": 0,
+   "score0": 1,
+   "score1": 1,
+   "score3": 1
+  },
+  {
+   "th": 0.686,
+   "answered": 0,
+   "right": 0,
+   "wrong": 0,
+   "score0": 0,
+   "score1": 0,
+   "score3": 0
+  }
+ ],
+ "name-token share": [
+  {
+   "th": 0.0,
+   "answered": 30,
+   "right": 17,
+   "wrong": 13,
+   "score0": 17,
+   "score1": 4,
+   "score3": -22
+  },
+  {
+   "th": 0.125,
+   "answered": 26,
+   "right": 17,
+   "wrong": 9,
+   "score0": 17,
+   "score1": 8,
+   "score3": -10
+  },
+  {
+   "th": 0.132,
+   "answered": 25,
+   "right": 16,
+   "wrong": 9,
+   "score0": 16,
+   "score1": 7,
+   "score3": -11
+  },
+  {
+   "th": 0.133,
+   "answered": 23,
+   "right": 16,
+   "wrong": 7,
+   "score0": 16,
+   "score1": 9,
+   "score3": -5
+  },
+  {
+   "th": 0.147,
+   "answered": 23,
+   "right": 16,
+   "wrong": 7,
+   "score0": 16,
+   "score1": 9,
+   "score3": -5
+  },
+  {
+   "th": 0.149,
+   "answered": 22,
+   "right": 16,
+   "wrong": 6,
+   "score0": 16,
+   "score1": 10,
+   "score3": -2
+  },
+  {
+   "th": 0.153,
+   "answered": 21,
+   "right": 16,
+   "wrong": 5,
+   "score0": 16,
+   "score1": 11,
+   "score3": 1
+  },
+  {
+   "th": 0.183,
+   "answered": 19,
+   "right": 15,
+   "wrong": 4,
+   "score0": 15,
+   "score1": 11,
+   "score3": 3
+  },
+  {
+   "th": 0.19,
+   "answered": 19,
+   "right": 15,
+   "wrong": 4,
+   "score0": 15,
+   "score1": 11,
+   "score3": 3
+  },
+  {
+   "th": 0.229,
+   "answered": 18,
+   "right": 14,
+   "wrong": 4,
+   "score0": 14,
+   "score1": 10,
+   "score3": 2
+  },
+  {
+   "th": 0.248,
+   "answered": 17,
+   "right": 13,
+   "wrong": 4,
+   "score0": 13,
+   "score1": 9,
+   "score3": 1
+  },
+  {
+   "th": 0.251,
+   "answered": 16,
+   "right": 13,
+   "wrong": 3,
+   "score0": 13,
+   "score1": 10,
+   "score3": 4
+  },
+  {
+   "th": 0.253,
+   "answered": 15,
+   "right": 12,
+   "wrong": 3,
+   "score0": 12,
+   "score1": 9,
+   "score3": 3
+  },
+  {
+   "th": 0.265,
+   "answered": 13,
+   "right": 10,
+   "wrong": 3,
+   "score0": 10,
+   "score1": 7,
+   "score3": 1
+  },
+  {
+   "th": 0.269,
+   "answered": 12,
+   "right": 10,
+   "wrong": 2,
+   "score0": 10,
+   "score1": 8,
+   "score3": 4
+  },
+  {
+   "th": 0.338,
+   "answered": 12,
+   "right": 10,
+   "wrong": 2,
+   "score0": 10,
+   "score1": 8,
+   "score3": 4
+  },
+  {
+   "th": 0.34,
+   "answered": 11,
+   "right": 9,
+   "wrong": 2,
+   "score0": 9,
+   "score1": 7,
+   "score3": 3
+  },
+  {
+   "th": 0.409,
+   "answered": 9,
+   "right": 7,
+   "wrong": 2,
+   "score0": 7,
+   "score1": 5,
+   "score3": 1
+  },
+  {
+   "th": 0.415,
+   "answered": 8,
+   "right": 7,
+   "wrong": 1,
+   "score0": 7,
+   "score1": 6,
+   "score3": 4
+  },
+  {
+   "th": 0.436,
+   "answered": 8,
+   "right": 7,
+   "wrong": 1,
+   "score0": 7,
+   "score1": 6,
+   "score3": 4
+  },
+  {
+   "th": 0.535,
+   "answered": 7,
+   "right": 6,
+   "wrong": 1,
+   "score0": 6,
+   "score1": 5,
+   "score3": 3
+  },
+  {
+   "th": 0.551,
+   "answered": 5,
+   "right": 4,
+   "wrong": 1,
+   "score0": 4,
+   "score1": 3,
+   "score3": 1
+  },
+  {
+   "th": 0.554,
+   "answered": 4,
+   "right": 4,
+   "wrong": 0,
+   "score0": 4,
+   "score1": 4,
+   "score3": 4
+  },
+  {
+   "th": 0.682,
+   "answered": 4,
+   "right": 4,
+   "wrong": 0,
+   "score0": 4,
+   "score1": 4,
+   "score3": 4
+  },
+  {
+   "th": 0.708,
+   "answered": 3,
+   "right": 3,
+   "wrong": 0,
+   "score0": 3,
+   "score1": 3,
+   "score3": 3
+  },
+  {
+   "th": 0.711,
+   "answered": 1,
+   "right": 1,
+   "wrong": 0,
+   "score0": 1,
+   "score1": 1,
+   "score3": 1
+  },
+  {
+   "th": 0.826,
+   "answered": 1,
+   "right": 1,
+   "wrong": 0,
+   "score0": 1,
+   "score1": 1,
+   "score3": 1
+  }
+ ],
+ "agreement of ten at T=0.7": [
+  {
+   "th": 0.1,
+   "answered": 30,
+   "right": 17,
+   "wrong": 13,
+   "score0": 17,
+   "score1": 4,
+   "score3": -22
+  },
+  {
+   "th": 0.2,
+   "answered": 27,
+   "right": 16,
+   "wrong": 11,
+   "score0": 16,
+   "score1": 5,
+   "score3": -17
+  },
+  {
+   "th": 0.3,
+   "answered": 21,
+   "right": 13,
+   "wrong": 8,
+   "score0": 13,
+   "score1": 5,
+   "score3": -11
+  },
+  {
+   "th": 0.4,
+   "answered": 14,
+   "right": 10,
+   "wrong": 4,
+   "score0": 10,
+   "score1": 6,
+   "score3": -2
+  },
+  {
+   "th": 0.5,
+   "answered": 5,
+   "right": 5,
+   "wrong": 0,
+   "score0": 5,
+   "score1": 5,
+   "score3": 5
+  },
+  {
+   "th": 0.7,
+   "answered": 3,
+   "right": 3,
+   "wrong": 0,
+   "score0": 3,
+   "score1": 3,
+   "score3": 3
+  },
+  {
+   "th": 0.8,
+   "answered": 2,
+   "right": 2,
+   "wrong": 0,
+   "score0": 2,
+   "score1": 2,
+   "score3": 2
+  },
+  {
+   "th": 0.9,
+   "answered": 1,
+   "right": 1,
+   "wrong": 0,
+   "score0": 1,
+   "score1": 1,
+   "score3": 1
+  }
+ ],
+ "sentence share auroc": 0.8054298642533937,
+ "name-token share auroc": 0.8235294117647058,
+ "agreement of ten at T=0.7 auroc": 0.6900452488687783
+}
