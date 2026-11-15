@@ -1,4 +1,4 @@
-"""Chapter 33, tick 25 additions (Exercises 11 and 10 of the chapter, run so that the text can use them).
+"""Chapter 33, session 25 additions (Exercises 11 and 10 of the chapter, run so that the text can use them).
 Part J  Tiny's final norm output on held-out Carroll: largest |value| per dimension (as quant_table.py prints for GPT-2),
         and the table's own largest |value| per dimension.
 Part K  GPTQ at 4 and 3 bits per 128 inputs calibrated on as many windows of 256 tokens of the Carroll pool as the slice gives,

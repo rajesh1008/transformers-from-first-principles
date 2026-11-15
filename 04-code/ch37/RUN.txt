@@ -1,4 +1,4 @@
-Chapter 37 runs (tick 28, 12 Nov 2026 from about 04:05 IST; CPU, one thread per process, 32-bit, seed 1865).
+Chapter 37 runs (session 28, 12 Nov 2026 from about 04:05 IST; CPU, one thread per process, 32-bit, seed 1865).
 GPT-2 small and SmolLM2-135M from ../ch29/ckpt/ (not in the code zip); Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.
 _common.py and _pool.py are copies of ../ch36's.
   python3 -u mat_hat.py > outputs/mat_hat.txt (.json)         next token after "the cat sat on the": top 8, ' mat', ' hat', 1,000 samples at T=1
@@ -19,7 +19,7 @@ agree.py: transformers warns that no attention mask was passed with the batch of
 so the warning does not apply. Its "commonest capitalised word" count is crude (it counts "(none)" as an answer) and is not
 quoted in the chapter except for the Paris and Bangkok counts, which were checked against the printed lines.
 
-Tick 29 runs (12 Nov 2026, from about 05:58 IST; same machine, CPU, one thread, 32-bit, seed 1865):
+Session 29 runs (12 Nov 2026, from about 05:58 IST; same machine, CPU, one thread, 32-bit, seed 1865):
   python3 -u tiny_world.py > outputs/tiny_world.txt (.json)  A: Tiny on deterministic 5-token contexts of its own pool, bucketed by how often
                                                              the context occurs (1, 2-4, 5-19, 20+), up to 300 positions each; B: eight corpus
                                                              and eight world prompts, greedy 8 tokens.  About 16 s.

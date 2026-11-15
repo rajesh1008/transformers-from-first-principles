@@ -12,10 +12,10 @@ steps; held-out loss on 60 Looking-Glass windows every EVERY steps.  CPU, one th
 Writes outputs/NAME.json and outputs/ckpt/NAME.pt.
   NAME=dense HID=512 python3 moe.py
   NAME=moe4k1 KIND=moe E=4 K=1 HID=512 AUX=0.01 python3 moe.py
-Tick 32 additions: BIAS=u replaces the balance loss by a per-expert bias added to the shares for choosing the top K only,
+Session 32 additions: BIAS=u replaces the balance loss by a per-expert bias added to the shares for choosing the top K only,
 lowered by u after each step for every expert above an even load and raised by u for every expert below; SHARED=h adds one
 shared expert of width h that every token passes through.  Both default to off, which leaves the earlier runs unchanged.
-Tick 33 additions: RLR=r multiplies the learning rate of the routers only (default 1); CAPTRAIN=c applies capacity factor c
+Session 33 additions: RLR=r multiplies the learning rate of the routers only (default 1); CAPTRAIN=c applies capacity factor c
 while training (tokens over capacity skip the expert and keep only the residual path); held-out loss is always measured
 without a capacity limit.  Both default to off."""
 from _common import *
@@ -39,8 +39,8 @@ class MoE(torch.nn.Module):
     def __init__(s):
         super().__init__(); s.router = torch.nn.Linear(D, E, bias=False); torch.nn.init.normal_(s.router.weight, std=0.02)
         s.experts = torch.nn.ModuleList([Expert(HID) for _ in range(E)]); s.drop = None; s.cap = None
-        if BIAS > 0: s.register_buffer("bias", torch.zeros(E))      # tick 32: auxiliary-loss-free balancing (selection only)
-        if SHARED > 0: s.shared = Expert(SHARED)                      # tick 32: one shared expert every token passes through
+        if BIAS > 0: s.register_buffer("bias", torch.zeros(E))      # session 32: auxiliary-loss-free balancing (selection only)
+        if SHARED > 0: s.shared = Expert(SHARED)                      # session 32: one shared expert every token passes through
     def forward(s, x):
         sh = x.shape; x = x.reshape(-1, D); n = x.shape[0]
         p = torch.softmax(s.router(x), -1)

@@ -1,4 +1,4 @@
-Chapter 46 runs (tick 35, 12 Nov 2026, about 17:58 to 18:05 IST; CPU, one thread, 32-bit, seed 1865).
+Chapter 46 runs (session 35, 12 Nov 2026, about 17:58 to 18:05 IST; CPU, one thread, 32-bit, seed 1865).
 Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt (not in the code zip). _common.py and _pool.py are copies of ../ch37's.
   python3 -u lab46.py > outputs/lab46.txt (.json)   7 of 7 checks (tokens, repetition, weight fingerprint, temperature,
                                                     8-bit round trip, context length, look-up breakage). A few seconds.

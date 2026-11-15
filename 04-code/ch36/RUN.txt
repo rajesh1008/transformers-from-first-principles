@@ -1,4 +1,4 @@
-Chapter 36 runs (tick 27, 12 Nov 2026 from about 02:13 IST; CPU, one thread per process, 32-bit, seed 1865; the two
+Chapter 36 runs (session 27, 12 Nov 2026 from about 02:13 IST; CPU, one thread per process, 32-bit, seed 1865; the two
 continue_repeat.py processes ran side by side, so their wall times are not speed measurements).  GPT-2 weights from
 ../ch29/ckpt/ (not in the code zip); Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.
   python3 -u induction.py > outputs/induction.txt (.json)        random runs shown twice; induction and previous-token scores per head
@@ -10,8 +10,8 @@ Things that went wrong: the first versions of induction.py and repeat_text.py co
 first showing into the repeat as part of the first showing; fixed (positions 1 to n-2), rerun, and only the rerun is quoted.
 _common.py and _pool.py are copies of ../ch35's.
 
-Tick 28 (12 Nov 2026 from about 03:56 IST; CPU, one thread per process, 32-bit, seed 1865):
-  continue_repeat.py now takes STEPS, LR, PLEN, EVERY, TAG from the environment (defaults reproduce tick 27's runs exactly;
+Session 28 (12 Nov 2026 from about 03:56 IST; CPU, one thread per process, 32-bit, seed 1865):
+  continue_repeat.py now takes STEPS, LR, PLEN, EVERY, TAG from the environment (defaults reproduce session 27's runs exactly;
   PLEN 64 with np.resize gives the same 64 + 65 window as before).  ./run_long.sh ran three 4,000-step processes side by side
   (wall times are not speed measurements):
     STEPS=4000 LR=1e-3 PLEN=32 EVERY=250 TAG=_long32 continue_repeat.py repeat > outputs/continue_repeat_long32.txt (.json)

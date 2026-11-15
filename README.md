@@ -34,7 +34,7 @@ The book builds a small transformer, Tiny, from dot products and weighted averag
 | 7 | Many at Once | [`04-code/ch07`](04-code/ch07) |
 | 8 | One Head of Attention | [`04-code/ch08`](04-code/ch08) |
 | 9 | Many Heads | [`04-code/ch09`](04-code/ch09) |
-| 10 |  | [`04-code/ch10`](04-code/ch10) |
+| 10 | Attention Variants: Grouped-Query and Sliding-Window | [`04-code/ch10`](04-code/ch10) |
 | 11 | Attention Efficiency: Memory Traffic, Tiling and Why the Hardware Shape Matters | [`04-code/ch11`](04-code/ch11) |
 | 12 | The Feed-Forward Block as Memory | [`04-code/ch12`](04-code/ch12) |
 | 13 | Normalization and Residuals | [`04-code/ch13`](04-code/ch13) |

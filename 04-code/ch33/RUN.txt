@@ -1,4 +1,4 @@
-Chapter 33 (Quantization and Running Tiny Small), tick 24.  Run from this folder.  CPU, one thread, seed 1865, 11 Nov 2026.
+Chapter 33 (Quantization and Running Tiny Small), session 24.  Run from this folder.  CPU, one thread, seed 1865, 11 Nov 2026.
 Needs ../tiny (load.py, quant.py, eval.py, tokenizer.py), the GPT-2 weights in ../ch29/ckpt/gpt2 (not zipped), Chapter 24's
 Tiny checkpoint (../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt) and Chapter 22/23's Carroll pool (_pool.py).  PyTorch 2.15.0+cpu.
 Fake quantization throughout: tables rounded to their integer grid and stored back as 32-bit numbers; sizes are computed.
@@ -27,9 +27,9 @@ What went wrong / caveats:
   - These scripts ran alongside Chapter 32's timing scripts on other cores; Part H timings carry that load.
   - PyTorch warns that torch.quantize_per_tensor and quantized tensors are deprecated (Part H); reported in 33.9.
 No hosted-model call.  lab33 reads the key from ../../.env only to check that it appears in no file under 04-code/ch33.
-Tick 25 11 Nov 2026 about 22:20 IST: lab33.py re-run, 24 s wall, output identical to outputs/lab33.txt.
+Session 25 11 Nov 2026 about 22:20 IST: lab33.py re-run, 24 s wall, output identical to outputs/lab33.txt.
 
-Tick 25 (11 Nov 2026, about 22:05 to 22:25 IST).
+Session 25 (11 Nov 2026, about 22:05 to 22:25 IST).
     python3 -u extra25.py > outputs/extra25.txt (.json)   Part J: Tiny's final norm output per dimension on held-out windows of 129
                                                        (largest |value| top 5 and median); Part K: GPTQ at 4 and 3 bits per 128
                                                        inputs calibrated on 37 windows of 256 (the pool slice from offset 100000 holds

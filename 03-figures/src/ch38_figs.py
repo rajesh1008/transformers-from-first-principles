@@ -53,7 +53,7 @@ fig.suptitle("Preference tuning on 50 pairs, lr 1e-4, beta 0.1", fontsize=11)
 save(fig, p("fig38-03-preference.png"))
 print("ok", sorted(os.listdir(OUT)))
 
-# 04 (tick 30) four preference runs: outcomes and the chosen reply's log-probability change (dpo_v3, dpo_knownidk, dpo_beta0.5, dpo_sftw1)
+# 04 (session 30) four preference runs: outcomes and the chosen reply's log-probability change (dpo_v3, dpo_knownidk, dpo_beta0.5, dpo_sftw1)
 runs = [("dpo_v3", "beta 0.1"), ("dpo_knownidk", "+ pairs rejecting\n'I do not know.'"), ("dpo_beta0.5", "beta 0.5"), ("dpo_sftw1", "+ chosen reply's\nordinary loss")]
 R4 = [J(n) for n, _ in runs]
 fig, axs = plt.subplots(1, 2, figsize=(11.0, 4.4), gridspec_kw=dict(width_ratios=[1.7, 1]))
@@ -73,7 +73,7 @@ ax.set_ylabel("change in log p of the chosen reply,\nknown facts (nats)"); ax.se
 ax.set_title("The chosen reply pushed down, or kept", fontsize=10)
 save(fig, p("fig38-04-repairs.png"))
 
-# 05 (tick 30) the running sentence before and after fine-tuning (shares)
+# 05 (session 30) the running sentence before and after fine-tuning (shares)
 S = J("shares"); names = ["base", "sft_3e-4_600.pt", "sft_1e-3_4000.pt"]; labs = ["base Tiny", "600 steps", "4,000 steps"]
 fig, axs = plt.subplots(1, 2, figsize=(10.0, 4.2), gridspec_kw=dict(width_ratios=[1.6, 1]))
 ax = axs[0]; x = np.arange(2); w = 0.26
@@ -88,4 +88,4 @@ for i, t in enumerate(v): ax.text(i, t + 0.004, f"{t:.4f}", ha="center", fontsiz
 ax.set_xticks(np.arange(3)); ax.set_xticklabels(labs, fontsize=8); ax.set_ylabel("end-marker share after\n'the cat sat on the'"); ax.set_ylim(0, 0.16)
 fig.suptitle("The running sentence inside and outside the template", fontsize=11)
 save(fig, p("fig38-05-running.png"))
-print("ok tick 30", sorted(os.listdir(OUT)))
+print("ok session 30", sorted(os.listdir(OUT)))

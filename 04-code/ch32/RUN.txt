@@ -1,4 +1,4 @@
-Chapter 32 (Speculative Decoding), PARTIAL (tick 23).  Run from this folder.  CPU, one thread, 32-bit, greedy, 11 Nov 2026.
+Chapter 32 (Speculative Decoding), PARTIAL (session 23).  Run from this folder.  CPU, one thread, 32-bit, greedy, 11 Nov 2026.
 Needs ../tiny (load.py, cache.py) and the GPT-2 weights in ../ch29/ckpt/gpt2 (not zipped).  PyTorch 2.15.0+cpu.
 
     python3 -u spec_greedy.py > outputs/spec_greedy.txt   (.json) 32.3-32.4: cost of verifying k tokens; three drafts
@@ -18,7 +18,7 @@ What went wrong / caveats:
 No hosted-model call; the key is not read by this script.
 
 
-Tick 24 (11 Nov 2026, about 19:52 to 20:30 IST).  Chapter 32 completed.
+Session 24 (11 Nov 2026, about 19:52 to 20:30 IST).  Chapter 32 completed.
     python3 -u spec_sample.py > outputs/spec_sample.txt  (.json)  32.5-32.6: Part C one-position rule (exact + 100,000 draws),
                                                        Part F early-exit acceptance by temperature, Part D two tokens end to
                                                        end (3,000 + 3,000 + 3,000 runs), Part E prompt lookup per prompt at
@@ -31,7 +31,7 @@ Tick 24 (11 Nov 2026, about 19:52 to 20:30 IST).  Chapter 32 completed.
     spec_greedy_lib.py        fwd_layers copied out of spec_greedy.py (which runs its experiment on import)
     ../tiny/speculate.py      new module: trim, verify, accept_greedy, accept_sample, speculate, lookup_draft
 
-What went wrong / caveats (tick 24):
+What went wrong / caveats (session 24):
   - lab32's fifth checkpoint first required TV > 0.01 for the resample-from-p rule; after the running sentence it is only
     0.0082 (draft and target agree more there).  Threshold changed to > 1e-6 (the correct rule is ~1e-17) and both
     positions printed; reported in the chapter.

@@ -21,7 +21,7 @@ from tiny import data as D
 from _common import SEED, HERE, TINY_BPE
 from _pool import shards, corpora
 MODE, STEPS = sys.argv[1], int(sys.argv[2])
-RSEED = int(os.environ.get("SEED", str(SEED)))   # tick 26: optional second seed (student start and reading order)
+RSEED = int(os.environ.get("SEED", str(SEED)))   # session 26: optional second seed (student start and reading order)
 teacher = load(os.path.join(HERE, "..", "ch24", "outputs", "ckpt", "wsd_1e-3_2000_b2000.pt"))
 LAYERS = int(os.environ.get("LAYERS", "4"))
 m = Tiny(n_layers=LAYERS, seed=RSEED)

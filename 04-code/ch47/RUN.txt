@@ -1,4 +1,4 @@
-Chapter 47 runs (tick 35, 12 Nov 2026, about 18:15 to 18:25 IST; CPU, one thread, 32-bit, seed 1865 where random).
+Chapter 47 runs (session 35, 12 Nov 2026, about 18:15 to 18:25 IST; CPU, one thread, 32-bit, seed 1865 where random).
   python3 -u whiteboard47.py > outputs/whiteboard47.txt (.json)  the whiteboard answer key from Tiny (../ch24/outputs/ckpt/
                                                                   wsd_1e-3_2000_b2000.pt): parameter count, one head of layer 0 for
                                                                   the running sentence, cache bytes.  About 2 s.

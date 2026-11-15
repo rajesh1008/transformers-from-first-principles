@@ -1,4 +1,4 @@
-"""Chapter 38, tick 30: the running sentence's next-token shares before and after fine-tuning.  For Chapter 24's Tiny and
+"""Chapter 38, session 30: the running sentence's next-token shares before and after fine-tuning.  For Chapter 24's Tiny and
 the two fine-tuned checkpoints (600 steps at 3e-4; 4,000 steps at 1e-3), the five likeliest next tokens and the share of
 " mat" after (a) the plain prefix "the cat sat on the", (b) the same prefix inside the chat template after
 "User: What did the cat do?\nTiny: The cat sat on the", and the share of the end marker after the full templated reply.

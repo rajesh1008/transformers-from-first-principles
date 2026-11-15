@@ -1,4 +1,4 @@
-Chapter 48 capstone (ticks 35 and 36, 12 November 2026). CPU, one thread per process, seed 1865, 32-bit.
+Chapter 48 capstone (sessions 35 and 36, 12 November 2026). CPU, one thread per process, seed 1865, 32-bit.
   python3 prep48.py        # downloads 14 + 1 Gutenberg books -> corpus/train.txt, corpus/heldout.txt, corpus/books.json (see CORPUS-CARD.md)
   python3 tok48.py         # BPE 8,192 -> corpus/tok8192.json, corpus/*.u16, outputs/tok48.txt/.json
   sh run_main.sh           # main run, 2,000 steps (about 2.4 h alone) -> logs/main.txt, outputs/main.jsonl, ckpt/main_step{500,1000,1500,2000}.pt
@@ -6,7 +6,7 @@ Chapter 48 capstone (ticks 35 and 36, 12 November 2026). CPU, one thread per pro
   for s in 500 1000 1500 2000; do python3 eval48.py ckpt/main_step$s.pt > logs/eval_main_step$s.txt; done
                            # whole-text bits per character, 8-bit round trip, KV-cache check, three seeded samples -> outputs/eval_main_step*.json
   for c in s10m_1e-3 s10m_3e-3 s2m_3e-3; do python3 eval48.py ckpt/${c}_step400.pt > logs/eval_${c}_step400.txt; done
-                           # whole-text check of the breakage (tick 37) -> outputs/eval_s*_step400.json
+                           # whole-text check of the breakage (session 37) -> outputs/eval_s*_step400.json
   python3 fp48.py          # checkpoint fingerprints (Chapter 26's tiny.seed.fingerprint) and run card -> outputs/fp48.json
   python3 words48.py       # share of known words in 20 samples per checkpoint -> outputs/words48.json
   python3 mat48.py         # how often a word beginning 'mat' is 'mat' itself -> outputs/mat48.txt

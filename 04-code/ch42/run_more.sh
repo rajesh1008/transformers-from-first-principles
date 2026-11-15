@@ -1,5 +1,5 @@
 #!/bin/bash
-# Chapter 42 tick 32 second batch: bias balancing, a shared expert, and second seeds.  One thread each, 2,000 steps.
+# Chapter 42 session 32 second batch: bias balancing, a shared expert, and second seeds.  One thread each, 2,000 steps.
 cd "$(dirname "$0")"
 S=2000
 NAME=moe4k1_bias      KIND=moe E=4 K=1 HID=512 AUX=0 BIAS=0.001            STEPS=$S python3 moe.py > outputs/moe4k1_bias.txt 2>&1 &

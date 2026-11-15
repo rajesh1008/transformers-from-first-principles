@@ -24,7 +24,7 @@ Key outputs (all in outputs/*.txt):
   over-committed: 24 pages x 16 slots, prompt-only admission: deadlock at 2.86 s, 0 of 20 finished
   lab31: 5 of 5
 
-What went wrong (tick 23), told as it happened:
+What went wrong (session 23), told as it happened:
   - First launch of step_cost.py used `python` (not installed); re-run with python3.
   - step_cost.py failed: ../ch22/_pool.py imports tok() from _common, which ch31/_common.py lacked (the same slip
     Chapter 30 made).  Added tok() and re-ran.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Chapter 42 tick 32 third batch: a second seed for bias balancing, and a shared expert with finer routing (exercise 9).
+# Chapter 42 session 32 third batch: a second seed for bias balancing, and a shared expert with finer routing (exercise 9).
 cd "$(dirname "$0")"
 S=2000
 NAME=moe4k1_bias_s2       KIND=moe E=4 K=1 HID=512 AUX=0 BIAS=0.001 SEED=2      STEPS=$S python3 moe.py > outputs/moe4k1_bias_s2.txt 2>&1 &

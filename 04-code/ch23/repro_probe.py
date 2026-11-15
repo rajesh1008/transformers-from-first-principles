@@ -1,4 +1,4 @@
-"""Why two runs of one seeded configuration differ (tick 16 finding).  Trains s1 for 12 steps four times in one
+"""Why two runs of one seeded configuration differ (session 16 finding).  Trains s1 for 12 steps four times in one
 process: twice with MixedTiny (BF16 products) and twice in plain 32-bit, and twice more with BF16 products whose
 inputs are copied to fresh contiguous memory first.  Prints the first step at which each pair differs.  One thread."""
 import _common

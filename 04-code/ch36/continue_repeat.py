@@ -12,7 +12,7 @@ from tiny.eval import load
 from _pool import corpora
 MODE = sys.argv[1]; STEPS = int(os.environ.get("STEPS", "600"))
 LR = float(os.environ.get("LR", "3e-4")); PLEN = int(os.environ.get("PLEN", "64")); EVERY = int(os.environ.get("EVERY", "100"))
-TAG = os.environ.get("TAG", "")   # tick 28: longer runs, e.g. STEPS=4000 LR=1e-3 PLEN=32 EVERY=250 TAG=_long32
+TAG = os.environ.get("TAG", "")   # session 28: longer runs, e.g. STEPS=4000 LR=1e-3 PLEN=32 EVERY=250 TAG=_long32
 tt = load(os.path.join(HERE, "..", "ch24", "outputs", "ckpt", "wsd_1e-3_2000_b2000.pt"))
 NL, H = tt.config["n_layers"], tt.config["n_heads"]
 rec = {}

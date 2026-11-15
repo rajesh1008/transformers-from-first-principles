@@ -1,4 +1,4 @@
-"""Chapter 38, tick 30 (the tryit): the same instruction set with reworded questions in training.  Reads
+"""Chapter 38, session 30 (the tryit): the same instruction set with reworded questions in training.  Reads
 outputs/instructions.json and adds "Tell me what the X did." for 15 of the 30 animals (as many times as the fact itself
 is taught), drawn at random with seed 1865.  Test set: the original 140 prompts, with the reworded fact questions split
 into the 15 whose wording was trained (fact-reworded-seen) and the 15 whose wording was not (fact-reworded-unseen), plus a

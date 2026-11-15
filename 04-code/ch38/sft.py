@@ -15,7 +15,7 @@ STEPS = int(os.environ.get("STEPS", "600")); LR = float(os.environ.get("LR", "3e
 MASK = os.environ.get("MASK", "response"); REPLAY = int(os.environ.get("REPLAY", "0")); TAG = os.environ.get("TAG", ""); SAVE = os.environ.get("SAVE", "")
 T = tok(); EOT = T.specials["<|endoftext|>"]
 tt = load(os.path.join(HERE, "..", "ch24", "outputs", "ckpt", "wsd_1e-3_2000_b2000.pt"))
-D = load_json(os.environ.get("DATA", "instructions")); c = corpora()   # DATA added tick 30
+D = load_json(os.environ.get("DATA", "instructions")); c = corpora()   # DATA added session 30
 g = [int(i) for i in c["glass"]]; pool = [int(i) for i in c["pool"]]
 GW = torch.tensor([g[i * 128:i * 128 + 129] for i in range(20)])
 st = np.random.default_rng(SEED + 7).integers(0, len(pool) - 129, size=20); PW = torch.tensor([pool[s:s + 129] for s in st])
@@ -63,7 +63,7 @@ for step in range(STEPS + 1):
     if step == STEPS: break
     idx = rng.integers(0, len(tr), size=16)
     opt.zero_grad(); L = batch_loss([tr[i] for i in idx])
-    if REPLAY:   # tick 29 addition: REPLAY=k adds the ordinary loss on k windows of the pool to every step (rehearsal)
+    if REPLAY:   # session 29 addition: REPLAY=k adds the ordinary loss on k windows of the pool to every step (rehearsal)
         ps = rng.integers(0, len(pool) - 129, size=REPLAY); L = L + tt.loss(torch.tensor(np.stack([pool[s:s + 129] for s in ps])))
     L.backward(); opt.step()
 save_json(f"sft_{MASK}{TAG}", R)

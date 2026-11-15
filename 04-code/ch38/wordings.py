@@ -1,4 +1,4 @@
-"""Chapter 38, tick 30: the baseline for 38.10.  Greedy answers of the fine-tuned Tiny of 38.3 (outputs/ckpt/sft_3e-4_600.pt,
+"""Chapter 38, session 30: the baseline for 38.10.  Greedy answers of the fine-tuned Tiny of 38.3 (outputs/ckpt/sft_3e-4_600.pt,
 trained on one wording only) to three wordings of each of the 30 fact questions, split into the 15 animals whose second
 wording make_reworded.py later trains and the 15 whose wording it does not.  CPU, one thread, 32-bit."""
 from _common import *

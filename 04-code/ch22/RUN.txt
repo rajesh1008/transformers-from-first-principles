@@ -1,5 +1,5 @@
-Chapter 22, complete (tick 15).  Run from 04-code/ch22 on the book's build machine (CPU, PyTorch 2.15.0+cpu, NumPy 2.5.4),
-11 Nov 2026 between about 00:34 IST (pipeline_basics.py, tick 14) and 02:30 IST.  Every training run used one thread (torch.set_num_threads(1));
+Chapter 22, complete (session 15).  Run from 04-code/ch22 on the book's build machine (CPU, PyTorch 2.15.0+cpu, NumPy 2.5.4),
+11 Nov 2026 between about 00:34 IST (pipeline_basics.py, session 14) and 02:30 IST.  Every training run used one thread (torch.set_num_threads(1));
 at most four runs were in flight at once.  No hosted-model call; the API key was not used.
 
 Data: 04-code/data/*_gutenberg_raw.txt, Project Gutenberg #11 (Alice), #12 (Looking-Glass), #620 Sylvie and Bruno, #48795 Sylvie and Bruno
@@ -7,7 +7,7 @@ Concluded, #29042 A Tangled Tale, #651 Phantasmagoria, #13 The Hunting of the Sn
 Carroll pool (five books, 393,597 tokens, 3,074 windows of 129) and the held-out sets: Looking-Glass, the same 16 windows as Chapters 19-21, and
 the last 4,000 tokens of Sylvie and Bruno Concluded before "THE END.", 16 windows drawn with seed 1866.
 
-    python3 pipeline_basics.py   > outputs/pipeline_basics.txt    (.json)  tick 14: padding against packing, cross-document context, 13-grams
+    python3 pipeline_basics.py   > outputs/pipeline_basics.txt    (.json)  session 14: padding against packing, cross-document context, 13-grams
     python3 data_facts.py        > outputs/data_facts.txt         (.json)  document mask equivalence, exact duplicates, contamination, pool facts
     python3 interlude_minhash.py > outputs/interlude_minhash.txt  (.json)  Jaccard, MinHash spread, banding, planted copies (s22-5)
     python3 stream.py            > outputs/stream.txt             (.json)  shards, speed, resume, shuffle buffer (s22-8); timings vary by run
@@ -33,8 +33,8 @@ Things that went wrong on the way, and are told in the chapter:
 
 Figures: python3 ../../03-figures/src/ch22_figs.py (reads outputs/*.json) -> 03-figures/ch22/fig22-01..06.
 
----- tick 14 notes (kept) ----
-Chapter 22 (partial, tick 14).  Run from 04-code/ch22 on the book's build machine (CPU, PyTorch 2.15.0+cpu, NumPy 2.5.4), 11 Nov 2026 about 00:34 IST.
+---- session 14 notes (kept) ----
+Chapter 22 (partial, session 14).  Run from 04-code/ch22 on the book's build machine (CPU, PyTorch 2.15.0+cpu, NumPy 2.5.4), 11 Nov 2026 about 00:34 IST.
     python3 pipeline_basics.py > outputs/pipeline_basics.txt   (also .json)  documents, padding against packing, cross-document context,
                                                                              repeated 13-grams, the seed-1865 window draw of Chapters 19 to 21
 Deterministic (no training; the window draw uses seed 1865 exactly as train_mixed.py and Chapter 20 did).  No hosted-model call; the API key was not used.

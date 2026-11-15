@@ -1,4 +1,4 @@
-"""Figures for Chapter 49 (partial, tick 37).  fig49-01, the production dashboard after the simulated week, from
+"""Figures for Chapter 49 (partial, session 37).  fig49-01, the production dashboard after the simulated week, from
 04-code/ch49/outputs/dash49.json (dash49.py).  Run from the project root: python3 03-figures/src/ch49_figs.py"""
 import os, sys, json
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -27,7 +27,7 @@ for t, lab in ev: axs[0].text(t + 0.02, axs[0].get_ylim()[1] * 0.95, lab, color=
 fig.suptitle(f"The production dashboard: {D['all']['requests']:,} requests to the capstone over a simulated week", fontsize=14, color=NAVY, weight="bold")
 save(fig, os.path.join(OUT, "fig49-01-dashboard.png")); print("ok")
 
-# fig49-02 (tick 38): latency against load, one point per simulated hour, and the latency distribution by stream mode.
+# fig49-02 (session 38): latency against load, one point per simulated hour, and the latency distribution by stream mode.
 import json as _j
 R = [_j.loads(l) for l in open(os.path.join(ROOT, "04-code", "ch49", "logs", "requests.jsonl"))]
 ok = [r for r in R if r["status"] == 200]

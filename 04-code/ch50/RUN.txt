@@ -1,4 +1,4 @@
-Chapter 50 lab (tick 38, 12-13 November 2026). CPU, one thread, 32-bit, seed 1865, transformers 5.22.1, torch 2.15.0.
+Chapter 50 lab (session 38, 12-13 November 2026). CPU, one thread, 32-bit, seed 1865, transformers 5.22.1, torch 2.15.0.
   Needs 04-code/ch29/ckpt/gpt2 and 04-code/ch29/ckpt/smollm2 (Chapter 29) and Qwen3-0.6B in ckpt/qwen3:
     for f in config.json generation_config.json tokenizer.json tokenizer_config.json vocab.json merges.txt LICENSE model.safetensors; do
       curl -sL -o ckpt/qwen3/$f https://huggingface.co/Qwen/Qwen3-0.6B/resolve/main/$f; done      # about 1.5 GB, Apache-2.0

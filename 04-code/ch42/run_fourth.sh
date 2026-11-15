@@ -1,5 +1,5 @@
 #!/bin/bash
-# Chapter 42 tick 33 fourth batch: second seeds of the two shared-expert runs, a router learning-rate sweep (with and
+# Chapter 42 session 33 fourth batch: second seeds of the two shared-expert runs, a router learning-rate sweep (with and
 # without the balance loss), and capacity applied during training rather than only at evaluation.
 cd "$(dirname "$0")"
 S=2000

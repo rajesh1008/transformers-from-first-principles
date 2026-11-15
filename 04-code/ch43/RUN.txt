@@ -1,4 +1,4 @@
-Chapter 43: Vision Transformers and multimodality.  CPU, 32-bit, seed 1865 unless named; 12 November 2026 (tick 33).
+Chapter 43: Vision Transformers and multimodality.  CPU, 32-bit, seed 1865 unless named; 12 November 2026 (session 33).
 Data: scikit-learn's bundled 8x8 handwritten digits (UCI Optical Recognition of Handwritten Digits, CC BY 4.0), 1,797 images,
 a fixed split of 1,437 training and 360 held-out images.
 

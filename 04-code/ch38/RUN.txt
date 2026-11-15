@@ -1,4 +1,4 @@
-Chapter 38 runs (tick 29, 12 Nov 2026 from about 06:10 IST; CPU, one thread per process, 32-bit, seed 1865).
+Chapter 38 runs (session 29, 12 Nov 2026 from about 06:10 IST; CPU, one thread per process, 32-bit, seed 1865).
 Tiny from ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.  _common.py and _pool.py are copies of ../ch37's.
 Checkpoints written to outputs/ckpt/ (not in the code zip).
   python3 make_instructions.py                                  500 training pairs, 140 test prompts -> outputs/instructions.json
@@ -19,7 +19,7 @@ the default keeps their behaviour).  dpo_50 and dpo_1e-5_100 ran from the versio
 line was added.  The first dpo.py run printed a PyTorch warning about float() on a tensor that needs grad (logging only);
 fixed with .detach().  Exact match is strict string equality on the greedy reply; one wrong letter counts as wrong.
 
-Tick 30 (12 Nov 2026 from about 07:53 IST; same machine, one thread per process, 32-bit, seed 1865).  dpo.py gained KNOWN_IDK, SFTW, the
+Session 30 (12 Nov 2026 from about 07:53 IST; same machine, one thread per process, 32-bit, seed 1865).  dpo.py gained KNOWN_IDK, SFTW, the
 log-probability-change lines and .detach() in its logging (default behaviour unchanged: dpo_v3 reproduces dpo_v2's outcomes exactly);
 sft.py gained DATA.  Runs:
   python3 -u shares.py > outputs/shares.txt (.json)                                  running sentence before/after (" mat" is " m" + "at")
@@ -36,7 +36,7 @@ sft.py gained DATA.  Runs:
 The first knownidk/sftw1/beta0.5 runs (before the log-probability lines were added) gave the same outcomes and were overwritten.
 Up to twelve processes shared the 8-core box; wall times are not speed measurements.
 
-Results of the tick 30 late runs (600 steps; facts 12x/4x/1x; reworded; Looking-Glass; pool; test reply loss):
+Results of the session 30 late runs (600 steps; facts 12x/4x/1x; reworded; Looking-Glass; pool; test reply loss):
   LR=1e-4  TAG=_lr1e-4          20/30 (10/9/1)    0/30  5.5726  4.4883  3.097
   LR=1e-3  TAG=_lr1e-3          30/30 (10/10/10)  0/30  8.7335  7.7440  3.999   (step 200: 24/30, pool 6.3186)
   REPLAY=1  TAG=_replay1        23/30 (10/10/3)   3/30  4.8351  3.7003  3.168

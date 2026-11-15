@@ -4,7 +4,7 @@ trained five ways, chosen with METHOD:
   full      every number trains (Chapter 38's run, repeated here so all five share one script)
   lora      low-rank adapters: W stays frozen and W + (alpha / r) * A @ B is used instead, A (d_in x r) drawn from
             N(0, 1/d_in), B (r x d_out) zeros, so the first step starts from the unchanged model.  RANK=r, ALPHA (default
-            2r, a scale of 2), TARGETS=qv (W_q and W_v of every block, the default), ff (W_1 and W_2 only, added tick 30) or all (every matrix in every block)
+            2r, a scale of 2), TARGETS=qv (W_q and W_v of every block, the default), ff (W_1 and W_2 only, added session 30) or all (every matrix in every block)
   adapter   a bottleneck adapter after each block's feed-forward output: h + up(gelu(down(h))), DIM=16, up starts at zero
   bias      only the biases and the norm gains and biases train (BitFit-style)
   head      only the last block trains plus the final norm
@@ -14,10 +14,10 @@ delta would take at 32 bits.  CPU, one thread, 32-bit.
    METHOD=lora RANK=4 LR=1e-3 STEPS=600 EVERY=100 TAG=_r4 python3 tune.py
 Further switches: QUANT=4 or 8 rounds the frozen block matrices first (QLoRA in miniature); INITB=random starts B from
 N(0, 1/r) instead of zeros (the breakage); REPLAY=k adds the ordinary loss on k pool windows to every step; SAVE=name.pt
-keeps the learned A and B in outputs/ckpt/.  SEED=k (tick 30) reseeds training only."""
+keeps the learned A and B in outputs/ckpt/.  SEED=k (session 30) reseeds training only."""
 from _common import *
 import time, torch, numpy as np
-EVAL_SEED = SEED; SEED = int(os.environ.get("SEED", str(SEED)))   # tick 30: SEED=k changes the adapter draw and batch order; the 20 pool windows stay fixed
+EVAL_SEED = SEED; SEED = int(os.environ.get("SEED", str(SEED)))   # session 30: SEED=k changes the adapter draw and batch order; the 20 pool windows stay fixed
 torch.set_num_threads(1); torch.manual_seed(SEED)
 from tiny.eval import load
 from _pool import corpora

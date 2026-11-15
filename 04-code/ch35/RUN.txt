@@ -1,4 +1,4 @@
-Chapter 35 runs (tick 26, 12 Nov 2026 from about 00:05 IST; CPU, one thread per process, 32-bit, seed 1865; up to ten processes
+Chapter 35 runs (session 26, 12 Nov 2026 from about 00:05 IST; CPU, one thread per process, 32-bit, seed 1865; up to ten processes
 shared the 8-core machine, so no wall time here is a speed measurement).  Weights from ../ch29/ckpt/ (not in the code zip).
   python3 -u tiny_past_edge.py > outputs/tiny_past_edge.txt (.json)      Tiny on 512-token windows; position rows; sliding window of 128
   python3 -u gpt2_edge.py > outputs/gpt2_edge.txt (.json)                GPT-2 at 1,025 tokens; loss by position; disjoint vs sliding scoring
@@ -21,11 +21,11 @@ against the 1.9812 of Chapters 29 to 34, whose windows step by 129 and skip one 
   python3 -c (tiny.context.unturned_pairs for bases 100,000 / 400,000 / 1,600,000) > outputs/rope_bands_x4.txt
   note: gpt2_edge.txt was rewritten from gpt2_edge.json after an accidental second launch truncated it; (b) lines restored from the json, numbers unchanged
 
-Tick 27 (12 Nov 2026, from about 01:59 IST; one process at a time unless stated; CPU, one thread, 32-bit, seed 1865):
+Session 27 (12 Nov 2026, from about 01:59 IST; one process at a time unless stated; CPU, one thread, 32-bit, seed 1865):
   python3 -u cost_curve.py > outputs/cost_curve.txt (.json)              one forward pass, Tiny 128-1,024, SmolLM2 128-4,096 (best of 3
                                                                          to 1,024, single run above); SmolLM2 cost arithmetic to 1,048,576
   python3 -u buried.py > outputs/buried.txt (.json)                      "the cat sat on the" after 0-2,000 tokens of the novel; ' mat'
                                                                          with cat and dog; attention to ' cat' (HF eager attention)
-  needle_smol_4096 (started tick 26, finished about 01:56 IST) quoted in 35.5.
+  needle_smol_4096 (started session 26, finished about 01:56 IST) quoted in 35.5.
   Figures: python3 03-figures/src/ch35_figs.py (from the project root) -> 03-figures/ch35/fig35-01 to fig35-05.
 Note: buried.py's 1,000-token filler is the novel's opening about Alice's kittens; that is why ' cat' helps most there (said in 35.5).

@@ -1,4 +1,4 @@
-Chapter 29, Loading the Real Thing (tick 21, begun).  Run from 04-code/ch29 on the book's build machine (CPU, 8 cores,
+Chapter 29, Loading the Real Thing (session 21, begun).  Run from 04-code/ch29 on the book's build machine (CPU, 8 cores,
 PyTorch 2.15.0+cpu, transformers 5.22.1, safetensors), 11 Nov 2026 about 14:14 to 14:24 IST.  One thread, 32-bit unless
 the experiment is about precision, seed 1865.
 
@@ -33,14 +33,14 @@ What went wrong:
 - load_gpt2.py's first listing printed three h.0 tables twice (a sorted()[:3] slice that overlapped); fixed, rerun.
 No hosted-model call; the API key was not used.
 
-Tick 22 (11 Nov 2026), 29.9 and Lab 29; same machine, one thread, seed 1865.  Extra download: HuggingFaceTB/SmolLM2-135M-Instruct
+Session 22 (11 Nov 2026), 29.9 and Lab 29; same machine, one thread, seed 1865.  Extra download: HuggingFaceTB/SmolLM2-135M-Instruct
 (model.safetensors, config, tokenizer files, generation_config) into ckpt/smollm2i (not shipped in the code zip).
 
     python3 -u tokenizers_templates.py > outputs/tokenizers_templates.txt (.json) 29.9: special tokens, start token, control ids in
                                        user text, trailing space, chat templates on the Instruct model, round trips; ~40 s
     python3 -u lab29.py           > outputs/lab29.txt            Lab 29: load, check, read the top five, break one matrix; 7 checkpoints; ~15 s
 
-What went wrong (tick 22):
+What went wrong (session 22):
 - Signature 8's figure first labelled Tiny's feed-forward "ReLU"; tiny/ffn.py uses GELU; label corrected.
 - tokenizers_templates.py and lab29.py ran cleanly on their first full runs; the figure script needed label spacing fixes.
 lab29.py reads the API key from ../../.env inside the process only to check that its string is in no output; no hosted call.

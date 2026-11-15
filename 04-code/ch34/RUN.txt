@@ -1,11 +1,11 @@
-Chapter 34 runs (tick 25, 32-bit, one thread; outputs in outputs/):
+Chapter 34 runs (session 25, 32-bit, one thread; outputs in outputs/):
   python3 prune_gpt2.py > outputs/prune_gpt2.txt (.json)
   python3 tiny_prune.py > outputs/tiny_prune.txt (.json)
   python3 soft_targets.py > outputs/soft_targets.txt
   python3 -u distill_tiny.py {hard|kd1|kd2|mix} 2000 > outputs/distill_MODE_4L_2000.txt   (four in parallel; seconds in logs are therefore rough)
 Teacher: ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt. One seed per setting.
 
-Tick 26 (12 Nov 2026, from about 23:58 IST on 11 Nov; 32-bit, one thread per process, seed 1865 unless stated):
+Session 26 (12 Nov 2026, from about 23:58 IST on 11 Nov; 32-bit, one thread per process, seed 1865 unless stated):
   python3 -u prune_distill.py {units50|units75|w80} {hard|kd1} 500 > outputs/prune_distill_P_M_500.txt (.json)   six in parallel, ~190-250 s each
   python3 -u prune_distill.py {units75|w80} none 0                                                               scores straight after pruning
   python3 -u prune_distill.py none hard 500        the control: the unpruned checkpoint trained the same 500 steps (1.9641)

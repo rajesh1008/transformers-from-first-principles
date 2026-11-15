@@ -1,4 +1,4 @@
-Chapter 44: reasoning models and test-time compute.  CPU, 32-bit, seed 1865 unless named; 12 November 2026 (tick 33 runs; closed tick 34).
+Chapter 44: reasoning models and test-time compute.  CPU, 32-bit, seed 1865 unless named; 12 November 2026 (session 33 runs; closed session 34).
 
 python3 hosted_effort.py   # Claude Haiku 4.5, 30 four-digit multiplications (seed 1865), extended thinking off / budget 1,024 / 4,096
                            # (key read from ../../.env, never printed); writes outputs/hosted_effort.json and .txt
@@ -7,9 +7,9 @@ python3 hosted_effort.py   # Claude Haiku 4.5, 30 four-digit multiplications (se
                            # models (cut the working after k characters) and majority votes of 1, 5 and 15 samples at temperature 1.0
 NAME=direct4_long FORMAT=direct DIGITS=4 THREADS=4 STEPS=4500 python3 add.py   # the direct four-digit model trained three times as long
 
-python3 ssm.py             # state-space layer: recurrence = convolution (time-invariant), no single kernel (selective), cache vs state bytes (tick 34)
-python3 lengths.py         # characters written per answer and supervised characters in training, per format (tick 34)
-python3 lab44.py           # the chapter's checks, 9/9 pass (tick 34)
+python3 ssm.py             # state-space layer: recurrence = convolution (time-invariant), no single kernel (selective), cache vs state bytes (session 34)
+python3 lengths.py         # characters written per answer and supervised characters in training, per format (session 34)
+python3 lab44.py           # the chapter's checks, 9/9 pass (session 34)
 python3 ../../03-figures/src/ch44_figs.py   # (from the project root) fig44-01-addition, fig44-02-memory
 
 Headline results:

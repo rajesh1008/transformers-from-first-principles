@@ -1,4 +1,4 @@
-"""Chapter 33 (tick 25, Exercise 12's idea at ten prompts): greedy text under rounding on ten held-out prompts of 64 tokens,
+"""Chapter 33 (session 25, Exercise 12's idea at ten prompts): greedy text under rounding on ten held-out prompts of 64 tokens,
 64 new tokens each, agreement with 32-bit.  Four prompts are Part G's (offsets 800, 1600, 2400, 3000); six are new (200, 500, 1000,
 1300, 2000, 2700).  Full recomputation each step (no cache), as Part G.  python3 greedy_more.py CONFIG   CONFIG = 8ch | 6g32 | 4g32
 CPU, one thread, seed 1865, 11 Nov 2026."""

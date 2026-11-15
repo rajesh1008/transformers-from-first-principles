@@ -1,4 +1,4 @@
-Chapter 27, Generating Text (tick 19, begun).  Run from 04-code/ch27 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu),
+Chapter 27, Generating Text (session 19, begun).  Run from 04-code/ch27 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu),
 11 Nov 2026 about 10:22 to 10:36 IST.  One thread, 32-bit, seed 1865 (tiny/seed.py's 'sample' stream).
 
 Model: Chapter 24's 2,500-step WSD run, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt (recreate with ../ch24 or ../ch26/run_seeds.sh).
@@ -10,7 +10,7 @@ Model: Chapter 24's 2,500-step WSD run, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000
 Notes: mat_rank.py was first run as an inline script, then saved as a file and rerun with the same output.  No hosted-model call;
 the API key was not used.  rules.py's pool word list comes from Chapter 22's five-book pool (_pool.py, copied from ch26).  Sections 27.5 onwards, the figures, lab27.py and solutions.py are not written yet.
 
-Tick 20 (11 Nov 2026, about 11:56 to 12:10 IST).  Same machine, one thread, 32-bit, seed 1865 ('sample' stream) unless stated.
+Session 20 (11 Nov 2026, about 11:56 to 12:10 IST).  Same machine, one thread, 32-bit, seed 1865 ('sample' stream) unless stated.
 New module ../tiny/generate.py (next_scores, penalise, shares, generate, beam_search, option_logprobs, local_mask_probs,
 distinct_n, repeated_runs).
 
@@ -32,7 +32,7 @@ What went wrong, told plainly:
 - Part K's corpora-key lookup was written blind and matched 'held_b' (the Carroll held-out set, 3.754, Chapter 25's figure).
 - Part K's greedy row is one continuation, so its distinct-n is not comparable with the 20-sample rows; the chapter says so.
 - lab27.py's first version passed the key checkpoint even if no key was found; changed to require that the key was read.
-- The 27.5 'Sampling, Seeded' section planned in the brief was folded into 27.3 (already written at tick 19); the
+- The 27.5 'Sampling, Seeded' section planned in the outline was folded into 27.3 (already written at session 19); the
   Interlude took id s27-5, and the repetition section kept s27-6.
 No hosted-model call this tick.  lab27.py reads ../../.env into its own process only to check that the key string
 appears in no file under 04-code/ch27; it never prints or writes the key.

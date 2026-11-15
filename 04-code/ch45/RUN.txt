@@ -1,4 +1,4 @@
-Chapter 45: distributed training on paper.  CPU, 32-bit, seed 1865; 12 November 2026 (tick 34).
+Chapter 45: distributed training on paper.  CPU, 32-bit, seed 1865; 12 November 2026 (session 34).
 
 python3 dist45.py    # four processes (torch.distributed, gloo, one thread each) split the Chapter 44 adder three ways: data parallel
                      # (4 x 32 against 1 x 128, 20 AdamW steps), tensor parallel (block 0 feed-forward), pipeline (one block per rank);

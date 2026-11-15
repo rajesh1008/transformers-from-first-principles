@@ -1,4 +1,4 @@
-Chapter 40 (Interpretability: Probes and Attention Maps), run 12 November 2026 (tick 31) on the book's build machine, CPU, 32-bit, one thread
+Chapter 40 (Interpretability: Probes and Attention Maps), run 12 November 2026 (session 31) on the book's build machine, CPU, 32-bit, one thread
 (OMP_NUM_THREADS=1), seed 1865.  Processes ran side by side, so wall times are not speed measurements.  Python 3.13.5 with
 torch 2.15.0+cpu, transformers 5.22.1 (not used here), scipy 1.18.1.  Models: Chapter 24's checkpoint ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt and
 Chapter 38's ../ch38/outputs/ckpt/sft_3e-4_600.pt (neither is in the code zip).  No model call.

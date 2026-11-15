@@ -1,4 +1,4 @@
-Chapter 41 (Circuits in Tiny: Induction Heads, the Logit Lens and Sparse Features; PARTIAL), run 12 November 2026 (tick 31) on the book's build machine,
+Chapter 41 (Circuits in Tiny: Induction Heads, the Logit Lens and Sparse Features; PARTIAL), run 12 November 2026 (session 31) on the book's build machine,
 CPU, 32-bit, one thread (OMP_NUM_THREADS=1), seed 1865.  Processes ran side by side, so wall times are not speed measurements.  Python 3.13.5, torch 2.15.0+cpu,
 scipy 1.18.1.  Models: Chapter 24's checkpoint, Chapter 38's sft_3e-4_600, and (induct.py) outputs/ckpt/repeat_1e-3_1500.pt written by grow_induction.py
 (ckpt/ is not in the code zip).  No model call.  lib.py and facts_common.py are copies of ../ch40's.

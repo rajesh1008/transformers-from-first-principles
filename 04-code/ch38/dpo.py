@@ -13,7 +13,7 @@ torch.set_num_threads(1); torch.manual_seed(SEED)
 from tiny.eval import load
 import importlib.util
 STEPS = int(os.environ.get("STEPS", "300")); BETA = float(os.environ.get("BETA", "0.1")); LR = float(os.environ.get("LR", "1e-4"))
-SFTW = float(os.environ.get("SFTW", "0"))   # tick 30; 0 keeps the tick 29 behaviour
+SFTW = float(os.environ.get("SFTW", "0"))   # session 30; 0 keeps the session 29 behaviour
 T = tok(); EOT = T.specials["<|endoftext|>"]
 CK = os.path.join(HERE, "outputs", "ckpt", "sft_3e-4_600.pt")
 def tiny():
@@ -30,7 +30,7 @@ pairs = []
 for a, (v, t) in facts.items():
     other = [x for x in THINGS if x != t][rng.integers(9)]
     pairs.append((f"What did the {a} do?", f"The {a} {v} on the {t}.", f"The {a} {v} on the {other}."))
-if os.environ.get("KNOWN_IDK"):   # tick 30 addition (tests A149): every known fact also gets a pair whose rejected reply is "I do not know."
+if os.environ.get("KNOWN_IDK"):   # session 30 addition (tests A149): every known fact also gets a pair whose rejected reply is "I do not know."
     for a, (v, t) in facts.items(): pairs.append((f"What did the {a} do?", f"The {a} {v} on the {t}.", "I do not know."))
 for a in train_unknown:
     pairs.append((f"What did the {a} do?", "I do not know.", f"The {a} {rng.choice(['sat', 'slept', 'stood', 'hid'])} on the {rng.choice(THINGS)}."))
@@ -55,7 +55,7 @@ def report(tag, m):
     res["unknown_test"] = dict(idk=sum(x == "I do not know." for a, x in an), answers=an[:5])
     an2 = [(a, answer(m, f"What did the {a} do?")) for a in train_unknown]
     res["unknown_train_idk"] = sum(x == "I do not know." for a, x in an2)
-    with torch.no_grad():   # tick 29 addition: the share of " The" and " I" as the first reply token, mean over the 30 known prompts
+    with torch.no_grad():   # session 29 addition: the share of " The" and " I" as the first reply token, mean over the 30 known prompts
         fs = [torch.softmax(m.scores(T.encode(f"User: What did the {a} do?\nTiny:"))[-1].double(), -1) for a in facts]
         res["first_The"] = float(np.mean([float(f[T.encode(" The")[0]]) for f in fs])); res["first_I"] = float(np.mean([float(f[T.encode(" I")[0]]) for f in fs]))
     print(f"    first reply token over the 30 known prompts: ' The' {res['first_The']:.3f}, ' I' {res['first_I']:.3f}", flush=True)
@@ -74,13 +74,13 @@ for step in range(1, STEPS + 1):
     for i in idx:
         p, c, r = pairs[i]; rc, rr = REF[i]
         lc = seq_logp(pol, p, c); z = BETA * ((lc - rc) - (seq_logp(pol, p, r) - rr)); L = L - torch.nn.functional.logsigmoid(z) / len(idx); acc += float(z > 0)
-        if SFTW: L = L - SFTW * lc / len(idx)   # tick 30 addition: SFTW=w adds w times the chosen reply's negative log-probability
+        if SFTW: L = L - SFTW * lc / len(idx)   # session 30 addition: SFTW=w adds w times the chosen reply's negative log-probability
     opt.zero_grad(); L.backward(); opt.step()
     if step % int(os.environ.get("EVERY", "50")) == 0:
         R["log"].append(dict(step=step, loss=float(L.detach()), pref_acc=acc / len(idx)))
         print(f"step {step:4d}  DPO loss {float(L.detach()):.4f}  batch pairs ranked right {acc:.0f}/8  ({time.perf_counter() - t0:.0f} s)", flush=True)
 R["after"] = report("after", pol)
-with torch.no_grad():   # tick 30 addition: how far each reply's log-probability moved from the reference, mean over the pairs of each kind
+with torch.no_grad():   # session 30 addition: how far each reply's log-probability moved from the reference, mean over the pairs of each kind
     for kind, sel in (("known", lambda p, c, r: not c.startswith("I do not") and r != "I do not know."), ("known vs IDK", lambda p, c, r: r == "I do not know."), ("unknown", lambda p, c, r: c.startswith("I do not"))):
         ii = [i for i, (p, c, r) in enumerate(pairs) if sel(p, c, r)]
         if not ii: continue

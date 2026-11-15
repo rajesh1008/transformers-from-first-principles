@@ -1,4 +1,4 @@
-Chapter 26, Reproducibility: Seeds, Nondeterminism and Why Two Runs Differ (tick 19).  Run from 04-code/ch26 on the book's build
+Chapter 26, Reproducibility: Seeds, Nondeterminism and Why Two Runs Differ (session 19).  Run from 04-code/ch26 on the book's build
 machine (CPU, 8 cores, PyTorch 2.15.0+cpu, NumPy 2.5.4), 11 Nov 2026 between about 09:58 and 10:20 IST.  One thread and 32-bit unless the
 experiment is about threads or BF16; seed 1865 unless stated.
 

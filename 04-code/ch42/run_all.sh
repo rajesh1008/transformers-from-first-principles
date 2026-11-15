@@ -1,5 +1,5 @@
 #!/bin/bash
-# Chapter 42 training runs (tick 32): eight runs in parallel, one thread each, 2,000 steps.
+# Chapter 42 training runs (session 32): eight runs in parallel, one thread each, 2,000 steps.
 cd "$(dirname "$0")"
 S=2000
 NAME=dense            KIND=dense HID=512                 STEPS=$S python3 moe.py > outputs/dense.txt 2>&1 &

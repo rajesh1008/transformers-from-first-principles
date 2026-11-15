@@ -1,4 +1,4 @@
-Chapter 42, Mixture of Experts in Miniature (tick 32, 12 November 2026, book build machine, CPU, one thread per run, 32-bit).
+Chapter 42, Mixture of Experts in Miniature (session 32, 12 November 2026, book build machine, CPU, one thread per run, 32-bit).
 Run from 04-code/ch42.  Needs ../ch23/outputs/shards (Chapter 23's prep.py) and, for upcycle.py, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt.
 
 python3 lab42.py                     > outputs/lab42.txt          # 9 exact checks of the MoE layer (9 of 9 pass)
@@ -23,7 +23,7 @@ Third batch: moe4k1_bias_s2 4.4410 (capacity 1.0 drops 0.042, +0.100); moe12k3_s
 first-layer purity 0.969, busiest expert in any layer 0.135, capacity 1.0 +0.084).  Wall-clock seconds in the logs are from parallel runs on a shared CPU and are not speed results.
 Checkpoints in outputs/ckpt/ are not in the code zip.
 
-Fourth batch (tick 33): ./run_fourth.sh  (second seeds, router learning-rate multiplier RLR, capacity applied in training CAPTRAIN)
+Fourth batch (session 33): ./run_fourth.sh  (second seeds, router learning-rate multiplier RLR, capacity applied in training CAPTRAIN)
 moe12k3_shared128_s2 4.4088 (capacity 1.0 +0.126); moe7k1_shared_s2 4.5639 (slow from step 250: 5.829 against 5.379; final train 3.968 against 3.683).
 moe4k1_rlr10 (router at ten times the learning rate) 4.4845: first-layer busiest expert 0.679, router entropy 0.062, capacity 1.0 +1.244.
 moe4k1_noaux_rlr10 4.4749 (entropy 0.069, busiest in any layer 0.545, capacity 1.0 +0.639).

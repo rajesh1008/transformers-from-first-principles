@@ -1,4 +1,4 @@
-"""Chapter 38, tick 30: the fine-tuned Tiny of 38.3 (outputs/ckpt/sft_3e-4_600.pt) asked the 30 fact questions through
+"""Chapter 38, session 30: the fine-tuned Tiny of 38.3 (outputs/ckpt/sft_3e-4_600.pt) asked the 30 fact questions through
 five templates: the one it was trained on and four it never saw.  For each: exact answers (greedy, up to 24 tokens or
 the end marker), how many replies stopped with the end marker within 24 tokens, and the reply to the cat's question.
 Then 100 draws at temperature 1.0 of the reply to "What did the cat do?" in the trained template (seed 1865).

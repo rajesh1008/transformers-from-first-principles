@@ -1,4 +1,4 @@
-Chapter 25, Evaluating a Language Model (tick 18).  Run from 04-code/ch25 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu),
+Chapter 25, Evaluating a Language Model (session 18).  Run from 04-code/ch25 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu),
 11 Nov 2026 between about 08:00 and 08:35 IST.  Every model run one thread, 32-bit, fixed seeds (1865 unless stated).
 
 Model: Chapter 24's 2,500-step WSD branch, ../ch24/outputs/ckpt/wsd_1e-3_2000_b2000.pt (and its 1,250- and 625-step siblings).

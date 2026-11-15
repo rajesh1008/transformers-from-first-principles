@@ -1,4 +1,4 @@
-Chapter 24, Training Tiny (tick 17).  Run from 04-code/ch24 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu, NumPy 2.5.4),
+Chapter 24, Training Tiny (session 17).  Run from 04-code/ch24 on the book's build machine (CPU, 8 cores, PyTorch 2.15.0+cpu, NumPy 2.5.4),
 11 Nov 2026 between about 05:59 and 06:20 IST.  Every training run one thread, 32-bit.  No hosted-model call; the API key was not used.
 
 Data: Chapter 23's 24 shards of the Carroll pool (../ch23/outputs/shards; run ../ch23/prep.py once if missing) and Chapter 22's held-out sets.

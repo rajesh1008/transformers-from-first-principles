@@ -1,5 +1,5 @@
 """Chapter 44: give a small transformer a scratchpad.  Two-digit addition (a + b, a and b from 10 to 99), written as characters.
-DIGITS=4 (tick 33): four-digit numbers, 20,000 training and 2,000 held-out pairs, scratchpad "d+d+c=s;" for every column.
+DIGITS=4 (session 33): four-digit numbers, 20,000 training and 2,000 held-out pairs, scratchpad "d+d+c=s;" for every column.
   FORMAT=direct   "37+48=>85."                       the answer straight after the question
   FORMAT=pad      "37+48=7+8=15;3+4+1=8;>85."        ones column, then tens column with the carry, then the answer
 A four-block decoder (width 128, 4 heads, pre-norm, GELU, learned positions, causal mask), trained from scratch on the
