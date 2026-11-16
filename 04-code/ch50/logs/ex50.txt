@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 8191.35it/s]
+GPT-2 small 50.7: mean entropy 0.8811 nats (uniform over six pieces 1.7918); highest tenth of heads (14) in layers [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 10, 11]
+GPT-2 small 50.8: pieces ['\n', 'the', ' cat', ' sat', ' on', ' the', ' mat']; share on the newline 0.6942, on 'the' 0.0692 (without the newline, 'the' as first token took 0.7238)
+GPT-2 small 50.10: tokens before a four-token sequence repeats (None = not within 64): greedy 12, top_p_seed1 56, top_p_seed2 None, top_p_seed3 None
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (45260 > 1024). Running this sequence through the model will result in indexing errors
+GPT-2 small 50.11: The Time Machine, 45,260 tokens, 176 windows, 178,865 characters: 4.0708 nats per token, 1.4794 bits per character
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:   0%|          | 1/272 [00:00<00:37,  7.16it/s]Loading weights:  59%|█████▉    | 161/272 [00:00<00:00, 802.20it/s]Loading weights:  93%|█████████▎| 254/272 [00:00<00:00, 803.96it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 737.70it/s]
+SmolLM2-135M 50.7: mean entropy 0.9286 nats (uniform over six pieces 1.7918); highest tenth of heads (27) in layers [0, 0, 0, 0, 1, 1, 2, 3, 5, 6, 6, 8, 9, 9, 10, 11, 11, 11, 12, 15, 16, 19, 19, 20, 21, 27, 29]
+SmolLM2-135M 50.8: pieces ['\n', 'the', ' cat', ' sat', ' on', ' the', ' mat']; share on the newline 0.6920, on 'the' 0.0664 (without the newline, 'the' as first token took 0.6933)
+SmolLM2-135M 50.10: tokens before a four-token sequence repeats (None = not within 64): greedy 12, top_p_seed1 None, top_p_seed2 None, top_p_seed3 None
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (44380 > 8192). Running this sequence through the model will result in indexing errors
+SmolLM2-135M 50.11: The Time Machine, 44,380 tokens, 173 windows, 179,334 characters: 3.2808 nats per token, 1.1689 bits per character
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:02<11:56,  2.31s/it]Loading weights:  68%|██████▊   | 213/311 [00:02<00:00, 122.48it/s]Loading weights: 100%|██████████| 311/311 [00:02<00:00, 106.39it/s]
+Qwen3-0.6B 50.7: mean entropy 0.8018 nats (uniform over six pieces 1.7918); highest tenth of heads (45) in layers [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 7, 8, 10, 10, 11, 11, 13, 13, 14, 14, 14, 15, 16, 17, 17, 18, 18, 19, 19, 20, 23, 24, 27]
+Qwen3-0.6B 50.8: pieces ['\n', 'the', ' cat', ' sat', ' on', ' the', ' mat']; share on the newline 0.7013, on 'the' 0.0479 (without the newline, 'the' as first token took 0.7154)
+Qwen3-0.6B 50.9: layer 13 head 0 zeroed; before [(' and', 0.2021), (',', 0.1942), ('.', 0.1438), (' on', 0.0908), (' in', 0.0408)]; after [(' and', 0.1994), (',', 0.1963), ('.', 0.139), (' on', 0.0868), (' in', 0.0401)]; total-variation distance 0.026
+Qwen3-0.6B 50.10: tokens before a four-token sequence repeats (None = not within 64): greedy 22, top_p_seed1 11, top_p_seed2 None, top_p_seed3 None
+Qwen3-0.6B 50.11: The Time Machine, 42,915 tokens, 167 windows, 179,007 characters: 3.8212 nats per token, 1.3166 bits per character
+done

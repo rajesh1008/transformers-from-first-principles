@@ -3,7 +3,9 @@ POST /v1/complete  {"prompt", "max_tokens" (1-200), "temperature" (0.8), "seed" 
                    stream=true sends server-sent events, one "data:" line per token, then a final line with the usage.
 POST /v1/probe     {"prompts": [...]}: log-probability of the five likeliest next tokens for each prompt (the fingerprint of 49.6).
 POST /admin/swap   {"model": "fp32"|"int8"} or {"tokenizer": "capstone"|"tiny2048"}: hot swap, for the lab.
-GET  /health, GET /metrics.  One JSON line per request to logs/requests.jsonl (the dashboard's data).  One request at a time."""
+GET  /health, GET /metrics.  One JSON line per request to logs/requests.jsonl (the dashboard's data).  One request at a time.
+GUARD=1 (exercise 49.7, added 16 November 2026): read artefact/MANIFEST.json at start-up, refuse to start if the served tokenizer
+file does not match its SHA-256, and refuse (409) a tokenizer swap whose file does not match.  Off by default, as in the chapter."""
 import os, sys, json, time, traceback
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from core49 import *
@@ -21,6 +23,11 @@ class Tiny2048:
     def __init__(s): s.t = load_bpe(os.path.join(HERE, "..", "tiny", "tiny_bpe_2048.txt"))
     def encode(s, text): return list(s.t.encode(text))
     def decode(s, ids): return s.t.decode(ids)
+GUARD = os.environ.get("GUARD") == "1"
+TOKFILES = dict(capstone=os.path.join(ART, "tokenizer.json"), tiny2048=os.path.join(HERE, "..", "tiny", "tiny_bpe_2048.txt"))
+MAN = json.load(open(os.path.join(ART, "MANIFEST.json"))) if GUARD else None
+def tok_ok(name): return (not GUARD) or sha256(TOKFILES[name]) == MAN["files"]["tokenizer.json"]["sha256"]
+if not tok_ok("capstone"): sys.exit("refusing to start: artefact/tokenizer.json does not match MANIFEST.json")
 S = dict(kind=KIND, tok=Capstone8k(), n=0, errors=0)
 S["model"], S["cfg"] = load_model(KIND)
 def version(): return f"{S['cfg']['name']}@{S['cfg']['step']}/{S['kind']}/{S['tok'].name}"
@@ -39,7 +46,9 @@ class H(BaseHTTPRequestHandler):
             body = json.loads(s.rfile.read(int(s.headers.get("Content-Length", 0))) or b"{}")
             if s.path == "/admin/swap":
                 if "model" in body: S["model"], S["cfg"] = load_model(body["model"]); S["kind"] = body["model"]
-                if "tokenizer" in body: S["tok"] = Tiny2048() if body["tokenizer"] == "tiny2048" else Capstone8k()
+                if "tokenizer" in body:
+                    if not tok_ok(body["tokenizer"]): return s.send_json(409, dict(error="tokenizer does not match MANIFEST.json; swap refused", version=version()))
+                    S["tok"] = Tiny2048() if body["tokenizer"] == "tiny2048" else Capstone8k()
                 return s.send_json(200, dict(version=version()))
             if s.path == "/v1/probe":
                 out = []

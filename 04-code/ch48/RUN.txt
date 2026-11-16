@@ -17,3 +17,7 @@ Timing note: the sweeps shared the machine with the main run, and the machine wa
 show 17 and 21 tokens/s in every process); step times in the logs are not speed. The isolated speed test was 4.25 s per step (10M)
 and 0.74 s per step (1.87M). Generation tokens/s in eval_*.json was measured with another training process on the machine.
 Zip note: exclude corpus/ (21 MB of downloaded books, re-creatable by prep48.py) and ckpt/ from the code zip.
+Exercises 48.8 to 48.12 (16 November 2026, shared machine under heavy load; timings in these logs are not speed):
+  sh run_ex48.sh          # 48.8 six layers x 192 at four rates (s6l_*), 48.11 ex48_decay.py, 48.12 seed 1866 (train48.py STOP=500)
+  python3 ex48_eval.py    # 48.9 last-5% and middle-5% slices of the training books; 48.10 4-bit per-row vs groups of 32 -> outputs/ex48_eval.json
+  The seed-1866 run (STOP=500) was rerun to completion once the machine was quiet; earlier attempts were killed for lack of memory.

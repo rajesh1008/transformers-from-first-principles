@@ -30,3 +30,4 @@ Timings: one thread, fastest of five, 10 November 2026, on the book's build mach
 Fixes during the run: tiny/autograd.py's transpose() failed with no axes given (argsort of an empty tuple);
 lab18.py called n_params as a function (it is a property); the hand Tiny's sat@2 row has two equal scores,
 so saturation.py uses the@4's row instead.
+Exercises 18.11 and 18.12 (16 November 2026): python3 solutions.py > outputs/solutions.txt (softmax slope by hand; RMSNorm backward vs autograd).

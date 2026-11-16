@@ -27,3 +27,16 @@ for a, r in zip(axs, R):
     a.set_title(f"{r['model']} ({r['year']})", fontsize=11); a.set_xlabel("attended to"); a.set_ylabel("attending"); a.grid(False)
 fig.suptitle("The running sentence's attention table, last layer, averaged over heads", fontsize=13, color=NAVY, weight="bold")
 save(fig, os.path.join(OUT, "fig50-02-tables.png")); print("ok")
+
+# fig50-03 (16 November 2026, with exercise 50.7): entropy of each head's attention row for ' mat' by depth, from
+# 04-code/ch50/outputs/ex50.json (ex50.py).  Each line is the mean over the layer's heads.
+X = {r["model"]: r for r in json.load(open(os.path.join(ROOT, "04-code", "ch50", "outputs", "ex50.json")))}
+fig, a = plt.subplots(figsize=(9, 4.6))
+for r, c in zip(R, C):
+    E = np.array(X[r["model"]]["entropy"]); x = (np.arange(len(E)) + 1) / len(E)
+    a.plot(x, E.mean(1), marker="o", ms=3.5, lw=1.5, color=c, label=f"{r['model']} ({r['layers']} layers), mean {E.mean():.2f} nats")
+a.axhline(np.log(6), color=SLATE, ls="--", lw=1); a.text(0.02, np.log(6) + 0.03, "even spread over the six pieces, ln 6 = 1.79", color=SLATE, fontsize=9)
+a.set_xlabel("depth (layer number divided by the number of layers)"); a.set_ylabel("entropy of the ' mat' row, nats")
+a.set_ylim(0, 2.55); a.set_title("Spread-out heads cluster early in GPT-2 and recur through depth in the newer models"); a.legend(frameon=False, fontsize=9, loc="upper right")
+a.set_axisbelow(True)
+save(fig, os.path.join(OUT, "fig50-03-entropy.png")); print("ok 3")

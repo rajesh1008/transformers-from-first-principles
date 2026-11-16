@@ -1,0 +1,78 @@
+[
+ {
+  "when": "Wednesday 12:00",
+  "change": {
+   "model": "int8"
+  },
+  "status": 200,
+  "answer": {
+   "version": "capstone-48@2000/int8/capstone"
+  },
+  "probe_version": "capstone-48@2000/int8/capstone",
+  "probe_top": [
+   [
+    11,
+    -1.395322
+   ],
+   [
+    282,
+    -2.425437
+   ],
+   [
+    198,
+    -2.806651
+   ]
+  ]
+ },
+ {
+  "when": "Friday 09:00",
+  "change": {
+   "tokenizer": "tiny2048"
+  },
+  "status": 409,
+  "answer": {
+   "error": "tokenizer does not match MANIFEST.json; swap refused",
+   "version": "capstone-48@2000/int8/capstone"
+  },
+  "probe_version": "capstone-48@2000/int8/capstone",
+  "probe_top": [
+   [
+    11,
+    -1.395322
+   ],
+   [
+    282,
+    -2.425437
+   ],
+   [
+    198,
+    -2.806651
+   ]
+  ]
+ },
+ {
+  "when": "Friday 15:00",
+  "change": {
+   "tokenizer": "capstone"
+  },
+  "status": 200,
+  "answer": {
+   "version": "capstone-48@2000/int8/capstone"
+  },
+  "probe_version": "capstone-48@2000/int8/capstone",
+  "probe_top": [
+   [
+    11,
+    -1.395322
+   ],
+   [
+    282,
+    -2.425437
+   ],
+   [
+    198,
+    -2.806651
+   ]
+  ]
+ }
+]

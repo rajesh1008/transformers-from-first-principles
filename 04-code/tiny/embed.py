@@ -25,7 +25,7 @@ TOY_EMBED = np.array([
     [ 0,  0],   # 11 <unk>
 ], dtype=float)
 
-# ---------------------------------------------------------------- arrows (Math Interlude)
+# ---------------------------------------------------------------- arrows (Maths Interlude)
 def dot(a, b):
     """How much two lists agree: multiply matching entries and add them up."""
     return sum(x * y for x, y in zip(a, b))

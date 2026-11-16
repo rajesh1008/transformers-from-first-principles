@@ -1,4 +1,4 @@
-"""Chapter 8 Math Interlude: softmax, turning scores into shares.
+"""Chapter 8 Maths Interlude: softmax, turning scores into shares.
 Run from 04-code/ch08:  python3 softmax_interlude.py"""
 from _common import *
 from tiny.attention import softmax

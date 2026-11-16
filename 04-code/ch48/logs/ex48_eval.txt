@@ -1,0 +1,8 @@
+48.9  heldout  194 windows, 179,457 characters: loss 4.5309 nats per token, 1.8090 bits per character
+48.9  glass    197 windows, 163,680 characters: loss 4.1860 nats per token, 1.8607 bits per character
+48.9  last5    527 windows, 509,742 characters: loss 3.8909 nats per token, 1.4857 bits per character
+48.9  mid5     529 windows, 509,646 characters: loss 3.8449 nats per token, 1.4739 bits per character
+48.10 int4_row: heldout  1.8149 bits per character (change +0.0058); largest rounding change 5.136e-02
+48.10 int4_row: glass    1.8705 bits per character (change +0.0098); largest rounding change 5.136e-02
+48.10 int4_g32: heldout  1.8144 bits per character (change +0.0054); largest rounding change 5.093e-02
+48.10 int4_g32: glass    1.8621 bits per character (change +0.0014); largest rounding change 5.093e-02

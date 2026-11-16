@@ -34,3 +34,5 @@ bottom; it was widened to x in [-6, 4], y in [-2, 10]. The Loss Hill paths are s
 Figures: python3 03-figures/src/ch17_figs.py from the project root (eleven PNGs in 03-figures/ch17).
 Last full run: 10 November 2026, about 16:00 to 16:40 IST, book build machine (CPU, 8 cores), Python 3.13.5,
 NumPy 2.5.4, PyTorch 2.15.0+cpu, matplotlib 3.11.2.
+Exercises 17.8 to 17.12 (16 November 2026): python3 solutions.py > outputs/solutions.txt (answers 17.8-17.12 appended);
+  python3 batch_noise_ex.py   # exercise 11: batches of 4 and 16 windows against batch_noise.py's reference -> outputs/batch_noise_ex.json/.txt

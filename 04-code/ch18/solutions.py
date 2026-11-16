@@ -50,3 +50,13 @@ hand = (u - u.mean() - xh * (u * xh).mean()) / s
 xt = torch.tensor(x, requires_grad=True)
 zt = torch.nn.functional.layer_norm(xt, (8,), weight=torch.tensor(gam), eps=1e-5); zt.backward(torch.tensor(dz))
 print(f"  by hand {row(hand)}; largest difference from autograd {np.abs(hand - xt.grad.numpy()).max():.1e}")
+print("E18.11 the slope of a softmax row of three shares, (0.5, 0.3, 0.2), with dP = (1, 0, 0)")
+p3 = np.array([0.5, 0.3, 0.2]); dP3 = np.array([1.0, 0.0, 0.0]); dS3 = p3 * (dP3 - (p3 * dP3).sum())
+s3 = torch.tensor(np.log(p3), requires_grad=True); torch.softmax(s3, -1).backward(torch.tensor(dP3))
+print(f"  by the rule {row(dS3, 4)}, sum {dS3.sum():+.4f}; autograd {row(s3.grad.numpy(), 4)}")
+print("E18.12 RMSNorm's backward against autograd (seed 18, the same row of 8)")
+r = np.sqrt((x ** 2).mean() + 1e-5); xr = x / r; ur = dz * gam
+hand_r = (ur - xr * (ur * xr).mean()) / r
+xt2 = torch.tensor(x, requires_grad=True)
+torch.nn.functional.rms_norm(xt2, (8,), weight=torch.tensor(gam), eps=1e-5).backward(torch.tensor(dz))
+print(f"  by hand {row(hand_r)}; largest difference from autograd {np.abs(hand_r - xt2.grad.numpy()).max():.1e}")

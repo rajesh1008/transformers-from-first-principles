@@ -1,4 +1,4 @@
-"""Chapter 17 Math Interlude: slope as 'which way to nudge', measured by wiggling and compared with
+"""Chapter 17 Maths Interlude: slope as 'which way to nudge', measured by wiggling and compared with
 the rule for each function; and the chain rule, 'nudges multiply', checked on a chain of two.
 Plain Python and the math module; nothing random."""
 import math

@@ -1,4 +1,4 @@
-"""Figures for Chapter 19, Initialization and Why Training Is Stable.  Every number is read from
+"""Figures for Chapter 19, Initialisation and Why Training Is Stable.  Every number is read from
 04-code/ch19/outputs/*.json (run the chapter's scripts first, in the order of 04-code/ch19/RUN.txt).
 Run from the project root:  python3 03-figures/src/ch19_figs.py"""
 import os, sys, json

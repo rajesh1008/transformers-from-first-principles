@@ -6,3 +6,6 @@ Chapter 50 lab (session 38, 12-13 November 2026). CPU, one thread, 32-bit, seed 
   python3 heads50.py   > logs/heads50.txt   # strongest mat->cat head, share of heads parking on the first token -> outputs/heads50.json
   python3 ../../03-figures/src/ch50_figs.py # fig50-01-sink, fig50-02-tables
 Zip note: exclude ckpt/ (downloaded weights) from the code zip.
+Exercises 50.7 to 50.12 (16 November 2026):
+  python3 ex50.py         # 50.7-50.11 for the three models, one thread -> outputs/ex50.json (saved after each stage), logs/ex50.txt
+  python3 ex50_config.py  # 50.12: SmolLM3-3B config.json only (ckpt/smollm3-config), parameters counted on the meta device; no weights

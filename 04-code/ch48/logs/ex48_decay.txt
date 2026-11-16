@@ -1,0 +1,10 @@
+branch point {'heldout': {'loss': 4.877758979797363, 'bpc': 1.9520105300935713}, 'glass': {'loss': 4.601189295450847, 'bpc': 2.064152953987815}}
+/workspace/transformers-book/04-code/ch48/ex48_decay.py:41: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  if (i + 1) % 50 == 0: print(f"branch step {START + i + 1} loss {float(loss):.4f} {time.time() - t0:.0f} s", flush=True)
+branch step 1050 loss 4.4031 622 s
+branch step 1100 loss 4.3258 759 s
+branch step 1150 loss 4.3577 901 s
+branch step 1200 loss 4.2158 1029 s
+heldout: branch at 1,200 4.7472 nats (1.8998 bpc); main at 1,200 4.7846 (1.9147); main at 2,000 4.5240 (1.8104)
+glass: branch at 1,200 4.4655 nats (2.0033 bpc); main at 1,200 4.5276 (2.0311); main at 2,000 4.2277 (1.8966)

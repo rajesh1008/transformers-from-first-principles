@@ -1,0 +1,15 @@
+49.8 week of 10,000: 2,996 streams, 90 of them failed after status 200; the client saw 200 on 9,721; counting a stream without the final event as a failure, 9,631 succeeded and 369 failed
+49.9 167 hourly comparisons; the 8-bit swap moved a probe by 0.034708; the largest change between probes of the same version was 0.000000; any threshold from 0.000000 up to (not including) 0.034708 alerts once for the swap; other version changes: int8/capstone -> int8/tiny2048 at hour 106: top five changed; int8/tiny2048 -> int8/capstone at hour 112: top five changed
+49.11 fp32: largest probe change against fp32 0.0000; top token unchanged on 8 of 8 probes; known words 95.9% of 4,406
+49.11 int8: largest probe change against fp32 0.0347; top token unchanged on 8 of 8 probes; known words 96.1% of 4,426
+49.11 int4: largest probe change against fp32 0.3741; top token unchanged on 7 of 8 probes; known words 96.3% of 4,447
+serving capstone-48@2000/int4/capstone on port 8053
+49.11 served as capstone-48@2000/int4/capstone; the server's probe answers match the direct computation: True
+49.12 Mon: known words 96.0% from every text, 96.6% from the 10 kept texts
+49.12 Tue: known words 96.0% from every text, 97.3% from the 7 kept texts
+49.12 Wed: known words 96.2% from every text, 93.5% from the 13 kept texts
+49.12 Thu: known words 96.3% from every text, 97.4% from the 13 kept texts
+49.12 Fri: known words 95.8% from every text, 96.7% from the 8 kept texts
+49.12 Sat: known words 96.2% from every text, 97.6% from the 10 kept texts
+49.12 Sun: known words 96.1% from every text, 96.4% from the 21 kept texts
+49.12 kept text for 82 of 10,000 requests; log 3,546,493 -> 2,444,469 bytes

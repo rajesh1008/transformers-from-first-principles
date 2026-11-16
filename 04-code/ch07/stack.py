@@ -1,4 +1,4 @@
-"""Math Interlude: a matrix as a stack of lists; rows, columns, shape, turning on its side;
+"""Maths Interlude: a matrix as a stack of lists; rows, columns, shape, turning on its side;
 one product computed entry by entry.   Run from 04-code/ch07:  python3 stack.py"""
 import _common
 import numpy as np

@@ -20,7 +20,10 @@ def load_model(kind="fp32"):
     cfg = json.load(open(os.path.join(ART, "config.json")))
     m = Capstone(**cfg["model"]); t = load_file(os.path.join(ART, f"capstone-{kind}.safetensors")); state = {}
     for n, p in m.state_dict().items():
-        state[n] = t[n + ".q"].float() * t[n + ".scale"] if n + ".q" in t else t[n]
+        if n + ".q" in t:   # one scale per output row (scale r x 1) or per group along the row (r x G; exercise 49.11)
+            q, sc = t[n + ".q"].float(), t[n + ".scale"]; r, cols = q.shape; G = sc.shape[1]
+            state[n] = (q.view(r, G, cols // G) * sc.view(r, G, 1)).reshape(r, cols)
+        else: state[n] = t[n]
     m.load_state_dict(state); m.eval(); return m, cfg
 
 def step_cached(m, ids, cache):

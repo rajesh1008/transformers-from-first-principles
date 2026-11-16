@@ -1,4 +1,4 @@
-"""Figures for Chapter 20, Optimizers and Learning-Rate Schedules.  Every measured number is read from
+"""Figures for Chapter 20, Optimisers and Learning-Rate Schedules.  Every measured number is read from
 04-code/ch20/outputs/*.json (and Chapter 19's train_inits.json for fig20-07); run the chapter's scripts first,
 in the order of 04-code/ch20/RUN.txt.  fig20-02 draws a synthetic stream (1 plus noise, seed 1865) to illustrate
 running averages; it is labelled as such.  Run from the project root:  python3 03-figures/src/ch20_figs.py"""

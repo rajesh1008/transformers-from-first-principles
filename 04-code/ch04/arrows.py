@@ -1,4 +1,4 @@
-"""Math Interlude: lists of numbers as arrows.  Adding, stretching, length, agreement, angle.
+"""Maths Interlude: lists of numbers as arrows.  Adding, stretching, length, agreement, angle.
 Run from 04-code/ch04:  python3 arrows.py"""
 import _common, math
 from tiny.embed import dot, length, cosine

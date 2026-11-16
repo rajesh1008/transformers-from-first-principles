@@ -6,3 +6,8 @@ Chapter 49 (sessions 37 and 38, 12 November 2026). CPU, one thread per process, 
   python3 ../../03-figures/src/ch49_figs.py   # fig49-01-dashboard, fig49-02-latency
   python3 lab49.py > logs/lab49.txt           # 11 checks
 Zip note: exclude artefact/ (re-created by export49.py in seconds).
+Exercises 49.7 to 49.12 (16 November 2026):
+  python3 ex49_guard.py   # 49.7: GUARD=1 server, the week's three scheduled changes in order -> outputs/ex49_guard.json
+  python3 ex49.py         # 49.8, 49.9, 49.11 (4-bit artefact served on port 8053), 49.12 (redacted log) -> outputs/ex49.json, logs/ex49.txt
+  traffic49.py takes TAG (log suffix) and passes GUARD through; full guarded replays did not finish on the loaded machine. 49.10 not run.
+  python3 ../../03-figures/src/ch49_figs.py also draws fig49-03-client-view.

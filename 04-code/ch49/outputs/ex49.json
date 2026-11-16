@@ -1,0 +1,104 @@
+{
+ "ex8": {
+  "requests": 10000,
+  "streams": 2996,
+  "streams_500_after_200": 90,
+  "client_saw_200": 9721,
+  "client_counting_done": {
+   "ok": 9631,
+   "failed": 369
+  }
+ },
+ "ex9": {
+  "hours": 167,
+  "int8_swap_change": 0.03470799999999974,
+  "largest_steady_change": 0.0,
+  "threshold_range": [
+   0.0,
+   0.03470799999999974
+  ],
+  "other_version_changes": [
+   {
+    "sim": 381600,
+    "frm": "capstone-48@2000/int8/capstone",
+    "to": "capstone-48@2000/int8/tiny2048",
+    "change": "top five changed"
+   },
+   {
+    "sim": 403200,
+    "frm": "capstone-48@2000/int8/tiny2048",
+    "to": "capstone-48@2000/int8/capstone",
+    "change": "top five changed"
+   }
+  ]
+ },
+ "ex11": {
+  "fp32": {
+   "probe_change_vs_fp32": 0.0,
+   "same_top_token": 8,
+   "known_share": 0.9591466182478439,
+   "words": 4406,
+   "file_bytes": 40211376
+  },
+  "int8": {
+   "probe_change_vs_fp32": 0.03470802307128906,
+   "same_top_token": 8,
+   "known_share": 0.9613646633529146,
+   "words": 4426,
+   "file_bytes": 10259784
+  },
+  "int4": {
+   "probe_change_vs_fp32": 0.3740842342376709,
+   "same_top_token": 7,
+   "known_share": 0.9631212053069486,
+   "words": 4447,
+   "file_bytes": 11387400
+  },
+  "served_version": "capstone-48@2000/int4/capstone",
+  "served_matches_direct": true
+ },
+ "ex12": {
+  "kept": 82,
+  "days": {
+   "Mon": {
+    "full": 0.9597971415398802,
+    "redacted": 0.9655172413793104,
+    "redacted_texts": 10
+   },
+   "Tue": {
+    "full": 0.9600232954781813,
+    "redacted": 0.9727891156462585,
+    "redacted_texts": 7
+   },
+   "Wed": {
+    "full": 0.9621393126263554,
+    "redacted": 0.9348534201954397,
+    "redacted_texts": 13
+   },
+   "Thu": {
+    "full": 0.9633585626370517,
+    "redacted": 0.9743589743589743,
+    "redacted_texts": 13
+   },
+   "Fri": {
+    "full": 0.9581383584165929,
+    "redacted": 0.9671052631578947,
+    "redacted_texts": 8
+   },
+   "Sat": {
+    "full": 0.962040802830407,
+    "redacted": 0.9763313609467456,
+    "redacted_texts": 10
+   },
+   "Sun": {
+    "full": 0.9608775022031978,
+    "redacted": 0.9640287769784173,
+    "redacted_texts": 21
+   }
+  },
+  "bytes": {
+   "full": 3546493,
+   "redacted": 2444469
+  }
+ }
+}

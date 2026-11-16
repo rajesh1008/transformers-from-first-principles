@@ -1,4 +1,4 @@
-"""Figures for Chapter 13, Normalization and Residuals.  Every number is read from 04-code/ch13/outputs or
+"""Figures for Chapter 13, Normalisation and Residuals.  Every number is read from 04-code/ch13/outputs or
 recomputed here from tiny/norm.py and the hand tables.  Run from the project root: python3 03-figures/src/ch13_figs.py"""
 import os, sys, re, json, numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))

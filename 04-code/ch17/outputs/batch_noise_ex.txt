@@ -1,0 +1,2 @@
+batch of  4 windows (  512 predictions): cosine with the reference 0.724 (lowest 0.660, highest 0.780); predicted from one window's 0.407: 0.665
+batch of 16 windows (2,048 predictions): cosine with the reference 0.884 (lowest 0.850, highest 0.906); predicted from one window's 0.407: 0.872

@@ -5,3 +5,8 @@
 17.5 Tiny, one pass over the held-out text: 6 x 2,766,592 x 55,860 = 9.273e+11 FLOPs; one billion numbers on 20 billion tokens: 6 x 1e9 x 2e10 = 1.2e+20 FLOPs
 17.6 critical learning rate from x = -1 (largest step that does not raise the loss): 18.87; 2 / bend at the bottom is 8.53
 17.7 hand Tiny, P[2][1]: autograd +0.024291, wiggled +0.024291
+17.8 s = 0.5, rest = 3.0: share 0.3547; slope of the surprise wiggled -0.6453; rule share - 1 = -0.6453
+17.8 s = 2.5, rest = 3.0: share 0.8024; slope of the surprise wiggled -0.1976; rule share - 1 = -0.1976
+17.9 noise-to-signal at one window: 1/0.407^2 - 1 = 5.037; predicted cosine at 2, 8, 32 windows: 2: 0.533, 8: 0.783, 32: 0.930 (measured 0.606, 0.816, 0.934)
+17.10 hand Tiny at lr 1.0, 200 steps: loss at steps 0, 10, 50, 199: 3.331 1.975 0.4746 0.003719; largest 4.012; spikes (peak 1.5 x the lowest of the five steps before): 8, first at step 16
+17.12 from x = +3: loss 3.1990, slope +0.45136; critical learning rate 7.53; 2 / bend at the bottom 8.53

@@ -1,6 +1,7 @@
 """Chapter 48, the capstone training run.  Environment: NAME, D (256), LAYERS (10), HEADS (8), LR (1e-3 peak), STEPS (2000),
 SEED (1865), BATCH (16 windows of 256 tokens), WARMUP (100), DECAY (0.2: the last fifth decays linearly to zero, WSD as in
-Chapter 24), EVAL_EVERY (100), SAVE (comma-separated steps).  CPU, one thread, 32-bit.  AdamW (0.9, 0.95), weight decay 0.1 on
+Chapter 24), EVAL_EVERY (100), SAVE (comma-separated steps), STOP (stop after this step, keeping the STEPS schedule;
+exercise 48.12).  CPU, one thread, 32-bit.  AdamW (0.9, 0.95), weight decay 0.1 on
 the matrices inside the blocks (not on the token or position tables, norms or biases), gradients clipped at 1.0.
 Logs one JSON line per 10 steps to outputs/NAME.jsonl (the dashboard's data): step, loss, lr, gradient norm before clipping,
 tokens per second; and every EVAL_EVERY steps the held-out loss and bits per character on 48 fixed windows of The Time Machine
@@ -14,7 +15,7 @@ from tokenizers import Tokenizer
 E = os.environ.get; NAME = E("NAME", "main"); D, L, H = int(E("D", 256)), int(E("LAYERS", 10)), int(E("HEADS", 8))
 LR, STEPS, SEED, B, CTX = float(E("LR", 1e-3)), int(E("STEPS", 2000)), int(E("SEED", 1865)), int(E("BATCH", 16)), 256
 WARM, DECAY, EVERY = int(E("WARMUP", 100)), float(E("DECAY", 0.2)), int(E("EVAL_EVERY", 100))
-SAVE = {int(x) for x in E("SAVE", "").split(",") if x}
+SAVE = {int(x) for x in E("SAVE", "").split(",") if x}; STOP = int(E("STOP", 0)) or STEPS
 torch.set_num_threads(1); torch.manual_seed(SEED)
 C = os.path.join(HERE, "corpus"); tk = Tokenizer.from_file(os.path.join(C, "tok8192.json"))
 train = torch.from_numpy(np.fromfile(os.path.join(C, "train.u16"), dtype=np.uint16).astype(np.int64))
@@ -55,9 +56,10 @@ for s in range(1, STEPS + 1):
         log.write(json.dumps(dict(step=s, loss=float(loss), diverged=True)) + "\n"); log.flush(); print(f"step {s}: loss not finite, stopping", flush=True); break
     if s % 10 == 0:
         rec = dict(step=s, loss=float(loss), lr=lr_at(s - 1), gnorm=gn, tps=10 * B * CTX / (time.time() - tl)); tl = time.time()
-        if s % EVERY == 0 or s == STEPS:
+        if s % EVERY == 0 or s == STEPS or s == STOP:
             rec["eval"] = evaluate(); print(f"step {s} loss {float(loss):.4f} held-out {rec['eval']['heldout']['loss']:.4f} ({rec['eval']['heldout']['bpc']:.4f} bpc) glass {rec['eval']['glass']['bpc']:.4f} bpc  {time.time() - t0:.0f} s", flush=True)
         log.write(json.dumps(rec) + "\n"); log.flush()
-    if s in SAVE or s == STEPS:
+    if s in SAVE or s == STEPS or s == STOP:
         torch.save(dict(cfg=m.cfg, state=m.state_dict(), step=s), os.path.join(HERE, "ckpt", f"{NAME}_step{s}.pt"))
+    if s == STOP: break
 print(f"done in {time.time() - t0:.0f} s", flush=True)

@@ -42,3 +42,27 @@ b.axvline(np.median([r["ttft_ms"] for r in ok]), color=CORAL, ls="--", lw=1.2, l
 b.set_xlabel("total time, ms (successful requests; axis cut at 300)"); b.set_ylabel("requests"); b.set_title("Where the time goes per request"); b.legend(frameon=False, fontsize=9)
 fig.suptitle(f"Latency over {len(R):,} requests, one request at a time on one core", fontsize=13, color=NAVY, weight="bold")
 save(fig, os.path.join(OUT, "fig49-02-latency.png")); print("ok 2")
+
+# fig49-03 (16 November 2026, with exercise 49.8): what the server logged against what a client counting status codes saw, per
+# simulated day, from logs/requests.jsonl.  A stream that failed after its status line is a 500 in the server's log and a 200 to
+# a client that reads only the status.
+DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+cnt = {d: dict(ok=0, hidden=0, visible=0) for d in range(7)}
+for r in R:
+    d = min(6, int(float(r["sim"]) // 86400))
+    if r["status"] == 200: cnt[d]["ok"] += 1
+    elif r.get("stream") and r["status"] == 500: cnt[d]["hidden"] += 1
+    else: cnt[d]["visible"] += 1
+fig, (a, b) = plt.subplots(1, 2, figsize=(11, 4.4), gridspec_kw=dict(wspace=0.3, width_ratios=[1.6, 1]))
+xs = np.arange(7); okv = np.array([cnt[d]["ok"] for d in xs]); hv = np.array([cnt[d]["hidden"] for d in xs]); vv = np.array([cnt[d]["visible"] for d in xs])
+a.bar(xs, hv, color=VERM, label="streams that broke after status 200"); a.bar(xs, vv, bottom=hv, color=AMBER, label="errors with an error status (400, 413, 500)")
+a.set_xticks(xs); a.set_xticklabels(DAYS); a.set_ylabel("requests"); a.set_title("Failed requests per day"); a.legend(frameon=False, fontsize=9)
+for x0, h0, v0 in zip(xs, hv, vv): a.text(x0, h0 + v0 + 2, f"{h0 + v0}", ha="center", fontsize=9, color=NAVY)
+tot = len(R); srv = int(okv.sum()); cli = srv + int(hv.sum())
+b.bar([0, 1], [cli, srv], color=[SLATEBLUE, TEAL], width=0.6)
+b.set_xticks([0, 1]); b.set_xticklabels(["client counting\nstatus 200", "server log /\nfinal event"]); b.set_ylim(9400, 10000)
+for x0, v in zip([0, 1], [cli, srv]): b.text(x0, v + 8, f"{v:,}", ha="center", fontsize=10, color=NAVY)
+b.set_title("Successes in the week (axis from 9,400)")
+for ax in (a, b): ax.set_axisbelow(True)
+fig.suptitle(f"Status 200 is not success: {int(hv.sum())} of {tot:,} requests failed after the client was told 200", fontsize=13, color=NAVY, weight="bold", y=1.03)
+save(fig, os.path.join(OUT, "fig49-03-client-view.png")); print("ok 3")

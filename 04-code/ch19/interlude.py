@@ -1,4 +1,4 @@
-"""Chapter 19, Math Interlude: adding n random numbers multiplies the spread by sqrt(n).
+"""Chapter 19, Maths Interlude: adding n random numbers multiplies the spread by sqrt(n).
 Part 1: coin flips of +1 or -1, summed n at a time, 100,000 sums for each n.
 Part 2: one output of a layer, x . w, where x has 128 numbers of spread 1 and w has 128 numbers of spread s.
 Part 3: dividing by sqrt(n) brings the spread back to that of a single number."""

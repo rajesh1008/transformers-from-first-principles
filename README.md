@@ -37,7 +37,7 @@ The book builds a small transformer, Tiny, from dot products and weighted averag
 | 10 | Attention Variants: Grouped-Query and Sliding-Window | [`04-code/ch10`](04-code/ch10) |
 | 11 | Attention Efficiency: Memory Traffic, Tiling and Why the Hardware Shape Matters | [`04-code/ch11`](04-code/ch11) |
 | 12 | The Feed-Forward Block as Memory | [`04-code/ch12`](04-code/ch12) |
-| 13 | Normalization and Residuals | [`04-code/ch13`](04-code/ch13) |
+| 13 | Normalisation and Residuals | [`04-code/ch13`](04-code/ch13) |
 | 14 | Stacking Layers | [`04-code/ch14`](04-code/ch14) |
 | 15 | Workshop: Tracing the Sentence Through Tiny by Hand | [`04-code/ch15`](04-code/ch15) |
 | 16 | Reading a Config File: From Hyperparameters to Parameter Count, by Hand | [`04-code/ch16`](04-code/ch16) |
@@ -48,8 +48,8 @@ The book builds a small transformer, Tiny, from dot products and weighted averag
 |---|---|---|
 | 17 | Learning as Nudging: Gradient Descent from One Parameter Up | [`04-code/ch17`](04-code/ch17) |
 | 18 | Backpropagation by Hand Through One Head of Attention | [`04-code/ch18`](04-code/ch18) |
-| 19 | Initialization and Why Training Is Stable | [`04-code/ch19`](04-code/ch19) |
-| 20 | Optimizers and Learning-Rate Schedules | [`04-code/ch20`](04-code/ch20) |
+| 19 | Initialisation and Why Training Is Stable | [`04-code/ch19`](04-code/ch19) |
+| 20 | Optimisers and Learning-Rate Schedules | [`04-code/ch20`](04-code/ch20) |
 | 21 | Mixed Precision, Memory and Where the Training Budget Goes | [`04-code/ch21`](04-code/ch21) |
 | 22 | Data Pipelines and the Curriculum | [`04-code/ch22`](04-code/ch22) |
 | 23 | Scaling Laws in Miniature: Train Five Tinys and Fit the Curve | [`04-code/ch23`](04-code/ch23) |
